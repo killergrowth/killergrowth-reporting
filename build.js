@@ -1,18 +1,18 @@
-/**
- * KillerGrowth Client Reporting — Build Script
+﻿/**
+ * KillerGrowth Client Reporting â€” Build Script
  * Assembles source pages + partials into dist/
  *
  * Usage: node build.js
  *
  * Structure:
- *   _partials/head.html     → injected via <!-- HEAD:Page Title -->
- *   _partials/navbar.html   → injected via <!-- NAVBAR -->
- *   _partials/sidebar.html  → injected via <!-- SIDEBAR -->
- *   _partials/footer.html   → injected via <!-- FOOTER --> (also closes main-container)
+ *   _partials/head.html     â†’ injected via <!-- HEAD:Page Title -->
+ *   _partials/navbar.html   â†’ injected via <!-- NAVBAR -->
+ *   _partials/sidebar.html  â†’ injected via <!-- SIDEBAR -->
+ *   _partials/footer.html   â†’ injected via <!-- FOOTER --> (also closes main-container)
  *
  * Page source files:
- *   index.html              → dist/index.html        (landing page, no partials)
- *   [client].html           → dist/[client]/index.html  (client report pages, uses partials)
+ *   index.html              â†’ dist/index.html        (landing page, no partials)
+ *   [client].html           â†’ dist/[client]/index.html  (client report pages, uses partials)
  *
  * Client pages reference ../src/ and ../layouts/ which resolve correctly from dist/[client]/
  */
@@ -24,7 +24,7 @@ const ROOT  = __dirname;
 const DIST  = path.join(ROOT, 'dist');
 const PARTS = path.join(ROOT, '_partials');
 
-// ── helpers ──────────────────────────────────────────────────────────────────
+// â”€â”€ helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 function read(p) { return fs.readFileSync(p, 'utf8'); }
 
@@ -46,7 +46,7 @@ function injectPartials(html) {
   const sidebar = read(path.join(PARTS, 'sidebar.html'));
   const footer  = read(path.join(PARTS, 'footer.html'));
 
-  // <!-- HEAD:Page Title Here --> — extract the title from the comment
+  // <!-- HEAD:Page Title Here --> â€” extract the title from the comment
   html = html.replace(/<!-- HEAD:(.*?) -->/, (_, title) => {
     return head.replace('<!-- PAGE_TITLE -->', title.trim());
   });
@@ -82,7 +82,7 @@ function buildClientPage(sourcePath, destDir) {
   html = html.replace('<!-- NAVBAR -->', navbar);
   html = html.replace('<!-- SIDEBAR -->', sidebar);
 
-  // <!-- SCRIPTS --> — replace with footer content.
+  // <!-- SCRIPTS --> â€” replace with footer content.
   // If there's an inline <script> after <!-- SCRIPTS -->, we keep it.
   // footer.html already contains the external script tags + </body></html>.
   // We need to insert the inline script BEFORE the </body> in footer.
@@ -100,7 +100,7 @@ function buildClientPage(sourcePath, destDir) {
   fs.writeFileSync(path.join(destDir, 'index.html'), html, 'utf8');
 }
 
-// ── build ─────────────────────────────────────────────────────────────────────
+// â”€â”€ build â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 console.log('Building KillerGrowth Reporting...');
 
@@ -108,11 +108,11 @@ console.log('Building KillerGrowth Reporting...');
 if (fs.existsSync(DIST)) fs.rmSync(DIST, { recursive: true, force: true });
 mkdir(DIST);
 
-// 1. index.html → dist/index.html (standalone, no partials needed)
+// 1. index.html â†’ dist/index.html (standalone, no partials needed)
 fs.copyFileSync(path.join(ROOT, 'index.html'), path.join(DIST, 'index.html'));
-console.log('  ✓ index.html');
+console.log('  âœ“ index.html');
 
-// 2. Client report pages: [name].html → dist/[name]/index.html
+// 2. Client report pages: [name].html â†’ dist/[name]/index.html
 const sourceFiles = fs.readdirSync(ROOT).filter(f =>
   f.endsWith('.html') &&
   f !== 'index.html' &&
@@ -122,26 +122,33 @@ const sourceFiles = fs.readdirSync(ROOT).filter(f =>
 for (const file of sourceFiles) {
   const name = path.basename(file, '.html');
   buildClientPage(path.join(ROOT, file), path.join(DIST, name));
-  console.log(`  ✓ ${file} → dist/${name}/index.html`);
+  console.log(`  âœ“ ${file} â†’ dist/${name}/index.html`);
 }
 
 // 3. Copy shared assets
 copyDir(path.join(ROOT, 'src'),     path.join(DIST, 'src'));
-console.log('  ✓ src/ copied');
+console.log('  âœ“ src/ copied');
 
 copyDir(path.join(ROOT, 'layouts'), path.join(DIST, 'layouts'));
-console.log('  ✓ layouts/ copied');
+console.log('  âœ“ layouts/ copied');
 
 // 4. Copy robots.txt
 if (fs.existsSync(path.join(ROOT, 'robots.txt'))) {
   fs.copyFileSync(path.join(ROOT, 'robots.txt'), path.join(DIST, 'robots.txt'));
-  console.log('  ✓ robots.txt');
+  console.log('  âœ“ robots.txt');
+}
+
+// 4b. Copy images
+if (fs.existsSync(path.join(ROOT, 'images'))) {
+  copyDir(path.join(ROOT, 'images'), path.join(DIST, 'images'));
+  console.log('  ✓ images/ copied');
 }
 
 // 5. Copy _redirects
 if (fs.existsSync(path.join(ROOT, '_redirects'))) {
   fs.copyFileSync(path.join(ROOT, '_redirects'), path.join(DIST, '_redirects'));
-  console.log('  ✓ _redirects');
+  console.log('  âœ“ _redirects');
 }
 
 console.log(`\nDone. Output in dist/ (${sourceFiles.length + 1} HTML pages)`);
+

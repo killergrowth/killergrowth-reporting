@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_695fc7be86f068924c363f11/56b3c374d_LogoonDarkTransparentBG.png" />
+  <title>KillerGrowth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=Figtree:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+<div class="bg-[#0D0D0D] min-h-screen">
+<nav id="site-nav" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300" style="background-color:#0D0D0D">
+  <div class="max-w-7xl mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <a href="/"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_695fc7be86f068924c363f11/56b3c374d_LogoonDarkTransparentBG.png" alt="KillerGrowth" class="h-16 md:h-20 w-auto"></a>
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="/" class="text-white font-medium hover:text-[#CDFF00] transition-colors" style="font-family: Kanit, sans-serif;">Home</a>
+        <a href="/#services" data-scroll-link="services" class="text-white font-medium hover:text-[#CDFF00] transition-colors" style="font-family: Kanit, sans-serif;">Services</a>
+        <a href="/#difference" data-scroll-link="difference" class="text-white font-medium hover:text-[#CDFF00] transition-colors" style="font-family: Kanit, sans-serif;">The Difference</a>
+        <a href="/#team" data-scroll-link="team" class="text-white font-medium hover:text-[#CDFF00] transition-colors" style="font-family: Kanit, sans-serif;">Team</a>
+        <a href="/#testimonials" data-scroll-link="testimonials" class="text-white font-medium hover:text-[#CDFF00] transition-colors" style="font-family: Kanit, sans-serif;">Testimonials</a>
+        <a href="https://portfolio.killergrowth.com" class="text-white font-medium hover:text-[#CDFF00] transition-colors" style="font-family: Kanit, sans-serif;">Portfolio</a>
+        <div class="relative">
+          <button type="button" data-dropdown-toggle="podcast" class="text-white font-medium hover:text-[#CDFF00] transition-colors flex items-center gap-1" style="font-family: Kanit, sans-serif;">Podcast<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 transition-transform"><path d="m6 9 6 6 6-6"></path></svg></button>
+          <div data-dropdown="podcast" class="absolute top-full left-0 mt-2 bg-[#0D0D0D] border border-gray-800 rounded-lg p-2 min-w-[160px] hidden">
+            <a href="/podcast" class="block text-gray-400 hover:text-[#CDFF00] px-4 py-2 rounded hover:bg-[#1a1a1a] transition-colors" style="font-family: Kanit, sans-serif;">Listen</a>
+            <a href="/nominate" class="block text-gray-400 hover:text-[#CDFF00] px-4 py-2 rounded hover:bg-[#1a1a1a] transition-colors" style="font-family: Kanit, sans-serif;">Nominate</a>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <a class="hidden md:inline-block bg-[#CDFF00] text-[#0D0D0D] px-5 py-2 font-bold text-sm rounded hover:bg-[#b8e600] transition-colors duration-300" href="/booking" style="font-family: Kanit, sans-serif;">BOOK A CALL!</a>
+        <button id="mobile-menu-toggle" class="lg:hidden text-white p-2 border border-white/20 rounded" type="button" aria-label="Open navigation"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div id="mobile-menu-overlay" class="fixed inset-0 bg-black/60 z-40 hidden"></div>
+<div id="mobile-menu-panel" class="fixed top-0 right-0 z-50 bg-[#0D0D0D] pt-24 px-6 overflow-y-auto h-full w-80 max-w-full border-l border-gray-800 hidden">
+  <div class="flex flex-col gap-6 pb-8">
+    <div class="flex justify-end"><button id="mobile-menu-close" type="button" class="text-white p-2 border border-white/20 rounded"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></div>
+    <a href="/" class="text-white text-xl font-medium hover:text-[#CDFF00] transition-colors" style="font-family: Kanit, sans-serif;">Home</a>
+    <div>
+      <button type="button" data-mobile-toggle="services" class="text-white text-xl font-medium hover:text-[#CDFF00] transition-colors flex items-center gap-2 w-full" style="font-family: Kanit, sans-serif;">Services<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 transition-transform"><path d="m6 9 6 6 6-6"></path></svg></button>
+      <div data-mobile-section="services" class="hidden ml-4 mt-3 flex flex-col gap-3">
+        <a href="/consulting" class="text-gray-400 text-lg hover:text-[#CDFF00] transition-colors" style="font-family: Kanit, sans-serif;">Consulting</a><a href="/local-seo" class="text-gray-400 text-lg hover:text-[#CDFF00] transition-colors" style="font-family: Kanit, sans-serif;">Local SEO</a><a href="/media-buying" class="text-gray-400 text-lg hover:text-[#CDFF00] transition-colors" style="font-family: Kanit, sans-serif;">Media Buying</a><a href="/social-media-management" class="text-gray-400 text-lg hover:text-[#CDFF00] transition-colors" style="font-family: Kanit, sans-serif;">Social Media Management</a><a href="/local-service-website" class="text-gray-400 text-lg hover:text-[#CDFF00] transition-colors" style="font-family: Kanit, sans-serif;">Websites</a>
+      </div>
+    </div>
+    <a href="/#services" data-scroll-link="services" class="text-white text-xl font-medium hover:text-[#CDFF00] transition-colors" style="font-family: Kanit, sans-serif;">Services</a>
+    <a href="/#difference" data-scroll-link="difference" class="text-white text-xl font-medium hover:text-[#CDFF00] transition-colors" style="font-family: Kanit, sans-serif;">The Difference</a>
+    <a href="/#team" data-scroll-link="team" class="text-white text-xl font-medium hover:text-[#CDFF00] transition-colors" style="font-family: Kanit, sans-serif;">Team</a>
+    <a href="/#testimonials" data-scroll-link="testimonials" class="text-white text-xl font-medium hover:text-[#CDFF00] transition-colors" style="font-family: Kanit, sans-serif;">Testimonials</a>
+    <a href="https://portfolio.killergrowth.com" class="text-white text-xl font-medium hover:text-[#CDFF00] transition-colors" style="font-family: Kanit, sans-serif;">Portfolio</a>
+    <div>
+      <button type="button" data-mobile-toggle="podcast" class="text-white text-xl font-medium hover:text-[#CDFF00] transition-colors flex items-center gap-2 w-full" style="font-family: Kanit, sans-serif;">Podcast<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 transition-transform"><path d="m6 9 6 6 6-6"></path></svg></button>
+      <div data-mobile-section="podcast" class="hidden ml-4 mt-3 flex flex-col gap-3">
+        <a href="/podcast" class="text-gray-400 text-lg hover:text-[#CDFF00] transition-colors" style="font-family: Kanit, sans-serif;">Listen</a>
+        <a href="/nominate" class="text-gray-400 text-lg hover:text-[#CDFF00] transition-colors" style="font-family: Kanit, sans-serif;">Nominate</a>
+      </div>
+    </div>
+    <a class="md:hidden mt-4 bg-[#CDFF00] text-[#0D0D0D] text-center px-6 py-3 font-bold text-lg rounded hover:bg-[#b8e600] transition-colors duration-300" href="/booking" style="font-family: Kanit, sans-serif;">BOOK A CALL!</a>
+  </div>
+</div>
+
+
+  <div id="home">
+    <section id="hero" class="min-h-screen pt-32 pb-20 px-6 md:px-12 lg:px-20" style="padding-top: 150px; padding-bottom: 150px;">
+      <div class="max-w-6xl mx-auto">
+        <h1 class="text-white text-[2rem] sm:text-4xl md:text-7xl lg:text-9xl leading-snug sm:leading-tight mb-12" style="font-family: Teko, sans-serif; font-weight: 900; text-shadow: 2px 2px 0px rgba(0,0,0,0.3);">
+          <span class="font-extrabold whitespace-nowrap">Your Digital Marketing</span>
+          <span class="text-[#CDFF00] underline decoration-[#CDFF00] decoration-4 underline-offset-8">Growth Partner</span>
+          Here To Help You
+          <span class="text-[#CDFF00] underline decoration-[#CDFF00] decoration-4 underline-offset-8">Dominate</span>.
+        </h1>
+        <div class="space-y-6 text-gray-300 text-lg md:text-xl" style="font-family: Kanit, sans-serif;">
+          <p><span class="text-[#CDFF00] font-semibold">Let's cut to the chase</span> — every time someone searches for...</p>
+          <div class="bg-[#1a1a1a] border border-gray-700 rounded-lg px-4 py-3 font-mono text-white md:inline-block block" style="min-height: 4rem;">
+            Best <span class="bg-[#2a2a2a] px-2 py-1 rounded inline-block" style="min-width: 14ch;"><span id="typewriter-word"></span><span id="typewriter-cursor">|</span></span> near me
+          </div>
+          <p>and clicks on your competition, <span class="text-[#CDFF00] font-semibold">they're taking money straight out of your pocket.</span></p>
+          <p>Meanwhile, it feels like you're <span class="text-[#CDFF00] font-semibold">stuck juggling knives...</span> &quot;Post on Instagram! Start a podcast! Run some ads! Get a new logo!&quot;</p>
+          <p>But here's the cold, hard truth: <em class="text-[#CDFF00] font-semibold">If you're not killing it with your digital marketing strategy, you're bleeding opportunities.</em> Your competitors are eating your lunch, taking your calls, and stealing your customers.</p>
+          <p>If you want to win — like, really win — <span class="text-[#CDFF00] font-semibold">you need to own digital marketing, ensuring your brand stands out from the competition.</span></p>
+          <p>And that's where we come in. KillerGrowth doesn't play nice. <span class="text-[#CDFF00] font-semibold">We're here to help you dominate and grow.</span></p>
+          <p>With a team of dedicated experts, razor-sharp strategies, and AI-powered precision, we'll slice through the noise and <span class="text-[#CDFF00] font-semibold">keep the calls coming in.</span></p>
+          <p>So, whether you're just getting started or ready to go for the jugular, <span class="text-[#CDFF00] font-semibold">it's time to step up.</span></p>
+          <p class="text-white font-semibold text-2xl"><span class="text-[#CDFF00] font-semibold">Let's sharpen the knives and kill it.</span></p>
+          <a href="/booking" class="inline-block mt-8 bg-[#CDFF00] text-[#0D0D0D] px-8 py-4 text-xl font-bold rounded hover:bg-[#b8e600] transition-colors duration-300" style="font-family: Kanit, sans-serif;">Ready to <span class="font-black">KILL IT?</span></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="services" class="scroll-mt-20 md:scroll-mt-24">
+    <section class="py-20 md:py-32 px-6 md:px-12 bg-[#0D0D0D]">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-[#CDFF00] text-sm tracking-widest uppercase" style="font-family: Teko, sans-serif; font-size: 24px; font-weight: bold;">THE KILLER METHOD</span>
+          <h2 class="text-white text-4xl md:text-5xl lg:text-7xl font-bold mt-4" style="font-family: Teko, sans-serif; font-weight: 700;">Let's <span style="color:#CEFF00">Grow</span></h2>
+          <p class="text-gray-400 mt-6 max-w-3xl mx-auto text-lg" style="font-family: Kanit, sans-serif;">From SEO to Media Buying, Creative Strategy to Business Consulting, every move we make is laser-focused on one thing: <span class="text-[#CDFF00] font-semibold">Growth.</span> If you're ready to scale, <span class="text-[#CDFF00] font-semibold">we're ready to lead the charge.</span></p>
+        </div>
+        <div class="grid gap-6">
+          
+            <div class="bg-[#141414] border border-gray-800 rounded-2xl p-8 hover:border-[#CDFF00]/50 transition-all duration-500 group">
+              <div class="flex items-start gap-6">
+                <div class="flex-shrink-0"><div class="w-16 h-16 rounded-xl bg-[#CDFF00]/10 flex items-center justify-center group-hover:bg-[#CDFF00]/20 transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-[#CDFF00]"><path d="M15.09 14.37a6 6 0 1 0-6.18 0"></path><path d="M12 17v5"></path><path d="M8 22h8"></path></svg></div></div>
+                <div>
+                  <a href="/consulting"><h3 class="text-white text-xl md:text-2xl font-bold mt-2 mb-4 group-hover:text-[#CDFF00] transition-colors duration-300 cursor-pointer" style="font-family: Teko, sans-serif; font-weight: 700;">Consulting: Strategic Growth</h3></a>
+                  <p class="text-gray-400 leading-relaxed" style="font-family: Kanit, sans-serif;">Led by proven entrepreneurs, we help you cut through the noise and focus on what actually drives growth. Real experience, real strategies, real results.</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="bg-[#141414] border border-gray-800 rounded-2xl p-8 hover:border-[#CDFF00]/50 transition-all duration-500 group">
+              <div class="flex items-start gap-6">
+                <div class="flex-shrink-0"><div class="w-16 h-16 rounded-xl bg-[#CDFF00]/10 flex items-center justify-center group-hover:bg-[#CDFF00]/20 transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-[#CDFF00]"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg></div></div>
+                <div>
+                  <a href="/local-seo"><h3 class="text-white text-xl md:text-2xl font-bold mt-2 mb-4 group-hover:text-[#CDFF00] transition-colors duration-300 cursor-pointer" style="font-family: Teko, sans-serif; font-weight: 700;">Local SEO: Dominate Your Local Market</h3></a>
+                  <p class="text-gray-400 leading-relaxed" style="font-family: Kanit, sans-serif;">Own your local search rankings and watch the calls roll in. Our Local SEO strategies ensure your business shows up first when customers are ready to buy.</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="bg-[#141414] border border-gray-800 rounded-2xl p-8 hover:border-[#CDFF00]/50 transition-all duration-500 group">
+              <div class="flex items-start gap-6">
+                <div class="flex-shrink-0"><div class="w-16 h-16 rounded-xl bg-[#CDFF00]/10 flex items-center justify-center group-hover:bg-[#CDFF00]/20 transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-[#CDFF00]"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div></div>
+                <div>
+                  <a href="/media-buying"><h3 class="text-white text-xl md:text-2xl font-bold mt-2 mb-4 group-hover:text-[#CDFF00] transition-colors duration-300 cursor-pointer" style="font-family: Teko, sans-serif; font-weight: 700;">Media Buying: Ads That Actually Work</h3></a>
+                  <p class="text-gray-400 leading-relaxed" style="font-family: Kanit, sans-serif;">Stop wasting ad budget. Our media buying strategies are laser-focused on ROI, turning every dollar into measurable growth.</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="bg-[#141414] border border-gray-800 rounded-2xl p-8 hover:border-[#CDFF00]/50 transition-all duration-500 group">
+              <div class="flex items-start gap-6">
+                <div class="flex-shrink-0"><div class="w-16 h-16 rounded-xl bg-[#CDFF00]/10 flex items-center justify-center group-hover:bg-[#CDFF00]/20 transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-[#CDFF00]"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div></div>
+                <div>
+                  <a href="/social-media-management"><h3 class="text-white text-xl md:text-2xl font-bold mt-2 mb-4 group-hover:text-[#CDFF00] transition-colors duration-300 cursor-pointer" style="font-family: Teko, sans-serif; font-weight: 700;">Social Media Management: Social That Sells</h3></a>
+                  <p class="text-gray-400 leading-relaxed" style="font-family: Kanit, sans-serif;">Cut through the social media clutter with content that actually converts. We build your brand, engage your audience, and drive real business results.</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="bg-[#141414] border border-gray-800 rounded-2xl p-8 hover:border-[#CDFF00]/50 transition-all duration-500 group">
+              <div class="flex items-start gap-6">
+                <div class="flex-shrink-0"><div class="w-16 h-16 rounded-xl bg-[#CDFF00]/10 flex items-center justify-center group-hover:bg-[#CDFF00]/20 transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-[#CDFF00]"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div></div>
+                <div>
+                  <a href="/local-service-website"><h3 class="text-white text-xl md:text-2xl font-bold mt-2 mb-4 group-hover:text-[#CDFF00] transition-colors duration-300 cursor-pointer" style="font-family: Teko, sans-serif; font-weight: 700;">Websites: Built To Convert</h3></a>
+                  <p class="text-gray-400 leading-relaxed" style="font-family: Kanit, sans-serif;">Your website should be your best salesperson. We build high-converting local service websites that turn visitors into paying customers.</p>
+                </div>
+              </div>
+            </div>
+          
+        </div>
+        <div class="mt-8 bg-gradient-to-r from-[#CDFF00]/10 to-[#CDFF00]/5 border border-[#CDFF00]/30 rounded-2xl p-8 md:p-12">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-4"><div class="w-16 h-16 rounded-xl bg-[#CDFF00] flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-[#0D0D0D]"><path d="m12 3-1.912 5.813L4 10.5l6.088 1.687L12 18l1.912-5.813L20 10.5l-6.088-1.687z"></path><path d="M5 3v4"></path><path d="M19 17v4"></path><path d="M3 5h4"></path><path d="M17 19h4"></path></svg></div><div><h3 class="text-white text-xl md:text-2xl font-bold" style="font-family: Teko, sans-serif; font-weight: 700;">Your Growth, Your Way</h3></div></div>
+            <p class="text-gray-300 max-w-xl text-center md:text-left" style="font-family: Kanit, sans-serif;">Leverage our entire growth stack or focus on the services you need most — at KillerGrowth, we start with a Growth Audit that custom-tailors a strategy to meet your unique goals and create real growth.</p>
+            <a href="/booking" class="flex-shrink-0 bg-[#CDFF00] text-[#0D0D0D] px-8 py-4 font-bold rounded hover:bg-[#b8e600] transition-colors duration-300" style="font-family: Kanit, sans-serif;">BOOK A CALL!</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="difference" class="scroll-mt-20 md:scroll-mt-24">
+    <section class="py-20 md:py-32 px-6 md:px-12 bg-[#0a0a0a]">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-[#CDFF00] text-sm tracking-widest uppercase" style="font-family: Teko, sans-serif; font-size: 24px; font-weight: bold;">THE KILLER DIFFERENCE</span>
+          <h2 class="text-white text-4xl md:text-5xl lg:text-7xl font-bold mt-4" style="font-family: Teko, sans-serif; font-weight: 700;">Not Your Usual <span style="color:#CEFF00">Marketing Team</span></h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="text-center"><div class="w-full h-1 bg-gradient-to-r from-transparent via-[#CDFF00] to-transparent mb-8"></div><h3 class="text-white text-xl md:text-2xl font-bold mb-4" style="font-family: Teko, sans-serif; font-weight: 700;">We've Lived It</h3><p class="text-gray-400 leading-relaxed" style="font-family: Kanit, sans-serif;">We're not just consultants — we're entrepreneurs who have started, scaled, and sold businesses. <span class="text-[#CDFF00] font-semibold">We understand your challenges because we've been in your shoes.</span></p></div>
+          <div class="text-center"><div class="w-full h-1 bg-gradient-to-r from-transparent via-[#CDFF00] to-transparent mb-8"></div><h3 class="text-white text-xl md:text-2xl font-bold mb-4" style="font-family: Teko, sans-serif; font-weight: 700;">Results-Driven, Always</h3><p class="text-gray-400 leading-relaxed" style="font-family: Kanit, sans-serif;">Every strategy we craft and every decision we make is rooted in driving measurable growth. <span class="text-[#CDFF00] font-semibold">No fluff, no guesswork — just results.</span></p></div>
+          <div class="text-center"><div class="w-full h-1 bg-gradient-to-r from-transparent via-[#CDFF00] to-transparent mb-8"></div><h3 class="text-white text-xl md:text-2xl font-bold mb-4" style="font-family: Teko, sans-serif; font-weight: 700;">Partners, Not Providers</h3><p class="text-gray-400 leading-relaxed" style="font-family: Kanit, sans-serif;">We don't work for you; we work with you. Our mission is to <span class="text-[#CDFF00] font-semibold">invest in your success and help you achieve your goals every step of the way.</span></p></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="team" class="scroll-mt-20 md:scroll-mt-24">
+    <section class="py-20 md:py-32 px-6 md:px-12 bg-[#0D0D0D]">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-[#CDFF00] text-sm tracking-widest uppercase" style="font-family: Teko, sans-serif; font-size: 24px; font-weight: bold;">THE KILLER TEAM</span>
+          <h2 class="text-white text-4xl md:text-5xl lg:text-7xl font-bold mt-4" style="font-family: Teko, sans-serif; font-weight: 700;">We Know <span style="color:#CEFF00">Business</span></h2>
+          <p class="text-gray-400 mt-6 max-w-4xl mx-auto text-lg leading-relaxed" style="font-family: Kanit, sans-serif;">We're a team of seasoned entrepreneurs, strategists, and creatives who <span class="text-[#CDFF00] font-semibold">deeply understand what it takes to build and grow successful service businesses.</span> With a track record of starting, scaling, and selling companies, we've seen the gaps that traditional marketing often misses — and we've built a team specifically designed to fill them.</p>
+          <p class="text-gray-400 mt-6 max-w-4xl mx-auto text-lg leading-relaxed" style="font-family: Kanit, sans-serif;">Our combined expertise spans business operations, service industry insights, branding, and performance marketing with decades of experience. Together, we help businesses like yours not only grow, <span class="text-[#CDFF00] font-semibold">but grow the right way — with strategy, precision, and a partner mindset every step of the journey.</span></p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <a href="https://www.linkedin.com/in/samuel-mcvay-93100687/" target="_blank" rel="noopener noreferrer" class="group block">
+      <div class="relative overflow-hidden rounded-2xl bg-[#141414] border border-gray-800 group-hover:border-[#CDFF00]/50 transition-all duration-500">
+        <div class="aspect-[3/4] overflow-hidden">
+          <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695fd9d522026b905a57e5bc/b0ec36d8a_SamuelMcVay.jpg" alt="Samuel McVay" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-80"></div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-6">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-white text-lg font-bold group-hover:text-[#CDFF00] transition-colors duration-300" style="font-family: Teko, sans-serif; font-weight: 700;">Samuel McVay</h3>
+              <p class="text-gray-400 text-sm" style="font-family: Kanit, sans-serif;">Co-Founder</p>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-[#CDFF00]/10 flex items-center justify-center group-hover:bg-[#CDFF00] transition-colors duration-300 text-[#CDFF00] group-hover:text-[#0D0D0D]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></div>
+          </div>
+        </div>
+      </div>
+    </a>
+  
+    <a href="https://www.linkedin.com/in/philbanderson/" target="_blank" rel="noopener noreferrer" class="group block">
+      <div class="relative overflow-hidden rounded-2xl bg-[#141414] border border-gray-800 group-hover:border-[#CDFF00]/50 transition-all duration-500">
+        <div class="aspect-[3/4] overflow-hidden">
+          <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695fd9d522026b905a57e5bc/b4557bfa5_PhilAnderson.jpg" alt="Phil Anderson" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-80"></div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-6">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-white text-lg font-bold group-hover:text-[#CDFF00] transition-colors duration-300" style="font-family: Teko, sans-serif; font-weight: 700;">Phil Anderson</h3>
+              <p class="text-gray-400 text-sm" style="font-family: Kanit, sans-serif;">Co-Founder</p>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-[#CDFF00]/10 flex items-center justify-center group-hover:bg-[#CDFF00] transition-colors duration-300 text-[#CDFF00] group-hover:text-[#0D0D0D]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></div>
+          </div>
+        </div>
+      </div>
+    </a>
+  
+    <a href="https://www.linkedin.com/in/tynorris/" target="_blank" rel="noopener noreferrer" class="group block">
+      <div class="relative overflow-hidden rounded-2xl bg-[#141414] border border-gray-800 group-hover:border-[#CDFF00]/50 transition-all duration-500">
+        <div class="aspect-[3/4] overflow-hidden">
+          <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695fd9d522026b905a57e5bc/a64e4ee14_TylerNorris.jpg" alt="Tyler Norris" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-80"></div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-6">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-white text-lg font-bold group-hover:text-[#CDFF00] transition-colors duration-300" style="font-family: Teko, sans-serif; font-weight: 700;">Tyler Norris</h3>
+              <p class="text-gray-400 text-sm" style="font-family: Kanit, sans-serif;">Co-Founder</p>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-[#CDFF00]/10 flex items-center justify-center group-hover:bg-[#CDFF00] transition-colors duration-300 text-[#CDFF00] group-hover:text-[#0D0D0D]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></div>
+          </div>
+        </div>
+      </div>
+    </a>
+  
+    <a href="https://www.linkedin.com/in/tylerraybrickley/" target="_blank" rel="noopener noreferrer" class="group block">
+      <div class="relative overflow-hidden rounded-2xl bg-[#141414] border border-gray-800 group-hover:border-[#CDFF00]/50 transition-all duration-500">
+        <div class="aspect-[3/4] overflow-hidden">
+          <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695fd9d522026b905a57e5bc/e8597dd38_TylerBrickley.jpg" alt="Tyler Brickley" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-80"></div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-6">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-white text-lg font-bold group-hover:text-[#CDFF00] transition-colors duration-300" style="font-family: Teko, sans-serif; font-weight: 700;">Tyler Brickley</h3>
+              <p class="text-gray-400 text-sm" style="font-family: Kanit, sans-serif;">Chief Brand Officer</p>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-[#CDFF00]/10 flex items-center justify-center group-hover:bg-[#CDFF00] transition-colors duration-300 text-[#CDFF00] group-hover:text-[#0D0D0D]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></div>
+          </div>
+        </div>
+      </div>
+    </a>
+  
+    <a href="https://www.linkedin.com/in/noel-hatfield-17069a323/" target="_blank" rel="noopener noreferrer" class="group block">
+      <div class="relative overflow-hidden rounded-2xl bg-[#141414] border border-gray-800 group-hover:border-[#CDFF00]/50 transition-all duration-500">
+        <div class="aspect-[3/4] overflow-hidden">
+          <img src="https://storage.killergrowth.com/team/hatfield-portrait.jpg" alt="Noel Hatfield" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-80"></div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-6">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-white text-lg font-bold group-hover:text-[#CDFF00] transition-colors duration-300" style="font-family: Teko, sans-serif; font-weight: 700;">Noel Hatfield</h3>
+              <p class="text-gray-400 text-sm" style="font-family: Kanit, sans-serif;">Social Media Strategist</p>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-[#CDFF00]/10 flex items-center justify-center group-hover:bg-[#CDFF00] transition-colors duration-300 text-[#CDFF00] group-hover:text-[#0D0D0D]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></div>
+          </div>
+        </div>
+      </div>
+    </a>
+  
+    <a href="https://www.linkedin.com/in/allie-packard-0b4804a3/" target="_blank" rel="noopener noreferrer" class="group block">
+      <div class="relative overflow-hidden rounded-2xl bg-[#141414] border border-gray-800 group-hover:border-[#CDFF00]/50 transition-all duration-500">
+        <div class="aspect-[3/4] overflow-hidden">
+          <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695fd9d522026b905a57e5bc/e63f531ba_AlliePackard.jpg" alt="Allie Packard" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-80"></div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-6">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-white text-lg font-bold group-hover:text-[#CDFF00] transition-colors duration-300" style="font-family: Teko, sans-serif; font-weight: 700;">Allie Packard</h3>
+              <p class="text-gray-400 text-sm" style="font-family: Kanit, sans-serif;">Social Media Strategist</p>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-[#CDFF00]/10 flex items-center justify-center group-hover:bg-[#CDFF00] transition-colors duration-300 text-[#CDFF00] group-hover:text-[#0D0D0D]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></div>
+          </div>
+        </div>
+      </div>
+    </a>
+  
+    <a href="https://www.linkedin.com/in/corrie-ferrell-301186381/" target="_blank" rel="noopener noreferrer" class="group block">
+      <div class="relative overflow-hidden rounded-2xl bg-[#141414] border border-gray-800 group-hover:border-[#CDFF00]/50 transition-all duration-500">
+        <div class="aspect-[3/4] overflow-hidden">
+          <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695fd9d522026b905a57e5bc/384b36da6_Corrie-Ferrell-Square.jpg" alt="Corrie Ferrell" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-80"></div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-6">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-white text-lg font-bold group-hover:text-[#CDFF00] transition-colors duration-300" style="font-family: Teko, sans-serif; font-weight: 700;">Corrie Ferrell</h3>
+              <p class="text-gray-400 text-sm" style="font-family: Kanit, sans-serif;">Social Media Strategist</p>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-[#CDFF00]/10 flex items-center justify-center group-hover:bg-[#CDFF00] transition-colors duration-300 text-[#CDFF00] group-hover:text-[#0D0D0D]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></div>
+          </div>
+        </div>
+      </div>
+    </a>
+  
+    <a href="https://www.linkedin.com/in/cayla-burlingame-b595b313/" target="_blank" rel="noopener noreferrer" class="group block">
+      <div class="relative overflow-hidden rounded-2xl bg-[#141414] border border-gray-800 group-hover:border-[#CDFF00]/50 transition-all duration-500">
+        <div class="aspect-[3/4] overflow-hidden">
+          <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/695fd9d522026b905a57e5bc/1233c1e8c_CaylaBurlingame-Square.jpg" alt="Cayla Burlingame" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-80"></div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-6">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-white text-lg font-bold group-hover:text-[#CDFF00] transition-colors duration-300" style="font-family: Teko, sans-serif; font-weight: 700;">Cayla Burlingame</h3>
+              <p class="text-gray-400 text-sm" style="font-family: Kanit, sans-serif;">Social Media Strategist</p>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-[#CDFF00]/10 flex items-center justify-center group-hover:bg-[#CDFF00] transition-colors duration-300 text-[#CDFF00] group-hover:text-[#0D0D0D]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+        <div class="text-center mt-16"><a href="/booking" class="inline-block bg-[#CDFF00] text-[#0D0D0D] px-8 py-4 text-lg font-bold rounded hover:bg-[#b8e600] transition-colors duration-300" style="font-family: Kanit, sans-serif;">Are you ready to <span class="font-black">PARTNER WITH US?</span></a></div>
+      </div>
+    </section>
+  </div>
+
+  <div id="testimonials" class="scroll-mt-20 md:scroll-mt-24">
+    <section class="py-20 md:py-32 px-6 md:px-12 bg-[#0a0a0a]">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-[#CDFF00] text-sm tracking-widest uppercase" style="font-family: Teko, sans-serif; font-size: 24px; font-weight: bold;">WHAT OUR CLIENTS SAY</span>
+          <h2 class="text-white text-4xl md:text-5xl lg:text-7xl font-bold mt-4" style="font-family: Teko, sans-serif; font-weight: 700;">Just A Few We've <span style="color:#CEFF00">Killed It For</span></h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+    <div class="bg-[#141414] border border-gray-800 rounded-2xl p-8 relative group hover:border-[#CDFF00]/30 transition-all duration-500">
+      <div class="absolute top-6 right-6 w-12 h-12 rounded-full bg-[#CDFF00]/10 flex items-center justify-center text-[#CDFF00]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path></svg></div>
+      <div class="absolute bottom-6 right-6 opacity-30"><svg class="w-8 h-8" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"></path><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"></path></svg></div>
+      <div class="flex items-center gap-4 mb-6">
+        <img src="https://storage.killergrowth.com/testimonial/02.png" alt="Christina" class="w-16 h-16 rounded-full object-cover border-2 border-[#CDFF00]/30">
+        <div>
+          <h4 class="text-white font-bold text-lg" style="font-family: Teko, sans-serif; font-weight: 700;">Christina</h4>
+          <p class="text-[#CDFF00] text-sm" style="font-family: Kanit, sans-serif;">Shaws Pest Control</p>
+        </div>
+      </div>
+      <div class="flex gap-1 mb-4"><svg class="w-5 h-5 fill-[#CDFF00] text-[#CDFF00]" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="w-5 h-5 fill-[#CDFF00] text-[#CDFF00]" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="w-5 h-5 fill-[#CDFF00] text-[#CDFF00]" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="w-5 h-5 fill-[#CDFF00] text-[#CDFF00]" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="w-5 h-5 fill-[#CDFF00] text-[#CDFF00]" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+      <p class="text-gray-300 leading-relaxed" style="font-family: Kanit, sans-serif;">&quot;The work they do is incredible! Took all the different platforms of marketing and consolidated it all into one easy to use but effective platform.&quot;</p>
+    </div>
+  
+    <div class="bg-[#141414] border border-gray-800 rounded-2xl p-8 relative group hover:border-[#CDFF00]/30 transition-all duration-500">
+      <div class="absolute top-6 right-6 w-12 h-12 rounded-full bg-[#CDFF00]/10 flex items-center justify-center text-[#CDFF00]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path></svg></div>
+      <div class="absolute bottom-6 right-6 opacity-30"><svg class="w-8 h-8" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"></path><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"></path></svg></div>
+      <div class="flex items-center gap-4 mb-6">
+        <img src="https://storage.killergrowth.com/testimonial/03.png" alt="Amber" class="w-16 h-16 rounded-full object-cover border-2 border-[#CDFF00]/30">
+        <div>
+          <h4 class="text-white font-bold text-lg" style="font-family: Teko, sans-serif; font-weight: 700;">Amber</h4>
+          <p class="text-[#CDFF00] text-sm" style="font-family: Kanit, sans-serif;">Good To Be Clean</p>
+        </div>
+      </div>
+      <div class="flex gap-1 mb-4"><svg class="w-5 h-5 fill-[#CDFF00] text-[#CDFF00]" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="w-5 h-5 fill-[#CDFF00] text-[#CDFF00]" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="w-5 h-5 fill-[#CDFF00] text-[#CDFF00]" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="w-5 h-5 fill-[#CDFF00] text-[#CDFF00]" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="w-5 h-5 fill-[#CDFF00] text-[#CDFF00]" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+      <p class="text-gray-300 leading-relaxed" style="font-family: Kanit, sans-serif;">&quot;They're great at what they do. Highly recommend!&quot;</p>
+    </div>
+  
+    <div class="bg-[#141414] border border-gray-800 rounded-2xl p-8 relative group hover:border-[#CDFF00]/30 transition-all duration-500">
+      <div class="absolute top-6 right-6 w-12 h-12 rounded-full bg-[#CDFF00]/10 flex items-center justify-center text-[#CDFF00]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path></svg></div>
+      <div class="absolute bottom-6 right-6 opacity-30"><svg class="w-8 h-8" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"></path><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"></path></svg></div>
+      <div class="flex items-center gap-4 mb-6">
+        <img src="https://storage.killergrowth.com/testimonial/01.png" alt="Benji" class="w-16 h-16 rounded-full object-cover border-2 border-[#CDFF00]/30">
+        <div>
+          <h4 class="text-white font-bold text-lg" style="font-family: Teko, sans-serif; font-weight: 700;">Benji</h4>
+          <p class="text-[#CDFF00] text-sm" style="font-family: Kanit, sans-serif;">Goff Heating & Air</p>
+        </div>
+      </div>
+      <div class="flex gap-1 mb-4"><svg class="w-5 h-5 fill-[#CDFF00] text-[#CDFF00]" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="w-5 h-5 fill-[#CDFF00] text-[#CDFF00]" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="w-5 h-5 fill-[#CDFF00] text-[#CDFF00]" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="w-5 h-5 fill-[#CDFF00] text-[#CDFF00]" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="w-5 h-5 fill-[#CDFF00] text-[#CDFF00]" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+      <p class="text-gray-300 leading-relaxed" style="font-family: Kanit, sans-serif;">&quot;Working with Samuel, Phil and Tyler has been an exceptional experience for us at Goff Heating and Air Conditioning. Their team has consistently exceeded our expectations.&quot;</p>
+    </div>
+  </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="cta" class="py-20 md:py-32 px-6 md:px-12 bg-gradient-to-b from-[#EAFF70] to-[#CFFF00] relative overflow-hidden">
+    <div id="falling-knives" class="absolute inset-0 pointer-events-none"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h2 class="text-4xl md:text-3xl font-bold text-[#0D0D0D] mb-6" style="font-family: Teko, sans-serif; font-weight: 700;">ARE YOU READY TO KILL IT?</h2>
+      <h3 class="text-3xl md:text-8xl font-bold text-[#0D0D0D] mb-8" style="font-family: Teko, sans-serif; font-weight: 700;">Let's Do This Thing!</h3>
+      <p class="text-[#0D0D0D] text-lg leading-relaxed mb-6" style="font-family: Kanit, sans-serif;">KillerGrowth takes the guesswork out of digital marketing and delivers killer results that grow your business. The customers are out there, looking for you right now.</p>
+      <p class="text-[#0D0D0D] text-lg leading-relaxed mb-8" style="font-family: Kanit, sans-serif;">Let's sharpen the knives, take the top spot, and dominate your market.</p>
+      <p class="text-[#0D0D0D] text-lg font-bold mb-8" style="font-family: Kanit, sans-serif;">Click the button below to schedule a call!</p>
+      <a href="/booking" class="inline-block bg-[#0D0D0D] text-white px-12 py-5 font-bold text-xl rounded hover:bg-[#1a1a1a] transition-colors duration-300" style="font-family: Kanit, sans-serif;">Ok, let's KILL IT!</a>
+    </div>
+  </section>
+
+
+<footer class="bg-[#0a0a0a] border-t border-gray-800 pt-16 pb-8 px-6 md:px-12">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-4 gap-12 mb-12">
+      <div class="md:col-span-2">
+        <a href="/"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_695fc7be86f068924c363f11/56b3c374d_LogoonDarkTransparentBG.png" alt="KillerGrowth" class="h-12 w-auto mb-6"></a>
+        <p class="text-gray-400 leading-relaxed max-w-md" style="font-family: Kanit, sans-serif;">KillerGrowth is a results-driven growth partner that combines entrepreneurial expertise, cutting-edge AI, and proven strategies across SEO, Media Buying, Creative Strategy, and Business Consulting to help businesses dominate their market.</p>
+        <div class="flex gap-4 mt-6">
+          <a href="https://www.instagram.com/killergrowthmarketing/" class="w-10 h-10 rounded-full bg-[#141414] border border-gray-800 flex items-center justify-center text-gray-400 hover:text-[#CDFF00] hover:border-[#CDFF00]/50 transition-all duration-300" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+          <a href="https://www.linkedin.com/company/killergrowth/" class="w-10 h-10 rounded-full bg-[#141414] border border-gray-800 flex items-center justify-center text-gray-400 hover:text-[#CDFF00] hover:border-[#CDFF00]/50 transition-all duration-300" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+          <a href="https://www.youtube.com/@killer-growth" class="w-10 h-10 rounded-full bg-[#141414] border border-gray-800 flex items-center justify-center text-gray-400 hover:text-[#CDFF00] hover:border-[#CDFF00]/50 transition-all duration-300" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg></a>
+          <a href="https://www.facebook.com/killergrowthmarketing" class="w-10 h-10 rounded-full bg-[#141414] border border-gray-800 flex items-center justify-center text-gray-400 hover:text-[#CDFF00] hover:border-[#CDFF00]/50 transition-all duration-300" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white font-bold text-lg mb-6" style="font-family: Teko, sans-serif; font-weight: 700;">Quick Links</h4>
+        <ul class="space-y-3">
+          <li><a class="text-gray-400 hover:text-[#CDFF00] transition-colors duration-300" href="/" style="font-family: Kanit, sans-serif;">Home</a></li>
+          <li><a href="/#services" data-scroll-link="services" class="text-gray-400 hover:text-[#CDFF00] transition-colors duration-300" style="font-family: Kanit, sans-serif; cursor: pointer;">Services</a></li>
+          <li><a href="/#difference" data-scroll-link="difference" class="text-gray-400 hover:text-[#CDFF00] transition-colors duration-300" style="font-family: Kanit, sans-serif; cursor: pointer;">The Difference</a></li>
+          <li><a href="/#team" data-scroll-link="team" class="text-gray-400 hover:text-[#CDFF00] transition-colors duration-300" style="font-family: Kanit, sans-serif; cursor: pointer;">Team</a></li>
+          <li><a href="/#testimonials" data-scroll-link="testimonials" class="text-gray-400 hover:text-[#CDFF00] transition-colors duration-300" style="font-family: Kanit, sans-serif; cursor: pointer;">Testimonials</a></li>
+          <li><a href="https://portfolio.killergrowth.com" class="text-gray-400 hover:text-[#CDFF00] transition-colors duration-300" style="font-family: Kanit, sans-serif;">Portfolio</a></li>
+          <li><a class="text-gray-400 hover:text-[#CDFF00] transition-colors duration-300" href="/podcast" style="font-family: Kanit, sans-serif;">Podcast</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold text-lg mb-6" style="font-family: Teko, sans-serif; font-weight: 700;">Contact Us</h4>
+        <ul class="space-y-3 text-gray-400" style="font-family: Kanit, sans-serif;">
+          <li><a href="tel:+3163301584" class="hover:text-[#CDFF00] transition-colors">(316) 330-1584</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#3952505555504d79525055555c4b5e4b564e4d51175a5654" class="hover:text-[#CDFF00] transition-colors"><span class="__cf_email__" data-cfemail="5d3634313134291d36343131382f3a2f322a2935733e3230">[email&#160;protected]</span></a></li>
+          <li class="text-sm leading-relaxed">150 N. Main, Suite #133<br>Wichita, KS 67202</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex flex-col md:flex-row items-center gap-4">
+        <p class="text-gray-500 text-sm" style="font-family: Kanit, sans-serif;">© <span id="footer-year"></span> KillerGrowth. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a class="text-gray-500 text-sm hover:text-[#CDFF00] transition-colors duration-300" href="/terms-of-service" style="font-family: Kanit, sans-serif;">Terms of Service</a>
+          <span class="text-gray-700 text-sm">|</span>
+          <a class="text-gray-500 text-sm hover:text-[#CDFF00] transition-colors duration-300" href="/privacy-policy" style="font-family: Kanit, sans-serif;">Privacy Policy</a>
+        </div>
+      </div>
+      <button id="scroll-to-top" class="w-12 h-12 rounded-full bg-[#CDFF00] flex items-center justify-center text-[#0D0D0D] hover:bg-[#b8e600] transition-colors duration-300" aria-label="Scroll to top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="m5 12 7-7 7 7"></path><path d="M12 19V5"></path></svg></button>
+    </div>
+  </div>
+</footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+<script src="/js/main.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"b8344bda122242b39769eaf5065a1c8e","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
+</div>
+</body>
+</html>
