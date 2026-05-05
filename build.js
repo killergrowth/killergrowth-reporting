@@ -91,13 +91,23 @@ function buildClientPage(sourcePath, destDir) {
   // If there's an inline <script> after <!-- SCRIPTS -->, we keep it.
   // footer.html already contains the external script tags + </body></html>.
   // We need to insert the inline script BEFORE the </body> in footer.
+  // Embed report data for this client so the page never needs a fetch
+  const clientSlug = path.basename(sourcePath, '.html');
+  const dataFile   = path.join(ROOT, 'data', clientSlug + '.json');
+  let   dataScript = '';
+  if (fs.existsSync(dataFile)) {
+    const reportJson = fs.readFileSync(dataFile, 'utf8');
+    dataScript = `\n    <script>\n    window.__reportData = ${reportJson};\n    </script>`;
+  }
+
   const scriptsIdx = html.indexOf('<!-- SCRIPTS -->');
   if (scriptsIdx !== -1) {
     const beforeScripts = html.substring(0, scriptsIdx);
     const afterScripts  = html.substring(scriptsIdx + '<!-- SCRIPTS -->'.length);
     // afterScripts may have an inline <script> block + </body></html>
     // footer.html ends with </body></html>, so we insert afterScripts before </body>
-    const footerWithInline = footer.replace('</body>', () => afterScripts + '\n</body>');
+    // dataScript injects window.__reportData so loadData() uses it without a fetch
+    const footerWithInline = footer.replace('</body>', () => dataScript + afterScripts + '\n</body>');
     html = beforeScripts + footerWithInline;
   }
 
