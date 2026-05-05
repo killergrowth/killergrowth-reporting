@@ -26,7 +26,12 @@ const PARTS = path.join(ROOT, '_partials');
 
 // â”€â”€ helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
-function read(p) { return fs.readFileSync(p, 'utf8'); }
+function read(p) {
+  const buf = fs.readFileSync(p);
+  // Strip UTF-8 BOM (EF BB BF) if present — PowerShell adds these
+  const start = (buf[0] === 0xEF && buf[1] === 0xBB && buf[2] === 0xBF) ? 3 : 0;
+  return buf.slice(start).toString('utf8');
+}
 
 function mkdir(p) { fs.mkdirSync(p, { recursive: true }); }
 
