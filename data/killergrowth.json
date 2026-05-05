@@ -2,9 +2,9 @@
   "client": "KillerGrowth",
   "slug": "killergrowth",
   "period": "April 2026",
-  "generatedAt": "2026-05-05T20:26:20.672Z",
+  "generatedAt": "2026-05-05T21:14:35.472Z",
   "overview": {
-    "sessions": null,
+    "sessions": 0,
     "sessionsDelta": null,
     "leads": 39,
     "leadsDelta": null,
@@ -12,11 +12,11 @@
     "rankingsDelta": null,
     "gbpViews": null,
     "gbpViewsDelta": null,
-    "adSpend": null,
+    "adSpend": 938.84,
     "adBudget": null,
-    "costPerLead": null,
+    "costPerLead": 938.84,
     "costPerLeadDelta": null,
-    "socialReach": null,
+    "socialReach": 0,
     "socialReachDelta": null,
     "reviewCount": null,
     "avgRating": null
@@ -43,7 +43,14 @@
   },
   "social": {
     "reachByWeek": [],
-    "platforms": []
+    "platforms": [
+      {
+        "platform": "Facebook",
+        "reach": 0,
+        "engagements": 0,
+        "followers": 457
+      }
+    ]
   },
   "website": {
     "sessionsOverTime": [],

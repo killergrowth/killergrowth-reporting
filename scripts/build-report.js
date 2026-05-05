@@ -59,7 +59,7 @@ async function buildReport(slug) {
     pullGA4(client.ga4PropertyId),
     pullGSC(client.gscSiteUrl),
     pullGBP(client.gbpAccountId, client.gbpLocationId),
-    pullMeta(client.metaPageId),
+    pullMeta(client.metaPageId, client),
     pullGHL(client.ghlLocationId),
     pullDataForSEO(client.dataForSeoTarget)
   ]);
@@ -82,9 +82,9 @@ async function buildReport(slug) {
       rankingsDelta:    base.overview?.rankingsDelta ?? null,
       gbpViews:         v(gbp)?.totalViews        ?? base.overview?.gbpViews         ?? null,
       gbpViewsDelta:    base.overview?.gbpViewsDelta ?? null,
-      adSpend:          base.overview?.adSpend    ?? null,
+      adSpend:          v(meta)?.adSpend          ?? base.overview?.adSpend    ?? null,
       adBudget:         base.overview?.adBudget   ?? null,
-      costPerLead:      base.overview?.costPerLead ?? null,
+      costPerLead:      (v(meta)?.adSpend && v(meta)?.adLeads) ? parseFloat((v(meta).adSpend / v(meta).adLeads).toFixed(2)) : (base.overview?.costPerLead ?? null),
       costPerLeadDelta: base.overview?.costPerLeadDelta ?? null,
       socialReach:      v(meta)?.reach            ?? base.overview?.socialReach      ?? null,
       socialReachDelta: base.overview?.socialReachDelta ?? null,

@@ -20,18 +20,20 @@ async function getPageToken(pageId) {
 }
 
 function getInsightsPeriod() {
-  // Meta uses since/until Unix timestamps for month-over-month
   const now = new Date();
   const firstOfThisMonth = new Date(now.getFullYear(), now.getMonth(), 1);
   const lastMonthEnd = new Date(firstOfThisMonth - 1);
   const lastMonthStart = new Date(lastMonthEnd.getFullYear(), lastMonthEnd.getMonth(), 1);
+  const fmt = d => d.toISOString().split('T')[0];
   return {
     since: Math.floor(lastMonthStart.getTime() / 1000),
-    until: Math.floor(firstOfThisMonth.getTime() / 1000)
+    until: Math.floor(firstOfThisMonth.getTime() / 1000),
+    startDateStr: fmt(lastMonthStart),
+    endDateStr:   fmt(new Date(lastMonthEnd.getFullYear(), lastMonthEnd.getMonth() + 1, 0))
   };
 }
 
-async function pullMeta(pageId) {
+async function pullMeta(pageId, client) {
   if (!pageId || pageId === 'FILL_IN') {
     console.log('[Meta] No page ID configured — skipping');
     return null;
@@ -47,7 +49,7 @@ async function pullMeta(pageId) {
     return null;
   }
 
-  const { since, until } = getInsightsPeriod();
+  const { since, until, startDateStr, endDateStr } = getInsightsPeriod();
 
   // Page insights
   const metrics = [
@@ -85,9 +87,26 @@ async function pullMeta(pageId) {
     shares:    p.shares?.count || 0
   }));
 
-  console.log(`[Meta] reach=${reach} engagements=${engagements} followers=${followers} posts=${topPosts.length}`);
+  // === Meta Ads ===
+  let adSpend = null, adClicks = null, adImpressions = null, adLeads = null;
+  if (process.env.META_AD_ACCOUNT_ID || client?.metaAdAccountId) {
+    const adAcct = process.env.META_AD_ACCOUNT_ID || client.metaAdAccountId;
+    const timeRange = JSON.stringify({ since: startDateStr, until: endDateStr });
+    const adsUrl = `${BASE}/${adAcct}/insights?fields=spend,actions,clicks,impressions,reach&time_range=${encodeURIComponent(timeRange)}&access_token=${process.env.META_SYSTEM_TOKEN}`;
+    const adsRes = await fetch(adsUrl);
+    const adsData = await adsRes.json();
+    const row = (adsData.data || [])[0] || {};
+    adSpend       = row.spend       ? parseFloat(row.spend)       : null;
+    adClicks      = row.clicks      ? parseInt(row.clicks)        : null;
+    adImpressions = row.impressions ? parseInt(row.impressions)   : null;
+    const leadsAction = (row.actions || []).find(a => a.action_type === 'lead' || a.action_type === 'offsite_conversion.lead');
+    adLeads = leadsAction ? parseInt(leadsAction.value) : null;
+    if (adSpend != null) console.log(`[Meta Ads] spend=$${adSpend} clicks=${adClicks} impressions=${adImpressions} leads=${adLeads}`);
+  }
 
-  return { reach, engagements, pageViews, followers, topPosts };
+  console.log(`[Meta Organic] reach=${reach} engagements=${engagements} followers=${followers} posts=${topPosts.length}`);
+
+  return { reach, engagements, pageViews, followers, topPosts, adSpend, adClicks, adImpressions, adLeads };
 }
 
 module.exports = { pullMeta };
