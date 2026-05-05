@@ -3,5 +3,8 @@
     "@octokit/rest": "^22.0.1",
     "libsodium-wrappers": "^0.8.4",
     "tweetsodium": "^0.0.4"
+  },
+  "dependencies": {
+    "google-auth-library": "^10.6.2"
   }
 }

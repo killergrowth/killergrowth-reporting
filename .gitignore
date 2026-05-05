@@ -2,3 +2,11 @@ dist/
 static-html/
 node_modules/
 .wrangler/
+
+scripts/service-account.json
+
+set-sa*.js
+set-sa*.mjs
+set-secret*.mjs
+tmp-sa.json
+set-secret*.js

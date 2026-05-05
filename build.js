@@ -143,6 +143,12 @@ if (fs.existsSync(path.join(ROOT, 'robots.txt'))) {
   console.log('  âœ“ robots.txt');
 }
 
+// 4c. Copy data files
+if (fs.existsSync(path.join(ROOT, 'data'))) {
+  copyDir(path.join(ROOT, 'data'), path.join(DIST, 'data'));
+  console.log('  ✓ data/ copied');
+}
+
 // 4b. Copy images
 if (fs.existsSync(path.join(ROOT, 'images'))) {
   copyDir(path.join(ROOT, 'images'), path.join(DIST, 'images'));
