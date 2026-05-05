@@ -1,0 +1,66 @@
+name: Pull Reporting Data
+
+on:
+  # 1st of every month at 6:00 AM CDT (11:00 UTC)
+  schedule:
+    - cron: '0 11 1 * *'
+
+  # Also allow manual trigger from GitHub Actions UI
+  workflow_dispatch:
+    inputs:
+      client:
+        description: 'Client slug (e.g. killergrowth). Leave blank for all.'
+        required: false
+        default: ''
+
+jobs:
+  pull-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Pull data — KillerGrowth
+        if: ${{ github.event.inputs.client == '' || github.event.inputs.client == 'killergrowth' }}
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GBP_REFRESH_TOKEN:           ${{ secrets.GBP_REFRESH_TOKEN }}
+          GBP_CLIENT_ID:               ${{ secrets.GBP_CLIENT_ID }}
+          GBP_CLIENT_SECRET:           ${{ secrets.GBP_CLIENT_SECRET }}
+          META_SYSTEM_TOKEN:           ${{ secrets.META_SYSTEM_TOKEN }}
+          GHL_API_KEY:                 ${{ secrets.GHL_API_KEY }}
+          DATAFORSEO_LOGIN:            ${{ secrets.DATAFORSEO_LOGIN }}
+          DATAFORSEO_PASSWORD:         ${{ secrets.DATAFORSEO_PASSWORD }}
+        run: node scripts/build-report.js killergrowth
+
+      # Add a step like the one above for each new client.
+      # Copy the step, change the client slug and the if condition.
+
+      - name: Build site
+        run: node build.js
+
+      - name: Commit updated data files
+        run: |
+          git config user.name  "KillerGrowth Bot"
+          git config user.email "notifications@killergrowth.com"
+          git add data/
+          git diff --staged --quiet || git commit -m "chore: auto-pull reporting data $(date +'%Y-%m')"
+          git push
+
+      - name: Deploy to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN:   ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID:  ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx wrangler pages deploy ./dist --project-name killergrowth-reporting --branch main --commit-dirty=true
