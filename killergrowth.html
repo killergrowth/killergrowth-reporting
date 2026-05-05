@@ -200,7 +200,7 @@
     charts.socialReach = new ApexCharts(document.querySelector('#chart-social-reach'), makeChartOpts({
         chart: { ...baseChart.chart, type: 'area', height: 260 },
         series: [{ name: 'Reach', data: [] }],
-        xaxis: { categories: [], labels: { style: { colors: KG_MUTED } },
+        xaxis: { categories: [], labels: { style: { colors: KG_MUTED } } },
         yaxis: { labels: { style: { colors: KG_MUTED } } },
         colors: ['#8b5cf6'],
         fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.2, opacityTo: 0.01, stops: [0,100] } },
