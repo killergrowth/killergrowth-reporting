@@ -97,7 +97,7 @@ function buildClientPage(sourcePath, destDir) {
     const afterScripts  = html.substring(scriptsIdx + '<!-- SCRIPTS -->'.length);
     // afterScripts may have an inline <script> block + </body></html>
     // footer.html ends with </body></html>, so we insert afterScripts before </body>
-    const footerWithInline = footer.replace('</body>', afterScripts + '\n</body>');
+    const footerWithInline = footer.replace('</body>', () => afterScripts + '\n</body>');
     html = beforeScripts + footerWithInline;
   }
 
