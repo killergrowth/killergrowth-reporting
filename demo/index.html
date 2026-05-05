@@ -1,0 +1,720 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>KillerGrowth â€“ Client Report</title>
+    <link rel="icon" type="image/x-icon" href="../src/assets/img/favicon.ico"/>
+
+    <!-- Layout loaders -->
+    <link href="../layouts/modern-dark-menu/css/dark/loader.css" rel="stylesheet" type="text/css" />
+    <script src="../layouts/modern-dark-menu/loader.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap + Core -->
+    <link href="../src/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../src/assets/css/utilities/utilities.css" rel="stylesheet" type="text/css" />
+    <link href="../layouts/modern-dark-menu/css/dark/plugins.css" rel="stylesheet" type="text/css" />
+
+    <!-- ApexCharts -->
+    <link href="../src/plugins/src/apex/apexcharts.css" rel="stylesheet" type="text/css">
+
+    <!-- KillerGrowth Brand Overrides -->
+    <style>
+        :root {
+            --kg-lime: #b8e600;
+            --kg-lime-muted: #8ab200;
+            --kg-dark: #0f0f0f;
+            --kg-card: #1a1a1a;
+            --kg-card-border: #2a2a2a;
+            --kg-text: #f8fafc;
+            --kg-muted: #9ca3af;
+            --kg-sidebar: #141414;
+        }
+
+        body, html { font-family: 'Inter', sans-serif !important; background: var(--kg-dark) !important; }
+
+        /* Sidebar overrides */
+        .sidebar-wrapper { background: var(--kg-sidebar) !important; border-right: 1px solid var(--kg-card-border); }
+        #sidebar .navbar-nav.theme-brand { border-bottom: 1px solid var(--kg-card-border); padding: 18px 16px; }
+        #sidebar ul.menu-categories li.menu a { color: var(--kg-muted) !important; }
+        #sidebar ul.menu-categories li.menu.active > a,
+        #sidebar ul.menu-categories li.menu a:hover { color: var(--kg-lime) !important; background: rgba(184,230,0,0.08) !important; }
+        #sidebar ul.menu-categories li.menu.active > a svg,
+        #sidebar ul.menu-categories li.menu a:hover svg { stroke: var(--kg-lime) !important; }
+        #sidebar ul.menu-categories li.menu.active > a .active-dot { background: var(--kg-lime) !important; }
+
+        /* Navbar */
+        .header-container .header { background: var(--kg-sidebar) !important; border-bottom: 1px solid var(--kg-card-border) !important; }
+
+        /* Cards */
+        .kg-card {
+            background: var(--kg-card);
+            border: 1px solid var(--kg-card-border);
+            border-radius: 12px;
+            padding: 24px;
+        }
+        .kg-stat-card {
+            background: var(--kg-card);
+            border: 1px solid var(--kg-card-border);
+            border-radius: 12px;
+            padding: 20px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .kg-stat-card .stat-label { font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--kg-muted); margin-bottom: 8px; }
+        .kg-stat-card .stat-value { font-size: 28px; font-weight: 800; color: var(--kg-text); line-height: 1; margin-bottom: 6px; }
+        .kg-stat-card .stat-delta { font-size: 12px; font-weight: 500; }
+        .kg-stat-card .stat-delta.up { color: var(--kg-lime); }
+        .kg-stat-card .stat-delta.down { color: #ef4444; }
+        .kg-stat-card .stat-delta.neutral { color: var(--kg-muted); }
+        .kg-stat-card .stat-icon {
+            position: absolute;
+            right: 20px; top: 50%;
+            transform: translateY(-50%);
+            width: 48px; height: 48px;
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            background: rgba(184,230,0,0.12);
+        }
+        .kg-stat-card .stat-icon svg { stroke: var(--kg-lime); }
+
+        /* Section headings */
+        .section-title {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--kg-muted);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--kg-card-border);
+        }
+
+        /* Chart placeholder */
+        .chart-placeholder {
+            background: var(--kg-card);
+            border: 1px dashed var(--kg-card-border);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 280px;
+            color: var(--kg-muted);
+            font-size: 13px;
+            gap: 8px;
+        }
+        .chart-placeholder .ph-label {
+            font-size: 11px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: rgba(155,163,175,.6);
+        }
+
+        /* Client logo area */
+        .client-logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            background: rgba(184,230,0,0.06);
+            border: 1px solid rgba(184,230,0,0.15);
+            border-radius: 8px;
+        }
+        .client-logo-area .client-logo-img {
+            width: 32px; height: 32px;
+            border-radius: 6px;
+            background: var(--kg-card-border);
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden;
+        }
+        .client-logo-area .client-name { font-size: 13px; font-weight: 600; color: var(--kg-text); line-height: 1.2; }
+        .client-logo-area .client-sub { font-size: 10px; color: var(--kg-muted); font-weight: 400; }
+
+        /* KG Logo text */
+        .kg-brand-text {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--kg-lime);
+            letter-spacing: -.02em;
+        }
+        .kg-brand-text span { color: var(--kg-text); }
+
+        /* Period badge */
+        .period-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(184,230,0,0.1);
+            border: 1px solid rgba(184,230,0,0.2);
+            color: var(--kg-lime);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: .05em;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+
+        /* Sidebar nav item labels */
+        .menu-section-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: rgba(155,163,175,.5);
+            padding: 16px 20px 6px;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--kg-card-border); border-radius: 3px; }
+
+        /* Report page padding */
+        .layout-px-spacing { padding: 20px 24px !important; }
+
+        /* Accent line at top of page */
+        .kg-accent-bar {
+            height: 3px;
+            background: linear-gradient(90deg, var(--kg-lime), transparent);
+            position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+        }
+
+        /* Data table row */
+        .kg-table { width: 100%; border-collapse: collapse; }
+        .kg-table th {
+            font-size: 10px; font-weight: 700; letter-spacing: .08em;
+            text-transform: uppercase; color: var(--kg-muted);
+            padding: 10px 12px; border-bottom: 1px solid var(--kg-card-border);
+            text-align: left;
+        }
+        .kg-table td {
+            font-size: 13px; color: var(--kg-text);
+            padding: 12px 12px; border-bottom: 1px solid rgba(42,42,42,.5);
+        }
+        .kg-table tr:last-child td { border-bottom: none; }
+        .kg-table .badge-up { background: rgba(184,230,0,0.12); color: var(--kg-lime); font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 20px; }
+        .kg-table .badge-down { background: rgba(239,68,68,0.12); color: #ef4444; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 20px; }
+        .kg-table .badge-neutral { background: rgba(155,163,175,0.12); color: var(--kg-muted); font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 20px; }
+
+        /* Sidebar active indicator */
+        #sidebar ul.menu-categories li.menu.active > a {
+            border-left: 3px solid var(--kg-lime) !important;
+        }
+
+        /* Powered by footer */
+        .kg-footer {
+            font-size: 11px; color: rgba(155,163,175,.5);
+            text-align: center; padding: 24px 0 8px;
+        }
+        .kg-footer strong { color: var(--kg-lime); }
+    </style>
+</head>
+<body class="dark">
+    <!-- KG Accent Bar -->
+    <div class="kg-accent-bar"></div>
+
+    <!-- BEGIN LOADER -->
+    <div id="load_screen">
+        <div class="loader"></div>
+    </div>
+    <!-- END LOADER -->
+
+    <!-- BEGIN NAVBAR -->
+    <div class="header-container container-xxl">
+        <header class="header navbar expand-header">
+
+            <!-- Mobile toggle -->
+            <a href="javascript:void(0);" class="btn-toggle sidebarCollapse d-lg-none me-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="6" x2="20" y2="6"></line>
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <line x1="4" y1="18" x2="20" y2="18"></line>
+                </svg>
+            </a>
+
+            <!-- Client logo + name (left of header) -->
+            <div class="ms-md-0 ms-auto d-flex align-items-center">
+                <div class="client-logo-area">
+                    <!-- CLIENT LOGO PLACEHOLDER: Replace src below with actual client logo -->
+                    <div class="client-logo-img">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                            <path d="M9 9h6M9 12h6M9 15h4"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <!-- CLIENT NAME PLACEHOLDER -->
+                        <div class="client-name">Client Name Here</div>
+                        <div class="client-sub">Monthly Report Â· April 2025</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right-side header items -->
+            <ul class="header-item ms-md-auto action-area d-flex align-items-center gap-3 list-unstyled mb-0">
+                <!-- Period badge -->
+                <li>
+                    <span class="period-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="5" width="16" height="16" rx="2"></rect>
+                            <line x1="4" y1="11" x2="20" y2="11"></line>
+                            <line x1="8" y1="3" x2="8" y2="7"></line>
+                            <line x1="16" y1="3" x2="16" y2="7"></line>
+                        </svg>
+                        April 2025
+                    </span>
+                </li>
+                <!-- Print / download button -->
+                <li>
+                    <button class="btn btn-sm" onclick="window.print()" style="background:rgba(184,230,0,0.1);border:1px solid rgba(184,230,0,0.2);color:#b8e600;font-size:12px;font-weight:600;border-radius:8px;padding:6px 14px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-1">
+                            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                            <rect x="6" y="14" width="12" height="8"></rect>
+                        </svg>
+                        Export PDF
+                    </button>
+                </li>
+            </ul>
+
+        </header>
+    </div>
+    <!-- END NAVBAR -->
+
+    <!-- BEGIN MAIN CONTAINER -->
+    <div class="main-container" id="container">
+        <div class="overlay"></div>
+
+        <!-- BEGIN SIDEBAR -->
+        <div class="sidebar-wrapper sidebar-theme">
+            <nav id="sidebar">
+
+                <!-- Brand -->
+                <div class="navbar-nav theme-brand flex-row text-center">
+                    <div class="nav-logo d-flex align-items-center gap-2">
+                        <div class="nav-item theme-logo">
+                            <!-- KG LOGO: Replace with actual KG logo image -->
+                            <a href="./client-report.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <rect width="32" height="32" rx="8" fill="#b8e600"/>
+                                    <path d="M8 8h4v7.5L18 8h5l-7 8 7.5 8H18l-6-7V24H8V8z" fill="#0f0f0f"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="nav-item theme-text">
+                            <span class="kg-brand-text">Killer<span>Growth</span></span>
+                        </div>
+                    </div>
+                    <div class="nav-item sidebar-toggle ms-auto">
+                        <div class="btn-toggle sidebarCollapse">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M11 7l-5 5 5 5"/><path d="M17 7l-5 5 5 5"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shadow-bottom"></div>
+
+                <ul class="list-unstyled menu-categories" id="accordionExample">
+
+                    <!-- Overview -->
+                    <li class="menu active">
+                        <a href="./client-report.html" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                                    <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                                    <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                                    <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                                </svg>
+                                <span>Overview</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <!-- Divider -->
+                    <div class="menu-section-label">Services</div>
+
+                    <!-- SEO -->
+                    <li class="menu">
+                        <a href="#seo" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                                </svg>
+                                <span>SEO</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </a>
+                        <ul class="collapse submenu list-unstyled" id="seo" data-bs-parent="#accordionExample">
+                            <li><a href="#section-seo-rankings">Rankings</a></li>
+                            <li><a href="#section-seo-traffic">Organic Traffic</a></li>
+                            <li><a href="#section-seo-backlinks">Backlinks</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Paid Ads -->
+                    <li class="menu">
+                        <a href="#ads" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                </svg>
+                                <span>Paid Ads</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </a>
+                        <ul class="collapse submenu list-unstyled" id="ads" data-bs-parent="#accordionExample">
+                            <li><a href="#section-ads-overview">Ad Performance</a></li>
+                            <li><a href="#section-ads-spend">Spend & ROAS</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- GBP -->
+                    <li class="menu">
+                        <a href="#gbp" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Google Business</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </a>
+                        <ul class="collapse submenu list-unstyled" id="gbp" data-bs-parent="#accordionExample">
+                            <li><a href="#section-gbp-views">Profile Views</a></li>
+                            <li><a href="#section-gbp-calls">Calls & Directions</a></li>
+                            <li><a href="#section-gbp-reviews">Reviews</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Social Media -->
+                    <li class="menu">
+                        <a href="#social" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="18" cy="5" r="3"></circle>
+                                    <circle cx="6" cy="12" r="3"></circle>
+                                    <circle cx="18" cy="19" r="3"></circle>
+                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                                </svg>
+                                <span>Social Media</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </a>
+                        <ul class="collapse submenu list-unstyled" id="social" data-bs-parent="#accordionExample">
+                            <li><a href="#section-social-reach">Reach & Impressions</a></li>
+                            <li><a href="#section-social-engagement">Engagement</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Website -->
+                    <li class="menu">
+                        <a href="#web" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                </svg>
+                                <span>Website</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </a>
+                        <ul class="collapse submenu list-unstyled" id="web" data-bs-parent="#accordionExample">
+                            <li><a href="#section-web-traffic">Traffic</a></li>
+                            <li><a href="#section-web-conversions">Conversions</a></li>
+                            <li><a href="#section-web-vitals">Core Web Vitals</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Divider -->
+                    <div class="menu-section-label">Report</div>
+
+                    <li class="menu">
+                        <a href="#notes" aria-expanded="false" class="dropdown-toggle">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+                                <span>Notes & Next Steps</span>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+        <!-- END SIDEBAR -->
+
+        <!-- BEGIN CONTENT
+        -->
+        <div id="content" class="main-content">
+            <div class="layout-px-spacing">
+
+                <!-- PAGE HEADER -->
+                <div class="d-flex align-items-start justify-content-between mb-4 flex-wrap gap-3">
+                    <div>
+                        <h1 style="font-size:24px;font-weight:800;color:#f8fafc;margin:0 0 4px;">Monthly Performance Report</h1>
+                        <p style="font-size:13px;color:#9ca3af;margin:0;">Prepared by <strong style="color:#b8e600;">KillerGrowth</strong> &nbsp;&#183;&nbsp; April 1&#8211;30, 2025</p>
+                    </div>
+                    <div>
+                        <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:10px;padding:12px 20px;display:inline-flex;align-items:center;gap:10px;">
+                            <div style="width:40px;height:40px;background:#2a2a2a;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+                                <!-- CLIENT LOGO PLACEHOLDER: swap this img tag -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect></svg>
+                            </div>
+                            <div>
+                                <div style="font-size:14px;font-weight:700;color:#f8fafc;">Client Logo</div>
+                                <div style="font-size:10px;color:#9ca3af;">Replace with client brand</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OVERVIEW KPI CARDS -->
+                <div class="section-title">Overview</div>
+                <div class="row g-3 mb-3">
+                    <div class="col-xl-3 col-md-6"><div class="kg-stat-card"><div class="stat-label">Website Sessions</div><div class="stat-value">&#8211;</div><div class="stat-delta neutral">vs. last month: &#8211;</div><div class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div></div></div>
+                    <div class="col-xl-3 col-md-6"><div class="kg-stat-card"><div class="stat-label">Leads / Conversions</div><div class="stat-value">&#8211;</div><div class="stat-delta neutral">vs. last month: &#8211;</div><div class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.11h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div></div></div>
+                    <div class="col-xl-3 col-md-6"><div class="kg-stat-card"><div class="stat-label">Keyword Rankings (Top 10)</div><div class="stat-value">&#8211;</div><div class="stat-delta neutral">vs. last month: &#8211;</div><div class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div></div></div>
+                    <div class="col-xl-3 col-md-6"><div class="kg-stat-card"><div class="stat-label">GBP Profile Views</div><div class="stat-value">&#8211;</div><div class="stat-delta neutral">vs. last month: &#8211;</div><div class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div></div></div>
+                </div>
+                <div class="row g-3 mb-5">
+                    <div class="col-xl-3 col-md-6"><div class="kg-stat-card"><div class="stat-label">Ad Spend</div><div class="stat-value">&#8211;</div><div class="stat-delta neutral">Budget: &#8211;</div><div class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div></div></div>
+                    <div class="col-xl-3 col-md-6"><div class="kg-stat-card"><div class="stat-label">Cost Per Lead</div><div class="stat-value">&#8211;</div><div class="stat-delta neutral">vs. last month: &#8211;</div><div class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></div></div></div>
+                    <div class="col-xl-3 col-md-6"><div class="kg-stat-card"><div class="stat-label">Social Reach</div><div class="stat-value">&#8211;</div><div class="stat-delta neutral">vs. last month: &#8211;</div><div class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg></div></div></div>
+                    <div class="col-xl-3 col-md-6"><div class="kg-stat-card"><div class="stat-label">Google Reviews</div><div class="stat-value">&#8211;</div><div class="stat-delta neutral">Avg Rating: &#8211;</div><div class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div></div></div>
+                </div>
+
+                <!-- SEO -->
+                <div id="section-seo-traffic" class="section-title">SEO</div>
+                <div class="row g-3 mb-4">
+                    <div class="col-lg-8"><div class="kg-card h-100"><div class="d-flex align-items-center justify-content-between mb-3"><div style="font-size:14px;font-weight:700;color:#f8fafc;">Organic Traffic</div><span style="font-size:11px;color:#9ca3af;">Sessions over time</span></div><div id="chart-organic-traffic"></div></div></div>
+                    <div class="col-lg-4"><div class="kg-card h-100"><div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:16px;">Traffic Channels</div><div id="chart-traffic-channels"></div></div></div>
+                </div>
+                <div id="section-seo-rankings" class="kg-card mb-5">
+                    <div class="d-flex align-items-center justify-content-between mb-3"><div style="font-size:14px;font-weight:700;color:#f8fafc;">Keyword Rankings</div><span class="period-badge">Top Keywords</span></div>
+                    <div style="overflow-x:auto;"><table class="kg-table"><thead><tr><th>Keyword</th><th>Current Rank</th><th>Previous</th><th>Change</th><th>Search Vol.</th></tr></thead><tbody>
+                    <tr><td style="color:#9ca3af;font-style:italic;">keyword placeholder 1</td><td>&#8211;</td><td>&#8211;</td><td><span class="badge-neutral">&#8211;</span></td><td>&#8211;</td></tr>
+                    <tr><td style="color:#9ca3af;font-style:italic;">keyword placeholder 2</td><td>&#8211;</td><td>&#8211;</td><td><span class="badge-neutral">&#8211;</span></td><td>&#8211;</td></tr>
+                    <tr><td style="color:#9ca3af;font-style:italic;">keyword placeholder 3</td><td>&#8211;</td><td>&#8211;</td><td><span class="badge-neutral">&#8211;</span></td><td>&#8211;</td></tr>
+                    <tr><td style="color:#9ca3af;font-style:italic;">keyword placeholder 4</td><td>&#8211;</td><td>&#8211;</td><td><span class="badge-neutral">&#8211;</span></td><td>&#8211;</td></tr>
+                    <tr><td style="color:#9ca3af;font-style:italic;">keyword placeholder 5</td><td>&#8211;</td><td>&#8211;</td><td><span class="badge-neutral">&#8211;</span></td><td>&#8211;</td></tr>
+                    </tbody></table></div>
+                </div>
+
+                <!-- PAID ADS -->
+                <div id="section-ads-overview" class="section-title">Paid Ads</div>
+                <div class="row g-3 mb-5">
+                    <div class="col-lg-6"><div class="kg-card h-100"><div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:16px;">Ad Spend vs. Leads</div><div id="chart-ads-spend"></div></div></div>
+                    <div class="col-lg-6"><div class="kg-card h-100"><div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:4px;">Campaign Breakdown</div><div style="font-size:12px;color:#9ca3af;margin-bottom:16px;">Performance by campaign</div>
+                    <table class="kg-table"><thead><tr><th>Campaign</th><th>Spend</th><th>Clicks</th><th>Leads</th><th>CPL</th></tr></thead><tbody>
+                    <tr><td style="color:#9ca3af;font-style:italic;">Campaign 1</td><td>&#8211;</td><td>&#8211;</td><td>&#8211;</td><td>&#8211;</td></tr>
+                    <tr><td style="color:#9ca3af;font-style:italic;">Campaign 2</td><td>&#8211;</td><td>&#8211;</td><td>&#8211;</td><td>&#8211;</td></tr>
+                    <tr><td style="color:#9ca3af;font-style:italic;">Campaign 3</td><td>&#8211;</td><td>&#8211;</td><td>&#8211;</td><td>&#8211;</td></tr>
+                    </tbody></table></div></div>
+                </div>
+
+                <!-- GBP -->
+                <div id="section-gbp-views" class="section-title">Google Business Profile</div>
+                <div class="row g-3 mb-4">
+                    <div class="col-lg-4"><div class="kg-stat-card"><div class="stat-label">Total Views</div><div class="stat-value">&#8211;</div><div class="stat-delta neutral">Search + Maps</div></div></div>
+                    <div class="col-lg-4"><div class="kg-stat-card"><div class="stat-label">Calls from GBP</div><div class="stat-value">&#8211;</div><div class="stat-delta neutral">vs. last month: &#8211;</div></div></div>
+                    <div class="col-lg-4"><div class="kg-stat-card"><div class="stat-label">Direction Requests</div><div class="stat-value">&#8211;</div><div class="stat-delta neutral">vs. last month: &#8211;</div></div></div>
+                </div>
+                <div class="row g-3 mb-5">
+                    <div class="col-lg-8"><div class="kg-card h-100"><div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:16px;">GBP Views Over Time</div><div id="chart-gbp-views"></div></div></div>
+                    <div class="col-lg-4" id="section-gbp-reviews"><div class="kg-card h-100"><div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:16px;">Reviews Summary</div>
+                    <div class="text-center" style="padding:20px 0;"><div style="font-size:48px;font-weight:800;color:#b8e600;line-height:1;">&#8211;</div><div style="font-size:13px;color:#9ca3af;margin:4px 0 16px;">Average Rating</div><div style="font-size:13px;color:#f8fafc;">Total Reviews: <strong>&#8211;</strong></div><div style="font-size:13px;color:#f8fafc;">New This Month: <strong>&#8211;</strong></div></div>
+                    </div></div>
+                </div>
+
+                <!-- SOCIAL -->
+                <div id="section-social-reach" class="section-title">Social Media</div>
+                <div class="row g-3 mb-5">
+                    <div class="col-lg-6"><div class="kg-card h-100"><div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:16px;">Reach &amp; Impressions</div><div id="chart-social-reach"></div></div></div>
+                    <div class="col-lg-6" id="section-social-engagement"><div class="kg-card h-100"><div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:16px;">Engagement by Platform</div><div id="chart-social-engagement"></div></div></div>
+                </div>
+
+                <!-- WEBSITE -->
+                <div id="section-web-traffic" class="section-title">Website</div>
+                <div class="row g-3 mb-5">
+                    <div class="col-lg-8"><div class="kg-card h-100"><div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:16px;">Sessions &amp; Conversions</div><div id="chart-web-sessions"></div></div></div>
+                    <div class="col-lg-4" id="section-web-vitals"><div class="kg-card h-100"><div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:16px;">Core Web Vitals</div>
+                    <div class="d-flex flex-column gap-3">
+                        <div><div class="d-flex justify-content-between mb-1"><span style="font-size:12px;color:#9ca3af;">LCP</span><span style="font-size:12px;font-weight:600;color:#b8e600;">&#8211;</span></div><div style="background:#2a2a2a;border-radius:4px;height:6px;"><div style="background:#b8e600;height:6px;border-radius:4px;width:0%;"></div></div></div>
+                        <div><div class="d-flex justify-content-between mb-1"><span style="font-size:12px;color:#9ca3af;">CLS</span><span style="font-size:12px;font-weight:600;color:#b8e600;">&#8211;</span></div><div style="background:#2a2a2a;border-radius:4px;height:6px;"><div style="background:#b8e600;height:6px;border-radius:4px;width:0%;"></div></div></div>
+                        <div><div class="d-flex justify-content-between mb-1"><span style="font-size:12px;color:#9ca3af;">INP</span><span style="font-size:12px;font-weight:600;color:#b8e600;">&#8211;</span></div><div style="background:#2a2a2a;border-radius:4px;height:6px;"><div style="background:#b8e600;height:6px;border-radius:4px;width:0%;"></div></div></div>
+                        <div><div class="d-flex justify-content-between mb-1"><span style="font-size:12px;color:#9ca3af;">PageSpeed (Mobile)</span><span style="font-size:12px;font-weight:600;color:#b8e600;">&#8211;</span></div><div style="background:#2a2a2a;border-radius:4px;height:6px;"><div style="background:#b8e600;height:6px;border-radius:4px;width:0%;"></div></div></div>
+                    </div>
+                    </div></div>
+                </div>
+
+                <!-- NOTES -->
+                <div id="notes" class="section-title">Notes &amp; Next Steps</div>
+                <div class="row g-3 mb-4">
+                    <div class="col-lg-6"><div class="kg-card h-100"><div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:16px;">This Month's Highlights</div>
+                    <ul style="color:#9ca3af;font-size:13px;line-height:2;padding-left:20px;"><li>Placeholder highlight 1</li><li>Placeholder highlight 2</li><li>Placeholder highlight 3</li></ul></div></div>
+                    <div class="col-lg-6"><div class="kg-card h-100"><div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:16px;">Next Steps / Action Items</div>
+                    <ul style="color:#9ca3af;font-size:13px;line-height:2;padding-left:20px;"><li>Placeholder action item 1</li><li>Placeholder action item 2</li><li>Placeholder action item 3</li></ul></div></div>
+                </div>
+
+                <div class="kg-footer">Prepared by <strong>KillerGrowth</strong> &nbsp;&#183;&nbsp; killit@killergrowth.com &nbsp;&#183;&nbsp; (316) 330-1584 &nbsp;&#183;&nbsp; killergrowth.com</div>
+            </div>
+        </div>
+        <!-- END CONTENT -->
+
+    </div>
+    <!-- END MAIN CONTAINER -->
+
+    <!-- SCRIPTS -->
+    <script src="../src/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/plugins/src/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../src/plugins/src/waves/waves.min.js"></script>
+    <script src="../layouts/modern-dark-menu/app.js"></script>
+    <script src="../src/plugins/src/apex/apexcharts.min.js"></script>
+
+    <script>
+    // KillerGrowth Chart Config
+    // All charts are placeholder-ready â€” swap data arrays out when real metrics are available.
+
+    const KG_LIME = '#b8e600';
+    const KG_MUTED = '#9ca3af';
+    const KG_BORDER = '#2a2a2a';
+
+    const baseChart = {
+        chart: { background: 'transparent', toolbar: { show: false }, fontFamily: 'Inter, sans-serif' },
+        theme: { mode: 'dark' },
+        grid: { borderColor: KG_BORDER, strokeDashArray: 4 },
+        tooltip: { theme: 'dark' },
+    };
+
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+    // Organic Traffic (area)
+    new ApexCharts(document.querySelector("#chart-organic-traffic"), {
+        ...baseChart,
+        chart: { ...baseChart.chart, type: 'area', height: 260 },
+        series: [{ name: 'Sessions', data: [0,0,0,0,0,0,0,0,0,0,0,0] }],
+        xaxis: { categories: months, labels: { style: { colors: KG_MUTED } } },
+        yaxis: { labels: { style: { colors: KG_MUTED } } },
+        colors: [KG_LIME],
+        fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.25, opacityTo: 0.02, stops: [0, 100] } },
+        stroke: { curve: 'smooth', width: 2 },
+        dataLabels: { enabled: false },
+    }).render();
+
+    // Traffic Channels (donut)
+    new ApexCharts(document.querySelector("#chart-traffic-channels"), {
+        ...baseChart,
+        chart: { ...baseChart.chart, type: 'donut', height: 260 },
+        series: [0, 0, 0, 0],
+        labels: ['Organic', 'Direct', 'Paid', 'Referral'],
+        colors: [KG_LIME, '#3b82f6', '#f59e0b', '#8b5cf6'],
+        legend: { position: 'bottom', labels: { colors: KG_MUTED } },
+        plotOptions: { pie: { donut: { size: '65%' } } },
+        dataLabels: { enabled: false },
+    }).render();
+
+    // Ads: Spend vs Leads (bar)
+    new ApexCharts(document.querySelector("#chart-ads-spend"), {
+        ...baseChart,
+        chart: { ...baseChart.chart, type: 'bar', height: 260 },
+        series: [
+            { name: 'Spend ($)', data: [0,0,0,0,0,0,0,0,0,0,0,0] },
+            { name: 'Leads', data: [0,0,0,0,0,0,0,0,0,0,0,0] }
+        ],
+        xaxis: { categories: months, labels: { style: { colors: KG_MUTED } } },
+        yaxis: { labels: { style: { colors: KG_MUTED } } },
+        colors: [KG_LIME, '#3b82f6'],
+        plotOptions: { bar: { borderRadius: 4, columnWidth: '55%' } },
+        dataLabels: { enabled: false },
+    }).render();
+
+    // GBP Views (line)
+    new ApexCharts(document.querySelector("#chart-gbp-views"), {
+        ...baseChart,
+        chart: { ...baseChart.chart, type: 'line', height: 240 },
+        series: [
+            { name: 'Search Views', data: [0,0,0,0,0,0,0,0,0,0,0,0] },
+            { name: 'Maps Views', data: [0,0,0,0,0,0,0,0,0,0,0,0] }
+        ],
+        xaxis: { categories: months, labels: { style: { colors: KG_MUTED } } },
+        yaxis: { labels: { style: { colors: KG_MUTED } } },
+        colors: [KG_LIME, '#3b82f6'],
+        stroke: { curve: 'smooth', width: 2 },
+        dataLabels: { enabled: false },
+    }).render();
+
+    // Social Reach (area)
+    new ApexCharts(document.querySelector("#chart-social-reach"), {
+        ...baseChart,
+        chart: { ...baseChart.chart, type: 'area', height: 260 },
+        series: [{ name: 'Reach', data: [0,0,0,0,0,0,0,0,0,0,0,0] }],
+        xaxis: { categories: months, labels: { style: { colors: KG_MUTED } } },
+        yaxis: { labels: { style: { colors: KG_MUTED } } },
+        colors: ['#8b5cf6'],
+        fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.2, opacityTo: 0.01, stops: [0, 100] } },
+        stroke: { curve: 'smooth', width: 2 },
+        dataLabels: { enabled: false },
+    }).render();
+
+    // Social Engagement by Platform (bar)
+    new ApexCharts(document.querySelector("#chart-social-engagement"), {
+        ...baseChart,
+        chart: { ...baseChart.chart, type: 'bar', height: 260 },
+        series: [{ name: 'Engagement', data: [0, 0, 0, 0] }],
+        xaxis: { categories: ['Facebook', 'Instagram', 'LinkedIn', 'Google'], labels: { style: { colors: KG_MUTED } } },
+        yaxis: { labels: { style: { colors: KG_MUTED } } },
+        colors: [KG_LIME],
+        plotOptions: { bar: { borderRadius: 4, horizontal: true } },
+        dataLabels: { enabled: false },
+    }).render();
+
+    // Website Sessions + Conversions (mixed)
+    new ApexCharts(document.querySelector("#chart-web-sessions"), {
+        ...baseChart,
+        chart: { ...baseChart.chart, type: 'line', height: 260 },
+        series: [
+            { name: 'Sessions', type: 'area', data: [0,0,0,0,0,0,0,0,0,0,0,0] },
+            { name: 'Conversions', type: 'line', data: [0,0,0,0,0,0,0,0,0,0,0,0] }
+        ],
+        xaxis: { categories: months, labels: { style: { colors: KG_MUTED } } },
+        yaxis: { labels: { style: { colors: KG_MUTED } } },
+        colors: [KG_LIME, '#f59e0b'],
+        fill: { type: ['gradient', 'solid'], gradient: { shadeIntensity: 1, opacityFrom: 0.2, opacityTo: 0.01, stops: [0, 100] } },
+        stroke: { curve: 'smooth', width: [2, 2] },
+        dataLabels: { enabled: false },
+    }).render();
+
+    </script>
+</body>
+</html>
+

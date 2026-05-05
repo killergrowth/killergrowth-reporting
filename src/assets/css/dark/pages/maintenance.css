@@ -1,0 +1,63 @@
+/*
+	===============================
+			@Import	Function
+	===============================
+*/
+/*
+	===============================
+			@Import	Mixins
+	===============================
+*/
+/* 
+
+--------------Maintenance Wrapper------------
+
+*/
+/* 
+
+Maintenance
+
+*/
+body.dark #maintenance {
+  position: relative;
+  height: calc(100vh - 74px);
+  display: flex;
+  align-items: center;
+  margin-top: 74px;
+}
+body.dark #maintenance .maintenance-wrapper {
+  position: relative;
+  z-index: 1;
+}
+body.dark #maintenance .maintenance-wrapper h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--dark_100);
+}
+body.dark #maintenance .maintenance-wrapper h1 span {
+  color: #3754db;
+}
+body.dark #maintenance .maintenance-wrapper p {
+  /* font-size: 20px;
+  color: #6c6e78;
+  font-weight: 400; */
+  font-size: 16px;
+  color: #abacb2;
+  font-weight: 500;
+}
+
+@media (max-width: 991px) {
+  body.dark .page-maintenance .navbar .navbar-nav .nav-item .nav-link {
+    padding: 0 14px;
+  }
+  body.dark #maintenance {
+    height: auto;
+    padding: 50px 30px;
+  }
+}
+@media (max-width: 767px) {
+  body.dark #maintenance .maintenance-wrapper h1 {
+    font-size: 25px;
+  }
+}
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL2Jhc2UvX2Z1bmN0aW9ucy5zY3NzIiwiLi4vLi4vYmFzZS9fbWl4aW5zLnNjc3MiLCJwYWdlcy9tYWludGVuYW5jZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUNBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FDR0E7O0FBQUE7O0FBQUE7QUFNQTs7QUFBQTs7QUFBQTtBQU1BO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFJSjtBQUNFO0FBQUE7QUFBQTtFQUlBO0VBQ0E7RUFDQTs7O0FBS047RUFFSTtJQUNFOztFQUdGO0lBQ0U7SUFDQTs7O0FBS047RUFDRTtJQUNFIiwiZmlsZSI6InBhZ2VzL21haW50ZW5hbmNlLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXHJcblx0PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxyXG5cdFx0XHRASW1wb3J0XHRGdW5jdGlvblxyXG5cdD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cclxuKi9cclxuXHJcbiIsIi8qXHJcblx0PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxyXG5cdFx0XHRASW1wb3J0XHRNaXhpbnNcclxuXHQ9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XHJcbiovXHJcblxyXG4vLyBCb3JkZXJcclxuJGRpcmVjdGlvbjogJyc7XHJcbkBtaXhpbiBib3JkZXIoJGRpcmVjdGlvbiwgJHdpZHRoLCAkc3R5bGUsICRjb2xvcikge1xyXG5cclxuICAgQGlmICRkaXJlY3Rpb24gPT0gJycge1xyXG4gICAgICAgIGJvcmRlcjogJHdpZHRoICRzdHlsZSAkY29sb3I7XHJcbiAgIH0gQGVsc2Uge1xyXG4gICAgICAgIGJvcmRlci0jeyRkaXJlY3Rpb259OiAkd2lkdGggJHN0eWxlICRjb2xvcjtcclxuICAgfVxyXG59IiwiQGltcG9ydCAnLi4vLi4vLi4vYmFzZS9iYXNlJztcclxuXHJcblxyXG4vKiBcclxuXHJcbi0tLS0tLS0tLS0tLS0tTWFpbnRlbmFuY2UgV3JhcHBlci0tLS0tLS0tLS0tLVxyXG5cclxuKi9cclxuXHJcbi8qIFxyXG5cclxuTWFpbnRlbmFuY2VcclxuXHJcbiovXHJcblxyXG5ib2R5LmRhcmsgI21haW50ZW5hbmNlIHtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgaGVpZ2h0OiBjYWxjKDEwMHZoIC0gNzRweCk7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIG1hcmdpbi10b3A6IDc0cHg7XHJcblxyXG4gIC5tYWludGVuYW5jZS13cmFwcGVyIHtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIHotaW5kZXg6IDE7XHJcblxyXG4gICAgaDEge1xyXG4gICAgICBmb250LXNpemU6IDMycHg7XHJcbiAgICAgIGZvbnQtd2VpZ2h0OiA4MDA7XHJcbiAgICAgIGNvbG9yOiB2YXIoLS1kYXJrXzEwMCk7XHJcblxyXG4gICAgICBzcGFuIHtcclxuICAgICAgICBjb2xvcjogIzM3NTRkYjtcclxuICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIHAge1xyXG4gICAgICAvKiBmb250LXNpemU6IDIwcHg7XHJcbiAgICAgIGNvbG9yOiAjNmM2ZTc4O1xyXG4gICAgICBmb250LXdlaWdodDogNDAwOyAqL1xyXG5cclxuICAgICAgZm9udC1zaXplOiAxNnB4O1xyXG4gICAgICBjb2xvcjogI2FiYWNiMjtcclxuICAgICAgZm9udC13ZWlnaHQ6IDUwMDtcclxuICAgIH1cclxuICB9XHJcbn1cclxuXHJcbkBtZWRpYSAobWF4LXdpZHRoOiA5OTFweCkge1xyXG4gIGJvZHkuZGFyayB7XHJcbiAgICAucGFnZS1tYWludGVuYW5jZSAubmF2YmFyIC5uYXZiYXItbmF2IC5uYXYtaXRlbSAubmF2LWxpbmsge1xyXG4gICAgICBwYWRkaW5nOiAwIDE0cHg7XHJcbiAgICB9XHJcblxyXG4gICAgI21haW50ZW5hbmNlIHtcclxuICAgICAgaGVpZ2h0OiBhdXRvO1xyXG4gICAgICBwYWRkaW5nOiA1MHB4IDMwcHg7XHJcbiAgICB9XHJcbiAgfVxyXG59XHJcblxyXG5AbWVkaWEgKG1heC13aWR0aDogNzY3cHgpIHtcclxuICBib2R5LmRhcmsgI21haW50ZW5hbmNlIC5tYWludGVuYW5jZS13cmFwcGVyIGgxIHtcclxuICAgIGZvbnQtc2l6ZTogMjVweDtcclxuICB9XHJcbn1cclxuIl19 */

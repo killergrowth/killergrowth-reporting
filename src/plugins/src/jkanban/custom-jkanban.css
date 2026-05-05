@@ -1,0 +1,49 @@
+.kanban-board {
+    overflow: hidden;
+    background: var(--dark_50);
+    border-radius: 10px;
+}
+
+.kanban-contain {
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+.kanban-board:first-child {
+    margin-left: 0 !important;
+}
+
+.kanban-board .kanban-board-header {
+    background: var(--primary_600);
+    /* padding: 10px 16px; */
+    padding: 14px 20px;
+}
+.kanban-board .kanban-board-header .kanban-title-board {
+    font-weight: 500;
+    color: var(--white);
+    font-size: 15px;
+    letter-spacing: 0;
+}
+
+.kanban-board .kanban-drag {
+    min-height: auto;
+}
+.kanban-board .kanban-drag .kanban-item {
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 10px;
+    background: var(--white);
+    border: 1px solid var(--dark_100);
+}
+
+
+
+
+
+
+
+
+
+
+
+

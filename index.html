@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KillerGrowth Client Reports</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0f0f0f;
+            color: #f8fafc;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        .accent-bar { position: fixed; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #b8e600, transparent); }
+        .logo { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .logo-icon { width: 48px; height: 48px; border-radius: 12px; background: #b8e600; display: flex; align-items: center; justify-content: center; }
+        .logo-text { font-size: 22px; font-weight: 800; color: #b8e600; letter-spacing: -.02em; }
+        .logo-text span { color: #f8fafc; }
+        .tagline { font-size: 13px; color: #9ca3af; margin-bottom: 48px; }
+        .reports-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; width: 100%; max-width: 900px; }
+        .report-card {
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: border-color .2s, transform .15s;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .report-card:hover { border-color: rgba(184,230,0,.4); transform: translateY(-2px); }
+        .report-card .icon { width: 40px; height: 40px; border-radius: 8px; background: rgba(184,230,0,.1); border: 1px solid rgba(184,230,0,.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .report-card .name { font-size: 14px; font-weight: 600; color: #f8fafc; }
+        .report-card .meta { font-size: 11px; color: #9ca3af; margin-top: 2px; }
+        .empty-state { color: #4b5563; font-size: 14px; text-align: center; }
+        .footer { margin-top: 48px; font-size: 11px; color: rgba(155,163,175,.4); }
+        .footer strong { color: #b8e600; }
+    </style>
+</head>
+<body>
+    <div class="accent-bar"></div>
+
+    <div class="logo">
+        <div class="logo-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                <path d="M6 6h7v8.5L19 6h7l-7 8 7.5 10H19l-6-8.5V24H6V6z" fill="#0f0f0f"/>
+            </svg>
+        </div>
+        <div class="logo-text">Killer<span>Growth</span></div>
+    </div>
+    <div class="tagline">Client Performance Reports</div>
+
+    <div class="reports-grid" id="reports-grid">
+        <!-- Demo entry — remove or replace when real clients are added -->
+        <a class="report-card" href="./demo/">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b8e600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                    <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                    <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                    <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                </svg>
+            </div>
+            <div>
+                <div class="name">Demo Report</div>
+                <div class="meta">Template · April 2025</div>
+            </div>
+        </a>
+        <!-- ADD CLIENTS BELOW — copy the block above and update href, name, and meta -->
+    </div>
+
+    <div class="footer">Powered by <strong>KillerGrowth</strong> &nbsp;·&nbsp; Internal use only</div>
+</body>
+</html>
