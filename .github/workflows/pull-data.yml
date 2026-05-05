@@ -13,6 +13,11 @@ on:
         required: false
         default: ''
 
+# Prevent concurrent runs — if a new push triggers while a run is in progress, cancel the older one
+concurrency:
+  group: pull-and-deploy
+  cancel-in-progress: true
+
 jobs:
   pull-and-deploy:
     runs-on: ubuntu-latest
