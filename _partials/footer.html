@@ -1,0 +1,128 @@
+﻿    </div>
+    <!-- END MAIN CONTAINER -->
+
+    <!-- SCRIPTS -->
+    <script src="../src/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/plugins/src/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../src/plugins/src/waves/waves.min.js"></script>
+    <script src="../layouts/modern-dark-menu/app.js"></script>
+    <script src="../src/plugins/src/apex/apexcharts.min.js"></script>
+
+    <script>
+    // KillerGrowth Chart Config
+    // All charts are placeholder-ready â€” swap data arrays out when real metrics are available.
+
+    const KG_LIME = '#b8e600';
+    const KG_MUTED = '#9ca3af';
+    const KG_BORDER = '#2a2a2a';
+
+    const baseChart = {
+        chart: { background: 'transparent', toolbar: { show: false }, fontFamily: 'Inter, sans-serif' },
+        theme: { mode: 'dark' },
+        grid: { borderColor: KG_BORDER, strokeDashArray: 4 },
+        tooltip: { theme: 'dark' },
+    };
+
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+    // Organic Traffic (area)
+    new ApexCharts(document.querySelector("#chart-organic-traffic"), {
+        ...baseChart,
+        chart: { ...baseChart.chart, type: 'area', height: 260 },
+        series: [{ name: 'Sessions', data: [0,0,0,0,0,0,0,0,0,0,0,0] }],
+        xaxis: { categories: months, labels: { style: { colors: KG_MUTED } } },
+        yaxis: { labels: { style: { colors: KG_MUTED } } },
+        colors: [KG_LIME],
+        fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.25, opacityTo: 0.02, stops: [0, 100] } },
+        stroke: { curve: 'smooth', width: 2 },
+        dataLabels: { enabled: false },
+    }).render();
+
+    // Traffic Channels (donut)
+    new ApexCharts(document.querySelector("#chart-traffic-channels"), {
+        ...baseChart,
+        chart: { ...baseChart.chart, type: 'donut', height: 260 },
+        series: [0, 0, 0, 0],
+        labels: ['Organic', 'Direct', 'Paid', 'Referral'],
+        colors: [KG_LIME, '#3b82f6', '#f59e0b', '#8b5cf6'],
+        legend: { position: 'bottom', labels: { colors: KG_MUTED } },
+        plotOptions: { pie: { donut: { size: '65%' } } },
+        dataLabels: { enabled: false },
+    }).render();
+
+    // Ads: Spend vs Leads (bar)
+    new ApexCharts(document.querySelector("#chart-ads-spend"), {
+        ...baseChart,
+        chart: { ...baseChart.chart, type: 'bar', height: 260 },
+        series: [
+            { name: 'Spend ($)', data: [0,0,0,0,0,0,0,0,0,0,0,0] },
+            { name: 'Leads', data: [0,0,0,0,0,0,0,0,0,0,0,0] }
+        ],
+        xaxis: { categories: months, labels: { style: { colors: KG_MUTED } } },
+        yaxis: { labels: { style: { colors: KG_MUTED } } },
+        colors: [KG_LIME, '#3b82f6'],
+        plotOptions: { bar: { borderRadius: 4, columnWidth: '55%' } },
+        dataLabels: { enabled: false },
+    }).render();
+
+    // GBP Views (line)
+    new ApexCharts(document.querySelector("#chart-gbp-views"), {
+        ...baseChart,
+        chart: { ...baseChart.chart, type: 'line', height: 240 },
+        series: [
+            { name: 'Search Views', data: [0,0,0,0,0,0,0,0,0,0,0,0] },
+            { name: 'Maps Views', data: [0,0,0,0,0,0,0,0,0,0,0,0] }
+        ],
+        xaxis: { categories: months, labels: { style: { colors: KG_MUTED } } },
+        yaxis: { labels: { style: { colors: KG_MUTED } } },
+        colors: [KG_LIME, '#3b82f6'],
+        stroke: { curve: 'smooth', width: 2 },
+        dataLabels: { enabled: false },
+    }).render();
+
+    // Social Reach (area)
+    new ApexCharts(document.querySelector("#chart-social-reach"), {
+        ...baseChart,
+        chart: { ...baseChart.chart, type: 'area', height: 260 },
+        series: [{ name: 'Reach', data: [0,0,0,0,0,0,0,0,0,0,0,0] }],
+        xaxis: { categories: months, labels: { style: { colors: KG_MUTED } } },
+        yaxis: { labels: { style: { colors: KG_MUTED } } },
+        colors: ['#8b5cf6'],
+        fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.2, opacityTo: 0.01, stops: [0, 100] } },
+        stroke: { curve: 'smooth', width: 2 },
+        dataLabels: { enabled: false },
+    }).render();
+
+    // Social Engagement by Platform (bar)
+    new ApexCharts(document.querySelector("#chart-social-engagement"), {
+        ...baseChart,
+        chart: { ...baseChart.chart, type: 'bar', height: 260 },
+        series: [{ name: 'Engagement', data: [0, 0, 0, 0] }],
+        xaxis: { categories: ['Facebook', 'Instagram', 'LinkedIn', 'Google'], labels: { style: { colors: KG_MUTED } } },
+        yaxis: { labels: { style: { colors: KG_MUTED } } },
+        colors: [KG_LIME],
+        plotOptions: { bar: { borderRadius: 4, horizontal: true } },
+        dataLabels: { enabled: false },
+    }).render();
+
+    // Website Sessions + Conversions (mixed)
+    new ApexCharts(document.querySelector("#chart-web-sessions"), {
+        ...baseChart,
+        chart: { ...baseChart.chart, type: 'line', height: 260 },
+        series: [
+            { name: 'Sessions', type: 'area', data: [0,0,0,0,0,0,0,0,0,0,0,0] },
+            { name: 'Conversions', type: 'line', data: [0,0,0,0,0,0,0,0,0,0,0,0] }
+        ],
+        xaxis: { categories: months, labels: { style: { colors: KG_MUTED } } },
+        yaxis: { labels: { style: { colors: KG_MUTED } } },
+        colors: [KG_LIME, '#f59e0b'],
+        fill: { type: ['gradient', 'solid'], gradient: { shadeIntensity: 1, opacityFrom: 0.2, opacityTo: 0.01, stops: [0, 100] } },
+        stroke: { curve: 'smooth', width: [2, 2] },
+        dataLabels: { enabled: false },
+    }).render();
+
+    </script>
+</body>
+</html>
+
+
