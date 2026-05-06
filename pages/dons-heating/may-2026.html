@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Don's Heating & Air — Facebook Report 2026 YTD</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --kg-green: #b8e600;
+    --kg-green-dim: rgba(184,230,0,0.12);
+    --kg-green-glow: rgba(184,230,0,0.25);
+    --bg-base: #0d0d0d;
+    --bg-card: #161616;
+    --bg-card2: #1c1c1c;
+    --border: #242424;
+    --text-primary: #f0f4f8;
+    --text-secondary: #9ca3af;
+    --text-muted: #5a6070;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    min-height: 100vh;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+  }
+
+  /* ── HEADER ── */
+  .report-header {
+    background: linear-gradient(135deg, #111 0%, #171717 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 40px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .kg-logo {
+    display: flex;
+    align-items: center;
+  }
+  .kg-logo img {
+    height: 52px;
+    width: auto;
+    display: block;
+  }
+  .report-meta { text-align: right; }
+  .report-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.2;
+  }
+  .report-title span { color: var(--kg-green); }
+  .report-subtitle {
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin-top: 5px;
+    font-weight: 500;
+  }
+
+  /* ── CONTAINER ── */
+  .container { max-width: 1100px; margin: 0 auto; padding: 36px 28px 60px; }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--kg-green);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ── KPI CARDS ── */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 900px) { .kpi-grid { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 500px) { .kpi-grid { grid-template-columns: 1fr; } }
+  .kpi-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px 20px 18px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--kg-green);
+    border-radius: 14px 14px 0 0;
+  }
+  .kpi-card:hover { border-color: rgba(184,230,0,0.3); }
+  .kpi-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+  }
+  .kpi-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--kg-green);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .kpi-desc {
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+  .kpi-icon {
+    position: absolute;
+    bottom: 14px; right: 16px;
+    opacity: 0.06;
+    font-size: 44px;
+    font-weight: 900;
+    color: var(--kg-green);
+    line-height: 1;
+    user-select: none;
+  }
+
+  /* ── CHART CARDS ── */
+  .chart-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 800px) { .chart-grid { grid-template-columns: 1fr; } }
+  .chart-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 700px) { .chart-grid-2 { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+  }
+  .card-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+  .card-subtitle {
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+  }
+  .chart-wrap { position: relative; }
+
+  /* ── MONTHLY TABLE ── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+  .data-table thead th {
+    text-align: left;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+    padding: 0 12px 10px;
+  }
+  .data-table thead th:first-child { padding-left: 0; }
+  .data-table tbody tr {
+    border-bottom: 1px solid #1e1e1e;
+  }
+  .data-table tbody tr:last-child { border-bottom: none; }
+  .data-table tbody td {
+    padding: 10px 12px;
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+  .data-table tbody td:first-child { padding-left: 0; color: var(--text-secondary); }
+  .data-table .highlight { color: var(--kg-green); font-weight: 700; }
+  .data-table .total-row td {
+    font-weight: 700;
+    color: var(--kg-green);
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+  }
+
+  /* ── HIGHLIGHTS ── */
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 800px) { .highlights-grid { grid-template-columns: 1fr; } }
+  .highlight-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--kg-green);
+    border-radius: 0 12px 12px 0;
+    padding: 18px 18px 16px;
+  }
+  .highlight-emoji { font-size: 20px; margin-bottom: 8px; display: block; }
+  .highlight-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+  }
+  .highlight-body {
+    font-size: 11px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-weight: 500;
+  }
+
+  /* ── FOOTER ── */
+  .report-footer {
+    background: var(--bg-card);
+    border-top: 1px solid var(--border);
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 500;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .report-footer strong { color: var(--kg-green); font-weight: 700; }
+
+  /* ── BADGE ── */
+  .badge {
+    display: inline-block;
+    background: var(--kg-green-dim);
+    color: var(--kg-green);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(184,230,0,0.2);
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="report-header">
+  <div class="kg-logo">
+    <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_695fc7be86f068924c363f11/56b3c374d_LogoonDarkTransparentBG.png" alt="KillerGrowth">
+  </div>
+  <div class="report-meta">
+    <div class="report-title">Don's Heating &amp; Air — <span>Facebook Report</span></div>
+    <div class="report-subtitle">Organic Performance &nbsp;·&nbsp; January 1 – May 6, 2026 &nbsp;·&nbsp; Prepared by KillerGrowth</div>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- KPI CARDS -->
+  <div style="margin-bottom:16px;">
+    <div class="section-label">YTD At a Glance</div>
+  </div>
+  <div class="kpi-grid" style="margin-bottom:40px;">
+    <div class="kpi-card">
+      <div class="kpi-label">Organic Reach</div>
+      <div class="kpi-value">2,144</div>
+      <div class="kpi-desc">Unique people reached by posts</div>
+      <div class="kpi-icon">👥</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Organic Impressions</div>
+      <div class="kpi-value">3,701</div>
+      <div class="kpi-desc">Total organic post views</div>
+      <div class="kpi-icon">👁</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Video Views</div>
+      <div class="kpi-value">696</div>
+      <div class="kpi-desc">Total video plays YTD</div>
+      <div class="kpi-icon">🎥</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Total Reach</div>
+      <div class="kpi-value">2,939</div>
+      <div class="kpi-desc">All sources incl. viral &amp; shared</div>
+      <div class="kpi-icon">📡</div>
+    </div>
+  </div>
+
+  <!-- REACH & IMPRESSIONS CHART -->
+  <div class="section-label">Reach &amp; Impressions</div>
+  <div class="chart-grid" style="margin-bottom:40px;">
+    <div class="card">
+      <div class="card-title">Organic Reach &amp; Impressions by Month</div>
+      <div class="card-subtitle">Unique people reached + total post impressions (organic only)</div>
+      <div class="chart-wrap">
+        <canvas id="reachChart" height="220"></canvas>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Monthly Breakdown</div>
+      <div class="card-subtitle">Organic reach vs. total reach</div>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>Org. Reach</th>
+            <th>Total Reach</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>January</td><td>438</td><td>563</td></tr>
+          <tr><td>February</td><td>373</td><td>390</td></tr>
+          <tr><td class="highlight">March ✦</td><td class="highlight">726</td><td>743</td></tr>
+          <tr><td>April</td><td>546</td><td class="highlight">1,154</td></tr>
+          <tr><td>May (partial)</td><td>61</td><td>89</td></tr>
+          <tr class="total-row"><td>YTD Total</td><td>2,144</td><td>2,939</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- VIDEO & ENGAGEMENT -->
+  <div class="section-label">Video &amp; Engagement</div>
+  <div class="chart-grid-2" style="margin-bottom:40px;">
+    <div class="card">
+      <div class="card-title">Video Views by Month</div>
+      <div class="card-subtitle">Total video plays · 696 YTD</div>
+      <div class="chart-wrap">
+        <canvas id="videoChart" height="200"></canvas>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Post Engagements by Month</div>
+      <div class="card-subtitle">Likes, comments, shares, clicks · 287 YTD</div>
+      <div class="chart-wrap">
+        <canvas id="engageChart" height="200"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL METRICS TABLE -->
+  <div class="section-label">Full Monthly Data</div>
+  <div class="card" style="margin-bottom:40px;">
+    <div class="card-title" style="margin-bottom:4px;">All Metrics — Month by Month</div>
+    <div class="card-subtitle">Facebook Organic · 2026 YTD</div>
+    <div style="overflow-x:auto;">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>January</th>
+            <th>February</th>
+            <th>March</th>
+            <th>April</th>
+            <th>May*</th>
+            <th>YTD</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Organic Impressions</td>
+            <td>728</td><td>623</td><td class="highlight">1,193</td><td>990</td><td>167</td>
+            <td><strong>3,701</strong></td>
+          </tr>
+          <tr>
+            <td>Organic Reach (unique)</td>
+            <td>438</td><td>373</td><td class="highlight">726</td><td>546</td><td>61</td>
+            <td><strong>2,144</strong></td>
+          </tr>
+          <tr>
+            <td>Total Page Reach</td>
+            <td>563</td><td>390</td><td>743</td><td class="highlight">1,154</td><td>89</td>
+            <td><strong>2,939</strong></td>
+          </tr>
+          <tr>
+            <td>Viral Reach (shared)</td>
+            <td>181</td><td>42</td><td>211</td><td class="highlight">666</td><td>37</td>
+            <td><strong>1,137</strong></td>
+          </tr>
+          <tr>
+            <td>Video Views</td>
+            <td class="highlight">268</td><td>228</td><td>116</td><td>59</td><td>25</td>
+            <td><strong>696</strong></td>
+          </tr>
+          <tr>
+            <td>30s Video Completions</td>
+            <td>43</td><td class="highlight">61</td><td>17</td><td>8</td><td>8</td>
+            <td><strong>137</strong></td>
+          </tr>
+          <tr>
+            <td>Post Engagements</td>
+            <td>46</td><td>45</td><td class="highlight">120</td><td>70</td><td>6</td>
+            <td><strong>287</strong></td>
+          </tr>
+          <tr>
+            <td>Page Profile Views</td>
+            <td>204</td><td class="highlight">267</td><td>232</td><td>204</td><td>42</td>
+            <td><strong>949</strong></td>
+          </tr>
+          <tr>
+            <td>New Followers</td>
+            <td class="highlight">10</td><td>5</td><td>8</td><td>1</td><td>0</td>
+            <td><strong>24</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="font-size:10px;color:var(--text-muted);margin-top:12px;">* May data through May 6, 2026 only. ✦ = best month for that metric.</div>
+  </div>
+
+  <!-- HIGHLIGHTS -->
+  <div class="section-label">What's Working</div>
+  <div class="highlights-grid">
+    <div class="highlight-card">
+      <span class="highlight-emoji">📈</span>
+      <div class="highlight-title">March Was the Organic Peak</div>
+      <div class="highlight-body">726 unique people reached organically, 1,193 total impressions, and 120 post engagements — the strongest organic month of the year. Content hit in March.</div>
+    </div>
+    <div class="highlight-card">
+      <span class="highlight-emoji">🔁</span>
+      <div class="highlight-title">April Broke Total Reach</div>
+      <div class="highlight-body">April hit 1,154 total reach — the highest of any month. Viral reach spiked to 666 unique people, meaning content was being shared and spreading beyond followers for free.</div>
+    </div>
+    <div class="highlight-card">
+      <span class="highlight-emoji">🎥</span>
+      <div class="highlight-title">Video Is Landing</div>
+      <div class="highlight-body">696 video views YTD with 137 completing 30+ seconds. People are watching. Video content is consistently generating views with no paid support behind it.</div>
+    </div>
+    <div class="highlight-card">
+      <span class="highlight-emoji">📣</span>
+      <div class="highlight-title">3,700+ Organic Impressions, Zero Ad Spend</div>
+      <div class="highlight-body">All reach and impressions are 100% organic. No paid promotion. For a local HVAC brand in Wichita, consistently showing up in feeds without paid support is exactly what you want.</div>
+    </div>
+    <div class="highlight-card">
+      <span class="highlight-emoji">👥</span>
+      <div class="highlight-title">Growing Audience</div>
+      <div class="highlight-body">24 new followers YTD and 949 profile page views. People are finding the page and following. The audience base is growing month over month.</div>
+    </div>
+    <div class="highlight-card">
+      <span class="highlight-emoji">💪</span>
+      <div class="highlight-title">Consistent Presence</div>
+      <div class="highlight-body">No dead months. Every month shows organic reach and engagement. That consistency is what builds trust and keeps the brand top-of-mind for when people need HVAC service.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="report-footer">
+  <div>Prepared by <strong>KillerGrowth</strong> &nbsp;·&nbsp; killergrowth.com &nbsp;·&nbsp; (316) 330-1584</div>
+  <div>Don's Heating &amp; Air &nbsp;·&nbsp; Facebook Organic Report &nbsp;·&nbsp; Jan 1 – May 6, 2026</div>
+  <div>Data sourced from Meta Business Suite via Graph API</div>
+</footer>
+
+<script>
+const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May*'];
+const green = '#b8e600';
+const greenDim = 'rgba(184,230,0,0.15)';
+const greenDim2 = 'rgba(184,230,0,0.08)';
+const blue = '#38bdf8';
+const blueDim = 'rgba(56,189,248,0.15)';
+const gridColor = 'rgba(255,255,255,0.05)';
+const textColor = '#9ca3af';
+
+const baseOptions = {
+  responsive: true,
+  plugins: {
+    legend: {
+      labels: { color: textColor, font: { family: 'Montserrat', size: 11, weight: '600' }, boxWidth: 12, padding: 16 }
+    },
+    tooltip: {
+      backgroundColor: '#1c1c1c',
+      borderColor: '#333',
+      borderWidth: 1,
+      titleColor: '#f0f4f8',
+      bodyColor: textColor,
+      titleFont: { family: 'Montserrat', weight: '700', size: 12 },
+      bodyFont: { family: 'Montserrat', size: 11 },
+      padding: 12,
+      cornerRadius: 8
+    }
+  },
+  scales: {
+    x: {
+      grid: { color: gridColor },
+      ticks: { color: textColor, font: { family: 'Montserrat', size: 11, weight: '600' } }
+    },
+    y: {
+      grid: { color: gridColor },
+      ticks: { color: textColor, font: { family: 'Montserrat', size: 11 } },
+      beginAtZero: true
+    }
+  }
+};
+
+// Reach & Impressions Chart
+new Chart(document.getElementById('reachChart'), {
+  type: 'line',
+  data: {
+    labels: months,
+    datasets: [
+      {
+        label: 'Organic Impressions',
+        data: [728, 623, 1193, 990, 167],
+        borderColor: green,
+        backgroundColor: greenDim,
+        borderWidth: 2.5,
+        pointBackgroundColor: green,
+        pointRadius: 5,
+        tension: 0.35,
+        fill: true
+      },
+      {
+        label: 'Organic Reach (unique)',
+        data: [438, 373, 726, 546, 61],
+        borderColor: blue,
+        backgroundColor: blueDim,
+        borderWidth: 2.5,
+        pointBackgroundColor: blue,
+        pointRadius: 5,
+        tension: 0.35,
+        fill: true
+      }
+    ]
+  },
+  options: { ...baseOptions, maintainAspectRatio: true }
+});
+
+// Video Chart
+new Chart(document.getElementById('videoChart'), {
+  type: 'bar',
+  data: {
+    labels: months,
+    datasets: [
+      {
+        label: 'Video Views',
+        data: [268, 228, 116, 59, 25],
+        backgroundColor: [green, green, green, green, greenDim2],
+        borderColor: green,
+        borderWidth: 1,
+        borderRadius: 6
+      }
+    ]
+  },
+  options: {
+    ...baseOptions,
+    plugins: {
+      ...baseOptions.plugins,
+      legend: { display: false }
+    },
+    maintainAspectRatio: true
+  }
+});
+
+// Engagement Chart
+new Chart(document.getElementById('engageChart'), {
+  type: 'bar',
+  data: {
+    labels: months,
+    datasets: [
+      {
+        label: 'Post Engagements',
+        data: [46, 45, 120, 70, 6],
+        backgroundColor: [blue, blue, green, blue, blueDim],
+        borderColor: [blue, blue, green, blue, blue],
+        borderWidth: 1,
+        borderRadius: 6
+      }
+    ]
+  },
+  options: {
+    ...baseOptions,
+    plugins: {
+      ...baseOptions.plugins,
+      legend: { display: false }
+    },
+    maintainAspectRatio: true
+  }
+});
+</script>
+</body>
+</html>

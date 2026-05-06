@@ -171,5 +171,26 @@ if (fs.existsSync(path.join(ROOT, '_redirects'))) {
   console.log('  âœ“ _redirects');
 }
 
-console.log(`\nDone. Output in dist/ (${sourceFiles.length + 1} HTML pages)`);
+// 6. Standalone sub-pages: pages/[client]/[slug].html -> dist/[client]/[slug]/index.html
+//    Copied as-is (no partial injection) - useful for standalone reports.
+const pagesDir = path.join(ROOT, 'pages');
+if (fs.existsSync(pagesDir)) {
+  let subpageCount = 0;
+  for (const clientDir of fs.readdirSync(pagesDir)) {
+    const clientPath = path.join(pagesDir, clientDir);
+    if (!fs.statSync(clientPath).isDirectory()) continue;
+    for (const file of fs.readdirSync(clientPath)) {
+      if (!file.endsWith('.html')) continue;
+      const slug = path.basename(file, '.html');
+      const destDir = path.join(DIST, clientDir, slug);
+      mkdir(destDir);
+      fs.copyFileSync(path.join(clientPath, file), path.join(destDir, 'index.html'));
+      console.log('  copied pages/' + clientDir + '/' + file + ' -> dist/' + clientDir + '/' + slug + '/index.html');
+      subpageCount++;
+    }
+  }
+  if (subpageCount > 0) console.log('  ' + subpageCount + ' standalone sub-page(s) copied');
+}
+
+console.log('\nDone. Output in dist/ (' + (sourceFiles.length + 1) + ' HTML pages)');
 
