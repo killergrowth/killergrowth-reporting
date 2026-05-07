@@ -100,13 +100,13 @@ function pullCampaigns(ss) {
     var chunkEnd = new Date(current.getFullYear(), current.getMonth() + 1, 0);
     if (chunkEnd > endDate) chunkEnd = new Date(endDate);
 
-    // Note: video_views, video_view_rate, engagements, engagement_rate omitted from SELECT
-    // These are restricted to video/display campaign types and cause QueryError on search accounts.
-    // Zero-filled in row data to preserve 27-column schema.
+    // Note: segments.device omitted — incompatible with phone_calls/phone_impressions/phone_through_rate.
+    // device column is blank; data aggregated across devices per campaign per day.
+    // video_views, video_view_rate, engagements, engagement_rate also omitted (video/display only).
     var query =
       'SELECT ' +
         'segments.date, campaign.id, campaign.name, campaign.status, ' +
-        'campaign.advertising_channel_type, segments.device, ' +
+        'campaign.advertising_channel_type, ' +
         'metrics.impressions, metrics.clicks, metrics.cost_micros, metrics.ctr, ' +
         'metrics.average_cpc, metrics.conversions, metrics.all_conversions, ' +
         'metrics.conversions_from_interactions_rate, metrics.conversions_value, ' +
@@ -116,7 +116,7 @@ function pullCampaigns(ss) {
         'metrics.search_absolute_top_impression_share ' +
       'FROM campaign ' +
       "WHERE segments.date BETWEEN '" + formatDate(current) + "' AND '" + formatDate(chunkEnd) + "' " +
-      'ORDER BY segments.date ASC, campaign.name ASC, segments.device ASC';
+      'ORDER BY segments.date ASC, campaign.name ASC';
 
     var rows = [];
     var result = AdsApp.search(query);
@@ -128,7 +128,7 @@ function pullCampaigns(ss) {
         r.campaign.name            || '',
         r.campaign.status          || '',
         r.campaign.advertisingChannelType || '',
-        r.segments.device          || '',
+        '',                                    // device — omitted (incompatible with phone metrics)
         parseInt(r.metrics.impressions      || 0),
         parseInt(r.metrics.clicks           || 0),
         micros(r.metrics.costMicros),
