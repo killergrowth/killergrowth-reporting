@@ -100,6 +100,9 @@ function pullCampaigns(ss) {
     var chunkEnd = new Date(current.getFullYear(), current.getMonth() + 1, 0);
     if (chunkEnd > endDate) chunkEnd = new Date(endDate);
 
+    // Note: video_views, video_view_rate, engagements, engagement_rate omitted from SELECT
+    // These are restricted to video/display campaign types and cause QueryError on search accounts.
+    // Zero-filled in row data to preserve 27-column schema.
     var query =
       'SELECT ' +
         'segments.date, campaign.id, campaign.name, campaign.status, ' +
@@ -109,8 +112,6 @@ function pullCampaigns(ss) {
         'metrics.conversions_from_interactions_rate, metrics.conversions_value, ' +
         'metrics.cost_per_conversion, metrics.view_through_conversions, ' +
         'metrics.phone_calls, metrics.phone_impressions, metrics.phone_through_rate, ' +
-        'metrics.video_views, metrics.video_view_rate, ' +
-        'metrics.engagements, metrics.engagement_rate, ' +
         'metrics.search_impression_share, metrics.search_top_impression_share, ' +
         'metrics.search_absolute_top_impression_share ' +
       'FROM campaign ' +
@@ -142,10 +143,7 @@ function pullCampaigns(ss) {
         parseInt(r.metrics.phoneCalls       || 0),
         parseInt(r.metrics.phoneImpressions || 0),
         pct(r.metrics.phoneThroughRate),
-        parseInt(r.metrics.videoViews       || 0),
-        pct(r.metrics.videoViewRate),
-        parseInt(r.metrics.engagements      || 0),
-        pct(r.metrics.engagementRate),
+        0, 0, 0, 0, // video_views, video_view_rate, engagements, engagement_rate (n/a for search)
         pct(r.metrics.searchImpressionShare),
         pct(r.metrics.searchTopImpressionShare),
         pct(r.metrics.searchAbsoluteTopImpressionShare),
