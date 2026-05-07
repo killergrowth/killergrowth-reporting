@@ -70,6 +70,7 @@ async function buildReport(slug) {
   const report = {
     client:       client.name,
     slug,
+    logoPath:     client.logoPath ?? null,
     period:       getPeriodLabel(),
     generatedAt:  new Date().toISOString(),
 
@@ -98,7 +99,16 @@ async function buildReport(slug) {
       keywords:        v(gsc)?.keywords          ?? v(dfs)?.keywords          ?? base.seo?.keywords ?? []
     },
 
-    ads: base.ads ?? { spendByWeek: [], campaigns: [] },
+    ads: {
+      monthlyBreakdown: v(meta)?.monthlyHistory?.map(m => ({
+        month:    m.month,
+        adSpend:  m.adSpend,
+        adClicks: m.adClicks,
+        adLeads:  m.adLeads
+      })) ?? base.ads?.monthlyBreakdown ?? [],
+      spendByWeek: base.ads?.spendByWeek ?? [],
+      campaigns:   base.ads?.campaigns   ?? []
+    },
 
     gbp: {
       totalViews:   v(gbp)?.totalViews    ?? base.gbp?.totalViews   ?? null,
@@ -113,6 +123,11 @@ async function buildReport(slug) {
     },
 
     social: {
+      monthlyHistory: v(meta)?.monthlyHistory?.map(m => ({
+        month:       m.month,
+        reach:       m.reach,
+        engagements: m.engagements
+      })) ?? base.social?.monthlyHistory ?? [],
       reachByWeek: base.social?.reachByWeek ?? [],
       platforms: v(meta) ? [
         { platform: 'Facebook', reach: v(meta).reach, engagements: v(meta).engagements, followers: v(meta).followers }

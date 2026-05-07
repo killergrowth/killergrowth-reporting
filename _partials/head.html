@@ -194,6 +194,11 @@
         /* Report page padding */
         .layout-px-spacing { padding: 20px 24px !important; }
 
+        /* Fix header overlap — increase content top margin on mobile */
+        @media (max-width: 991px) {
+            body.dark #content { margin-top: 130px !important; }
+        }
+
         /* Accent line at top of page */
         .kg-accent-bar {
             height: 3px;

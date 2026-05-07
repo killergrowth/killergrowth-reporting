@@ -1,9 +1,9 @@
 name: Pull Reporting Data
 
 on:
-  # 1st of every month at 6:00 AM CDT (11:00 UTC)
+  # Run every hour (public repo = free GitHub Actions minutes)
   schedule:
-    - cron: '0 11 1 * *'
+    - cron: '0 * * * *'
 
   # Also allow manual trigger from GitHub Actions UI
   workflow_dispatch:
@@ -49,6 +49,30 @@ jobs:
           DATAFORSEO_LOGIN:            ${{ secrets.DATAFORSEO_LOGIN }}
           DATAFORSEO_PASSWORD:         ${{ secrets.DATAFORSEO_PASSWORD }}
         run: node scripts/build-report.js killergrowth
+
+      - name: Pull data — StewardRight
+        if: ${{ github.event.inputs.client == '' || github.event.inputs.client == 'stewardright' }}
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          META_SYSTEM_TOKEN:           ${{ secrets.META_SYSTEM_TOKEN }}
+          GHL_API_KEY:                 ${{ secrets.GHL_API_KEY }}
+        run: node scripts/build-report.js stewardright
+
+      - name: Pull data — Sunflower Plumbing
+        if: ${{ github.event.inputs.client == '' || github.event.inputs.client == 'sunflower' }}
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          META_SYSTEM_TOKEN:           ${{ secrets.META_SYSTEM_TOKEN }}
+          GHL_API_KEY:                 ${{ secrets.GHL_API_KEY }}
+        run: node scripts/build-report.js sunflower
+
+      - name: Pull data — Don's Heating & Air
+        if: ${{ github.event.inputs.client == '' || github.event.inputs.client == 'dons-heating' }}
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          META_SYSTEM_TOKEN:           ${{ secrets.META_SYSTEM_TOKEN }}
+          GHL_API_KEY:                 ${{ secrets.GHL_API_KEY }}
+        run: node scripts/build-report.js dons-heating
 
       # Add a step like the one above for each new client.
       # Copy the step, change the client slug and the if condition.

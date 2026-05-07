@@ -313,6 +313,7 @@ var CORKUI = function() {
         themeToggle: function (layoutName) {
 
             var togglethemeEl = document.querySelector('.theme-toggle');
+            if (!togglethemeEl) return;
             var getBodyEl = document.body;
             
             togglethemeEl.addEventListener('click', function() {
@@ -334,6 +335,7 @@ var CORKUI = function() {
         },
         profileSidebar: function() {
             let profileImage = document.querySelector('.user-profile-dropdown .user');
+            if (!profileImage) return;
             let profileSidebarOverlay = document.querySelector('.psidebar-overlay');
             // let profileBody = document.body;
 
