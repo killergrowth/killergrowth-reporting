@@ -1,16 +1,377 @@
 {
   "client": "Sunflower Plumbing",
   "slug": "sunflower",
+  "logoPath": null,
   "period": "April 2026",
-  "generatedAt": "2026-05-07T00:00:00.000Z",
+  "generatedAt": "2026-05-07T04:15:04.922Z",
   "overview": {
+    "sessions": 652,
+    "sessionsDelta": 0,
+    "leads": null,
+    "leadsDelta": null,
+    "rankingsTop10": 3,
+    "rankingsDelta": null,
+    "gbpViews": null,
+    "gbpViewsDelta": null,
     "adSpend": null,
     "adBudget": null,
     "costPerLead": null,
     "costPerLeadDelta": null,
-    "socialReach": null,
-    "socialReachDelta": null
+    "socialReach": 6722,
+    "socialReachDelta": null,
+    "reviewCount": null,
+    "avgRating": null
   },
-  "ads": { "campaigns": [], "spendByWeek": [], "monthlyBreakdown": [] },
-  "social": { "platforms": [], "monthlyHistory": [] }
+  "seo": {
+    "organicSessions": [
+      {
+        "week": "14",
+        "sessions": 81,
+        "conversions": 0
+      },
+      {
+        "week": "15",
+        "sessions": 156,
+        "conversions": 0
+      },
+      {
+        "week": "16",
+        "sessions": 176,
+        "conversions": 0
+      },
+      {
+        "week": "17",
+        "sessions": 114,
+        "conversions": 0
+      },
+      {
+        "week": "18",
+        "sessions": 126,
+        "conversions": 0
+      }
+    ],
+    "trafficChannels": [
+      {
+        "channel": "Direct",
+        "sessions": 347
+      },
+      {
+        "channel": "Organic Search",
+        "sessions": 156
+      },
+      {
+        "channel": "Organic Social",
+        "sessions": 89
+      },
+      {
+        "channel": "Cross-network",
+        "sessions": 42
+      },
+      {
+        "channel": "Referral",
+        "sessions": 13
+      },
+      {
+        "channel": "Unassigned",
+        "sessions": 4
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "sunflower plumbing",
+        "clicks": 3,
+        "impressions": 217,
+        "ctr": 1.4,
+        "position": 3.8
+      },
+      {
+        "keyword": "sunflower plumbing el dorado ks",
+        "clicks": 1,
+        "impressions": 28,
+        "ctr": 3.6,
+        "position": 4
+      },
+      {
+        "keyword": "24 hour plumber el dorado",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 39.5
+      },
+      {
+        "keyword": "24 hour plumber el dorado hills",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 83.5
+      },
+      {
+        "keyword": "after hours plumbing repair el dorado",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 69.7
+      },
+      {
+        "keyword": "andover kansas plumbers",
+        "clicks": 0,
+        "impressions": 17,
+        "ctr": 0,
+        "position": 69.5
+      },
+      {
+        "keyword": "appliance repair services in augusta ks",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 73.5
+      },
+      {
+        "keyword": "augusta plumbers",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 63.2
+      },
+      {
+        "keyword": "bathroom plumbing fixtures repair kansas city",
+        "clicks": 0,
+        "impressions": 44,
+        "ctr": 0,
+        "position": 88.5
+      },
+      {
+        "keyword": "bathtub replacement winfield",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 30.4
+      },
+      {
+        "keyword": "bel aire, kansas plumbers",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 53.3
+      },
+      {
+        "keyword": "burst pipe fix el dorado hills",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 64
+      },
+      {
+        "keyword": "burst pipe repair el dorado",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 45.3
+      },
+      {
+        "keyword": "clogged sink repair el dorado",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 85
+      },
+      {
+        "keyword": "clogged sink repair el dorado county",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 75.3
+      },
+      {
+        "keyword": "commercial plumber el dorado county",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 46
+      },
+      {
+        "keyword": "derby plumbing",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 59
+      },
+      {
+        "keyword": "derby plumbing services",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 66
+      },
+      {
+        "keyword": "derby, ks plumbing company",
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 62.7
+      },
+      {
+        "keyword": "drain cleaning augusta",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 79
+      },
+      {
+        "keyword": "drain cleaning el dorado",
+        "clicks": 0,
+        "impressions": 43,
+        "ctr": 0,
+        "position": 79
+      },
+      {
+        "keyword": "drain cleaning el dorado hills",
+        "clicks": 0,
+        "impressions": 66,
+        "ctr": 0,
+        "position": 75.8
+      },
+      {
+        "keyword": "drain cleaning in eldorado",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 43
+      },
+      {
+        "keyword": "drain cleanout",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keyword": "el dorado septic",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 79
+      }
+    ]
+  },
+  "ads": {
+    "monthlyBreakdown": [
+      {
+        "month": "Jan 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
+      },
+      {
+        "month": "Feb 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
+      },
+      {
+        "month": "Mar 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
+      },
+      {
+        "month": "Apr 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
+      },
+      {
+        "month": "May 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
+      }
+    ],
+    "spendByWeek": [],
+    "campaigns": []
+  },
+  "gbp": {
+    "totalViews": null,
+    "calls": null,
+    "callsDelta": null,
+    "directions": null,
+    "directionsDelta": null,
+    "viewsOverTime": [],
+    "totalReviews": null,
+    "newThisMonth": null,
+    "avgRating": null
+  },
+  "social": {
+    "monthlyHistory": [
+      {
+        "month": "Jan 2026",
+        "reach": 5884,
+        "engagements": 729
+      },
+      {
+        "month": "Feb 2026",
+        "reach": 5264,
+        "engagements": 1414
+      },
+      {
+        "month": "Mar 2026",
+        "reach": 6880,
+        "engagements": 2345
+      },
+      {
+        "month": "Apr 2026",
+        "reach": 2855,
+        "engagements": 641
+      },
+      {
+        "month": "May 2026",
+        "reach": 300,
+        "engagements": 28
+      }
+    ],
+    "reachByWeek": [],
+    "platforms": [
+      {
+        "platform": "Facebook",
+        "reach": 6722,
+        "engagements": 2405,
+        "followers": 1205
+      }
+    ]
+  },
+  "website": {
+    "sessionsOverTime": [
+      {
+        "week": "14",
+        "sessions": 81,
+        "conversions": 0
+      },
+      {
+        "week": "15",
+        "sessions": 156,
+        "conversions": 0
+      },
+      {
+        "week": "16",
+        "sessions": 176,
+        "conversions": 0
+      },
+      {
+        "week": "17",
+        "sessions": 114,
+        "conversions": 0
+      },
+      {
+        "week": "18",
+        "sessions": 126,
+        "conversions": 0
+      }
+    ],
+    "vitals": {
+      "lcp": null,
+      "cls": null,
+      "inp": null,
+      "pagespeedMobile": null
+    }
+  }
 }
