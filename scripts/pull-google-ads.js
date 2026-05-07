@@ -43,6 +43,18 @@ async function readSheetRange(spreadsheetId, range, token) {
   return res.json();
 }
 
+// Normalize dates from Google Sheets — handles both '2026-01-01' and '1/1/2026' formats
+function normalizeDate(val) {
+  if (!val) return '';
+  const s = String(val).trim();
+  if (/^\d{4}-\d{2}-\d{2}$/.test(s)) return s; // already ISO
+  const m = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if (m) return `${m[3]}-${m[1].padStart(2, '0')}-${m[2].padStart(2, '0')}`;
+  const d = new Date(s);
+  if (!isNaN(d.getTime())) return d.toISOString().split('T')[0];
+  return s;
+}
+
 async function pullGoogleAdsFromSheet(slug) {
   const sheetId = process.env.GOOGLE_ADS_SHEET_ID;
   if (!sheetId) return null;
@@ -63,7 +75,7 @@ async function pullGoogleAdsFromSheet(slug) {
   const clientRows = rows
     .filter(r => r[0] === slug && r[1])
     .map(r => ({
-      date:         r[1],
+      date:         normalizeDate(r[1]),
       campaignName: r[2] || '',
       impressions:  parseInt(r[3])   || 0,
       clicks:       parseInt(r[4])   || 0,

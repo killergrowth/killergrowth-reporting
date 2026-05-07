@@ -29,6 +29,25 @@
 // ---------------------------------------------------------------------------
 
 /**
+ * Normalize a date value to YYYY-MM-DD string regardless of how Sheets stored it.
+ * Handles: Date objects, '2026-01-01' strings, '1/1/2026' locale strings.
+ */
+function isoDate(val) {
+  if (!val) return '';
+  if (val instanceof Date) {
+    var y = val.getFullYear();
+    var mo = String(val.getMonth() + 1).padStart(2, '0');
+    var d  = String(val.getDate()).padStart(2, '0');
+    return y + '-' + mo + '-' + d;
+  }
+  var s = String(val).trim();
+  if (/^\d{4}-\d{2}-\d{2}$/.test(s)) return s;
+  var m = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if (m) return m[3] + '-' + m[1].padStart(2, '0') + '-' + m[2].padStart(2, '0');
+  return s;
+}
+
+/**
  * Rebuild the all_clients tab from all per-client tabs.
  * Safe to run any time — always does a full replace, never appends duplicates.
  */
@@ -68,7 +87,7 @@ function rebuildAllClients() {
     for (var j = 0; j < data.length; j++) {
       var row = data[j];
       if (!row[0]) continue; // skip empty rows (date missing)
-      allRows.push([name, row[0], row[1], row[2], row[3], row[4], row[5]]);
+      allRows.push([name, isoDate(row[0]), row[1], row[2], row[3], row[4], row[5]]);
     }
   }
 
