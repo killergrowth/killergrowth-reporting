@@ -1,16 +1,60 @@
 {
   "client": "Don's Heating & Air",
   "slug": "dons-heating",
+  "logoPath": null,
   "period": "April 2026",
-  "generatedAt": "2026-05-07T00:00:00.000Z",
+  "generatedAt": "2026-05-07T07:38:39.050Z",
   "overview": {
+    "sessions": null,
+    "sessionsDelta": null,
+    "leads": null,
+    "leadsDelta": null,
+    "rankingsTop10": null,
+    "rankingsDelta": null,
+    "gbpViews": null,
+    "gbpViewsDelta": null,
     "adSpend": null,
     "adBudget": null,
     "costPerLead": null,
     "costPerLeadDelta": null,
     "socialReach": null,
-    "socialReachDelta": null
+    "socialReachDelta": null,
+    "reviewCount": null,
+    "avgRating": null
   },
-  "ads": { "campaigns": [], "spendByWeek": [], "monthlyBreakdown": [] },
-  "social": { "platforms": [], "monthlyHistory": [] }
+  "seo": {
+    "organicSessions": [],
+    "trafficChannels": [],
+    "keywords": []
+  },
+  "ads": {
+    "monthlyBreakdown": [],
+    "spendByWeek": [],
+    "campaigns": []
+  },
+  "gbp": {
+    "totalViews": null,
+    "calls": null,
+    "callsDelta": null,
+    "directions": null,
+    "directionsDelta": null,
+    "viewsOverTime": [],
+    "totalReviews": null,
+    "newThisMonth": null,
+    "avgRating": null
+  },
+  "social": {
+    "monthlyHistory": [],
+    "reachByWeek": [],
+    "platforms": []
+  },
+  "website": {
+    "sessionsOverTime": [],
+    "vitals": {
+      "lcp": null,
+      "cls": null,
+      "inp": null,
+      "pagespeedMobile": null
+    }
+  }
 }

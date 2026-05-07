@@ -1,8 +1,9 @@
 {
   "client": "KillerGrowth",
   "slug": "killergrowth",
+  "logoPath": null,
   "period": "April 2026",
-  "generatedAt": "2026-05-05T21:14:35.472Z",
+  "generatedAt": "2026-05-07T07:38:22.229Z",
   "overview": {
     "sessions": 0,
     "sessionsDelta": null,
@@ -16,7 +17,7 @@
     "adBudget": null,
     "costPerLead": 938.84,
     "costPerLeadDelta": null,
-    "socialReach": 0,
+    "socialReach": 6960,
     "socialReachDelta": null,
     "reviewCount": null,
     "avgRating": null
@@ -27,6 +28,32 @@
     "keywords": []
   },
   "ads": {
+    "monthlyBreakdown": [
+      {
+        "month": "Jan 2026",
+        "adSpend": 363.23,
+        "adClicks": 1595,
+        "adLeads": 0
+      },
+      {
+        "month": "Feb 2026",
+        "adSpend": 587.54,
+        "adClicks": 9696,
+        "adLeads": 0
+      },
+      {
+        "month": "Mar 2026",
+        "adSpend": 1056.42,
+        "adClicks": 15857,
+        "adLeads": 0
+      },
+      {
+        "month": "Apr 2026",
+        "adSpend": 938.84,
+        "adClicks": 12515,
+        "adLeads": 1
+      }
+    ],
     "spendByWeek": [],
     "campaigns": []
   },
@@ -42,12 +69,34 @@
     "avgRating": null
   },
   "social": {
+    "monthlyHistory": [
+      {
+        "month": "Jan 2026",
+        "reach": 4714,
+        "engagements": 1109
+      },
+      {
+        "month": "Feb 2026",
+        "reach": 11623,
+        "engagements": 1436
+      },
+      {
+        "month": "Mar 2026",
+        "reach": 5906,
+        "engagements": 669
+      },
+      {
+        "month": "Apr 2026",
+        "reach": 6482,
+        "engagements": 1209
+      }
+    ],
     "reachByWeek": [],
     "platforms": [
       {
         "platform": "Facebook",
-        "reach": 0,
-        "engagements": 0,
+        "reach": 6960,
+        "engagements": 672,
         "followers": 457
       }
     ]
