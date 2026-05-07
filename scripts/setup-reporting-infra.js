@@ -244,10 +244,16 @@ async function getToken() {
     if (data.access_token) return data.access_token;
     throw new Error('OAuth token refresh failed: ' + JSON.stringify(data));
   }
-  // Fall back to service account
-  const auth = new GoogleAuth({ credentials: SA, scopes: SCOPES });
-  const client = await auth.getClient();
-  const { token } = await client.getAccessToken();
+  // Fall back to service account with DWD impersonation
+  // Domain-Wide Delegation requires impersonating a domain user
+  const { JWT } = require('google-auth-library');
+  const jwtClient = new JWT({
+    email:   SA.client_email,
+    key:     SA.private_key,
+    scopes:  SCOPES,
+    subject: TYLER_B_EMAIL, // impersonate Tyler B via DWD
+  });
+  const { token } = await jwtClient.getAccessToken();
   return token;
 }
 
@@ -365,7 +371,9 @@ async function main() {
   console.log('\nSaved:', CONFIG_OUT);
 }
 
-main().catch(e => { console.error(e.message); process.exit(1); });
-
-// Export for use by other scripts
+// Export for use by other scripts — guard against re-running when require()'d
 module.exports = { TEMPLATE_TABS, DIRECTORY_HEADERS };
+
+if (require.main === module) {
+  main().catch(e => { console.error(e.message); process.exit(1); });
+}
