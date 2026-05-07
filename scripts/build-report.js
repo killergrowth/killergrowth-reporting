@@ -29,6 +29,7 @@ const { pullGBP }        = require('./pull-gbp');
 const { pullMeta }       = require('./pull-meta');
 const { pullGHL }        = require('./pull-ghl');
 const { pullDataForSEO } = require('./pull-dataforseo');
+const { pullGoogleAds }  = require('./pull-google-ads');
 
 const ROOT    = path.join(__dirname, '..');
 const clients = JSON.parse(fs.readFileSync(path.join(__dirname, 'clients.json'), 'utf8'));
@@ -55,13 +56,14 @@ async function buildReport(slug) {
   const base = fs.existsSync(dataPath) ? JSON.parse(fs.readFileSync(dataPath, 'utf8')) : {};
 
   // Pull all sources in parallel
-  const [ga4, gsc, gbp, meta, ghl, dfs] = await Promise.allSettled([
+  const [ga4, gsc, gbp, meta, ghl, dfs, gads] = await Promise.allSettled([
     pullGA4(client.ga4PropertyId),
     pullGSC(client.gscSiteUrl),
     pullGBP(client.gbpAccountId, client.gbpLocationId),
     pullMeta(client.metaPageId, client),
     pullGHL(client.ghlLocationId),
-    pullDataForSEO(client.dataForSeoTarget)
+    pullDataForSEO(client.dataForSeoTarget),
+    pullGoogleAds(client.googleAdsCustomerId)
   ]);
 
   const v = r => r.status === 'fulfilled' ? r.value : null;
@@ -83,9 +85,9 @@ async function buildReport(slug) {
       rankingsDelta:    base.overview?.rankingsDelta ?? null,
       gbpViews:         v(gbp)?.totalViews        ?? base.overview?.gbpViews         ?? null,
       gbpViewsDelta:    base.overview?.gbpViewsDelta ?? null,
-      adSpend:          v(meta)?.adSpend          ?? base.overview?.adSpend    ?? null,
+      adSpend:          v(gads)?.spend            ?? v(meta)?.adSpend          ?? base.overview?.adSpend    ?? null,
       adBudget:         base.overview?.adBudget   ?? null,
-      costPerLead:      (v(meta)?.adSpend && v(meta)?.adLeads) ? parseFloat((v(meta).adSpend / v(meta).adLeads).toFixed(2)) : (base.overview?.costPerLead ?? null),
+      costPerLead:      v(gads)?.costPerLead      ?? (v(meta)?.adSpend && v(meta)?.adLeads) ? parseFloat(((v(gads)?.spend ?? v(meta)?.adSpend) / (v(gads)?.leads ?? v(meta)?.adLeads)).toFixed(2)) : (base.overview?.costPerLead ?? null),
       costPerLeadDelta: base.overview?.costPerLeadDelta ?? null,
       socialReach:      v(meta)?.reach            ?? base.overview?.socialReach      ?? null,
       socialReachDelta: base.overview?.socialReachDelta ?? null,
@@ -100,14 +102,14 @@ async function buildReport(slug) {
     },
 
     ads: {
-      monthlyBreakdown: v(meta)?.monthlyHistory?.map(m => ({
+      monthlyBreakdown: v(gads)?.monthlyBreakdown ?? v(meta)?.monthlyHistory?.map(m => ({
         month:    m.month,
         adSpend:  m.adSpend,
         adClicks: m.adClicks,
         adLeads:  m.adLeads
       })) ?? base.ads?.monthlyBreakdown ?? [],
       spendByWeek: base.ads?.spendByWeek ?? [],
-      campaigns:   base.ads?.campaigns   ?? []
+      campaigns:   v(gads)?.campaigns   ?? base.ads?.campaigns   ?? []
     },
 
     gbp: {
@@ -151,6 +153,7 @@ async function buildReport(slug) {
   console.log(`  Meta:        ${v(meta) ? 'OK' : 'SKIPPED/ERROR'}`);
   console.log(`  GHL:         ${v(ghl) ? 'OK' : 'SKIPPED/ERROR'}`);
   console.log(`  DataForSEO:  ${v(dfs) ? 'OK' : 'SKIPPED/ERROR'}`);
+  console.log(`  Google Ads:  ${v(gads) ? 'OK' : 'SKIPPED/ERROR'}`);
 
   if (ga4.status === 'rejected')  console.log('  GA4 error:',  ga4.reason?.message);
   if (gsc.status === 'rejected')  console.log('  GSC error:',  gsc.reason?.message);
