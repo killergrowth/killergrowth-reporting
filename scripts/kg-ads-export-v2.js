@@ -301,18 +301,19 @@ function pullKeywordsQs(ss) {
   var rows = [];
   var result = AdsApp.search(query);
   while (result.hasNext()) {
-    var r = result.next();
+    var r  = result.next();
+    var qi = r.adGroupCriterion.qualityInfo || {};
     rows.push([
       today,
-      r.campaign.name                              || '',
-      r.adGroup.name                               || '',
-      r.adGroupCriterion.keyword.text              || '',
-      r.adGroupCriterion.keyword.matchType         || '',
-      r.adGroupCriterion.status                    || '',
-      r.adGroupCriterion.qualityInfo.qualityScore  || '',
-      r.adGroupCriterion.qualityInfo.creativeQualityScore      || '',
-      r.adGroupCriterion.qualityInfo.postClickQualityScore     || '',
-      r.adGroupCriterion.qualityInfo.searchPredictedCtr        || '',
+      r.campaign.name                     || '',
+      r.adGroup.name                      || '',
+      r.adGroupCriterion.keyword.text     || '',
+      r.adGroupCriterion.keyword.matchType|| '',
+      r.adGroupCriterion.status           || '',
+      qi.qualityScore        !== undefined ? qi.qualityScore        : '',
+      qi.creativeQualityScore!== undefined ? qi.creativeQualityScore: '',
+      qi.postClickQualityScore!==undefined ? qi.postClickQualityScore:'',
+      qi.searchPredictedCtr  !== undefined ? qi.searchPredictedCtr  : '',
       micros(r.adGroupCriterion.effectiveCpcBidMicros),
     ]);
   }
