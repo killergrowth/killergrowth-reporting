@@ -63,7 +63,7 @@ async function buildReport(slug) {
     pullMeta(client.metaPageId, client),
     pullGHL(client.ghlLocationId),
     pullDataForSEO(client.dataForSeoTarget),
-    pullGoogleAds(client.googleAdsCustomerId)
+    pullGoogleAds(client.googleAdsCustomerId, slug)
   ]);
 
   const v = r => r.status === 'fulfilled' ? r.value : null;
