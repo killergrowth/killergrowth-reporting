@@ -19,8 +19,8 @@
  *   Each additional client → +5 min (6:10, 6:15, ...)
  */
 
-var SHEET_ID      = 'YOUR_PER_CLIENT_SHEET_ID'; // ← Replace with client's Sheet ID
-var CLIENT_ID     = 'sunflower';                  // ← Replace with client slug
+var SHEET_ID      = '1M8qoV3Y4s1m5KmbiO5i1r3jqQl0MUonTo4T4s8toSs8'; // KG Reporting - Sunflower Plumbing
+var CLIENT_ID     = 'sunflower';
 var BACKFILL_FROM = '2026-01-01';                 // ← Backfill start date
 
 // ── Tab column definitions (must match template schema exactly) ───────────
