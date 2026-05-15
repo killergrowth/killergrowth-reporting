@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * build-report.js — Pull all data sources and write data/<client>.json
+ * build-report.js  Pull all data sources and write data/<client>.json
  *
  * Usage:
  *   node scripts/build-report.js <client-slug>
@@ -10,14 +10,14 @@
  * Writes to data/<client-slug>.json
  *
  * All secrets via env vars (set in GitHub Actions or locally):
- *   GOOGLE_SERVICE_ACCOUNT_JSON  — stringified service account JSON
- *   GBP_REFRESH_TOKEN            — GBP OAuth refresh token
- *   GBP_CLIENT_ID                — GBP OAuth client ID
- *   GBP_CLIENT_SECRET            — GBP OAuth client secret
- *   META_SYSTEM_TOKEN            — Meta system user token
- *   GHL_API_KEY                  — GHL private integration token
- *   DATAFORSEO_LOGIN             — DataForSEO login email
- *   DATAFORSEO_PASSWORD          — DataForSEO password
+ *   GOOGLE_SERVICE_ACCOUNT_JSON   stringified service account JSON
+ *   GBP_REFRESH_TOKEN             GBP OAuth refresh token
+ *   GBP_CLIENT_ID                 GBP OAuth client ID
+ *   GBP_CLIENT_SECRET             GBP OAuth client secret
+ *   META_SYSTEM_TOKEN             Meta system user token
+ *   GHL_API_KEY                   GHL private integration token
+ *   DATAFORSEO_LOGIN              DataForSEO login email
+ *   DATAFORSEO_PASSWORD           DataForSEO password
  */
 
 const fs      = require('fs');
@@ -141,7 +141,17 @@ async function buildReport(slug) {
     website: {
       sessionsOverTime: v(ga4)?.sessionsOverTime ?? base.website?.sessionsOverTime ?? [],
       vitals: base.website?.vitals ?? { lcp: null, cls: null, inp: null, pagespeedMobile: null },
-      psiScores: v(psi) ?? base.website?.psiScores ?? { mobile: null, desktop: null }
+      psiScores: v(psi) ?? base.website?.psiScores ?? { mobile: null, desktop: null },
+      psiHistory: (() => {
+        const existing = base.website?.psiHistory ?? [];
+        if (!v(psi)) return existing;
+        const today = new Date().toISOString().split('T')[0];
+        // Replace today's entry if it exists, otherwise append
+        const filtered = existing.filter(e => e.date !== today);
+        filtered.push({ date: today, mobile: v(psi).mobile, desktop: v(psi).desktop });
+        // Keep last 90 entries
+        return filtered.slice(-90);
+      })()
     }
   };
 

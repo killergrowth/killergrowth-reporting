@@ -1,5 +1,5 @@
 /**
- * pull-pagespeed.js — Pull PageSpeed Insights scores via PSI API
+ * pull-pagespeed.js  Pull PageSpeed Insights scores via PSI API
  * Returns: Performance, Accessibility, Best Practices, SEO scores for mobile + desktop
  *
  * Requires env: PAGESPEED_API_KEY
@@ -28,11 +28,11 @@ function extractScores(data) {
 
 async function pullPageSpeed(domain) {
   if (!domain || domain === 'FILL_IN') {
-    console.log('[PSI] No domain configured — skipping');
+    console.log('[PSI] No domain configured  skipping');
     return null;
   }
   if (!PSI_KEY) {
-    console.log('[PSI] No API key — skipping');
+    console.log('[PSI] No API key  skipping');
     return null;
   }
 
@@ -46,8 +46,8 @@ async function pullPageSpeed(domain) {
   const mobile  = mobileResult.status  === 'fulfilled' ? extractScores(mobileResult.value)  : null;
   const desktop = desktopResult.status === 'fulfilled' ? extractScores(desktopResult.value) : null;
 
-  if (mobile)  console.log(`[PSI] Mobile  — Performance: ${mobile.performance}  Accessibility: ${mobile.accessibility}  BP: ${mobile.bestPractices}  SEO: ${mobile.seo}`);
-  if (desktop) console.log(`[PSI] Desktop — Performance: ${desktop.performance}  Accessibility: ${desktop.accessibility}  BP: ${desktop.bestPractices}  SEO: ${desktop.seo}`);
+  if (mobile)  console.log(`[PSI] Mobile   Performance: ${mobile.performance}  Accessibility: ${mobile.accessibility}  BP: ${mobile.bestPractices}  SEO: ${mobile.seo}`);
+  if (desktop) console.log(`[PSI] Desktop  Performance: ${desktop.performance}  Accessibility: ${desktop.accessibility}  BP: ${desktop.bestPractices}  SEO: ${desktop.seo}`);
 
   return { mobile, desktop };
 }
