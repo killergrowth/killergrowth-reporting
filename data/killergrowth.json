@@ -3,7 +3,7 @@
   "slug": "killergrowth",
   "logoPath": null,
   "period": "April 2026",
-  "generatedAt": "2026-05-15T17:26:36.469Z",
+  "generatedAt": "2026-05-15T19:07:33.294Z",
   "overview": {
     "sessions": 0,
     "sessionsDelta": null,
@@ -108,6 +108,20 @@
       "cls": null,
       "inp": null,
       "pagespeedMobile": null
+    },
+    "psiScores": {
+      "mobile": {
+        "performance": 74,
+        "accessibility": 92,
+        "bestPractices": 100,
+        "seo": 92
+      },
+      "desktop": {
+        "performance": 77,
+        "accessibility": 92,
+        "bestPractices": 100,
+        "seo": 92
+      }
     }
   }
 }
