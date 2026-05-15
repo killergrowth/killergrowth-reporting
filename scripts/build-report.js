@@ -88,6 +88,7 @@ async function buildReport(slug) {
       gbpViews:         v(gbp)?.totalViews        ?? base.overview?.gbpViews         ?? null,
       gbpViewsDelta:    base.overview?.gbpViewsDelta ?? null,
       adSpend:          v(gads)?.spend            ?? v(meta)?.adSpend          ?? base.overview?.adSpend    ?? null,
+      adImpressions:    v(gads)?.impressions       ?? base.overview?.adImpressions ?? null,
       adBudget:         base.overview?.adBudget   ?? null,
       costPerLead:      v(gads)?.costPerLead      ?? (v(meta)?.adSpend && v(meta)?.adLeads) ? parseFloat(((v(gads)?.spend ?? v(meta)?.adSpend) / (v(gads)?.leads ?? v(meta)?.adLeads)).toFixed(2)) : (base.overview?.costPerLead ?? null),
       costPerLeadDelta: base.overview?.costPerLeadDelta ?? null,
@@ -104,7 +105,13 @@ async function buildReport(slug) {
     },
 
     ads: {
-      monthlyBreakdown: v(gads)?.monthlyBreakdown ?? v(meta)?.monthlyHistory?.map(m => ({
+      monthlyBreakdown: v(gads)?.monthlyBreakdown?.map(m => ({
+        month:         m.month,
+        adSpend:       m.adSpend,
+        adClicks:      m.adClicks,
+        adLeads:       m.adLeads,
+        adImpressions: m.adImpressions ?? null,
+      })) ?? v(meta)?.monthlyHistory?.map(m => ({
         month:    m.month,
         adSpend:  m.adSpend,
         adClicks: m.adClicks,

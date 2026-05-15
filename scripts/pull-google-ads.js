@@ -79,25 +79,29 @@ function aggregateRows(rows) {
   let totalSpend = 0, totalClicks = 0, totalLeads = 0;
   const campaignMap = {};
 
+  let totalImpressions = 0;
   for (const r of lmRows) {
-    totalSpend  += r.cost;
-    totalClicks += r.clicks;
-    totalLeads  += r.conversions;
+    totalSpend       += r.cost;
+    totalClicks      += r.clicks;
+    totalLeads       += r.conversions;
+    totalImpressions += (r.impressions || 0);
 
     if (!campaignMap[r.campaignName]) {
-      campaignMap[r.campaignName] = { name: r.campaignName, spend: 0, clicks: 0, leads: 0 };
+      campaignMap[r.campaignName] = { name: r.campaignName, spend: 0, clicks: 0, leads: 0, impressions: 0 };
     }
     campaignMap[r.campaignName].spend       += r.cost;
     campaignMap[r.campaignName].clicks      += r.clicks;
     campaignMap[r.campaignName].leads       += r.conversions;
+    campaignMap[r.campaignName].impressions += (r.impressions || 0);
   }
 
   const campaigns = Object.values(campaignMap)
     .map(c => ({
-      name:   c.name,
-      spend:  Math.round(c.spend  * 100) / 100,
-      clicks: c.clicks,
-      leads:  Math.round(c.leads),
+      name:        c.name,
+      spend:       Math.round(c.spend  * 100) / 100,
+      clicks:      c.clicks,
+      leads:       Math.round(c.leads),
+      impressions: c.impressions,
     }))
     .filter(c => c.spend > 0 || c.clicks > 0)
     .sort((a, b) => b.spend - a.spend);
@@ -109,22 +113,24 @@ function aggregateRows(rows) {
     const end   = new Date(now.getFullYear(), now.getMonth() - i, 0);
     const label = start.toLocaleString('en-US', { month: 'short', year: 'numeric' });
     const mRows = rows.filter(r => r.date >= fmtDate(start) && r.date <= fmtDate(end));
-    let mSpend = 0, mClicks = 0, mLeads = 0;
-    for (const r of mRows) { mSpend += r.cost; mClicks += r.clicks; mLeads += r.conversions; }
+    let mSpend = 0, mClicks = 0, mLeads = 0, mImpressions = 0;
+    for (const r of mRows) { mSpend += r.cost; mClicks += r.clicks; mLeads += r.conversions; mImpressions += (r.impressions || 0); }
     monthlyBreakdown.push({
-      month:    label,
-      adSpend:  Math.round(mSpend  * 100) / 100,
-      adClicks: mClicks,
-      adLeads:  Math.round(mLeads),
+      month:         label,
+      adSpend:       Math.round(mSpend  * 100) / 100,
+      adClicks:      mClicks,
+      adLeads:       Math.round(mLeads),
+      adImpressions: mImpressions || null,
     });
   }
 
   const costPerLead = totalLeads > 0 ? Math.round((totalSpend / totalLeads) * 100) / 100 : null;
 
   return {
-    spend:            Math.round(totalSpend  * 100) / 100,
-    clicks:           totalClicks,
-    leads:            Math.round(totalLeads),
+    spend:       Math.round(totalSpend  * 100) / 100,
+    clicks:      totalClicks,
+    leads:       Math.round(totalLeads),
+    impressions: totalImpressions || null,
     costPerLead,
     campaigns,
     monthlyBreakdown,
