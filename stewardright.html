@@ -614,6 +614,11 @@
                 }).join('');
             }
         }
+    
+        /* PSI scores + history */
+        window.__psiScores  = d.website ? (d.website.psiScores || null) : null;
+        window.__psiHistory = d.website ? (d.website.psiHistory || []) : [];
+        if (window.__psiScores || window.__psiHistory.length) setPsiView('mobile');
     }
 
     /* PSI Scores */
@@ -635,11 +640,6 @@
     }
 
 
-
-        /* PSI scores + history */
-        window.__psiScores  = d.website ? (d.website.psiScores || null) : null;
-        window.__psiHistory = d.website ? (d.website.psiHistory || []) : [];
-        if (window.__psiScores || window.__psiHistory.length) setPsiView('mobile');
 
 
     document.addEventListener('DOMContentLoaded', function() {
