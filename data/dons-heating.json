@@ -3,7 +3,7 @@
   "slug": "dons-heating",
   "logoPath": null,
   "period": "April 2026",
-  "generatedAt": "2026-05-15T19:20:41.153Z",
+  "generatedAt": "2026-05-15T19:29:55.744Z",
   "overview": {
     "sessions": 751,
     "sessionsDelta": 0,
@@ -364,17 +364,34 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 52,
+        "performance": 56,
         "accessibility": 86,
         "bestPractices": 73,
         "seo": 100
       },
       "desktop": {
-        "performance": 69,
+        "performance": 88,
         "accessibility": 91,
         "bestPractices": 73,
         "seo": 100
       }
-    }
+    },
+    "psiHistory": [
+      {
+        "date": "2026-05-15",
+        "mobile": {
+          "performance": 56,
+          "accessibility": 86,
+          "bestPractices": 73,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 88,
+          "accessibility": 91,
+          "bestPractices": 73,
+          "seo": 100
+        }
+      }
+    ]
   }
 }

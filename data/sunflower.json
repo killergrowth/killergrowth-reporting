@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "April 2026",
-  "generatedAt": "2026-05-15T19:20:07.178Z",
+  "generatedAt": "2026-05-15T19:29:31.044Z",
   "overview": {
     "sessions": 627,
     "sessionsDelta": 0,
@@ -388,6 +388,23 @@
         "bestPractices": 96,
         "seo": 85
       }
-    }
+    },
+    "psiHistory": [
+      {
+        "date": "2026-05-15",
+        "mobile": {
+          "performance": 56,
+          "accessibility": 75,
+          "bestPractices": 96,
+          "seo": 85
+        },
+        "desktop": {
+          "performance": 66,
+          "accessibility": 77,
+          "bestPractices": 96,
+          "seo": 85
+        }
+      }
+    ]
   }
 }
