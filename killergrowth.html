@@ -100,52 +100,28 @@
                 </div>
 
                 <!-- WEBSITE PERFORMANCE (PSI) -->
-                <div id="section-website-performance" class="section-title">Website Performance</div>
-                <div class="row g-3 mb-5">
-                    <div class="col-lg-6">
-                        <div class="kg-card h-100">
-                            <div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:4px;">&#128247; Mobile</div>
-                            <div style="font-size:11px;color:#9ca3af;margin-bottom:20px;">Lighthouse  4G throttled</div>
-                            <div class="row g-3" id="psi-mobile-scores">
-                                <div class="col-6"><div class="psi-score-card" id="psi-m-performance"><div class="psi-score-value">&#8211;</div><div class="psi-score-label">Performance</div></div></div>
-                                <div class="col-6"><div class="psi-score-card" id="psi-m-accessibility"><div class="psi-score-value">&#8211;</div><div class="psi-score-label">Accessibility</div></div></div>
-                                <div class="col-6"><div class="psi-score-card" id="psi-m-bestpractices"><div class="psi-score-value">&#8211;</div><div class="psi-score-label">Best Practices</div></div></div>
-                                <div class="col-6"><div class="psi-score-card" id="psi-m-seo"><div class="psi-score-value">&#8211;</div><div class="psi-score-label">SEO</div></div></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="kg-card h-100">
-                            <div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:4px;">&#128444; Desktop</div>
-                            <div style="font-size:11px;color:#9ca3af;margin-bottom:20px;">Lighthouse  no throttle</div>
-                            <div class="row g-3" id="psi-desktop-scores">
-                                <div class="col-6"><div class="psi-score-card" id="psi-d-performance"><div class="psi-score-value">&#8211;</div><div class="psi-score-label">Performance</div></div></div>
-                                <div class="col-6"><div class="psi-score-card" id="psi-d-accessibility"><div class="psi-score-value">&#8211;</div><div class="psi-score-label">Accessibility</div></div></div>
-                                <div class="col-6"><div class="psi-score-card" id="psi-d-bestpractices"><div class="psi-score-value">&#8211;</div><div class="psi-score-label">Best Practices</div></div></div>
-                                <div class="col-6"><div class="psi-score-card" id="psi-d-seo"><div class="psi-score-value">&#8211;</div><div class="psi-score-label">SEO</div></div></div>
-                            </div>
-                        </div>
+                <div id="section-website-performance" class="section-title" style="display:flex;align-items:center;justify-content:space-between;">
+                    <span>Website Performance</span>
+                    <div style="display:flex;gap:6px;">
+                        <button id="psi-toggle-mobile"  onclick="setPsiView('mobile')"  style="font-size:12px;font-weight:600;padding:5px 16px;border-radius:6px;border:1px solid #b8e600;background:#b8e600;color:#111;cursor:pointer;">Mobile</button>
+                        <button id="psi-toggle-desktop" onclick="setPsiView('desktop')" style="font-size:12px;font-weight:600;padding:5px 16px;border-radius:6px;border:1px solid #2a2a2a;background:transparent;color:#9ca3af;cursor:pointer;">Desktop</button>
                     </div>
                 </div>
-
-
-                <!-- PSI TREND CHART -->
-                <div class="row g-3 mb-3 mt-2">
+                <div class="row g-3 mb-4">
+                    <div class="col-lg-3 col-6"><div class="psi-score-card" id="psi-performance"><div class="psi-score-value">&#8211;</div><div class="psi-score-label">Performance</div></div></div>
+                    <div class="col-lg-3 col-6"><div class="psi-score-card" id="psi-accessibility"><div class="psi-score-value">&#8211;</div><div class="psi-score-label">Accessibility</div></div></div>
+                    <div class="col-lg-3 col-6"><div class="psi-score-card" id="psi-bestpractices"><div class="psi-score-value">&#8211;</div><div class="psi-score-label">Best Practices</div></div></div>
+                    <div class="col-lg-3 col-6"><div class="psi-score-card" id="psi-seo"><div class="psi-score-value">&#8211;</div><div class="psi-score-label">SEO</div></div></div>
+                </div>
+                <div class="row g-3 mb-5">
                     <div class="col-12">
                         <div class="kg-card">
-                            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
-                                <div style="font-size:14px;font-weight:700;color:#f8fafc;">Score Trends</div>
-                                <div style="display:flex;gap:6px;">
-                                    <button id="psi-toggle-mobile"  onclick="setPsiView('mobile')"  style="font-size:12px;font-weight:600;padding:5px 14px;border-radius:6px;border:1px solid #b8e600;background:#b8e600;color:#111;cursor:pointer;">Mobile</button>
-                                    <button id="psi-toggle-desktop" onclick="setPsiView('desktop')" style="font-size:12px;font-weight:600;padding:5px 14px;border-radius:6px;border:1px solid #2a2a2a;background:transparent;color:#9ca3af;cursor:pointer;">Desktop</button>
-                                </div>
-                            </div>
+                            <div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:16px;">Score Trends</div>
                             <div id="chart-psi-trend"></div>
                         </div>
                     </div>
                 </div>
-
-                <!-- NOTES -->
+                                <!-- NOTES -->
                 <div id="notes" class="section-title">Notes &amp; Next Steps</div>
                 <div class="row g-3 mb-4">
                     <div class="col-lg-6"><div class="kg-card h-100"><div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:16px;">This Month's Highlights</div>
@@ -259,7 +235,6 @@
     /* PSI Trend Chart */
 
     /* PSI trend chart toggle — must be global for onclick */
-    window.__psiHistory = [];
     window.__psiView    = 'mobile';
     function setPsiView(view) {
         window.__psiView = view;
@@ -491,14 +466,11 @@
     }
 
 
-    /* PSI scores */
-    var psi = d.website ? (d.website.psiScores || null) : null;
-    if (psi) {
-        renderPsiScores(psi.mobile,  'psi-m');
-        renderPsiScores(psi.desktop, 'psi-d');
-    }
-    window.__psiHistory = d.website ? (d.website.psiHistory || []) : [];
-    if (window.__psiHistory.length) setPsiView('mobile');
+
+        /* PSI scores + history */
+        window.__psiScores  = d.website ? (d.website.psiScores || null) : null;
+        window.__psiHistory = d.website ? (d.website.psiHistory || []) : [];
+        if (window.__psiScores || window.__psiHistory.length) setPsiView('mobile');
 
     loadData();
     </script>
