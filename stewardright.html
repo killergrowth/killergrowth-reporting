@@ -641,6 +641,23 @@
         window.__psiHistory = d.website ? (d.website.psiHistory || []) : [];
         if (window.__psiScores || window.__psiHistory.length) setPsiView('mobile');
 
+
+    document.addEventListener('DOMContentLoaded', function() {
+    /* Hide web traffic section — not in StewardRight package */
+    (function hideWebTrafficSection() {
+        var el = document.getElementById('section-web-traffic');
+        if (!el) return;
+        // Hide the title itself
+        el.style.display = 'none';
+        // Hide all following siblings until we hit the next section-title or end of parent
+        var sib = el.nextElementSibling;
+        while (sib && !sib.classList.contains('section-title')) {
+            sib.style.display = 'none';
+            sib = sib.nextElementSibling;
+        }
+    })();
+
+    });
     loadData();
 </script>
 </body>
