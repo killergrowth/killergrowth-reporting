@@ -48,6 +48,7 @@ jobs:
           GHL_API_KEY:                 ${{ secrets.GHL_API_KEY }}
           DATAFORSEO_LOGIN:            ${{ secrets.DATAFORSEO_LOGIN }}
           DATAFORSEO_PASSWORD:         ${{ secrets.DATAFORSEO_PASSWORD }}
+          PAGESPEED_API_KEY:           ${{ secrets.PAGESPEED_API_KEY }}
         run: node scripts/build-report.js killergrowth
 
       - name: Pull data — StewardRight
@@ -56,6 +57,7 @@ jobs:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
           META_SYSTEM_TOKEN:           ${{ secrets.META_SYSTEM_TOKEN }}
           GHL_API_KEY:                 ${{ secrets.GHL_API_KEY }}
+          PAGESPEED_API_KEY:           ${{ secrets.PAGESPEED_API_KEY }}
         run: node scripts/build-report.js stewardright
 
       - name: Pull data — Sunflower Plumbing
@@ -74,6 +76,7 @@ jobs:
           GOOGLE_ADS_REFRESH_TOKEN:          ${{ secrets.GOOGLE_ADS_REFRESH_TOKEN }}
           GOOGLE_ADS_DEVELOPER_TOKEN:        ${{ secrets.GOOGLE_ADS_DEVELOPER_TOKEN }}
           GOOGLE_ADS_LOGIN_CUSTOMER_ID:      ${{ secrets.GOOGLE_ADS_LOGIN_CUSTOMER_ID }}
+          PAGESPEED_API_KEY:                 ${{ secrets.PAGESPEED_API_KEY }}
         run: node scripts/build-report.js sunflower
 
       - name: Pull data — Don's Heating & Air
@@ -82,6 +85,7 @@ jobs:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
           META_SYSTEM_TOKEN:           ${{ secrets.META_SYSTEM_TOKEN }}
           GHL_API_KEY:                 ${{ secrets.GHL_API_KEY }}
+          PAGESPEED_API_KEY:           ${{ secrets.PAGESPEED_API_KEY }}
         run: node scripts/build-report.js dons-heating
 
       - name: Pull data — Good to Be Clean
@@ -90,6 +94,7 @@ jobs:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
           META_SYSTEM_TOKEN:           ${{ secrets.META_SYSTEM_TOKEN }}
           GHL_API_KEY:                 ${{ secrets.GHL_API_KEY }}
+          PAGESPEED_API_KEY:           ${{ secrets.PAGESPEED_API_KEY }}
         run: node scripts/build-report.js good-to-be-clean
 
       # Add a step like the one above for each new client.

@@ -99,6 +99,35 @@
                     </div></div>
                 </div>
 
+                <!-- WEBSITE PERFORMANCE (PSI) -->
+                <div id="section-website-performance" class="section-title">Website Performance</div>
+                <div class="row g-3 mb-5">
+                    <div class="col-lg-6">
+                        <div class="kg-card h-100">
+                            <div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:4px;">&#128247; Mobile</div>
+                            <div style="font-size:11px;color:#9ca3af;margin-bottom:20px;">Lighthouse — 4G throttled</div>
+                            <div class="row g-3" id="psi-mobile-scores">
+                                <div class="col-6"><div class="psi-score-card" id="psi-m-performance"><div class="psi-score-value">&#8211;</div><div class="psi-score-label">Performance</div></div></div>
+                                <div class="col-6"><div class="psi-score-card" id="psi-m-accessibility"><div class="psi-score-value">&#8211;</div><div class="psi-score-label">Accessibility</div></div></div>
+                                <div class="col-6"><div class="psi-score-card" id="psi-m-bestpractices"><div class="psi-score-value">&#8211;</div><div class="psi-score-label">Best Practices</div></div></div>
+                                <div class="col-6"><div class="psi-score-card" id="psi-m-seo"><div class="psi-score-value">&#8211;</div><div class="psi-score-label">SEO</div></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="kg-card h-100">
+                            <div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:4px;">&#128444; Desktop</div>
+                            <div style="font-size:11px;color:#9ca3af;margin-bottom:20px;">Lighthouse — no throttle</div>
+                            <div class="row g-3" id="psi-desktop-scores">
+                                <div class="col-6"><div class="psi-score-card" id="psi-d-performance"><div class="psi-score-value">&#8211;</div><div class="psi-score-label">Performance</div></div></div>
+                                <div class="col-6"><div class="psi-score-card" id="psi-d-accessibility"><div class="psi-score-value">&#8211;</div><div class="psi-score-label">Accessibility</div></div></div>
+                                <div class="col-6"><div class="psi-score-card" id="psi-d-bestpractices"><div class="psi-score-value">&#8211;</div><div class="psi-score-label">Best Practices</div></div></div>
+                                <div class="col-6"><div class="psi-score-card" id="psi-d-seo"><div class="psi-score-value">&#8211;</div><div class="psi-score-label">SEO</div></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- NOTES -->
                 <div id="notes" class="section-title">Notes &amp; Next Steps</div>
                 <div class="row g-3 mb-4">
@@ -376,6 +405,24 @@
                 xaxis: { categories: webRows.map(r => 'Wk ' + r.week) }
             });
         }
+    }
+
+    /* PSI Scores */
+    function setPsiScore(id, score) {
+        const card = document.getElementById(id);
+        if (!card) return;
+        const valEl = card.querySelector('.psi-score-value');
+        if (score == null) return;
+        valEl.textContent = score;
+        card.classList.remove('good','ok','poor');
+        card.classList.add(score >= 90 ? 'good' : score >= 50 ? 'ok' : 'poor');
+    }
+    function renderPsiScores(scores, prefix) {
+        if (!scores) return;
+        setPsiScore(prefix + '-performance',  scores.performance);
+        setPsiScore(prefix + '-accessibility', scores.accessibility);
+        setPsiScore(prefix + '-bestpractices', scores.bestPractices);
+        setPsiScore(prefix + '-seo',           scores.seo);
     }
 
     loadData();

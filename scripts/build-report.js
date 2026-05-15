@@ -30,6 +30,7 @@ const { pullMeta }       = require('./pull-meta');
 const { pullGHL }        = require('./pull-ghl');
 const { pullDataForSEO } = require('./pull-dataforseo');
 const { pullGoogleAds }  = require('./pull-google-ads');
+const { pullPageSpeed }  = require('./pull-pagespeed');
 
 const ROOT    = path.join(__dirname, '..');
 const clients = JSON.parse(fs.readFileSync(path.join(__dirname, 'clients.json'), 'utf8'));
@@ -56,14 +57,15 @@ async function buildReport(slug) {
   const base = fs.existsSync(dataPath) ? JSON.parse(fs.readFileSync(dataPath, 'utf8')) : {};
 
   // Pull all sources in parallel
-  const [ga4, gsc, gbp, meta, ghl, dfs, gads] = await Promise.allSettled([
+  const [ga4, gsc, gbp, meta, ghl, dfs, gads, psi] = await Promise.allSettled([
     pullGA4(client.ga4PropertyId),
     pullGSC(client.gscSiteUrl),
     pullGBP(client.gbpAccountId, client.gbpLocationId),
     pullMeta(client.metaPageId, client),
     pullGHL(client.ghlLocationId),
     pullDataForSEO(client.dataForSeoTarget),
-    pullGoogleAds(client.googleAdsCustomerId, slug)
+    pullGoogleAds(client.googleAdsCustomerId, slug),
+    pullPageSpeed(client.dataForSeoTarget)
   ]);
 
   const v = r => r.status === 'fulfilled' ? r.value : null;
@@ -138,7 +140,8 @@ async function buildReport(slug) {
 
     website: {
       sessionsOverTime: v(ga4)?.sessionsOverTime ?? base.website?.sessionsOverTime ?? [],
-      vitals: base.website?.vitals ?? { lcp: null, cls: null, inp: null, pagespeedMobile: null }
+      vitals: base.website?.vitals ?? { lcp: null, cls: null, inp: null, pagespeedMobile: null },
+      psiScores: v(psi) ?? base.website?.psiScores ?? { mobile: null, desktop: null }
     }
   };
 
@@ -154,6 +157,7 @@ async function buildReport(slug) {
   console.log(`  GHL:         ${v(ghl) ? 'OK' : 'SKIPPED/ERROR'}`);
   console.log(`  DataForSEO:  ${v(dfs) ? 'OK' : 'SKIPPED/ERROR'}`);
   console.log(`  Google Ads:  ${v(gads) ? 'OK' : 'SKIPPED/ERROR'}`);
+  console.log(`  PageSpeed:   ${v(psi)  ? 'OK' : 'SKIPPED/ERROR'}`);
 
   if (ga4.status === 'rejected')  console.log('  GA4 error:',  ga4.reason?.message);
   if (gsc.status === 'rejected')  console.log('  GSC error:',  gsc.reason?.message);
