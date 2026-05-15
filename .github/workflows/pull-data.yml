@@ -84,6 +84,14 @@ jobs:
           GHL_API_KEY:                 ${{ secrets.GHL_API_KEY }}
         run: node scripts/build-report.js dons-heating
 
+      - name: Pull data — Good to Be Clean
+        if: ${{ github.event.inputs.client == '' || github.event.inputs.client == 'good-to-be-clean' }}
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          META_SYSTEM_TOKEN:           ${{ secrets.META_SYSTEM_TOKEN }}
+          GHL_API_KEY:                 ${{ secrets.GHL_API_KEY }}
+        run: node scripts/build-report.js good-to-be-clean
+
       # Add a step like the one above for each new client.
       # Copy the step, change the client slug and the if condition.
 

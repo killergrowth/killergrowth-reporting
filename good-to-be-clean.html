@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD:Good to Be Clean -- Monthly Report -->
+<body class="dark">
+<!-- NAVBAR -->
+<!-- SIDEBAR -->
+        <div id="content" class="main-content">
+            <div class="layout-px-spacing">
+
+                <!-- PAGE HEADER -->
+                <div class="d-flex align-items-start justify-content-between mb-4 flex-wrap gap-3">
+                    <div>
+                        <h1 style="font-size:24px;font-weight:800;color:#f8fafc;margin:0 0 4px;">Monthly Performance Report</h1>
+                        <p style="font-size:13px;color:#9ca3af;margin:0;">Prepared by <strong style="color:#b8e600;">KillerGrowth</strong> &nbsp;&#183;&nbsp; <span id="report-period">Loading...</span></p>
+                    </div>
+                    <div>
+                        <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:10px;padding:12px 20px;display:inline-flex;align-items:center;gap:10px;">
+                            <div style="width:40px;height:40px;background:#2a2a2a;border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;" id="client-logo-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                            </div>
+                            <div>
+                                <div style="font-size:14px;font-weight:700;color:#f8fafc;" id="client-name">Good to Be Clean</div>
+                                <div style="font-size:10px;color:#9ca3af;">Monthly Report</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OVERVIEW KPI CARDS -->
+                <div class="section-title">Overview</div>
+                <div class="row g-3 mb-5">
+                    <div class="col-xl-3 col-md-6"><div class="kg-stat-card"><div class="stat-label">Ad Spend</div><div class="stat-value" id="stat-adspend">&#8211;</div><div class="stat-delta neutral" id="stat-adspend-budget">Budget: &#8211;</div><div class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div></div></div>
+                    <div class="col-xl-3 col-md-6"><div class="kg-stat-card"><div class="stat-label">Cost Per Lead</div><div class="stat-value" id="stat-cpl">&#8211;</div><div class="stat-delta neutral" id="stat-cpl-delta">vs. last month: &#8211;</div><div class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></div></div></div>
+                    <div class="col-xl-3 col-md-6"><div class="kg-stat-card"><div class="stat-label">Social Reach</div><div class="stat-value" id="stat-social-reach">&#8211;</div><div class="stat-delta neutral" id="stat-social-reach-delta">vs. last month: &#8211;</div><div class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg></div></div></div>
+                    <div class="col-xl-3 col-md-6"><div class="kg-stat-card"><div class="stat-label">Page Followers</div><div class="stat-value" id="stat-followers">&#8211;</div><div class="stat-delta neutral" id="stat-followers-meta">Facebook</div><div class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div></div></div>
+                </div>
+
+                <!-- PAID ADS -->
+                <div id="section-ads-overview" class="section-title">Paid Ads</div>
+                <div class="row g-3 mb-5">
+                    <div class="col-lg-6"><div class="kg-card h-100"><div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:16px;">Ad Spend vs. Leads</div><div id="chart-ads-spend"></div></div></div>
+                    <div class="col-lg-6"><div class="kg-card h-100"><div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:4px;">Campaign Breakdown</div><div style="font-size:12px;color:#9ca3af;margin-bottom:16px;">Performance by campaign</div>
+                    <table class="kg-table"><thead><tr><th>Campaign</th><th>Spend</th><th>Clicks</th><th>Leads</th><th>CPL</th></tr></thead><tbody id="campaigns-tbody">
+                    <tr><td colspan="5" style="color:#9ca3af;font-style:italic;text-align:center;">Awaiting data...</td></tr>
+                    </tbody></table></div></div>
+                </div>
+
+                <!-- SOCIAL -->
+                <div id="section-social-reach" class="section-title">Social Media</div>
+                <div class="row g-3 mb-5">
+                    <div class="col-lg-6"><div class="kg-card h-100"><div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:16px;">Reach &amp; Impressions</div><div id="chart-social-reach"></div></div></div>
+                    <div class="col-lg-6" id="section-social-engagement"><div class="kg-card h-100"><div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:16px;">Engagement by Platform</div><div id="chart-social-engagement"></div></div></div>
+                </div>
+
+                <!-- NOTES -->
+                <div id="notes" class="section-title">Notes &amp; Next Steps</div>
+                <div class="row g-3 mb-4">
+                    <div class="col-lg-6"><div class="kg-card h-100"><div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:16px;">This Month's Highlights</div>
+                    <ul style="color:#9ca3af;font-size:13px;line-height:2;padding-left:20px;"><li>Placeholder highlight 1</li><li>Placeholder highlight 2</li><li>Placeholder highlight 3</li></ul></div></div>
+                    <div class="col-lg-6"><div class="kg-card h-100"><div style="font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:16px;">Next Steps / Action Items</div>
+                    <ul style="color:#9ca3af;font-size:13px;line-height:2;padding-left:20px;"><li>Placeholder action item 1</li><li>Placeholder action item 2</li><li>Placeholder action item 3</li></ul></div></div>
+                </div>
+
+                <div class="kg-footer">Prepared by <strong>KillerGrowth</strong> &nbsp;&#183;&nbsp; killit@killergrowth.com &nbsp;&#183;&nbsp; (316) 330-1584 &nbsp;&#183;&nbsp; killergrowth.com</div>
+            </div>
+        </div>
+        <!-- END CONTENT -->
+<!-- SCRIPTS -->
+<style>
+/* Hide sidebar items for sections not in this report */
+.sidebar-wrapper li:has(a[href="#section-seo-traffic"]),
+.sidebar-wrapper li:has(a[href="#section-gbp-views"]),
+.sidebar-wrapper li:has(a[href="#section-web-traffic"]),
+.sidebar-wrapper .menu-section-label:first-of-type ~ li:has(a[href="#section-seo-traffic"]) { display: none; }
+</style>
+<script>
+    /* ===== CHART DEFAULTS ===== */
+    const KG_LIME  = '#b8e600';
+    const KG_MUTED = '#9ca3af';
+    const KG_BORDER = '#2a2a2a';
+    const baseChart = {
+        chart: { background: 'transparent', toolbar: { show: false }, fontFamily: 'Inter, sans-serif' },
+        theme: { mode: 'dark' },
+        grid: { borderColor: KG_BORDER, strokeDashArray: 4 },
+        tooltip: { theme: 'dark' },
+    };
+
+    /* ===== HELPERS ===== */
+    function fmt(n, prefix='', suffix='') {
+        if (n == null) return '\u2013';
+        return prefix + Number(n).toLocaleString() + suffix;
+    }
+    function fmtDelta(d, suffix='%') {
+        if (d == null) return 'vs. last month: \u2013';
+        const sign = d > 0 ? '+' : '';
+        return 'vs. last month: ' + sign + d + suffix;
+    }
+    function setEl(id, val) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = val;
+    }
+    function setDelta(id, d, suffix='%') {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.textContent = fmtDelta(d, suffix);
+        el.className = 'stat-delta ' + (d == null ? 'neutral' : d > 0 ? 'up' : d < 0 ? 'down' : 'neutral');
+    }
+
+    /* ===== CHARTS ===== */
+    const charts = {};
+    function makeChartOpts(overrides) { return Object.assign({}, baseChart, overrides); }
+
+    charts.adsSpend = new ApexCharts(document.querySelector('#chart-ads-spend'), makeChartOpts({
+        chart: { ...baseChart.chart, type: 'bar', height: 260 },
+        series: [{ name: 'Spend ($)', data: [] }, { name: 'Leads', data: [] }],
+        xaxis: { categories: [], labels: { style: { colors: KG_MUTED } } },
+        yaxis: { labels: { style: { colors: KG_MUTED } } },
+        colors: [KG_LIME, '#3b82f6'],
+        plotOptions: { bar: { borderRadius: 4, columnWidth: '55%' } },
+        dataLabels: { enabled: false },
+    }));
+    charts.adsSpend.render();
+
+    charts.socialReach = new ApexCharts(document.querySelector('#chart-social-reach'), makeChartOpts({
+        chart: { ...baseChart.chart, type: 'area', height: 260 },
+        series: [{ name: 'Reach', data: [] }],
+        xaxis: { categories: [], labels: { style: { colors: KG_MUTED } } },
+        yaxis: { labels: { style: { colors: KG_MUTED } } },
+        colors: ['#8b5cf6'],
+        fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.2, opacityTo: 0.01, stops: [0,100] } },
+        stroke: { curve: 'smooth', width: 2 },
+        dataLabels: { enabled: false },
+    }));
+    charts.socialReach.render();
+
+    charts.socialEngagement = new ApexCharts(document.querySelector('#chart-social-engagement'), makeChartOpts({
+        chart: { ...baseChart.chart, type: 'bar', height: 260 },
+        series: [{ name: 'Engagements', data: [] }],
+        xaxis: { categories: [], labels: { style: { colors: KG_MUTED } } },
+        yaxis: { labels: { style: { colors: KG_MUTED } } },
+        colors: [KG_LIME],
+        plotOptions: { bar: { borderRadius: 4, horizontal: true } },
+        dataLabels: { enabled: false },
+    }));
+    charts.socialEngagement.render();
+
+    /* ===== DATA LOADER ===== */
+    async function loadData() {
+        let d;
+        try {
+            if (window.__reportData) {
+                d = window.__reportData;
+            } else {
+                const res = await fetch('../data/good-to-be-clean.json');
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                d = await res.json();
+            }
+        } catch (e) {
+            console.warn('Could not load report data:', e.message);
+            return;
+        }
+
+        const o = d.overview || {};
+
+        /* Header */
+        setEl('report-period', d.period || '\u2013');
+        setEl('client-name', d.client || 'Good to Be Clean');
+
+        /* Logo */
+        if (d.logoPath) {
+            const wrap = document.getElementById('client-logo-wrap');
+            if (wrap) wrap.innerHTML = '<img src="' + d.logoPath + '" alt="' + (d.client || 'Good to Be Clean') + '" style="width:40px;height:40px;object-fit:cover;border-radius:8px;">';
+        }
+
+        /* Overview KPI cards */
+        setEl('stat-adspend', fmt(o.adSpend, '$'));
+        const budgetEl = document.getElementById('stat-adspend-budget');
+        if (budgetEl) budgetEl.textContent = 'Budget: ' + fmt(o.adBudget, '$');
+
+        setEl('stat-cpl', fmt(o.costPerLead, '$'));
+        setDelta('stat-cpl-delta', o.costPerLeadDelta);
+
+        setEl('stat-social-reach', fmt(o.socialReach));
+        setDelta('stat-social-reach-delta', o.socialReachDelta);
+
+        /* Followers from social platforms */
+        const socialPlats = (d.social || {}).platforms || [];
+        const fb = socialPlats.find(p => p.platform === 'Facebook');
+        if (fb) {
+            setEl('stat-followers', fmt(fb.followers));
+        }
+
+        /* Campaigns table */
+        const campaigns = (d.ads || {}).campaigns || [];
+        const tbody = document.getElementById('campaigns-tbody');
+        if (tbody && campaigns.length > 0) {
+            tbody.innerHTML = campaigns.map(c => {
+                const cpl = (c.spend && c.leads) ? '$' + (c.spend / c.leads).toFixed(2) : '\u2013';
+                return '<tr>' +
+                    '<td>' + c.name + '</td>' +
+                    '<td>' + fmt(c.spend, '$') + '</td>' +
+                    '<td>' + fmt(c.clicks) + '</td>' +
+                    '<td>' + fmt(c.leads) + '</td>' +
+                    '<td>' + cpl + '</td></tr>';
+            }).join('');
+        }
+
+        /* Social reach + engagement charts */
+        const socialHistory = (d.social || {}).monthlyHistory || [];
+        if (socialHistory.length) {
+            const months = socialHistory.map(m => m.month);
+            charts.socialReach.updateOptions({
+                series: [{ name: 'Reach', data: socialHistory.map(m => m.reach || 0) }],
+                xaxis: { categories: months }
+            });
+            charts.socialEngagement.updateOptions({
+                series: [{ name: 'Engagements', data: socialHistory.map(m => m.engagements || 0) }],
+                xaxis: { categories: months }
+            });
+        } else if (fb) {
+            charts.socialReach.updateOptions({
+                series: [{ name: 'Reach', data: [fb.reach || 0] }],
+                xaxis: { categories: [d.period || 'This Month'] }
+            });
+            charts.socialEngagement.updateOptions({
+                series: [{ name: 'Engagements', data: [fb.engagements || 0] }],
+                xaxis: { categories: ['Facebook'] }
+            });
+        }
+
+        /* Ads spend chart */
+        const monthlyBreakdown = (d.ads || {}).monthlyBreakdown || [];
+        const spendByWeek = (d.ads || {}).spendByWeek || [];
+        if (monthlyBreakdown.length) {
+            charts.adsSpend.updateOptions({
+                series: [
+                    { name: 'Spend ($)', data: monthlyBreakdown.map(r => r.adSpend || 0) },
+                    { name: 'Leads',     data: monthlyBreakdown.map(r => r.adLeads || 0) }
+                ],
+                xaxis: { categories: monthlyBreakdown.map(r => r.month) }
+            });
+        } else if (spendByWeek.length) {
+            charts.adsSpend.updateOptions({
+                series: [
+                    { name: 'Spend ($)', data: spendByWeek.map(r => r.spend || 0) },
+                    { name: 'Leads',     data: spendByWeek.map(r => r.leads || 0) }
+                ],
+                xaxis: { categories: spendByWeek.map(r => r.week || '') }
+            });
+        }
+    }
+
+    loadData();
+</script>
+</body>
+</html>
+
