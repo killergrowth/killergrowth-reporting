@@ -179,6 +179,30 @@
 
 
     /* PSI Trend Chart */
+
+    /* PSI trend chart toggle — must be global for onclick */
+    window.__psiHistory = [];
+    window.__psiView    = 'mobile';
+    function setPsiView(view) {
+        window.__psiView = view;
+        var mb = document.getElementById('psi-toggle-mobile');
+        var db = document.getElementById('psi-toggle-desktop');
+        if (mb) { mb.style.background = view === 'mobile'  ? '#b8e600' : 'transparent'; mb.style.color = view === 'mobile'  ? '#111' : '#9ca3af'; mb.style.borderColor = view === 'mobile'  ? '#b8e600' : '#2a2a2a'; }
+        if (db) { db.style.background = view === 'desktop' ? '#b8e600' : 'transparent'; db.style.color = view === 'desktop' ? '#111' : '#9ca3af'; db.style.borderColor = view === 'desktop' ? '#b8e600' : '#2a2a2a'; }
+        var hist = window.__psiHistory;
+        if (!hist || !hist.length) return;
+        var dates = hist.map(function(h) { return h.date; });
+        var s = view;
+        charts.psiTrend.updateOptions({
+            series: [
+                { name: 'Performance',    data: hist.map(function(h) { return (h[s] && h[s].performance    != null) ? h[s].performance    : null; }) },
+                { name: 'Accessibility',  data: hist.map(function(h) { return (h[s] && h[s].accessibility  != null) ? h[s].accessibility  : null; }) },
+                { name: 'Best Practices', data: hist.map(function(h) { return (h[s] && h[s].bestPractices  != null) ? h[s].bestPractices  : null; }) },
+                { name: 'SEO',            data: hist.map(function(h) { return (h[s] && h[s].seo            != null) ? h[s].seo            : null; }) }
+            ],
+            xaxis: { categories: dates }
+        });
+    }
     charts.psiTrend = new ApexCharts(document.querySelector('#chart-psi-trend'), makeChartOpts({
         chart: { ...baseChart.chart, type: 'line', height: 260 },
         series: [
@@ -297,37 +321,16 @@
         }
 
         /* PSI scores */
-        const psi = d.website?.psiScores;
+        var psi = d.website ? (d.website.psiScores || null) : null;
         if (psi) {
             renderPsiScores(psi.mobile,  'psi-m');
             renderPsiScores(psi.desktop, 'psi-d');
         }
-
-
-        /* PSI history chart */
         window.__psiHistory = d.website ? (d.website.psiHistory || []) : [];
-        window.__psiView    = 'mobile';
-        function setPsiView(view) {
-            window.__psiView = view;
-            var mb = document.getElementById('psi-toggle-mobile');
-            var db = document.getElementById('psi-toggle-desktop');
-            if (mb) { mb.style.background = view === 'mobile'  ? '#b8e600' : 'transparent'; mb.style.color = view === 'mobile'  ? '#111' : '#9ca3af'; mb.style.borderColor = view === 'mobile' ? '#b8e600' : '#2a2a2a'; }
-            if (db) { db.style.background = view === 'desktop' ? '#b8e600' : 'transparent'; db.style.color = view === 'desktop' ? '#111' : '#9ca3af'; db.style.borderColor = view === 'desktop' ? '#b8e600' : '#2a2a2a'; }
-            var hist = window.__psiHistory;
-            if (!hist || !hist.length) return;
-            var dates = hist.map(function(h) { return h.date; });
-            var s = view;
-            charts.psiTrend.updateOptions({
-                series: [
-                    { name: 'Performance',    data: hist.map(function(h) { return (h[s] && h[s].performance    != null) ? h[s].performance    : null; }) },
-                    { name: 'Accessibility',  data: hist.map(function(h) { return (h[s] && h[s].accessibility  != null) ? h[s].accessibility  : null; }) },
-                    { name: 'Best Practices', data: hist.map(function(h) { return (h[s] && h[s].bestPractices  != null) ? h[s].bestPractices  : null; }) },
-                    { name: 'SEO',            data: hist.map(function(h) { return (h[s] && h[s].seo            != null) ? h[s].seo            : null; }) }
-                ],
-                xaxis: { categories: dates }
-            });
-        }
         if (window.__psiHistory.length) setPsiView('mobile');
+
+
+
 
         /* Ads spend chart */
         const monthlyBreakdown = (d.ads || {}).monthlyBreakdown || [];
