@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "April 2026",
-  "generatedAt": "2026-05-17T22:46:19.728Z",
+  "generatedAt": "2026-05-17T23:52:45.361Z",
   "overview": {
     "sessions": 627,
     "sessionsDelta": 0,
@@ -383,9 +383,14 @@
       "pagespeedMobile": null
     },
     "psiScores": {
-      "mobile": null,
+      "mobile": {
+        "performance": 46,
+        "accessibility": 75,
+        "bestPractices": 96,
+        "seo": 85
+      },
       "desktop": {
-        "performance": 70,
+        "performance": 65,
         "accessibility": 77,
         "bestPractices": 96,
         "seo": 85
@@ -424,9 +429,14 @@
       },
       {
         "date": "2026-05-17",
-        "mobile": null,
+        "mobile": {
+          "performance": 46,
+          "accessibility": 75,
+          "bestPractices": 96,
+          "seo": 85
+        },
         "desktop": {
-          "performance": 70,
+          "performance": 65,
           "accessibility": 77,
           "bestPractices": 96,
           "seo": 85
