@@ -1,20 +1,12 @@
-﻿/**
- * KillerGrowth Client Reporting â€” Build Script
- * Assembles source pages + partials into dist/
+/**
+ * KillerGrowth Reporting — Build Script v2
+ *
+ * Two modes:
+ *   TEMPLATE mode  — source file contains <!-- TEMPLATE -->
+ *                    Injects CLIENT_CONFIG + window.__reportData into the master template
+ *   LEGACY mode    — source file uses <!-- HEAD / NAVBAR / SIDEBAR / SCRIPTS --> partials
  *
  * Usage: node build.js
- *
- * Structure:
- *   _partials/head.html     â†’ injected via <!-- HEAD:Page Title -->
- *   _partials/navbar.html   â†’ injected via <!-- NAVBAR -->
- *   _partials/sidebar.html  â†’ injected via <!-- SIDEBAR -->
- *   _partials/footer.html   â†’ injected via <!-- FOOTER --> (also closes main-container)
- *
- * Page source files:
- *   index.html              â†’ dist/index.html        (landing page, no partials)
- *   [client].html           â†’ dist/[client]/index.html  (client report pages, uses partials)
- *
- * Client pages reference ../src/ and ../layouts/ which resolve correctly from dist/[client]/
  */
 
 const fs   = require('fs');
@@ -23,12 +15,12 @@ const path = require('path');
 const ROOT  = __dirname;
 const DIST  = path.join(ROOT, 'dist');
 const PARTS = path.join(ROOT, '_partials');
+const TEMPLATE_MARKER = '<!-- TEMPLATE -->';
 
-// â”€â”€ helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ── helpers ──────────────────────────────────────────────────────────────────
 
 function read(p) {
   const buf = fs.readFileSync(p);
-  // Strip UTF-8 BOM (EF BB BF) if present — PowerShell adds these
   const start = (buf[0] === 0xEF && buf[1] === 0xBB && buf[2] === 0xBF) ? 3 : 0;
   return buf.slice(start).toString('utf8');
 }
@@ -45,33 +37,40 @@ function copyDir(src, dest) {
   }
 }
 
-function injectPartials(html) {
-  const head    = read(path.join(PARTS, 'head.html'));
-  const navbar  = read(path.join(PARTS, 'navbar.html'));
-  const sidebar = read(path.join(PARTS, 'sidebar.html'));
-  const footer  = read(path.join(PARTS, 'footer.html'));
+// ── TEMPLATE MODE build ───────────────────────────────────────────────────────
 
-  // <!-- HEAD:Page Title Here --> â€” extract the title from the comment
-  html = html.replace(/<!-- HEAD:(.*?) -->/, (_, title) => {
-    return head.replace('<!-- PAGE_TITLE -->', title.trim());
-  });
+function buildTemplatePage(sourcePath, destDir) {
+  const source = read(sourcePath);
+  const markerIdx = source.indexOf(TEMPLATE_MARKER);
+  if (markerIdx === -1) return false; // not a template page
 
-  html = html.replace('<!-- NAVBAR -->', navbar);
-  html = html.replace('<!-- SIDEBAR -->', sidebar);
-  html = html.replace('<!-- SCRIPTS -->', '<!-- end content area -->');
-  html = html.replace('<!-- FOOTER -->', footer);
+  // Everything before <!-- TEMPLATE --> is the config block (CLIENT_CONFIG + CLIENT_ROSTER)
+  const configBlock = source.substring(0, markerIdx).trim();
 
-  // If page uses <!-- SCRIPTS --> for inline scripts (after the tag was already replaced):
-  // handle the pattern: <!-- SCRIPTS --> followed by <script> blocks
-  // The source pages put <!-- SCRIPTS --> before the inline script block.
-  // footer.html contains the external script tags.
-  // We need to merge them: replace <!-- SCRIPTS --><script>...</script> with footer + <script>...</script>
-  // This is handled below by the page build process (see buildClientPage).
+  // Load data JSON (bake into page so it works offline / before fetch)
+  const clientSlug = path.basename(sourcePath, '.html');
+  const dataFile   = path.join(ROOT, 'data', clientSlug + '.json');
+  let dataScript   = '<script>window.__reportData = null;</script>';
+  if (fs.existsSync(dataFile)) {
+    const reportJson = fs.readFileSync(dataFile, 'utf8');
+    dataScript = `<script>\nwindow.__reportData = ${reportJson};\n</script>`;
+  }
 
-  return html;
+  // Read master template
+  const template = read(path.join(PARTS, 'report-template.html'));
+
+  // Inject config + data at <!-- CLIENT_INJECT -->
+  const inject = configBlock + '\n' + dataScript;
+  const html = template.replace('<!-- CLIENT_INJECT -->', inject);
+
+  mkdir(destDir);
+  fs.writeFileSync(path.join(destDir, 'index.html'), html, 'utf8');
+  return true;
 }
 
-function buildClientPage(sourcePath, destDir) {
+// ── LEGACY MODE build (kept for backward compat) ─────────────────────────────
+
+function buildLegacyPage(sourcePath, destDir) {
   let html = read(sourcePath);
 
   const head    = read(path.join(PARTS, 'head.html'));
@@ -79,22 +78,15 @@ function buildClientPage(sourcePath, destDir) {
   const sidebar = read(path.join(PARTS, 'sidebar.html'));
   const footer  = read(path.join(PARTS, 'footer.html'));
 
-  // HEAD: extract title from <!-- HEAD:Title -->
-  html = html.replace(/<!-- HEAD:(.*?) -->/, (_, title) => {
-    return head.replace('<!-- PAGE_TITLE -->', title.trim());
-  });
-
+  html = html.replace(/<!-- HEAD:(.*?) -->/, (_, title) =>
+    head.replace('<!-- PAGE_TITLE -->', title.trim())
+  );
   html = html.replace('<!-- NAVBAR -->', navbar);
   html = html.replace('<!-- SIDEBAR -->', sidebar);
 
-  // <!-- SCRIPTS --> â€” replace with footer content.
-  // If there's an inline <script> after <!-- SCRIPTS -->, we keep it.
-  // footer.html already contains the external script tags + </body></html>.
-  // We need to insert the inline script BEFORE the </body> in footer.
-  // Embed report data for this client so the page never needs a fetch
   const clientSlug = path.basename(sourcePath, '.html');
   const dataFile   = path.join(ROOT, 'data', clientSlug + '.json');
-  let   dataScript = '';
+  let dataScript = '';
   if (fs.existsSync(dataFile)) {
     const reportJson = fs.readFileSync(dataFile, 'utf8');
     dataScript = `\n    <script>\n    window.__reportData = ${reportJson};\n    </script>`;
@@ -102,20 +94,17 @@ function buildClientPage(sourcePath, destDir) {
 
   const scriptsIdx = html.indexOf('<!-- SCRIPTS -->');
   if (scriptsIdx !== -1) {
-    const beforeScripts = html.substring(0, scriptsIdx);
-    const afterScripts  = html.substring(scriptsIdx + '<!-- SCRIPTS -->'.length);
-    // afterScripts may have an inline <script> block + </body></html>
-    // footer.html ends with </body></html>, so we insert afterScripts before </body>
-    // dataScript injects window.__reportData so loadData() uses it without a fetch
-    const footerWithInline = footer.replace('</body>', () => dataScript + afterScripts + '\n</body>');
-    html = beforeScripts + footerWithInline;
+    const before = html.substring(0, scriptsIdx);
+    const after  = html.substring(scriptsIdx + '<!-- SCRIPTS -->'.length);
+    const footerWithInline = footer.replace('</body>', () => dataScript + after + '\n</body>');
+    html = before + footerWithInline;
   }
 
   mkdir(destDir);
   fs.writeFileSync(path.join(destDir, 'index.html'), html, 'utf8');
 }
 
-// â”€â”€ build â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ── BUILD ─────────────────────────────────────────────────────────────────────
 
 console.log('Building KillerGrowth Reporting...');
 
@@ -123,11 +112,11 @@ console.log('Building KillerGrowth Reporting...');
 if (fs.existsSync(DIST)) fs.rmSync(DIST, { recursive: true, force: true });
 mkdir(DIST);
 
-// 1. index.html â†’ dist/index.html (standalone, no partials needed)
+// 1. index.html → dist/index.html (landing page, no partials)
 fs.copyFileSync(path.join(ROOT, 'index.html'), path.join(DIST, 'index.html'));
-console.log('  âœ“ index.html');
+console.log('  ✓ index.html');
 
-// 2. Client report pages: [name].html â†’ dist/[name]/index.html
+// 2. Client pages
 const sourceFiles = fs.readdirSync(ROOT).filter(f =>
   f.endsWith('.html') &&
   f !== 'index.html' &&
@@ -135,62 +124,59 @@ const sourceFiles = fs.readdirSync(ROOT).filter(f =>
 );
 
 for (const file of sourceFiles) {
-  const name = path.basename(file, '.html');
-  buildClientPage(path.join(ROOT, file), path.join(DIST, name));
-  console.log(`  âœ“ ${file} â†’ dist/${name}/index.html`);
+  const name    = path.basename(file, '.html');
+  const dest    = path.join(DIST, name);
+  const srcPath = path.join(ROOT, file);
+
+  const wasTemplate = buildTemplatePage(srcPath, dest);
+  if (!wasTemplate) buildLegacyPage(srcPath, dest);
+
+  console.log(`  ✓ ${file} → dist/${name}/index.html (${wasTemplate ? 'template' : 'legacy'})`);
 }
 
-// 3. Copy shared assets
-copyDir(path.join(ROOT, 'src'),     path.join(DIST, 'src'));
-console.log('  âœ“ src/ copied');
-
-copyDir(path.join(ROOT, 'layouts'), path.join(DIST, 'layouts'));
-console.log('  âœ“ layouts/ copied');
-
-// 4. Copy robots.txt
-if (fs.existsSync(path.join(ROOT, 'robots.txt'))) {
-  fs.copyFileSync(path.join(ROOT, 'robots.txt'), path.join(DIST, 'robots.txt'));
-  console.log('  âœ“ robots.txt');
+// 3. Copy assets
+if (fs.existsSync(path.join(ROOT, 'src'))) {
+  copyDir(path.join(ROOT, 'src'), path.join(DIST, 'src'));
+  console.log('  ✓ src/ copied');
 }
-
-// 4c. Copy data files
-if (fs.existsSync(path.join(ROOT, 'data'))) {
-  copyDir(path.join(ROOT, 'data'), path.join(DIST, 'data'));
-  console.log('  ✓ data/ copied');
+if (fs.existsSync(path.join(ROOT, 'layouts'))) {
+  copyDir(path.join(ROOT, 'layouts'), path.join(DIST, 'layouts'));
+  console.log('  ✓ layouts/ copied');
 }
-
-// 4b. Copy images
 if (fs.existsSync(path.join(ROOT, 'images'))) {
   copyDir(path.join(ROOT, 'images'), path.join(DIST, 'images'));
   console.log('  ✓ images/ copied');
 }
-
-// 5. Copy _redirects
+if (fs.existsSync(path.join(ROOT, 'data'))) {
+  copyDir(path.join(ROOT, 'data'), path.join(DIST, 'data'));
+  console.log('  ✓ data/ copied');
+}
+if (fs.existsSync(path.join(ROOT, 'robots.txt'))) {
+  fs.copyFileSync(path.join(ROOT, 'robots.txt'), path.join(DIST, 'robots.txt'));
+  console.log('  ✓ robots.txt');
+}
 if (fs.existsSync(path.join(ROOT, '_redirects'))) {
   fs.copyFileSync(path.join(ROOT, '_redirects'), path.join(DIST, '_redirects'));
-  console.log('  âœ“ _redirects');
+  console.log('  ✓ _redirects');
 }
 
-// 6. Standalone sub-pages: pages/[client]/[slug].html -> dist/[client]/[slug]/index.html
-//    Copied as-is (no partial injection) - useful for standalone reports.
+// 4. Standalone sub-pages
 const pagesDir = path.join(ROOT, 'pages');
 if (fs.existsSync(pagesDir)) {
-  let subpageCount = 0;
+  let n = 0;
   for (const clientDir of fs.readdirSync(pagesDir)) {
     const clientPath = path.join(pagesDir, clientDir);
     if (!fs.statSync(clientPath).isDirectory()) continue;
     for (const file of fs.readdirSync(clientPath)) {
       if (!file.endsWith('.html')) continue;
       const slug = path.basename(file, '.html');
-      const destDir = path.join(DIST, clientDir, slug);
-      mkdir(destDir);
-      fs.copyFileSync(path.join(clientPath, file), path.join(destDir, 'index.html'));
-      console.log('  copied pages/' + clientDir + '/' + file + ' -> dist/' + clientDir + '/' + slug + '/index.html');
-      subpageCount++;
+      const d    = path.join(DIST, clientDir, slug);
+      mkdir(d);
+      fs.copyFileSync(path.join(clientPath, file), path.join(d, 'index.html'));
+      n++;
     }
   }
-  if (subpageCount > 0) console.log('  ' + subpageCount + ' standalone sub-page(s) copied');
+  if (n) console.log(`  ✓ ${n} standalone sub-page(s)`);
 }
 
-console.log('\nDone. Output in dist/ (' + (sourceFiles.length + 1) + ' HTML pages)');
-
+console.log(`\nDone — ${sourceFiles.length + 1} pages in dist/`);
