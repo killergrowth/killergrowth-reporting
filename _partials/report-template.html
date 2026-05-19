@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" type="image/png" href="/images/kg-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
 <!-- CLIENT_INJECT -->
 <title id="page-title">KillerGrowth | Monthly Report</title>
 <style>
 :root{--bg:#111111;--card:#181818;--border:#252525;--lime:#c8f000;--ld:rgba(200,240,0,.08);--ld2:rgba(200,240,0,.15);--muted:#555;--sub:#888;--w:#fff;--sb:#0d0d0d;--red:#ef4444;--grn:#22c55e;--org:#f97316}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{font-size:14px;-webkit-font-smoothing:antialiased}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',sans-serif;background:var(--bg);color:var(--w);line-height:1.5;overflow:hidden;height:100vh}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--w);line-height:1.5;overflow:hidden;height:100vh}
 a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;border:none}input,select{font-family:inherit}
 ::-webkit-scrollbar{width:4px;height:4px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:#252525;border-radius:2px}
 
@@ -168,30 +170,50 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
 #dr-preset:hover,#dr-preset:focus{border-color:var(--lime);color:var(--w)}
 #dr-custom select{background:#1a1a1a;border:1px solid var(--border);color:var(--sub);font-size:11px;padding:4px 7px;border-radius:6px;outline:none}
 #dr-custom select:focus{border-color:var(--lime)}
-/* PRINT COVER */
+/* PRINT COVER / HEADER */
 .print-cover{display:none}
+.print-page-hd{display:none}
 .print-footer{display:none}
 /* PRINT */
 @media print{
-  #gate,#tb,#sb,#sw-wrap,#mod-panel,#gh-panel,#dr-wrap,.xbtn,#sb-tog{display:none!important}
-  body{overflow:auto;height:auto;background:#111111!important;color:#ffffff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  #app{height:auto;overflow:visible;display:block}
-  #rt{overflow:visible;display:block}
-  #ct{overflow:visible;padding:0}
-  .ms{page-break-before:always;padding-top:16px}
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+  @page{size:A4 landscape;margin:2cm 1.8cm 2.2cm 1.8cm}
+  #gate,#tb,#sb,#sw-wrap,#mod-panel,#gh-panel,#dr-wrap,.xbtn,#sb-tog,.pf{display:none!important}
+  *{font-family:'Inter',-apple-system,sans-serif!important}
+  body{overflow:auto;height:auto;background:#0a0a0a!important;color:#ffffff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;font-size:14px!important}
+  #app{height:auto;overflow:visible;display:block;background:#0a0a0a!important}
+  #rt{overflow:visible;display:block;background:#0a0a0a!important}
+  #ct{overflow:visible;padding:48px 0 0}
+  /* Per-page header (fixed, shows on every page) */
+  .print-page-hd{display:flex!important;position:fixed;top:0;left:0;right:0;padding:8px 0;border-bottom:1px solid #c8f135;background:#0a0a0a;justify-content:space-between;align-items:center;z-index:999}
+  .print-page-hd img{height:22px}
+  .print-page-hd span{font-size:11px;color:#555;font-weight:600;letter-spacing:.05em}
+  /* Sections */
+  .ms{page-break-before:always;padding-top:20px;page-break-inside:avoid}
   #overview{page-break-before:avoid}
-  .card{background:#181818!important;border:1px solid #252525!important}
-  .krow{display:flex!important;flex-wrap:wrap!important}
-  .kc{background:transparent!important;border:none!important;border-right:1px solid #333!important;padding:10px 18px!important}
+  /* Cards */
+  .card{background:#111111!important;border:1px solid #222!important;page-break-inside:avoid}
+  .g2,.g21,.g32,.g4{page-break-inside:avoid}
+  /* KPI row */
+  .krow{display:flex!important;flex-wrap:wrap!important;gap:0!important}
+  .kc{background:transparent!important;border:none!important;border-right:1px solid #222!important;padding:12px 20px!important;page-break-inside:avoid}
   .kc:last-child{border-right:none!important}
-  .kv{font-size:36px!important}
-  .klbl{font-size:11px!important}
-  .st{font-size:20px!important}
+  .kv{font-size:40px!important;font-weight:900!important}
+  .klbl{font-size:11px!important;letter-spacing:.09em}
+  /* Section headers */
+  .st{font-size:22px!important;font-weight:800!important}
+  .sb2{font-size:9px!important}
+  /* Tables */
   .tbl td,.tbl th{font-size:13px!important}
+  .tbl tr{page-break-inside:avoid}
+  /* Hide empty/updating states */
   .du{display:none!important}
-  .print-cover{display:flex!important;align-items:flex-start;justify-content:space-between;padding-bottom:14px;border-bottom:2px solid #c8f000;margin-bottom:24px}
-  .print-footer{display:flex!important;position:fixed;bottom:0;left:0;right:0;padding:7px 24px;border-top:1px solid #333;font-size:10px;color:#555;justify-content:space-between}
-  @page{size:A4 landscape;margin:1.5cm 1.5cm 2cm 1.5cm}
+  /* Cover block */
+  .print-cover{display:flex!important;align-items:center;justify-content:space-between;padding-bottom:18px;border-bottom:2px solid #c8f135;margin-bottom:32px}
+  .print-cover img{height:40px}
+  #pc-name{font-size:28px!important;font-weight:900!important;color:#fff!important;line-height:1.1!important}
+  /* Footer */
+  .print-footer{display:flex!important;position:fixed;bottom:0;left:0;right:0;padding:6px 0;border-top:1px solid #222;background:#0a0a0a;font-size:10px;color:#555;justify-content:space-between}
 }
 </style>
 </head>
@@ -285,6 +307,11 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
         <div id="ph-m" class="ph-m"></div>
       </div>
 
+      <!-- PRINT PAGE HEADER (every page) -->
+      <div class="print-page-hd">
+        <img src="/images/kg-logo.png" alt="KillerGrowth">
+        <span><span id="pph-cn"></span><span style="color:#333;margin:0 8px">|</span><span class="js-period"></span></span>
+      </div>
       <!-- PRINT COVER -->
       <div class="print-cover">
         <img src="/images/kg-logo.png" height="36" alt="KillerGrowth">
@@ -487,6 +514,7 @@ function initDash(data) {
   document.getElementById('sb-cmeta').textContent = period + (cfg.location ? ' \u00b7 ' + cfg.location : '');
   var pcn=el('pc-name');if(pcn)pcn.textContent=cfg.name||'';
   var pfn=el('pf-name');if(pfn)pfn.textContent=cfg.name||'';
+  var pphcn=el('pph-cn');if(pphcn)pphcn.textContent=cfg.name||'';
   DR_DATA = data; DR_MODS = mods;
   if (cfg.isInternal) {
     document.getElementById('sb-cli').style.display = 'none';
@@ -616,6 +644,7 @@ function initDashFromData(data, cc) {
   document.getElementById('sb-cmeta').textContent=period+(cc.location?' \u00b7 '+cc.location:'');
   var pcn2=el('pc-name');if(pcn2)pcn2.textContent=cc.name||'';
   var pfn2=el('pf-name');if(pfn2)pfn2.textContent=cc.name||'';
+  var pphcn2=el('pph-cn');if(pphcn2)pphcn2.textContent=cc.name||'';
   DR_DATA = data; DR_MODS = mods;
   document.querySelectorAll('[data-module]').forEach(function(s){s.style.display=mods[s.getAttribute('data-module')]?'':'none';});
   document.querySelectorAll('[data-nav]').forEach(function(li){li.style.display=mods[li.getAttribute('data-nav')]?'':'none';});
