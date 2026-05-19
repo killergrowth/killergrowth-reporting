@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
+<link rel="icon" type="image/png" href="/images/kg-logo.png">
 <!-- CLIENT_INJECT -->
 <title id="page-title">KillerGrowth | Monthly Report</title>
 <style>
@@ -161,7 +162,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
 
 <!-- GATE -->
 <div id="gate" class="h">
-  <div class="g-brand"><img src="/images/kg-logo.png" height="28" alt="KillerGrowth" style="display:block"></div>
+  <img src="/images/kg-logo.png" height="32" alt="KillerGrowth" style="display:block;margin-bottom:36px">
   <div id="g-card" class="g-card">
     <div id="g-name" class="g-name"></div>
     <div class="g-desc">Enter your password to view this report.</div>
@@ -232,8 +233,8 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
       <section id="seo" class="ms" data-module="seo">
         <div class="sh"><span class="sb2">SEO</span><span class="st">Search Engine Optimization</span></div>
         <div class="g2 mb14">
-          <div class="card"><div class="clbl">Organic Traffic &mdash; Weekly Sessions</div><canvas id="c-seo-sess" height="160"></canvas><div id="e-seo-sess" class="du h"><div class="du-i">ðŸ“Š</div><div class="du-t">Data updating&hellip;</div></div></div>
-          <div class="card"><div class="clbl">Traffic Channels</div><div style="max-width:200px;margin:0 auto"><canvas id="c-seo-ch" height="160"></canvas></div><div id="e-seo-ch" class="du h"><div class="du-i">ðŸ“Š</div><div class="du-t">Data updating&hellip;</div></div></div>
+          <div class="card"><div class="clbl">Organic Traffic &mdash; Weekly Sessions</div><div style="position:relative;height:220px"><canvas id="c-seo-sess"></canvas></div><div id="e-seo-sess" class="du h"><div class="du-i">ðŸ“Š</div><div class="du-t">Data updating&hellip;</div></div></div>
+          <div class="card"><div class="clbl">Traffic Channels</div><div style="position:relative;height:220px;max-width:240px;margin:0 auto"><canvas id="c-seo-ch"></canvas></div><div id="e-seo-ch" class="du h"><div class="du-i">ðŸ“Š</div><div class="du-t">Data updating&hellip;</div></div></div>
         </div>
         <div class="card"><div class="clbl">Top Keywords</div><table class="tbl"><thead><tr><th>Keyword</th><th class="r">Position</th><th class="r">Clicks</th><th class="r">Impressions</th><th class="r">CTR</th></tr></thead><tbody id="t-kw"></tbody></table><div id="e-kw" class="du h"><div class="du-i">ðŸ”</div><div class="du-t">Data updating&hellip;</div></div></div>
       </section>
@@ -242,7 +243,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
       <section id="google-ads" class="ms" data-module="googleAds">
         <div class="sh"><span class="sb2">ADS</span><span class="st">Google Ads</span></div>
         <div class="g32">
-          <div class="card"><div class="clbl">Spend vs. Leads &mdash; Monthly</div><canvas id="c-ads" height="170"></canvas><div id="e-ads" class="du h"><div class="du-i">ðŸ“Š</div><div class="du-t">Data updating&hellip;</div></div></div>
+          <div class="card"><div class="clbl">Spend vs. Leads &mdash; Monthly</div><div style="position:relative;height:220px"><canvas id="c-ads"></canvas></div><div id="e-ads" class="du h"><div class="du-i">ðŸ“Š</div><div class="du-t">Data updating&hellip;</div></div></div>
           <div class="card"><div class="clbl">Campaign Breakdown</div><table class="tbl"><thead><tr><th>Campaign</th><th class="r">Spend</th><th class="r">Clicks</th><th class="r">Leads</th></tr></thead><tbody id="t-camps"></tbody></table><div id="e-camps" class="du h"><div class="du-i">ðŸ“‹</div><div class="du-t">Data updating&hellip;</div></div><div style="display:flex;gap:20px;margin-top:16px"><div><div class="klbl">Total Spend</div><div class="kv" id="ads-spend">â€”</div></div><div><div class="klbl">Cost / Lead</div><div class="kv" style="color:var(--lime)" id="ads-cpl">â€”</div></div></div></div>
         </div>
       </section>
@@ -251,7 +252,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
       <section id="meta-ads" class="ms" data-module="metaAds">
         <div class="sh"><span class="sb2">META</span><span class="st">Meta Ads</span></div>
         <div class="g32">
-          <div class="card"><div class="clbl">Spend &amp; Reach &mdash; Monthly</div><canvas id="c-meta" height="170"></canvas><div id="e-meta" class="du h"><div class="du-i">ðŸ“Š</div><div class="du-t">Data updating&hellip;</div></div></div>
+          <div class="card"><div class="clbl">Spend &amp; Reach &mdash; Monthly</div><div style="position:relative;height:220px"><canvas id="c-meta"></canvas></div><div id="e-meta" class="du h"><div class="du-i">ðŸ“Š</div><div class="du-t">Data updating&hellip;</div></div></div>
           <div class="card"><div class="clbl">Meta Overview</div><div id="meta-stats"></div></div>
         </div>
       </section>
@@ -260,7 +261,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
       <section id="gbp" class="ms" data-module="gbp">
         <div class="sh"><span class="sb2">GBP</span><span class="st">Google Business Profile</span></div>
         <div class="g21">
-          <div class="card"><div class="clbl">Views &amp; Calls &mdash; Monthly</div><canvas id="c-gbp" height="170"></canvas><div id="e-gbp" class="du h"><div class="du-i">ðŸ“Š</div><div class="du-t">Data updating&hellip;</div></div></div>
+          <div class="card"><div class="clbl">Views &amp; Calls &mdash; Monthly</div><div style="position:relative;height:220px"><canvas id="c-gbp"></canvas></div><div id="e-gbp" class="du h"><div class="du-i">ðŸ“Š</div><div class="du-t">Data updating&hellip;</div></div></div>
           <div class="card" id="gbp-stats"></div>
         </div>
       </section>
@@ -269,7 +270,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
       <section id="social" class="ms" data-module="social">
         <div class="sh"><span class="sb2">SOCIAL</span><span class="st">Social Media</span></div>
         <div class="g21">
-          <div class="card"><div class="clbl">Reach &amp; Engagement &mdash; Monthly</div><canvas id="c-social" height="170"></canvas><div id="e-social" class="du h"><div class="du-i">ðŸ“Š</div><div class="du-t">Data updating&hellip;</div></div></div>
+          <div class="card"><div class="clbl">Reach &amp; Engagement &mdash; Monthly</div><div style="position:relative;height:220px"><canvas id="c-social"></canvas></div><div id="e-social" class="du h"><div class="du-i">ðŸ“Š</div><div class="du-t">Data updating&hellip;</div></div></div>
           <div class="card"><div class="clbl">Platform Breakdown</div><div id="social-plat"></div></div>
         </div>
       </section>
@@ -278,7 +279,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
       <section id="website" class="ms" data-module="website">
         <div class="sh"><span class="sb2">WEB</span><span class="st">Website Performance</span></div>
         <div class="g21 mb14">
-          <div class="card"><div class="clbl">Sessions &mdash; Weekly Trend</div><canvas id="c-web" height="170"></canvas><div id="e-web" class="du h"><div class="du-i">ðŸ“Š</div><div class="du-t">Data updating&hellip;</div></div></div>
+          <div class="card"><div class="clbl">Sessions &mdash; Weekly Trend</div><div style="position:relative;height:220px"><canvas id="c-web"></canvas></div><div id="e-web" class="du h"><div class="du-i">ðŸ“Š</div><div class="du-t">Data updating&hellip;</div></div></div>
           <div class="card"><div class="clbl">Traffic Channels</div><div id="web-ch"></div></div>
         </div>
         <div class="psi-tw">
