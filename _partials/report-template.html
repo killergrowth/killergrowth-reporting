@@ -161,7 +161,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
 
 <!-- GATE -->
 <div id="gate" class="h">
-  <div class="g-brand">KILLER GROWTH</div>
+  <div class="g-brand"><img src="/images/kg-logo.png" height="28" alt="KillerGrowth" style="display:block"></div>
   <div id="g-card" class="g-card">
     <div id="g-name" class="g-name"></div>
     <div class="g-desc">Enter your password to view this report.</div>
@@ -178,7 +178,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
 
   <!-- SIDEBAR -->
   <nav id="sb">
-    <div class="sb-hd"><div class="sb-brand">KILLER GROWTH</div></div>
+    <div class="sb-hd"><a href="/"><img src="/images/kg-logo.png" height="28" alt="KillerGrowth" style="display:block"></a></div>
     <div id="sb-cli" class="sb-cli">
       <div id="sb-cname" class="sb-cname"></div>
       <div id="sb-cmeta" class="sb-cmeta"></div>
@@ -395,7 +395,7 @@ function initDash(data) {
   var cfg = window.CLIENT_CONFIG || {};
   var mods = cfg.modules || {};
   var period = data.period || fmtPeriod(new Date());
-  document.title = (cfg.name||'Report') + ' | ' + period;
+  document.title = (cfg.name||'Report') + ' | ' + period + ' Report';
   document.querySelectorAll('.js-period').forEach(function(e){e.textContent=period;});
   document.getElementById('tb-ttl').textContent = cfg.name||'';
   document.getElementById('ph-t').textContent = cfg.name||'';
