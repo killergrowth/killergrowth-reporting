@@ -3,7 +3,7 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "April 2026",
-  "generatedAt": "2026-05-20T13:34:16.146Z",
+  "generatedAt": "2026-05-20T16:48:13.843Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -111,9 +111,14 @@
       "pagespeedMobile": null
     },
     "psiScores": {
-      "mobile": null,
+      "mobile": {
+        "performance": 6,
+        "accessibility": 92,
+        "bestPractices": 77,
+        "seo": 92
+      },
       "desktop": {
-        "performance": 52,
+        "performance": 74,
         "accessibility": 92,
         "bestPractices": 77,
         "seo": 92
@@ -197,9 +202,14 @@
       },
       {
         "date": "2026-05-20",
-        "mobile": null,
+        "mobile": {
+          "performance": 6,
+          "accessibility": 92,
+          "bestPractices": 77,
+          "seo": 92
+        },
         "desktop": {
-          "performance": 52,
+          "performance": 74,
           "accessibility": 92,
           "bestPractices": 77,
           "seo": 92
