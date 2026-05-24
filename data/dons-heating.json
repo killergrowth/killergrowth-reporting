@@ -3,7 +3,7 @@
   "slug": "dons-heating",
   "logoPath": null,
   "period": "April 2026",
-  "generatedAt": "2026-05-23T23:52:30.281Z",
+  "generatedAt": "2026-05-24T02:31:08.001Z",
   "overview": {
     "sessions": 751,
     "sessionsDelta": 0,
@@ -18,7 +18,7 @@
     "adBudget": null,
     "costPerLead": null,
     "costPerLeadDelta": null,
-    "socialReach": 0,
+    "socialReach": 381,
     "socialReachDelta": null,
     "reviewCount": null,
     "avgRating": null
@@ -323,8 +323,8 @@
     "platforms": [
       {
         "platform": "Facebook",
-        "reach": 0,
-        "engagements": 0,
+        "reach": 381,
+        "engagements": 129,
         "followers": 186
       }
     ]
@@ -365,7 +365,7 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 55,
+        "performance": 60,
         "accessibility": 86,
         "bestPractices": 73,
         "seo": 100
@@ -502,6 +502,21 @@
         "date": "2026-05-23",
         "mobile": {
           "performance": 55,
+          "accessibility": 86,
+          "bestPractices": 73,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 85,
+          "accessibility": 91,
+          "bestPractices": 73,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-05-24",
+        "mobile": {
+          "performance": 60,
           "accessibility": 86,
           "bestPractices": 73,
           "seo": 100
