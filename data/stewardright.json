@@ -3,7 +3,7 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "April 2026",
-  "generatedAt": "2026-05-28T20:21:49.196Z",
+  "generatedAt": "2026-05-28T22:28:13.208Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -112,12 +112,17 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 53,
+        "performance": 48,
         "accessibility": 90,
         "bestPractices": 77,
         "seo": 92
       },
-      "desktop": null
+      "desktop": {
+        "performance": 70,
+        "accessibility": 90,
+        "bestPractices": 77,
+        "seo": 92
+      }
     },
     "psiHistory": [
       {
@@ -318,12 +323,17 @@
       {
         "date": "2026-05-28",
         "mobile": {
-          "performance": 53,
+          "performance": 48,
           "accessibility": 90,
           "bestPractices": 77,
           "seo": 92
         },
-        "desktop": null
+        "desktop": {
+          "performance": 70,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
       }
     ]
   }
