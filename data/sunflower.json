@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "April 2026",
-  "generatedAt": "2026-05-28T22:28:55.920Z",
+  "generatedAt": "2026-05-29T00:05:16.168Z",
   "overview": {
     "sessions": 627,
     "sessionsDelta": 0,
@@ -18,7 +18,7 @@
     "adBudget": null,
     "costPerLead": 24.91,
     "costPerLeadDelta": null,
-    "socialReach": 6722,
+    "socialReach": 0,
     "socialReachDelta": null,
     "reviewCount": null,
     "avgRating": null
@@ -319,31 +319,31 @@
     "monthlyHistory": [
       {
         "month": "Jan 2026",
-        "reach": 5884,
-        "engagements": 729
+        "reach": null,
+        "engagements": null
       },
       {
         "month": "Feb 2026",
-        "reach": 5264,
-        "engagements": 1414
+        "reach": null,
+        "engagements": null
       },
       {
         "month": "Mar 2026",
         "reach": 6880,
-        "engagements": 2345
+        "engagements": 0
       },
       {
         "month": "Apr 2026",
-        "reach": 2855,
-        "engagements": 641
+        "reach": null,
+        "engagements": null
       }
     ],
     "reachByWeek": [],
     "platforms": [
       {
         "platform": "Facebook",
-        "reach": 6722,
-        "engagements": 2405,
+        "reach": 0,
+        "engagements": 0,
         "followers": 1201
       }
     ]
@@ -384,13 +384,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 55,
+        "performance": 59,
         "accessibility": 75,
         "bestPractices": 96,
         "seo": 85
       },
       "desktop": {
-        "performance": 66,
+        "performance": 70,
         "accessibility": 77,
         "bestPractices": 96,
         "seo": 85
@@ -592,6 +592,21 @@
         },
         "desktop": {
           "performance": 66,
+          "accessibility": 77,
+          "bestPractices": 96,
+          "seo": 85
+        }
+      },
+      {
+        "date": "2026-05-29",
+        "mobile": {
+          "performance": 59,
+          "accessibility": 75,
+          "bestPractices": 96,
+          "seo": 85
+        },
+        "desktop": {
+          "performance": 70,
           "accessibility": 77,
           "bestPractices": 96,
           "seo": 85
