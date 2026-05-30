@@ -3,7 +3,7 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "April 2026",
-  "generatedAt": "2026-05-30T19:16:19.525Z",
+  "generatedAt": "2026-05-30T20:48:25.073Z",
   "overview": {
     "sessions": 1055,
     "sessionsDelta": 0,
@@ -18,7 +18,7 @@
     "adBudget": null,
     "costPerLead": null,
     "costPerLeadDelta": null,
-    "socialReach": 0,
+    "socialReach": 1260,
     "socialReachDelta": null,
     "reviewCount": null,
     "avgRating": null
@@ -305,26 +305,26 @@
       },
       {
         "month": "Feb 2026",
-        "reach": null,
-        "engagements": null
+        "reach": 2161,
+        "engagements": 831
       },
       {
         "month": "Mar 2026",
         "reach": 1245,
-        "engagements": 0
+        "engagements": 63
       },
       {
         "month": "Apr 2026",
-        "reach": null,
-        "engagements": null
+        "reach": 497,
+        "engagements": 8
       }
     ],
     "reachByWeek": [],
     "platforms": [
       {
         "platform": "Facebook",
-        "reach": 0,
-        "engagements": 0,
+        "reach": 1260,
+        "engagements": 63,
         "followers": 2533
       }
     ]
@@ -364,11 +364,16 @@
       "pagespeedMobile": null
     },
     "psiScores": {
-      "mobile": null,
-      "desktop": {
-        "performance": 80,
+      "mobile": {
+        "performance": 50,
         "accessibility": 92,
         "bestPractices": 100,
+        "seo": 100
+      },
+      "desktop": {
+        "performance": 92,
+        "accessibility": 92,
+        "bestPractices": 96,
         "seo": 100
       }
     },
@@ -595,11 +600,16 @@
       },
       {
         "date": "2026-05-30",
-        "mobile": null,
-        "desktop": {
-          "performance": 80,
+        "mobile": {
+          "performance": 50,
           "accessibility": 92,
           "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 92,
+          "accessibility": 92,
+          "bestPractices": 96,
           "seo": 100
         }
       }
