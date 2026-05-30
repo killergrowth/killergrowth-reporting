@@ -3,7 +3,7 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "April 2026",
-  "generatedAt": "2026-05-30T18:00:37.216Z",
+  "generatedAt": "2026-05-30T19:16:19.525Z",
   "overview": {
     "sessions": 1055,
     "sessionsDelta": 0,
@@ -18,7 +18,7 @@
     "adBudget": null,
     "costPerLead": null,
     "costPerLeadDelta": null,
-    "socialReach": 1260,
+    "socialReach": 0,
     "socialReachDelta": null,
     "reviewCount": null,
     "avgRating": null
@@ -305,26 +305,26 @@
       },
       {
         "month": "Feb 2026",
-        "reach": 2161,
-        "engagements": 831
+        "reach": null,
+        "engagements": null
       },
       {
         "month": "Mar 2026",
         "reach": 1245,
-        "engagements": 63
+        "engagements": 0
       },
       {
         "month": "Apr 2026",
-        "reach": 497,
-        "engagements": 8
+        "reach": null,
+        "engagements": null
       }
     ],
     "reachByWeek": [],
     "platforms": [
       {
         "platform": "Facebook",
-        "reach": 1260,
-        "engagements": 63,
+        "reach": 0,
+        "engagements": 0,
         "followers": 2533
       }
     ]
@@ -364,14 +364,9 @@
       "pagespeedMobile": null
     },
     "psiScores": {
-      "mobile": {
-        "performance": 45,
-        "accessibility": 92,
-        "bestPractices": 100,
-        "seo": 100
-      },
+      "mobile": null,
       "desktop": {
-        "performance": 92,
+        "performance": 80,
         "accessibility": 92,
         "bestPractices": 100,
         "seo": 100
@@ -600,14 +595,9 @@
       },
       {
         "date": "2026-05-30",
-        "mobile": {
-          "performance": 45,
-          "accessibility": 92,
-          "bestPractices": 100,
-          "seo": 100
-        },
+        "mobile": null,
         "desktop": {
-          "performance": 92,
+          "performance": 80,
           "accessibility": 92,
           "bestPractices": 100,
           "seo": 100
