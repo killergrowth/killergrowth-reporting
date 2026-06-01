@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" type="image/png" href="/images/kg-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+<title>Good To Be Clean — Rankings Report | KillerGrowth</title>
+<style>
+:root{--bg:#111;--card:#181818;--border:#252525;--lime:#c8f000;--ld:rgba(200,240,0,.07);--muted:#555;--sub:#888;--w:#fff;--teal:#2dd4bf;--blue:#60a5fa;--amber:#f59e0b;--purple:#a78bfa;--grn:#22c55e;--red:#ef4444}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:14px;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--w);line-height:1.5;min-height:100vh}
+a{color:inherit;text-decoration:none}
+
+/* GATE */
+#gate{position:fixed;inset:0;z-index:9999;background:#080808;display:flex;flex-direction:column;align-items:center;justify-content:center}
+#gate.hidden{display:none}
+.g-brand{background:var(--lime);color:#000;font-weight:900;font-size:11px;padding:5px 10px;border-radius:5px;letter-spacing:.08em;margin-bottom:36px}
+.g-card{background:#121212;border:1px solid var(--border);border-radius:14px;padding:36px 40px;width:360px}
+.g-name{font-size:18px;font-weight:700;margin-bottom:6px}
+.g-desc{color:var(--muted);font-size:13px;margin-bottom:24px}
+.g-lbl{color:var(--sub);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px}
+#gi{width:100%;background:#1a1a1a;border:1px solid var(--border);border-radius:8px;padding:11px 14px;color:var(--w);font-size:14px;outline:none;transition:border-color .15s;margin-bottom:4px}
+#gi:focus{border-color:var(--lime)}
+#gi.err{border-color:var(--red)}
+#ge{color:var(--red);font-size:12px;min-height:18px;margin-bottom:12px}
+#gs{width:100%;background:var(--lime);border:none;border-radius:8px;padding:12px;color:#000;font-size:14px;font-weight:800;cursor:pointer;transition:opacity .15s}
+#gs:hover{opacity:.88}
+@keyframes shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
+.shake{animation:shake .4s ease}
+
+/* APP */
+#app{display:none;max-width:960px;margin:0 auto;padding:48px 32px 80px}
+#app.show{display:block}
+
+/* TOPBAR */
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:40px}
+.topbar-l{display:flex;align-items:center;gap:14px}
+.kg-badge{background:var(--lime);color:#000;font-weight:900;font-size:11px;padding:5px 10px;border-radius:5px;letter-spacing:.08em}
+.report-type{font-size:13px;color:var(--sub)}
+.report-date{font-size:12px;color:var(--muted);background:#1a1a1a;border:1px solid var(--border);border-radius:6px;padding:4px 12px}
+
+/* CLIENT HEADER */
+.client-header{margin-bottom:36px}
+.client-name{font-size:30px;font-weight:900;letter-spacing:-.02em;margin-bottom:4px}
+.client-meta{color:var(--sub);font-size:13px;margin-bottom:6px}
+.client-url{color:var(--lime);font-size:13px;opacity:.8}
+
+/* STATS GRID */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:40px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px}
+.stat-val{font-size:30px;font-weight:900;line-height:1;margin-bottom:4px}
+.stat-lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.stat.teal .stat-val{color:var(--teal)}
+.stat.blue .stat-val{color:var(--blue)}
+.stat.lime .stat-val{color:var(--lime)}
+.stat.amber .stat-val{color:var(--amber)}
+.stat.purple .stat-val{color:var(--purple)}
+.stat.grn .stat-val{color:var(--grn)}
+
+/* SECTION */
+.section{margin-bottom:40px}
+.section-hd{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.section-hd::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* TABLE */
+.tbl-wrap{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+table{width:100%;border-collapse:collapse}
+th{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;padding:10px 14px;text-align:left;border-bottom:1px solid var(--border);white-space:nowrap}
+th:not(:first-child){text-align:center}
+td{padding:9px 14px;font-size:13px;border-bottom:1px solid #1c1c1c;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#1c1c1c}
+td:not(:first-child){text-align:center}
+.kw{color:#ccc;font-size:13px}
+.r-num{font-size:15px;font-weight:700;color:var(--w)}
+.r-dash{color:#2a2a2a;font-size:18px}
+.m1{color:var(--teal);font-weight:700;font-size:15px}
+.m23{color:var(--blue);font-weight:700;font-size:15px}
+.mrest{color:var(--sub);font-weight:600;font-size:15px}
+.mv{display:inline-flex;align-items:center;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;min-width:44px;justify-content:center}
+.mv.up{background:#14532d;color:#4ade80}
+.mv.dn{background:#450a0a;color:#f87171}
+.mv.flat{background:#1e1e24;color:#444}
+.mv.new{background:#451a03;color:var(--amber)}
+.aio-c{font-size:11px;color:var(--grn);font-weight:600}
+.aio-a{font-size:11px;color:#444}
+.row-dual td{background:rgba(200,240,0,.025)}
+.row-m1 td{background:rgba(45,212,191,.025)}
+
+/* FOOTER */
+.report-footer{margin-top:60px;padding-top:24px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;font-size:11px;color:#2a2a2a}
+.footer-brand{background:var(--lime);color:#000;font-weight:900;font-size:10px;padding:3px 7px;border-radius:4px;letter-spacing:.05em}
+
+/* AIO TAGS */
+.aio-wrap{display:flex;flex-wrap:wrap;gap:8px}
+.aio-tag{background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);border-radius:6px;padding:4px 10px;font-size:12px;color:var(--grn)}
+.aio-tag-gray{background:#1a1a1a;border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:12px;color:#444}
+</style>
+</head>
+<body>
+
+<!-- PASSWORD GATE -->
+<div id="gate">
+  <div class="g-brand">KILLERGROWTH</div>
+  <div class="g-card">
+    <div class="g-name">Good To Be Clean</div>
+    <div class="g-desc">Rankings Report — June 2026</div>
+    <div class="g-lbl">Access Code</div>
+    <input type="password" id="gi" placeholder="Enter password" autocomplete="off">
+    <div id="ge"></div>
+    <button id="gs" onclick="checkPass()">View Report →</button>
+  </div>
+</div>
+
+<!-- REPORT -->
+<div id="app">
+
+  <div class="topbar">
+    <div class="topbar-l">
+      <span class="kg-badge">KILLERGROWTH</span>
+      <span class="report-type">Rankings Report</span>
+    </div>
+    <span class="report-date">June 1, 2026</span>
+  </div>
+
+  <div class="client-header">
+    <div class="client-name">Good To Be Clean</div>
+    <div class="client-meta">Cleaning & Restoration · El Dorado, KS</div>
+    <div class="client-url">goodtobeclean.com</div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-grid">
+    <div class="stat teal">
+      <div class="stat-val">37</div>
+      <div class="stat-lbl">Maps #1 Rankings</div>
+    </div>
+    <div class="stat blue">
+      <div class="stat-val">58</div>
+      <div class="stat-lbl">Total Maps Ranked</div>
+    </div>
+    <div class="stat lime">
+      <div class="stat-val">27</div>
+      <div class="stat-lbl">Organic Ranked</div>
+    </div>
+    <div class="stat purple">
+      <div class="stat-val">44</div>
+      <div class="stat-lbl">AI Overview Citations</div>
+    </div>
+  </div>
+
+  <!-- ORGANIC -->
+  <div class="section">
+    <div class="section-hd">Organic Search Rankings</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Keyword</th>
+            <th>Organic</th>
+            <th>Prev</th>
+            <th>Change</th>
+            <th>Maps Pack</th>
+            <th>AI Overview</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-dual"><td class="kw">vapor barrier installation andover ks</td><td><span class="r-num">1</span></td><td><span style="color:#555">4</span></td><td><span class="mv up">▲ +3</span></td><td><span class="r-dash">—</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-dual"><td class="kw">vapor barrier installation el dorado ks</td><td><span class="r-num">1</span></td><td><span style="color:#555">4</span></td><td><span class="mv up">▲ +3</span></td><td><span class="mrest">8</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-dual"><td class="kw">fire and smoke restoration augusta ks</td><td><span class="r-num">2</span></td><td><span style="color:#555">2</span></td><td><span class="mv flat">= 0</span></td><td><span class="m23">3</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr><td class="kw">vapor barrier installation near me</td><td><span class="r-num">2</span></td><td><span style="color:#555">2</span></td><td><span class="mv flat">= 0</span></td><td><span class="r-dash">—</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-dual"><td class="kw">carpet cleaning for allergy and asthma sufferers</td><td><span class="r-num">2</span></td><td><span class="r-dash">—</span></td><td><span class="mv new">NEW</span></td><td><span class="m1">1</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-dual"><td class="kw">vapor barrier installation wichita ks</td><td><span class="r-num">3</span></td><td><span style="color:#555">7</span></td><td><span class="mv up">▲ +4</span></td><td><span class="m23">2</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr><td class="kw">vapor barrier installation augusta ks</td><td><span class="r-num">3</span></td><td><span style="color:#555">3</span></td><td><span class="mv flat">= 0</span></td><td><span class="r-dash">—</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-dual"><td class="kw">mold removal el dorado ks</td><td><span class="r-num">4</span></td><td><span style="color:#555">4</span></td><td><span class="mv flat">= 0</span></td><td><span class="m1">1</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-dual"><td class="kw">restoration services el dorado ks</td><td><span class="r-num">4</span></td><td><span class="r-dash">—</span></td><td><span class="mv new">NEW</span></td><td><span class="m23">2</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr><td class="kw">soda blasting andover ks</td><td><span class="r-num">4</span></td><td><span style="color:#555">2</span></td><td><span class="mv dn">▼ -2</span></td><td><span class="m23">2</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr><td class="kw">soda blasting el dorado ks</td><td><span class="r-num">4</span></td><td><span style="color:#555">1</span></td><td><span class="mv dn">▼ -3</span></td><td><span class="m23">2</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr><td class="kw">soda blasting augusta ks</td><td><span class="r-num">4</span></td><td><span style="color:#555">6</span></td><td><span class="mv up">▲ +2</span></td><td><span class="r-dash">—</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr><td class="kw">fire and smoke restoration andover ks</td><td><span class="r-num">4</span></td><td><span style="color:#555">4</span></td><td><span class="mv flat">= 0</span></td><td><span class="r-dash">—</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-dual"><td class="kw">air duct cleaning el dorado ks</td><td><span class="r-num">5</span></td><td><span style="color:#555">6</span></td><td><span class="mv up">▲ +1</span></td><td><span class="m1">1</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr><td class="kw">soda blasting wichita ks</td><td><span class="r-num">6</span></td><td><span style="color:#555">8</span></td><td><span class="mv up">▲ +2</span></td><td><span class="r-dash">—</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-dual"><td class="kw">mold removal augusta ks</td><td><span class="r-num">6</span></td><td><span style="color:#555">5</span></td><td><span class="mv dn">▼ -1</span></td><td><span class="m1">1</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-dual"><td class="kw">carpet cleaning el dorado ks</td><td><span class="r-num">6</span></td><td><span style="color:#555">5</span></td><td><span class="mv dn">▼ -1</span></td><td><span class="m1">1</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-dual"><td class="kw">mold removal experts</td><td><span class="r-num">7</span></td><td><span class="r-dash">—</span></td><td><span class="mv new">NEW</span></td><td><span class="m23">2</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-dual"><td class="kw">fire and smoke restoration el dorado ks</td><td><span class="r-num">7</span></td><td><span style="color:#555">7</span></td><td><span class="mv flat">= 0</span></td><td><span class="m1">1</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-dual"><td class="kw">restoration services andover ks</td><td><span class="r-num">7</span></td><td><span style="color:#555">3</span></td><td><span class="mv dn">▼ -4</span></td><td><span class="m23">2</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-dual"><td class="kw">restoration services augusta ks</td><td><span class="r-num">8</span></td><td><span style="color:#555">6</span></td><td><span class="mv dn">▼ -2</span></td><td><span class="m23">3</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-dual"><td class="kw">mold removal andover ks</td><td><span class="r-num">8</span></td><td><span style="color:#555">2</span></td><td><span class="mv dn">▼ -6</span></td><td><span class="m23">2</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-dual"><td class="kw">fire and smoke restoration wichita ks</td><td><span class="r-num">8</span></td><td><span style="color:#555">6</span></td><td><span class="mv dn">▼ -2</span></td><td><span class="m1">1</span></td><td><span class="aio-a">Appears</span></td></tr>
+          <tr class="row-dual"><td class="kw">mold removal service</td><td><span class="r-num">9</span></td><td><span style="color:#555">14</span></td><td><span class="mv up">▲ +5</span></td><td><span class="m23">2</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-dual"><td class="kw">air duct cleaning augusta ks</td><td><span class="r-num">10</span></td><td><span class="r-dash">—</span></td><td><span class="mv new">NEW</span></td><td><span class="m1">1</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-dual"><td class="kw">carpet cleaning augusta ks</td><td><span class="r-num">15</span></td><td><span style="color:#555">14</span></td><td><span class="mv dn">▼ -1</span></td><td><span class="m1">1</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-dual"><td class="kw">carpet cleaning for apartments and rentals</td><td><span class="r-num">18</span></td><td><span class="r-dash">—</span></td><td><span class="mv new">NEW</span></td><td><span class="m1">1</span></td><td><span class="aio-c">Cited</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- MAPS ONLY -->
+  <div class="section">
+    <div class="section-hd">Google Maps Pack · Additional Keywords</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Keyword</th>
+            <th>Maps Pack</th>
+            <th>AI Overview</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-m1"><td class="kw">carpet cleaning wichita ks</td><td><span class="m1">1</span></td><td><span class="aio-a">Appears</span></td></tr>
+          <tr class="row-m1"><td class="kw">carpet cleaning andover ks</td><td><span class="m1">1</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-m1"><td class="kw">air duct cleaning wichita ks</td><td><span class="m1">1</span></td><td><span class="aio-a">Appears</span></td></tr>
+          <tr class="row-m1"><td class="kw">air duct cleaning andover ks</td><td><span class="m1">1</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-m1"><td class="kw">mold removal wichita ks</td><td><span class="m1">1</span></td><td><span class="aio-a">Appears</span></td></tr>
+          <tr class="row-m1"><td class="kw">mold removal</td><td><span class="m1">1</span></td><td><span class="aio-a">Appears</span></td></tr>
+          <tr class="row-m1"><td class="kw">fire water mold restoration services</td><td><span class="m1">1</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-m1"><td class="kw">fire and smoke restoration certification</td><td><span class="m1">1</span></td><td><span class="aio-a">Appears</span></td></tr>
+          <tr class="row-m1"><td class="kw">smoke damage restoration after a house fire</td><td><span class="m1">1</span></td><td><span class="aio-a">Appears</span></td></tr>
+          <tr class="row-m1"><td class="kw">industrial air duct cleaning services</td><td><span class="m1">1</span></td><td><span class="aio-a">Appears</span></td></tr>
+          <tr class="row-m1"><td class="kw">air duct cleaning cost</td><td><span class="m1">1</span></td><td><span class="aio-a">Appears</span></td></tr>
+          <tr class="row-m1"><td class="kw">green carpet cleaning</td><td><span class="m1">1</span></td><td><span class="aio-a">Appears</span></td></tr>
+          <tr class="row-m1"><td class="kw">cost of mold removal in bathroom</td><td><span class="m1">1</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-m1"><td class="kw">how to choose a carpet cleaning company</td><td><span class="m1">1</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr class="row-m1"><td class="kw">low moisture carpet cleaning</td><td><span class="m1">1</span></td><td><span class="aio-a">Appears</span></td></tr>
+          <tr><td class="kw">mold removal and remediation</td><td><span class="m23">2</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr><td class="kw">restoration services wichita ks</td><td><span class="m23">2</span></td><td><span class="aio-a">Appears</span></td></tr>
+          <tr><td class="kw">fire and smoke restoration</td><td><span class="m23">2</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr><td class="kw">mold removal techniques</td><td><span class="m23">2</span></td><td><span class="aio-a">Appears</span></td></tr>
+          <tr><td class="kw">top mold removal companies</td><td><span class="m23">2</span></td><td><span class="aio-a">Appears</span></td></tr>
+          <tr><td class="kw">carpet cleaning specials</td><td><span class="m23">2</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr><td class="kw">soda blasting</td><td><span class="m23">2</span></td><td><span class="aio-a">Appears</span></td></tr>
+          <tr><td class="kw">bathroom mold removal</td><td><span class="m23">2</span></td><td><span class="aio-a">Appears</span></td></tr>
+          <tr><td class="kw">mold removal in bathroom</td><td><span class="m23">3</span></td><td><span class="aio-c">Cited</span></td></tr>
+          <tr><td colspan="3" style="color:#333;font-size:12px;padding:10px 14px;">+ 12 more keywords · Maps positions 3–9</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- AIO SECTION -->
+  <div class="section">
+    <div class="section-hd">AI Overview Presence · 44 Keywords Where Google Cites You</div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;">
+      <div class="aio-wrap">
+        <span class="aio-tag">vapor barrier installation el dorado ks</span>
+        <span class="aio-tag">vapor barrier installation andover ks</span>
+        <span class="aio-tag">vapor barrier installation near me</span>
+        <span class="aio-tag">vapor barrier installation wichita ks</span>
+        <span class="aio-tag">vapor barrier installation augusta ks</span>
+        <span class="aio-tag">mold removal el dorado ks</span>
+        <span class="aio-tag">mold removal augusta ks</span>
+        <span class="aio-tag">mold removal andover ks</span>
+        <span class="aio-tag">mold removal service</span>
+        <span class="aio-tag">mold removal experts</span>
+        <span class="aio-tag">mold removal diy</span>
+        <span class="aio-tag">mold removal and remediation</span>
+        <span class="aio-tag">mold removal in bathroom</span>
+        <span class="aio-tag">fire and smoke restoration augusta ks</span>
+        <span class="aio-tag">fire and smoke restoration andover ks</span>
+        <span class="aio-tag">fire and smoke restoration el dorado ks</span>
+        <span class="aio-tag">fire and smoke restoration</span>
+        <span class="aio-tag">fire water mold restoration services</span>
+        <span class="aio-tag">smoke damage restoration after a house fire</span>
+        <span class="aio-tag">restoration services el dorado ks</span>
+        <span class="aio-tag">restoration services augusta ks</span>
+        <span class="aio-tag">restoration services andover ks</span>
+        <span class="aio-tag">restoration services cost</span>
+        <span class="aio-tag">air duct cleaning el dorado ks</span>
+        <span class="aio-tag">air duct cleaning augusta ks</span>
+        <span class="aio-tag">air duct cleaning andover ks</span>
+        <span class="aio-tag">carpet cleaning el dorado ks</span>
+        <span class="aio-tag">carpet cleaning augusta ks</span>
+        <span class="aio-tag">carpet cleaning andover ks</span>
+        <span class="aio-tag">carpet cleaning for allergy and asthma sufferers</span>
+        <span class="aio-tag">carpet cleaning for apartments and rentals</span>
+        <span class="aio-tag">carpet cleaning specials</span>
+        <span class="aio-tag">black mold removal service</span>
+        <span class="aio-tag">industrial air duct cleaning services</span>
+        <span class="aio-tag">how air duct cleaning improves indoor air quality</span>
+        <span class="aio-tag">how to choose a carpet cleaning company</span>
+        <span class="aio-tag">cost of mold removal in bathroom</span>
+        <span class="aio-tag">diy black mold removal</span>
+        <span class="aio-tag">soda blasting wichita ks</span>
+        <span class="aio-tag-gray">+20 more · Appears in AI Overviews</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="report-footer">
+    <span class="footer-brand">KILLERGROWTH</span>
+    <span>Data pulled June 1, 2026 via DataForSEO · Confidential</span>
+  </div>
+
+</div>
+
+<script>
+const PW = 'xBbgtroCXfnFG87@';
+const KEY = 'kg_gtbc_rankings';
+function checkPass(){
+  const v = document.getElementById('gi').value;
+  if(v === PW){
+    document.cookie = KEY+'=1;path=/;max-age=2592000';
+    document.getElementById('gate').classList.add('hidden');
+    document.getElementById('app').classList.add('show');
+  } else {
+    const gi = document.getElementById('gi');
+    document.getElementById('ge').textContent = 'Incorrect password';
+    gi.classList.add('err','shake');
+    setTimeout(()=>gi.classList.remove('shake'),400);
+  }
+}
+document.getElementById('gi').addEventListener('keydown',e=>{ if(e.key==='Enter') checkPass(); });
+if(document.cookie.includes(KEY+'=1')){
+  document.getElementById('gate').classList.add('hidden');
+  document.getElementById('app').classList.add('show');
+}
+</script>
+</body>
+</html>
