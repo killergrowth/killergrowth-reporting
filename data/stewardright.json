@@ -2,8 +2,8 @@
   "client": "StewardRight",
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
-  "period": "April 2026",
-  "generatedAt": "2026-05-31T23:59:32.570Z",
+  "period": "May 2026",
+  "generatedAt": "2026-06-01T04:13:13.576Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -13,12 +13,12 @@
     "rankingsDelta": null,
     "gbpViews": null,
     "gbpViewsDelta": null,
-    "adSpend": 597.49,
+    "adSpend": 608.39,
     "adImpressions": null,
     "adBudget": null,
     "costPerLead": null,
     "costPerLeadDelta": null,
-    "socialReach": 4560,
+    "socialReach": 8016,
     "socialReachDelta": null,
     "reviewCount": null,
     "avgRating": null
@@ -52,6 +52,12 @@
         "month": "Apr 2026",
         "adSpend": 597.49,
         "adClicks": 2529,
+        "adLeads": 0
+      },
+      {
+        "month": "May 2026",
+        "adSpend": 608.39,
+        "adClicks": 3593,
         "adLeads": 0
       }
     ],
@@ -90,14 +96,19 @@
         "month": "Apr 2026",
         "reach": 7987,
         "engagements": 1998
+      },
+      {
+        "month": "May 2026",
+        "reach": 8585,
+        "engagements": 2249
       }
     ],
     "reachByWeek": [],
     "platforms": [
       {
         "platform": "Facebook",
-        "reach": 4560,
-        "engagements": 563,
+        "reach": 8016,
+        "engagements": 2027,
         "followers": 611
       }
     ]
@@ -112,13 +123,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 17,
+        "performance": 44,
         "accessibility": 90,
         "bestPractices": 77,
         "seo": 92
       },
       "desktop": {
-        "performance": 66,
+        "performance": 79,
         "accessibility": 90,
         "bestPractices": 77,
         "seo": 92
@@ -375,6 +386,21 @@
         },
         "desktop": {
           "performance": 66,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-06-01",
+        "mobile": {
+          "performance": 44,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 79,
           "accessibility": 90,
           "bestPractices": 77,
           "seo": 92
