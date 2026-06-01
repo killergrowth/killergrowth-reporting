@@ -2,8 +2,8 @@
   "client": "Sunflower Plumbing",
   "slug": "sunflower",
   "logoPath": null,
-  "period": "April 2026",
-  "generatedAt": "2026-05-31T22:52:57.873Z",
+  "period": "May 2026",
+  "generatedAt": "2026-06-01T00:00:32.808Z",
   "overview": {
     "sessions": 627,
     "sessionsDelta": 0,
@@ -384,7 +384,7 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 61,
+        "performance": 56,
         "accessibility": 75,
         "bestPractices": 96,
         "seo": 85
@@ -631,6 +631,21 @@
         "date": "2026-05-31",
         "mobile": {
           "performance": 61,
+          "accessibility": 75,
+          "bestPractices": 96,
+          "seo": 85
+        },
+        "desktop": {
+          "performance": 71,
+          "accessibility": 77,
+          "bestPractices": 96,
+          "seo": 85
+        }
+      },
+      {
+        "date": "2026-06-01",
+        "mobile": {
+          "performance": 56,
           "accessibility": 75,
           "bestPractices": 96,
           "seo": 85
