@@ -1,253 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
-<link rel="icon" type="image/png" href="/images/kg-logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
-<title>StewardRight — Rankings Report | KillerGrowth</title>
+<title>StewardRight · Rankings</title>
 <style>
-:root{--bg:#111;--card:#181818;--border:#252525;--lime:#c8f000;--muted:#555;--sub:#888;--w:#fff;--teal:#2dd4bf;--blue:#60a5fa;--amber:#f59e0b;--purple:#a78bfa;--grn:#22c55e;--red:#ef4444}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{font-size:14px;-webkit-font-smoothing:antialiased}
-body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--w);line-height:1.5;min-height:100vh}
-a{color:inherit;text-decoration:none}
-#gate{position:fixed;inset:0;z-index:9999;background:#080808;display:flex;flex-direction:column;align-items:center;justify-content:center}
-#gate.hidden{display:none}
-.g-brand{background:var(--lime);color:#000;font-weight:900;font-size:11px;padding:5px 10px;border-radius:5px;letter-spacing:.08em;margin-bottom:36px}
-.g-card{background:#121212;border:1px solid var(--border);border-radius:14px;padding:36px 40px;width:360px}
-.g-name{font-size:18px;font-weight:700;margin-bottom:6px}
-.g-desc{color:var(--muted);font-size:13px;margin-bottom:24px}
-.g-lbl{color:var(--sub);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px}
-#gi{width:100%;background:#1a1a1a;border:1px solid var(--border);border-radius:8px;padding:11px 14px;color:var(--w);font-size:14px;outline:none;transition:border-color .15s;margin-bottom:4px}
-#gi:focus{border-color:var(--lime)}#gi.err{border-color:var(--red)}
-#ge{color:var(--red);font-size:12px;min-height:18px;margin-bottom:12px}
-#gs{width:100%;background:var(--lime);border:none;border-radius:8px;padding:12px;color:#000;font-size:14px;font-weight:800;cursor:pointer;transition:opacity .15s}
-#gs:hover{opacity:.88}
-@keyframes shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
-.shake{animation:shake .4s ease}
-#app{display:none;max-width:960px;margin:0 auto;padding:48px 32px 80px}
-#app.show{display:block}
-.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:40px}
-.topbar-l{display:flex;align-items:center;gap:14px}
-.kg-badge{background:var(--lime);color:#000;font-weight:900;font-size:11px;padding:5px 10px;border-radius:5px;letter-spacing:.08em}
-.report-type{font-size:13px;color:var(--sub)}
-.report-date{font-size:12px;color:var(--muted);background:#1a1a1a;border:1px solid var(--border);border-radius:6px;padding:4px 12px}
-.client-header{margin-bottom:36px}
-.client-name{font-size:30px;font-weight:900;letter-spacing:-.02em;margin-bottom:4px}
-.client-meta{color:var(--sub);font-size:13px;margin-bottom:6px}
-.client-url{color:var(--lime);font-size:13px;opacity:.8}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:32px}
-.stat{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px}
-.stat-val{font-size:30px;font-weight:900;line-height:1;margin-bottom:4px}
-.stat-lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
-.stat.teal .stat-val{color:var(--teal)}
-.stat.blue .stat-val{color:var(--blue)}
-.stat.amber .stat-val{color:var(--amber)}
-.stat.purple .stat-val{color:var(--purple)}
-.notice{background:#1a1400;border:1px solid #3a2e00;border-radius:10px;padding:16px 20px;font-size:13px;color:#d4a800;line-height:1.7;margin-bottom:32px}
-.notice strong{color:var(--amber)}
-.section{margin-bottom:40px}
-.section-hd{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px;display:flex;align-items:center;gap:10px}
-.section-hd::after{content:'';flex:1;height:1px;background:var(--border)}
-.tbl-wrap{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
-table{width:100%;border-collapse:collapse}
-th{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;padding:10px 14px;text-align:left;border-bottom:1px solid var(--border);white-space:nowrap}
-th:not(:first-child){text-align:center}
-td{padding:10px 14px;font-size:13px;border-bottom:1px solid #1c1c1c;vertical-align:middle}
-tr:last-child td{border-bottom:none}
-tr:hover td{background:#1c1c1c}
-td:not(:first-child){text-align:center}
-.kw{color:#ccc;font-size:13px}
-.r-num{font-size:15px;font-weight:700;color:var(--w)}
-.r-dash{color:#2a2a2a;font-size:18px}
-.m1{color:var(--teal);font-weight:700;font-size:15px}
-.m23{color:var(--blue);font-weight:700;font-size:15px}
-.mrest{color:var(--sub);font-weight:600;font-size:15px}
-.mv{display:inline-flex;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;min-width:44px;justify-content:center}
-.mv.dn{background:#450a0a;color:#f87171}
-.mv.new{background:#451a03;color:var(--amber)}
-.aio-c{font-size:11px;color:var(--grn);font-weight:600}
-.aio-a{font-size:11px;color:#444}
-.row-dual td{background:rgba(200,240,0,.02)}
-.aio-wrap{display:flex;flex-wrap:wrap;gap:8px}
-.aio-tag{background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);border-radius:6px;padding:4px 10px;font-size:12px;color:var(--grn)}
-.report-footer{margin-top:60px;padding-top:24px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;font-size:11px;color:#2a2a2a}
-.footer-brand{background:var(--lime);color:#000;font-weight:900;font-size:10px;padding:3px 7px;border-radius:4px;letter-spacing:.05em}
+  :root {
+    --lime:#c8f000;
+    --bg:#111;
+    --surface:#1a1a1a;
+    --surface2:#222;
+    --border:#2a2a2a;
+    --text:#e5e5e5;
+    --muted:#888;
+    --teal:#2dd4bf;
+    --blue:#60a5fa;
+    --green:#4ade80;
+    --red:#f87171;
+    --yellow:#facc15;
+    --purple:#a78bfa;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px;line-height:1.5}
+  a{color:var(--lime);text-decoration:none}
+
+  /* Gate */
+  #gate{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:1000}
+  .gate-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:40px;width:360px;text-align:center}
+  .gate-box .logo{font-size:22px;font-weight:800;color:var(--lime);letter-spacing:-0.5px;margin-bottom:6px}
+  .gate-box .sub{color:var(--muted);font-size:13px;margin-bottom:28px}
+  .gate-box input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px 14px;color:var(--text);font-size:14px;outline:none;margin-bottom:12px}
+  .gate-box input:focus{border-color:var(--lime)}
+  .gate-box button{width:100%;background:var(--lime);color:#000;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:14px;cursor:pointer}
+  .gate-box .err{color:var(--red);font-size:12px;margin-top:8px;display:none}
+
+  /* Layout */
+  #app{display:none}
+  .topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:16px}
+  .topbar .logo{font-size:18px;font-weight:800;color:var(--lime)}
+  .topbar .client{color:var(--muted);font-size:13px}
+  .topbar .date{margin-left:auto;color:var(--muted);font-size:12px}
+
+  .container{max-width:1100px;margin:0 auto;padding:32px 24px}
+
+  /* Stat cards */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:36px}
+  .stat{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 20px}
+  .stat .val{font-size:28px;font-weight:800;color:var(--lime);line-height:1}
+  .stat .lbl{color:var(--muted);font-size:12px;margin-top:4px;text-transform:uppercase;letter-spacing:0.5px}
+
+  /* Section */
+  .section{margin-bottom:40px}
+  .section-hdr{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);border-bottom:1px solid var(--border);padding-bottom:10px;margin-bottom:16px}
+
+  /* Table */
+  .tbl{width:100%;border-collapse:collapse}
+  .tbl th{text-align:left;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);padding:8px 12px;border-bottom:1px solid var(--border)}
+  .tbl th.r,.tbl td.r{text-align:center}
+  .tbl td{padding:10px 12px;border-bottom:1px solid #1e1e1e;vertical-align:middle}
+  .tbl tr:hover td{background:var(--surface)}
+  .tbl .kw{color:var(--text);font-size:13px}
+
+  /* Rank badges */
+  .rank-badge{display:inline-block;min-width:28px;text-align:center;font-size:13px;font-weight:700;padding:2px 6px;border-radius:5px}
+  .org-top{background:#14532d;color:#4ade80}
+  .org-mid{background:#1e3a5f;color:#60a5fa}
+  .org-low{background:#292524;color:#a8a29e}
+  .maps-1{background:#134e4a;color:var(--teal)}
+  .maps-top{background:#1e3a5f;color:var(--blue)}
+  .maps-low{background:#1c1917;color:#78716c}
+  .rank-dash{color:#444;font-size:13px}
+  .rank-up{color:var(--green);font-size:12px;font-weight:600}
+  .rank-down{color:var(--red);font-size:12px;font-weight:600}
+  .rank-flat{color:#555;font-size:12px}
+  .rank-new{background:#3b1f00;color:var(--yellow);font-size:11px;font-weight:700;padding:2px 6px;border-radius:4px}
+  .aio-cited{background:#2e1065;color:var(--purple);font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px}
+  .aio-appears{background:#1e293b;color:var(--blue);font-size:11px;padding:2px 8px;border-radius:4px}
+
+  /* Notice */
+  .notice{background:#1a1a00;border:1px solid #3d3d00;border-radius:8px;padding:16px 20px;margin-bottom:28px;color:#e5e570;font-size:13px}
+
+  @media(max-width:600px){.stats{grid-template-columns:1fr 1fr}.tbl th:nth-child(3),.tbl td:nth-child(3){display:none}}
 </style>
 </head>
 <body>
 
+<!-- Gate -->
 <div id="gate">
-  <div class="g-brand">KILLERGROWTH</div>
-  <div class="g-card">
-    <div class="g-name">StewardRight</div>
-    <div class="g-desc">Rankings Report — June 2026</div>
-    <div class="g-lbl">Access Code</div>
-    <input type="password" id="gi" placeholder="Enter password" autocomplete="off">
-    <div id="ge"></div>
-    <button id="gs" onclick="checkPass()">View Report →</button>
+  <div class="gate-box">
+    <div class="logo">KillerGrowth</div>
+    <div class="sub">Enter your access password to view this report</div>
+    <input type="password" id="pw" placeholder="Password" autofocus>
+    <button onclick="unlock()">View Report</button>
+    <div class="err" id="err">Incorrect password</div>
   </div>
 </div>
 
+<!-- App -->
 <div id="app">
-
   <div class="topbar">
-    <div class="topbar-l">
-      <span class="kg-badge">KILLERGROWTH</span>
-      <span class="report-type">Rankings Report</span>
-    </div>
-    <span class="report-date">June 1, 2026</span>
+    <span class="logo">KillerGrowth</span>
+    <span class="client">StewardRight · Rankings</span>
+    <span class="date">Rankings · June 1, 2026</span>
   </div>
-
-  <div class="client-header">
-    <div class="client-name">StewardRight</div>
-    <div class="client-meta">Financial Advisory · Wichita, KS</div>
-    <div class="client-url">stewardright.com</div>
-  </div>
-
-  <div class="stats-grid">
-    <div class="stat blue">
-      <div class="stat-val">9</div>
-      <div class="stat-lbl">Maps Pack Ranked</div>
+  <div class="container">
+    
+    <div class="stats">
+      <div class="stat"><div class="val">1</div><div class="lbl">Organic Ranked</div></div>
+      <div class="stat"><div class="val">0</div><div class="lbl">Maps Top-3</div></div>
+      <div class="stat"><div class="val">9</div><div class="lbl">Maps Ranked</div></div>
+      <div class="stat"><div class="val">8</div><div class="lbl">AIO Citations</div></div>
+      <div class="stat"><div class="val">9</div><div class="lbl">AIO Appearances</div></div>
     </div>
-    <div class="stat teal">
-      <div class="stat-val">3</div>
-      <div class="stat-lbl">Maps Top 5</div>
-    </div>
-    <div class="stat amber">
-      <div class="stat-val">1</div>
-      <div class="stat-lbl">Organic Ranked</div>
-    </div>
-    <div class="stat purple">
-      <div class="stat-val">5</div>
-      <div class="stat-lbl">AI Overview Citations</div>
-    </div>
-  </div>
 
-  <div class="notice">
-    <strong>Building authority.</strong> Financial services is one of the most competitive verticals in local search. The strong signal here is maps presence across all 9 tracked keywords — every single term we're targeting has StewardRight in the local pack. Organic rankings are early-stage but growing. Expect steady improvement over the next 60–90 days as domain authority builds.
-  </div>
-
-  <div class="section">
-    <div class="section-hd">All Tracked Keywords — Organic + Maps Pack</div>
-    <div class="tbl-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Keyword</th>
-            <th>Organic</th>
-            <th>Change</th>
-            <th>Maps Pack</th>
-            <th>AI Overview</th>
-          </tr>
-        </thead>
+    <div class="section">
+      <div class="section-hdr">Keyword Rankings · June 1, 2026</div>
+      <table class="tbl">
+        <thead><tr>
+          <th>Keyword</th>
+          <th class="r">Organic</th>
+          <th class="r">Maps Pack</th>
+          <th class="r">AI Overview</th>
+        </tr></thead>
         <tbody>
-          <tr>
-            <td class="kw">fee-based financial advisor wichita ks</td>
-            <td><span class="r-dash">—</span></td><td>—</td>
-            <td><span class="m23">4</span></td>
-            <td><span class="aio-a">Appears</span></td>
-          </tr>
-          <tr>
-            <td class="kw">wealth management wichita ks</td>
-            <td><span class="r-dash">—</span></td><td>—</td>
-            <td><span class="m23">4</span></td>
-            <td><span class="aio-c">Cited</span></td>
-          </tr>
-          <tr class="row-dual">
-            <td class="kw">portfolio management wichita ks</td>
-            <td><span class="r-num">6</span></td>
-            <td><span class="mv dn">▼ -3</span></td>
-            <td><span class="m23">4</span></td>
-            <td><span class="aio-a">Appears</span></td>
-          </tr>
-          <tr>
-            <td class="kw">financial advisor wichita ks</td>
-            <td><span class="r-dash">—</span></td><td>—</td>
-            <td><span class="mrest">6</span></td>
-            <td><span class="aio-c">Cited</span></td>
-          </tr>
-          <tr>
-            <td class="kw">retirement planning wichita ks</td>
-            <td><span class="r-dash">—</span></td><td>—</td>
-            <td><span class="mrest">6</span></td>
-            <td><span class="aio-c">Cited</span></td>
-          </tr>
-          <tr>
-            <td class="kw">retirement advisor wichita ks</td>
-            <td><span class="r-dash">—</span></td><td>—</td>
-            <td><span class="mrest">6</span></td>
-            <td><span class="aio-c">Cited</span></td>
-          </tr>
-          <tr>
-            <td class="kw">fiduciary financial advisor wichita ks</td>
-            <td><span class="r-num">14</span></td>
-            <td><span class="mv new">NEW</span></td>
-            <td><span class="mrest">7</span></td>
-            <td><span class="aio-c">Cited</span></td>
-          </tr>
-          <tr>
-            <td class="kw">financial planner wichita ks</td>
-            <td><span class="r-dash">—</span></td><td>—</td>
-            <td><span class="mrest">7</span></td>
-            <td><span class="aio-a">Appears</span></td>
-          </tr>
-          <tr>
-            <td class="kw">investment advisor wichita ks</td>
-            <td><span class="r-dash">—</span></td><td>—</td>
-            <td><span class="mrest">7</span></td>
-            <td><span class="aio-c">Cited</span></td>
-          </tr>
-        </tbody>
+    <tr>
+      <td class="kw">fee-based financial advisor wichita ks</td>
+      <td class="r"><span class="rank-dash">—</span></td>
+      <td class="r"><span class="rank-badge maps-low">4</span></td>
+      <td class="r"><span class="aio-appears">Appears</span></td>
+    </tr>
+    <tr>
+      <td class="kw">wealth management wichita ks</td>
+      <td class="r"><span class="rank-dash">—</span></td>
+      <td class="r"><span class="rank-badge maps-low">4</span></td>
+      <td class="r"><span class="aio-cited">Cited</span></td>
+    </tr>
+    <tr>
+      <td class="kw">portfolio management wichita ks</td>
+      <td class="r"><span class="rank-badge org-mid">5</span></td>
+      <td class="r"><span class="rank-badge maps-low">4</span></td>
+      <td class="r"><span class="aio-cited">Cited</span></td>
+    </tr>
+    <tr>
+      <td class="kw">retirement advisor wichita ks</td>
+      <td class="r"><span class="rank-dash">—</span></td>
+      <td class="r"><span class="rank-badge maps-low">5</span></td>
+      <td class="r"><span class="aio-cited">Cited</span></td>
+    </tr>
+    <tr>
+      <td class="kw">financial advisor wichita ks</td>
+      <td class="r"><span class="rank-dash">—</span></td>
+      <td class="r"><span class="rank-badge maps-low">6</span></td>
+      <td class="r"><span class="aio-cited">Cited</span></td>
+    </tr>
+    <tr>
+      <td class="kw">retirement planning wichita ks</td>
+      <td class="r"><span class="rank-dash">—</span></td>
+      <td class="r"><span class="rank-badge maps-low">6</span></td>
+      <td class="r"><span class="aio-cited">Cited</span></td>
+    </tr>
+    <tr>
+      <td class="kw">investment advisor wichita ks</td>
+      <td class="r"><span class="rank-dash">—</span></td>
+      <td class="r"><span class="rank-badge maps-low">8</span></td>
+      <td class="r"><span class="aio-cited">Cited</span></td>
+    </tr>
+    <tr>
+      <td class="kw">financial planner wichita ks</td>
+      <td class="r"><span class="rank-dash">—</span></td>
+      <td class="r"><span class="rank-badge maps-low">9</span></td>
+      <td class="r"><span class="aio-cited">Cited</span></td>
+    </tr>
+    <tr>
+      <td class="kw">fiduciary financial advisor wichita ks</td>
+      <td class="r"><span class="rank-dash">—</span></td>
+      <td class="r"><span class="rank-badge maps-low">9</span></td>
+      <td class="r"><span class="aio-cited">Cited</span></td>
+    </tr></tbody>
       </table>
     </div>
   </div>
-
-  <div class="section">
-    <div class="section-hd">AI Overview Citations</div>
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;">
-      <div class="aio-wrap">
-        <span class="aio-tag">financial advisor wichita ks</span>
-        <span class="aio-tag">wealth management wichita ks</span>
-        <span class="aio-tag">investment advisor wichita ks</span>
-        <span class="aio-tag">retirement planning wichita ks</span>
-        <span class="aio-tag">fiduciary financial advisor wichita ks</span>
-        <span class="aio-tag">retirement advisor wichita ks</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="report-footer">
-    <span class="footer-brand">KILLERGROWTH</span>
-    <span>Data pulled June 1, 2026 via DataForSEO · Confidential</span>
-  </div>
-
 </div>
 
 <script>
 const PW = 'gp3r!7F*Ai2u7dZQ';
-const KEY = 'kg_sr_rankings';
-function checkPass(){
-  const v = document.getElementById('gi').value;
-  if(v === PW){
-    document.cookie = KEY+'=1;path=/;max-age=2592000';
-    document.getElementById('gate').classList.add('hidden');
-    document.getElementById('app').classList.add('show');
-  } else {
-    const gi = document.getElementById('gi');
-    document.getElementById('ge').textContent = 'Incorrect password';
-    gi.classList.add('err','shake');
-    setTimeout(()=>gi.classList.remove('shake'),400);
-  }
-}
-document.getElementById('gi').addEventListener('keydown',e=>{ if(e.key==='Enter') checkPass(); });
-if(document.cookie.includes(KEY+'=1')){
-  document.getElementById('gate').classList.add('hidden');
-  document.getElementById('app').classList.add('show');
-}
+const CK = 'kg_sr_rankings';
+function getCookie(n){const v='; '+document.cookie;const p=v.split('; '+n+'=');if(p.length===2)return p.pop().split(';').shift();}
+function setCookie(n,v,d){const e=new Date();e.setTime(e.getTime()+(d*24*60*60*1000));document.cookie=n+'='+v+';expires='+e.toUTCString()+';path=/';}
+function unlock(){const v=document.getElementById('pw').value;if(v===PW){setCookie(CK,btoa(PW),30);show();}else{document.getElementById('err').style.display='block';}}
+function show(){document.getElementById('gate').style.display='none';document.getElementById('app').style.display='block';}
+document.getElementById('pw').addEventListener('keydown',e=>{if(e.key==='Enter')unlock();});
+if(getCookie(CK)===btoa(PW))show();
 </script>
 </body>
 </html>
