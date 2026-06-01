@@ -2,21 +2,18 @@
   "client": "StewardRight",
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
-  "period": "April 2026",
-  "ga4PropertyId": "523504338",
-  "ga4MeasurementId": "G-VQJKM9G17F",
-  "gtmId": "GTM-5N8DDDLN",
-  "generatedAt": "2026-05-19T18:55:52.021Z",
+  "period": "May 2026",
+  "generatedAt": "2026-06-01T16:33:54.977Z",
   "overview": {
-    "sessions": null,
-    "sessionsDelta": null,
+    "sessions": 52,
+    "sessionsDelta": 0,
     "leads": null,
     "leadsDelta": null,
     "rankingsTop10": null,
     "rankingsDelta": null,
     "gbpViews": null,
     "gbpViewsDelta": null,
-    "adSpend": 609.7,
+    "adSpend": 609.76,
     "adImpressions": null,
     "adBudget": null,
     "costPerLead": null,
@@ -27,8 +24,54 @@
     "avgRating": null
   },
   "seo": {
-    "organicSessions": [],
-    "trafficChannels": [],
+    "organicSessions": [
+      {
+        "week": "19",
+        "sessions": 15,
+        "conversions": 0
+      },
+      {
+        "week": "20",
+        "sessions": 13,
+        "conversions": 0
+      },
+      {
+        "week": "21",
+        "sessions": 17,
+        "conversions": 0
+      },
+      {
+        "week": "22",
+        "sessions": 7,
+        "conversions": 0
+      }
+    ],
+    "trafficChannels": [
+      {
+        "channel": "Direct",
+        "sessions": 23
+      },
+      {
+        "channel": "Organic Search",
+        "sessions": 16
+      },
+      {
+        "channel": "Email",
+        "sessions": 5
+      },
+      {
+        "channel": "Organic Social",
+        "sessions": 4
+      },
+      {
+        "channel": "Referral",
+        "sessions": 2
+      },
+      {
+        "channel": "Unassigned",
+        "sessions": 2
+      }
+    ],
     "keywords": []
   },
   "ads": {
@@ -59,7 +102,7 @@
       },
       {
         "month": "May 2026",
-        "adSpend": 609.7,
+        "adSpend": 609.76,
         "adClicks": 3597,
         "adLeads": 0
       }
@@ -112,12 +155,33 @@
         "platform": "Facebook",
         "reach": 8016,
         "engagements": 2027,
-        "followers": 611
+        "followers": 612
       }
     ]
   },
   "website": {
-    "sessionsOverTime": [],
+    "sessionsOverTime": [
+      {
+        "week": "19",
+        "sessions": 15,
+        "conversions": 0
+      },
+      {
+        "week": "20",
+        "sessions": 13,
+        "conversions": 0
+      },
+      {
+        "week": "21",
+        "sessions": 17,
+        "conversions": 0
+      },
+      {
+        "week": "22",
+        "sessions": 7,
+        "conversions": 0
+      }
+    ],
     "vitals": {
       "lcp": null,
       "cls": null,
@@ -126,13 +190,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 56,
+        "performance": 50,
         "accessibility": 90,
         "bestPractices": 77,
         "seo": 92
       },
       "desktop": {
-        "performance": 66,
+        "performance": 94,
         "accessibility": 90,
         "bestPractices": 77,
         "seo": 92
@@ -397,13 +461,13 @@
       {
         "date": "2026-06-01",
         "mobile": {
-          "performance": 56,
+          "performance": 50,
           "accessibility": 90,
           "bestPractices": 77,
           "seo": 92
         },
         "desktop": {
-          "performance": 66,
+          "performance": 94,
           "accessibility": 90,
           "bestPractices": 77,
           "seo": 92
