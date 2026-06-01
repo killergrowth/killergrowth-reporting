@@ -16,12 +16,12 @@
     "rankingsDelta": null,
     "gbpViews": null,
     "gbpViewsDelta": null,
-    "adSpend": 597.49,
+    "adSpend": 609.7,
     "adImpressions": null,
     "adBudget": null,
     "costPerLead": null,
     "costPerLeadDelta": null,
-    "socialReach": 4560,
+    "socialReach": 8016,
     "socialReachDelta": null,
     "reviewCount": null,
     "avgRating": null
@@ -55,6 +55,12 @@
         "month": "Apr 2026",
         "adSpend": 597.49,
         "adClicks": 2529,
+        "adLeads": 0
+      },
+      {
+        "month": "May 2026",
+        "adSpend": 609.7,
+        "adClicks": 3597,
         "adLeads": 0
       }
     ],
@@ -93,15 +99,20 @@
         "month": "Apr 2026",
         "reach": 7987,
         "engagements": 1998
+      },
+      {
+        "month": "May 2026",
+        "reach": 8623,
+        "engagements": 2261
       }
     ],
     "reachByWeek": [],
     "platforms": [
       {
         "platform": "Facebook",
-        "reach": 4560,
-        "engagements": 563,
-        "followers": 610
+        "reach": 8016,
+        "engagements": 2027,
+        "followers": 611
       }
     ]
   },
@@ -115,14 +126,14 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 39,
-        "accessibility": 92,
+        "performance": 56,
+        "accessibility": 90,
         "bestPractices": 77,
         "seo": 92
       },
       "desktop": {
-        "performance": 62,
-        "accessibility": 92,
+        "performance": 66,
+        "accessibility": 90,
         "bestPractices": 77,
         "seo": 92
       }
@@ -191,14 +202,209 @@
       {
         "date": "2026-05-19",
         "mobile": {
-          "performance": 39,
+          "performance": 48,
           "accessibility": 92,
           "bestPractices": 77,
           "seo": 92
         },
         "desktop": {
-          "performance": 62,
+          "performance": 65,
           "accessibility": 92,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-05-20",
+        "mobile": {
+          "performance": 44,
+          "accessibility": 92,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 58,
+          "accessibility": 92,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-05-21",
+        "mobile": {
+          "performance": 42,
+          "accessibility": 92,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 49,
+          "accessibility": 92,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-05-22",
+        "mobile": {
+          "performance": 45,
+          "accessibility": 92,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 66,
+          "accessibility": 92,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-05-23",
+        "mobile": {
+          "performance": 46,
+          "accessibility": 92,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 71,
+          "accessibility": 92,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-05-24",
+        "mobile": {
+          "performance": 42,
+          "accessibility": 92,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 73,
+          "accessibility": 92,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-05-25",
+        "mobile": {
+          "performance": 40,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 48,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-05-26",
+        "mobile": {
+          "performance": 42,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 56,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-05-27",
+        "mobile": {
+          "performance": 26,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 63,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-05-28",
+        "mobile": {
+          "performance": 48,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 70,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-05-29",
+        "mobile": {
+          "performance": 44,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 65,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-05-30",
+        "mobile": {
+          "performance": 53,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 71,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-05-31",
+        "mobile": {
+          "performance": 17,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 66,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-06-01",
+        "mobile": {
+          "performance": 56,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 66,
+          "accessibility": 90,
           "bestPractices": 77,
           "seo": 92
         }
