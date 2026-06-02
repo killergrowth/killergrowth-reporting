@@ -3,7 +3,7 @@
   "slug": "dons-heating",
   "logoPath": null,
   "period": "May 2026",
-  "generatedAt": "2026-06-01T22:59:40.646Z",
+  "generatedAt": "2026-06-02T00:12:21.915Z",
   "overview": {
     "sessions": 700,
     "sessionsDelta": 0,
@@ -18,7 +18,7 @@
     "adBudget": null,
     "costPerLead": null,
     "costPerLeadDelta": null,
-    "socialReach": 741,
+    "socialReach": 0,
     "socialReachDelta": null,
     "reviewCount": null,
     "avgRating": null
@@ -311,13 +311,13 @@
     "monthlyHistory": [
       {
         "month": "Jan 2026",
-        "reach": 268,
-        "engagements": 41
+        "reach": null,
+        "engagements": null
       },
       {
         "month": "Feb 2026",
-        "reach": 156,
-        "engagements": 49
+        "reach": null,
+        "engagements": null
       },
       {
         "month": "Mar 2026",
@@ -327,20 +327,20 @@
       {
         "month": "Apr 2026",
         "reach": 736,
-        "engagements": 71
+        "engagements": 0
       },
       {
         "month": "May 2026",
-        "reach": 245,
-        "engagements": 52
+        "reach": null,
+        "engagements": null
       }
     ],
     "reachByWeek": [],
     "platforms": [
       {
         "platform": "Facebook",
-        "reach": 741,
-        "engagements": 68,
+        "reach": 0,
+        "engagements": 0,
         "followers": 188
       }
     ]
@@ -386,13 +386,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 59,
+        "performance": 58,
         "accessibility": 90,
         "bestPractices": 73,
         "seo": 100
       },
       "desktop": {
-        "performance": 79,
+        "performance": 94,
         "accessibility": 91,
         "bestPractices": 73,
         "seo": 100
@@ -664,6 +664,21 @@
         },
         "desktop": {
           "performance": 79,
+          "accessibility": 91,
+          "bestPractices": 73,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-06-02",
+        "mobile": {
+          "performance": 58,
+          "accessibility": 90,
+          "bestPractices": 73,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 94,
           "accessibility": 91,
           "bestPractices": 73,
           "seo": 100

@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "May 2026",
-  "generatedAt": "2026-06-01T22:59:12.177Z",
+  "generatedAt": "2026-06-02T00:12:00.965Z",
   "overview": {
     "sessions": 791,
     "sessionsDelta": 0,
@@ -18,7 +18,7 @@
     "adBudget": null,
     "costPerLead": 54.08,
     "costPerLeadDelta": null,
-    "socialReach": 2681,
+    "socialReach": 0,
     "socialReachDelta": null,
     "reviewCount": null,
     "avgRating": null
@@ -324,13 +324,13 @@
     "monthlyHistory": [
       {
         "month": "Jan 2026",
-        "reach": 5884,
-        "engagements": 729
+        "reach": null,
+        "engagements": null
       },
       {
         "month": "Feb 2026",
         "reach": 5264,
-        "engagements": 1414
+        "engagements": 0
       },
       {
         "month": "Mar 2026",
@@ -339,21 +339,21 @@
       },
       {
         "month": "Apr 2026",
-        "reach": 2855,
-        "engagements": 641
+        "reach": null,
+        "engagements": null
       },
       {
         "month": "May 2026",
         "reach": 1648,
-        "engagements": 248
+        "engagements": 0
       }
     ],
     "reachByWeek": [],
     "platforms": [
       {
         "platform": "Facebook",
-        "reach": 2681,
-        "engagements": 562,
+        "reach": 0,
+        "engagements": 0,
         "followers": 1202
       }
     ]
@@ -405,7 +405,7 @@
         "seo": 85
       },
       "desktop": {
-        "performance": 71,
+        "performance": 70,
         "accessibility": 77,
         "bestPractices": 96,
         "seo": 85
@@ -667,6 +667,21 @@
         },
         "desktop": {
           "performance": 71,
+          "accessibility": 77,
+          "bestPractices": 96,
+          "seo": 85
+        }
+      },
+      {
+        "date": "2026-06-02",
+        "mobile": {
+          "performance": 56,
+          "accessibility": 75,
+          "bestPractices": 96,
+          "seo": 85
+        },
+        "desktop": {
+          "performance": 70,
           "accessibility": 77,
           "bestPractices": 96,
           "seo": 85
