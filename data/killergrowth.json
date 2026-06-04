@@ -3,7 +3,7 @@
   "slug": "killergrowth",
   "logoPath": null,
   "period": "May 2026",
-  "generatedAt": "2026-06-04T07:18:26.271Z",
+  "generatedAt": "2026-06-04T10:56:01.170Z",
   "overview": {
     "sessions": 34,
     "sessionsDelta": 0,
@@ -306,7 +306,7 @@
         "platform": "Facebook",
         "reach": 5481,
         "engagements": 1224,
-        "followers": 502
+        "followers": 501
       }
     ]
   },
@@ -341,7 +341,12 @@
         "bestPractices": 100,
         "seo": 92
       },
-      "desktop": null
+      "desktop": {
+        "performance": 75,
+        "accessibility": 91,
+        "bestPractices": 100,
+        "seo": 92
+      }
     },
     "psiHistory": [
       {
@@ -652,7 +657,12 @@
           "bestPractices": 100,
           "seo": 92
         },
-        "desktop": null
+        "desktop": {
+          "performance": 75,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
       }
     ]
   }
