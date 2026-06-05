@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "May 2026",
-  "generatedAt": "2026-06-04T23:03:18.320Z",
+  "generatedAt": "2026-06-05T02:37:17.241Z",
   "overview": {
     "sessions": 791,
     "sessionsDelta": 0,
@@ -18,7 +18,7 @@
     "adBudget": null,
     "costPerLead": 54.08,
     "costPerLeadDelta": null,
-    "socialReach": 0,
+    "socialReach": 2681,
     "socialReachDelta": null,
     "reviewCount": null,
     "avgRating": null
@@ -339,8 +339,8 @@
       },
       {
         "month": "Apr 2026",
-        "reach": null,
-        "engagements": null
+        "reach": 2855,
+        "engagements": 641
       },
       {
         "month": "May 2026",
@@ -352,8 +352,8 @@
     "platforms": [
       {
         "platform": "Facebook",
-        "reach": 0,
-        "engagements": 0,
+        "reach": 2681,
+        "engagements": 562,
         "followers": 1202
       }
     ]
@@ -399,13 +399,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 59,
+        "performance": 60,
         "accessibility": 75,
         "bestPractices": 96,
         "seo": 85
       },
       "desktop": {
-        "performance": 70,
+        "performance": 71,
         "accessibility": 77,
         "bestPractices": 96,
         "seo": 85
@@ -712,6 +712,21 @@
         },
         "desktop": {
           "performance": 70,
+          "accessibility": 77,
+          "bestPractices": 96,
+          "seo": 85
+        }
+      },
+      {
+        "date": "2026-06-05",
+        "mobile": {
+          "performance": 60,
+          "accessibility": 75,
+          "bestPractices": 96,
+          "seo": 85
+        },
+        "desktop": {
+          "performance": 71,
           "accessibility": 77,
           "bestPractices": 96,
           "seo": 85

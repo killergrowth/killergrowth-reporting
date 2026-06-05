@@ -3,7 +3,7 @@
   "slug": "killergrowth",
   "logoPath": null,
   "period": "May 2026",
-  "generatedAt": "2026-06-04T23:02:14.828Z",
+  "generatedAt": "2026-06-05T02:36:27.311Z",
   "overview": {
     "sessions": 34,
     "sessionsDelta": 0,
@@ -18,7 +18,7 @@
     "adBudget": null,
     "costPerLead": 938.84,
     "costPerLeadDelta": null,
-    "socialReach": 0,
+    "socialReach": 5481,
     "socialReachDelta": null,
     "reviewCount": null,
     "avgRating": null
@@ -276,8 +276,8 @@
     "monthlyHistory": [
       {
         "month": "Jan 2026",
-        "reach": null,
-        "engagements": null
+        "reach": 4714,
+        "engagements": 1109
       },
       {
         "month": "Feb 2026",
@@ -304,8 +304,8 @@
     "platforms": [
       {
         "platform": "Facebook",
-        "reach": 0,
-        "engagements": 0,
+        "reach": 5481,
+        "engagements": 1224,
         "followers": 502
       }
     ]
@@ -651,6 +651,21 @@
       },
       {
         "date": "2026-06-04",
+        "mobile": {
+          "performance": 76,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 76,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-06-05",
         "mobile": {
           "performance": 76,
           "accessibility": 91,
