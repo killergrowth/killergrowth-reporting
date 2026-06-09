@@ -3,7 +3,7 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "May 2026",
-  "generatedAt": "2026-06-09T07:42:23.180Z",
+  "generatedAt": "2026-06-09T10:55:20.106Z",
   "overview": {
     "sessions": 1007,
     "sessionsDelta": 0,
@@ -386,17 +386,12 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 50,
+        "performance": 52,
         "accessibility": 92,
         "bestPractices": 100,
         "seo": 100
       },
-      "desktop": {
-        "performance": 77,
-        "accessibility": 92,
-        "bestPractices": 100,
-        "seo": 100
-      }
+      "desktop": null
     },
     "psiHistory": [
       {
@@ -772,17 +767,12 @@
       {
         "date": "2026-06-09",
         "mobile": {
-          "performance": 50,
+          "performance": 52,
           "accessibility": 92,
           "bestPractices": 100,
           "seo": 100
         },
-        "desktop": {
-          "performance": 77,
-          "accessibility": 92,
-          "bestPractices": 100,
-          "seo": 100
-        }
+        "desktop": null
       }
     ]
   }
