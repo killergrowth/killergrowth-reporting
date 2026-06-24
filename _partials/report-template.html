@@ -160,6 +160,22 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
 .mgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
 .mcell{border-radius:7px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800}
 
+/* GEO / AI VISIBILITY */
+.geo-hero{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.geo-stat{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px 20px}
+.geo-stat-val{font-size:36px;font-weight:800;line-height:1;margin:6px 0 4px;color:var(--lime)}
+.geo-stat-val.dim{color:var(--sub)}
+.geo-plat-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px}
+.geo-plat-row:last-child{border-bottom:none}
+.geo-plat-name{display:flex;align-items:center;gap:8px;color:var(--sub);text-transform:capitalize}
+.geo-plat-val{font-weight:700;font-size:15px;color:var(--w)}
+.geo-plat-val.strong{color:var(--lime)}
+.geo-kw-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--border);font-size:12px}
+.geo-kw-row:last-child{border-bottom:none}
+.geo-kw-name{color:var(--sub);flex:1;margin-right:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.geo-kw-bar-wrap{width:80px;height:6px;background:var(--border);border-radius:3px;margin-right:10px;flex-shrink:0}
+.geo-kw-bar{height:6px;border-radius:3px;background:var(--lime)}
+.geo-kw-val{font-weight:700;font-size:13px;color:var(--w);min-width:36px;text-align:right}
 /* LEAD SOURCE */
 .lsrc-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px 20px}
 .lsrc-total{font-size:34px;font-weight:800;color:var(--w);line-height:1;margin:6px 0 14px}
@@ -346,6 +362,22 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
       <!-- SEO -->
       <section id="seo" class="ms" data-module="seo">
         <div class="sh"><span class="sb2">SEO</span><span class="st">Search Engine Optimization</span></div>
+
+        <!-- GEO / AI VISIBILITY -->
+        <div class="card mb14" id="seo-geo" style="display:none">
+          <div class="clbl">AI &amp; Local Visibility</div>
+          <div id="geo-hero" class="geo-hero"></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div class="geo-stat" style="padding:0">
+              <div style="padding:16px 20px 0"><span class="clbl">AI Platforms</span></div>
+              <div id="geo-ai-platforms" style="padding:0 20px 10px"></div>
+            </div>
+            <div class="geo-stat" style="padding:0">
+              <div style="padding:16px 20px 0"><span class="clbl">Google Maps Keywords</span></div>
+              <div id="geo-google-kws" style="padding:0 20px 10px"></div>
+            </div>
+          </div>
+        </div>
 
         <!-- LEAD SIGNALS -->
         <div class="card mb14" id="seo-lead-signals" style="display:none">
@@ -713,6 +745,64 @@ function kc(label,value,delta,sub){
   return '<div class="kc"><div class="klbl">'+label+'</div><div class="kvr"><span class="kv">'+value+'</span>'+dh+'</div>'+(sub?'<div class="ksub">'+sub+'</div>':'')+'</div>';
 }
 
+function renderGEO(lf){
+  if(!lf||!lf.googleKeywords||!lf.googleKeywords.length)return;
+  var wrap=el('seo-geo');
+  if(!wrap)return;
+  wrap.style.display='';
+
+  // Hero stats
+  var heroEl=el('geo-hero');
+  if(heroEl){
+    var saivVal=lf.avgSaiv!=null?lf.avgSaiv+'%':'—';
+    var solvVal=lf.avgSolvAll!=null?lf.avgSolvAll+'%':'—';
+    var saivStrong=lf.avgSaiv>50;
+    var solvStrong=lf.avgSolvAll>50;
+    heroEl.innerHTML=
+      '<div class="geo-stat">'
+        +'<div class="clbl">AI Share of Voice</div>'
+        +'<div class="geo-stat-val'+(saivStrong?'':' dim')+'">'+saivVal+'</div>'
+        +'<div class="ksub">Avg SAIV across AI platforms</div>'
+      +'</div>'
+      +'<div class="geo-stat">'
+        +'<div class="clbl">Local Pack SoLV</div>'
+        +'<div class="geo-stat-val'+(solvStrong?'':' dim')+'">'+solvVal+'</div>'
+        +'<div class="ksub">Avg across tracked keywords</div>'
+      +'</div>';
+  }
+
+  // AI platforms
+  var platEl=el('geo-ai-platforms');
+  if(platEl){
+    var platLabels={chatgpt:'ChatGPT',gemini:'Gemini',aimode:'AI Mode',grok:'Grok'};
+    var platIcons={chatgpt:'🤖',gemini:'✨',aimode:'🔍',grok:'⚡'};
+    if(lf.aiPlatforms&&lf.aiPlatforms.length){
+      platEl.innerHTML=lf.aiPlatforms.map(function(p){
+        var strong=p.saiv>50;
+        return '<div class="geo-plat-row">'
+          +'<span class="geo-plat-name">'+(platIcons[p.platform]||'🌐')+' '+(platLabels[p.platform]||p.platform)+'</span>'
+          +'<span class="geo-plat-val'+(strong?' strong':'')+'">'+p.saiv+'%</span>'
+          +'</div>';
+      }).join('');
+    } else {
+      platEl.innerHTML='<div class="ksub" style="padding:10px 0">No AI scans yet</div>';
+    }
+  }
+
+  // Google Maps keywords
+  var kwEl=el('geo-google-kws');
+  if(kwEl&&lf.googleKeywords){
+    kwEl.innerHTML=lf.googleKeywords.slice(0,7).map(function(k){
+      var pct=Math.min(k.solv,100);
+      return '<div class="geo-kw-row">'
+        +'<span class="geo-kw-name" title="'+k.keyword+'">'+k.keyword+'</span>'
+        +'<div class="geo-kw-bar-wrap"><div class="geo-kw-bar" style="width:'+pct+'%"></div></div>'
+        +'<span class="geo-kw-val">'+k.solv+'%</span>'
+        +'</div>';
+    }).join('');
+  }
+}
+
 function renderSEO(seo){
   var sessions=seo.organicSessions||[],channels=seo.trafficChannels||[],keywords=seo.keywords||[],ls=seo.leadSignals||null;
 
@@ -1064,6 +1154,7 @@ function applyRange(start,end){
   document.querySelectorAll('.js-period').forEach(function(e){e.textContent=lbl;});
   renderOverview(fd,mods);
   if(mods.seo)renderSEO(fd.seo);
+  if(fd.localFalcon)renderGEO(fd.localFalcon);
   if(mods.googleAds)renderAds(fd.ads);
   if(mods.metaAds)renderMeta(fd.ads,fd.social);
   if(mods.gbp)renderGBP(fd.gbp);
