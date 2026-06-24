@@ -42,21 +42,28 @@ async function pullGBP(accountId, locationId) {
   const token = await refreshAccessToken();
   const { startTime, endTime } = getDateRange();
   const base = 'https://businessprofileperformance.googleapis.com/v1';
-  const locationName = `accounts/${accountId}/locations/${locationId}`;
+  // Performance API uses just locations/{id} (no account prefix)
+  const locId = locationId.startsWith('locations/') ? locationId : `locations/${locationId}`;
+  const acctId = accountId.startsWith('accounts/') ? accountId : `accounts/${accountId}`;
+  const locationName = `${acctId}/${locId}`; // used for reviews API
+  const perfName = locId; // used for performance API
 
-  // Daily metrics
+  // Multi-metric fetch via fetchMultiDailyMetricsTimeSeries
+  const metricNames = [
+    'BUSINESS_IMPRESSIONS_DESKTOP_MAPS', 'BUSINESS_IMPRESSIONS_DESKTOP_SEARCH',
+    'BUSINESS_IMPRESSIONS_MOBILE_MAPS',  'BUSINESS_IMPRESSIONS_MOBILE_SEARCH',
+    'CALL_CLICKS', 'BUSINESS_DIRECTION_REQUESTS', 'WEBSITE_CLICKS'
+  ];
+  const sd = new Date(startTime), ed = new Date(endTime);
+  const qs = metricNames.map(m => `dailyMetrics=${encodeURIComponent(m)}`).join('&') +
+    `&dailyRange.startDate.year=${sd.getFullYear()}` +
+    `&dailyRange.startDate.month=${sd.getMonth() + 1}` +
+    `&dailyRange.startDate.day=${sd.getDate()}` +
+    `&dailyRange.endDate.year=${ed.getFullYear()}` +
+    `&dailyRange.endDate.month=${ed.getMonth() + 1}` +
+    `&dailyRange.endDate.day=${ed.getDate()}`;
   const metricsRes = await fetch(
-    `${base}/${locationName}:getDailyMetricsTimeSeries?` + new URLSearchParams({
-      dailyMetric: ['BUSINESS_IMPRESSIONS_DESKTOP_MAPS', 'BUSINESS_IMPRESSIONS_DESKTOP_SEARCH',
-                    'BUSINESS_IMPRESSIONS_MOBILE_MAPS', 'BUSINESS_IMPRESSIONS_MOBILE_SEARCH',
-                    'CALL_CLICKS', 'DIRECTION_REQUESTS'].join(','),
-      'dailyRange.startDate.year':  new Date(startTime).getFullYear(),
-      'dailyRange.startDate.month': new Date(startTime).getMonth() + 1,
-      'dailyRange.startDate.day':   new Date(startTime).getDate(),
-      'dailyRange.endDate.year':    new Date(endTime).getFullYear(),
-      'dailyRange.endDate.month':   new Date(endTime).getMonth() + 1,
-      'dailyRange.endDate.day':     new Date(endTime).getDate()
-    }),
+    `${base}/${perfName}:fetchMultiDailyMetricsTimeSeries?${qs}`,
     { headers: { Authorization: `Bearer ${token}` } }
   );
   const metrics = await metricsRes.json();
@@ -81,7 +88,7 @@ async function pullGBP(accountId, locationId) {
           viewsByDay[date] = (viewsByDay[date] || 0) + val;
         } else if (metric === 'CALL_CLICKS') {
           totalCalls += val;
-        } else if (metric === 'DIRECTION_REQUESTS') {
+        } else if (metric === 'BUSINESS_DIRECTION_REQUESTS') {
           totalDirections += val;
         }
       }
@@ -91,7 +98,7 @@ async function pullGBP(accountId, locationId) {
   // Reviews
   const reviewsBase = 'https://mybusiness.googleapis.com/v4';
   const reviewsRes = await fetch(
-    `${reviewsBase}/accounts/${accountId}/locations/${locationId}/reviews`,
+    `${reviewsBase}/${locationName}/reviews`,
     { headers: { Authorization: `Bearer ${token}` } }
   );
   const reviews = await reviewsRes.json();
