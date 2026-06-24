@@ -852,6 +852,7 @@ function getAllMonths(data){
   col(data.ads&&data.ads.monthlyBreakdown,'month');
   col(data.social&&data.social.monthlyHistory,'month');
   col(data.gbp&&data.gbp.viewsOverTime,'month');
+  col(data.gbp&&data.gbp.viewsOverTime,'date');
   Object.keys(seen).forEach(function(k){var dt=parseMonthStr(k);if(dt)months.push({label:k,date:dt});});
   months.sort(function(a,b){return a.date-b.date;});
   return months;
@@ -915,7 +916,7 @@ function applyRange(start,end){
   var d=DR_DATA,mods=DR_MODS;
   var fAds=filterMonthArr(d.ads&&d.ads.monthlyBreakdown,start,end,'month');
   var fSocial=filterMonthArr(d.social&&d.social.monthlyHistory,start,end,'month');
-  var fGbp=filterMonthArr(d.gbp&&d.gbp.viewsOverTime,start,end,'month');
+  var fGbp=filterMonthArr(d.gbp&&d.gbp.viewsOverTime,start,end,'date');
   var fPsiH=filterMonthArr(d.website&&d.website.psiHistory,start,end,'date');
   var fd={};
   fd.seo=d.seo||{};
