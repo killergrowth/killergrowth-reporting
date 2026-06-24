@@ -846,7 +846,8 @@ function renderGBPStats(){
 function renderGBPChart(){
   var gbp=GBP_DATA;if(!gbp)return;
   dc('gbp');
-  var raw=gbp.viewsOverTime||[];
+  // Always use full unfiltered GBP data so the chart's own range toggle works correctly
+  var raw=(DR_DATA&&DR_DATA.gbp&&DR_DATA.gbp.viewsOverTime)||gbp.viewsOverTime||[];
   var metaMap={
     views:{key:'views',label:'GBP Views'},
     calls:{key:'calls',label:'Phone Calls'},
