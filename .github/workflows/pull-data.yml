@@ -1,9 +1,9 @@
 name: Pull Reporting Data
 
 on:
-  # Run every hour (public repo = free GitHub Actions minutes)
+  # Run once per day at 7am UTC (2am CDT)
   schedule:
-    - cron: '0 * * * *'
+    - cron: '0 7 * * *'
 
   # Also allow manual trigger from GitHub Actions UI
   workflow_dispatch:
