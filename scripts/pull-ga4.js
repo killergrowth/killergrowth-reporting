@@ -94,35 +94,47 @@ async function pullGA4(propertyId) {
     sessions: parseInt(r.metricValues[0].value)
   }));
 
-  // 4. Organic-only lead signals (event counts filtered to Organic Search)
-  const eventReport = await runReport(propertyId, token, {
+  // 4. Lead events by channel (all sources — for attribution breakdown)
+  const LEAD_EVENTS = ['phone_call', 'generate_lead', 'email_click', 'cta_click', 'form_start'];
+  const channelEventReport = await runReport(propertyId, token, {
     dateRanges: [{ startDate, endDate }],
-    dimensions: [{ name: 'eventName' }],
+    dimensions: [
+      { name: 'eventName' },
+      { name: 'sessionDefaultChannelGroup' }
+    ],
     metrics: [{ name: 'eventCount' }],
     dimensionFilter: {
       filter: {
-        fieldName: 'sessionDefaultChannelGroup',
-        stringFilter: { matchType: 'EXACT', value: 'Organic Search' }
+        fieldName: 'eventName',
+        inListFilter: { values: LEAD_EVENTS }
       }
     }
   });
 
-  const evtMap = {};
-  (eventReport.rows || []).forEach(r => {
-    evtMap[r.dimensionValues[0].value] = parseInt(r.metricValues[0].value);
+  // leadsByChannel: { phone_call: { 'Organic Search': 2, 'Direct': 1 }, ... }
+  const leadsByChannel = {};
+  (channelEventReport.rows || []).forEach(r => {
+    const event   = r.dimensionValues[0].value;
+    const channel = r.dimensionValues[1].value;
+    const count   = parseInt(r.metricValues[0].value);
+    if (!leadsByChannel[event]) leadsByChannel[event] = {};
+    leadsByChannel[event][channel] = (leadsByChannel[event][channel] || 0) + count;
   });
 
   const organicChannel = trafficChannels.find(c => /organic/i.test(c.channel));
+  const sumByEvent = evt => Object.values(leadsByChannel[evt] || {}).reduce((a,b) => a+b, 0);
+
   const leadSignals = {
     organicSessions:  organicChannel?.sessions ?? null,
-    phoneCalls:       evtMap['phone_call']    || 0,
-    formSubmissions:  evtMap['generate_lead'] || 0,
-    emailClicks:      evtMap['email_click']   || 0,
-    ctaClicks:        evtMap['cta_click']     || 0,
-    formStarts:       evtMap['form_start']    || 0
+    phoneCalls:       sumByEvent('phone_call'),
+    formSubmissions:  sumByEvent('generate_lead'),
+    emailClicks:      sumByEvent('email_click'),
+    ctaClicks:        sumByEvent('cta_click'),
+    formStarts:       sumByEvent('form_start'),
+    byChannel:        leadsByChannel
   };
 
-  console.log(`[GA4] sessions=${sessions} conversions=${conversions} channels=${trafficChannels.length} organic_leads=${leadSignals.phoneCalls + leadSignals.formSubmissions}`);
+  console.log(`[GA4] sessions=${sessions} conversions=${conversions} channels=${trafficChannels.length} total_leads=${leadSignals.phoneCalls + leadSignals.formSubmissions}`);
 
   return {
     sessions,

@@ -160,6 +160,16 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
 .mgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
 .mcell{border-radius:7px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800}
 
+/* LEAD SOURCE */
+.lsrc-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px 20px}
+.lsrc-total{font-size:34px;font-weight:800;color:var(--w);line-height:1;margin:6px 0 14px}
+.lsrc-total.has-leads{color:var(--lime)}
+.lsrc-rows{border-top:1px solid var(--border);padding-top:10px;display:flex;flex-direction:column;gap:6px}
+.lsrc-row{display:flex;justify-content:space-between;align-items:center;font-size:12px}
+.lsrc-src{color:var(--sub);display:flex;align-items:center;gap:5px}
+.lsrc-val{font-weight:700;color:var(--w)}
+.lsrc-val.pos{color:var(--lime)}
+.lsrc-dot{width:7px;height:7px;border-radius:50%;display:inline-block;flex-shrink:0}
 /* GBP TOGGLE */
 .gbp-tr{background:transparent;border:1px solid var(--border);color:var(--sub);font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;transition:all .15s;cursor:pointer}
 .gbp-tr:hover{border-color:var(--lime);color:var(--w)}
@@ -339,9 +349,9 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
 
         <!-- LEAD SIGNALS -->
         <div class="card mb14" id="seo-lead-signals" style="display:none">
-          <div class="clbl">Lead Signals &mdash; Organic Search</div>
+          <div class="clbl">Lead Source Breakdown</div>
           <div id="seo-lead-summary" style="font-size:15px;font-weight:700;color:var(--lime);margin-bottom:18px"></div>
-          <div class="krow" id="seo-lead-krow"></div>
+          <div id="seo-lead-krow" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px"></div>
         </div>
 
         <div class="g2 mb14">
@@ -710,30 +720,49 @@ function renderSEO(seo){
   var lsWrap=el('seo-lead-signals');
   if(ls&&lsWrap){
     lsWrap.style.display='';
-    var confirmedLeads=(ls.phoneCalls||0)+(ls.formSubmissions||0);
+    var byC=ls.byChannel||{};
+    var totalCalls=(ls.phoneCalls||0)+(ls.gbpCalls||0);
+    var totalForms=ls.formSubmissions||0;
+    var confirmedLeads=totalCalls+totalForms;
     var summaryEl=el('seo-lead-summary');
     if(summaryEl){
-      var txt=confirmedLeads===0
-        ? 'No confirmed leads from organic search yet this period'
-        : confirmedLeads===1
-          ? '1 confirmed lead from organic search this period'
-          : confirmedLeads+' confirmed leads from organic search this period';
-      if(ls.organicSessions!=null) txt+=' &nbsp;&middot;&nbsp; <span style="color:var(--muted);font-size:13px;font-weight:400">'+fmt(ls.organicSessions)+' organic sessions</span>';
+      var txt=confirmedLeads===0?'No confirmed leads yet this period'
+        :confirmedLeads===1?'1 confirmed lead this period'
+        :confirmedLeads+' confirmed leads this period';
+      if(ls.organicSessions!=null)txt+=' &nbsp;&middot;&nbsp;<span style="color:var(--sub);font-size:13px;font-weight:400"> '+fmt(ls.organicSessions)+' organic sessions</span>';
       summaryEl.innerHTML=txt;
     }
     var krowEl=el('seo-lead-krow');
     if(krowEl){
-      var cards=[
-        lsKC('Phone Calls','&#128222;',ls.phoneCalls,'Inbound calls from organic search','var(--lime)'),
-        lsKC('Form Submissions','&#128203;',ls.formSubmissions,'Completed lead forms','var(--lime)'),
-        lsKC('Email Clicks','&#128231;',ls.emailClicks,'mailto: link clicks','var(--sub)'),
-        lsKC('Quote Clicks','&#128432;',ls.ctaClicks,'CTA / quote button clicks (intent signal)','var(--sub)')
-      ];
-      krowEl.innerHTML=cards.join('');
+      // Helper: build source rows for a given event key + optional GBP count
+      function srcRows(evtKey,gbpVal,gbpLabel){
+        var ch=byC[evtKey]||{};
+        var rows=[];
+        if(gbpVal>0)rows.push({src:'GBP Listing',val:gbpVal,clr:'#c8f000'});
+        var organic=ch['Organic Search']||0;
+        var direct=ch['Direct']||0;
+        var other=Object.entries(ch).filter(function(e){return e[0]!=='Organic Search'&&e[0]!=='Direct';}).reduce(function(s,e){return s+e[1];},0);
+        if(organic>0)rows.push({src:'Organic Search',val:organic,clr:'#3b82f6'});
+        if(direct>0)rows.push({src:'Direct',val:direct,clr:'#8b5cf6'});
+        if(other>0)rows.push({src:'Other',val:other,clr:'#f59e0b'});
+        if(!rows.length)rows.push({src:'No data yet',val:null,clr:'var(--border)'});
+        return rows.map(function(r){
+          return '<div class="lsrc-row"><span class="lsrc-src"><span class="lsrc-dot" style="background:'+r.clr+'"></span>'+r.src+'</span><span class="lsrc-val'+(r.val>0?' pos':'')+'">'+( r.val!=null?r.val:'\u2014')+'</span></div>';
+        }).join('');
+      }
+      function lsCard(label,totalVal,evtKey,gbpVal,noteSub){
+        var hasLeads=totalVal>0;
+        return '<div class="lsrc-card"><div class="klbl">'+label+'</div>'
+          +'<div class="lsrc-total'+(hasLeads?' has-leads':'')+'">'+( totalVal!=null?totalVal:'\u2014')+'</div>'
+          +'<div class="lsrc-rows">'+srcRows(evtKey,gbpVal||0,'GBP Listing')+'</div>'
+          +(noteSub?'<div class="ksub" style="margin-top:8px">'+noteSub+'</div>':'')+'</div>';
+      }
+      krowEl.innerHTML=[
+        lsCard('Phone Calls',totalCalls,'phone_call',ls.gbpCalls||0,'Calls from GBP listing + website'),
+        lsCard('Form Submissions',totalForms,'generate_lead',0,'Completed lead forms'),
+        lsCard('Direction Requests',ls.gbpDirections||0,'',0,'Tapped directions on Google Maps')
+      ].join('');
     }
-  }
-  function lsKC(label,icon,val,sub,clr){
-    return '<div class="kc"><div class="klbl">'+label+'</div><div class="kvr"><span class="kv" style="color:'+(val>0?clr:'var(--muted)')+';font-size:32px">'+(val!=null?val:'&#8212;')+'</span></div><div class="ksub">'+sub+'</div></div>';
   }
   dc('ss');
   if(sessions.length){hd('e-seo-sess');

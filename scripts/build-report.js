@@ -102,7 +102,17 @@ async function buildReport(slug) {
       organicSessions: v(ga4)?.sessionsOverTime  ?? base.seo?.organicSessions ?? [],
       trafficChannels: v(ga4)?.trafficChannels   ?? base.seo?.trafficChannels ?? [],
       keywords:        v(gsc)?.keywords          ?? v(dfs)?.keywords          ?? base.seo?.keywords ?? [],
-      leadSignals:     v(ga4)?.leadSignals       ?? base.seo?.leadSignals     ?? null
+      leadSignals: (() => {
+        const ls = v(ga4)?.leadSignals ?? base.seo?.leadSignals ?? null;
+        if (!ls) return null;
+        // Attach GBP call + website click counts for cross-source attribution
+        return {
+          ...ls,
+          gbpCalls:         v(gbp)?.calls         ?? base.seo?.leadSignals?.gbpCalls         ?? 0,
+          gbpWebsiteClicks: v(gbp)?.websiteClicks ?? base.seo?.leadSignals?.gbpWebsiteClicks ?? 0,
+          gbpDirections:    v(gbp)?.directions    ?? base.seo?.leadSignals?.gbpDirections    ?? 0
+        };
+      })()
     },
 
     ads: {
