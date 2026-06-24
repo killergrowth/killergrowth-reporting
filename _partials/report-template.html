@@ -329,6 +329,14 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
       <!-- SEO -->
       <section id="seo" class="ms" data-module="seo">
         <div class="sh"><span class="sb2">SEO</span><span class="st">Search Engine Optimization</span></div>
+
+        <!-- LEAD SIGNALS -->
+        <div class="card mb14" id="seo-lead-signals" style="display:none">
+          <div class="clbl">Lead Signals &mdash; Organic Search</div>
+          <div id="seo-lead-summary" style="font-size:15px;font-weight:700;color:var(--lime);margin-bottom:18px"></div>
+          <div class="krow" id="seo-lead-krow"></div>
+        </div>
+
         <div class="g2 mb14">
           <div class="card"><div class="clbl">Organic Traffic &mdash; Weekly Sessions</div><div style="position:relative;height:220px"><canvas id="c-seo-sess"></canvas></div><div id="e-seo-sess" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
           <div class="card"><div class="clbl">Traffic Channels</div><div style="position:relative;height:220px;max-width:240px;margin:0 auto"><canvas id="c-seo-ch"></canvas></div><div id="e-seo-ch" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
@@ -679,7 +687,37 @@ function kc(label,value,delta,sub){
 }
 
 function renderSEO(seo){
-  var sessions=seo.organicSessions||[],channels=seo.trafficChannels||[],keywords=seo.keywords||[];
+  var sessions=seo.organicSessions||[],channels=seo.trafficChannels||[],keywords=seo.keywords||[],ls=seo.leadSignals||null;
+
+  // Lead signals block
+  var lsWrap=el('seo-lead-signals');
+  if(ls&&lsWrap){
+    lsWrap.style.display='';
+    var confirmedLeads=(ls.phoneCalls||0)+(ls.formSubmissions||0);
+    var summaryEl=el('seo-lead-summary');
+    if(summaryEl){
+      var txt=confirmedLeads===0
+        ? 'No confirmed leads from organic search yet this period'
+        : confirmedLeads===1
+          ? '1 confirmed lead from organic search this period'
+          : confirmedLeads+' confirmed leads from organic search this period';
+      if(ls.organicSessions!=null) txt+=' &nbsp;&middot;&nbsp; <span style="color:var(--muted);font-size:13px;font-weight:400">'+fmt(ls.organicSessions)+' organic sessions</span>';
+      summaryEl.innerHTML=txt;
+    }
+    var krowEl=el('seo-lead-krow');
+    if(krowEl){
+      var cards=[
+        lsKC('Phone Calls','&#128222;',ls.phoneCalls,'Inbound calls from organic search','var(--lime)'),
+        lsKC('Form Submissions','&#128203;',ls.formSubmissions,'Completed lead forms','var(--lime)'),
+        lsKC('Email Clicks','&#128231;',ls.emailClicks,'mailto: link clicks','var(--sub)'),
+        lsKC('Quote Clicks','&#128432;',ls.ctaClicks,'CTA / quote button clicks (intent signal)','var(--sub)')
+      ];
+      krowEl.innerHTML=cards.join('');
+    }
+  }
+  function lsKC(label,icon,val,sub,clr){
+    return '<div class="kc"><div class="klbl">'+label+'</div><div class="kvr"><span class="kv" style="color:'+(val>0?clr:'var(--muted)')+';font-size:32px">'+(val!=null?val:'&#8212;')+'</span></div><div class="ksub">'+sub+'</div></div>';
+  }
   dc('ss');
   if(sessions.length){hd('e-seo-sess');
     CHARTS['ss']=new Chart(el('c-seo-sess').getContext('2d'),{type:'line',data:{labels:sessions.map(function(d){return 'Wk '+d.week;}),datasets:[{label:'Sessions',data:sessions.map(function(d){return d.sessions;}),borderColor:'#c8f000',backgroundColor:'rgba(200,240,0,0.1)',fill:true,tension:.4,pointRadius:3,pointBackgroundColor:'#c8f000'}]},options:getOpts()});

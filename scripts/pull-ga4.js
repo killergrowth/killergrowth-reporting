@@ -94,14 +94,43 @@ async function pullGA4(propertyId) {
     sessions: parseInt(r.metricValues[0].value)
   }));
 
-  console.log(`[GA4] sessions=${sessions} conversions=${conversions} channels=${trafficChannels.length}`);
+  // 4. Organic-only lead signals (event counts filtered to Organic Search)
+  const eventReport = await runReport(propertyId, token, {
+    dateRanges: [{ startDate, endDate }],
+    dimensions: [{ name: 'eventName' }],
+    metrics: [{ name: 'eventCount' }],
+    dimensionFilter: {
+      filter: {
+        fieldName: 'sessionDefaultChannelGroup',
+        stringFilter: { matchType: 'EXACT', value: 'Organic Search' }
+      }
+    }
+  });
+
+  const evtMap = {};
+  (eventReport.rows || []).forEach(r => {
+    evtMap[r.dimensionValues[0].value] = parseInt(r.metricValues[0].value);
+  });
+
+  const organicChannel = trafficChannels.find(c => /organic/i.test(c.channel));
+  const leadSignals = {
+    organicSessions:  organicChannel?.sessions ?? null,
+    phoneCalls:       evtMap['phone_call']    || 0,
+    formSubmissions:  evtMap['generate_lead'] || 0,
+    emailClicks:      evtMap['email_click']   || 0,
+    ctaClicks:        evtMap['cta_click']     || 0,
+    formStarts:       evtMap['form_start']    || 0
+  };
+
+  console.log(`[GA4] sessions=${sessions} conversions=${conversions} channels=${trafficChannels.length} organic_leads=${leadSignals.phoneCalls + leadSignals.formSubmissions}`);
 
   return {
     sessions,
     conversions,
     sessionsDelta: prevSessions > 0 ? Math.round(((sessions - prevSessions) / prevSessions) * 100) : null,
     sessionsOverTime,
-    trafficChannels
+    trafficChannels,
+    leadSignals
   };
 }
 
