@@ -124,9 +124,10 @@ async function buildReport(slug) {
 
     gbp: {
       totalViews:   v(gbp)?.totalViews    ?? base.gbp?.totalViews   ?? null,
-      calls:        v(gbp)?.calls         ?? base.gbp?.calls        ?? null,
+      calls:        v(gbp)?.calls         ?? base.gbp?.calls         ?? null,
       callsDelta:   base.gbp?.callsDelta  ?? null,
-      directions:   v(gbp)?.directions    ?? base.gbp?.directions   ?? null,
+      directions:   v(gbp)?.directions    ?? base.gbp?.directions    ?? null,
+      websiteClicks: v(gbp)?.websiteClicks ?? base.gbp?.websiteClicks ?? null,
       directionsDelta: base.gbp?.directionsDelta ?? null,
       viewsOverTime: v(gbp)?.viewsOverTime ?? base.gbp?.viewsOverTime ?? [],
       totalReviews:  v(gbp)?.totalReviews  ?? base.gbp?.totalReviews  ?? null,
