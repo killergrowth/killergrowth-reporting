@@ -20,13 +20,10 @@ async function refreshAccessToken() {
 
 function getDateRange() {
   const now = new Date();
-  const firstOfThisMonth = new Date(now.getFullYear(), now.getMonth(), 1);
-  const lastMonthEnd = new Date(firstOfThisMonth - 1);
-  const lastMonthStart = new Date(lastMonthEnd.getFullYear(), lastMonthEnd.getMonth(), 1);
-  return {
-    startTime: lastMonthStart.toISOString(),
-    endTime:   firstOfThisMonth.toISOString()
-  };
+  const endTime = now.toISOString();
+  // Pull 6 months back (current month + 5 prior)
+  const sixMonthsAgo = new Date(now.getFullYear(), now.getMonth() - 5, 1);
+  return { startTime: sixMonthsAgo.toISOString(), endTime };
 }
 
 async function pullGBP(accountId, locationId) {
@@ -73,9 +70,9 @@ async function pullGBP(accountId, locationId) {
     return null;
   }
 
-  // Sum totals from timeSeries
-  let totalViews = 0, totalCalls = 0, totalDirections = 0;
-  const viewsByDay = {};
+  // Sum totals from timeSeries — unified daily map
+  let totalViews = 0, totalCalls = 0, totalDirections = 0, totalWebClicks = 0;
+  const dayMap = {}; // { date: { views, calls, directions, websiteClicks } }
 
   for (const series of metrics.multiDailyMetricTimeSeries || []) {
     for (const ts of series.dailyMetricTimeSeries || []) {
@@ -83,13 +80,19 @@ async function pullGBP(accountId, locationId) {
       for (const pt of ts.timeSeries?.datedValues || []) {
         const val = parseInt(pt.value || '0');
         const date = `${pt.date.year}-${String(pt.date.month).padStart(2,'0')}-${String(pt.date.day).padStart(2,'0')}`;
+        if (!dayMap[date]) dayMap[date] = { date, views: 0, calls: 0, directions: 0, websiteClicks: 0 };
         if (metric.includes('IMPRESSIONS')) {
           totalViews += val;
-          viewsByDay[date] = (viewsByDay[date] || 0) + val;
+          dayMap[date].views += val;
         } else if (metric === 'CALL_CLICKS') {
           totalCalls += val;
+          dayMap[date].calls += val;
         } else if (metric === 'BUSINESS_DIRECTION_REQUESTS') {
           totalDirections += val;
+          dayMap[date].directions += val;
+        } else if (metric === 'WEBSITE_CLICKS') {
+          totalWebClicks += val;
+          dayMap[date].websiteClicks += val;
         }
       }
     }
@@ -110,14 +113,13 @@ async function pullGBP(accountId, locationId) {
   const cutoff = new Date(startTime);
   const newReviews = (reviews.reviews || []).filter(r => new Date(r.createTime) >= cutoff).length;
 
-  // Weekly view aggregation for chart
-  const viewsOverTime = Object.entries(viewsByDay)
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([date, views]) => ({ date, views }));
+  // Sorted unified daily array
+  const viewsOverTime = Object.values(dayMap)
+    .sort((a, b) => a.date.localeCompare(b.date));
 
-  console.log(`[GBP] views=${totalViews} calls=${totalCalls} directions=${totalDirections} reviews=${totalReviews} avgRating=${avgRating}`);
+  console.log(`[GBP] views=${totalViews} calls=${totalCalls} directions=${totalDirections} websiteClicks=${totalWebClicks} reviews=${totalReviews} avgRating=${avgRating}`);
 
-  return { totalViews, calls: totalCalls, directions: totalDirections, viewsOverTime, totalReviews, newReviews, avgRating };
+  return { totalViews, calls: totalCalls, directions: totalDirections, websiteClicks: totalWebClicks, viewsOverTime, totalReviews, newReviews, avgRating };
 }
 
 module.exports = { pullGBP };

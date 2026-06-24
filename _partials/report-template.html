@@ -160,6 +160,13 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
 .mgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
 .mcell{border-radius:7px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800}
 
+/* GBP TOGGLE */
+.gbp-tr{background:transparent;border:1px solid var(--border);color:var(--sub);font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;transition:all .15s;cursor:pointer}
+.gbp-tr:hover{border-color:var(--lime);color:var(--w)}
+.gbp-tr.active{background:var(--lime);border-color:var(--lime);color:#000}
+.gbp-stat-sel{border-left:3px solid var(--lime)!important;padding-left:10px!important}
+.gbp-stat-row{cursor:pointer;border-left:3px solid transparent;padding-left:10px;transition:border-color .15s}
+.gbp-stat-row:hover{border-left-color:#333}
 /* PAGE FOOTER */
 .pf{border-top:1px solid #1a1a1a;padding-top:20px;display:flex;justify-content:space-between;margin-top:20px}
 .pf span{color:#2a2a2a;font-size:11px}
@@ -369,7 +376,17 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
       <section id="gbp" class="ms" data-module="gbp">
         <div class="sh"><span class="sb2">GBP</span><span class="st">Google Business Profile</span></div>
         <div class="g21">
-          <div class="card"><div class="clbl">Views &amp; Calls &mdash; Monthly</div><div style="position:relative;height:220px"><canvas id="c-gbp"></canvas></div><div id="e-gbp" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
+          <div class="card">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+              <div class="clbl" id="gbp-chart-label" style="margin-bottom:0">GBP Views &mdash; This Month</div>
+              <div style="display:flex;gap:6px">
+                <button class="gbp-tr active" data-range="month" onclick="setGbpRange('month')">This Month</button>
+                <button class="gbp-tr" data-range="6m" onclick="setGbpRange('6m')">6 Months</button>
+              </div>
+            </div>
+            <div style="position:relative;height:220px"><canvas id="c-gbp"></canvas></div>
+            <div id="e-gbp" class="du h"><div class="du-t">Data updating&hellip;</div></div>
+          </div>
           <div class="card" id="gbp-stats"></div>
         </div>
       </section>
@@ -803,11 +820,82 @@ function renderMeta(ads,social){
 }
 
 
+var GBP_DATA=null,GBP_METRIC='views',GBP_RANGE='month';
 function renderGBP(gbp){
-  var ot=gbp.viewsOverTime||[];dc('gbp');
-  if(ot.length){hd('e-gbp');CHARTS['gbp']=new Chart(el('c-gbp').getContext('2d'),{type:'bar',data:{labels:ot.map(function(d){return d.month||d.date;}),datasets:[{label:'Views',data:ot.map(function(d){return d.views;}),backgroundColor:'#252525',borderRadius:3,yAxisID:'y'},{label:'Calls',data:ot.map(function(d){return d.calls||0;}),backgroundColor:'#c8f000',borderRadius:3,yAxisID:'y2'}]},options:getDualOpts()});}
-  else{sh('e-gbp');el('c-gbp').style.display='none';}
-  el('gbp-stats').innerHTML='<div class="clbl">GBP Stats</div>'+[['Phone Calls',fmt(gbp.calls)],['Direction Requests',fmt(gbp.directions)],['Total Reviews',fmt(gbp.totalReviews)],['Avg. Rating',gbp.avgRating!=null?gbp.avgRating+' \u2605':'\u2014']].map(function(s){return '<div class="sr"><span class="srl">'+s[0]+'</span><span class="srv">'+s[1]+'</span></div>';}).join('');
+  GBP_DATA=gbp;
+  renderGBPStats();
+  renderGBPChart();
+}
+function renderGBPStats(){
+  var gbp=GBP_DATA;if(!gbp)return;
+  var rows=[
+    {key:'views', label:'GBP Views', val:fmt(gbp.totalViews), sel:true},
+    {key:'calls', label:'Phone Calls', val:fmt(gbp.calls), sel:true},
+    {key:'directions', label:'Direction Requests', val:fmt(gbp.directions), sel:true},
+    {key:'websiteClicks', label:'Website Clicks', val:fmt(gbp.websiteClicks), sel:true},
+    {key:'reviews', label:'Total Reviews', val:fmt(gbp.totalReviews), sel:false},
+    {key:'rating', label:'Avg. Rating', val:gbp.avgRating!=null?gbp.avgRating+'\u2605':'\u2014', sel:false}
+  ];
+  el('gbp-stats').innerHTML='<div class="clbl">GBP Stats</div>'+rows.map(function(r){
+    var active=r.sel&&r.key===GBP_METRIC;
+    var cls='sr'+(r.sel?' gbp-stat-row':'')+(active?' gbp-stat-sel':'');
+    var oc=r.sel?' onclick="setGbpMetric(\''+r.key+'\')"':'';
+    return '<div class="'+cls+'"'+oc+'><span class="srl">'+r.label+'</span><span class="srv" style="'+(active?'color:var(--lime)':'')+'">'+r.val+'</span></div>';
+  }).join('');
+}
+function renderGBPChart(){
+  var gbp=GBP_DATA;if(!gbp)return;
+  dc('gbp');
+  var raw=gbp.viewsOverTime||[];
+  var metaMap={
+    views:{key:'views',label:'GBP Views'},
+    calls:{key:'calls',label:'Phone Calls'},
+    directions:{key:'directions',label:'Direction Requests'},
+    websiteClicks:{key:'websiteClicks',label:'Website Clicks'}
+  };
+  var mc=metaMap[GBP_METRIC]||metaMap.views;
+  var lbl=el('gbp-chart-label');
+  if(lbl)lbl.textContent=mc.label+'\u2009\u2014\u2009'+(GBP_RANGE==='month'?'This Month':'6 Months');
+  var labels=[],values=[];
+  if(GBP_RANGE==='month'){
+    // Find latest month in data
+    var latestDate=raw.length?raw[raw.length-1].date:null;
+    var tgtYear,tgtMonth;
+    if(latestDate){var ld=new Date(latestDate);tgtYear=ld.getFullYear();tgtMonth=ld.getMonth();}
+    else{var n=new Date();tgtYear=n.getFullYear();tgtMonth=n.getMonth();}
+    var filtered=raw.filter(function(d){var dt=new Date(d.date);return dt.getFullYear()===tgtYear&&dt.getMonth()===tgtMonth;});
+    labels=filtered.map(function(d){return new Date(d.date).getDate();});
+    values=filtered.map(function(d){return d[mc.key]||0;});
+  } else {
+    // 6-month: aggregate by month
+    var monthTotals={};
+    raw.forEach(function(d){
+      var dt=new Date(d.date);
+      var k=dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0');
+      monthTotals[k]=(monthTotals[k]||0)+(d[mc.key]||0);
+    });
+    var ms2=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    Object.keys(monthTotals).sort().forEach(function(k){
+      var p=k.split('-');labels.push(ms2[parseInt(p[1])-1]+' '+p[0]);values.push(monthTotals[k]);
+    });
+  }
+  if(values.length){
+    hd('e-gbp');var c=el('c-gbp');if(c)c.style.display='';
+    CHARTS['gbp']=new Chart(el('c-gbp').getContext('2d'),{
+      type:'bar',
+      data:{labels:labels,datasets:[{label:mc.label,data:values,backgroundColor:'#c8f000',borderRadius:3}]},
+      options:getOpts()
+    });
+  } else {sh('e-gbp');var c2=el('c-gbp');if(c2)c2.style.display='none';}
+}
+function setGbpMetric(metric){
+  GBP_METRIC=metric;dc('gbp');
+  renderGBPStats();renderGBPChart();
+}
+function setGbpRange(range){
+  GBP_RANGE=range;dc('gbp');
+  document.querySelectorAll('.gbp-tr').forEach(function(b){b.classList.toggle('active',b.getAttribute('data-range')===range);});
+  renderGBPChart();
 }
 
 function renderSocial(social){
