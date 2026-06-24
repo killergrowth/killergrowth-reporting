@@ -1,3 +1,5 @@
+const { injectScripts, loadSiteScripts } = require('C:\\Users\\KillerGrowth\\.openclaw\\workspace\\tools\\kg-site-builder\\lib\\inject-scripts');
+const SITE_ID = 'killergrowth-reporting';
 /**
  * KillerGrowth Reporting — Build Script v2
  *
@@ -64,7 +66,9 @@ function buildTemplatePage(sourcePath, destDir) {
   const html = template.replace('<!-- CLIENT_INJECT -->', inject);
 
   mkdir(destDir);
-  fs.writeFileSync(path.join(destDir, 'index.html'), html, 'utf8');
+  const injectedHtml = injectScripts(html, loadSiteScripts(SITE_ID));
+
+  fs.writeFileSync(path.join(destDir, 'index.html'), injectedHtml, 'utf8');
   return true;
 }
 
@@ -101,6 +105,8 @@ function buildLegacyPage(sourcePath, destDir) {
   }
 
   mkdir(destDir);
+  html = injectScripts(html, loadSiteScripts(SITE_ID));
+
   fs.writeFileSync(path.join(destDir, 'index.html'), html, 'utf8');
 }
 
