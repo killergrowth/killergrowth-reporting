@@ -847,13 +847,18 @@ function parseMonthStr(s){
 function monthKey(dt){var ms=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];return ms[dt.getMonth()]+' '+dt.getFullYear();}
 function fmtRange(s,e){if(!s||!e)return '';if(s.getTime()===e.getTime())return monthKey(s);return monthKey(s)+' \u2013 '+monthKey(e);}
 function getAllMonths(data){
-  var seen={},months=[];
-  function col(arr,k){(arr||[]).forEach(function(d){if(d[k])seen[d[k]]=true;});}
-  col(data.ads&&data.ads.monthlyBreakdown,'month');
-  col(data.social&&data.social.monthlyHistory,'month');
-  col(data.gbp&&data.gbp.viewsOverTime,'month');
-  col(data.gbp&&data.gbp.viewsOverTime,'date');
-  Object.keys(seen).forEach(function(k){var dt=parseMonthStr(k);if(dt)months.push({label:k,date:dt});});
+  var seenMs={},months=[];
+  function addMonth(dt){
+    var key=monthKey(dt);
+    if(!seenMs[key]){seenMs[key]=true;months.push({label:key,date:new Date(dt.getFullYear(),dt.getMonth(),1)});}
+  }
+  function colMonthStr(arr,k){(arr||[]).forEach(function(d){var v=d[k];if(!v)return;var dt=parseMonthStr(v);if(dt)addMonth(dt);});}
+  function colIsoDate(arr,k){(arr||[]).forEach(function(d){var v=d[k];if(!v)return;var dt=new Date(v);if(!isNaN(dt))addMonth(dt);});}
+  colMonthStr(data.ads&&data.ads.monthlyBreakdown,'month');
+  colMonthStr(data.social&&data.social.monthlyHistory,'month');
+  colIsoDate(data.gbp&&data.gbp.viewsOverTime,'date');
+  // Fallback: use report period if nothing else is available
+  if(!months.length&&data.period){var dt=parseMonthStr(data.period);if(dt)addMonth(dt);}
   months.sort(function(a,b){return a.date-b.date;});
   return months;
 }
