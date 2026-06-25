@@ -1000,7 +1000,7 @@ function renderMeta(ads,social){
 }
 
 
-var GBP_DATA=null,GBP2_DATA=null,GBP_METRIC='views',GBP_RANGE='30d';
+var GBP_DATA=null,GBP2_DATA=null,GBP_METRIC='views',GBP2_METRIC='views',GBP_RANGE='30d';
 function renderGBP(gbp,gbp2){
   GBP_DATA=gbp;
   GBP2_DATA=gbp2||null;
@@ -1088,7 +1088,10 @@ function renderGBPChart(){
 function setGbpMetric(metric){
   GBP_METRIC=metric;dc('gbp');
   renderGBPStats();renderGBPChart();
-  if(GBP2_DATA){renderGBP2Stats();renderGBP2Chart();}
+}
+function setGbp2Metric(metric){
+  GBP2_METRIC=metric;
+  renderGBP2Stats();renderGBP2Chart();
 }
 function setGbpRange(range){
   GBP_RANGE=range;dc('gbp');
@@ -1108,9 +1111,9 @@ function renderGBP2Stats(){
   ];
   var locLabel=gbp.locationName?'<div class="clbl" style="margin-bottom:12px">'+gbp.locationName+'</div>':'';
   el('gbp2-stats').innerHTML=locLabel+rows.map(function(r){
-    var active=r.sel&&r.key===GBP_METRIC;
+    var active=r.sel&&r.key===GBP2_METRIC;
     var cls='sr'+(r.sel?' gbp-stat-row':'')+(active?' gbp-stat-sel':'');
-    var oc=r.sel?' onclick="setGbpMetric(\''+r.key+'\')"':'';
+    var oc=r.sel?' onclick="setGbp2Metric(\''+r.key+'\')"':'';
     return '<div class="'+cls+'"'+oc+'><span class="srl">'+r.label+'</span><span class="srv" style="'+(active?'color:var(--lime)':'')+'">'+(r.val)+'</span></div>';
   }).join('');
 }
@@ -1119,7 +1122,7 @@ function renderGBP2Chart(){
   dc('gbp2');
   var raw=(DR_DATA&&DR_DATA.gbp2&&DR_DATA.gbp2.viewsOverTime)||gbp.viewsOverTime||[];
   var metaMap2={views:{key:'views',label:'GBP Views'},calls:{key:'calls',label:'Phone Calls'},directions:{key:'directions',label:'Direction Requests'},websiteClicks:{key:'websiteClicks',label:'Website Clicks'}};
-  var mc2=metaMap2[GBP_METRIC]||metaMap2.views;
+  var mc2=metaMap2[GBP2_METRIC]||metaMap2.views;
   var rangeLabel=GBP_RANGE==='30d'?'Last 30 Days':GBP_RANGE==='month'?'This Month':'6 Months';
   var lbl=el('gbp2-chart-label');if(lbl)lbl.textContent=(gbp.locationName||'Location 2')+' \u2014 '+mc2.label+'\u2009\u2014\u2009'+rangeLabel;
   var labels=[],values=[];
