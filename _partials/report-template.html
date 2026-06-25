@@ -1088,7 +1088,7 @@ function renderGBPChart(){
 function setGbpMetric(metric){
   GBP_METRIC=metric;dc('gbp');
   renderGBPStats();renderGBPChart();
-  if(GBP2_DATA)renderGBP2Stats();
+  if(GBP2_DATA){renderGBP2Stats();renderGBP2Chart();}
 }
 function setGbpRange(range){
   GBP_RANGE=range;dc('gbp');
