@@ -380,6 +380,19 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
       <section id="seo" class="ms" data-module="seo">
         <div class="sh"><span class="sb2">SEO</span><span class="st">Search Engine Optimization</span></div>
 
+        <!-- LEAD SIGNALS -->
+        <div class="card mb14" id="seo-lead-signals" style="display:none">
+          <div class="clbl">Lead Source Breakdown</div>
+          <div id="seo-lead-summary" style="font-size:15px;font-weight:700;color:var(--lime);margin-bottom:18px"></div>
+          <div id="seo-lead-krow" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px"></div>
+        </div>
+
+        <div class="g2 mb14">
+          <div class="card"><div class="clbl">Organic Traffic &mdash; Weekly Sessions</div><div style="position:relative;height:220px"><canvas id="c-seo-sess"></canvas></div><div id="e-seo-sess" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
+          <div class="card"><div class="clbl">Traffic Channels</div><div style="position:relative;height:220px;max-width:240px;margin:0 auto"><canvas id="c-seo-ch"></canvas></div><div id="e-seo-ch" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
+        </div>
+        <div class="card"><div class="clbl">Top Keywords</div><table class="tbl"><thead><tr><th>Keyword</th><th class="r">Position</th><th class="r">Clicks</th><th class="r">Impressions</th><th class="r">CTR</th></tr></thead><tbody id="t-kw"></tbody></table><div id="e-kw" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
+
         <!-- GEO / AI VISIBILITY -->
         <div class="card mb14" id="seo-geo" style="display:none">
           <div class="clbl">AI &amp; Local Visibility</div>
@@ -403,19 +416,6 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
             </table>
           </div>
         </div>
-
-        <!-- LEAD SIGNALS -->
-        <div class="card mb14" id="seo-lead-signals" style="display:none">
-          <div class="clbl">Lead Source Breakdown</div>
-          <div id="seo-lead-summary" style="font-size:15px;font-weight:700;color:var(--lime);margin-bottom:18px"></div>
-          <div id="seo-lead-krow" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px"></div>
-        </div>
-
-        <div class="g2 mb14">
-          <div class="card"><div class="clbl">Organic Traffic &mdash; Weekly Sessions</div><div style="position:relative;height:220px"><canvas id="c-seo-sess"></canvas></div><div id="e-seo-sess" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
-          <div class="card"><div class="clbl">Traffic Channels</div><div style="position:relative;height:220px;max-width:240px;margin:0 auto"><canvas id="c-seo-ch"></canvas></div><div id="e-seo-ch" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
-        </div>
-        <div class="card"><div class="clbl">Top Keywords</div><table class="tbl"><thead><tr><th>Keyword</th><th class="r">Position</th><th class="r">Clicks</th><th class="r">Impressions</th><th class="r">CTR</th></tr></thead><tbody id="t-kw"></tbody></table><div id="e-kw" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
       </section>
 
       <!-- GOOGLE ADS -->
