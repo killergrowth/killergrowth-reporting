@@ -1138,6 +1138,7 @@ function applyRange(start,end){
   fd.ads=Object.assign({},d.ads||{},{monthlyBreakdown:fAds});
   fd.social=Object.assign({},d.social||{},{monthlyHistory:fSocial});
   fd.gbp=Object.assign({},d.gbp||{},{viewsOverTime:fGbp});
+  fd.localFalcon=d.localFalcon||null;
   var psiScores=(d.website||{}).psiScores||{};
   if(fPsiH&&fPsiH.length){var lp=fPsiH[fPsiH.length-1];psiScores={mobile:lp.mobile,desktop:lp.desktop};}
   fd.website=Object.assign({},d.website||{},{psiHistory:fPsiH,psiScores:psiScores});
