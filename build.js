@@ -1,4 +1,4 @@
-const { injectScripts, loadSiteScripts } = require('C:\\Users\\KillerGrowth\\.openclaw\\workspace\\tools\\kg-site-builder\\lib\\inject-scripts');
+const { injectScripts, loadSiteScripts } = require('./scripts/inject-scripts');
 const SITE_ID = 'killergrowth-reporting';
 /**
  * KillerGrowth Reporting — Build Script v2
