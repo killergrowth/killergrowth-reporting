@@ -768,6 +768,11 @@ function renderOverview(data,mods){
   if(mods.seo&&ov.rankingsTop10!=null)cards.push(kc('Top 10 Keywords',fmt(ov.rankingsTop10),ov.rankingsDelta,null));
   if((mods.googleAds||mods.metaAds)&&ov.adSpend!=null)cards.push(kc('Ad Spend',fmtM(ov.adSpend),null,ov.costPerLead!=null?'CPL: '+fmtM(ov.costPerLead):null));
   if(mods.gbp&&ov.gbpViews!=null)cards.push(kc('GBP Views',fmt(ov.gbpViews),ov.gbpViewsDelta,null));
+  if(mods.gbp&&data.gbp&&data.gbp.viewsOverTime){
+    var _cutoff=new Date();_cutoff.setHours(0,0,0,0);_cutoff.setDate(_cutoff.getDate()-29);
+    var _dirs=(data.gbp.viewsOverTime||[]).filter(function(d){return new Date(d.date)>=_cutoff;}).reduce(function(s,d){return s+(d.directions||0);},0);
+    cards.unshift(kc('Direction Requests',fmt(_dirs),null,'Last 30 Days'));
+  }
   if(mods.social&&ov.socialReach!=null)cards.push(kc('Social Reach',fmt(ov.socialReach),ov.socialReachDelta,null));
   el('krow').innerHTML=cards.length?cards.join(''):'<div style="color:var(--muted);font-size:13px">No overview data available yet.</div>';
 }
