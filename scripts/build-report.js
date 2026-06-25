@@ -61,10 +61,11 @@ async function buildReport(slug) {
   const lfApiKey = process.env.LF_API_KEY;
 
   // Pull all sources in parallel
-  const [ga4, gsc, gbp, meta, ghl, dfs, gads, psi, lf, bp] = await Promise.allSettled([
+  const [ga4, gsc, gbp, gbp2, meta, ghl, dfs, gads, psi, lf, bp] = await Promise.allSettled([
     pullGA4(client.ga4PropertyId),
     pullGSC(client.gscSiteUrl),
     pullGBP(client.gbpAccountId, client.gbpLocationId),
+    client.gbpLocationId2 ? pullGBP(client.gbpAccountId, client.gbpLocationId2) : Promise.resolve(null),
     pullMeta(client.metaPageId, client),
     pullGHL(client.ghlLocationId),
     pullDataForSEO(client.dataForSeoTarget),
@@ -151,6 +152,7 @@ async function buildReport(slug) {
     },
 
     gbp: {
+      locationName:  client.gbpLocationName  ?? 'Primary',
       totalViews:   v(gbp)?.totalViews    ?? base.gbp?.totalViews   ?? null,
       calls:        v(gbp)?.calls         ?? base.gbp?.calls         ?? null,
       callsDelta:   base.gbp?.callsDelta  ?? null,
@@ -162,6 +164,17 @@ async function buildReport(slug) {
       newThisMonth:  v(gbp)?.newReviews    ?? base.gbp?.newThisMonth  ?? null,
       avgRating:     v(gbp)?.avgRating     ?? base.gbp?.avgRating     ?? null
     },
+
+    gbp2: client.gbpLocationId2 ? {
+      locationName:  client.gbpLocationName2 ?? 'Location 2',
+      totalViews:   v(gbp2)?.totalViews    ?? base.gbp2?.totalViews   ?? null,
+      calls:        v(gbp2)?.calls         ?? base.gbp2?.calls         ?? null,
+      directions:   v(gbp2)?.directions    ?? base.gbp2?.directions    ?? null,
+      websiteClicks: v(gbp2)?.websiteClicks ?? base.gbp2?.websiteClicks ?? null,
+      viewsOverTime: v(gbp2)?.viewsOverTime ?? base.gbp2?.viewsOverTime ?? [],
+      totalReviews:  v(gbp2)?.totalReviews  ?? base.gbp2?.totalReviews  ?? null,
+      avgRating:     v(gbp2)?.avgRating     ?? base.gbp2?.avgRating     ?? null
+    } : (base.gbp2 ?? null),
 
     social: {
       monthlyHistory: v(meta)?.monthlyHistory?.map(m => ({
@@ -200,6 +213,7 @@ async function buildReport(slug) {
   console.log(`  GA4:         ${v(ga4) ? 'OK' : 'SKIPPED/ERROR'}`);
   console.log(`  GSC:         ${v(gsc) ? 'OK' : 'SKIPPED/ERROR'}`);
   console.log(`  GBP:         ${v(gbp) ? 'OK' : 'SKIPPED/ERROR'}`);
+  if (client.gbpLocationId2) console.log(`  GBP2:        ${v(gbp2) ? 'OK' : 'SKIPPED/ERROR'}`);
   console.log(`  Meta:        ${v(meta) ? 'OK' : 'SKIPPED/ERROR'}`);
   console.log(`  GHL:         ${v(ghl) ? 'OK' : 'SKIPPED/ERROR'}`);
   console.log(`  DataForSEO:  ${v(dfs) ? 'OK' : 'SKIPPED/ERROR'}`);

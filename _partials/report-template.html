@@ -447,20 +447,26 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
       <!-- GBP -->
       <section id="gbp" class="ms" data-module="gbp">
         <div class="sh"><span class="sb2">GBP</span><span class="st">Google Business Profile</span></div>
-        <div class="g21">
+        <div style="display:flex;gap:6px;margin-bottom:16px">
+          <button class="gbp-tr active" data-range="30d" onclick="setGbpRange('30d')">Last 30 Days</button>
+          <button class="gbp-tr" data-range="month" onclick="setGbpRange('month')">This Month</button>
+          <button class="gbp-tr" data-range="6m" onclick="setGbpRange('6m')">6 Months</button>
+        </div>
+        <div class="g21" style="margin-bottom:20px">
           <div class="card">
-            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
-              <div class="clbl" id="gbp-chart-label" style="margin-bottom:0">GBP Views &mdash; This Month</div>
-              <div style="display:flex;gap:6px">
-                <button class="gbp-tr active" data-range="30d" onclick="setGbpRange('30d')">Last 30 Days</button>
-                <button class="gbp-tr" data-range="month" onclick="setGbpRange('month')">This Month</button>
-                <button class="gbp-tr" data-range="6m" onclick="setGbpRange('6m')">6 Months</button>
-              </div>
-            </div>
+            <div class="clbl" id="gbp-chart-label" style="margin-bottom:14px">GBP Views &mdash; Last 30 Days</div>
             <div style="position:relative;height:220px"><canvas id="c-gbp"></canvas></div>
             <div id="e-gbp" class="du h"><div class="du-t">Data updating&hellip;</div></div>
           </div>
-          <div class="card" id="gbp-stats"></div>
+          <div class="card" id="gbp-stats"><div class="clbl" id="gbp-loc-label"></div></div>
+        </div>
+        <div class="g21" id="gbp2-wrap" style="display:none">
+          <div class="card">
+            <div class="clbl" id="gbp2-chart-label" style="margin-bottom:14px">GBP Views &mdash; Last 30 Days</div>
+            <div style="position:relative;height:220px"><canvas id="c-gbp2"></canvas></div>
+            <div id="e-gbp2" class="du h"><div class="du-t">Data updating&hellip;</div></div>
+          </div>
+          <div class="card" id="gbp2-stats"><div class="clbl" id="gbp2-loc-label"></div></div>
         </div>
       </section>
 
@@ -994,11 +1000,17 @@ function renderMeta(ads,social){
 }
 
 
-var GBP_DATA=null,GBP_METRIC='views',GBP_RANGE='30d';
-function renderGBP(gbp){
+var GBP_DATA=null,GBP2_DATA=null,GBP_METRIC='views',GBP_RANGE='30d';
+function renderGBP(gbp,gbp2){
   GBP_DATA=gbp;
+  GBP2_DATA=gbp2||null;
+  // Set location labels
+  var lbl1=el('gbp-loc-label');if(lbl1)lbl1.textContent=(gbp&&gbp.locationName)||'';
+  var lbl2=el('gbp2-loc-label');if(lbl2)lbl2.textContent=(gbp2&&gbp2.locationName)||'';
+  var wrap2=el('gbp2-wrap');if(wrap2)wrap2.style.display=gbp2?'':'none';
   renderGBPStats();
   renderGBPChart();
+  if(GBP2_DATA){renderGBP2Stats();renderGBP2Chart();}
 }
 function gbpFilteredStats(gbp){
   if(GBP_RANGE==='6m')return gbp;
@@ -1075,11 +1087,53 @@ function renderGBPChart(){
 function setGbpMetric(metric){
   GBP_METRIC=metric;dc('gbp');
   renderGBPStats();renderGBPChart();
+  if(GBP2_DATA)renderGBP2Stats();
 }
 function setGbpRange(range){
   GBP_RANGE=range;dc('gbp');
   document.querySelectorAll('.gbp-tr').forEach(function(b){b.classList.toggle('active',b.getAttribute('data-range')===range);});
   renderGBPStats();renderGBPChart();
+  if(GBP2_DATA){renderGBP2Stats();renderGBP2Chart();}
+}
+function renderGBP2Stats(){
+  var gbp=GBP2_DATA;if(!gbp)return;
+  var s=gbpFilteredStats(gbp);
+  var rows=[
+    {key:'views',label:'GBP Views',val:fmt(s.totalViews),sel:true},
+    {key:'calls',label:'Phone Calls',val:fmt(s.calls),sel:true},
+    {key:'directions',label:'Direction Requests',val:fmt(s.directions),sel:true},
+    {key:'websiteClicks',label:'Website Clicks',val:fmt(s.websiteClicks),sel:true}
+  ];
+  var locLabel=gbp.locationName?'<div class="clbl">'+gbp.locationName+'</div>':'';
+  el('gbp2-stats').innerHTML=locLabel+rows.map(function(r){
+    return '<div class="sr"><span class="srl">'+r.label+'</span><span class="srv">'+r.val+'</span></div>';
+  }).join('');
+}
+function renderGBP2Chart(){
+  var gbp=GBP2_DATA;if(!gbp)return;
+  dc('gbp2');
+  var raw=(DR_DATA&&DR_DATA.gbp2&&DR_DATA.gbp2.viewsOverTime)||gbp.viewsOverTime||[];
+  var rangeLabel=GBP_RANGE==='30d'?'Last 30 Days':GBP_RANGE==='month'?'This Month':'6 Months';
+  var lbl=el('gbp2-chart-label');if(lbl)lbl.textContent=(gbp.locationName||'Location 2')+' Views \u2009\u2014\u2009'+rangeLabel;
+  var labels=[],values=[];
+  if(GBP_RANGE==='30d'||GBP_RANGE==='month'){
+    var cutoff2=new Date();cutoff2.setHours(0,0,0,0);
+    if(GBP_RANGE==='30d')cutoff2.setDate(cutoff2.getDate()-29);else cutoff2=new Date(cutoff2.getFullYear(),cutoff2.getMonth(),1);
+    var f2=raw.filter(function(d){return new Date(d.date)>=cutoff2;});
+    labels=f2.map(function(d){var dt=new Date(d.date);return (dt.getMonth()+1)+'/'+(dt.getDate());});
+    values=f2.map(function(d){return d.views||0;});
+  } else {
+    var mt2={};
+    raw.forEach(function(d){var dt=new Date(d.date);var k=dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0');mt2[k]=(mt2[k]||0)+(d.views||0);});
+    var ms3=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    Object.keys(mt2).sort().forEach(function(k){var p=k.split('-');labels.push(ms3[parseInt(p[1])-1]+' '+p[0]);values.push(mt2[k]);});
+  }
+  if(values.length){
+    hd('e-gbp2');var c=el('c-gbp2');if(c)c.style.display='';
+    var opts2=getOpts();
+    if(CHARTS['gbp2'])CHARTS['gbp2'].destroy();
+    CHARTS['gbp2']=new Chart(el('c-gbp2').getContext('2d'),{type:'bar',data:{labels:labels,datasets:[{label:'GBP Views',data:values,backgroundColor:'#7c6ff7',borderRadius:3}]},options:opts2});
+  } else {sh('e-gbp2');var c2b=el('c-gbp2');if(c2b)c2b.style.display='none';}
 }
 
 function renderSocial(social){
@@ -1220,7 +1274,7 @@ function applyRange(start,end){
   if(fd.localFalcon)renderGEO(fd.localFalcon);
   if(mods.googleAds)renderAds(fd.ads);
   if(mods.metaAds)renderMeta(fd.ads,fd.social);
-  if(mods.gbp)renderGBP(fd.gbp);
+  if(mods.gbp)renderGBP(fd.gbp,fd.gbp2||null);
   if(mods.social)renderSocial(fd.social);
   if(mods.website)renderWebsite(fd.website,fd.seo);
 }
