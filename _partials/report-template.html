@@ -447,7 +447,8 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
               <div class="clbl" id="gbp-chart-label" style="margin-bottom:0">GBP Views &mdash; This Month</div>
               <div style="display:flex;gap:6px">
-                <button class="gbp-tr active" data-range="month" onclick="setGbpRange('month')">This Month</button>
+                <button class="gbp-tr active" data-range="30d" onclick="setGbpRange('30d')">Last 30 Days</button>
+                <button class="gbp-tr" data-range="month" onclick="setGbpRange('month')">This Month</button>
                 <button class="gbp-tr" data-range="6m" onclick="setGbpRange('6m')">6 Months</button>
               </div>
             </div>
@@ -983,20 +984,30 @@ function renderMeta(ads,social){
 }
 
 
-var GBP_DATA=null,GBP_METRIC='views',GBP_RANGE='month';
+var GBP_DATA=null,GBP_METRIC='views',GBP_RANGE='30d';
 function renderGBP(gbp){
   GBP_DATA=gbp;
   renderGBPStats();
   renderGBPChart();
 }
+function gbpFilteredStats(gbp){
+  if(GBP_RANGE==='6m')return gbp;
+  var raw=(DR_DATA&&DR_DATA.gbp&&DR_DATA.gbp.viewsOverTime)||gbp.viewsOverTime||[];
+  var cutoff=new Date();cutoff.setHours(0,0,0,0);
+  if(GBP_RANGE==='30d')cutoff.setDate(cutoff.getDate()-29);
+  else cutoff=new Date(cutoff.getFullYear(),cutoff.getMonth(),1);
+  var f=raw.filter(function(d){return new Date(d.date)>=cutoff;});
+  return {totalViews:f.reduce(function(s,d){return s+(d.views||0);},0),calls:f.reduce(function(s,d){return s+(d.calls||0);},0),directions:f.reduce(function(s,d){return s+(d.directions||0);},0),websiteClicks:f.reduce(function(s,d){return s+(d.websiteClicks||0);},0),totalReviews:gbp.totalReviews,avgRating:gbp.avgRating};
+}
 function renderGBPStats(){
   var gbp=GBP_DATA;if(!gbp)return;
+  var s=gbpFilteredStats(gbp);
   var rows=[
-    {key:'views', label:'GBP Views', val:fmt(gbp.totalViews), sel:true},
-    {key:'calls', label:'Phone Calls', val:fmt(gbp.calls), sel:true},
-    {key:'directions', label:'Direction Requests', val:fmt(gbp.directions), sel:true},
-    {key:'websiteClicks', label:'Website Clicks', val:fmt(gbp.websiteClicks), sel:true},
-    {key:'reviews', label:'Total Reviews', val:fmt(gbp.totalReviews), sel:false},
+    {key:'views', label:'GBP Views', val:fmt(s.totalViews), sel:true},
+    {key:'calls', label:'Phone Calls', val:fmt(s.calls), sel:true},
+    {key:'directions', label:'Direction Requests', val:fmt(s.directions), sel:true},
+    {key:'websiteClicks', label:'Website Clicks', val:fmt(s.websiteClicks), sel:true},
+    {key:'reviews', label:'Total Reviews', val:fmt(s.totalReviews), sel:false},
     {key:'rating', label:'Avg. Rating', val:gbp.avgRating!=null?gbp.avgRating+'\u2605':'\u2014', sel:false}
   ];
   el('gbp-stats').innerHTML='<div class="clbl">GBP Stats</div>'+rows.map(function(r){
@@ -1019,17 +1030,16 @@ function renderGBPChart(){
   };
   var mc=metaMap[GBP_METRIC]||metaMap.views;
   var lbl=el('gbp-chart-label');
-  if(lbl)lbl.textContent=mc.label+'\u2009\u2014\u2009'+(GBP_RANGE==='month'?'This Month':'6 Months');
+  var rangeLabel=GBP_RANGE==='30d'?'Last 30 Days':GBP_RANGE==='month'?'This Month':'6 Months';
+  if(lbl)lbl.textContent=mc.label+'\u2009\u2014\u2009'+rangeLabel;
   var labels=[],values=[];
-  if(GBP_RANGE==='month'){
-    // Find latest month in data
-    var latestDate=raw.length?raw[raw.length-1].date:null;
-    var tgtYear,tgtMonth;
-    if(latestDate){var ld=new Date(latestDate);tgtYear=ld.getFullYear();tgtMonth=ld.getMonth();}
-    else{var n=new Date();tgtYear=n.getFullYear();tgtMonth=n.getMonth();}
-    var filtered=raw.filter(function(d){var dt=new Date(d.date);return dt.getFullYear()===tgtYear&&dt.getMonth()===tgtMonth;});
-    labels=filtered.map(function(d){return new Date(d.date).getDate();});
-    values=filtered.map(function(d){return d[mc.key]||0;});
+  if(GBP_RANGE==='30d'||GBP_RANGE==='month'){
+    var cutoffC=new Date();cutoffC.setHours(0,0,0,0);
+    if(GBP_RANGE==='30d')cutoffC.setDate(cutoffC.getDate()-29);
+    else cutoffC=new Date(cutoffC.getFullYear(),cutoffC.getMonth(),1);
+    var filteredC=raw.filter(function(d){return new Date(d.date)>=cutoffC;});
+    labels=filteredC.map(function(d){var dt=new Date(d.date);return (dt.getMonth()+1)+'/'+(dt.getDate());});
+    values=filteredC.map(function(d){return d[mc.key]||0;});
   } else {
     // 6-month: aggregate by month
     var monthTotals={};
@@ -1061,7 +1071,7 @@ function setGbpMetric(metric){
 function setGbpRange(range){
   GBP_RANGE=range;dc('gbp');
   document.querySelectorAll('.gbp-tr').forEach(function(b){b.classList.toggle('active',b.getAttribute('data-range')===range);});
-  renderGBPChart();
+  renderGBPStats();renderGBPChart();
 }
 
 function renderSocial(social){
