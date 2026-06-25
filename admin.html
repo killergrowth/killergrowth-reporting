@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Client Reports Admin &mdash; KillerGrowth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0f0f0f;
+            color: #f8fafc;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            padding: 40px 20px 60px;
+        }
+        .accent-bar { position: fixed; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #b8e600, transparent); }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 0 auto 36px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-icon { width: 40px; height: 40px; border-radius: 10px; background: #b8e600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .logo-text { font-size: 18px; font-weight: 800; color: #b8e600; letter-spacing: -.02em; }
+        .logo-text span { color: #f8fafc; }
+        .admin-badge {
+            background: rgba(184,230,0,.12);
+            border: 1px solid rgba(184,230,0,.3);
+            color: #b8e600;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+        .internal-notice {
+            font-size: 12px;
+            color: #4b5563;
+        }
+
+        /* Section title */
+        .section-header {
+            max-width: 1000px;
+            margin: 0 auto 20px;
+        }
+        .section-header h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #f8fafc;
+            margin-bottom: 4px;
+        }
+        .section-header p {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        /* Grid */
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 14px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Card */
+        .client-card {
+            background: #161616;
+            border: 1px solid #242424;
+            border-radius: 12px;
+            padding: 18px 20px;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: border-color .2s, transform .15s;
+        }
+        .client-card:hover {
+            border-color: rgba(184,230,0,.35);
+            transform: translateY(-2px);
+        }
+        .client-card .card-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .client-card .card-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: rgba(184,230,0,.08);
+            border: 1px solid rgba(184,230,0,.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .client-card .client-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: #f8fafc;
+            line-height: 1.3;
+        }
+        .client-card .client-meta {
+            font-size: 11px;
+            color: #6b7280;
+            margin-top: 2px;
+        }
+        .client-card .period-badge {
+            font-size: 10px;
+            font-weight: 600;
+            color: #9ca3af;
+            background: #1f1f1f;
+            border: 1px solid #2a2a2a;
+            padding: 3px 8px;
+            border-radius: 20px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .svc {
+            font-size: 10px;
+            font-weight: 500;
+            padding: 3px 8px;
+            border-radius: 20px;
+            background: rgba(255,255,255,.05);
+            color: #9ca3af;
+            border: 1px solid #2a2a2a;
+        }
+        .svc.active {
+            background: rgba(184,230,0,.1);
+            color: #b8e600;
+            border-color: rgba(184,230,0,.2);
+        }
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 8px;
+            border-top: 1px solid #1f1f1f;
+        }
+        .card-footer .view-link {
+            font-size: 12px;
+            font-weight: 600;
+            color: #b8e600;
+        }
+        .card-footer .arrow {
+            color: #b8e600;
+            font-size: 14px;
+        }
+
+        /* Internal badge on card */
+        .internal-tag {
+            font-size: 10px;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+        }
+
+        /* Footer */
+        .page-footer {
+            max-width: 1000px;
+            margin: 40px auto 0;
+            font-size: 11px;
+            color: rgba(155,163,175,.35);
+        }
+        .page-footer strong { color: #b8e600; }
+    </style>
+</head>
+<body>
+    <div class="accent-bar"></div>
+
+    <div class="header">
+        <a class="logo" href="/">
+            <div class="logo-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <path d="M6 6h7v8.5L19 6h7l-7 8 7.5 10H19l-6-8.5V24H6V6z" fill="#0f0f0f"/>
+                </svg>
+            </div>
+            <div class="logo-text">Killer<span>Growth</span></div>
+        </a>
+        <div style="display:flex;align-items:center;gap:12px;">
+            <span class="admin-badge">Admin</span>
+            <span class="internal-notice">Internal use only</span>
+        </div>
+    </div>
+
+    <div class="section-header">
+        <h1>Client Reports</h1>
+        <p>Click any card to go to that client&rsquo;s report login page.</p>
+    </div>
+
+    <div class="clients-grid">
+
+        <!-- KillerGrowth (Internal) -->
+        <a class="client-card" href="/killergrowth/">
+            <div class="card-top">
+                <div>
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 32 32" fill="none">
+                            <path d="M6 6h7v8.5L19 6h7l-7 8 7.5 10H19l-6-8.5V24H6V6z" fill="#b8e600"/>
+                        </svg>
+                    </div>
+                </div>
+                <div style="flex:1;min-width:0;">
+                    <div class="client-name">KillerGrowth</div>
+                    <div class="client-meta">Wichita, KS</div>
+                </div>
+                <span class="internal-tag">Internal</span>
+            </div>
+            <div class="services" id="services-killergrowth">
+                <span class="svc active">SEO</span>
+                <span class="svc active">Google Ads</span>
+                <span class="svc active">Meta Ads</span>
+                <span class="svc active">GBP</span>
+                <span class="svc active">Social</span>
+                <span class="svc active">Website</span>
+                <span class="svc active">Local Falcon</span>
+            </div>
+            <div class="card-footer">
+                <span class="view-link">View Report</span>
+                <span class="arrow">&#8594;</span>
+            </div>
+        </a>
+
+        <!-- Don's Heating & Air -->
+        <a class="client-card" href="/dons-heating/">
+            <div class="card-top">
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b8e600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+                </div>
+                <div style="flex:1;min-width:0;margin-left:10px;">
+                    <div class="client-name">Don&rsquo;s Heating &amp; Air</div>
+                    <div class="client-meta">Wichita, KS</div>
+                </div>
+                <span class="period-badge" data-slug="dons-heating">May 2026</span>
+            </div>
+            <div class="services">
+                <span class="svc active">SEO</span>
+                <span class="svc">Google Ads</span>
+                <span class="svc">Meta Ads</span>
+                <span class="svc">GBP</span>
+                <span class="svc active">Social</span>
+                <span class="svc active">Website</span>
+                <span class="svc active">Local Falcon</span>
+            </div>
+            <div class="card-footer">
+                <span class="view-link">View Report</span>
+                <span class="arrow">&#8594;</span>
+            </div>
+        </a>
+
+        <!-- Good To Be Clean -->
+        <a class="client-card" href="/good-to-be-clean/">
+            <div class="card-top">
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b8e600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div style="flex:1;min-width:0;margin-left:10px;">
+                    <div class="client-name">Good To Be Clean</div>
+                    <div class="client-meta">Wichita, KS</div>
+                </div>
+                <span class="period-badge" data-slug="good-to-be-clean">May 2026</span>
+            </div>
+            <div class="services">
+                <span class="svc active">SEO</span>
+                <span class="svc active">Google Ads</span>
+                <span class="svc active">Meta Ads</span>
+                <span class="svc">GBP</span>
+                <span class="svc">Social</span>
+                <span class="svc active">Website</span>
+                <span class="svc">Local Falcon</span>
+            </div>
+            <div class="card-footer">
+                <span class="view-link">View Report</span>
+                <span class="arrow">&#8594;</span>
+            </div>
+        </a>
+
+        <!-- StewardRight -->
+        <a class="client-card" href="/stewardright/">
+            <div class="card-top">
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b8e600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div style="flex:1;min-width:0;margin-left:10px;">
+                    <div class="client-name">StewardRight</div>
+                    <div class="client-meta">Wichita, KS</div>
+                </div>
+                <span class="period-badge" data-slug="stewardright">May 2026</span>
+            </div>
+            <div class="services">
+                <span class="svc active">SEO</span>
+                <span class="svc">Google Ads</span>
+                <span class="svc active">Meta Ads</span>
+                <span class="svc">GBP</span>
+                <span class="svc active">Social</span>
+                <span class="svc active">Website</span>
+                <span class="svc">Local Falcon</span>
+            </div>
+            <div class="card-footer">
+                <span class="view-link">View Report</span>
+                <span class="arrow">&#8594;</span>
+            </div>
+        </a>
+
+        <!-- Sunflower Plumbing -->
+        <a class="client-card" href="/sunflower/">
+            <div class="card-top">
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b8e600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <div style="flex:1;min-width:0;margin-left:10px;">
+                    <div class="client-name">Sunflower Plumbing</div>
+                    <div class="client-meta">Wichita, KS</div>
+                </div>
+                <span class="period-badge" data-slug="sunflower">May 2026</span>
+            </div>
+            <div class="services">
+                <span class="svc active">SEO</span>
+                <span class="svc active">Google Ads</span>
+                <span class="svc">Meta Ads</span>
+                <span class="svc active">GBP</span>
+                <span class="svc active">Social</span>
+                <span class="svc active">Website</span>
+                <span class="svc active">Local Falcon</span>
+            </div>
+            <div class="card-footer">
+                <span class="view-link">View Report</span>
+                <span class="arrow">&#8594;</span>
+            </div>
+        </a>
+
+        <!-- Timnath Painting -->
+        <a class="client-card" href="/timnath/">
+            <div class="card-top">
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b8e600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                </div>
+                <div style="flex:1;min-width:0;margin-left:10px;">
+                    <div class="client-name">Timnath Painting</div>
+                    <div class="client-meta">Timnath, CO</div>
+                </div>
+                <span class="period-badge" data-slug="timnath">May 2026</span>
+            </div>
+            <div class="services">
+                <span class="svc active">SEO</span>
+                <span class="svc">Google Ads</span>
+                <span class="svc">Meta Ads</span>
+                <span class="svc active">GBP</span>
+                <span class="svc">Social</span>
+                <span class="svc active">Website</span>
+                <span class="svc active">Local Falcon</span>
+            </div>
+            <div class="card-footer">
+                <span class="view-link">View Report</span>
+                <span class="arrow">&#8594;</span>
+            </div>
+        </a>
+
+        <!-- Walnut Valley -->
+        <a class="client-card" href="/walnut-valley/">
+            <div class="card-top">
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b8e600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </div>
+                <div style="flex:1;min-width:0;margin-left:10px;">
+                    <div class="client-name">Walnut Valley</div>
+                    <div class="client-meta">Wichita, KS</div>
+                </div>
+                <span class="period-badge" data-slug="walnut-valley">May 2026</span>
+            </div>
+            <div class="services">
+                <span class="svc">SEO</span>
+                <span class="svc">Google Ads</span>
+                <span class="svc active">Meta Ads</span>
+                <span class="svc">GBP</span>
+                <span class="svc">Social</span>
+                <span class="svc active">Website</span>
+                <span class="svc">Local Falcon</span>
+            </div>
+            <div class="card-footer">
+                <span class="view-link">View Report</span>
+                <span class="arrow">&#8594;</span>
+            </div>
+        </a>
+
+        <!-- Goff Heating & Air -->
+        <a class="client-card" href="/goff/">
+            <div class="card-top">
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b8e600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+                </div>
+                <div style="flex:1;min-width:0;margin-left:10px;">
+                    <div class="client-name">Goff Heating &amp; Air</div>
+                    <div class="client-meta">Wichita, KS</div>
+                </div>
+                <span class="period-badge" data-slug="goff">May 2026</span>
+            </div>
+            <div class="services">
+                <span class="svc">SEO</span>
+                <span class="svc active">Google Ads</span>
+                <span class="svc">Meta Ads</span>
+                <span class="svc active">GBP</span>
+                <span class="svc">Social</span>
+                <span class="svc active">Website</span>
+                <span class="svc">Local Falcon</span>
+            </div>
+            <div class="card-footer">
+                <span class="view-link">View Report</span>
+                <span class="arrow">&#8594;</span>
+            </div>
+        </a>
+
+        <!-- Stanfield -->
+        <a class="client-card" href="/stanfield/">
+            <div class="card-top">
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b8e600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+                </div>
+                <div style="flex:1;min-width:0;margin-left:10px;">
+                    <div class="client-name">Stanfield</div>
+                    <div class="client-meta">Wichita, KS</div>
+                </div>
+                <span class="period-badge" data-slug="stanfield">May 2026</span>
+            </div>
+            <div class="services">
+                <span class="svc">SEO</span>
+                <span class="svc">Google Ads</span>
+                <span class="svc">Meta Ads</span>
+                <span class="svc">GBP</span>
+                <span class="svc active">Social</span>
+                <span class="svc active">Website</span>
+                <span class="svc">Local Falcon</span>
+            </div>
+            <div class="card-footer">
+                <span class="view-link">View Report</span>
+                <span class="arrow">&#8594;</span>
+            </div>
+        </a>
+
+        <!-- Wheatland -->
+        <a class="client-card" href="/wheatland/">
+            <div class="card-top">
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b8e600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <div style="flex:1;min-width:0;margin-left:10px;">
+                    <div class="client-name">Wheatland</div>
+                    <div class="client-meta">Wichita, KS</div>
+                </div>
+                <span class="period-badge" data-slug="wheatland">May 2026</span>
+            </div>
+            <div class="services">
+                <span class="svc active">SEO</span>
+                <span class="svc">Google Ads</span>
+                <span class="svc">Meta Ads</span>
+                <span class="svc">GBP</span>
+                <span class="svc">Social</span>
+                <span class="svc active">Website</span>
+                <span class="svc">Local Falcon</span>
+            </div>
+            <div class="card-footer">
+                <span class="view-link">View Report</span>
+                <span class="arrow">&#8594;</span>
+            </div>
+        </a>
+
+    </div>
+
+    <div class="page-footer">Powered by <strong>KillerGrowth</strong> &nbsp;&middot;&nbsp; Internal use only &nbsp;&middot;&nbsp; Do not share</div>
+
+    <script>
+        // Live-fetch period from data JSON for each client
+        document.querySelectorAll('.period-badge[data-slug]').forEach(function(el) {
+            var slug = el.dataset.slug;
+            fetch('/data/' + slug + '.json')
+                .then(function(r) { return r.json(); })
+                .then(function(d) { if (d && d.period) el.textContent = d.period; })
+                .catch(function() {});
+        });
+    </script>
+</body>
+</html>

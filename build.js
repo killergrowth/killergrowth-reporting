@@ -122,10 +122,20 @@ mkdir(DIST);
 fs.copyFileSync(path.join(ROOT, 'index.html'), path.join(DIST, 'index.html'));
 console.log('  ✓ index.html');
 
+// 1b. admin.html → dist/admin/index.html (internal admin page, no partials)
+if (fs.existsSync(path.join(ROOT, 'admin.html'))) {
+  mkdir(path.join(DIST, 'admin'));
+  let adminHtml = read(path.join(ROOT, 'admin.html'));
+  adminHtml = injectScripts(adminHtml, loadSiteScripts(SITE_ID));
+  fs.writeFileSync(path.join(DIST, 'admin', 'index.html'), adminHtml, 'utf8');
+  console.log('  ✓ admin.html → dist/admin/index.html');
+}
+
 // 2. Client pages
 const sourceFiles = fs.readdirSync(ROOT).filter(f =>
   f.endsWith('.html') &&
   f !== 'index.html' &&
+  f !== 'admin.html' &&
   !f.startsWith('_')
 );
 
