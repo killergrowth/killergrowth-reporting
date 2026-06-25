@@ -1007,8 +1007,6 @@ function renderGBPStats(){
     {key:'calls', label:'Phone Calls', val:fmt(s.calls), sel:true},
     {key:'directions', label:'Direction Requests', val:fmt(s.directions), sel:true},
     {key:'websiteClicks', label:'Website Clicks', val:fmt(s.websiteClicks), sel:true},
-    {key:'reviews', label:'Total Reviews', val:fmt(s.totalReviews), sel:false},
-    {key:'rating', label:'Avg. Rating', val:gbp.avgRating!=null?gbp.avgRating+'\u2605':'\u2014', sel:false}
   ];
   el('gbp-stats').innerHTML='<div class="clbl">GBP Stats</div>'+rows.map(function(r){
     var active=r.sel&&r.key===GBP_METRIC;
