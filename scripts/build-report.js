@@ -31,7 +31,8 @@ const { pullGHL }        = require('./pull-ghl');
 const { pullDataForSEO }    = require('./pull-dataforseo');
 const { pullGoogleAds }     = require('./pull-google-ads');
 const { pullPageSpeed }     = require('./pull-pagespeed');
-const { pullLocalFalcon }   = require('./pull-localfalcon');
+const { pullLocalFalcon }     = require('./pull-localfalcon');
+const { pullBrandPhrases }    = require('./pull-brand-phrases');
 
 const ROOT    = path.join(__dirname, '..');
 const clients = JSON.parse(fs.readFileSync(path.join(__dirname, 'clients.json'), 'utf8'));
@@ -60,7 +61,7 @@ async function buildReport(slug) {
   const lfApiKey = process.env.LF_API_KEY;
 
   // Pull all sources in parallel
-  const [ga4, gsc, gbp, meta, ghl, dfs, gads, psi, lf] = await Promise.allSettled([
+  const [ga4, gsc, gbp, meta, ghl, dfs, gads, psi, lf, bp] = await Promise.allSettled([
     pullGA4(client.ga4PropertyId),
     pullGSC(client.gscSiteUrl),
     pullGBP(client.gbpAccountId, client.gbpLocationId),
@@ -69,7 +70,8 @@ async function buildReport(slug) {
     pullDataForSEO(client.dataForSeoTarget),
     pullGoogleAds(client.googleAdsCustomerId, slug),
     pullPageSpeed(client.dataForSeoTarget),
-    (lfApiKey && client.lfPlaceId) ? pullLocalFalcon(client.lfPlaceId, lfApiKey) : Promise.resolve(null)
+    (lfApiKey && client.lfPlaceId) ? pullLocalFalcon(client.lfPlaceId, lfApiKey) : Promise.resolve(null),
+    (lfApiKey && client.lfPlaceId) ? pullBrandPhrases({ placeId: client.lfPlaceId, brandName: client.name, lfApiKey }) : Promise.resolve(null)
   ]);
 
   const v = r => r.status === 'fulfilled' ? r.value : null;
@@ -144,7 +146,8 @@ async function buildReport(slug) {
       avgSaiv:         v(lf)?.avgSaiv         ?? base.localFalcon?.avgSaiv         ?? null,
       googleKeywords:  v(lf)?.googleKeywords  ?? base.localFalcon?.googleKeywords  ?? [],
       aiPlatforms:     v(lf)?.aiPlatforms     ?? base.localFalcon?.aiPlatforms     ?? [],
-      topAiKeywords:   v(lf)?.topAiKeywords   ?? base.localFalcon?.topAiKeywords   ?? []
+      topAiKeywords:   v(lf)?.topAiKeywords   ?? base.localFalcon?.topAiKeywords   ?? [],
+      brandPhrases:    v(bp)                  ?? base.localFalcon?.brandPhrases    ?? null
     },
 
     gbp: {
@@ -203,7 +206,9 @@ async function buildReport(slug) {
   console.log(`  Google Ads:  ${v(gads) ? 'OK' : 'SKIPPED/ERROR'}`);
   console.log(`  PageSpeed:   ${v(psi)  ? 'OK' : 'SKIPPED/ERROR'}`);
   console.log(`  LocalFalcon: ${v(lf)   ? 'OK' : 'SKIPPED/ERROR'}`);
+  console.log(`  BrandPhrases:${v(bp)   ? 'OK' : 'SKIPPED/ERROR'}`);
   if (lf.status === 'rejected') console.log('  LF error:', lf.reason?.message);
+  if (bp.status === 'rejected') console.log('  BP error:', bp.reason?.message);
 
   if (ga4.status === 'rejected')  console.log('  GA4 error:',  ga4.reason?.message);
   if (gsc.status === 'rejected')  console.log('  GSC error:',  gsc.reason?.message);

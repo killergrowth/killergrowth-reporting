@@ -160,6 +160,19 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
 .mgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
 .mcell{border-radius:7px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800}
 
+/* BRAND PHRASES */
+.bp-table{width:100%;border-collapse:collapse;margin-top:8px}
+.bp-table th{font-size:11px;color:var(--sub);text-transform:uppercase;letter-spacing:.06em;padding:6px 10px;border-bottom:1px solid var(--border);text-align:left;font-weight:600}
+.bp-table th.r{text-align:right}
+.bp-table td{padding:9px 10px;border-bottom:1px solid var(--border);font-size:13px;vertical-align:middle}
+.bp-table tr:last-child td{border-bottom:none}
+.bp-rank{width:28px;height:28px;border-radius:50%;background:var(--lime);color:#000;font-weight:800;font-size:12px;display:inline-flex;align-items:center;justify-content:center}
+.bp-phrase{color:var(--w);font-weight:500}
+.bp-cnt{color:var(--sub);font-size:12px;text-align:right}
+.bp-badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700}
+.bp-pos{background:rgba(34,197,94,.15);color:#22c55e}
+.bp-neu{background:rgba(156,163,175,.12);color:#9ca3af}
+.bp-neg{background:rgba(239,68,68,.15);color:#ef4444}
 /* GEO / AI VISIBILITY */
 .geo-hero{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
 .geo-stat{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px 20px}
@@ -367,6 +380,14 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
         <div class="card mb14" id="seo-geo" style="display:none">
           <div class="clbl">AI &amp; Local Visibility</div>
           <div id="geo-hero" class="geo-hero"></div>
+          <div class="card mb14" id="geo-brand-phrases" style="display:none">
+            <div class="clbl">Brand Phrases</div>
+            <div class="ksub" style="margin-bottom:12px">Phrases AI uses when mentioning this business &mdash; how often &amp; the sentiment behind them</div>
+            <table class="bp-table" id="bp-table-body">
+              <thead><tr><th>Rank</th><th>Phrase</th><th class="r">Mentions</th><th>Sentiment</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
             <div class="geo-stat" style="padding:0">
               <div style="padding:16px 20px 0"><span class="clbl">AI Platforms</span></div>
@@ -786,6 +807,25 @@ function renderGEO(lf){
       }).join('');
     } else {
       platEl.innerHTML='<div class="ksub" style="padding:10px 0">No AI scans yet</div>';
+    }
+  }
+
+  // Brand Phrases
+  var bp=lf.brandPhrases;
+  var bpWrap=el('geo-brand-phrases');
+  if(bp&&bp.phrases&&bp.phrases.length&&bpWrap){
+    bpWrap.style.display='';
+    var tbody=document.querySelector('#bp-table-body tbody');
+    if(tbody){
+      tbody.innerHTML=bp.phrases.map(function(p,i){
+        var badge=p.sentiment==='Positive'?'bp-pos':p.sentiment==='Negative'?'bp-neg':'bp-neu';
+        return '<tr>'
+          +'<td><span class="bp-rank">'+(i+1)+'</span></td>'
+          +'<td class="bp-phrase">'+p.phrase+'</td>'
+          +'<td class="bp-cnt">'+p.count+' mention'+(p.count!==1?'s':'')+'</td>'
+          +'<td><span class="bp-badge '+badge+'">'+p.sentiment+'</span></td>'
+          +'</tr>';
+      }).join('');
     }
   }
 
