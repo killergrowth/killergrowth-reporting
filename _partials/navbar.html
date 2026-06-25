@@ -48,7 +48,7 @@
                     <div>
                         <!-- Populated by report data -->
                         <div class="client-name" id="navbar-client-name"></div>
-                        <div class="client-sub" id="navbar-client-sub">Monthly Report</div>
+                        <div class="client-sub" id="navbar-client-sub">Monthly Dashboard</div>
                         <script>
                         (function(){
                             function fillNavbar() {
@@ -57,7 +57,7 @@
                                 var n = document.getElementById('navbar-client-name');
                                 var s = document.getElementById('navbar-client-sub');
                                 if (n) n.textContent = d.client || '';
-                                if (s) s.textContent = 'Monthly Report &mdash; ' + (d.period || '');
+                                if (s) s.textContent = 'Monthly Dashboard &mdash; ' + (d.period || '');
                             }
                             if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fillNavbar);
                             else fillNavbar();

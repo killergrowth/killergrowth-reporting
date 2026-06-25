@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
 <!-- CLIENT_INJECT -->
-<title id="page-title">KillerGrowth | Monthly Report</title>
+<title id="page-title">KillerGrowth | Monthly Dashboard</title>
 <style>
 :root{--bg:#111111;--card:#181818;--border:#252525;--lime:#c8f000;--ld:rgba(200,240,0,.08);--ld2:rgba(200,240,0,.15);--muted:#999;--sub:#bbb;--w:#fff;--sb:#0d0d0d;--red:#ef4444;--grn:#22c55e;--org:#f97316}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -274,7 +274,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
   <img src="/images/kg-logo.png" height="32" alt="KillerGrowth" style="display:block;margin-bottom:36px">
   <div id="g-card" class="g-card">
     <div id="g-name" class="g-name"></div>
-    <div class="g-desc">Enter your password to view this report.</div>
+    <div class="g-desc">Enter your password to view this dashboard.</div>
     <div class="g-lbl">Password</div>
     <input type="password" id="gi" placeholder="Enter password" autocomplete="current-password">
     <div id="ge"></div>
@@ -298,7 +298,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
       <div class="mod-ph"><span class="mod-ph-lbl">Modules</span><a href="#" id="mod-reset">Reset</a></div>
       <div id="mod-list"></div>
     </div>
-    <div class="sb-slbl">Report Sections</div>
+    <div class="sb-slbl">Dashboard Sections</div>
     <ul class="sb-nav" id="sb-nav">
       <li><a href="#" data-s="overview" class="active">Overview</a></li>
       <li data-nav="seo"><a href="#" data-s="seo">SEO</a></li>
@@ -325,7 +325,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
         <button id="sb-tog">&#9664;</button>
         <div>
           <div id="tb-ttl" class="tb-ttl"></div>
-          <div class="tb-sub">Monthly Performance Report</div>
+          <div class="tb-sub">Monthly Performance Dashboard</div>
         </div>
       </div>
       <div class="tb-r">
@@ -394,7 +394,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
             <div class="geo-stat" style="padding:0">
-              <div style="padding:16px 20px 0"><span class="clbl">AI Platforms</span></div>
+              <div style="padding:16px 20px 0;display:flex;align-items:center;gap:6px"><span class="clbl">AI Platforms</span><span class="kg-info-tip" data-tip="Share of AI Voice (SAIV) — how often this business is mentioned when AI platforms like ChatGPT, Gemini, and Grok answer relevant local searches. Higher % = stronger AI visibility.">&#9432;</span></div>
               <div id="geo-ai-platforms" style="padding:0 20px 10px"></div>
             </div>
             <div class="geo-stat" style="padding:0">
@@ -600,11 +600,11 @@ function initDash(data) {
   var cfg = window.CLIENT_CONFIG || {};
   var mods = cfg.modules || {};
   var period = data.period || fmtPeriod(new Date());
-  document.title = (cfg.name||'Report') + ' | ' + period + ' Report';
+  document.title = (cfg.name||'Dashboard') + ' | ' + period + ' Dashboard';
   document.querySelectorAll('.js-period').forEach(function(e){e.textContent=period;});
   document.getElementById('tb-ttl').textContent = cfg.name||'';
   document.getElementById('ph-t').textContent = cfg.name||'';
-  document.getElementById('ph-m').innerHTML = period + ' Performance Report &nbsp;&middot;&nbsp; Prepared by <strong>KillerGrowth</strong>';
+  document.getElementById('ph-m').innerHTML = period + ' Performance Dashboard &nbsp;&middot;&nbsp; Prepared by <strong>KillerGrowth</strong>';
   document.getElementById('sb-cname').textContent = cfg.name||'';
   document.getElementById('sb-cmeta').textContent = period + (cfg.location ? ' \u00b7 ' + cfg.location : '');
   var pcn=el('pc-name');if(pcn)pcn.textContent=cfg.name||'';
@@ -735,7 +735,7 @@ function initDashFromData(data, cc) {
   document.querySelectorAll('.js-period').forEach(function(e){e.textContent=period;});
   document.getElementById('tb-ttl').textContent=cc.name||'';
   document.getElementById('ph-t').textContent=cc.name||'';
-  document.getElementById('ph-m').innerHTML=period+' Performance Report &nbsp;&middot;&nbsp; Prepared by <strong>KillerGrowth</strong>';
+  document.getElementById('ph-m').innerHTML=period+' Performance Dashboard &nbsp;&middot;&nbsp; Prepared by <strong>KillerGrowth</strong>';
   document.getElementById('sb-cmeta').textContent=period+(cc.location?' \u00b7 '+cc.location:'');
   var pcn2=el('pc-name');if(pcn2)pcn2.textContent=cc.name||'';
   var pfn2=el('pf-name');if(pfn2)pfn2.textContent=cc.name||'';
