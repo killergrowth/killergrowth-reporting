@@ -1049,7 +1049,7 @@ function renderGBPChart(){
     gbpOpts.scales.x.title={display:true,text:'Date',color:'#555',font:{size:11}};
     CHARTS['gbp']=new Chart(el('c-gbp').getContext('2d'),{
       type:'bar',
-      data:{labels:labels,datasets:[{label:mc.label,data:values,backgroundColor:'#c8f000',borderRadius:3}]},
+      data:{labels:labels,datasets:[{label:mc.label,data:values,backgroundColor:'#7c6ff7',borderRadius:3}]},
       options:gbpOpts
     });
   } else {sh('e-gbp');var c2=el('c-gbp');if(c2)c2.style.display='none';}
