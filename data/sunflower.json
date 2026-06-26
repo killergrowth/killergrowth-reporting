@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "May 2026",
-  "generatedAt": "2026-06-24T13:15:52.475Z",
+  "generatedAt": "2026-06-26T10:13:51.396Z",
   "overview": {
     "sessions": 791,
     "sessionsDelta": 0,
@@ -258,7 +258,25 @@
         "ctr": 0,
         "position": 77
       }
-    ]
+    ],
+    "leadSignals": {
+      "organicSessions": 135,
+      "phoneCalls": 0,
+      "formSubmissions": 0,
+      "emailClicks": 0,
+      "ctaClicks": 0,
+      "formStarts": 16,
+      "byChannel": {
+        "form_start": {
+          "Direct": 14,
+          "Cross-network": 1,
+          "Organic Search": 1
+        }
+      },
+      "gbpCalls": 0,
+      "gbpWebsiteClicks": 0,
+      "gbpDirections": 0
+    }
   },
   "ads": {
     "monthlyBreakdown": [
@@ -309,17 +327,31 @@
       }
     ]
   },
+  "localFalcon": {
+    "lastScanDate": null,
+    "topSolv": null,
+    "topSolvKw": null,
+    "avgSolvAll": null,
+    "avgSaiv": null,
+    "googleKeywords": [],
+    "aiPlatforms": [],
+    "topAiKeywords": [],
+    "brandPhrases": null
+  },
   "gbp": {
+    "locationName": "Primary",
     "totalViews": null,
     "calls": null,
     "callsDelta": null,
     "directions": null,
+    "websiteClicks": null,
     "directionsDelta": null,
     "viewsOverTime": [],
     "totalReviews": null,
     "newThisMonth": null,
     "avgRating": null
   },
+  "gbp2": null,
   "social": {
     "monthlyHistory": [
       {
@@ -405,7 +437,7 @@
         "seo": 85
       },
       "desktop": {
-        "performance": 65,
+        "performance": 72,
         "accessibility": 77,
         "bestPractices": 96,
         "seo": 85
@@ -1007,6 +1039,21 @@
         },
         "desktop": {
           "performance": 65,
+          "accessibility": 77,
+          "bestPractices": 96,
+          "seo": 85
+        }
+      },
+      {
+        "date": "2026-06-26",
+        "mobile": {
+          "performance": 56,
+          "accessibility": 75,
+          "bestPractices": 96,
+          "seo": 85
+        },
+        "desktop": {
+          "performance": 72,
           "accessibility": 77,
           "bestPractices": 96,
           "seo": 85

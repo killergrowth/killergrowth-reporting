@@ -3,7 +3,7 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "May 2026",
-  "generatedAt": "2026-06-24T13:13:33.419Z",
+  "generatedAt": "2026-06-26T10:13:20.277Z",
   "overview": {
     "sessions": 52,
     "sessionsDelta": 0,
@@ -72,7 +72,23 @@
         "sessions": 2
       }
     ],
-    "keywords": []
+    "keywords": [],
+    "leadSignals": {
+      "organicSessions": 16,
+      "phoneCalls": 0,
+      "formSubmissions": 0,
+      "emailClicks": 0,
+      "ctaClicks": 0,
+      "formStarts": 1,
+      "byChannel": {
+        "form_start": {
+          "Direct": 1
+        }
+      },
+      "gbpCalls": 0,
+      "gbpWebsiteClicks": 0,
+      "gbpDirections": 0
+    }
   },
   "ads": {
     "monthlyBreakdown": [
@@ -110,17 +126,31 @@
     "spendByWeek": [],
     "campaigns": []
   },
+  "localFalcon": {
+    "lastScanDate": null,
+    "topSolv": null,
+    "topSolvKw": null,
+    "avgSolvAll": null,
+    "avgSaiv": null,
+    "googleKeywords": [],
+    "aiPlatforms": [],
+    "topAiKeywords": [],
+    "brandPhrases": null
+  },
   "gbp": {
+    "locationName": "Primary",
     "totalViews": null,
     "calls": null,
     "callsDelta": null,
     "directions": null,
+    "websiteClicks": null,
     "directionsDelta": null,
     "viewsOverTime": [],
     "totalReviews": null,
     "newThisMonth": null,
     "avgRating": null
   },
+  "gbp2": null,
   "social": {
     "monthlyHistory": [
       {
@@ -189,9 +219,14 @@
       "pagespeedMobile": null
     },
     "psiScores": {
-      "mobile": null,
+      "mobile": {
+        "performance": 55,
+        "accessibility": 90,
+        "bestPractices": 77,
+        "seo": 92
+      },
       "desktop": {
-        "performance": 73,
+        "performance": 68,
         "accessibility": 90,
         "bestPractices": 77,
         "seo": 92
@@ -798,6 +833,21 @@
         "mobile": null,
         "desktop": {
           "performance": 73,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-06-26",
+        "mobile": {
+          "performance": 55,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 68,
           "accessibility": 90,
           "bestPractices": 77,
           "seo": 92
