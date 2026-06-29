@@ -189,8 +189,10 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
 .geo-kw-bar-wrap{width:80px;height:6px;background:var(--border);border-radius:3px;margin-right:10px;flex-shrink:0}
 .geo-kw-bar{height:6px;border-radius:3px;background:var(--lime)}
 .geo-kw-val{font-weight:700;font-size:13px;color:var(--w);min-width:36px;text-align:right}
-.lf-report-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--card);border:1px solid var(--lime);border-radius:8px;color:var(--lime);font-size:13px;font-weight:600;text-decoration:none;transition:background .15s,color .15s}
-.lf-report-btn:hover{background:var(--lime);color:#000}
+.lf-report-btn{display:inline-flex;align-items:center;gap:12px;padding:18px 40px;background:#3b82f6;border:none;border-radius:10px;color:#fff;font-size:18px;font-weight:700;text-decoration:none;transition:opacity .15s;letter-spacing:.01em}
+.lf-report-btn:hover{opacity:.85}
+.lf-scan-date{margin-top:8px;font-size:12px;color:var(--sub)}
+.lf-btn-card{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 24px;margin-top:8px;text-align:center}
 .kg-info-tip{position:relative;display:inline-flex;align-items:center;color:var(--muted);font-size:13px;cursor:pointer;flex-shrink:0}
 .kg-info-tip:hover{color:var(--lime)}
 .kg-info-tip::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#1e1e2e;color:var(--w);font-size:11px;font-weight:400;letter-spacing:0;text-transform:none;white-space:normal;max-width:260px;min-width:200px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);box-shadow:0 4px 16px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity .15s ease;z-index:100;line-height:1.5}
@@ -308,9 +310,10 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
       <li data-nav="googleAds"><a href="#" data-s="google-ads">Paid Ads</a></li>
       <li data-nav="metaAds"><a href="#" data-s="meta-ads">Meta Ads</a></li>
       <li data-nav="gbp"><a href="#" data-s="gbp">Google Business</a></li>
-      <li data-nav="social"><a href="#" data-s="social">Social Media</a></li>
-      <li data-nav="website"><a href="#" data-s="website">Website</a></li>
       <li data-nav="localFalcon"><a href="#" data-s="map">Map Rankings</a></li>
+      <li data-nav="social"><a href="#" data-s="social">Social Media</a></li>
+      <li data-nav="website"><a href="#" data-s="ai-referral">AI Traffic</a></li>
+          <li data-nav="website"><a href="#" data-s="website">Website</a></li>
     </ul>
     <div id="gh-panel">
       <div class="gh-lbl">Deploy Modules</div>
@@ -379,6 +382,23 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
         <div class="krow" id="krow"></div>
       </section>
 
+      <!-- AI REFERRAL TRAFFIC -->
+      <section id="ai-referral" class="ms" data-module="website">
+        <div class="sh"><span class="sb2">AI</span><span class="st">AI Referral Traffic</span></div>
+        <div class="g2 mb14">
+          <div class="card">
+            <div class="clbl">AI Referral Sessions &mdash; Weekly Trend</div>
+            <div style="position:relative;height:220px"><canvas id="c-ai-ref"></canvas></div>
+            <div id="e-ai-ref" class="du h"><div class="du-t">Data updating&hellip;</div></div>
+          </div>
+          <div class="card">
+            <div class="clbl">Traffic by AI Platform</div>
+            <div id="ai-ref-ch"><div class="du"><div class="du-t">Data updating&hellip;</div></div></div>
+            <div style="margin-top:14px;font-size:11px;color:var(--sub);line-height:1.4">Note: Some AI-referred sessions may appear as Direct when referrer headers are stripped by the app.</div>
+          </div>
+        </div>
+      </section>
+
       <!-- SEO -->
       <section id="seo" class="ms" data-module="seo">
         <div class="sh"><span class="sb2">SEO</span><span class="st">Search Engine Optimization</span></div>
@@ -390,10 +410,6 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
           <div id="seo-lead-krow" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px"></div>
         </div>
 
-        <div class="g2 mb14">
-          <div class="card"><div class="clbl">Organic Traffic &mdash; Weekly Sessions</div><div style="position:relative;height:220px"><canvas id="c-seo-sess"></canvas></div><div id="e-seo-sess" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
-          <div class="card"><div class="clbl">Traffic Channels</div><div style="position:relative;height:220px;max-width:240px;margin:0 auto"><canvas id="c-seo-ch"></canvas></div><div id="e-seo-ch" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
-        </div>
         <div class="card"><div class="clbl">Top Keywords</div><table class="tbl"><thead><tr><th>Keyword</th><th class="r">Position</th><th class="r">Clicks</th><th class="r">Impressions</th><th class="r">CTR</th></tr></thead><tbody id="t-kw"></tbody></table><div id="e-kw" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
 
         <!-- GEO / AI VISIBILITY -->
@@ -472,6 +488,18 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
         </div>
       </section>
 
+      <!-- MAP -->
+      <section id="map" class="ms" data-module="localFalcon">
+        <div class="sh"><span class="sb2">MAP</span><span class="st">Local Map Rankings</span></div>
+        <div id="lf-report-btn-wrap" class="card lf-btn-card" style="display:none">
+          <a id="lf-report-btn" href="#" target="_blank" rel="noopener" class="lf-report-btn">
+            <span>&#127757;</span> View Latest Map Rankings Report
+          </a>
+          <div id="lf-scan-date" class="lf-scan-date"></div>
+          <div class="lf-scan-date" style="margin-top:4px">Scans monthly</div>
+        </div>
+      </section>
+
       <!-- SOCIAL -->
       <section id="social" class="ms" data-module="social">
         <div class="sh"><span class="sb2">SOCIAL</span><span class="st">Social Media</span></div>
@@ -483,11 +511,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
 
       <!-- WEBSITE -->
       <section id="website" class="ms" data-module="website">
-        <div class="sh"><span class="sb2">WEB</span><span class="st">Website Performance</span></div>
-        <div class="g21 mb14">
-          <div class="card"><div class="clbl">Sessions &mdash; Weekly Trend</div><div style="position:relative;height:220px"><canvas id="c-web"></canvas></div><div id="e-web" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
-          <div class="card"><div class="clbl">Traffic Channels</div><div id="web-ch"></div></div>
-        </div>
+        <div class="sh"><span class="sb2">WEB</span><span class="st">Page Speed</span></div>
         <div class="psi-tw">
           <button class="psi-t active" id="psi-m" onclick="setPsi('mobile')">Mobile</button>
           <button class="psi-t" id="psi-d" onclick="setPsi('desktop')">Desktop</button>
@@ -495,19 +519,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
         <div class="g4" id="psi-wrap"></div>
       </section>
 
-      <!-- MAP -->
-      <section id="map" class="ms" data-module="localFalcon">
-        <div class="sh"><span class="sb2">MAP</span><span class="st">Local Map Rankings</span></div>
-        <div class="g2">
-          <div class="card" id="map-grid"><div class="clbl">Local Falcon Grid</div><div class="du"><div class="du-t">Data updating&hellip;</div></div></div>
-          <div class="card" id="map-stats"><div class="clbl">Grid Summary</div><div class="du"><div class="du-t">Data updating&hellip;</div></div></div>
-        </div>
-        <div id="lf-report-btn-wrap" style="display:none;margin-top:16px">
-          <a id="lf-report-btn" href="#" target="_blank" rel="noopener" class="lf-report-btn">
-            <span>&#127757;</span> View Latest Local Falcon Report
-          </a>
-        </div>
-      </section>
+
 
       <!-- PRINT FOOTER -->
       <div class="print-footer">
@@ -763,7 +775,7 @@ function initDashFromData(data, cc) {
   document.querySelectorAll('[data-module]').forEach(function(s){s.style.display=mods[s.getAttribute('data-module')]?'':'none';});
   document.querySelectorAll('[data-nav]').forEach(function(li){li.style.display=mods[li.getAttribute('data-nav')]?'':'none';});
   initDateRange(data);
-  if(mods.website)renderWebsite(data.website||{},data.seo||{});
+  if(mods.website){renderAiReferral(data.website||{});renderWebsite(data.website||{},data.seo||{});}
 }
 
 function fmt(n,p,s){if(n==null||n==='')return '\u2014';var v=Number(n);if(isNaN(v))return '\u2014';return (p||'')+v.toLocaleString()+(s||'');}
@@ -860,9 +872,18 @@ function renderGEO(lf){
   // LF Campaign Report button
   var btnWrap=el('lf-report-btn-wrap');
   var btnEl=el('lf-report-btn');
+  var scanDateEl=el('lf-scan-date');
   if(btnWrap&&btnEl&&lf.campaignPublicUrl){
     btnEl.href=lf.campaignPublicUrl;
     btnWrap.style.display='';
+    if(scanDateEl&&lf.lastScanDate){
+      var rawDate=lf.lastScanDate;
+      try{
+        var d=new Date(rawDate);
+        var fmt=d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+        scanDateEl.textContent='Last scanned: '+fmt;
+      }catch(e){ scanDateEl.textContent='Last scanned: '+rawDate; }
+    }
   }
 
   // Google Maps keywords
@@ -930,14 +951,7 @@ function renderSEO(seo){
       ].join('');
     }
   }
-  dc('ss');
-  if(sessions.length){hd('e-seo-sess');
-    CHARTS['ss']=new Chart(el('c-seo-sess').getContext('2d'),{type:'line',data:{labels:sessions.map(function(d){return 'Wk '+d.week;}),datasets:[{label:'Sessions',data:sessions.map(function(d){return d.sessions;}),borderColor:'#c8f000',backgroundColor:'rgba(200,240,0,0.1)',fill:true,tension:.4,pointRadius:3,pointBackgroundColor:'#c8f000'}]},options:getOpts()});
-  }else{sh('e-seo-sess');el('c-seo-sess').style.display='none';}
-  dc('sc');
-  if(channels.length){hd('e-seo-ch');var cols=['#c8f000','#3b82f6','#8b5cf6','#f59e0b','#ec4899','#06b6d4'];
-    CHARTS['sc']=new Chart(el('c-seo-ch').getContext('2d'),{type:'doughnut',data:{labels:channels.map(function(d){return d.channel;}),datasets:[{data:channels.map(function(d){return d.sessions;}),backgroundColor:cols,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,position:'bottom',labels:{color:'#888',font:{size:10},padding:8,boxWidth:10}},tooltip:getTT()}}});
-  }else{sh('e-seo-ch');el('c-seo-ch').style.display='none';}
+
   var top=keywords.slice(0,15);
   if(top.length){hd('e-kw');el('t-kw').innerHTML=top.map(function(kw){var p=kw.position,pc=p<=5?'pg':p<=10?'po':'pm';return '<tr><td class="dim">'+kw.keyword+'</td><td class="r '+pc+'">'+p.toFixed(1)+'</td><td class="r">'+fmt(kw.clicks)+'</td><td class="r">'+fmt(kw.impressions)+'</td><td class="r">'+fmtP(kw.ctr)+'</td></tr>';}).join('');}
   else{sh('e-kw');}
@@ -1169,13 +1183,30 @@ function renderSocial(social){
   el('social-plat').innerHTML=platforms.length?platforms.map(function(p){return '<div style="margin-bottom:16px"><div style="font-size:12px;font-weight:700;color:var(--w);margin-bottom:8px">'+p.platform+'</div><div class="sr"><span class="srl">Reach</span><span class="srv">'+fmt(p.reach)+'</span></div><div class="sr"><span class="srl">Engagements</span><span class="srv">'+fmt(p.engagements)+'</span></div><div class="sr"><span class="srl">Followers</span><span class="srv">'+fmt(p.followers)+'</span></div></div>';}).join(''):'<div class="du"><div class="du-t">Data updating\u2026</div></div>';
 }
 
+function renderAiReferral(website){
+  var ai=website.aiReferral||{};
+  var trend=ai.weeklyTrend||[],platforms=ai.platforms||[];
+  if(trend.length){
+    hd('e-ai-ref');
+    dc('air');
+    CHARTS['air']=new Chart(el('c-ai-ref').getContext('2d'),{type:'line',data:{labels:trend.map(function(d){return 'Wk '+d.week;}),datasets:[{label:'AI Sessions',data:trend.map(function(d){return d.sessions;}),borderColor:'#c8f000',backgroundColor:'rgba(200,240,0,0.1)',fill:true,tension:.4,pointRadius:3,pointBackgroundColor:'#c8f000'}]},options:getOpts()});
+  }else{sh('e-ai-ref');var cv=el('c-ai-ref');if(cv)cv.style.display='none';}
+  var ch=el('ai-ref-ch');
+  if(ch){
+    if(platforms.length){
+      var maxV=Math.max.apply(null,platforms.map(function(p){return p.sessions;}));
+      ch.innerHTML=platforms.map(function(p){
+        var pct=maxV>0?((p.sessions/maxV)*100).toFixed(0):0;
+        return '<div style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="color:var(--sub);font-size:13px">'+p.name+'</span><span style="color:var(--w);font-size:13px;font-weight:700">'+fmt(p.sessions)+(p.sessions===1?' session':' sessions')+'</span></div><div style="background:#1e1e1e;border-radius:3px;height:5px"><div style="background:var(--lime);border-radius:3px;height:5px;width:'+pct+'%"></div></div></div>';
+      }).join('');
+      var total=ai.total||0;
+      ch.innerHTML+='<div style="margin-top:16px;padding-top:12px;border-top:1px solid #2a2a2a;display:flex;justify-content:space-between"><span style="color:var(--sub);font-size:12px">Total AI Referrals</span><span style="color:var(--lime);font-size:13px;font-weight:700">'+fmt(total)+'</span></div>';
+    }else{
+      ch.innerHTML='<div style="color:var(--sub);font-size:13px;padding:12px 0">No AI referral sessions detected this period. As your AI visibility grows, clicks from Perplexity, ChatGPT, Gemini, and others will appear here.</div>';
+    }
+  }
+}
 function renderWebsite(website,seo){
-  var sessions=website.sessionsOverTime||[],channels=(seo&&seo.trafficChannels)||[];
-  dc('web');
-  if(sessions.length){hd('e-web');CHARTS['web']=new Chart(el('c-web').getContext('2d'),{type:'line',data:{labels:sessions.map(function(d){return 'Wk '+d.week;}),datasets:[{label:'Sessions',data:sessions.map(function(d){return d.sessions;}),borderColor:'#c8f000',backgroundColor:'rgba(200,240,0,0.1)',fill:true,tension:.4,pointRadius:3,pointBackgroundColor:'#c8f000'}]},options:getOpts()});}
-  else{sh('e-web');el('c-web').style.display='none';}
-  if(channels.length){var top=channels.slice(0,5),maxV=Math.max.apply(null,top.map(function(c){return c.sessions;}));el('web-ch').innerHTML=top.map(function(c){var pct=maxV>0?((c.sessions/maxV)*100).toFixed(0):0;return '<div style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="color:var(--sub);font-size:12px">'+c.channel+'</span><span style="color:var(--w);font-size:12px;font-weight:700">'+fmt(c.sessions)+'</span></div><div style="background:#1e1e1e;border-radius:3px;height:5px"><div style="background:var(--lime);border-radius:3px;height:5px;width:'+pct+'%"></div></div></div>';}).join('');}
-  else{el('web-ch').innerHTML='<div class="du"><div class="du-t">Data updating\u2026</div></div>';}
   PSI_DATA=website.psiScores||{};renderPSI('mobile');
 }
 function renderPSI(v){PSI_VIEW=v;el('psi-m').classList.toggle('active',v==='mobile');el('psi-d').classList.toggle('active',v==='desktop');var sc=PSI_DATA[v]||{};el('psi-wrap').innerHTML=[['Performance',sc.performance],['Accessibility',sc.accessibility],['Best Practices',sc.bestPractices],['SEO',sc.seo]].map(function(m){var val=m[1],cls=val==null?'':val>=90?'good':val>=50?'ok':'poor';return '<div class="psi-c '+cls+'"><div class="psi-s">'+(val!=null?val:'\u2014')+'</div><div class="psi-l">'+m[0]+'</div></div>';}).join('');}
@@ -1302,7 +1333,7 @@ function applyRange(start,end){
   if(mods.metaAds)renderMeta(fd.ads,fd.social);
   if(mods.gbp)renderGBP(fd.gbp,fd.gbp2||null);
   if(mods.social)renderSocial(fd.social);
-  if(mods.website)renderWebsite(fd.website,fd.seo);
+  if(mods.website){renderAiReferral(fd.website||{});renderWebsite(fd.website,fd.seo);}
 }
 /* ── EXPORT ── */
 function exportPDF(){

@@ -191,6 +191,7 @@ async function buildReport(slug) {
 
     website: {
       sessionsOverTime: v(ga4)?.sessionsOverTime ?? base.website?.sessionsOverTime ?? [],
+      aiReferral: v(ga4)?.aiReferral ?? base.website?.aiReferral ?? { total: 0, platforms: [], weeklyTrend: [] },
       vitals: base.website?.vitals ?? { lcp: null, cls: null, inp: null, pagespeedMobile: null },
       psiScores: v(psi) ?? base.website?.psiScores ?? { mobile: null, desktop: null },
       psiHistory: (() => {

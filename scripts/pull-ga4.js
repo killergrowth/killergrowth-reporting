@@ -134,7 +134,68 @@ async function pullGA4(propertyId) {
     byChannel:        leadsByChannel
   };
 
-  console.log(`[GA4] sessions=${sessions} conversions=${conversions} channels=${trafficChannels.length} total_leads=${leadSignals.phoneCalls + leadSignals.formSubmissions}`);
+  // 5. AI referral traffic by platform
+  const AI_SOURCES = [
+    { key: 'perplexity', match: 'perplexity.ai' },
+    { key: 'chatgpt',    match: 'chatgpt.com' },
+    { key: 'claude',     match: 'claude.ai' },
+    { key: 'gemini',     match: 'gemini.google.com' },
+    { key: 'copilot',    match: 'copilot.microsoft.com' },
+    { key: 'you',        match: 'you.com' },
+    { key: 'phind',      match: 'phind.com' }
+  ];
+
+  const aiSourceFilter = {
+    orGroup: {
+      expressions: AI_SOURCES.map(s => ({
+        filter: { fieldName: 'sessionSource', stringFilter: { matchType: 'CONTAINS', value: s.match } }
+      }))
+    }
+  };
+
+  const aiByPlatform = await runReport(propertyId, token, {
+    dateRanges: [{ startDate, endDate }],
+    dimensions: [{ name: 'sessionSource' }],
+    metrics: [{ name: 'sessions' }],
+    dimensionFilter: aiSourceFilter,
+    orderBys: [{ metric: { metricName: 'sessions' }, desc: true }]
+  });
+
+  const aiByWeek = await runReport(propertyId, token, {
+    dateRanges: [{ startDate, endDate }],
+    dimensions: [{ name: 'week' }],
+    metrics: [{ name: 'sessions' }],
+    dimensionFilter: aiSourceFilter,
+    orderBys: [{ dimension: { dimensionName: 'week' } }]
+  });
+
+  // Map raw sources to friendly platform names
+  const PLATFORM_NAMES = {
+    'perplexity.ai': 'Perplexity',
+    'chatgpt.com':   'ChatGPT',
+    'claude.ai':     'Claude',
+    'gemini.google.com': 'Gemini',
+    'copilot.microsoft.com': 'Copilot',
+    'you.com': 'You.com',
+    'phind.com': 'Phind'
+  };
+
+  const aiPlatforms = (aiByPlatform.rows || []).map(r => {
+    const src = r.dimensionValues[0].value;
+    const name = Object.entries(PLATFORM_NAMES).find(([k]) => src.includes(k))?.[1] || src;
+    return { name, sessions: parseInt(r.metricValues[0].value) };
+  });
+
+  const aiTotal = aiPlatforms.reduce((s, p) => s + p.sessions, 0);
+
+  const aiWeeklyTrend = (aiByWeek.rows || []).map(r => ({
+    week: r.dimensionValues[0].value,
+    sessions: parseInt(r.metricValues[0].value)
+  }));
+
+  const aiReferral = { total: aiTotal, platforms: aiPlatforms, weeklyTrend: aiWeeklyTrend };
+
+  console.log(`[GA4] sessions=${sessions} conversions=${conversions} channels=${trafficChannels.length} ai_referral=${aiTotal} total_leads=${leadSignals.phoneCalls + leadSignals.formSubmissions}`);
 
   return {
     sessions,
@@ -142,7 +203,8 @@ async function pullGA4(propertyId) {
     sessionsDelta: prevSessions > 0 ? Math.round(((sessions - prevSessions) / prevSessions) * 100) : null,
     sessionsOverTime,
     trafficChannels,
-    leadSignals
+    leadSignals,
+    aiReferral
   };
 }
 
