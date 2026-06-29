@@ -148,7 +148,8 @@ async function buildReport(slug) {
       googleKeywords:  v(lf)?.googleKeywords  ?? base.localFalcon?.googleKeywords  ?? [],
       aiPlatforms:     v(lf)?.aiPlatforms     ?? base.localFalcon?.aiPlatforms     ?? [],
       topAiKeywords:   v(lf)?.topAiKeywords   ?? base.localFalcon?.topAiKeywords   ?? [],
-      brandPhrases:    v(bp)                  ?? base.localFalcon?.brandPhrases    ?? null
+      brandPhrases:    v(bp)                  ?? base.localFalcon?.brandPhrases    ?? null,
+      campaignPublicUrl: client.lfCampaignUrl   ?? base.localFalcon?.campaignPublicUrl ?? null
     },
 
     gbp: {

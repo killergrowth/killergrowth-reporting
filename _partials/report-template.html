@@ -189,6 +189,8 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
 .geo-kw-bar-wrap{width:80px;height:6px;background:var(--border);border-radius:3px;margin-right:10px;flex-shrink:0}
 .geo-kw-bar{height:6px;border-radius:3px;background:var(--lime)}
 .geo-kw-val{font-weight:700;font-size:13px;color:var(--w);min-width:36px;text-align:right}
+.lf-report-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--card);border:1px solid var(--lime);border-radius:8px;color:var(--lime);font-size:13px;font-weight:600;text-decoration:none;transition:background .15s,color .15s}
+.lf-report-btn:hover{background:var(--lime);color:#000}
 .kg-info-tip{position:relative;display:inline-flex;align-items:center;color:var(--muted);font-size:13px;cursor:pointer;flex-shrink:0}
 .kg-info-tip:hover{color:var(--lime)}
 .kg-info-tip::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#1e1e2e;color:var(--w);font-size:11px;font-weight:400;letter-spacing:0;text-transform:none;white-space:normal;max-width:260px;min-width:200px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);box-shadow:0 4px 16px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity .15s ease;z-index:100;line-height:1.5}
@@ -499,6 +501,11 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
         <div class="g2">
           <div class="card" id="map-grid"><div class="clbl">Local Falcon Grid</div><div class="du"><div class="du-t">Data updating&hellip;</div></div></div>
           <div class="card" id="map-stats"><div class="clbl">Grid Summary</div><div class="du"><div class="du-t">Data updating&hellip;</div></div></div>
+        </div>
+        <div id="lf-report-btn-wrap" style="display:none;margin-top:16px">
+          <a id="lf-report-btn" href="#" target="_blank" rel="noopener" class="lf-report-btn">
+            <span>&#127757;</span> View Latest Local Falcon Report
+          </a>
         </div>
       </section>
 
@@ -848,6 +855,14 @@ function renderGEO(lf){
           +'</tr>';
       }).join('');
     }
+  }
+
+  // LF Campaign Report button
+  var btnWrap=el('lf-report-btn-wrap');
+  var btnEl=el('lf-report-btn');
+  if(btnWrap&&btnEl&&lf.campaignPublicUrl){
+    btnEl.href=lf.campaignPublicUrl;
+    btnWrap.style.display='';
   }
 
   // Google Maps keywords
