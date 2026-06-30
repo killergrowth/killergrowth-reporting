@@ -3,7 +3,7 @@
   "slug": "timnath",
   "logoPath": null,
   "period": "May 2026",
-  "generatedAt": "2026-06-29T11:55:05.905Z",
+  "generatedAt": "2026-06-30T10:28:47.877Z",
   "overview": {
     "sessions": 125,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 11,
     "rankingsDelta": null,
-    "gbpViews": 659,
+    "gbpViews": 676,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -260,8 +260,8 @@
         }
       },
       "gbpCalls": 7,
-      "gbpWebsiteClicks": 13,
-      "gbpDirections": 267
+      "gbpWebsiteClicks": 15,
+      "gbpDirections": 278
     }
   },
   "ads": {
@@ -354,11 +354,11 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 659,
+    "totalViews": 676,
     "calls": 7,
     "callsDelta": null,
-    "directions": 267,
-    "websiteClicks": 13,
+    "directions": 278,
+    "websiteClicks": 15,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1560,27 +1560,69 @@
       },
       {
         "date": "2026-06-21",
-        "views": 0,
+        "views": 5,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-06-22",
-        "views": 0,
+        "views": 2,
         "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
+        "directions": 1,
+        "websiteClicks": 1
       },
       {
         "date": "2026-06-23",
         "views": 0,
         "calls": 0,
+        "directions": 1,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-06-24",
+        "views": 1,
+        "calls": 0,
+        "directions": 5,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-25",
+        "views": 3,
+        "calls": 0,
+        "directions": 1,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-26",
+        "views": 4,
+        "calls": 0,
+        "directions": 3,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-27",
+        "views": 2,
+        "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
-        "date": "2026-06-24",
+        "date": "2026-06-28",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-29",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-30",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1623,15 +1665,15 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 65,
+        "performance": 63,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 72,
+        "performance": 74,
         "accessibility": 90,
-        "bestPractices": 100,
+        "bestPractices": 96,
         "seo": 92
       }
     },
@@ -1693,6 +1735,21 @@
           "performance": 72,
           "accessibility": 90,
           "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-06-30",
+        "mobile": {
+          "performance": 63,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 74,
+          "accessibility": 90,
+          "bestPractices": 96,
           "seo": 92
         }
       }
