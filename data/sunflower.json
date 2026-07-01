@@ -3,9 +3,9 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-01T10:37:51.657Z",
+  "generatedAt": "2026-07-01T20:27:17.771Z",
   "overview": {
-    "sessions": 585,
+    "sessions": 593,
     "sessionsDelta": 0,
     "leads": null,
     "leadsDelta": null,
@@ -26,39 +26,146 @@
   "seo": {
     "organicSessions": [
       {
+        "week": "06",
+        "date": "2026-02-02",
+        "sessions": 139,
+        "conversions": 0
+      },
+      {
+        "week": "07",
+        "date": "2026-02-09",
+        "sessions": 177,
+        "conversions": 0
+      },
+      {
+        "week": "08",
+        "date": "2026-02-16",
+        "sessions": 220,
+        "conversions": 0
+      },
+      {
+        "week": "09",
+        "date": "2026-02-23",
+        "sessions": 205,
+        "conversions": 0
+      },
+      {
+        "week": "10",
+        "date": "2026-03-02",
+        "sessions": 171,
+        "conversions": 0
+      },
+      {
+        "week": "11",
+        "date": "2026-03-09",
+        "sessions": 178,
+        "conversions": 0
+      },
+      {
+        "week": "12",
+        "date": "2026-03-16",
+        "sessions": 182,
+        "conversions": 0
+      },
+      {
+        "week": "13",
+        "date": "2026-03-23",
+        "sessions": 162,
+        "conversions": 0
+      },
+      {
+        "week": "14",
+        "date": "2026-03-30",
+        "sessions": 143,
+        "conversions": 0
+      },
+      {
+        "week": "15",
+        "date": "2026-04-06",
+        "sessions": 156,
+        "conversions": 0
+      },
+      {
+        "week": "16",
+        "date": "2026-04-13",
+        "sessions": 176,
+        "conversions": 0
+      },
+      {
+        "week": "17",
+        "date": "2026-04-20",
+        "sessions": 114,
+        "conversions": 0
+      },
+      {
+        "week": "18",
+        "date": "2026-04-27",
+        "sessions": 141,
+        "conversions": 0
+      },
+      {
+        "week": "19",
+        "date": "2026-05-04",
+        "sessions": 209,
+        "conversions": 0
+      },
+      {
+        "week": "20",
+        "date": "2026-05-11",
+        "sessions": 234,
+        "conversions": 0
+      },
+      {
+        "week": "21",
+        "date": "2026-05-18",
+        "sessions": 134,
+        "conversions": 0
+      },
+      {
+        "week": "22",
+        "date": "2026-05-25",
+        "sessions": 165,
+        "conversions": 0
+      },
+      {
         "week": "23",
-        "sessions": 92,
+        "date": "2026-06-01",
+        "sessions": 104,
         "conversions": 0
       },
       {
         "week": "24",
+        "date": "2026-06-08",
         "sessions": 120,
         "conversions": 0
       },
       {
         "week": "25",
+        "date": "2026-06-15",
         "sessions": 122,
         "conversions": 0
       },
       {
         "week": "26",
+        "date": "2026-06-22",
         "sessions": 194,
         "conversions": 0
       },
       {
         "week": "27",
-        "sessions": 57,
+        "date": "2026-06-29",
+        "sessions": 65,
         "conversions": 0
       }
     ],
     "trafficChannels": [
       {
         "channel": "Direct",
-        "sessions": 390
+        "sessions": 396
       },
       {
         "channel": "Organic Search",
-        "sessions": 78
+        "sessions": 79
       },
       {
         "channel": "Paid Search",
@@ -66,15 +173,41 @@
       },
       {
         "channel": "Cross-network",
-        "sessions": 26
+        "sessions": 27
       },
       {
         "channel": "Organic Social",
-        "sessions": 18
+        "sessions": 19
+      },
+      {
+        "channel": "Referral",
+        "sessions": 4
+      },
+      {
+        "channel": "AI Assistant",
+        "sessions": 3
       },
       {
         "channel": "Unassigned",
+        "sessions": 1
+      }
+    ],
+    "organicSearchSources": [
+      {
+        "source": "google",
+        "sessions": 67
+      },
+      {
+        "source": "yahoo",
         "sessions": 5
+      },
+      {
+        "source": "bing",
+        "sessions": 4
+      },
+      {
+        "source": "duckduckgo",
+        "sessions": 3
       }
     ],
     "keywords": [
@@ -255,7 +388,7 @@
       }
     ],
     "leadSignals": {
-      "organicSessions": 78,
+      "organicSessions": 79,
       "phoneCalls": 0,
       "formSubmissions": 0,
       "emailClicks": 0,
@@ -263,10 +396,9 @@
       "formStarts": 12,
       "byChannel": {
         "form_start": {
-          "Direct": 9,
+          "Direct": 10,
           "AI Assistant": 1,
-          "Organic Search": 1,
-          "Unassigned": 1
+          "Organic Search": 1
         }
       },
       "gbpCalls": 0,
@@ -324,7 +456,8 @@
     "googleKeywords": [],
     "aiPlatforms": [],
     "topAiKeywords": [],
-    "brandPhrases": null
+    "brandPhrases": null,
+    "campaignPublicUrl": null
   },
   "gbp": {
     "locationName": "Primary",
@@ -386,31 +519,157 @@
   "website": {
     "sessionsOverTime": [
       {
+        "week": "06",
+        "date": "2026-02-02",
+        "sessions": 139,
+        "conversions": 0
+      },
+      {
+        "week": "07",
+        "date": "2026-02-09",
+        "sessions": 177,
+        "conversions": 0
+      },
+      {
+        "week": "08",
+        "date": "2026-02-16",
+        "sessions": 220,
+        "conversions": 0
+      },
+      {
+        "week": "09",
+        "date": "2026-02-23",
+        "sessions": 205,
+        "conversions": 0
+      },
+      {
+        "week": "10",
+        "date": "2026-03-02",
+        "sessions": 171,
+        "conversions": 0
+      },
+      {
+        "week": "11",
+        "date": "2026-03-09",
+        "sessions": 178,
+        "conversions": 0
+      },
+      {
+        "week": "12",
+        "date": "2026-03-16",
+        "sessions": 182,
+        "conversions": 0
+      },
+      {
+        "week": "13",
+        "date": "2026-03-23",
+        "sessions": 162,
+        "conversions": 0
+      },
+      {
+        "week": "14",
+        "date": "2026-03-30",
+        "sessions": 143,
+        "conversions": 0
+      },
+      {
+        "week": "15",
+        "date": "2026-04-06",
+        "sessions": 156,
+        "conversions": 0
+      },
+      {
+        "week": "16",
+        "date": "2026-04-13",
+        "sessions": 176,
+        "conversions": 0
+      },
+      {
+        "week": "17",
+        "date": "2026-04-20",
+        "sessions": 114,
+        "conversions": 0
+      },
+      {
+        "week": "18",
+        "date": "2026-04-27",
+        "sessions": 141,
+        "conversions": 0
+      },
+      {
+        "week": "19",
+        "date": "2026-05-04",
+        "sessions": 209,
+        "conversions": 0
+      },
+      {
+        "week": "20",
+        "date": "2026-05-11",
+        "sessions": 234,
+        "conversions": 0
+      },
+      {
+        "week": "21",
+        "date": "2026-05-18",
+        "sessions": 134,
+        "conversions": 0
+      },
+      {
+        "week": "22",
+        "date": "2026-05-25",
+        "sessions": 165,
+        "conversions": 0
+      },
+      {
         "week": "23",
-        "sessions": 92,
+        "date": "2026-06-01",
+        "sessions": 104,
         "conversions": 0
       },
       {
         "week": "24",
+        "date": "2026-06-08",
         "sessions": 120,
         "conversions": 0
       },
       {
         "week": "25",
+        "date": "2026-06-15",
         "sessions": 122,
         "conversions": 0
       },
       {
         "week": "26",
+        "date": "2026-06-22",
         "sessions": 194,
         "conversions": 0
       },
       {
         "week": "27",
-        "sessions": 57,
+        "date": "2026-06-29",
+        "sessions": 65,
         "conversions": 0
       }
     ],
+    "aiReferral": {
+      "total": 4,
+      "platforms": [
+        {
+          "name": "ChatGPT",
+          "sessions": 4
+        }
+      ],
+      "weeklyTrend": [
+        {
+          "week": "24",
+          "sessions": 3
+        },
+        {
+          "week": "25",
+          "sessions": 1
+        }
+      ]
+    },
     "vitals": {
       "lcp": null,
       "cls": null,

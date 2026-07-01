@@ -3,9 +3,9 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "June 2026",
-  "generatedAt": "2026-07-01T10:37:21.752Z",
+  "generatedAt": "2026-07-01T20:27:20.693Z",
   "overview": {
-    "sessions": 49,
+    "sessions": 50,
     "sessionsDelta": 0,
     "leads": null,
     "leadsDelta": null,
@@ -26,35 +26,142 @@
   "seo": {
     "organicSessions": [
       {
+        "week": "06",
+        "date": "2026-02-02",
+        "sessions": 263,
+        "conversions": 0
+      },
+      {
+        "week": "07",
+        "date": "2026-02-09",
+        "sessions": 933,
+        "conversions": 0
+      },
+      {
+        "week": "08",
+        "date": "2026-02-16",
+        "sessions": 860,
+        "conversions": 0
+      },
+      {
+        "week": "09",
+        "date": "2026-02-23",
+        "sessions": 588,
+        "conversions": 0
+      },
+      {
+        "week": "10",
+        "date": "2026-03-02",
+        "sessions": 369,
+        "conversions": 0
+      },
+      {
+        "week": "11",
+        "date": "2026-03-09",
+        "sessions": 352,
+        "conversions": 0
+      },
+      {
+        "week": "12",
+        "date": "2026-03-16",
+        "sessions": 314,
+        "conversions": 0
+      },
+      {
+        "week": "13",
+        "date": "2026-03-23",
+        "sessions": 114,
+        "conversions": 0
+      },
+      {
+        "week": "14",
+        "date": "2026-03-30",
+        "sessions": 18,
+        "conversions": 0
+      },
+      {
+        "week": "15",
+        "date": "2026-04-06",
+        "sessions": 10,
+        "conversions": 0
+      },
+      {
+        "week": "16",
+        "date": "2026-04-13",
+        "sessions": 12,
+        "conversions": 0
+      },
+      {
+        "week": "17",
+        "date": "2026-04-20",
+        "sessions": 16,
+        "conversions": 0
+      },
+      {
+        "week": "18",
+        "date": "2026-04-27",
+        "sessions": 5,
+        "conversions": 0
+      },
+      {
+        "week": "19",
+        "date": "2026-05-04",
+        "sessions": 15,
+        "conversions": 0
+      },
+      {
+        "week": "20",
+        "date": "2026-05-11",
+        "sessions": 13,
+        "conversions": 0
+      },
+      {
+        "week": "21",
+        "date": "2026-05-18",
+        "sessions": 17,
+        "conversions": 0
+      },
+      {
+        "week": "22",
+        "date": "2026-05-25",
+        "sessions": 7,
+        "conversions": 0
+      },
+      {
         "week": "23",
+        "date": "2026-06-01",
         "sessions": 11,
         "conversions": 0
       },
       {
         "week": "24",
+        "date": "2026-06-08",
         "sessions": 12,
         "conversions": 0
       },
       {
         "week": "25",
+        "date": "2026-06-15",
         "sessions": 12,
         "conversions": 0
       },
       {
         "week": "26",
+        "date": "2026-06-22",
         "sessions": 10,
         "conversions": 0
       },
       {
         "week": "27",
-        "sessions": 4,
+        "date": "2026-06-29",
+        "sessions": 5,
         "conversions": 0
       }
     ],
     "trafficChannels": [
       {
         "channel": "Direct",
-        "sessions": 24
+        "sessions": 25
       },
       {
         "channel": "Organic Search",
@@ -69,12 +176,18 @@
         "sessions": 2
       },
       {
-        "channel": "Organic Social",
-        "sessions": 1
+        "channel": "Unassigned",
+        "sessions": 2
       },
       {
-        "channel": "Unassigned",
+        "channel": "Organic Social",
         "sessions": 1
+      }
+    ],
+    "organicSearchSources": [
+      {
+        "source": "google",
+        "sessions": 18
       }
     ],
     "keywords": [],
@@ -84,10 +197,11 @@
       "formSubmissions": 0,
       "emailClicks": 0,
       "ctaClicks": 0,
-      "formStarts": 1,
+      "formStarts": 2,
       "byChannel": {
         "form_start": {
-          "Direct": 1
+          "Direct": 1,
+          "Unassigned": 1
         }
       },
       "gbpCalls": 0,
@@ -146,7 +260,8 @@
     "googleKeywords": [],
     "aiPlatforms": [],
     "topAiKeywords": [],
-    "brandPhrases": null
+    "brandPhrases": null,
+    "campaignPublicUrl": null
   },
   "gbp": {
     "locationName": "Primary",
@@ -208,31 +323,143 @@
   "website": {
     "sessionsOverTime": [
       {
+        "week": "06",
+        "date": "2026-02-02",
+        "sessions": 263,
+        "conversions": 0
+      },
+      {
+        "week": "07",
+        "date": "2026-02-09",
+        "sessions": 933,
+        "conversions": 0
+      },
+      {
+        "week": "08",
+        "date": "2026-02-16",
+        "sessions": 860,
+        "conversions": 0
+      },
+      {
+        "week": "09",
+        "date": "2026-02-23",
+        "sessions": 588,
+        "conversions": 0
+      },
+      {
+        "week": "10",
+        "date": "2026-03-02",
+        "sessions": 369,
+        "conversions": 0
+      },
+      {
+        "week": "11",
+        "date": "2026-03-09",
+        "sessions": 352,
+        "conversions": 0
+      },
+      {
+        "week": "12",
+        "date": "2026-03-16",
+        "sessions": 314,
+        "conversions": 0
+      },
+      {
+        "week": "13",
+        "date": "2026-03-23",
+        "sessions": 114,
+        "conversions": 0
+      },
+      {
+        "week": "14",
+        "date": "2026-03-30",
+        "sessions": 18,
+        "conversions": 0
+      },
+      {
+        "week": "15",
+        "date": "2026-04-06",
+        "sessions": 10,
+        "conversions": 0
+      },
+      {
+        "week": "16",
+        "date": "2026-04-13",
+        "sessions": 12,
+        "conversions": 0
+      },
+      {
+        "week": "17",
+        "date": "2026-04-20",
+        "sessions": 16,
+        "conversions": 0
+      },
+      {
+        "week": "18",
+        "date": "2026-04-27",
+        "sessions": 5,
+        "conversions": 0
+      },
+      {
+        "week": "19",
+        "date": "2026-05-04",
+        "sessions": 15,
+        "conversions": 0
+      },
+      {
+        "week": "20",
+        "date": "2026-05-11",
+        "sessions": 13,
+        "conversions": 0
+      },
+      {
+        "week": "21",
+        "date": "2026-05-18",
+        "sessions": 17,
+        "conversions": 0
+      },
+      {
+        "week": "22",
+        "date": "2026-05-25",
+        "sessions": 7,
+        "conversions": 0
+      },
+      {
         "week": "23",
+        "date": "2026-06-01",
         "sessions": 11,
         "conversions": 0
       },
       {
         "week": "24",
+        "date": "2026-06-08",
         "sessions": 12,
         "conversions": 0
       },
       {
         "week": "25",
+        "date": "2026-06-15",
         "sessions": 12,
         "conversions": 0
       },
       {
         "week": "26",
+        "date": "2026-06-22",
         "sessions": 10,
         "conversions": 0
       },
       {
         "week": "27",
-        "sessions": 4,
+        "date": "2026-06-29",
+        "sessions": 5,
         "conversions": 0
       }
     ],
+    "aiReferral": {
+      "total": 0,
+      "platforms": [],
+      "weeklyTrend": []
+    },
     "vitals": {
       "lcp": null,
       "cls": null,

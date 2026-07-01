@@ -2,16 +2,16 @@
   "client": "Timnath Painting",
   "slug": "timnath",
   "logoPath": null,
-  "period": "May 2026",
-  "generatedAt": "2026-06-24T23:57:42.402Z",
+  "period": "June 2026",
+  "generatedAt": "2026-07-01T20:27:27.623Z",
   "overview": {
-    "sessions": 142,
+    "sessions": 190,
     "sessionsDelta": 0,
     "leads": null,
     "leadsDelta": null,
-    "rankingsTop10": 11,
+    "rankingsTop10": 12,
     "rankingsDelta": null,
-    "gbpViews": 659,
+    "gbpViews": 674,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -27,78 +27,162 @@
     "organicSessions": [
       {
         "week": "20",
+        "date": "2026-05-11",
         "sessions": 5,
         "conversions": 0
       },
       {
         "week": "21",
+        "date": "2026-05-18",
         "sessions": 78,
         "conversions": 3
       },
       {
         "week": "22",
+        "date": "2026-05-25",
         "sessions": 42,
         "conversions": 0
       },
       {
         "week": "23",
-        "sessions": 17,
+        "date": "2026-06-01",
+        "sessions": 50,
+        "conversions": 0
+      },
+      {
+        "week": "24",
+        "date": "2026-06-08",
+        "sessions": 46,
+        "conversions": 0
+      },
+      {
+        "week": "25",
+        "date": "2026-06-15",
+        "sessions": 25,
+        "conversions": 0
+      },
+      {
+        "week": "26",
+        "date": "2026-06-22",
+        "sessions": 31,
+        "conversions": 1
+      },
+      {
+        "week": "27",
+        "date": "2026-06-29",
+        "sessions": 38,
         "conversions": 0
       }
     ],
     "trafficChannels": [
       {
         "channel": "Direct",
-        "sessions": 107
+        "sessions": 132
+      },
+      {
+        "channel": "Organic Search",
+        "sessions": 37
       },
       {
         "channel": "Referral",
         "sessions": 21
       },
       {
-        "channel": "Organic Search",
-        "sessions": 13
+        "channel": "Unassigned",
+        "sessions": 6
+      }
+    ],
+    "organicSearchSources": [
+      {
+        "source": "google",
+        "sessions": 25
       },
       {
-        "channel": "Unassigned",
-        "sessions": 1
+        "source": "search.google.com",
+        "sessions": 10
+      },
+      {
+        "source": "bing",
+        "sessions": 2
       }
     ],
     "keywords": [
       {
+        "keyword": "timnath painting",
+        "clicks": 8,
+        "impressions": 42,
+        "ctr": 19,
+        "position": 1.9
+      },
+      {
+        "keyword": "fence staining services near me",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 1
+      },
+      {
         "keyword": "affordable painter near me",
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 1,
         "ctr": 0,
         "position": 21
+      },
+      {
+        "keyword": "affordable painters near me",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
       },
       {
         "keyword": "apartment painting service",
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 1,
         "ctr": 0,
         "position": 21
       },
       {
-        "keyword": "bathroom",
+        "keyword": "basement finishing timnath",
+        "clicks": 0,
+        "impressions": 17,
+        "ctr": 0,
+        "position": 83.6
+      },
+      {
+        "keyword": "basement painting near me",
         "clicks": 0,
         "impressions": 1,
         "ctr": 0,
-        "position": 2
+        "position": 1
       },
       {
-        "keyword": "best exterior painters near me",
-        "clicks": 0,
-        "impressions": 2,
-        "ctr": 0,
-        "position": 10
-      },
-      {
-        "keyword": "best painters near me",
+        "keyword": "basement remodeling timnath",
         "clicks": 0,
         "impressions": 1,
         "ctr": 0,
-        "position": 17
+        "position": 88
+      },
+      {
+        "keyword": "bathroom painter weld county",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 1.5
+      },
+      {
+        "keyword": "bathroom painting near me",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keyword": "best commercial exterior paint fort collins",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 29
       },
       {
         "keyword": "building painters near me",
@@ -110,166 +194,123 @@
       {
         "keyword": "cabinet painters berthoud co",
         "clicks": 0,
-        "impressions": 11,
+        "impressions": 13,
         "ctr": 0,
-        "position": 1.8
+        "position": 1
+      },
+      {
+        "keyword": "cabinet painting",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keyword": "cabinet painting companies timnath co",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keyword": "cabinet painting contractors timnath co",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keyword": "cabinet painting near me",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 1
       },
       {
         "keyword": "ceramic coating timnath",
         "clicks": 0,
         "impressions": 1,
         "ctr": 0,
-        "position": 41
+        "position": 21
       },
       {
         "keyword": "commercial exterior painting northern colorado",
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 2,
         "ctr": 0,
-        "position": 93
+        "position": 52.5
       },
       {
         "keyword": "commercial interior painting northern colorado",
         "clicks": 0,
         "impressions": 1,
         "ctr": 0,
-        "position": 70
+        "position": 62
       },
       {
         "keyword": "commercial painters berthoud co",
         "clicks": 0,
-        "impressions": 10,
+        "impressions": 13,
         "ctr": 0,
         "position": 1
       },
       {
         "keyword": "commercial painters in my area",
         "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 23.3
+      },
+      {
+        "keyword": "commercial painters windsor co",
+        "clicks": 0,
         "impressions": 1,
         "ctr": 0,
-        "position": 17
+        "position": 1
       },
       {
         "keyword": "commercial painting companies near me",
         "clicks": 0,
         "impressions": 1,
         "ctr": 0,
-        "position": 50
+        "position": 48
       },
       {
-        "keyword": "custom painters",
+        "keyword": "commercial painting northern colorado",
         "clicks": 0,
         "impressions": 1,
         "ctr": 0,
-        "position": 3
-      },
-      {
-        "keyword": "custom painting",
-        "clicks": 0,
-        "impressions": 803,
-        "ctr": 0,
-        "position": 1
-      },
-      {
-        "keyword": "exterior house painters near me",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 6
-      },
-      {
-        "keyword": "exterior painters berthoud co",
-        "clicks": 0,
-        "impressions": 9,
-        "ctr": 0,
-        "position": 1
-      },
-      {
-        "keyword": "exterior painters near me",
-        "clicks": 0,
-        "impressions": 168,
-        "ctr": 0,
-        "position": 1.2
-      },
-      {
-        "keyword": "exterior painters windsor co",
-        "clicks": 0,
-        "impressions": 2,
-        "ctr": 0,
-        "position": 1
-      },
-      {
-        "keyword": "exterior painting",
-        "clicks": 0,
-        "impressions": 5,
-        "ctr": 0,
-        "position": 3
-      },
-      {
-        "keyword": "exterior painting company near me",
-        "clicks": 0,
-        "impressions": 3,
-        "ctr": 0,
-        "position": 21
-      },
-      {
-        "keyword": "exterior painting timnath",
-        "clicks": 0,
-        "impressions": 17,
-        "ctr": 0,
-        "position": 48.4
-      },
-      {
-        "keyword": "fence staining near me",
-        "clicks": 0,
-        "impressions": 2,
-        "ctr": 0,
-        "position": 12.5
-      },
-      {
-        "keyword": "hardscape design timnath, colorado",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 81
-      },
-      {
-        "keyword": "high-quality commercial painting northern colorado",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 96
+        "position": 95
       }
     ],
     "leadSignals": {
-      "organicSessions": 13,
-      "phoneCalls": 2,
+      "organicSessions": 37,
+      "phoneCalls": 0,
       "formSubmissions": 1,
-      "emailClicks": 1,
-      "ctaClicks": 27,
-      "formStarts": 1,
+      "emailClicks": 3,
+      "ctaClicks": 32,
+      "formStarts": 2,
       "byChannel": {
         "cta_click": {
-          "Direct": 16,
-          "Referral": 8,
-          "Organic Search": 3
-        },
-        "phone_call": {
-          "Organic Search": 2
+          "Direct": 20,
+          "Organic Search": 6,
+          "Referral": 5,
+          "Unassigned": 1
         },
         "email_click": {
-          "Direct": 1
+          "Direct": 2,
+          "Organic Search": 1
         },
         "form_start": {
-          "Organic Search": 1
+          "Direct": 2
         },
         "generate_lead": {
-          "Organic Search": 1
+          "Direct": 1
         }
       },
       "gbpCalls": 7,
-      "gbpWebsiteClicks": 13,
-      "gbpDirections": 267
+      "gbpWebsiteClicks": 14,
+      "gbpDirections": 278
     }
   },
   "ads": {
@@ -282,7 +323,7 @@
     "topSolv": 78.51,
     "topSolvKw": "exterior house painters timnath",
     "avgSolvAll": 20.5,
-    "avgSaiv": 0,
+    "avgSaiv": 0.1,
     "googleKeywords": [
       {
         "keyword": "exterior house painters timnath",
@@ -323,7 +364,7 @@
     "aiPlatforms": [
       {
         "platform": "gemini",
-        "saiv": 0,
+        "saiv": 0.2,
         "scans": 4
       },
       {
@@ -333,6 +374,12 @@
       }
     ],
     "topAiKeywords": [
+      {
+        "keyword": "top rated exterior painters in timnath co",
+        "saiv": 0.83,
+        "platform": "gemini",
+        "arp": 1
+      },
       {
         "keyword": "fence staining near me",
         "saiv": 0,
@@ -346,26 +393,28 @@
         "arp": 21
       },
       {
-        "keyword": "top rated exterior painters in timnath co",
-        "saiv": 0,
-        "platform": "gemini",
-        "arp": 21
-      },
-      {
         "keyword": "exterior house painting near me",
         "saiv": 0,
         "platform": "gemini",
         "arp": 21
       }
     ],
+    "brandPhrases": {
+      "scannedAt": "2026-07-01T20:27:25.268Z",
+      "queryCount": 4,
+      "mentionCount": 0,
+      "mentionRate": 0,
+      "phrases": []
+    },
     "campaignPublicUrl": "https://localrankingtracker.com/campaign-report/c66cd7120ad32ab/b9b51b2f923f4a7/"
   },
   "gbp": {
-    "totalViews": 659,
+    "locationName": "Primary",
+    "totalViews": 674,
     "calls": 7,
     "callsDelta": null,
-    "directions": 267,
-    "websiteClicks": 13,
+    "directions": 278,
+    "websiteClicks": 14,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1567,27 +1616,62 @@
       },
       {
         "date": "2026-06-21",
-        "views": 0,
+        "views": 5,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-06-22",
-        "views": 0,
+        "views": 2,
         "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
+        "directions": 1,
+        "websiteClicks": 1
       },
       {
         "date": "2026-06-23",
         "views": 0,
         "calls": 0,
-        "directions": 0,
+        "directions": 1,
         "websiteClicks": 0
       },
       {
         "date": "2026-06-24",
+        "views": 1,
+        "calls": 0,
+        "directions": 5,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-25",
+        "views": 3,
+        "calls": 0,
+        "directions": 1,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-26",
+        "views": 4,
+        "calls": 0,
+        "directions": 3,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-27",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-28",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-29",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1598,6 +1682,7 @@
     "newThisMonth": 0,
     "avgRating": null
   },
+  "gbp2": null,
   "social": {
     "monthlyHistory": [],
     "reachByWeek": [],
@@ -1607,25 +1692,58 @@
     "sessionsOverTime": [
       {
         "week": "20",
+        "date": "2026-05-11",
         "sessions": 5,
         "conversions": 0
       },
       {
         "week": "21",
+        "date": "2026-05-18",
         "sessions": 78,
         "conversions": 3
       },
       {
         "week": "22",
+        "date": "2026-05-25",
         "sessions": 42,
         "conversions": 0
       },
       {
         "week": "23",
-        "sessions": 17,
+        "date": "2026-06-01",
+        "sessions": 50,
+        "conversions": 0
+      },
+      {
+        "week": "24",
+        "date": "2026-06-08",
+        "sessions": 46,
+        "conversions": 0
+      },
+      {
+        "week": "25",
+        "date": "2026-06-15",
+        "sessions": 25,
+        "conversions": 0
+      },
+      {
+        "week": "26",
+        "date": "2026-06-22",
+        "sessions": 31,
+        "conversions": 1
+      },
+      {
+        "week": "27",
+        "date": "2026-06-29",
+        "sessions": 38,
         "conversions": 0
       }
     ],
+    "aiReferral": {
+      "total": 0,
+      "platforms": [],
+      "weeklyTrend": []
+    },
     "vitals": {
       "lcp": null,
       "cls": null,
@@ -1633,9 +1751,35 @@
       "pagespeedMobile": null
     },
     "psiScores": {
-      "mobile": null,
-      "desktop": null
+      "mobile": {
+        "performance": 67,
+        "accessibility": 90,
+        "bestPractices": 100,
+        "seo": 92
+      },
+      "desktop": {
+        "performance": 66,
+        "accessibility": 90,
+        "bestPractices": 100,
+        "seo": 92
+      }
     },
-    "psiHistory": []
+    "psiHistory": [
+      {
+        "date": "2026-06-29",
+        "mobile": {
+          "performance": 67,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 66,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      }
+    ]
   }
 }
