@@ -74,8 +74,22 @@ async function pullGA4(propertyId) {
     orderBys: [{ dimension: { dimensionName: 'week' } }]
   });
 
+  // Helper: ISO week number → Monday date string (YYYY-MM-DD)
+  function isoWeekToDate(year, week) {
+    // Jan 4 is always in ISO week 1
+    const jan4 = new Date(year, 0, 4);
+    const dayOfWeek = jan4.getDay() || 7; // Mon=1..Sun=7
+    const week1Mon = new Date(jan4);
+    week1Mon.setDate(jan4.getDate() - dayOfWeek + 1);
+    const target = new Date(week1Mon);
+    target.setDate(week1Mon.getDate() + (week - 1) * 7);
+    return target.toISOString().split('T')[0];
+  }
+  const pullYear = new Date(endDate).getFullYear();
+
   const sessionsOverTime = (weekly.rows || []).map(r => ({
     week: r.dimensionValues[0].value,
+    date: isoWeekToDate(pullYear, parseInt(r.dimensionValues[0].value)),
     sessions: parseInt(r.metricValues[0].value),
     conversions: parseInt(r.metricValues[1].value)
   }));
@@ -86,13 +100,56 @@ async function pullGA4(propertyId) {
     dimensions: [{ name: 'sessionDefaultChannelGroup' }],
     metrics: [{ name: 'sessions' }],
     orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
-    limit: 6
+    limit: 15
   });
 
   const trafficChannels = (channels.rows || []).map(r => ({
     channel: r.dimensionValues[0].value,
     sessions: parseInt(r.metricValues[0].value)
   }));
+
+  // 3b. Organic search source breakdown (Google, Bing, etc.)
+  const organicSources = await runReport(propertyId, token, {
+    dateRanges: [{ startDate, endDate }],
+    dimensions: [{ name: 'sessionSource' }],
+    metrics: [{ name: 'sessions' }],
+    dimensionFilter: {
+      filter: {
+        fieldName: 'sessionDefaultChannelGroup',
+        stringFilter: { matchType: 'EXACT', value: 'Organic Search' }
+      }
+    },
+    orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
+    limit: 10
+  });
+
+  // 3c. GBP traffic — GA4 uses a separate channel group for this
+  const gbpSources = await runReport(propertyId, token, {
+    dateRanges: [{ startDate, endDate }],
+    dimensions: [{ name: 'sessionSource' }],
+    metrics: [{ name: 'sessions' }],
+    dimensionFilter: {
+      filter: {
+        fieldName: 'sessionDefaultChannelGroup',
+        stringFilter: { matchType: 'EXACT', value: 'Organic Google Business Profile' }
+      }
+    },
+    orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
+    limit: 5
+  });
+
+  const gbpSessions = (gbpSources.rows || []).reduce((sum, r) => sum + parseInt(r.metricValues[0].value), 0);
+
+  const organicSearchSources = (organicSources.rows || []).map(r => ({
+    source: r.dimensionValues[0].value,
+    sessions: parseInt(r.metricValues[0].value)
+  }));
+
+  // Inject GBP as a named source if it has sessions
+  if (gbpSessions > 0) {
+    organicSearchSources.push({ source: 'google business profile', sessions: gbpSessions });
+    organicSearchSources.sort((a, b) => b.sessions - a.sessions);
+  }
 
   // 4. Lead events by channel (all sources — for attribution breakdown)
   const LEAD_EVENTS = ['phone_call', 'generate_lead', 'email_click', 'cta_click', 'form_start'];
@@ -203,6 +260,7 @@ async function pullGA4(propertyId) {
     sessionsDelta: prevSessions > 0 ? Math.round(((sessions - prevSessions) / prevSessions) * 100) : null,
     sessionsOverTime,
     trafficChannels,
+    organicSearchSources,
     leadSignals,
     aiReferral
   };

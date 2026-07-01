@@ -106,7 +106,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
 
 /* CARDS */
 .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px}
-.clbl{color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:14px}
+.clbl{color:var(--sub);font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:14px}
 
 /* STAT ROW */
 .sr{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border)}
@@ -116,7 +116,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
 
 /* TABLE */
 .tbl{width:100%;border-collapse:collapse}
-.tbl th{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#2e2e2e;padding:10px 8px;border-bottom:1px solid var(--border);text-align:left}
+.tbl th{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#999;padding:10px 8px;border-bottom:1px solid var(--border);text-align:left}
 .tbl th.r,.tbl td.r{text-align:right}
 .tbl td{font-size:12px;color:var(--w);padding:9px 8px;border-bottom:1px solid #1a1a1a}
 .tbl tr:last-child td{border-bottom:none}
@@ -269,6 +269,23 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
   /* Footer */
   .print-footer{display:flex!important;position:fixed;bottom:0;left:0;right:0;padding:6px 0;border-top:1px solid #222;background:#0a0a0a;font-size:10px;color:#555;justify-content:space-between}
 }
+/* Work Log */
+.wl-row{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--border);}
+.wl-row:last-child{border-bottom:none;}
+.wl-meta{display:flex;flex-direction:column;gap:6px;min-width:130px;flex-shrink:0;}
+.wl-date{font-size:13px;color:var(--sub);white-space:nowrap;}
+.wl-pill{font-size:12px;font-weight:700;padding:2px 8px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;width:fit-content;}
+.wl-body{flex:1;}
+.wl-title{font-size:17px;font-weight:700;color:var(--w);margin-bottom:4px;}
+.wl-clickable{cursor:pointer;display:flex;align-items:center;gap:6px;user-select:none;}
+.wl-clickable:hover{color:var(--lime);}
+.wl-bullets{margin:8px 0 0 0;padding:0 0 0 18px;list-style:disc;}
+.wl-bullets li{font-size:15px;color:var(--sub);line-height:1.7;}
+.wl-desc-p{font-size:15px;color:var(--sub);line-height:1.6;margin:8px 0 0 0;}
+.wl-chevron{font-size:9px;color:var(--sub);flex-shrink:0;transition:none;}
+.wl-desc{margin-top:8px;}
+.wl-desc{font-size:12px;color:var(--sub);line-height:1.6;}
+@media(max-width:600px){.wl-row{flex-direction:column;gap:8px;}.wl-meta{flex-direction:row;align-items:center;min-width:unset;}}
 </style>
 </head>
 <body>
@@ -312,8 +329,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
       <li data-nav="gbp"><a href="#" data-s="gbp">Google Business</a></li>
       <li data-nav="localFalcon"><a href="#" data-s="map">Map Rankings</a></li>
       <li data-nav="social"><a href="#" data-s="social">Social Media</a></li>
-      <li data-nav="website"><a href="#" data-s="ai-referral">AI Traffic</a></li>
-          <li data-nav="website"><a href="#" data-s="website">Website</a></li>
+      <li data-nav="website"><a href="#" data-s="website">Website</a></li>
     </ul>
     <div id="gh-panel">
       <div class="gh-lbl">Deploy Modules</div>
@@ -382,23 +398,6 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
         <div class="krow" id="krow"></div>
       </section>
 
-      <!-- AI REFERRAL TRAFFIC -->
-      <section id="ai-referral" class="ms" data-module="website">
-        <div class="sh"><span class="sb2">AI</span><span class="st">AI Referral Traffic</span></div>
-        <div class="g2 mb14">
-          <div class="card">
-            <div class="clbl">AI Referral Sessions &mdash; Weekly Trend</div>
-            <div style="position:relative;height:220px"><canvas id="c-ai-ref"></canvas></div>
-            <div id="e-ai-ref" class="du h"><div class="du-t">Data updating&hellip;</div></div>
-          </div>
-          <div class="card">
-            <div class="clbl">Traffic by AI Platform</div>
-            <div id="ai-ref-ch"><div class="du"><div class="du-t">Data updating&hellip;</div></div></div>
-            <div style="margin-top:14px;font-size:11px;color:var(--sub);line-height:1.4">Note: Some AI-referred sessions may appear as Direct when referrer headers are stripped by the app.</div>
-          </div>
-        </div>
-      </section>
-
       <!-- SEO -->
       <section id="seo" class="ms" data-module="seo">
         <div class="sh"><span class="sb2">SEO</span><span class="st">Search Engine Optimization</span></div>
@@ -408,6 +407,11 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
           <div class="clbl">Lead Source Breakdown</div>
           <div id="seo-lead-summary" style="font-size:15px;font-weight:700;color:var(--lime);margin-bottom:18px"></div>
           <div id="seo-lead-krow" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px"></div>
+        </div>
+
+        <div class="g21 mb14" id="seo-web-traffic" data-module="website">
+          <div class="card"><div class="clbl">Sessions &mdash; Monthly View</div><div style="position:relative;height:220px"><canvas id="c-web"></canvas></div><div id="e-web" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
+          <div class="card"><div class="clbl">Traffic Channels</div><div id="web-ch"></div></div>
         </div>
 
         <div class="card"><div class="clbl">Top Keywords</div><table class="tbl"><thead><tr><th>Keyword</th><th class="r">Position</th><th class="r">Clicks</th><th class="r">Impressions</th><th class="r">CTR</th></tr></thead><tbody id="t-kw"></tbody></table><div id="e-kw" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
@@ -520,6 +524,12 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
       </section>
 
 
+
+      <!-- WORK LOG -->
+      <section id="worklog" class="ms">
+        <div class="sh"><span class="sb2">LOG</span><span class="st">Work Completed</span></div>
+        <div id="wl-list"></div>
+      </section>
 
       <!-- PRINT FOOTER -->
       <div class="print-footer">
@@ -654,6 +664,7 @@ function initDash(data) {
   document.querySelectorAll('[data-module]').forEach(function(s){if(!mods[s.getAttribute('data-module')])s.style.display='none';});
   initDateRange(data);
   initNav();
+  renderWorkLog(data.workLog||[]);
 }
 
 function fmtPeriod(d){return d.toLocaleString('en-US',{month:'long',year:'numeric'});}
@@ -775,7 +786,7 @@ function initDashFromData(data, cc) {
   document.querySelectorAll('[data-module]').forEach(function(s){s.style.display=mods[s.getAttribute('data-module')]?'':'none';});
   document.querySelectorAll('[data-nav]').forEach(function(li){li.style.display=mods[li.getAttribute('data-nav')]?'':'none';});
   initDateRange(data);
-  if(mods.website){renderAiReferral(data.website||{});renderWebsite(data.website||{},data.seo||{});}
+  renderWorkLog(data.workLog||[]);
 }
 
 function fmt(n,p,s){if(n==null||n==='')return '\u2014';var v=Number(n);if(isNaN(v))return '\u2014';return (p||'')+v.toLocaleString()+(s||'');}
@@ -1183,31 +1194,90 @@ function renderSocial(social){
   el('social-plat').innerHTML=platforms.length?platforms.map(function(p){return '<div style="margin-bottom:16px"><div style="font-size:12px;font-weight:700;color:var(--w);margin-bottom:8px">'+p.platform+'</div><div class="sr"><span class="srl">Reach</span><span class="srv">'+fmt(p.reach)+'</span></div><div class="sr"><span class="srl">Engagements</span><span class="srv">'+fmt(p.engagements)+'</span></div><div class="sr"><span class="srl">Followers</span><span class="srv">'+fmt(p.followers)+'</span></div></div>';}).join(''):'<div class="du"><div class="du-t">Data updating\u2026</div></div>';
 }
 
-function renderAiReferral(website){
-  var ai=website.aiReferral||{};
-  var trend=ai.weeklyTrend||[],platforms=ai.platforms||[];
-  if(trend.length){
-    hd('e-ai-ref');
-    dc('air');
-    CHARTS['air']=new Chart(el('c-ai-ref').getContext('2d'),{type:'line',data:{labels:trend.map(function(d){return 'Wk '+d.week;}),datasets:[{label:'AI Sessions',data:trend.map(function(d){return d.sessions;}),borderColor:'#c8f000',backgroundColor:'rgba(200,240,0,0.1)',fill:true,tension:.4,pointRadius:3,pointBackgroundColor:'#c8f000'}]},options:getOpts()});
-  }else{sh('e-ai-ref');var cv=el('c-ai-ref');if(cv)cv.style.display='none';}
-  var ch=el('ai-ref-ch');
-  if(ch){
-    if(platforms.length){
-      var maxV=Math.max.apply(null,platforms.map(function(p){return p.sessions;}));
-      ch.innerHTML=platforms.map(function(p){
-        var pct=maxV>0?((p.sessions/maxV)*100).toFixed(0):0;
-        return '<div style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="color:var(--sub);font-size:13px">'+p.name+'</span><span style="color:var(--w);font-size:13px;font-weight:700">'+fmt(p.sessions)+(p.sessions===1?' session':' sessions')+'</span></div><div style="background:#1e1e1e;border-radius:3px;height:5px"><div style="background:var(--lime);border-radius:3px;height:5px;width:'+pct+'%"></div></div></div>';
-      }).join('');
-      var total=ai.total||0;
-      ch.innerHTML+='<div style="margin-top:16px;padding-top:12px;border-top:1px solid #2a2a2a;display:flex;justify-content:space-between"><span style="color:var(--sub);font-size:12px">Total AI Referrals</span><span style="color:var(--lime);font-size:13px;font-weight:700">'+fmt(total)+'</span></div>';
-    }else{
-      ch.innerHTML='<div style="color:var(--sub);font-size:13px;padding:12px 0">No AI referral sessions detected this period. As your AI visibility grows, clicks from Perplexity, ChatGPT, Gemini, and others will appear here.</div>';
-    }
-  }
+
+function toggleOrganicSources(){
+  var d=el('organic-sources-dropdown'),ch=el('organic-chevron');
+  if(!d)return;
+  d.style.display=d.style.display==='none'?'block':'none';
+  if(ch)ch.style.transform=d.style.display==='none'?'':'rotate(180deg)';
+}
+
+function toggleAiPlatforms(){
+  var d=el('ai-platforms-dropdown'),ch=el('ai-chevron');
+  if(!d)return;
+  var open=d.style.display==='none'||d.style.display===''&&d.offsetHeight===0;
+  d.style.display=d.style.display==='none'?'block':'none';
+  if(ch)ch.style.transform=d.style.display==='none'?'':'rotate(180deg)';
 }
 function renderWebsite(website,seo){
-  PSI_DATA=website.psiScores||{};renderPSI('mobile');
+  var sessions=website.sessionsOverTime||[];
+  // Inject AI Traffic into channels list
+  var rawChannels=(seo&&seo.trafficChannels)||[];
+  var aiTotal=(website.aiReferral&&website.aiReferral.total)||0;
+  var channels=rawChannels.slice();
+  if(aiTotal>0)channels.push({channel:'AI Traffic',sessions:aiTotal,_isAi:true});
+  dc('web');
+  if(sessions.length){hd('e-web');CHARTS['web']=new Chart(el('c-web').getContext('2d'),{type:'line',data:{labels:sessions.map(function(d){if(d.date){var dt=new Date(d.date+'T12:00:00');return dt.toLocaleDateString('en-US',{month:'short',day:'numeric'});}return 'Wk '+d.week;}),datasets:[{label:'Sessions',data:sessions.map(function(d){return d.sessions;}),borderColor:'#c8f000',backgroundColor:'rgba(200,240,0,0.1)',fill:true,tension:.4,pointRadius:3,pointBackgroundColor:'#c8f000'}]},options:getOpts()});}
+  else{sh('e-web');el('c-web').style.display='none';}
+  if(channels.length||aiTotal>0){
+  var aiPlatforms=(website.aiReferral&&website.aiReferral.platforms)||[];
+  // All tracked AI platforms — always show the full list, greyed if 0
+  var ALL_AI_PLATFORMS=['ChatGPT','Perplexity','Gemini','Claude','Copilot','You.com','Phind'];
+  var platformMap={};aiPlatforms.forEach(function(p){platformMap[p.name]=p.sessions;});
+  var organicSources=(seo&&seo.organicSearchSources)||[];
+  var regularChs=rawChannels.slice().sort(function(a,b){return b.sessions-a.sessions;}).slice(0,5);
+  var displayChs=regularChs.map(function(c){
+    return c.channel==='Organic Search' ? Object.assign({},c,{_isOrganic:true}) : c;
+  });
+  if(aiTotal>0)displayChs.push({channel:'AI Traffic',sessions:aiTotal,_isAi:true});
+  var maxV=Math.max.apply(null,displayChs.map(function(c){return c.sessions;}));
+  el('web-ch').innerHTML=displayChs.map(function(c){
+    var pct=maxV>0?((c.sessions/maxV)*100).toFixed(0):0;
+    var barClr=c._isAi?'#a78bfa':'var(--lime)';
+    var lblClr=c._isAi?'#a78bfa':'var(--sub)';
+    var row='<div style="margin-bottom:12px">';
+    if(c._isAi){
+      // Clickable AI Traffic row
+      row+='<div onclick="toggleAiPlatforms()" style="cursor:pointer;display:flex;justify-content:space-between;align-items:center;margin-bottom:5px">';
+      row+='<span style="color:'+lblClr+';font-size:12px;display:flex;align-items:center;gap:5px">'+c.channel+' <span id="ai-chevron" style="font-size:10px;transition:transform .2s">&#9660;</span></span>';
+      row+='<span style="color:var(--w);font-size:12px;font-weight:700">'+fmt(c.sessions)+'</span></div>';
+      row+='<div style="background:#1e1e1e;border-radius:3px;height:5px;margin-bottom:8px"><div style="background:'+barClr+';border-radius:3px;height:5px;width:'+pct+'%"></div></div>';
+      // Platform breakdown dropdown (hidden by default)
+      row+='<div id="ai-platforms-dropdown" style="display:none;margin-top:4px;padding:10px 12px;background:#121212;border-radius:6px;border:1px solid #2a2a2a">';
+      var platMax=Math.max.apply(null,ALL_AI_PLATFORMS.map(function(name){return platformMap[name]||0;}));
+      platMax=platMax||1;
+      row+=ALL_AI_PLATFORMS.map(function(name){
+        var s=platformMap[name]||0;
+        var pp=((s/platMax)*100).toFixed(0);
+        var clr=s>0?'#a78bfa':'#2a2a2a';
+        var textClr=s>0?'#bbb':'#444';
+        return '<div style="margin-bottom:9px"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="color:'+textClr+';font-size:11px">'+name+'</span><span style="color:'+(s>0?'var(--w)':'#444')+';font-size:11px;font-weight:600">'+fmt(s)+'</span></div><div style="background:#1e1e1e;border-radius:3px;height:3px"><div style="background:'+clr+';border-radius:3px;height:3px;width:'+pp+'%"></div></div></div>';
+      }).join('');
+      row+='<div style="margin-top:8px;font-size:10px;color:#444;line-height:1.4">Note: some AI traffic may appear as Direct when the app strips referrer headers.</div>';
+      row+='</div>';
+    } else if(c._isOrganic && organicSources.length > 0) {
+      // Clickable Organic Search row with source breakdown
+      row+='<div onclick="toggleOrganicSources()" style="cursor:pointer;display:flex;justify-content:space-between;align-items:center;margin-bottom:5px">';
+      row+='<span style="color:'+lblClr+';font-size:12px;display:flex;align-items:center;gap:5px">'+c.channel+' <span id="organic-chevron" style="font-size:10px;transition:transform .2s">&#9660;</span></span>';
+      row+='<span style="color:var(--w);font-size:12px;font-weight:700">'+fmt(c.sessions)+'</span></div>';
+      row+='<div style="background:#1e1e1e;border-radius:3px;height:5px;margin-bottom:8px"><div style="background:'+barClr+';border-radius:3px;height:5px;width:'+pct+'%"></div></div>';
+      row+='<div id="organic-sources-dropdown" style="display:none;margin-top:4px;padding:10px 12px;background:#121212;border-radius:6px;border:1px solid #2a2a2a">';
+      var srcMax=Math.max.apply(null,organicSources.map(function(s){return s.sessions;}));
+      srcMax=srcMax||1;
+      row+=organicSources.map(function(s){
+        var pp=((s.sessions/srcMax)*100).toFixed(0);
+        return '<div style="margin-bottom:9px"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="color:#bbb;font-size:11px">'+s.source+'</span><span style="color:var(--w);font-size:11px;font-weight:600">'+fmt(s.sessions)+'</span></div><div style="background:#1e1e1e;border-radius:3px;height:3px"><div style="background:var(--lime);border-radius:3px;height:3px;width:'+pp+'%"></div></div></div>';
+      }).join('');
+      row+='</div>';
+    } else {
+      row+='<div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="color:'+lblClr+';font-size:12px">'+c.channel+'</span><span style="color:var(--w);font-size:12px;font-weight:700">'+fmt(c.sessions)+'</span></div>';
+      row+='<div style="background:#1e1e1e;border-radius:3px;height:5px"><div style="background:'+barClr+';border-radius:3px;height:5px;width:'+pct+'%"></div></div>';
+    }
+    row+='</div>';
+    return row;
+  }).join('');}
+else{el('web-ch').innerHTML='<div class="du"><div class="du-t">Data updating.</div></div>';}
+PSI_DATA=website.psiScores||{};renderPSI('mobile');
 }
 function renderPSI(v){PSI_VIEW=v;el('psi-m').classList.toggle('active',v==='mobile');el('psi-d').classList.toggle('active',v==='desktop');var sc=PSI_DATA[v]||{};el('psi-wrap').innerHTML=[['Performance',sc.performance],['Accessibility',sc.accessibility],['Best Practices',sc.bestPractices],['SEO',sc.seo]].map(function(m){var val=m[1],cls=val==null?'':val>=90?'good':val>=50?'ok':'poor';return '<div class="psi-c '+cls+'"><div class="psi-s">'+(val!=null?val:'\u2014')+'</div><div class="psi-l">'+m[0]+'</div></div>';}).join('');}
 function setPsi(v){renderPSI(v);}
@@ -1239,6 +1309,7 @@ function getAllMonths(data){
   colMonthStr(data.ads&&data.ads.monthlyBreakdown,'month');
   colMonthStr(data.social&&data.social.monthlyHistory,'month');
   colIsoDate(data.gbp&&data.gbp.viewsOverTime,'date');
+  colIsoDate(data.website&&data.website.sessionsOverTime,'date');
   // Fallback: use report period if nothing else is available
   if(!months.length&&data.period){var dt=parseMonthStr(data.period);if(dt)addMonth(dt);}
   months.sort(function(a,b){return a.date-b.date;});
@@ -1304,9 +1375,31 @@ function applyRange(start,end){
   var fAds=filterMonthArr(d.ads&&d.ads.monthlyBreakdown,start,end,'month');
   var fSocial=filterMonthArr(d.social&&d.social.monthlyHistory,start,end,'month');
   var fGbp=filterMonthArr(d.gbp&&d.gbp.viewsOverTime,start,end,'date');
+  var fGbp2=filterMonthArr(d.gbp2&&d.gbp2.viewsOverTime,start,end,'date');
   var fPsiH=filterMonthArr(d.website&&d.website.psiHistory,start,end,'date');
+  // Timezone-safe filter for weekly sessions: compare YYYY-MM strings directly
+  var _sM=start.getFullYear()+'-'+String(start.getMonth()+1).padStart(2,'0');
+  var _eM=end.getFullYear()+'-'+String(end.getMonth()+1).padStart(2,'0');
+  var fWebSessions=(d.website&&d.website.sessionsOverTime||[]).filter(function(s){
+    if(!s.date)return true;
+    var ym=s.date.substring(0,7);
+    return ym>=_sM&&ym<=_eM;
+  });
   var fd={};
-  fd.seo=d.seo||{};
+  // Recalculate GBP scalars from filtered time-series so lead signals match GBP section
+  var filteredGbpCalls=fGbp.reduce(function(s,x){return s+(x.calls||0);},0)+fGbp2.reduce(function(s,x){return s+(x.calls||0);},0);
+  var filteredGbpWeb=fGbp.reduce(function(s,x){return s+(x.websiteClicks||0);},0)+fGbp2.reduce(function(s,x){return s+(x.websiteClicks||0);},0);
+  var filteredGbpDir=fGbp.reduce(function(s,x){return s+(x.directions||0);},0)+fGbp2.reduce(function(s,x){return s+(x.directions||0);},0);
+  var baseSeo=d.seo||{};
+  var baseLS=baseSeo.leadSignals||null;
+  // Filter weekly sessions by date range
+  var fSessions=filterMonthArr(baseSeo.organicSessions,start,end,'date');
+  var patchedSeo=Object.assign({},baseSeo,{organicSessions:fSessions.length?fSessions:baseSeo.organicSessions});
+  fd.seo=baseLS?Object.assign({},patchedSeo,{leadSignals:Object.assign({},baseLS,{
+    gbpCalls:filteredGbpCalls,
+    gbpWebsiteClicks:filteredGbpWeb,
+    gbpDirections:filteredGbpDir
+  })}):patchedSeo;
   fd.ads=Object.assign({},d.ads||{},{monthlyBreakdown:fAds});
   fd.social=Object.assign({},d.social||{},{monthlyHistory:fSocial});
   fd.gbp=Object.assign({},d.gbp||{},{viewsOverTime:fGbp});
@@ -1314,7 +1407,7 @@ function applyRange(start,end){
   fd.localFalcon=d.localFalcon||null;
   var psiScores=(d.website||{}).psiScores||{};
   if(fPsiH&&fPsiH.length){var lp=fPsiH[fPsiH.length-1];psiScores={mobile:lp.mobile,desktop:lp.desktop};}
-  fd.website=Object.assign({},d.website||{},{psiHistory:fPsiH,psiScores:psiScores});
+  fd.website=Object.assign({},d.website||{},{psiHistory:fPsiH,psiScores:psiScores,sessionsOverTime:fWebSessions});
   var ov=Object.assign({},d.overview||{});
   if(fAds.length){
     ov.adSpend=fAds.reduce(function(s,x){return s+(x.adSpend||0);},0)||null;
@@ -1333,9 +1426,73 @@ function applyRange(start,end){
   if(mods.metaAds)renderMeta(fd.ads,fd.social);
   if(mods.gbp)renderGBP(fd.gbp,fd.gbp2||null);
   if(mods.social)renderSocial(fd.social);
-  if(mods.website){renderAiReferral(fd.website||{});renderWebsite(fd.website,fd.seo);}
+  if(mods.website)renderWebsite(fd.website,fd.seo);
 }
 /* ── EXPORT ── */
+/* WORK LOG */
+function renderWorkLog(entries){
+  var container=document.getElementById("wl-list");
+  if(!container)return;
+  var catMap={
+    technical:{label:"Technical",color:"#3b82f6",tc:"#fff"},
+    blog:{label:"Blog",color:"var(--org)",tc:"#fff"},
+    gbp:{label:"GBP",color:"var(--grn)",tc:"#fff"},
+    website:{label:"Website",color:"#8b5cf6",tc:"#fff"},
+    ads:{label:"Ads",color:"var(--red)",tc:"#fff"},
+    seo:{label:"SEO",color:"var(--lime)",tc:"#000"},
+    other:{label:"Other",color:"var(--muted)",tc:"#fff"}
+  };
+  if(!entries||!entries.length){
+    container.innerHTML="<div style=\"color:var(--sub);font-size:13px;padding:12px 0;\">No activity logged yet.</div>";
+    return;
+  }
+  var sorted=entries.slice().sort(function(a,b){return (b.date||"").localeCompare(a.date||"");});
+  var html="";
+  sorted.forEach(function(e,i){
+    var cat=catMap[e.category]||catMap.other;
+    var d=e.date?new Date(e.date+"T12:00:00"):null;
+    var ds=d?d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}):"";
+    var uid="wl-"+i;
+    // Build collapsible body: details array takes priority over description string
+    var bodyHtml="";
+    if(e.details&&e.details.length){
+      bodyHtml="<ul class=\"wl-bullets\">";
+      e.details.forEach(function(item){ bodyHtml+="<li>"+item+"</li>"; });
+      bodyHtml+="</ul>";
+    } else if(e.description){
+      bodyHtml="<p class=\"wl-desc-p\">"+e.description+"</p>";
+    }
+    var hasBody=!!bodyHtml;
+    html+="<div class=\"wl-row\">";
+    html+="<div class=\"wl-meta\">";
+    html+="<span class=\"wl-date\">"+ds+"</span>";
+    html+="<span class=\"wl-pill\" style=\"background:"+cat.color+";color:"+cat.tc+"\">"+cat.label+"</span>";
+    html+="</div>";
+    html+="<div class=\"wl-body\">";
+    if(hasBody){
+      html+="<div class=\"wl-title wl-clickable\" data-uid=\""+uid+"\" onclick=\"wlToggle(this)\">";
+      html+="<span class=\"wl-chevron\" id=\"chv-"+uid+"\">&#9654;</span>";
+    } else {
+      html+="<div class=\"wl-title\">";
+    }
+    html+=e.title+"</div>";
+    if(hasBody){
+      html+="<div class=\"wl-expand\" id=\""+uid+"\" style=\"display:none;\">"+bodyHtml+"</div>";
+    }
+    html+="</div></div>";
+  });
+  container.innerHTML=html;
+}
+function wlToggle(el){
+  var uid=el.getAttribute("data-uid");
+  var expand=document.getElementById(uid);
+  var chv=document.getElementById("chv-"+uid);
+  if(!expand)return;
+  var open=expand.style.display!=="none";
+  expand.style.display=open?"none":"block";
+  if(chv)chv.innerHTML=open?"&#9654;":"&#9660;";
+}
+
 function exportPDF(){
   try{
     var instances=Chart.instances||{};

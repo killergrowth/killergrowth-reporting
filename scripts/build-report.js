@@ -107,7 +107,8 @@ async function buildReport(slug) {
 
     seo: {
       organicSessions: v(ga4)?.sessionsOverTime  ?? base.seo?.organicSessions ?? [],
-      trafficChannels: v(ga4)?.trafficChannels   ?? base.seo?.trafficChannels ?? [],
+      trafficChannels:      v(ga4)?.trafficChannels      ?? base.seo?.trafficChannels      ?? [],
+      organicSearchSources: v(ga4)?.organicSearchSources ?? base.seo?.organicSearchSources ?? [],
       keywords:        v(gsc)?.keywords          ?? v(dfs)?.keywords          ?? base.seo?.keywords ?? [],
       leadSignals: (() => {
         const ls = v(ga4)?.leadSignals ?? base.seo?.leadSignals ?? null;
