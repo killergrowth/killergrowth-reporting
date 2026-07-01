@@ -3,15 +3,15 @@
   "slug": "dons-heating",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-01T10:38:22.044Z",
+  "generatedAt": "2026-07-01T20:15:57.981Z",
   "overview": {
-    "sessions": 804,
+    "sessions": 826,
     "sessionsDelta": 0,
     "leads": null,
     "leadsDelta": null,
     "rankingsTop10": 15,
     "rankingsDelta": null,
-    "gbpViews": 2829,
+    "gbpViews": 2902,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -27,34 +27,39 @@
     "organicSessions": [
       {
         "week": "23",
+        "date": "2026-06-01",
         "sessions": 129,
         "conversions": 13
       },
       {
         "week": "24",
+        "date": "2026-06-08",
         "sessions": 142,
         "conversions": 13
       },
       {
         "week": "25",
+        "date": "2026-06-15",
         "sessions": 252,
         "conversions": 11
       },
       {
         "week": "26",
+        "date": "2026-06-22",
         "sessions": 165,
         "conversions": 12
       },
       {
         "week": "27",
-        "sessions": 119,
+        "date": "2026-06-29",
+        "sessions": 140,
         "conversions": 5
       }
     ],
     "trafficChannels": [
       {
         "channel": "Direct",
-        "sessions": 488
+        "sessions": 507
       },
       {
         "channel": "Unassigned",
@@ -62,7 +67,7 @@
       },
       {
         "channel": "Organic Search",
-        "sessions": 134
+        "sessions": 136
       },
       {
         "channel": "Display",
@@ -75,6 +80,28 @@
       {
         "channel": "Organic Social",
         "sessions": 2
+      },
+      {
+        "channel": "AI Assistant",
+        "sessions": 1
+      },
+      {
+        "channel": "Cross-network",
+        "sessions": 1
+      }
+    ],
+    "organicSearchSources": [
+      {
+        "source": "google",
+        "sessions": 122
+      },
+      {
+        "source": "bing",
+        "sessions": 11
+      },
+      {
+        "source": "duckduckgo",
+        "sessions": 3
       }
     ],
     "keywords": [
@@ -255,23 +282,23 @@
       }
     ],
     "leadSignals": {
-      "organicSessions": 134,
+      "organicSessions": 136,
       "phoneCalls": 0,
       "formSubmissions": 0,
       "emailClicks": 0,
       "ctaClicks": 0,
-      "formStarts": 40,
+      "formStarts": 41,
       "byChannel": {
         "form_start": {
-          "Direct": 26,
+          "Direct": 27,
           "Organic Search": 8,
           "Unassigned": 5,
           "Referral": 1
         }
       },
-      "gbpCalls": 340,
-      "gbpWebsiteClicks": 194,
-      "gbpDirections": 277
+      "gbpCalls": 349,
+      "gbpWebsiteClicks": 201,
+      "gbpDirections": 283
     }
   },
   "ads": {
@@ -302,12 +329,6 @@
       },
       {
         "month": "May 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null
-      },
-      {
-        "month": "Jun 2026",
         "adSpend": null,
         "adClicks": null,
         "adLeads": null
@@ -418,71 +439,21 @@
       }
     ],
     "brandPhrases": {
-      "scannedAt": "2026-06-25T01:51:39.487Z",
+      "scannedAt": "2026-07-01T20:15:55.920Z",
       "queryCount": 5,
-      "mentionCount": 2,
-      "mentionRate": 40,
-      "phrases": [
-        {
-          "phrase": "fast, reliable air conditioner repair and service",
-          "count": 1,
-          "sentiment": "Positive"
-        },
-        {
-          "phrase": "top choice for speed",
-          "count": 1,
-          "sentiment": "Positive"
-        },
-        {
-          "phrase": "specific marketing focus on fast service",
-          "count": 1,
-          "sentiment": "Positive"
-        },
-        {
-          "phrase": "prompt 24/7 emergency repair",
-          "count": 1,
-          "sentiment": "Positive"
-        },
-        {
-          "phrase": "fix problem right away",
-          "count": 1,
-          "sentiment": "Positive"
-        },
-        {
-          "phrase": "top-tier HVAC company",
-          "count": 1,
-          "sentiment": "Positive"
-        },
-        {
-          "phrase": "best AC installation services",
-          "count": 1,
-          "sentiment": "Positive"
-        },
-        {
-          "phrase": "trusted choice",
-          "count": 1,
-          "sentiment": "Positive"
-        },
-        {
-          "phrase": "leads in local recognition and experience",
-          "count": 1,
-          "sentiment": "Positive"
-        },
-        {
-          "phrase": "handles all major systems",
-          "count": 1,
-          "sentiment": "Positive"
-        }
-      ]
-    }
+      "mentionCount": 0,
+      "mentionRate": 0,
+      "phrases": []
+    },
+    "campaignPublicUrl": "https://localrankingtracker.com/campaign-report/981e23a5a401d3c/b9b51b2f923f4a7/"
   },
   "gbp": {
     "locationName": "El Dorado",
-    "totalViews": 2829,
-    "calls": 340,
+    "totalViews": 2902,
+    "calls": 349,
     "callsDelta": null,
-    "directions": 277,
-    "websiteClicks": 194,
+    "directions": 283,
+    "websiteClicks": 201,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1684,34 +1655,69 @@
       },
       {
         "date": "2026-06-21",
-        "views": 3,
-        "calls": 0,
+        "views": 21,
+        "calls": 1,
         "directions": 2,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-06-22",
-        "views": 5,
-        "calls": 0,
+        "views": 12,
+        "calls": 4,
         "directions": 2,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-06-23",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
+        "views": 19,
+        "calls": 4,
+        "directions": 3,
+        "websiteClicks": 2
       },
       {
         "date": "2026-06-24",
+        "views": 18,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-06-25",
+        "views": 2,
+        "calls": 0,
+        "directions": 3,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-26",
+        "views": 6,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-27",
+        "views": 3,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-28",
         "views": 0,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
-        "date": "2026-06-25",
+        "date": "2026-06-29",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-30",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1724,10 +1730,10 @@
   },
   "gbp2": {
     "locationName": "Emporia",
-    "totalViews": 217,
+    "totalViews": 238,
     "calls": 4,
-    "directions": 50,
-    "websiteClicks": 24,
+    "directions": 54,
+    "websiteClicks": 25,
     "viewsOverTime": [
       {
         "date": "2026-01-01",
@@ -2928,34 +2934,69 @@
       },
       {
         "date": "2026-06-21",
-        "views": 0,
+        "views": 2,
         "calls": 0,
         "directions": 1,
         "websiteClicks": 0
       },
       {
         "date": "2026-06-22",
-        "views": 3,
+        "views": 10,
         "calls": 0,
         "directions": 5,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-06-23",
-        "views": 0,
+        "views": 4,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-06-24",
-        "views": 0,
+        "views": 7,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-06-25",
+        "views": 0,
+        "calls": 0,
+        "directions": 1,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-26",
+        "views": 1,
+        "calls": 0,
+        "directions": 3,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-27",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-28",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-29",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-30",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -2991,11 +3032,6 @@
         "month": "May 2026",
         "reach": null,
         "engagements": null
-      },
-      {
-        "month": "Jun 2026",
-        "reach": null,
-        "engagements": null
       }
     ],
     "reachByWeek": [],
@@ -3012,30 +3048,54 @@
     "sessionsOverTime": [
       {
         "week": "23",
+        "date": "2026-06-01",
         "sessions": 129,
         "conversions": 13
       },
       {
         "week": "24",
+        "date": "2026-06-08",
         "sessions": 142,
         "conversions": 13
       },
       {
         "week": "25",
+        "date": "2026-06-15",
         "sessions": 252,
         "conversions": 11
       },
       {
         "week": "26",
+        "date": "2026-06-22",
         "sessions": 165,
         "conversions": 12
       },
       {
         "week": "27",
-        "sessions": 119,
+        "date": "2026-06-29",
+        "sessions": 140,
         "conversions": 5
       }
     ],
+    "aiReferral": {
+      "total": 2,
+      "platforms": [
+        {
+          "name": "ChatGPT",
+          "sessions": 2
+        }
+      ],
+      "weeklyTrend": [
+        {
+          "week": "23",
+          "sessions": 1
+        },
+        {
+          "week": "25",
+          "sessions": 1
+        }
+      ]
+    },
     "vitals": {
       "lcp": null,
       "cls": null,
@@ -3044,13 +3104,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 48,
+        "performance": 60,
         "accessibility": 90,
         "bestPractices": 73,
         "seo": 100
       },
       "desktop": {
-        "performance": 82,
+        "performance": 92,
         "accessibility": 91,
         "bestPractices": 73,
         "seo": 100
@@ -3663,37 +3723,7 @@
         }
       },
       {
-        "date": "2026-06-26",
-        "mobile": {
-          "performance": 54,
-          "accessibility": 90,
-          "bestPractices": 73,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 52,
-          "accessibility": 91,
-          "bestPractices": 73,
-          "seo": 100
-        }
-      },
-      {
-        "date": "2026-06-27",
-        "mobile": {
-          "performance": 43,
-          "accessibility": 90,
-          "bestPractices": 73,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 87,
-          "accessibility": 91,
-          "bestPractices": 73,
-          "seo": 100
-        }
-      },
-      {
-        "date": "2026-06-28",
+        "date": "2026-06-29",
         "mobile": {
           "performance": 60,
           "accessibility": 90,
@@ -3701,52 +3731,7 @@
           "seo": 100
         },
         "desktop": {
-          "performance": 89,
-          "accessibility": 91,
-          "bestPractices": 73,
-          "seo": 100
-        }
-      },
-      {
-        "date": "2026-06-29",
-        "mobile": {
-          "performance": 67,
-          "accessibility": 90,
-          "bestPractices": 73,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 88,
-          "accessibility": 91,
-          "bestPractices": 73,
-          "seo": 100
-        }
-      },
-      {
-        "date": "2026-06-30",
-        "mobile": {
-          "performance": 62,
-          "accessibility": 90,
-          "bestPractices": 73,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 86,
-          "accessibility": 91,
-          "bestPractices": 73,
-          "seo": 100
-        }
-      },
-      {
-        "date": "2026-07-01",
-        "mobile": {
-          "performance": 48,
-          "accessibility": 90,
-          "bestPractices": 73,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 82,
+          "performance": 92,
           "accessibility": 91,
           "bestPractices": 73,
           "seo": 100
