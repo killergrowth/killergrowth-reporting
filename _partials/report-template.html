@@ -410,7 +410,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
         </div>
 
         <div class="g21 mb14" id="seo-web-traffic" data-module="website">
-          <div class="card"><div class="clbl">Sessions &mdash; Monthly View</div><div style="position:relative;height:220px"><canvas id="c-web"></canvas></div><div id="e-web" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
+          <div class="card"><div class="clbl">Traffic Volume</div><div style="position:relative;height:220px"><canvas id="c-web"></canvas></div><div id="e-web" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
           <div class="card"><div class="clbl">Traffic Channels</div><div id="web-ch"></div></div>
         </div>
 
@@ -1217,7 +1217,7 @@ function renderWebsite(website,seo){
   var channels=rawChannels.slice();
   if(aiTotal>0)channels.push({channel:'AI Traffic',sessions:aiTotal,_isAi:true});
   dc('web');
-  if(sessions.length){hd('e-web');CHARTS['web']=new Chart(el('c-web').getContext('2d'),{type:'line',data:{labels:sessions.map(function(d){if(d.date){var dt=new Date(d.date+'T12:00:00');return dt.toLocaleDateString('en-US',{month:'short',day:'numeric'});}return 'Wk '+d.week;}),datasets:[{label:'Sessions',data:sessions.map(function(d){return d.sessions;}),borderColor:'#c8f000',backgroundColor:'rgba(200,240,0,0.1)',fill:true,tension:.4,pointRadius:3,pointBackgroundColor:'#c8f000'}]},options:getOpts()});}
+  if(sessions.length){hd('e-web');dc('web');CHARTS['web']=new Chart(el('c-web').getContext('2d'),{type:'line',data:{labels:sessions.map(function(d){if(d.date){var dt=new Date(d.date+'T12:00:00');return dt.toLocaleDateString('en-US',{month:'short',day:'numeric'});}return 'Wk '+d.week;}),datasets:[{label:'Sessions',data:sessions.map(function(d){return d.sessions;}),borderColor:'#c8f000',backgroundColor:'rgba(200,240,0,0.1)',fill:true,tension:.4,pointRadius:3,pointBackgroundColor:'#c8f000'}]},options:getOpts()});}
   else{sh('e-web');el('c-web').style.display='none';}
   if(channels.length||aiTotal>0){
   var aiPlatforms=(website.aiReferral&&website.aiReferral.platforms)||[];
