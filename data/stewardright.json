@@ -2,10 +2,10 @@
   "client": "StewardRight",
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
-  "period": "May 2026",
-  "generatedAt": "2026-06-30T10:23:45.979Z",
+  "period": "June 2026",
+  "generatedAt": "2026-07-01T10:37:21.752Z",
   "overview": {
-    "sessions": 52,
+    "sessions": 49,
     "sessionsDelta": 0,
     "leads": null,
     "leadsDelta": null,
@@ -13,7 +13,7 @@
     "rankingsDelta": null,
     "gbpViews": null,
     "gbpViewsDelta": null,
-    "adSpend": 609.76,
+    "adSpend": 593.29,
     "adImpressions": 25624,
     "adBudget": null,
     "costPerLead": null,
@@ -26,55 +26,60 @@
   "seo": {
     "organicSessions": [
       {
-        "week": "19",
-        "sessions": 15,
+        "week": "23",
+        "sessions": 11,
         "conversions": 0
       },
       {
-        "week": "20",
-        "sessions": 13,
+        "week": "24",
+        "sessions": 12,
         "conversions": 0
       },
       {
-        "week": "21",
-        "sessions": 17,
+        "week": "25",
+        "sessions": 12,
         "conversions": 0
       },
       {
-        "week": "22",
-        "sessions": 7,
+        "week": "26",
+        "sessions": 10,
+        "conversions": 0
+      },
+      {
+        "week": "27",
+        "sessions": 4,
         "conversions": 0
       }
     ],
     "trafficChannels": [
       {
         "channel": "Direct",
-        "sessions": 23
+        "sessions": 24
       },
       {
         "channel": "Organic Search",
-        "sessions": 16
+        "sessions": 18
       },
       {
         "channel": "Email",
-        "sessions": 5
-      },
-      {
-        "channel": "Organic Social",
-        "sessions": 4
+        "sessions": 3
       },
       {
         "channel": "Referral",
         "sessions": 2
       },
       {
+        "channel": "Organic Social",
+        "sessions": 1
+      },
+      {
         "channel": "Unassigned",
-        "sessions": 2
+        "sessions": 1
       }
     ],
     "keywords": [],
     "leadSignals": {
-      "organicSessions": 16,
+      "organicSessions": 18,
       "phoneCalls": 0,
       "formSubmissions": 0,
       "emailClicks": 0,
@@ -120,6 +125,12 @@
         "month": "May 2026",
         "adSpend": 609.76,
         "adClicks": 3597,
+        "adLeads": 0
+      },
+      {
+        "month": "Jun 2026",
+        "adSpend": 593.29,
+        "adClicks": 2690,
         "adLeads": 0
       }
     ],
@@ -177,6 +188,11 @@
         "month": "May 2026",
         "reach": null,
         "engagements": null
+      },
+      {
+        "month": "Jun 2026",
+        "reach": null,
+        "engagements": null
       }
     ],
     "reachByWeek": [],
@@ -185,30 +201,35 @@
         "platform": "Facebook",
         "reach": 0,
         "engagements": 0,
-        "followers": 611
+        "followers": 610
       }
     ]
   },
   "website": {
     "sessionsOverTime": [
       {
-        "week": "19",
-        "sessions": 15,
+        "week": "23",
+        "sessions": 11,
         "conversions": 0
       },
       {
-        "week": "20",
-        "sessions": 13,
+        "week": "24",
+        "sessions": 12,
         "conversions": 0
       },
       {
-        "week": "21",
-        "sessions": 17,
+        "week": "25",
+        "sessions": 12,
         "conversions": 0
       },
       {
-        "week": "22",
-        "sessions": 7,
+        "week": "26",
+        "sessions": 10,
+        "conversions": 0
+      },
+      {
+        "week": "27",
+        "sessions": 4,
         "conversions": 0
       }
     ],
@@ -220,13 +241,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 45,
+        "performance": 41,
         "accessibility": 90,
         "bestPractices": 77,
         "seo": 92
       },
       "desktop": {
-        "performance": 71,
+        "performance": 90,
         "accessibility": 90,
         "bestPractices": 77,
         "seo": 92
@@ -908,6 +929,21 @@
         },
         "desktop": {
           "performance": 71,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-01",
+        "mobile": {
+          "performance": 41,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 90,
           "accessibility": 90,
           "bestPractices": 77,
           "seo": 92
