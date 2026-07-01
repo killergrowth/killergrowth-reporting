@@ -66,9 +66,12 @@ async function pullGA4(propertyId) {
   const conversions  = parseInt(thisMonth[1]?.value || '0');
   const prevSessions = parseInt(prevMonth[0]?.value || '0');
 
-  // 2. Sessions over time (weekly)
+  // 2. Sessions over time (weekly) — pull 6 months for timeframe chart
+  const now = new Date();
+  const sixMonthsAgo = new Date(now.getFullYear(), now.getMonth() - 5, 1);
+  const weeklyStartDate = sixMonthsAgo.toISOString().split('T')[0];
   const weekly = await runReport(propertyId, token, {
-    dateRanges: [{ startDate, endDate }],
+    dateRanges: [{ startDate: weeklyStartDate, endDate }],
     dimensions: [{ name: 'week' }],
     metrics: [{ name: 'sessions' }, { name: 'conversions' }],
     orderBys: [{ dimension: { dimensionName: 'week' } }]
