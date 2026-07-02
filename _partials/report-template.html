@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -429,11 +429,11 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
           <div id="geo-hero" class="geo-hero"></div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px">
             <div class="geo-stat" style="padding:0">
-              <div style="padding:16px 20px 0;display:flex;align-items:center;gap:6px"><span class="clbl">AI Platforms</span><span class="kg-info-tip" data-tip="Share of AI Voice (SAIV) — how often this business is mentioned when AI platforms like ChatGPT, Gemini, and Grok answer relevant local searches. Higher % = stronger AI visibility.">&#9432;</span></div>
+              <div style="padding:16px 20px 0;display:flex;align-items:center;gap:6px"><span class="clbl">AI Platforms</span><span class="kg-info-tip" data-tip="Share of AI Voice (SAIV) � how often this business is mentioned when AI platforms like ChatGPT, Gemini, and Grok answer relevant local searches. Higher % = stronger AI visibility.">&#9432;</span></div>
               <div id="geo-ai-platforms" style="padding:0 20px 10px"></div>
             </div>
             <div class="geo-stat" style="padding:0">
-              <div style="padding:16px 20px 0;display:flex;align-items:center;gap:6px"><span class="clbl">Google Maps Keywords</span><span class="kg-info-tip" data-tip="Share of Local Voice (SoLV) — the % of Google Maps grid points where this business appears in the top 3 results for each keyword. 100% = dominant in every scan zone.">&#9432;</span></div>
+              <div style="padding:16px 20px 0;display:flex;align-items:center;gap:6px"><span class="clbl">Google Maps Keywords</span><span class="kg-info-tip" data-tip="Share of Local Voice (SoLV) � the % of Google Maps grid points where this business appears in the top 3 results for each keyword. 100% = dominant in every scan zone.">&#9432;</span></div>
               <div id="geo-google-kws" style="padding:0 20px 10px"></div>
             </div>
           </div>
@@ -453,7 +453,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
         <div class="sh"><span class="sb2">ADS</span><span class="st">Google Ads</span></div>
         <div class="g32">
           <div class="card"><div class="clbl">Spend vs. Leads &mdash; Monthly</div><div style="position:relative;height:220px"><canvas id="c-ads"></canvas></div><div id="e-ads" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
-          <div class="card"><div class="clbl">Campaign Breakdown</div><table class="tbl"><thead><tr><th>Campaign</th><th class="r">Spend</th><th class="r">Clicks</th><th class="r">Leads</th></tr></thead><tbody id="t-camps"></tbody></table><div id="e-camps" class="du h"><div class="du-t">Data updating&hellip;</div></div><div style="display:flex;gap:20px;margin-top:16px"><div><div class="klbl">Total Spend</div><div class="kv" id="ads-spend">â€”</div></div><div><div class="klbl">Cost / Lead</div><div class="kv" style="color:var(--lime)" id="ads-cpl">â€”</div></div></div></div>
+          <div class="card"><div class="clbl">Campaign Breakdown</div><table class="tbl"><thead><tr><th>Campaign</th><th class="r">Spend</th><th class="r">Clicks</th><th class="r">Leads</th></tr></thead><tbody id="t-camps"></tbody></table><div id="e-camps" class="du h"><div class="du-t">Data updating&hellip;</div></div><div style="display:flex;gap:20px;margin-top:16px"><div><div class="klbl">Total Spend</div><div class="kv" id="ads-spend">—</div></div><div><div class="klbl">Cost / Lead</div><div class="kv" style="color:var(--lime)" id="ads-cpl">—</div></div></div></div>
         </div>
       </section>
 
@@ -550,7 +550,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script>
-/* â”€â”€ GLOBALS â”€â”€ */
+/* ── GLOBALS ── */
 var CHARTS = {};
 var DR_DATA = null;
 var DR_MODS = null;
@@ -577,15 +577,15 @@ var CHART_DEFAULTS = {
   }
 };
 
-/* â”€â”€ HELPERS â”€â”€ */
+/* ── HELPERS ── */
 function fmt(n, pre, suf) {
-  if (n == null || n === '') return 'â€”';
+  if (n == null || n === '') return '—';
   var v = Number(n);
-  if (isNaN(v)) return 'â€”';
+  if (isNaN(v)) return '—';
   return (pre || '') + v.toLocaleString() + (suf || '');
 }
-function fmtMoney(n) { return n == null ? 'â€”' : '$' + Number(n).toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2}); }
-function fmtPct(n) { return n == null ? 'â€”' : n.toFixed(1) + '%'; }
+function fmtMoney(n) { return n == null ? '—' : '$' + Number(n).toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2}); }
+function fmtPct(n) { return n == null ? '—' : n.toFixed(1) + '%'; }
 function h(tag, cls, html, extra) {
   return '<' + tag + (cls ? ' class="' + cls + '"' : '') + (extra || '') + '>' + (html || '') + '</' + tag + '>';
 }
@@ -594,7 +594,7 @@ function show(id) { var e = el(id); if (e) e.classList.remove('h'); }
 function hide(id) { var e = el(id); if (e) e.classList.add('h'); }
 function destroyChart(key) { if (CHARTS[key]) { CHARTS[key].destroy(); delete CHARTS[key]; } }
 
-/* â”€â”€ GATE â”€â”€ */
+/* ── GATE ── */
 function initGate() {
   var cfg = window.CLIENT_CONFIG || {};
   if (!cfg.password) { startApp(); return; }
@@ -822,8 +822,8 @@ function renderGEO(lf){
   // Hero stats
   var heroEl=el('geo-hero');
   if(heroEl){
-    var saivVal=lf.avgSaiv!=null?lf.avgSaiv+'%':'—';
-    var solvVal=lf.avgSolvAll!=null?lf.avgSolvAll+'%':'—';
+    var saivVal=lf.avgSaiv!=null?lf.avgSaiv+'%':'�';
+    var solvVal=lf.avgSolvAll!=null?lf.avgSolvAll+'%':'�';
     var saivStrong=lf.avgSaiv>50;
     var solvStrong=lf.avgSolvAll>50;
     heroEl.innerHTML=
@@ -843,12 +843,12 @@ function renderGEO(lf){
   var platEl=el('geo-ai-platforms');
   if(platEl){
     var platLabels={chatgpt:'ChatGPT',gemini:'Gemini',aimode:'AI Mode',grok:'Grok'};
-    var platIcons={chatgpt:'🤖',gemini:'✨',aimode:'🔍',grok:'⚡'};
+    var platIcons={chatgpt:'??',gemini:'?',aimode:'??',grok:'?'};
     if(lf.aiPlatforms&&lf.aiPlatforms.length){
       platEl.innerHTML=lf.aiPlatforms.map(function(p){
         var strong=p.saiv>50;
         return '<div class="geo-plat-row">'
-          +'<span class="geo-plat-name">'+(platIcons[p.platform]||'🌐')+' '+(platLabels[p.platform]||p.platform)+'</span>'
+          +'<span class="geo-plat-name">'+(platIcons[p.platform]||'??')+' '+(platLabels[p.platform]||p.platform)+'</span>'
           +'<span class="geo-plat-val'+(strong?' strong':'')+'">'+p.saiv+'%</span>'
           +'</div>';
       }).join('');
@@ -1054,7 +1054,7 @@ function gbpFilteredStats(gbp,rawOverride){
   var cutoff=new Date();cutoff.setHours(0,0,0,0);
   if(GBP_RANGE==='30d')cutoff.setDate(cutoff.getDate()-29);
   else cutoff=new Date(cutoff.getFullYear(),cutoff.getMonth(),1);
-  var f=raw.filter(function(d){return new Date(d.date)>=cutoff;});
+  var f=raw.filter(function(d){return new Date(d.date+'T12:00:00')>=cutoff;});
   return {totalViews:f.reduce(function(s,d){return s+(d.views||0);},0),calls:f.reduce(function(s,d){return s+(d.calls||0);},0),directions:f.reduce(function(s,d){return s+(d.directions||0);},0),websiteClicks:f.reduce(function(s,d){return s+(d.websiteClicks||0);},0),totalReviews:gbp.totalReviews,avgRating:gbp.avgRating};
 }
 function renderGBPStats(){
@@ -1094,8 +1094,8 @@ function renderGBPChart(){
     var cutoffC=new Date();cutoffC.setHours(0,0,0,0);
     if(GBP_RANGE==='30d')cutoffC.setDate(cutoffC.getDate()-29);
     else cutoffC=new Date(cutoffC.getFullYear(),cutoffC.getMonth(),1);
-    var filteredC=raw.filter(function(d){return new Date(d.date)>=cutoffC;});
-    labels=filteredC.map(function(d){var dt=new Date(d.date);return (dt.getMonth()+1)+'/'+(dt.getDate());});
+    var filteredC=raw.filter(function(d){return new Date(d.date+'T12:00:00')>=cutoffC;});
+    labels=filteredC.map(function(d){var dt=new Date(d.date+'T12:00:00');return (dt.getMonth()+1)+'/'+(dt.getDate());});
     values=filteredC.map(function(d){return d[mc.key]||0;});
   } else {
     // 6-month: aggregate by month
@@ -1165,7 +1165,7 @@ function renderGBP2Chart(){
   if(GBP_RANGE==='30d'||GBP_RANGE==='month'){
     var cutoff2=new Date();cutoff2.setHours(0,0,0,0);
     if(GBP_RANGE==='30d')cutoff2.setDate(cutoff2.getDate()-29);else cutoff2=new Date(cutoff2.getFullYear(),cutoff2.getMonth(),1);
-    var f2=raw.filter(function(d){return new Date(d.date)>=cutoff2;});
+    var f2=raw.filter(function(d){return new Date(d.date+'T12:00:00')>=cutoff2;});
     labels=f2.map(function(d){var dt=new Date(d.date);return (dt.getMonth()+1)+'/'+(dt.getDate());});
     values=f2.map(function(d){return d[mc2.key]||0;});
   } else {
@@ -1217,7 +1217,7 @@ function renderWebsite(website,seo){
   else{sh('e-web');el('c-web').style.display='none';}
   if(channels.length||aiTotal>0){
   var aiPlatforms=(website.aiReferral&&website.aiReferral.platforms)||[];
-  // All tracked AI platforms — always show the full list, greyed if 0
+  // All tracked AI platforms � always show the full list, greyed if 0
   var ALL_AI_PLATFORMS=['ChatGPT','Perplexity','Gemini','Claude','Copilot','You.com','Phind'];
   var platformMap={};aiPlatforms.forEach(function(p){platformMap[p.name]=p.sessions;});
   var organicSources=(seo&&seo.organicSearchSources)||[];
@@ -1282,7 +1282,7 @@ function getTT(){return {backgroundColor:'#1a1a1a',borderColor:'#252525',borderW
 function getOpts(){return {responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:getTT()},scales:{x:{grid:{color:'#1e1e1e'},ticks:{color:'#555',font:{size:11}},border:{display:false}},y:{grid:{color:'#1e1e1e'},ticks:{color:'#555',font:{size:11}},border:{display:false}}}};}
 function getDualOpts(){return {responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{color:'#888',font:{size:10},boxWidth:10}},tooltip:getTT()},scales:{x:{grid:{color:'#1e1e1e'},ticks:{color:'#555',font:{size:11}},border:{display:false}},y:{position:'left',grid:{color:'#1e1e1e'},ticks:{color:'#555',font:{size:11}},border:{display:false}},y2:{position:'right',grid:{display:false},ticks:{color:'#555',font:{size:11}},border:{display:false}}}};}
 
-/* ── DATE RANGE ── */
+/* -- DATE RANGE -- */
 function parseMonthStr(s){
   if(!s)return null;
   var ms={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
@@ -1359,7 +1359,7 @@ function filterMonthArr(arr,start,end,key){
   return (arr||[]).filter(function(d){
     var val=d[key];if(!val)return false;
     var dt;
-    if(typeof val==='string'&&val.indexOf('-')>3){dt=new Date(val);dt=new Date(dt.getFullYear(),dt.getMonth(),1);}
+    if(typeof val==='string'&&val.indexOf('-')>3){dt=new Date(val+'T12:00:00');dt=new Date(dt.getFullYear(),dt.getMonth(),1);}
     else{dt=parseMonthStr(val);}
     if(!dt)return false;
     return dt>=start&&dt<=end;
@@ -1427,7 +1427,7 @@ function applyRange(start,end){
   if(mods.social)renderSocial(fd.social);
   if(mods.website)renderWebsite(fd.website,fd.seo);
 }
-/* ── EXPORT ── */
+/* -- EXPORT -- */
 /* WORK LOG */
 function renderWorkLog(entries){
   var container=document.getElementById("wl-list");
