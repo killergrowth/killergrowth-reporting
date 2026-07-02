@@ -208,6 +208,10 @@ async function buildReport(slug) {
     }
   };
 
+  // Merge persisted work log (survives data pulls)
+  const workLogPath = path.join(ROOT, 'data', 'work-logs', `${slug}.json`);
+  try { report.workLog = JSON.parse(fs.readFileSync(workLogPath, 'utf8')); } catch { report.workLog = []; }
+
   fs.writeFileSync(dataPath, JSON.stringify(report, null, 2), 'utf8');
   console.log(`\nWrote ${dataPath}`);
 
