@@ -117,6 +117,9 @@ async function pullLocalFalcon(placeId, apiKey, options = {}) {
 
   console.log(`[LocalFalcon] google=${googleKws.length} kws | topSolv=${topSolv}% | ai platforms=${aiPlatforms.length} | avgSaiv=${avgSaiv}%`);
 
+  // Use the most recent Google scan's public URL for the report button
+  const campaignPublicUrl = googleReports[0]?.public_url || reports[0]?.public_url || null;
+
   return {
     lastScanDate,
     topSolv,
@@ -125,7 +128,8 @@ async function pullLocalFalcon(placeId, apiKey, options = {}) {
     avgSaiv,
     googleKeywords: googleKws,
     aiPlatforms,
-    topAiKeywords
+    topAiKeywords,
+    campaignPublicUrl
   };
 }
 

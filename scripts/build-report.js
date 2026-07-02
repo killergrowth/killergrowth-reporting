@@ -150,7 +150,7 @@ async function buildReport(slug) {
       aiPlatforms:     v(lf)?.aiPlatforms     ?? base.localFalcon?.aiPlatforms     ?? [],
       topAiKeywords:   v(lf)?.topAiKeywords   ?? base.localFalcon?.topAiKeywords   ?? [],
       brandPhrases:    v(bp)                  ?? base.localFalcon?.brandPhrases    ?? null,
-      campaignPublicUrl: client.lfCampaignUrl   ?? base.localFalcon?.campaignPublicUrl ?? null
+      campaignPublicUrl: client.lfCampaignUrl   ?? v(lf)?.campaignPublicUrl ?? base.localFalcon?.campaignPublicUrl ?? null
     },
 
     gbp: {
