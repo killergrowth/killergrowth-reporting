@@ -1217,7 +1217,7 @@ function renderWebsite(website,seo){
   var channels=rawChannels.slice();
   if(aiTotal>0)channels.push({channel:'AI Traffic',sessions:aiTotal,_isAi:true});
   dc('web');
-  if(sessions.length){hd('e-web');dc('web');CHARTS['web']=new Chart(el('c-web').getContext('2d'),{type:'line',data:{labels:sessions.map(function(d){if(d.date){var dt=new Date(d.date+'T12:00:00');return dt.toLocaleDateString('en-US',{month:'short',day:'numeric'});}return 'Wk '+d.week;}),datasets:[{label:'Sessions',data:sessions.map(function(d){return d.sessions;}),borderColor:'#c8f000',backgroundColor:'rgba(200,240,0,0.1)',fill:true,tension:.4,pointRadius:3,pointBackgroundColor:'#c8f000'}]},options:getOpts()});}
+  if(sessions.length){hd('e-web');el('c-web').style.display='';dc('web');CHARTS['web']=new Chart(el('c-web').getContext('2d'),{type:'line',data:{labels:sessions.map(function(d){if(d.date){var dt=new Date(d.date+'T12:00:00');return dt.toLocaleDateString('en-US',{month:'short',day:'numeric'});}return 'Wk '+d.week;}),datasets:[{label:'Sessions',data:sessions.map(function(d){return d.sessions;}),borderColor:'#c8f000',backgroundColor:'rgba(200,240,0,0.1)',fill:true,tension:.4,pointRadius:3,pointBackgroundColor:'#c8f000'}]},options:getOpts()});}
   else{sh('e-web');el('c-web').style.display='none';}
   if(channels.length||aiTotal>0){
   var aiPlatforms=(website.aiReferral&&website.aiReferral.platforms)||[];
@@ -1394,7 +1394,10 @@ function applyRange(start,end){
   var baseLS=baseSeo.leadSignals||null;
   // Filter weekly sessions by date range
   var fSessions=filterMonthArr(baseSeo.organicSessions,start,end,'date');
-  var patchedSeo=Object.assign({},baseSeo,{organicSessions:fSessions.length?fSessions:baseSeo.organicSessions});
+  var gbpWebClicks=filteredGbpWeb||(d.gbp&&d.gbp.websiteClicks)||0;
+  var baseSources=(baseSeo.organicSearchSources||[]).filter(function(s){return s.source!=='google_business_profile';});
+  var patchedSources=gbpWebClicks>0?baseSources.concat([{source:'Google Business Profile',sessions:gbpWebClicks}]):baseSources;
+  var patchedSeo=Object.assign({},baseSeo,{organicSessions:fSessions.length?fSessions:baseSeo.organicSessions,organicSearchSources:patchedSources});
   fd.seo=baseLS?Object.assign({},patchedSeo,{leadSignals:Object.assign({},baseLS,{
     gbpCalls:filteredGbpCalls,
     gbpWebsiteClicks:filteredGbpWeb,
