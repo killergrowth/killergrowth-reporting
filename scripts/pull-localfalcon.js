@@ -117,8 +117,13 @@ async function pullLocalFalcon(placeId, apiKey, options = {}) {
 
   console.log(`[LocalFalcon] google=${googleKws.length} kws | topSolv=${topSolv}% | ai platforms=${aiPlatforms.length} | avgSaiv=${avgSaiv}%`);
 
-  // Use the most recent Google scan's public URL for the report button
-  const campaignPublicUrl = googleReports[0]?.public_url || reports[0]?.public_url || null;
+  // Build campaign-level URL (shows all scans) from campaign_key
+  const campaignKey = reports[0]?.campaign_key || null;
+  // Account key is the second path segment (after report_key) in the public_url
+  const accountKey = reports[0]?.public_url?.match(/\/[a-f0-9]{15}\/([a-f0-9]{15})\//)?.[1] || null;
+  const campaignPublicUrl = (campaignKey && accountKey)
+    ? `https://localrankingtracker.com/campaign-report/${campaignKey}/${accountKey}/`
+    : (googleReports[0]?.public_url || reports[0]?.public_url || null);
 
   return {
     lastScanDate,
