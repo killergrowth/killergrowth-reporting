@@ -96,7 +96,10 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
 /* KPI */
 .krow{display:flex;flex-wrap:wrap;gap:12px}
 .kc{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px 20px;flex:1;min-width:130px}
-.klbl{font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.klbl{font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;display:flex;align-items:center;gap:5px}
+.kinfo{position:relative;display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border-radius:50%;border:1px solid #444;color:#555;font-size:9px;font-style:normal;cursor:default;flex-shrink:0;line-height:1}
+.kinfo::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:#1e1e1e;color:#ccc;font-size:11px;font-weight:400;letter-spacing:0;text-transform:none;white-space:nowrap;padding:6px 10px;border-radius:6px;border:1px solid #333;pointer-events:none;opacity:0;transition:opacity .15s;z-index:99;max-width:240px;white-space:normal;text-align:center}
+.kinfo:hover::after{opacity:1}
 .kvr{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px}
 .kv{font-size:28px;font-weight:800;color:var(--w);line-height:1;letter-spacing:-.02em}
 .kd{font-size:11px;font-weight:700;padding:2px 7px;border-radius:20px}
@@ -801,15 +804,13 @@ function renderOverview(data,mods){
   var ov=data.overview||{},cards=[];
   if(mods.website&&ov.sessions!=null)cards.push(kc('Sessions',fmt(ov.sessions),ov.sessionsDelta,null,'A session is a single visit to the website. One person can have multiple sessions.'));
   if(mods.seo&&ov.rankingsTop10!=null)cards.push(kc('Top 10 Keywords',fmt(ov.rankingsTop10),ov.rankingsDelta,null,null));
-  if((mods.googleAds||mods.metaAds)&&ov.adSpend!=null)cards.push(kc('Ad Spend',fmtM(ov.adSpend),null,ov.costPerLead!=null?'CPL: '+fmtM(ov.costPerLead):null,null));
   if(mods.gbp&&ov.gbpViews!=null)cards.push(kc('GBP Views',fmt(ov.gbpViews),ov.gbpViewsDelta,null,null));
-  if(mods.social&&ov.socialReach!=null)cards.push(kc('Social Reach',fmt(ov.socialReach),ov.socialReachDelta,null));
   el('krow').innerHTML=cards.length?cards.join(''):'<div style="color:var(--muted);font-size:13px">No overview data available yet.</div>';
 }
 function kc(label,value,delta,sub,info){
   var dh='';if(delta!=null&&delta!==0){var cl=delta>0?'up':'dn';dh='<span class="kd '+cl+'">'+(delta>0?'+':'')+delta+'%</span>';}
-  var ih=info?'<span class="kinfo" title="'+info+'" style="display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border-radius:50%;border:1px solid #444;color:#666;font-size:9px;font-style:normal;cursor:default;margin-left:5px;vertical-align:middle;flex-shrink:0">i</span>':'';
-  return '<div class="kc"><div class="klbl" style="display:flex;align-items:center">'+label+ih+'</div><div class="kvr"><span class="kv">'+value+'</span>'+dh+'</div>'+(sub?'<div class="ksub">'+sub+'</div>':'')+'</div>';
+  var ih=info?'<span class="kinfo" data-tip="'+info+'">i</span>':'';
+  return '<div class="kc"><div class="klbl">'+label+ih+'</div><div class="kvr"><span class="kv">'+value+'</span>'+dh+'</div>'+(sub?'<div class="ksub">'+sub+'</div>':'')+'</div>';
 }
 
 function renderGEO(lf){
