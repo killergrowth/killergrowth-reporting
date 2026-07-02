@@ -799,22 +799,17 @@ function dc(key){if(CHARTS[key]){CHARTS[key].destroy();delete CHARTS[key];}}
 
 function renderOverview(data,mods){
   var ov=data.overview||{},cards=[];
-  if(mods.website&&ov.sessions!=null)cards.push(kc('Sessions',fmt(ov.sessions),ov.sessionsDelta,null));
-  if(ov.leads!=null)cards.push(kc('New Leads',fmt(ov.leads),ov.leadsDelta,null));
-  if(mods.seo&&ov.rankingsTop10!=null)cards.push(kc('Top 10 Keywords',fmt(ov.rankingsTop10),ov.rankingsDelta,null));
-  if((mods.googleAds||mods.metaAds)&&ov.adSpend!=null)cards.push(kc('Ad Spend',fmtM(ov.adSpend),null,ov.costPerLead!=null?'CPL: '+fmtM(ov.costPerLead):null));
-  if(mods.gbp&&ov.gbpViews!=null)cards.push(kc('GBP Views',fmt(ov.gbpViews),ov.gbpViewsDelta,null));
-  if(mods.gbp&&data.gbp&&data.gbp.viewsOverTime){
-    var _cutoff=new Date();_cutoff.setHours(0,0,0,0);_cutoff.setDate(_cutoff.getDate()-29);
-    var _dirs=(data.gbp.viewsOverTime||[]).filter(function(d){return new Date(d.date)>=_cutoff;}).reduce(function(s,d){return s+(d.directions||0);},0);
-    cards.unshift(kc('Direction Requests',fmt(_dirs),null,'Last 30 Days'));
-  }
+  if(mods.website&&ov.sessions!=null)cards.push(kc('Sessions',fmt(ov.sessions),ov.sessionsDelta,null,'A session is a single visit to the website. One person can have multiple sessions.'));
+  if(mods.seo&&ov.rankingsTop10!=null)cards.push(kc('Top 10 Keywords',fmt(ov.rankingsTop10),ov.rankingsDelta,null,null));
+  if((mods.googleAds||mods.metaAds)&&ov.adSpend!=null)cards.push(kc('Ad Spend',fmtM(ov.adSpend),null,ov.costPerLead!=null?'CPL: '+fmtM(ov.costPerLead):null,null));
+  if(mods.gbp&&ov.gbpViews!=null)cards.push(kc('GBP Views',fmt(ov.gbpViews),ov.gbpViewsDelta,null,null));
   if(mods.social&&ov.socialReach!=null)cards.push(kc('Social Reach',fmt(ov.socialReach),ov.socialReachDelta,null));
   el('krow').innerHTML=cards.length?cards.join(''):'<div style="color:var(--muted);font-size:13px">No overview data available yet.</div>';
 }
-function kc(label,value,delta,sub){
+function kc(label,value,delta,sub,info){
   var dh='';if(delta!=null&&delta!==0){var cl=delta>0?'up':'dn';dh='<span class="kd '+cl+'">'+(delta>0?'+':'')+delta+'%</span>';}
-  return '<div class="kc"><div class="klbl">'+label+'</div><div class="kvr"><span class="kv">'+value+'</span>'+dh+'</div>'+(sub?'<div class="ksub">'+sub+'</div>':'')+'</div>';
+  var ih=info?'<span class="kinfo" title="'+info+'" style="display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border-radius:50%;border:1px solid #444;color:#666;font-size:9px;font-style:normal;cursor:default;margin-left:5px;vertical-align:middle;flex-shrink:0">i</span>':'';
+  return '<div class="kc"><div class="klbl" style="display:flex;align-items:center">'+label+ih+'</div><div class="kvr"><span class="kv">'+value+'</span>'+dh+'</div>'+(sub?'<div class="ksub">'+sub+'</div>':'')+'</div>';
 }
 
 function renderGEO(lf){
