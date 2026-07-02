@@ -3,7 +3,7 @@
   "slug": "dons-heating",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-01T20:24:07.021Z",
+  "generatedAt": "2026-07-02T09:52:20.149Z",
   "overview": {
     "sessions": 826,
     "sessionsDelta": 0,
@@ -431,6 +431,12 @@
       },
       {
         "month": "May 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
+      },
+      {
+        "month": "Jun 2026",
         "adSpend": null,
         "adClicks": null,
         "adLeads": null
@@ -3134,6 +3140,11 @@
         "month": "May 2026",
         "reach": null,
         "engagements": null
+      },
+      {
+        "month": "Jun 2026",
+        "reach": null,
+        "engagements": null
       }
     ],
     "reachByWeek": [],
@@ -3142,7 +3153,7 @@
         "platform": "Facebook",
         "reach": 0,
         "engagements": 0,
-        "followers": 191
+        "followers": 192
       }
     ]
   },
@@ -3308,7 +3319,7 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 60,
+        "performance": 49,
         "accessibility": 90,
         "bestPractices": 73,
         "seo": 100
@@ -3930,6 +3941,21 @@
         "date": "2026-06-29",
         "mobile": {
           "performance": 60,
+          "accessibility": 90,
+          "bestPractices": 73,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 92,
+          "accessibility": 91,
+          "bestPractices": 73,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-07-02",
+        "mobile": {
+          "performance": 49,
           "accessibility": 90,
           "bestPractices": 73,
           "seo": 100

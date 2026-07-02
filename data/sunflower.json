@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-01T20:27:17.771Z",
+  "generatedAt": "2026-07-02T09:51:51.263Z",
   "overview": {
     "sessions": 593,
     "sessionsDelta": 0,
@@ -409,39 +409,40 @@
   "ads": {
     "monthlyBreakdown": [
       {
+        "month": "Jan 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
+      },
+      {
         "month": "Feb 2026",
-        "adSpend": 322.23,
-        "adClicks": 93,
-        "adLeads": 5,
-        "adImpressions": 72185
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       },
       {
         "month": "Mar 2026",
-        "adSpend": 332.05,
-        "adClicks": 177,
-        "adLeads": 5,
-        "adImpressions": 144953
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       },
       {
         "month": "Apr 2026",
-        "adSpend": 298.86,
-        "adClicks": 162,
-        "adLeads": 12,
-        "adImpressions": 42712
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       },
       {
         "month": "May 2026",
-        "adSpend": 54.08,
-        "adClicks": 10,
-        "adLeads": 1,
-        "adImpressions": 5282
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       },
       {
         "month": "Jun 2026",
-        "adSpend": 0,
-        "adClicks": 0,
-        "adLeads": 0,
-        "adImpressions": null
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       }
     ],
     "spendByWeek": [],
@@ -512,7 +513,7 @@
         "platform": "Facebook",
         "reach": 0,
         "engagements": 0,
-        "followers": 1203
+        "followers": 1202
       }
     ]
   },
@@ -678,13 +679,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 56,
+        "performance": 53,
         "accessibility": 75,
         "bestPractices": 96,
         "seo": 85
       },
       "desktop": {
-        "performance": 71,
+        "performance": 72,
         "accessibility": 77,
         "bestPractices": 96,
         "seo": 85
@@ -1376,6 +1377,21 @@
         },
         "desktop": {
           "performance": 71,
+          "accessibility": 77,
+          "bestPractices": 96,
+          "seo": 85
+        }
+      },
+      {
+        "date": "2026-07-02",
+        "mobile": {
+          "performance": 53,
+          "accessibility": 75,
+          "bestPractices": 96,
+          "seo": 85
+        },
+        "desktop": {
+          "performance": 72,
           "accessibility": 77,
           "bestPractices": 96,
           "seo": 85

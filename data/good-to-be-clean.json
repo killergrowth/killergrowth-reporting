@@ -3,7 +3,7 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-01T20:27:24.473Z",
+  "generatedAt": "2026-07-02T09:53:21.295Z",
   "overview": {
     "sessions": 633,
     "sessionsDelta": 0,
@@ -452,6 +452,12 @@
         "adSpend": null,
         "adClicks": null,
         "adLeads": null
+      },
+      {
+        "month": "Jun 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       }
     ],
     "spendByWeek": [],
@@ -509,6 +515,11 @@
         "month": "May 2026",
         "reach": null,
         "engagements": null
+      },
+      {
+        "month": "Jun 2026",
+        "reach": null,
+        "engagements": null
       }
     ],
     "reachByWeek": [],
@@ -517,7 +528,7 @@
         "platform": "Facebook",
         "reach": 0,
         "engagements": 0,
-        "followers": 2528
+        "followers": 2529
       }
     ]
   },
@@ -679,13 +690,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 59,
+        "performance": 50,
         "accessibility": 92,
         "bestPractices": 100,
         "seo": 100
       },
       "desktop": {
-        "performance": 97,
+        "performance": 76,
         "accessibility": 92,
         "bestPractices": 100,
         "seo": 100
@@ -1302,6 +1313,21 @@
         },
         "desktop": {
           "performance": 97,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-07-02",
+        "mobile": {
+          "performance": 50,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 76,
           "accessibility": 92,
           "bestPractices": 100,
           "seo": 100
