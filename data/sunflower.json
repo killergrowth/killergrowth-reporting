@@ -3,15 +3,15 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-02T09:51:51.263Z",
+  "generatedAt": "2026-07-02T13:19:25.800Z",
   "overview": {
-    "sessions": 593,
+    "sessions": 603,
     "sessionsDelta": 0,
-    "leads": null,
+    "leads": 0,
     "leadsDelta": null,
     "rankingsTop10": 12,
     "rankingsDelta": null,
-    "gbpViews": null,
+    "gbpViews": 4372,
     "gbpViewsDelta": null,
     "adSpend": 0,
     "adImpressions": 5282,
@@ -20,7 +20,7 @@
     "costPerLeadDelta": null,
     "socialReach": 0,
     "socialReachDelta": null,
-    "reviewCount": null,
+    "reviewCount": 0,
     "avgRating": null
   },
   "seo": {
@@ -154,14 +154,14 @@
       {
         "week": "27",
         "date": "2026-06-29",
-        "sessions": 65,
+        "sessions": 75,
         "conversions": 0
       }
     ],
     "trafficChannels": [
       {
         "channel": "Direct",
-        "sessions": 396
+        "sessions": 399
       },
       {
         "channel": "Organic Search",
@@ -169,15 +169,19 @@
       },
       {
         "channel": "Paid Search",
-        "sessions": 66
+        "sessions": 69
       },
       {
         "channel": "Cross-network",
-        "sessions": 27
+        "sessions": 31
       },
       {
         "channel": "Organic Social",
         "sessions": 19
+      },
+      {
+        "channel": "Unassigned",
+        "sessions": 5
       },
       {
         "channel": "Referral",
@@ -186,10 +190,6 @@
       {
         "channel": "AI Assistant",
         "sessions": 3
-      },
-      {
-        "channel": "Unassigned",
-        "sessions": 1
       }
     ],
     "organicSearchSources": [
@@ -214,9 +214,9 @@
       {
         "keyword": "sunflower plumbing",
         "clicks": 6,
-        "impressions": 132,
-        "ctr": 4.5,
-        "position": 2.7
+        "impressions": 139,
+        "ctr": 4.3,
+        "position": 2.9
       },
       {
         "keyword": "plumbers el dorado ks",
@@ -224,6 +224,13 @@
         "impressions": 27,
         "ctr": 7.4,
         "position": 13.2
+      },
+      {
+        "keyword": "septic service near me",
+        "clicks": 2,
+        "impressions": 6,
+        "ctr": 33.3,
+        "position": 3
       },
       {
         "keyword": "septic system installers",
@@ -266,13 +273,6 @@
         "impressions": 2,
         "ctr": 50,
         "position": 1
-      },
-      {
-        "keyword": "septic service near me",
-        "clicks": 1,
-        "impressions": 5,
-        "ctr": 20,
-        "position": 3.4
       },
       {
         "keyword": "septic system installers near me",
@@ -340,7 +340,7 @@
       {
         "keyword": "andover kansas plumbers",
         "clicks": 0,
-        "impressions": 30,
+        "impressions": 31,
         "ctr": 0,
         "position": 77.6
       },
@@ -368,7 +368,7 @@
       {
         "keyword": "bathroom plumbing fixtures repair kansas city",
         "clicks": 0,
-        "impressions": 54,
+        "impressions": 56,
         "ctr": 0,
         "position": 96.1
       },
@@ -401,9 +401,9 @@
           "Organic Search": 1
         }
       },
-      "gbpCalls": 0,
-      "gbpWebsiteClicks": 0,
-      "gbpDirections": 0
+      "gbpCalls": 295,
+      "gbpWebsiteClicks": 240,
+      "gbpDirections": 199
     }
   },
   "ads": {
@@ -449,28 +449,1172 @@
     "campaigns": []
   },
   "localFalcon": {
-    "lastScanDate": null,
-    "topSolv": null,
-    "topSolvKw": null,
-    "avgSolvAll": null,
-    "avgSaiv": null,
-    "googleKeywords": [],
-    "aiPlatforms": [],
-    "topAiKeywords": [],
-    "brandPhrases": null,
+    "lastScanDate": "6/7/2026 9:11 AM",
+    "topSolv": 100,
+    "topSolvKw": "plumber el dorado ks",
+    "avgSolvAll": 97,
+    "avgSaiv": 56.3,
+    "googleKeywords": [
+      {
+        "keyword": "plumber el dorado ks",
+        "solv": 100,
+        "arp": 1.1,
+        "date": "6/7/2026 9:11 AM",
+        "reportKey": "9b794889f266503"
+      },
+      {
+        "keyword": "septic tank pumping el dorado ks",
+        "solv": 100,
+        "arp": 1,
+        "date": "6/7/2026 9:11 AM",
+        "reportKey": "f5707b217cc84da"
+      },
+      {
+        "keyword": "septic repair",
+        "solv": 100,
+        "arp": 1.05,
+        "date": "6/7/2026 9:11 AM",
+        "reportKey": "d5e8e2c7ae464bd"
+      },
+      {
+        "keyword": "septic tank service el dorado ks",
+        "solv": 99.17,
+        "arp": 1,
+        "date": "6/7/2026 9:11 AM",
+        "reportKey": "b08724bd0f67192"
+      },
+      {
+        "keyword": "plumber near me",
+        "solv": 85.95,
+        "arp": 1.81,
+        "date": "6/7/2026 9:11 AM",
+        "reportKey": "13ea8cf7f913ad8"
+      }
+    ],
+    "aiPlatforms": [
+      {
+        "platform": "chatgpt",
+        "saiv": 56.3,
+        "scans": 5
+      }
+    ],
+    "topAiKeywords": [
+      {
+        "keyword": "septic tank pumping el dorado ks",
+        "saiv": 75.83,
+        "platform": "chatgpt",
+        "arp": 1.99
+      },
+      {
+        "keyword": "septic tank service el dorado ks",
+        "saiv": 68.6,
+        "platform": "chatgpt",
+        "arp": 1.98
+      },
+      {
+        "keyword": "plumber el dorado ks",
+        "saiv": 67.5,
+        "platform": "chatgpt",
+        "arp": 1
+      },
+      {
+        "keyword": "plumber near me",
+        "saiv": 64.46,
+        "platform": "chatgpt",
+        "arp": 1
+      },
+      {
+        "keyword": "septic repair",
+        "saiv": 5,
+        "platform": "chatgpt",
+        "arp": 1.33
+      }
+    ],
+    "brandPhrases": {
+      "scannedAt": "2026-07-02T13:19:23.483Z",
+      "queryCount": 5,
+      "mentionCount": 0,
+      "mentionRate": 0,
+      "phrases": []
+    },
     "campaignPublicUrl": null
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": null,
-    "calls": null,
+    "totalViews": 4372,
+    "calls": 295,
     "callsDelta": null,
-    "directions": null,
-    "websiteClicks": null,
+    "directions": 199,
+    "websiteClicks": 240,
     "directionsDelta": null,
-    "viewsOverTime": [],
-    "totalReviews": null,
-    "newThisMonth": null,
+    "viewsOverTime": [
+      {
+        "date": "2026-02-01",
+        "views": 29,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-02",
+        "views": 19,
+        "calls": 1,
+        "directions": 1,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-03",
+        "views": 37,
+        "calls": 2,
+        "directions": 2,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-02-04",
+        "views": 21,
+        "calls": 5,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-02-05",
+        "views": 27,
+        "calls": 7,
+        "directions": 18,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-02-06",
+        "views": 24,
+        "calls": 3,
+        "directions": 15,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-02-07",
+        "views": 34,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-08",
+        "views": 16,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-09",
+        "views": 35,
+        "calls": 1,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-02-10",
+        "views": 31,
+        "calls": 6,
+        "directions": 0,
+        "websiteClicks": 4
+      },
+      {
+        "date": "2026-02-11",
+        "views": 12,
+        "calls": 1,
+        "directions": 2,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-02-12",
+        "views": 39,
+        "calls": 5,
+        "directions": 3,
+        "websiteClicks": 6
+      },
+      {
+        "date": "2026-02-13",
+        "views": 24,
+        "calls": 1,
+        "directions": 4,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-14",
+        "views": 9,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-02-15",
+        "views": 32,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 4
+      },
+      {
+        "date": "2026-02-16",
+        "views": 27,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-02-17",
+        "views": 27,
+        "calls": 4,
+        "directions": 2,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-02-18",
+        "views": 42,
+        "calls": 1,
+        "directions": 1,
+        "websiteClicks": 6
+      },
+      {
+        "date": "2026-02-19",
+        "views": 34,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-02-20",
+        "views": 37,
+        "calls": 5,
+        "directions": 7,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-02-21",
+        "views": 15,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-02-22",
+        "views": 29,
+        "calls": 0,
+        "directions": 1,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-02-23",
+        "views": 35,
+        "calls": 3,
+        "directions": 0,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-02-24",
+        "views": 29,
+        "calls": 3,
+        "directions": 1,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-02-25",
+        "views": 24,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-26",
+        "views": 24,
+        "calls": 3,
+        "directions": 1,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-02-27",
+        "views": 35,
+        "calls": 6,
+        "directions": 2,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-02-28",
+        "views": 35,
+        "calls": 5,
+        "directions": 0,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-03-01",
+        "views": 31,
+        "calls": 0,
+        "directions": 5,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-03-02",
+        "views": 39,
+        "calls": 7,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-03-03",
+        "views": 17,
+        "calls": 1,
+        "directions": 0,
+        "websiteClicks": 4
+      },
+      {
+        "date": "2026-03-04",
+        "views": 22,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-03-05",
+        "views": 38,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-03-06",
+        "views": 15,
+        "calls": 2,
+        "directions": 9,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-03-07",
+        "views": 24,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-03-08",
+        "views": 37,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-03-09",
+        "views": 49,
+        "calls": 1,
+        "directions": 0,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-03-10",
+        "views": 26,
+        "calls": 3,
+        "directions": 0,
+        "websiteClicks": 6
+      },
+      {
+        "date": "2026-03-11",
+        "views": 25,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 4
+      },
+      {
+        "date": "2026-03-12",
+        "views": 28,
+        "calls": 1,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-03-13",
+        "views": 31,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-03-14",
+        "views": 13,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-03-15",
+        "views": 32,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-03-16",
+        "views": 22,
+        "calls": 5,
+        "directions": 1,
+        "websiteClicks": 4
+      },
+      {
+        "date": "2026-03-17",
+        "views": 27,
+        "calls": 4,
+        "directions": 4,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-03-18",
+        "views": 23,
+        "calls": 9,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-03-19",
+        "views": 41,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-03-20",
+        "views": 19,
+        "calls": 1,
+        "directions": 1,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-03-21",
+        "views": 23,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-03-22",
+        "views": 32,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-03-23",
+        "views": 26,
+        "calls": 3,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-03-24",
+        "views": 37,
+        "calls": 3,
+        "directions": 0,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-03-25",
+        "views": 31,
+        "calls": 18,
+        "directions": 4,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-03-26",
+        "views": 25,
+        "calls": 5,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-03-27",
+        "views": 51,
+        "calls": 1,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-03-28",
+        "views": 32,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-03-29",
+        "views": 41,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-03-30",
+        "views": 64,
+        "calls": 3,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-03-31",
+        "views": 47,
+        "calls": 3,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-04-01",
+        "views": 77,
+        "calls": 1,
+        "directions": 11,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-04-02",
+        "views": 33,
+        "calls": 1,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-04-03",
+        "views": 27,
+        "calls": 0,
+        "directions": 5,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-04-04",
+        "views": 37,
+        "calls": 4,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-04-05",
+        "views": 51,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-04-06",
+        "views": 23,
+        "calls": 4,
+        "directions": 0,
+        "websiteClicks": 4
+      },
+      {
+        "date": "2026-04-07",
+        "views": 33,
+        "calls": 4,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-04-08",
+        "views": 32,
+        "calls": 2,
+        "directions": 5,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-04-09",
+        "views": 43,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-04-10",
+        "views": 72,
+        "calls": 1,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-04-11",
+        "views": 115,
+        "calls": 1,
+        "directions": 3,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-04-12",
+        "views": 26,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-04-13",
+        "views": 78,
+        "calls": 5,
+        "directions": 0,
+        "websiteClicks": 7
+      },
+      {
+        "date": "2026-04-14",
+        "views": 44,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-04-15",
+        "views": 40,
+        "calls": 1,
+        "directions": 6,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-04-16",
+        "views": 39,
+        "calls": 3,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-04-17",
+        "views": 33,
+        "calls": 1,
+        "directions": 1,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-04-18",
+        "views": 28,
+        "calls": 0,
+        "directions": 1,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-04-19",
+        "views": 32,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-04-20",
+        "views": 32,
+        "calls": 4,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-04-21",
+        "views": 25,
+        "calls": 4,
+        "directions": 2,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-04-22",
+        "views": 32,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 4
+      },
+      {
+        "date": "2026-04-23",
+        "views": 30,
+        "calls": 8,
+        "directions": 0,
+        "websiteClicks": 4
+      },
+      {
+        "date": "2026-04-24",
+        "views": 41,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-04-25",
+        "views": 35,
+        "calls": 0,
+        "directions": 2,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-04-26",
+        "views": 15,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-04-27",
+        "views": 31,
+        "calls": 5,
+        "directions": 3,
+        "websiteClicks": 4
+      },
+      {
+        "date": "2026-04-28",
+        "views": 19,
+        "calls": 3,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-04-29",
+        "views": 31,
+        "calls": 6,
+        "directions": 0,
+        "websiteClicks": 5
+      },
+      {
+        "date": "2026-04-30",
+        "views": 30,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-05-01",
+        "views": 39,
+        "calls": 0,
+        "directions": 3,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-05-02",
+        "views": 73,
+        "calls": 1,
+        "directions": 2,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-05-03",
+        "views": 61,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-05-04",
+        "views": 23,
+        "calls": 2,
+        "directions": 7,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-05-05",
+        "views": 20,
+        "calls": 0,
+        "directions": 1,
+        "websiteClicks": 4
+      },
+      {
+        "date": "2026-05-06",
+        "views": 53,
+        "calls": 2,
+        "directions": 2,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-05-07",
+        "views": 28,
+        "calls": 0,
+        "directions": 2,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-05-08",
+        "views": 16,
+        "calls": 3,
+        "directions": 1,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-05-09",
+        "views": 56,
+        "calls": 0,
+        "directions": 2,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-05-10",
+        "views": 26,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-05-11",
+        "views": 36,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-05-12",
+        "views": 26,
+        "calls": 7,
+        "directions": 2,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-05-13",
+        "views": 20,
+        "calls": 1,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-05-14",
+        "views": 21,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-05-15",
+        "views": 16,
+        "calls": 1,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-05-16",
+        "views": 26,
+        "calls": 4,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-05-17",
+        "views": 20,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-05-18",
+        "views": 19,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-05-19",
+        "views": 40,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-05-20",
+        "views": 41,
+        "calls": 1,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-05-21",
+        "views": 23,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-05-22",
+        "views": 33,
+        "calls": 1,
+        "directions": 1,
+        "websiteClicks": 4
+      },
+      {
+        "date": "2026-05-23",
+        "views": 19,
+        "calls": 0,
+        "directions": 1,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-05-24",
+        "views": 33,
+        "calls": 4,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-05-25",
+        "views": 22,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-05-26",
+        "views": 27,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-05-27",
+        "views": 15,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-05-28",
+        "views": 45,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-05-29",
+        "views": 32,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-05-30",
+        "views": 8,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-05-31",
+        "views": 12,
+        "calls": 0,
+        "directions": 11,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-01",
+        "views": 15,
+        "calls": 2,
+        "directions": 4,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-06-02",
+        "views": 27,
+        "calls": 3,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-06-03",
+        "views": 17,
+        "calls": 5,
+        "directions": 5,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-06-04",
+        "views": 37,
+        "calls": 3,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-05",
+        "views": 29,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-06-06",
+        "views": 13,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-06-07",
+        "views": 21,
+        "calls": 0,
+        "directions": 2,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-06-08",
+        "views": 21,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-06-09",
+        "views": 19,
+        "calls": 5,
+        "directions": 2,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-06-10",
+        "views": 22,
+        "calls": 1,
+        "directions": 6,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-06-11",
+        "views": 27,
+        "calls": 3,
+        "directions": 1,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-06-12",
+        "views": 16,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-13",
+        "views": 16,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-14",
+        "views": 10,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-06-15",
+        "views": 14,
+        "calls": 2,
+        "directions": 1,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-06-16",
+        "views": 13,
+        "calls": 2,
+        "directions": 2,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-17",
+        "views": 5,
+        "calls": 3,
+        "directions": 1,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-06-18",
+        "views": 14,
+        "calls": 1,
+        "directions": 0,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-06-19",
+        "views": 20,
+        "calls": 1,
+        "directions": 3,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-20",
+        "views": 14,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-06-21",
+        "views": 15,
+        "calls": 1,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-22",
+        "views": 18,
+        "calls": 1,
+        "directions": 4,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-06-23",
+        "views": 38,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-06-24",
+        "views": 24,
+        "calls": 4,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-06-25",
+        "views": 23,
+        "calls": 1,
+        "directions": 6,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-26",
+        "views": 6,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-27",
+        "views": 4,
+        "calls": 0,
+        "directions": 3,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-28",
+        "views": 7,
+        "calls": 0,
+        "directions": 1,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-29",
+        "views": 4,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-06-30",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-01",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-02",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      }
+    ],
+    "totalReviews": 0,
+    "newThisMonth": 0,
     "avgRating": null
   },
   "gbp2": null,
@@ -648,7 +1792,7 @@
       {
         "week": "27",
         "date": "2026-06-29",
-        "sessions": 65,
+        "sessions": 75,
         "conversions": 0
       }
     ],
