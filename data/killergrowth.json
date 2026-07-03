@@ -3,7 +3,7 @@
   "slug": "killergrowth",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-02T09:50:54.448Z",
+  "generatedAt": "2026-07-03T09:49:37.972Z",
   "overview": {
     "sessions": 23,
     "sessionsDelta": 0,
@@ -13,10 +13,10 @@
     "rankingsDelta": null,
     "gbpViews": null,
     "gbpViewsDelta": null,
-    "adSpend": 1677.93,
+    "adSpend": 1677.98,
     "adImpressions": null,
     "adBudget": null,
-    "costPerLead": 1677.93,
+    "costPerLead": 1677.98,
     "costPerLeadDelta": null,
     "socialReach": 0,
     "socialReachDelta": null,
@@ -115,7 +115,7 @@
       },
       {
         "month": "Jun 2026",
-        "adSpend": 1677.93,
+        "adSpend": 1677.98,
         "adClicks": 13482,
         "adLeads": 1
       }
@@ -237,12 +237,7 @@
       "pagespeedMobile": null
     },
     "psiScores": {
-      "mobile": {
-        "performance": 69,
-        "accessibility": 91,
-        "bestPractices": 100,
-        "seo": 92
-      },
+      "mobile": null,
       "desktop": {
         "performance": 76,
         "accessibility": 91,
@@ -970,7 +965,18 @@
           "bestPractices": 100,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-07-03",
+        "mobile": null,
+        "desktop": {
+          "performance": 76,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
       }
     ]
-  }
+  },
+  "workLog": []
 }

@@ -3,7 +3,7 @@
   "slug": "timnath",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-02T09:53:48.473Z",
+  "generatedAt": "2026-07-03T09:55:13.534Z",
   "overview": {
     "sessions": 190,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 0,
     "rankingsDelta": null,
-    "gbpViews": 585,
+    "gbpViews": 587,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -134,7 +134,7 @@
       },
       "gbpCalls": 4,
       "gbpWebsiteClicks": 14,
-      "gbpDirections": 213
+      "gbpDirections": 217
     }
   },
   "ads": {
@@ -234,10 +234,10 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 585,
+    "totalViews": 587,
     "calls": 4,
     "callsDelta": null,
-    "directions": 213,
+    "directions": 217,
     "websiteClicks": 14,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -1286,9 +1286,9 @@
       },
       {
         "date": "2026-06-30",
-        "views": 0,
+        "views": 2,
         "calls": 0,
-        "directions": 0,
+        "directions": 4,
         "websiteClicks": 0
       },
       {
@@ -1300,6 +1300,13 @@
       },
       {
         "date": "2026-07-02",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-03",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1380,13 +1387,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 53,
+        "performance": 61,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 73,
+        "performance": 72,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
@@ -1422,7 +1429,23 @@
           "bestPractices": 100,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-07-03",
+        "mobile": {
+          "performance": 61,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 72,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        }
       }
     ]
-  }
+  },
+  "workLog": []
 }
