@@ -61,11 +61,12 @@ async function buildReport(slug) {
   const lfApiKey = process.env.LF_API_KEY;
 
   // Pull all sources in parallel
-  const [ga4, gsc, gbp, gbp2, meta, ghl, dfs, gads, psi, lf, bp] = await Promise.allSettled([
+  const [ga4, gsc, gbp, gbp2, gbp3, meta, ghl, dfs, gads, psi, lf, bp] = await Promise.allSettled([
     pullGA4(client.ga4PropertyId),
     pullGSC(client.gscSiteUrl),
     pullGBP(client.gbpAccountId, client.gbpLocationId),
     client.gbpLocationId2 ? pullGBP(client.gbpAccountId, client.gbpLocationId2) : Promise.resolve(null),
+    client.gbpLocationId3 ? pullGBP(client.gbpAccountId, client.gbpLocationId3) : Promise.resolve(null),
     pullMeta(client.metaPageId, client),
     pullGHL(client.ghlLocationId),
     pullDataForSEO(client.dataForSeoTarget),
@@ -119,6 +120,7 @@ async function buildReport(slug) {
           gbpCalls:         v(gbp)?.calls         ?? base.seo?.leadSignals?.gbpCalls         ?? 0,
           gbpWebsiteClicks: v(gbp)?.websiteClicks ?? base.seo?.leadSignals?.gbpWebsiteClicks ?? 0,
           gbpDirections:    v(gbp)?.directions    ?? base.seo?.leadSignals?.gbpDirections    ?? 0
+          // NOTE: gbp2/gbp3 totals are added at render time from filtered time-series (applyRange)
         };
       })()
     },
@@ -178,6 +180,17 @@ async function buildReport(slug) {
       avgRating:     v(gbp2)?.avgRating     ?? base.gbp2?.avgRating     ?? null
     } : (base.gbp2 ?? null),
 
+    gbp3: client.gbpLocationId3 ? {
+      locationName:  client.gbpLocationName3 ?? 'Location 3',
+      totalViews:   v(gbp3)?.totalViews    ?? base.gbp3?.totalViews   ?? null,
+      calls:        v(gbp3)?.calls         ?? base.gbp3?.calls         ?? null,
+      directions:   v(gbp3)?.directions    ?? base.gbp3?.directions    ?? null,
+      websiteClicks: v(gbp3)?.websiteClicks ?? base.gbp3?.websiteClicks ?? null,
+      viewsOverTime: v(gbp3)?.viewsOverTime ?? base.gbp3?.viewsOverTime ?? [],
+      totalReviews:  v(gbp3)?.totalReviews  ?? base.gbp3?.totalReviews  ?? null,
+      avgRating:     v(gbp3)?.avgRating     ?? base.gbp3?.avgRating     ?? null
+    } : (base.gbp3 ?? null),
+
     social: {
       monthlyHistory: v(meta)?.monthlyHistory?.map(m => ({
         month:       m.month,
@@ -221,6 +234,7 @@ async function buildReport(slug) {
   console.log(`  GSC:         ${v(gsc) ? 'OK' : 'SKIPPED/ERROR'}`);
   console.log(`  GBP:         ${v(gbp) ? 'OK' : 'SKIPPED/ERROR'}`);
   if (client.gbpLocationId2) console.log(`  GBP2:        ${v(gbp2) ? 'OK' : 'SKIPPED/ERROR'}`);
+  if (client.gbpLocationId3) console.log(`  GBP3:        ${v(gbp3) ? 'OK' : 'SKIPPED/ERROR'}`);
   console.log(`  Meta:        ${v(meta) ? 'OK' : 'SKIPPED/ERROR'}`);
   console.log(`  GHL:         ${v(ghl) ? 'OK' : 'SKIPPED/ERROR'}`);
   console.log(`  DataForSEO:  ${v(dfs) ? 'OK' : 'SKIPPED/ERROR'}`);

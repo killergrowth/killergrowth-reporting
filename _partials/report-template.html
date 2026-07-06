@@ -485,13 +485,21 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
           </div>
           <div class="card" id="gbp-stats"><div class="clbl" id="gbp-loc-label"></div></div>
         </div>
-        <div class="g21" id="gbp2-wrap" style="display:none">
+        <div class="g21" id="gbp2-wrap" style="display:none;margin-bottom:20px">
           <div class="card">
             <div class="clbl" id="gbp2-chart-label" style="margin-bottom:14px">GBP Views &mdash; Last 30 Days</div>
             <div style="position:relative;height:220px"><canvas id="c-gbp2"></canvas></div>
             <div id="e-gbp2" class="du h"><div class="du-t">Data updating&hellip;</div></div>
           </div>
           <div class="card" id="gbp2-stats"><div class="clbl" id="gbp2-loc-label"></div></div>
+        </div>
+        <div class="g21" id="gbp3-wrap" style="display:none">
+          <div class="card">
+            <div class="clbl" id="gbp3-chart-label" style="margin-bottom:14px">GBP Views &mdash; Last 30 Days</div>
+            <div style="position:relative;height:220px"><canvas id="c-gbp3"></canvas></div>
+            <div id="e-gbp3" class="du h"><div class="du-t">Data updating&hellip;</div></div>
+          </div>
+          <div class="card" id="gbp3-stats"><div class="clbl" id="gbp3-loc-label"></div></div>
         </div>
       </section>
 
@@ -1036,7 +1044,7 @@ function renderMeta(ads,social){
 }
 
 
-var GBP_DATA=null,GBP2_DATA=null,GBP_METRIC='views',GBP2_METRIC='views',GBP_RANGE='lastmonth';
+var GBP_DATA=null,GBP2_DATA=null,GBP3_DATA=null,GBP_METRIC='views',GBP2_METRIC='views',GBP3_METRIC='views',GBP_RANGE='lastmonth';
 function gbpRangeWindow(){
   // Calendar-month windows anchored to today. Returns null for 6m (no filter).
   var now=new Date();now.setHours(23,59,59,999);
@@ -1049,16 +1057,20 @@ function gbpFilterByWindow(raw){
   var w=gbpRangeWindow();if(!w)return raw;
   return raw.filter(function(d){var dt=new Date(d.date+'T12:00:00');return dt>=w.start&&dt<=w.end;});
 }
-function renderGBP(gbp,gbp2){
+function renderGBP(gbp,gbp2,gbp3){
   GBP_DATA=gbp;
   GBP2_DATA=gbp2||null;
+  GBP3_DATA=gbp3||null;
   // Set location labels
   var lbl1=el('gbp-loc-label');if(lbl1)lbl1.textContent=(gbp&&gbp.locationName)||'';
   var lbl2=el('gbp2-loc-label');if(lbl2)lbl2.textContent=(gbp2&&gbp2.locationName)||'';
+  var lbl3=el('gbp3-loc-label');if(lbl3)lbl3.textContent=(gbp3&&gbp3.locationName)||'';
   var wrap2=el('gbp2-wrap');if(wrap2)wrap2.style.display=gbp2?'':'none';
+  var wrap3=el('gbp3-wrap');if(wrap3)wrap3.style.display=gbp3?'':'none';
   renderGBPStats();
   renderGBPChart();
   if(GBP2_DATA){renderGBP2Stats();renderGBP2Chart();}
+  if(GBP3_DATA){renderGBP3Stats();renderGBP3Chart();}
 }
 function gbpFilteredStats(gbp,rawOverride){
   if(GBP_RANGE==='6m')return gbp;
@@ -1140,6 +1152,55 @@ function setGbpRange(range){
   document.querySelectorAll('.gbp-tr').forEach(function(b){b.classList.toggle('active',b.getAttribute('data-range')===range);});
   renderGBPStats();renderGBPChart();
   if(GBP2_DATA){renderGBP2Stats();renderGBP2Chart();}
+  if(GBP3_DATA){renderGBP3Stats();renderGBP3Chart();}
+}
+function setGbp3Metric(metric){
+  GBP3_METRIC=metric;
+  renderGBP3Stats();renderGBP3Chart();
+}
+function renderGBP3Stats(){
+  var gbp=GBP3_DATA;if(!gbp)return;
+  var raw3=(DR_DATA&&DR_DATA.gbp3&&DR_DATA.gbp3.viewsOverTime)||gbp.viewsOverTime||[];
+  var s=gbpFilteredStats(gbp,raw3);
+  var rows=[
+    {key:'views',label:'GBP Views',val:fmt(s.totalViews),sel:true},
+    {key:'calls',label:'Phone Calls',val:fmt(s.calls),sel:true},
+    {key:'directions',label:'Direction Requests',val:fmt(s.directions),sel:true},
+    {key:'websiteClicks',label:'Website Clicks',val:fmt(s.websiteClicks),sel:true}
+  ];
+  var locLabel=gbp.locationName?'<div class="clbl" style="margin-bottom:12px">'+gbp.locationName+'</div>':'';
+  el('gbp3-stats').innerHTML=locLabel+rows.map(function(r){
+    var active=r.sel&&r.key===GBP3_METRIC;
+    var cls='sr'+(r.sel?' gbp-stat-row':'')+(active?' gbp-stat-sel':'');
+    var oc=r.sel?' onclick="setGbp3Metric(\''+r.key+'\')"':'';
+    return '<div class="'+cls+'"'+oc+'><span class="srl">'+r.label+'</span><span class="srv" style="'+(active?'color:var(--lime)':'')+'">'+(r.val)+'</span></div>';
+  }).join('');
+}
+function renderGBP3Chart(){
+  var gbp=GBP3_DATA;if(!gbp)return;
+  dc('gbp3');
+  var raw=(DR_DATA&&DR_DATA.gbp3&&DR_DATA.gbp3.viewsOverTime)||gbp.viewsOverTime||[];
+  var metaMap3={views:{key:'views',label:'GBP Views'},calls:{key:'calls',label:'Phone Calls'},directions:{key:'directions',label:'Direction Requests'},websiteClicks:{key:'websiteClicks',label:'Website Clicks'}};
+  var mc3=metaMap3[GBP3_METRIC]||metaMap3.views;
+  var rangeLabel=gbpRangeLabel();
+  var lbl=el('gbp3-chart-label');if(lbl)lbl.textContent=(gbp.locationName||'Location 3')+' \u2014 '+mc3.label+'\u2009\u2014\u2009'+rangeLabel;
+  var labels=[],values=[];
+  if(GBP_RANGE!=='6m'){
+    var f3=gbpFilterByWindow(raw);
+    labels=f3.map(function(d){var dt=new Date(d.date+'T12:00:00');return (dt.getMonth()+1)+'/'+(dt.getDate());});
+    values=f3.map(function(d){return d[mc3.key]||0;});
+  } else {
+    var mt3={};
+    raw.forEach(function(d){var dt=new Date(d.date);var k=dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0');mt3[k]=(mt3[k]||0)+(d[mc3.key]||0);});
+    var ms4=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    Object.keys(mt3).sort().forEach(function(k){var p=k.split('-');labels.push(ms4[parseInt(p[1])-1]+' '+p[0]);values.push(mt3[k]);});
+  }
+  if(values.length){
+    hd('e-gbp3');var c=el('c-gbp3');if(c)c.style.display='';
+    var opts3=getOpts();
+    if(CHARTS['gbp3'])CHARTS['gbp3'].destroy();
+    CHARTS['gbp3']=new Chart(el('c-gbp3').getContext('2d'),{type:'bar',data:{labels:labels,datasets:[{label:mc3.label,data:values,backgroundColor:'#7c6ff7',borderRadius:3}]},options:opts3});
+  } else {sh('e-gbp3');var c3b=el('c-gbp3');if(c3b)c3b.style.display='none';}
 }
 function renderGBP2Stats(){
   var gbp=GBP2_DATA;if(!gbp)return;
@@ -1379,6 +1440,7 @@ function applyRange(start,end){
   var fSocial=filterMonthArr(d.social&&d.social.monthlyHistory,start,end,'month');
   var fGbp=filterMonthArr(d.gbp&&d.gbp.viewsOverTime,start,end,'date');
   var fGbp2=filterMonthArr(d.gbp2&&d.gbp2.viewsOverTime,start,end,'date');
+  var fGbp3=filterMonthArr(d.gbp3&&d.gbp3.viewsOverTime,start,end,'date');
   var fPsiH=filterMonthArr(d.website&&d.website.psiHistory,start,end,'date');
   // Timezone-safe filter for weekly sessions: compare YYYY-MM strings directly
   var _sM=start.getFullYear()+'-'+String(start.getMonth()+1).padStart(2,'0');
@@ -1390,9 +1452,9 @@ function applyRange(start,end){
   });
   var fd={};
   // Recalculate GBP scalars from filtered time-series so lead signals match GBP section
-  var filteredGbpCalls=fGbp.reduce(function(s,x){return s+(x.calls||0);},0)+fGbp2.reduce(function(s,x){return s+(x.calls||0);},0);
-  var filteredGbpWeb=fGbp.reduce(function(s,x){return s+(x.websiteClicks||0);},0)+fGbp2.reduce(function(s,x){return s+(x.websiteClicks||0);},0);
-  var filteredGbpDir=fGbp.reduce(function(s,x){return s+(x.directions||0);},0)+fGbp2.reduce(function(s,x){return s+(x.directions||0);},0);
+  var filteredGbpCalls=fGbp.reduce(function(s,x){return s+(x.calls||0);},0)+fGbp2.reduce(function(s,x){return s+(x.calls||0);},0)+fGbp3.reduce(function(s,x){return s+(x.calls||0);},0);
+  var filteredGbpWeb=fGbp.reduce(function(s,x){return s+(x.websiteClicks||0);},0)+fGbp2.reduce(function(s,x){return s+(x.websiteClicks||0);},0)+fGbp3.reduce(function(s,x){return s+(x.websiteClicks||0);},0);
+  var filteredGbpDir=fGbp.reduce(function(s,x){return s+(x.directions||0);},0)+fGbp2.reduce(function(s,x){return s+(x.directions||0);},0)+fGbp3.reduce(function(s,x){return s+(x.directions||0);},0);
   var baseSeo=d.seo||{};
   var baseLS=baseSeo.leadSignals||null;
   // Filter weekly sessions by date range
@@ -1410,6 +1472,7 @@ function applyRange(start,end){
   fd.social=Object.assign({},d.social||{},{monthlyHistory:fSocial});
   fd.gbp=Object.assign({},d.gbp||{},{viewsOverTime:fGbp});
   fd.gbp2=d.gbp2||null;
+  fd.gbp3=d.gbp3||null;
   fd.localFalcon=d.localFalcon||null;
   var psiScores=(d.website||{}).psiScores||{};
   if(fPsiH&&fPsiH.length){var lp=fPsiH[fPsiH.length-1];psiScores={mobile:lp.mobile,desktop:lp.desktop};}
@@ -1430,7 +1493,7 @@ function applyRange(start,end){
   if(fd.localFalcon)renderGEO(fd.localFalcon);
   if(mods.googleAds)renderAds(fd.ads);
   if(mods.metaAds)renderMeta(fd.ads,fd.social);
-  if(mods.gbp)renderGBP(fd.gbp,fd.gbp2||null);
+  if(mods.gbp)renderGBP(fd.gbp,fd.gbp2||null,fd.gbp3||null);
   if(mods.social)renderSocial(fd.social);
   if(mods.website)renderWebsite(fd.website,fd.seo);
 }
