@@ -473,8 +473,8 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
       <section id="gbp" class="ms" data-module="gbp">
         <div class="sh"><span class="sb2">GBP</span><span class="st">Google Business Profile</span></div>
         <div style="display:flex;gap:6px;margin-bottom:16px">
-          <button class="gbp-tr active" data-range="30d" onclick="setGbpRange('30d')">Last 30 Days</button>
           <button class="gbp-tr" data-range="month" onclick="setGbpRange('month')">This Month</button>
+          <button class="gbp-tr active" data-range="lastmonth" onclick="setGbpRange('lastmonth')">Last Month</button>
           <button class="gbp-tr" data-range="6m" onclick="setGbpRange('6m')">6 Months</button>
         </div>
         <div class="g21" style="margin-bottom:20px">
@@ -1036,7 +1036,19 @@ function renderMeta(ads,social){
 }
 
 
-var GBP_DATA=null,GBP2_DATA=null,GBP_METRIC='views',GBP2_METRIC='views',GBP_RANGE='30d';
+var GBP_DATA=null,GBP2_DATA=null,GBP_METRIC='views',GBP2_METRIC='views',GBP_RANGE='lastmonth';
+function gbpRangeWindow(){
+  // Calendar-month windows anchored to today. Returns null for 6m (no filter).
+  var now=new Date();now.setHours(23,59,59,999);
+  if(GBP_RANGE==='month')return {start:new Date(now.getFullYear(),now.getMonth(),1),end:now};
+  if(GBP_RANGE==='lastmonth')return {start:new Date(now.getFullYear(),now.getMonth()-1,1),end:new Date(now.getFullYear(),now.getMonth(),0,23,59,59,999)};
+  return null;
+}
+function gbpRangeLabel(){return GBP_RANGE==='month'?'This Month':GBP_RANGE==='lastmonth'?'Last Month':'6 Months';}
+function gbpFilterByWindow(raw){
+  var w=gbpRangeWindow();if(!w)return raw;
+  return raw.filter(function(d){var dt=new Date(d.date+'T12:00:00');return dt>=w.start&&dt<=w.end;});
+}
 function renderGBP(gbp,gbp2){
   GBP_DATA=gbp;
   GBP2_DATA=gbp2||null;
@@ -1051,10 +1063,7 @@ function renderGBP(gbp,gbp2){
 function gbpFilteredStats(gbp,rawOverride){
   if(GBP_RANGE==='6m')return gbp;
   var raw=rawOverride||(DR_DATA&&DR_DATA.gbp&&DR_DATA.gbp.viewsOverTime)||gbp.viewsOverTime||[];
-  var cutoff=new Date();cutoff.setHours(0,0,0,0);
-  if(GBP_RANGE==='30d')cutoff.setDate(cutoff.getDate()-29);
-  else cutoff=new Date(cutoff.getFullYear(),cutoff.getMonth(),1);
-  var f=raw.filter(function(d){return new Date(d.date+'T12:00:00')>=cutoff;});
+  var f=gbpFilterByWindow(raw);
   return {totalViews:f.reduce(function(s,d){return s+(d.views||0);},0),calls:f.reduce(function(s,d){return s+(d.calls||0);},0),directions:f.reduce(function(s,d){return s+(d.directions||0);},0),websiteClicks:f.reduce(function(s,d){return s+(d.websiteClicks||0);},0),totalReviews:gbp.totalReviews,avgRating:gbp.avgRating};
 }
 function renderGBPStats(){
@@ -1086,15 +1095,12 @@ function renderGBPChart(){
   };
   var mc=metaMap[GBP_METRIC]||metaMap.views;
   var lbl=el('gbp-chart-label');
-  var rangeLabel=GBP_RANGE==='30d'?'Last 30 Days':GBP_RANGE==='month'?'This Month':'6 Months';
+  var rangeLabel=gbpRangeLabel();
   var locName1=(GBP_DATA&&GBP_DATA.locationName)?GBP_DATA.locationName+' \u2014 ':'';
   if(lbl)lbl.textContent=locName1+mc.label+'\u2009\u2014\u2009'+rangeLabel;
   var labels=[],values=[];
-  if(GBP_RANGE==='30d'||GBP_RANGE==='month'){
-    var cutoffC=new Date();cutoffC.setHours(0,0,0,0);
-    if(GBP_RANGE==='30d')cutoffC.setDate(cutoffC.getDate()-29);
-    else cutoffC=new Date(cutoffC.getFullYear(),cutoffC.getMonth(),1);
-    var filteredC=raw.filter(function(d){return new Date(d.date+'T12:00:00')>=cutoffC;});
+  if(GBP_RANGE!=='6m'){
+    var filteredC=gbpFilterByWindow(raw);
     labels=filteredC.map(function(d){var dt=new Date(d.date+'T12:00:00');return (dt.getMonth()+1)+'/'+(dt.getDate());});
     values=filteredC.map(function(d){return d[mc.key]||0;});
   } else {
@@ -1159,14 +1165,12 @@ function renderGBP2Chart(){
   var raw=(DR_DATA&&DR_DATA.gbp2&&DR_DATA.gbp2.viewsOverTime)||gbp.viewsOverTime||[];
   var metaMap2={views:{key:'views',label:'GBP Views'},calls:{key:'calls',label:'Phone Calls'},directions:{key:'directions',label:'Direction Requests'},websiteClicks:{key:'websiteClicks',label:'Website Clicks'}};
   var mc2=metaMap2[GBP2_METRIC]||metaMap2.views;
-  var rangeLabel=GBP_RANGE==='30d'?'Last 30 Days':GBP_RANGE==='month'?'This Month':'6 Months';
+  var rangeLabel=gbpRangeLabel();
   var lbl=el('gbp2-chart-label');if(lbl)lbl.textContent=(gbp.locationName||'Location 2')+' \u2014 '+mc2.label+'\u2009\u2014\u2009'+rangeLabel;
   var labels=[],values=[];
-  if(GBP_RANGE==='30d'||GBP_RANGE==='month'){
-    var cutoff2=new Date();cutoff2.setHours(0,0,0,0);
-    if(GBP_RANGE==='30d')cutoff2.setDate(cutoff2.getDate()-29);else cutoff2=new Date(cutoff2.getFullYear(),cutoff2.getMonth(),1);
-    var f2=raw.filter(function(d){return new Date(d.date+'T12:00:00')>=cutoff2;});
-    labels=f2.map(function(d){var dt=new Date(d.date);return (dt.getMonth()+1)+'/'+(dt.getDate());});
+  if(GBP_RANGE!=='6m'){
+    var f2=gbpFilterByWindow(raw);
+    labels=f2.map(function(d){var dt=new Date(d.date+'T12:00:00');return (dt.getMonth()+1)+'/'+(dt.getDate());});
     values=f2.map(function(d){return d[mc2.key]||0;});
   } else {
     var mt2={};
