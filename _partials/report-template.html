@@ -429,11 +429,11 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
           <div id="geo-hero" class="geo-hero"></div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px">
             <div class="geo-stat" style="padding:0">
-              <div style="padding:16px 20px 0;display:flex;align-items:center;gap:6px"><span class="clbl">AI Platforms</span><span class="kg-info-tip" data-tip="Share of AI Voice (SAIV) — how often this business is mentioned when AI platforms like ChatGPT, Gemini, and Grok answer relevant local searches. Higher % = stronger AI visibility.">&#9432;</span></div>
+              <div style="padding:16px 20px 0;display:flex;align-items:center;gap:6px"><span class="clbl">AI Platforms</span><span class="kg-info-tip" data-tip="Share of AI Voice (SAIV) ï¿½ how often this business is mentioned when AI platforms like ChatGPT, Gemini, and Grok answer relevant local searches. Higher % = stronger AI visibility.">&#9432;</span></div>
               <div id="geo-ai-platforms" style="padding:0 20px 10px"></div>
             </div>
             <div class="geo-stat" style="padding:0">
-              <div style="padding:16px 20px 0;display:flex;align-items:center;gap:6px"><span class="clbl">Google Maps Keywords</span><span class="kg-info-tip" data-tip="Share of Local Voice (SoLV) — the % of Google Maps grid points where this business appears in the top 3 results for each keyword. 100% = dominant in every scan zone.">&#9432;</span></div>
+              <div style="padding:16px 20px 0;display:flex;align-items:center;gap:6px"><span class="clbl">Google Maps Keywords</span><span class="kg-info-tip" data-tip="Share of Local Voice (SoLV) ï¿½ the % of Google Maps grid points where this business appears in the top 3 results for each keyword. 100% = dominant in every scan zone.">&#9432;</span></div>
               <div id="geo-google-kws" style="padding:0 20px 10px"></div>
             </div>
           </div>
@@ -822,8 +822,8 @@ function renderGEO(lf){
   // Hero stats
   var heroEl=el('geo-hero');
   if(heroEl){
-    var saivVal=lf.avgSaiv!=null?lf.avgSaiv+'%':'—';
-    var solvVal=lf.avgSolvAll!=null?lf.avgSolvAll+'%':'—';
+    var saivVal=lf.avgSaiv!=null?lf.avgSaiv+'%':'ï¿½';
+    var solvVal=lf.avgSolvAll!=null?lf.avgSolvAll+'%':'ï¿½';
     var saivStrong=lf.avgSaiv>50;
     var solvStrong=lf.avgSolvAll>50;
     heroEl.innerHTML=
@@ -1217,7 +1217,7 @@ function renderWebsite(website,seo){
   else{sh('e-web');el('c-web').style.display='none';}
   if(channels.length||aiTotal>0){
   var aiPlatforms=(website.aiReferral&&website.aiReferral.platforms)||[];
-  // All tracked AI platforms — always show the full list, greyed if 0
+  // All tracked AI platforms ï¿½ always show the full list, greyed if 0
   var ALL_AI_PLATFORMS=['ChatGPT','Perplexity','Gemini','Claude','Copilot','You.com','Phind'];
   var platformMap={};aiPlatforms.forEach(function(p){platformMap[p.name]=p.sessions;});
   var organicSources=(seo&&seo.organicSearchSources)||[];
@@ -1345,13 +1345,16 @@ function applyPreset(preset){
   if(!DR_DATA)return;
   var allM=getAllMonths(DR_DATA);
   if(!allM.length){applyRange(new Date(),new Date());return;}
-  var latest=allM[allM.length-1].date,start,end=latest;
-  if(preset==='current'){start=end;}
-  else if(preset==='last'){end=new Date(latest.getFullYear(),latest.getMonth()-1,1);start=end;}
-  else if(preset==='3m'){start=new Date(latest.getFullYear(),latest.getMonth()-2,1);}
-  else if(preset==='6m'){start=new Date(latest.getFullYear(),latest.getMonth()-5,1);}
-  else if(preset==='ytd'){start=new Date(latest.getFullYear(),0,1);}
-  else{start=allM[0].date;}
+  var latest=allM[allM.length-1].date,earliest=allM[0].date,start,end;
+  // Anchor presets to today's calendar date (not latest data month), clamped to available data
+  var _now=new Date(),nowM=new Date(_now.getFullYear(),_now.getMonth(),1);
+  function clampM(dt){if(dt>latest)return latest;if(dt<earliest)return earliest;return dt;}
+  if(preset==='current'){end=clampM(nowM);start=end;}
+  else if(preset==='last'){end=clampM(new Date(nowM.getFullYear(),nowM.getMonth()-1,1));start=end;}
+  else if(preset==='3m'){end=clampM(nowM);start=clampM(new Date(nowM.getFullYear(),nowM.getMonth()-2,1));}
+  else if(preset==='6m'){end=clampM(nowM);start=clampM(new Date(nowM.getFullYear(),nowM.getMonth()-5,1));}
+  else if(preset==='ytd'){end=clampM(nowM);start=clampM(new Date(nowM.getFullYear(),0,1));}
+  else{end=latest;start=earliest;}
   applyRange(start,end);
 }
 function filterMonthArr(arr,start,end,key){
