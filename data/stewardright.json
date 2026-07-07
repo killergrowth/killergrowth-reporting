@@ -3,7 +3,7 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "June 2026",
-  "generatedAt": "2026-07-06T11:20:43.788Z",
+  "generatedAt": "2026-07-07T10:17:27.207Z",
   "overview": {
     "sessions": 50,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": null,
     "rankingsDelta": null,
-    "gbpViews": 1759,
+    "gbpViews": 1837,
     "gbpViewsDelta": null,
     "adSpend": 593.29,
     "adImpressions": 25624,
@@ -204,8 +204,8 @@
         }
       },
       "gbpCalls": 11,
-      "gbpWebsiteClicks": 69,
-      "gbpDirections": 167
+      "gbpWebsiteClicks": 74,
+      "gbpDirections": 173
     }
   },
   "ads": {
@@ -264,11 +264,11 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 1759,
+    "totalViews": 1837,
     "calls": 11,
     "callsDelta": null,
-    "directions": 167,
-    "websiteClicks": 69,
+    "directions": 173,
+    "websiteClicks": 74,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1288,48 +1288,83 @@
       },
       {
         "date": "2026-06-26",
-        "views": 1,
+        "views": 12,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-06-27",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-06-28",
         "views": 2,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-06-28",
+        "views": 6,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 1
       },
       {
         "date": "2026-06-29",
-        "views": 0,
+        "views": 20,
         "calls": 0,
         "directions": 2,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-06-30",
-        "views": 0,
+        "views": 7,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-07-01",
+        "views": 11,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-07-02",
+        "views": 10,
+        "calls": 0,
+        "directions": 1,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-03",
+        "views": 13,
+        "calls": 0,
+        "directions": 1,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-04",
+        "views": 0,
+        "calls": 0,
+        "directions": 4,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-05",
         "views": 0,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
-        "date": "2026-07-02",
+        "date": "2026-07-06",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-07",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1341,6 +1376,7 @@
     "avgRating": null
   },
   "gbp2": null,
+  "gbp3": null,
   "social": {
     "monthlyHistory": [
       {
@@ -1532,13 +1568,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 56,
+        "performance": 44,
         "accessibility": 90,
         "bestPractices": 77,
         "seo": 92
       },
       "desktop": {
-        "performance": 66,
+        "performance": 84,
         "accessibility": 90,
         "bestPractices": 77,
         "seo": 92
@@ -2300,6 +2336,21 @@
         },
         "desktop": {
           "performance": 66,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-07",
+        "mobile": {
+          "performance": 44,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 84,
           "accessibility": 90,
           "bestPractices": 77,
           "seo": 92
