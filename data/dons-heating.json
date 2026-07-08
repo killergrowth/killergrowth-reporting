@@ -3,7 +3,7 @@
   "slug": "dons-heating",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-07T10:19:16.882Z",
+  "generatedAt": "2026-07-08T09:20:53.524Z",
   "overview": {
     "sessions": 826,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 15,
     "rankingsDelta": null,
-    "gbpViews": 2633,
+    "gbpViews": 2645,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -399,7 +399,7 @@
         }
       },
       "gbpCalls": 311,
-      "gbpWebsiteClicks": 173,
+      "gbpWebsiteClicks": 175,
       "gbpDirections": 230
     }
   },
@@ -557,11 +557,11 @@
   },
   "gbp": {
     "locationName": "El Dorado",
-    "totalViews": 2633,
+    "totalViews": 2645,
     "calls": 311,
     "callsDelta": null,
     "directions": 230,
-    "websiteClicks": 173,
+    "websiteClicks": 175,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1637,10 +1637,10 @@
       },
       {
         "date": "2026-07-04",
-        "views": 10,
+        "views": 22,
         "calls": 0,
         "directions": 3,
-        "websiteClicks": 0
+        "websiteClicks": 2
       },
       {
         "date": "2026-07-05",
@@ -1658,6 +1658,13 @@
       },
       {
         "date": "2026-07-07",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-08",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -2773,6 +2780,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-08",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -2780,7 +2794,7 @@
   },
   "gbp3": {
     "locationName": "Hillsboro",
-    "totalViews": 980,
+    "totalViews": 982,
     "calls": 38,
     "directions": 223,
     "websiteClicks": 46,
@@ -3858,7 +3872,7 @@
       },
       {
         "date": "2026-07-04",
-        "views": 1,
+        "views": 3,
         "calls": 0,
         "directions": 1,
         "websiteClicks": 0
@@ -3879,6 +3893,13 @@
       },
       {
         "date": "2026-07-07",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-08",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -4093,13 +4114,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 42,
+        "performance": 59,
         "accessibility": 90,
         "bestPractices": 73,
         "seo": 100
       },
       "desktop": {
-        "performance": 94,
+        "performance": 90,
         "accessibility": 91,
         "bestPractices": 73,
         "seo": 100
@@ -4811,6 +4832,21 @@
         },
         "desktop": {
           "performance": 94,
+          "accessibility": 91,
+          "bestPractices": 73,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-07-08",
+        "mobile": {
+          "performance": 59,
+          "accessibility": 90,
+          "bestPractices": 73,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 90,
           "accessibility": 91,
           "bestPractices": 73,
           "seo": 100

@@ -3,7 +3,7 @@
   "slug": "timnath",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-07T10:20:38.517Z",
+  "generatedAt": "2026-07-08T09:23:01.839Z",
   "overview": {
     "sessions": 190,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 0,
     "rankingsDelta": null,
-    "gbpViews": 609,
+    "gbpViews": 612,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -234,7 +234,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 609,
+    "totalViews": 612,
     "calls": 4,
     "callsDelta": null,
     "directions": 219,
@@ -1314,7 +1314,7 @@
       },
       {
         "date": "2026-07-04",
-        "views": 0,
+        "views": 3,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1335,6 +1335,13 @@
       },
       {
         "date": "2026-07-07",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-08",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1415,14 +1422,9 @@
       "pagespeedMobile": null
     },
     "psiScores": {
-      "mobile": {
-        "performance": 54,
-        "accessibility": 90,
-        "bestPractices": 100,
-        "seo": 92
-      },
+      "mobile": null,
       "desktop": {
-        "performance": 73,
+        "performance": 96,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
@@ -1529,6 +1531,16 @@
         },
         "desktop": {
           "performance": 73,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-08",
+        "mobile": null,
+        "desktop": {
+          "performance": 96,
           "accessibility": 90,
           "bestPractices": 100,
           "seo": 92

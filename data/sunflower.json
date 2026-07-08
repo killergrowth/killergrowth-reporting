@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-07T10:18:53.803Z",
+  "generatedAt": "2026-07-08T09:20:09.850Z",
   "overview": {
     "sessions": 603,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 12,
     "rankingsDelta": null,
-    "gbpViews": 4516,
+    "gbpViews": 4550,
     "gbpViewsDelta": null,
     "adSpend": 0,
     "adImpressions": 5282,
@@ -401,7 +401,7 @@
           "Organic Search": 1
         }
       },
-      "gbpCalls": 309,
+      "gbpCalls": 310,
       "gbpWebsiteClicks": 245,
       "gbpDirections": 210
     }
@@ -541,8 +541,8 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 4516,
-    "calls": 309,
+    "totalViews": 4550,
+    "calls": 310,
     "callsDelta": null,
     "directions": 210,
     "websiteClicks": 245,
@@ -1621,8 +1621,8 @@
       },
       {
         "date": "2026-07-04",
-        "views": 3,
-        "calls": 0,
+        "views": 37,
+        "calls": 1,
         "directions": 2,
         "websiteClicks": 0
       },
@@ -1642,6 +1642,13 @@
       },
       {
         "date": "2026-07-07",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-08",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1693,7 +1700,7 @@
         "platform": "Facebook",
         "reach": 0,
         "engagements": 0,
-        "followers": 1202
+        "followers": 1201
       }
     ]
   },
@@ -1859,13 +1866,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 56,
+        "performance": 61,
         "accessibility": 75,
         "bestPractices": 96,
         "seo": 85
       },
       "desktop": {
-        "performance": 61,
+        "performance": 70,
         "accessibility": 77,
         "bestPractices": 96,
         "seo": 85
@@ -2642,6 +2649,21 @@
         },
         "desktop": {
           "performance": 61,
+          "accessibility": 77,
+          "bestPractices": 96,
+          "seo": 85
+        }
+      },
+      {
+        "date": "2026-07-08",
+        "mobile": {
+          "performance": 61,
+          "accessibility": 75,
+          "bestPractices": 96,
+          "seo": 85
+        },
+        "desktop": {
+          "performance": 70,
           "accessibility": 77,
           "bestPractices": 96,
           "seo": 85

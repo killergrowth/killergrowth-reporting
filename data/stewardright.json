@@ -3,7 +3,7 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "June 2026",
-  "generatedAt": "2026-07-07T10:17:27.207Z",
+  "generatedAt": "2026-07-08T09:19:35.865Z",
   "overview": {
     "sessions": 50,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": null,
     "rankingsDelta": null,
-    "gbpViews": 1837,
+    "gbpViews": 1839,
     "gbpViewsDelta": null,
     "adSpend": 593.29,
     "adImpressions": 25624,
@@ -264,7 +264,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 1837,
+    "totalViews": 1839,
     "calls": 11,
     "callsDelta": null,
     "directions": 173,
@@ -1344,7 +1344,7 @@
       },
       {
         "date": "2026-07-04",
-        "views": 0,
+        "views": 2,
         "calls": 0,
         "directions": 4,
         "websiteClicks": 0
@@ -1365,6 +1365,13 @@
       },
       {
         "date": "2026-07-07",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-08",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1416,7 +1423,7 @@
         "platform": "Facebook",
         "reach": 0,
         "engagements": 0,
-        "followers": 609
+        "followers": 610
       }
     ]
   },
@@ -1568,13 +1575,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 44,
+        "performance": 49,
         "accessibility": 90,
         "bestPractices": 77,
         "seo": 92
       },
       "desktop": {
-        "performance": 84,
+        "performance": 64,
         "accessibility": 90,
         "bestPractices": 77,
         "seo": 92
@@ -2351,6 +2358,21 @@
         },
         "desktop": {
           "performance": 84,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-08",
+        "mobile": {
+          "performance": 49,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 64,
           "accessibility": 90,
           "bestPractices": 77,
           "seo": 92
