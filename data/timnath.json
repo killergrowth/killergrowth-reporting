@@ -3,7 +3,7 @@
   "slug": "timnath",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-09T10:29:44.381Z",
+  "generatedAt": "2026-07-10T10:17:03.602Z",
   "overview": {
     "sessions": 190,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 0,
     "rankingsDelta": null,
-    "gbpViews": 616,
+    "gbpViews": 618,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -134,7 +134,7 @@
       },
       "gbpCalls": 4,
       "gbpWebsiteClicks": 14,
-      "gbpDirections": 225
+      "gbpDirections": 226
     }
   },
   "ads": {
@@ -234,10 +234,10 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 616,
+    "totalViews": 618,
     "calls": 4,
     "callsDelta": null,
-    "directions": 225,
+    "directions": 226,
     "websiteClicks": 14,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -1328,16 +1328,16 @@
       },
       {
         "date": "2026-07-06",
-        "views": 3,
+        "views": 4,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-07",
-        "views": 0,
+        "views": 1,
         "calls": 0,
-        "directions": 0,
+        "directions": 1,
         "websiteClicks": 0
       },
       {
@@ -1349,6 +1349,13 @@
       },
       {
         "date": "2026-07-09",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-10",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1430,13 +1437,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 63,
+        "performance": 59,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 97,
+        "performance": 74,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
@@ -1568,6 +1575,21 @@
         },
         "desktop": {
           "performance": 97,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-10",
+        "mobile": {
+          "performance": 59,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 74,
           "accessibility": 90,
           "bestPractices": 100,
           "seo": 92
