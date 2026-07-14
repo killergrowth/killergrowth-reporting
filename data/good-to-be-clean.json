@@ -3,7 +3,7 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-13T10:17:26.340Z",
+  "generatedAt": "2026-07-14T09:00:04.639Z",
   "overview": {
     "sessions": 633,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 18,
     "rankingsDelta": null,
-    "gbpViews": 744,
+    "gbpViews": 751,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -477,7 +477,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 744,
+    "totalViews": 751,
     "calls": 12,
     "callsDelta": null,
     "directions": 218,
@@ -1599,7 +1599,7 @@
       },
       {
         "date": "2026-07-10",
-        "views": 3,
+        "views": 10,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1620,6 +1620,13 @@
       },
       {
         "date": "2026-07-13",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-14",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1833,13 +1840,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 56,
+        "performance": 49,
         "accessibility": 92,
         "bestPractices": 100,
         "seo": 100
       },
       "desktop": {
-        "performance": 93,
+        "performance": 95,
         "accessibility": 92,
         "bestPractices": 100,
         "seo": 100
@@ -2631,6 +2638,21 @@
         },
         "desktop": {
           "performance": 93,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-07-14",
+        "mobile": {
+          "performance": 49,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 95,
           "accessibility": 92,
           "bestPractices": 100,
           "seo": 100
