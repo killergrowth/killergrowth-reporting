@@ -460,7 +460,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
         <div class="sh"><span class="sb2">ADS</span><span class="st">Google Ads</span></div>
         <div class="g32">
           <div class="card"><div class="clbl">Spend vs. Leads &mdash; Monthly</div><div style="position:relative;height:220px"><canvas id="c-ads"></canvas></div><div id="e-ads" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
-          <div class="card"><div class="clbl">Campaign Breakdown</div><table class="tbl"><thead><tr><th>Campaign</th><th class="r">Spend</th><th class="r">Clicks</th><th class="r">Leads</th></tr></thead><tbody id="t-camps"></tbody></table><div id="e-camps" class="du h"><div class="du-t">Data updating&hellip;</div></div><div style="display:flex;gap:20px;margin-top:16px"><div><div class="klbl">Total Spend</div><div class="kv" id="ads-spend">—</div></div><div><div class="klbl">Cost / Lead</div><div class="kv" style="color:var(--lime)" id="ads-cpl">—</div></div></div></div>
+          <div class="card"><div class="clbl">Campaign Breakdown</div><table class="tbl"><thead><tr><th>Campaign</th><th class="r">Spend</th><th class="r">Clicks</th><th class="r">Leads</th></tr></thead><tbody id="t-camps"></tbody></table><div id="e-camps" class="du h"><div class="du-t">Data updating&hellip;</div></div><div style="display:flex;gap:20px;margin-top:16px"><div><div class="klbl">Total Spend<span class="kinfo" data-tip="Total ad spend for the most recent month shown in the chart.">i</span></div><div class="kv" id="ads-spend">—</div></div><div><div class="klbl">Cost / Lead<span class="kinfo" data-tip="Average cost to generate one lead. Formula: Total Spend ÷ Total Leads. Lower is better.">i</span></div><div class="kv" style="color:var(--lime)" id="ads-cpl">—</div></div></div></div>
         </div>
       </section>
 
@@ -820,8 +820,8 @@ function dc(key){if(CHARTS[key]){CHARTS[key].destroy();delete CHARTS[key];}}
 function renderOverview(data,mods){
   var ov=data.overview||{},cards=[];
   if(mods.website&&ov.sessions!=null)cards.push(kc('Sessions',fmt(ov.sessions),ov.sessionsDelta,null,'A session is a single visit to the website. One person can have multiple sessions.'));
-  if(mods.seo&&ov.rankingsTop10!=null)cards.push(kc('Top 10 Keywords',fmt(ov.rankingsTop10),ov.rankingsDelta,null,null));
-  if(mods.gbp&&ov.gbpViews!=null)cards.push(kc('GBP Views',fmt(ov.gbpViews),ov.gbpViewsDelta,null,null));
+  if(mods.seo&&ov.rankingsTop10!=null)cards.push(kc('Top 10 Keywords',fmt(ov.rankingsTop10),ov.rankingsDelta,null,'Keywords your site currently ranks in positions 1–10 on Google. More top-10 rankings = more organic traffic.'));
+  if(mods.gbp&&ov.gbpViews!=null)cards.push(kc('GBP Views',fmt(ov.gbpViews),ov.gbpViewsDelta,null,'Total times your Google Business Profile appeared in Search or Maps this period.'));
   el('krow').innerHTML=cards.length?cards.join(''):'<div style="color:var(--muted);font-size:13px">No overview data available yet.</div>';
 }
 function kc(label,value,delta,sub,info){
@@ -829,6 +829,9 @@ function kc(label,value,delta,sub,info){
   var ih=info?'<span class="kinfo" data-tip="'+info+'">i</span>':'';
   return '<div class="kc"><div class="klbl">'+label+ih+'</div><div class="kvr"><span class="kv">'+value+'</span>'+dh+'</div>'+(sub?'<div class="ksub">'+sub+'</div>':'')+'</div>';
 }
+function ki(tip){return tip?'<span class="kinfo" data-tip="'+tip+'">i</span>':'';};
+var META_TIPS={'Spend':'Total amount spent on Meta (Facebook/Instagram) ads this period.','Reach':'Unique people who saw your ads at least once. Broader reach = more brand awareness.','Link Clicks':'Clicks that took someone directly to your website or landing page.','Landing Page Views':'Times your landing page loaded after an ad click. More precise than link clicks.','Video Views':'Times your video ad played for at least 3 seconds.','CTR (link click)':'Click-through rate for link clicks. 1%+ is typical; 2%+ is strong for local.','CPM':'Cost per 1,000 impressions. Under  is solid for local. Lower = more reach per dollar.','Frequency':'Average times each person saw your ad. 1.5-3 is sweet spot; above 4 risks ad fatigue.','Total Spend':'Total amount spent on Meta ads this period.','Total Clicks':'Total clicks on your ads across all placements.','Page Followers':'Total followers on your Facebook page.','Avg. Reach':'Average unique people who saw your content or ads.'};
+var LS_TIPS={'Phone Calls':'Total calls from your website and GBP listing. Each one is a confirmed inbound lead opportunity.','Form Submissions':'Completed contact or lead forms submitted through your website.','Direction Requests':'Times someone tapped Get Directions to your business on Google Maps.'};
 
 function renderGEO(lf){
   if(!lf||!lf.googleKeywords||!lf.googleKeywords.length)return;
@@ -963,7 +966,7 @@ function renderSEO(seo){
       }
       function lsCard(label,totalVal,evtKey,gbpVal,noteSub){
         var hasLeads=totalVal>0;
-        return '<div class="lsrc-card"><div class="klbl">'+label+'</div>'
+        return '<div class="lsrc-card"><div class="klbl">'+label+ki(LS_TIPS[label])+'</div>'
           +'<div class="lsrc-total'+(hasLeads?' has-leads':'')+'">'+( totalVal!=null?totalVal:'\u2014')+'</div>'
           +'<div class="lsrc-rows">'+srcRows(evtKey,gbpVal||0,'GBP Listing')+'</div>'
           +(noteSub?'<div class="ksub" style="margin-top:8px">'+noteSub+'</div>':'')+'</div>';
@@ -1013,9 +1016,9 @@ function renderMeta(ads,social){
       ['CTR (link click)',mx.ctr!=null?mx.ctr.toFixed(2)+'%':'\u2014',dlt(mx.ctr,prev.ctr)],
       ['CPM',mx.cpm!=null?fmtM(mx.cpm):'\u2014',dlt(mx.cpm,prev.cpm)],
       ['Frequency',mx.frequency!=null?mx.frequency.toFixed(2):'\u2014',null]
-    ].map(function(s){return '<div class="sr"><span class="srl">'+s[0]+'</span><span class="srv">'+s[1]+(s[2]||'')+'</span></div>';}).join('');
+    ].map(function(s){return '<div class="sr"><span class="srl">'+s[0]+ki(META_TIPS[s[0]])+'</span><span class="srv">'+s[1]+(s[2]||'')+'</span></div>';}).join('');
   }else{
-    el('meta-stats').innerHTML=[['Total Spend',last?fmtM(last.adSpend):'\u2014'],['Total Clicks',last?fmt(last.adClicks):'\u2014'],['Page Followers',fb?fmt(fb.followers):'\u2014'],['Avg. Reach',fb?fmt(fb.reach):'\u2014']].map(function(s){return '<div class="sr"><span class="srl">'+s[0]+'</span><span class="srv">'+s[1]+'</span></div>';}).join('');
+    el('meta-stats').innerHTML=[['Total Spend',last?fmtM(last.adSpend):'\u2014'],['Total Clicks',last?fmt(last.adClicks):'\u2014'],['Page Followers',fb?fmt(fb.followers):'\u2014'],['Avg. Reach',fb?fmt(fb.reach):'\u2014']].map(function(s){return '<div class="sr"><span class="srl">'+s[0]+ki(META_TIPS[s[0]])+'</span><span class="srv">'+s[1]+'</span></div>';}).join('');
   }
   var breakdown=ads.adBreakdown||[];
   var bdWrap=el('meta-ad-breakdown');
@@ -1054,6 +1057,7 @@ function renderMeta(ads,social){
 
 
 var GBP_DATA=null,GBP2_DATA=null,GBP3_DATA=null,GBP_METRIC='views',GBP2_METRIC='views',GBP3_METRIC='views',GBP_RANGE='lastmonth';
+var GBP_TIPS={views:'Times your Google Business Profile appeared in Google Search or Maps.',calls:'Phone number clicks directly from your GBP listing. Each one is a potential inbound lead.',directions:'"Get Directions" taps on Google Maps to your location. Shows local purchase intent.',websiteClicks:'Clicks on your website link from your GBP listing.'};
 function gbpRangeWindow(){
   // Calendar-month windows anchored to today. Returns null for 6m (no filter).
   var now=new Date();now.setHours(23,59,59,999);
@@ -1100,7 +1104,7 @@ function renderGBPStats(){
     var active=r.sel&&r.key===GBP_METRIC;
     var cls='sr'+(r.sel?' gbp-stat-row':'')+(active?' gbp-stat-sel':'');
     var oc=r.sel?' onclick="setGbpMetric(\''+r.key+'\')"':'';
-    return '<div class="'+cls+'"'+oc+'><span class="srl">'+r.label+'</span><span class="srv" style="'+(active?'color:var(--lime)':'')+'">'+r.val+'</span></div>';
+    return '<div class="'+cls+'"'+oc+'><span class="srl">'+r.label+ki(GBP_TIPS[r.key])+'</span><span class="srv" style="'+(active?'color:var(--lime)':'')+'">'+r.val+'</span></div>';
   }).join('');
 }
 function renderGBPChart(){
@@ -1182,7 +1186,7 @@ function renderGBP3Stats(){
     var active=r.sel&&r.key===GBP3_METRIC;
     var cls='sr'+(r.sel?' gbp-stat-row':'')+(active?' gbp-stat-sel':'');
     var oc=r.sel?' onclick="setGbp3Metric(\''+r.key+'\')"':'';
-    return '<div class="'+cls+'"'+oc+'><span class="srl">'+r.label+'</span><span class="srv" style="'+(active?'color:var(--lime)':'')+'">'+(r.val)+'</span></div>';
+    return '<div class="'+cls+'"'+oc+'><span class="srl">'+r.label+ki(GBP_TIPS[r.key])+'</span><span class="srv" style="'+(active?'color:var(--lime)':'')+'">'+(r.val)+'</span></div>';
   }).join('');
 }
 function renderGBP3Chart(){
@@ -1226,7 +1230,7 @@ function renderGBP2Stats(){
     var active=r.sel&&r.key===GBP2_METRIC;
     var cls='sr'+(r.sel?' gbp-stat-row':'')+(active?' gbp-stat-sel':'');
     var oc=r.sel?' onclick="setGbp2Metric(\''+r.key+'\')"':'';
-    return '<div class="'+cls+'"'+oc+'><span class="srl">'+r.label+'</span><span class="srv" style="'+(active?'color:var(--lime)':'')+'">'+(r.val)+'</span></div>';
+    return '<div class="'+cls+'"'+oc+'><span class="srl">'+r.label+ki(GBP_TIPS[r.key])+'</span><span class="srv" style="'+(active?'color:var(--lime)':'')+'">'+(r.val)+'</span></div>';
   }).join('');
 }
 function renderGBP2Chart(){
