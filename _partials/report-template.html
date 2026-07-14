@@ -86,12 +86,13 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
 
 /* GRIDS */
 .g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .g21{display:grid;grid-template-columns:2fr 1fr;gap:14px}
 .g32{display:grid;grid-template-columns:3fr 2fr;gap:14px}
 .mb14{margin-bottom:14px}
 @media(max-width:1100px){.g4{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:800px){.g4,.g2,.g21,.g32{grid-template-columns:1fr}}
+@media(max-width:800px){.g4,.g3,.g2,.g21,.g32{grid-template-columns:1fr}}
 
 /* KPI */
 .krow{display:flex;flex-wrap:wrap;gap:12px}
@@ -133,12 +134,18 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
 .du-t{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#2e2e2e}
 
 /* PSI */
-.psi-c{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center;transition:border-color .2s}
+.psi-c{position:relative;cursor:default;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center;transition:border-color .2s}
 .psi-c.good{border-color:var(--grn)}.psi-c.ok{border-color:var(--org)}.psi-c.poor{border-color:var(--red)}
 .psi-s{font-size:30px;font-weight:800;line-height:1;margin-bottom:6px}
 .psi-c.good .psi-s{color:var(--grn)}.psi-c.ok .psi-s{color:var(--org)}.psi-c.poor .psi-s{color:var(--red)}
 .psi-l{font-size:11px;color:var(--sub);text-transform:uppercase;letter-spacing:.05em}
-.psi-tw{display:flex;gap:6px;justify-content:flex-end;margin-bottom:14px}
+.psi-tw{display:flex;gap:6px;margin-bottom:0}
+.psi-tip{display:none;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);background:#1c1c1c;border:1px solid #2e2e2e;border-radius:8px;padding:11px 14px;width:230px;font-size:12px;color:#9ca3af;line-height:1.6;z-index:200;pointer-events:none;text-align:left;box-shadow:0 4px 24px rgba(0,0,0,.6)}
+.psi-tip b{color:#f8fafc;display:block;margin-bottom:5px}
+.psi-tip hr{border:none;border-top:1px solid #2e2e2e;margin:7px 0}
+.psi-tip em{font-style:normal;font-size:11px}
+.tip-g{color:#b8e600}.tip-o{color:#f59e0b}.tip-r{color:#ef4444}
+.psi-c:hover .psi-tip{display:block}
 .psi-t{background:transparent;border:1px solid var(--border);color:var(--sub);font-size:11px;font-weight:600;padding:4px 12px;border-radius:6px;transition:all .15s}
 .psi-t.active{background:var(--lime);border-color:var(--lime);color:#000}
 
@@ -526,12 +533,14 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
 
       <!-- WEBSITE -->
       <section id="website" class="ms" data-module="website">
-        <div class="sh"><span class="sb2">WEB</span><span class="st">Site Health</span></div>
-        <div class="psi-tw">
-          <button class="psi-t active" id="psi-m" onclick="setPsi('mobile')">Mobile</button>
-          <button class="psi-t" id="psi-d" onclick="setPsi('desktop')">Desktop</button>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;">
+          <div class="sh" style="margin-bottom:0"><span class="sb2">WEB</span><span class="st">Site Health</span></div>
+          <div class="psi-tw">
+            <button class="psi-t active" id="psi-m" onclick="setPsi('mobile')">Mobile</button>
+            <button class="psi-t" id="psi-d" onclick="setPsi('desktop')">Desktop</button>
+          </div>
         </div>
-        <div class="g4" id="psi-wrap"></div>
+        <div class="g3" id="psi-wrap"></div>
       </section>
 
 
@@ -1340,7 +1349,8 @@ function renderWebsite(website,seo){
 else{el('web-ch').innerHTML='<div class="du"><div class="du-t">Data updating.</div></div>';}
 PSI_DATA=website.psiScores||{};renderPSI('mobile');
 }
-function renderPSI(v){PSI_VIEW=v;el('psi-m').classList.toggle('active',v==='mobile');el('psi-d').classList.toggle('active',v==='desktop');var sc=PSI_DATA[v]||{};el('psi-wrap').innerHTML=[['Accessibility',sc.accessibility],['Best Practices',sc.bestPractices],['SEO',sc.seo]].map(function(m){var val=m[1],cls=val==null?'':val>=90?'good':val>=50?'ok':'poor';return '<div class="psi-c '+cls+'"><div class="psi-s">'+(val!=null?val:'\u2014')+'</div><div class="psi-l">'+m[0]+'</div></div>';}).join('');}
+var PSI_TIPS={'Accessibility':{def:'How usable your site is for users with disabilities — screen readers, keyboard navigation, and color contrast.',rng:''},'Best Practices':{def:'Checks for modern web standards — HTTPS, no browser errors, no deprecated APIs, and security hygiene.',rng:''},'SEO':{def:'How easily search engines can crawl and index your site — meta tags, structured data, and mobile readiness.',rng:''}};
+function renderPSI(v){PSI_VIEW=v;el('psi-m').classList.toggle('active',v==='mobile');el('psi-d').classList.toggle('active',v==='desktop');var sc=PSI_DATA[v]||{};el('psi-wrap').innerHTML=[['Accessibility',sc.accessibility],['Best Practices',sc.bestPractices],['SEO',sc.seo]].map(function(m){var val=m[1],cls=val==null?'':val>=90?'good':val>=50?'ok':'poor';var t=PSI_TIPS[m[0]]||{};var tip='<div class="psi-tip"><b>'+m[0]+'</b>'+t.def+'<hr><em><span class="tip-g">90–100</span> Great &nbsp;·&nbsp; <span class="tip-o">50–89</span> OK &nbsp;·&nbsp; <span class="tip-r">0–49</span> Poor</em></div>';return '<div class="psi-c '+cls+'">'+tip+'<div class="psi-s">'+(val!=null?val:'\u2014')+'</div><div class="psi-l">'+m[0]+'</div></div>';}).join('');}
 function setPsi(v){renderPSI(v);}
 
 function getTT(){return {backgroundColor:'#1a1a1a',borderColor:'#252525',borderWidth:1,titleColor:'#555',bodyColor:'#ccc',padding:10,cornerRadius:6};}
