@@ -22,10 +22,8 @@
         }
         .accent-bar { position: fixed; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #b8e600, transparent); }
 
-        .logo { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; text-decoration: none; }
-        .logo-icon { width: 44px; height: 44px; border-radius: 11px; background: #b8e600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-        .logo-text { font-size: 20px; font-weight: 800; color: #b8e600; letter-spacing: -.02em; }
-        .logo-text span { color: #f8fafc; }
+        .logo { display: block; margin-bottom: 10px; text-decoration: none; line-height: 0; }
+        .logo img { height: 64px; width: auto; display: block; }
 
         .tagline { font-size: 13px; color: #6b7280; margin-bottom: 52px; }
 
@@ -82,7 +80,10 @@
         .empty-state { font-size: 13px; color: #4b5563; text-align: center; padding: 24px 0; }
 
         .hint {
-            margin-top: 52px;
+            position: fixed;
+            bottom: 20px;
+            left: 0; right: 0;
+            text-align: center;
             font-size: 12px;
             color: #2a2a2a;
         }
@@ -94,12 +95,7 @@
     <div class="accent-bar"></div>
 
     <a class="logo" href="/">
-        <div class="logo-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 32 32" fill="none">
-                <path d="M6 6h7v8.5L19 6h7l-7 8 7.5 10H19l-6-8.5V24H6V6z" fill="#0f0f0f"/>
-            </svg>
-        </div>
-        <div class="logo-text">Killer<span>Growth</span></div>
+        <img src="/images/kg-logo-transparent.png" alt="KillerGrowth" height="64">
     </a>
     <p class="tagline">Client Reporting Dashboards</p>
 
