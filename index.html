@@ -3,9 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
     <title>KillerGrowth Client Dashboards</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -16,168 +17,162 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 40px 20px;
+            justify-content: flex-start;
+            padding: 80px 20px 60px;
         }
         .accent-bar { position: fixed; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #b8e600, transparent); }
-        .logo { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-        .logo-icon { width: 48px; height: 48px; border-radius: 12px; background: #b8e600; display: flex; align-items: center; justify-content: center; }
-        .logo-text { font-size: 22px; font-weight: 800; color: #b8e600; letter-spacing: -.02em; }
+
+        .logo { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; text-decoration: none; }
+        .logo-icon { width: 44px; height: 44px; border-radius: 11px; background: #b8e600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .logo-text { font-size: 20px; font-weight: 800; color: #b8e600; letter-spacing: -.02em; }
         .logo-text span { color: #f8fafc; }
-        .tagline { font-size: 13px; color: #9ca3af; margin-bottom: 48px; }
-        .reports-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; width: 100%; max-width: 900px; }
-        .report-card {
-            background: #1a1a1a;
-            border: 1px solid #2a2a2a;
-            border-radius: 12px;
-            padding: 20px;
-            text-decoration: none;
-            color: inherit;
-            transition: border-color .2s, transform .15s;
+
+        .tagline { font-size: 13px; color: #6b7280; margin-bottom: 52px; }
+
+        .search-wrap { width: 100%; max-width: 460px; margin-bottom: 32px; }
+        .search-label { font-size: 24px; font-weight: 800; color: #f8fafc; letter-spacing: -.02em; margin-bottom: 6px; }
+        .search-sub { font-size: 13px; color: #6b7280; margin-bottom: 18px; }
+        .search-box {
+            position: relative;
             display: flex;
             align-items: center;
-            gap: 14px;
         }
-        .report-card:hover { border-color: rgba(184,230,0,.4); transform: translateY(-2px); }
-        .report-card .icon { width: 40px; height: 40px; border-radius: 8px; background: rgba(184,230,0,.1); border: 1px solid rgba(184,230,0,.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-        .report-card .name { font-size: 14px; font-weight: 600; color: #f8fafc; }
-        .report-card .meta { font-size: 11px; color: #9ca3af; margin-top: 2px; }
-        .empty-state { color: #4b5563; font-size: 14px; text-align: center; }
-        .footer { margin-top: 48px; font-size: 11px; color: rgba(155,163,175,.4); }
-        .footer strong { color: #b8e600; }
+        .search-icon {
+            position: absolute;
+            left: 16px;
+            color: #4b5563;
+            pointer-events: none;
+        }
+        input[type="text"] {
+            width: 100%;
+            background: #161616;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            color: #f8fafc;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 14px 16px 14px 46px;
+            outline: none;
+            transition: border-color .2s;
+        }
+        input[type="text"]::placeholder { color: #4b5563; }
+        input[type="text"]:focus { border-color: rgba(184,230,0,.5); }
+
+        .results { width: 100%; max-width: 460px; display: flex; flex-direction: column; gap: 10px; }
+
+        .result-card {
+            background: #161616;
+            border: 1px solid #242424;
+            border-radius: 12px;
+            padding: 16px 18px;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            transition: border-color .2s, transform .15s;
+        }
+        .result-card:hover { border-color: rgba(184,230,0,.4); transform: translateY(-1px); }
+        .result-name { font-size: 14px; font-weight: 700; color: #f8fafc; }
+        .result-loc { font-size: 12px; color: #6b7280; margin-top: 2px; }
+        .result-arrow { color: #b8e600; font-size: 18px; flex-shrink: 0; }
+
+        .empty-state { font-size: 13px; color: #4b5563; text-align: center; padding: 24px 0; }
+
+        .hint {
+            margin-top: 52px;
+            font-size: 12px;
+            color: #2a2a2a;
+        }
+        .hint a { color: #2a2a2a; text-decoration: none; }
+        .hint a:hover { color: #4b5563; }
     </style>
 </head>
 <body>
     <div class="accent-bar"></div>
 
-    <div class="logo">
+    <a class="logo" href="/">
         <div class="logo-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 32 32" fill="none">
                 <path d="M6 6h7v8.5L19 6h7l-7 8 7.5 10H19l-6-8.5V24H6V6z" fill="#0f0f0f"/>
             </svg>
         </div>
         <div class="logo-text">Killer<span>Growth</span></div>
-    </div>
-    <div class="tagline">Client Performance Dashboards</div>
+    </a>
+    <p class="tagline">Client Reporting Dashboards</p>
 
-    <div class="reports-grid" id="reports-grid">
-        <a class="report-card" href="./killergrowth/">
-            <div class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b8e600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="3" width="7" height="7" rx="1"></rect>
-                    <rect x="14" y="3" width="7" height="7" rx="1"></rect>
-                    <rect x="3" y="14" width="7" height="7" rx="1"></rect>
-                    <rect x="14" y="14" width="7" height="7" rx="1"></rect>
-                </svg>
-            </div>
-            <div>
-                <div class="name">KillerGrowth</div>
-                <div class="meta">Internal · April 2026</div>
-            </div>
-        </a>
-        <a class="report-card" href="./stewardright/">
-            <div class="icon">
-                <span style="font-size:13px;font-weight:900;color:#b8e600;line-height:1;">P3</span>
-            </div>
-            <div>
-                <div class="name">StewardRight</div>
-                <div class="meta">Social &amp; Meta Ads · April 2026</div>
-            </div>
-        </a>
-        <!-- ADD CLIENTS BELOW — copy the block above and update href, name, and meta -->
-        <a class="report-card" href="./dons-heating/">
-            <div class="icon">
-                <span style="font-size:13px;font-weight:900;color:#b8e600;line-height:1;">P3</span>
-            </div>
-            <div>
-                <div class="name">Don&rsquo;s Heating &amp; Air</div>
-                <div class="meta">SEO &amp; Social &middot; June 2026</div>
-            </div>
-        </a>
-        <a class="report-card" href="./goff/">
-            <div class="icon">
-                <span style="font-size:16px;font-weight:900;color:#b8e600;line-height:1;">A</span>
-            </div>
-            <div>
-                <div class="name">Goff Heating &amp; Air</div>
-                <div class="meta">Google Ads &amp; GBP &middot; June 2026</div>
-            </div>
-        </a>
-        <a class="report-card" href="./good-to-be-clean/">
-            <div class="icon">
-                <span style="font-size:13px;font-weight:900;color:#b8e600;line-height:1;">P3</span>
-            </div>
-            <div>
-                <div class="name">Good To Be Clean</div>
-                <div class="meta">SEO &amp; Ads &middot; June 2026</div>
-            </div>
-        </a>
-        <a class="report-card" href="./sunflower/">
-            <div class="icon">
-                <span style="font-size:13px;font-weight:900;color:#b8e600;line-height:1;">P3</span>
-            </div>
-            <div>
-                <div class="name">Sunflower Plumbing</div>
-                <div class="meta">SEO &amp; Ads &middot; June 2026</div>
-            </div>
-        </a>
-        <a class="report-card" href="./timnath/">
-            <div class="icon">
-                <span style="font-size:13px;font-weight:900;color:#b8e600;line-height:1;">P3</span>
-            </div>
-            <div>
-                <div class="name">Timnath Painting</div>
-                <div class="meta">SEO &amp; GBP &middot; June 2026</div>
-            </div>
-        </a>
-        <a class="report-card" href="./316-health/">
-            <div class="icon">
-                <span style="font-size:13px;font-weight:900;color:#b8e600;line-height:1;">P3</span>
-            </div>
-            <div>
-                <div class="name">316 Health Insurance</div>
-                <div class="meta">Social &amp; Website &middot; June 2026</div>
-            </div>
-        </a>
-        <a class="report-card" href="./lenexa-painting/">
-            <div class="icon">
-                <span style="font-size:13px;font-weight:900;color:#b8e600;line-height:1;">P3</span>
-            </div>
-            <div>
-                <div class="name">Lenexa Painting</div>
-                <div class="meta">Coming Soon</div>
-            </div>
-        </a>
-        <a class="report-card" href="./walnut-valley/">
-            <div class="icon">
-                <span style="font-size:16px;font-weight:900;color:#b8e600;line-height:1;">B</span>
-            </div>
-            <div>
-                <div class="name">Walnut Valley Meat Market</div>
-                <div class="meta">Meta Ads &middot; June 2026</div>
-            </div>
-        </a>
-        <a class="report-card" href="./learning-lab/">
-            <div class="icon">
-                <span style="font-size:16px;font-weight:900;color:#b8e600;line-height:1;">C</span>
-            </div>
-            <div>
-                <div class="name">Learning Lab</div>
-                <div class="meta">SEO &amp; Social &middot; June 2026</div>
-            </div>
-        </a>
-        <a class="report-card" href="./wheatland/">
-            <div class="icon">
-                <span style="font-size:16px;font-weight:900;color:#b8e600;line-height:1;">C</span>
-            </div>
-            <div>
-                <div class="name">Wheatland</div>
-                <div class="meta">SEO &amp; Website &middot; June 2026</div>
-            </div>
-        </a>
-
+    <div class="search-wrap">
+        <div class="search-label">Find your dashboard</div>
+        <div class="search-sub">Type your company name below</div>
+        <div class="search-box">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" id="search" placeholder="e.g. Sunflower, Goff, StewardRight&hellip;" autocomplete="off" autofocus>
+        </div>
     </div>
 
-    <div class="footer">Powered by <strong>KillerGrowth</strong> &nbsp;·&nbsp; Internal use only</div>
+    <div class="results" id="results"></div>
+
+    <div class="hint"><a href="/admin/">team view</a></div>
+
+    <script>
+        var CLIENTS = [
+            { name: "360 Painting",           location: "Wichita, KS",  slug: "360-painting"      },
+            { name: "Don's Heating & Air",     location: "Wichita, KS",  slug: "dons-heating"      },
+            { name: "Goff Heating & Air",      location: "Wichita, KS",  slug: "goff"              },
+            { name: "Good To Be Clean",        location: "Wichita, KS",  slug: "good-to-be-clean"  },
+            { name: "StewardRight",            location: "Wichita, KS",  slug: "stewardright"      },
+            { name: "Sunflower Plumbing",      location: "Wichita, KS",  slug: "sunflower"         },
+            { name: "Timnath Painting",        location: "Timnath, CO",  slug: "timnath"           },
+            { name: "Walnut Valley",           location: "Wichita, KS",  slug: "walnut-valley"     },
+            { name: "Wheatland Construction",  location: "Wichita, KS",  slug: "wheatland"         },
+            { name: "316 Health Insurance",    location: "Wichita, KS",  slug: "316-health"        },
+            { name: "Alex Miller Auctioneer",  location: "Wichita, KS",  slug: "alex-miller"       },
+            { name: "Cogan's Woodshop",        location: "Wichita, KS",  slug: "cogans-woodshop"   },
+            { name: "IServe Facilities",       location: "Wichita, KS",  slug: "iserve-facilities" },
+            { name: "Learning Lab",            location: "Wichita, KS",  slug: "learning-lab"      },
+            { name: "Shaw's Pest Control",     location: "Wichita, KS",  slug: "shaws-pest"        },
+            { name: "Prairie Pots",            location: "Wichita, KS",  slug: "prairie-pots"      },
+            { name: "Demo Sales",              location: "Wichita, KS",  slug: "demo-sales"        },
+            { name: "Diamond Springs Ranch",   location: "Kansas",        slug: "diamond-springs"   }
+        ];
+
+        var input   = document.getElementById('search');
+        var results = document.getElementById('results');
+
+        function render(query) {
+            query = query.trim().toLowerCase();
+            results.innerHTML = '';
+
+            if (!query) return;
+
+            var matches = CLIENTS.filter(function(c) {
+                return c.name.toLowerCase().indexOf(query) !== -1;
+            });
+
+            if (matches.length === 0) {
+                results.innerHTML = '<p class="empty-state">No match found &mdash; check the spelling or contact your account manager.</p>';
+                return;
+            }
+
+            matches.forEach(function(c) {
+                var a = document.createElement('a');
+                a.className = 'result-card';
+                a.href = '/' + c.slug + '/';
+                a.innerHTML =
+                    '<div>' +
+                        '<div class="result-name">' + c.name + '</div>' +
+                        '<div class="result-loc">' + c.location + '</div>' +
+                    '</div>' +
+                    '<span class="result-arrow">&#8594;</span>';
+                results.appendChild(a);
+            });
+        }
+
+        input.addEventListener('input', function() { render(this.value); });
+    </script>
 </body>
 </html>
