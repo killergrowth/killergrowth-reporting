@@ -124,6 +124,108 @@ jobs:
           LF_API_KEY:                  ${{ secrets.LF_API_KEY }}
         run: node scripts/build-report.js timnath
 
+      - name: Pull data — Walnut Valley
+        if: ${{ github.event.inputs.client == '' || github.event.inputs.client == 'walnut-valley' }}
+        env:
+          META_SYSTEM_TOKEN:           ${{ secrets.META_SYSTEM_TOKEN }}
+          PAGESPEED_API_KEY:           ${{ secrets.PAGESPEED_API_KEY }}
+        run: node scripts/build-report.js walnut-valley
+
+      - name: Pull data — Goff Heating & Air
+        if: ${{ github.event.inputs.client == '' || github.event.inputs.client == 'goff' }}
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GBP_REFRESH_TOKEN:           ${{ secrets.GBP_REFRESH_TOKEN }}
+          GBP_CLIENT_ID:               ${{ secrets.GBP_CLIENT_ID }}
+          GBP_CLIENT_SECRET:           ${{ secrets.GBP_CLIENT_SECRET }}
+          PAGESPEED_API_KEY:           ${{ secrets.PAGESPEED_API_KEY }}
+        run: node scripts/build-report.js goff
+
+      - name: Pull data — 316 Health Insurance
+        if: ${{ github.event.inputs.client == '' || github.event.inputs.client == '316-health' }}
+        env:
+          META_SYSTEM_TOKEN:           ${{ secrets.META_SYSTEM_TOKEN }}
+          PAGESPEED_API_KEY:           ${{ secrets.PAGESPEED_API_KEY }}
+        run: node scripts/build-report.js 316-health
+
+      - name: Pull data — Learning Lab
+        if: ${{ github.event.inputs.client == '' || github.event.inputs.client == 'learning-lab' }}
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          META_SYSTEM_TOKEN:           ${{ secrets.META_SYSTEM_TOKEN }}
+          PAGESPEED_API_KEY:           ${{ secrets.PAGESPEED_API_KEY }}
+        run: node scripts/build-report.js learning-lab
+
+      - name: Pull data — Wheatland Construction
+        if: ${{ github.event.inputs.client == '' || github.event.inputs.client == 'wheatland' }}
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          PAGESPEED_API_KEY:           ${{ secrets.PAGESPEED_API_KEY }}
+        run: node scripts/build-report.js wheatland
+
+      - name: Pull data — 360 Painting
+        if: ${{ github.event.inputs.client == '' || github.event.inputs.client == '360-painting' }}
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GBP_REFRESH_TOKEN:           ${{ secrets.GBP_REFRESH_TOKEN }}
+          GBP_CLIENT_ID:               ${{ secrets.GBP_CLIENT_ID }}
+          GBP_CLIENT_SECRET:           ${{ secrets.GBP_CLIENT_SECRET }}
+          PAGESPEED_API_KEY:           ${{ secrets.PAGESPEED_API_KEY }}
+        run: node scripts/build-report.js 360-painting
+
+      - name: Pull data — Alex Miller Auctioneer
+        if: ${{ github.event.inputs.client == '' || github.event.inputs.client == 'alex-miller' }}
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          PAGESPEED_API_KEY:           ${{ secrets.PAGESPEED_API_KEY }}
+        run: node scripts/build-report.js alex-miller
+
+      - name: Pull data — Cogan's Woodshop
+        if: ${{ github.event.inputs.client == '' || github.event.inputs.client == 'cogans-woodshop' }}
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          META_SYSTEM_TOKEN:           ${{ secrets.META_SYSTEM_TOKEN }}
+          PAGESPEED_API_KEY:           ${{ secrets.PAGESPEED_API_KEY }}
+        run: node scripts/build-report.js cogans-woodshop
+
+      - name: Pull data — IServe Facilities
+        if: ${{ github.event.inputs.client == '' || github.event.inputs.client == 'iserve-facilities' }}
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          PAGESPEED_API_KEY:           ${{ secrets.PAGESPEED_API_KEY }}
+        run: node scripts/build-report.js iserve-facilities
+
+      - name: Pull data — Shaw's Pest Control
+        if: ${{ github.event.inputs.client == '' || github.event.inputs.client == 'shaws-pest' }}
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GBP_REFRESH_TOKEN:           ${{ secrets.GBP_REFRESH_TOKEN }}
+          GBP_CLIENT_ID:               ${{ secrets.GBP_CLIENT_ID }}
+          GBP_CLIENT_SECRET:           ${{ secrets.GBP_CLIENT_SECRET }}
+          PAGESPEED_API_KEY:           ${{ secrets.PAGESPEED_API_KEY }}
+        run: node scripts/build-report.js shaws-pest
+
+      - name: Pull data — Prairie Pots
+        if: ${{ github.event.inputs.client == '' || github.event.inputs.client == 'prairie-pots' }}
+        env:
+          META_SYSTEM_TOKEN:           ${{ secrets.META_SYSTEM_TOKEN }}
+          PAGESPEED_API_KEY:           ${{ secrets.PAGESPEED_API_KEY }}
+        run: node scripts/build-report.js prairie-pots
+
+      - name: Pull data — Demo Sales
+        if: ${{ github.event.inputs.client == '' || github.event.inputs.client == 'demo-sales' }}
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          PAGESPEED_API_KEY:           ${{ secrets.PAGESPEED_API_KEY }}
+        run: node scripts/build-report.js demo-sales
+
+      - name: Pull data — Diamond Springs Ranch
+        if: ${{ github.event.inputs.client == '' || github.event.inputs.client == 'diamond-springs' }}
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          PAGESPEED_API_KEY:           ${{ secrets.PAGESPEED_API_KEY }}
+        run: node scripts/build-report.js diamond-springs
+
       # Add a step like the one above for each new client.
       # Copy the step, change the client slug and the if condition.
 
