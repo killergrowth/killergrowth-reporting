@@ -3,7 +3,7 @@
   "slug": "timnath",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-14T09:00:30.713Z",
+  "generatedAt": "2026-07-15T09:06:59.170Z",
   "overview": {
     "sessions": 190,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 0,
     "rankingsDelta": null,
-    "gbpViews": 633,
+    "gbpViews": 644,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -234,7 +234,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 633,
+    "totalViews": 644,
     "calls": 4,
     "callsDelta": null,
     "directions": 231,
@@ -1363,14 +1363,14 @@
       },
       {
         "date": "2026-07-11",
-        "views": 3,
+        "views": 7,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-12",
-        "views": 0,
+        "views": 7,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1384,6 +1384,13 @@
       },
       {
         "date": "2026-07-14",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-15",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1465,13 +1472,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 57,
+        "performance": 53,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 74,
+        "performance": 41,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
@@ -1678,6 +1685,21 @@
         },
         "desktop": {
           "performance": 74,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-15",
+        "mobile": {
+          "performance": 53,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 41,
           "accessibility": 90,
           "bestPractices": 100,
           "seo": 92

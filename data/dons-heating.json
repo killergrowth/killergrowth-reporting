@@ -3,7 +3,7 @@
   "slug": "dons-heating",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-14T08:58:43.218Z",
+  "generatedAt": "2026-07-15T09:04:56.416Z",
   "overview": {
     "sessions": 826,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 15,
     "rankingsDelta": null,
-    "gbpViews": 2832,
+    "gbpViews": 2857,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -398,9 +398,9 @@
           "Referral": 1
         }
       },
-      "gbpCalls": 345,
+      "gbpCalls": 346,
       "gbpWebsiteClicks": 192,
-      "gbpDirections": 240
+      "gbpDirections": 241
     }
   },
   "ads": {
@@ -557,10 +557,10 @@
   },
   "gbp": {
     "locationName": "El Dorado",
-    "totalViews": 2832,
-    "calls": 345,
+    "totalViews": 2857,
+    "calls": 346,
     "callsDelta": null,
-    "directions": 240,
+    "directions": 241,
     "websiteClicks": 192,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -1686,16 +1686,16 @@
       },
       {
         "date": "2026-07-11",
-        "views": 1,
-        "calls": 0,
+        "views": 22,
+        "calls": 1,
         "directions": 2,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-12",
-        "views": 0,
+        "views": 4,
         "calls": 0,
-        "directions": 0,
+        "directions": 1,
         "websiteClicks": 0
       },
       {
@@ -1711,6 +1711,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-15",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -1719,7 +1726,7 @@
   },
   "gbp2": {
     "locationName": "Emporia",
-    "totalViews": 336,
+    "totalViews": 344,
     "calls": 12,
     "directions": 71,
     "websiteClicks": 35,
@@ -2846,14 +2853,14 @@
       },
       {
         "date": "2026-07-11",
-        "views": 5,
+        "views": 10,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-12",
-        "views": 0,
+        "views": 3,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -2871,6 +2878,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-15",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -2878,7 +2892,7 @@
   },
   "gbp3": {
     "locationName": "Hillsboro",
-    "totalViews": 1014,
+    "totalViews": 1017,
     "calls": 44,
     "directions": 231,
     "websiteClicks": 49,
@@ -4005,7 +4019,7 @@
       },
       {
         "date": "2026-07-11",
-        "views": 0,
+        "views": 3,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -4026,6 +4040,13 @@
       },
       {
         "date": "2026-07-14",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-15",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -4240,13 +4261,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 55,
+        "performance": 66,
         "accessibility": 90,
         "bestPractices": 73,
         "seo": 100
       },
       "desktop": {
-        "performance": 92,
+        "performance": 91,
         "accessibility": 91,
         "bestPractices": 73,
         "seo": 100
@@ -5058,6 +5079,21 @@
         },
         "desktop": {
           "performance": 92,
+          "accessibility": 91,
+          "bestPractices": 73,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-07-15",
+        "mobile": {
+          "performance": 66,
+          "accessibility": 90,
+          "bestPractices": 73,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 91,
           "accessibility": 91,
           "bestPractices": 73,
           "seo": 100

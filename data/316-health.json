@@ -3,27 +3,114 @@
   "slug": "316-health",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-06-25T12:00:00.000Z",
+  "generatedAt": "2026-07-15T09:08:08.872Z",
   "overview": {
-    "sessions": null, "sessionsDelta": null, "leads": null, "leadsDelta": null,
-    "rankingsTop10": null, "rankingsDelta": null, "gbpViews": null, "gbpViewsDelta": null,
-    "adSpend": null, "adImpressions": null, "adBudget": null,
-    "costPerLead": null, "costPerLeadDelta": null,
-    "socialReach": null, "socialReachDelta": null, "reviewCount": null, "avgRating": null
+    "sessions": null,
+    "sessionsDelta": null,
+    "leads": null,
+    "leadsDelta": null,
+    "rankingsTop10": null,
+    "rankingsDelta": null,
+    "gbpViews": null,
+    "gbpViewsDelta": null,
+    "adSpend": null,
+    "adImpressions": null,
+    "adBudget": null,
+    "costPerLead": null,
+    "costPerLeadDelta": null,
+    "socialReach": null,
+    "socialReachDelta": null,
+    "reviewCount": null,
+    "avgRating": null
   },
-  "seo": { "organicSessions": [], "trafficChannels": [], "keywords": [], "leadSignals": null },
-  "ads": { "monthlyBreakdown": [], "spendByWeek": [], "campaigns": [] },
+  "seo": {
+    "organicSessions": [],
+    "trafficChannels": [],
+    "organicSearchSources": [],
+    "keywords": [],
+    "leadSignals": null
+  },
+  "ads": {
+    "monthlyBreakdown": [],
+    "spendByWeek": [],
+    "campaigns": []
+  },
+  "localFalcon": {
+    "lastScanDate": null,
+    "topSolv": null,
+    "topSolvKw": null,
+    "avgSolvAll": null,
+    "avgSaiv": null,
+    "googleKeywords": [],
+    "aiPlatforms": [],
+    "topAiKeywords": [],
+    "brandPhrases": null,
+    "campaignPublicUrl": null
+  },
   "gbp": {
-    "totalViews": null, "calls": null, "callsDelta": null,
-    "directions": null, "directionsDelta": null, "viewsOverTime": [],
-    "totalReviews": null, "newThisMonth": null, "avgRating": null
+    "locationName": "Primary",
+    "totalViews": null,
+    "calls": null,
+    "callsDelta": null,
+    "directions": null,
+    "websiteClicks": null,
+    "directionsDelta": null,
+    "viewsOverTime": [],
+    "totalReviews": null,
+    "newThisMonth": null,
+    "avgRating": null
   },
-  "social": { "monthlyHistory": [], "reachByWeek": [], "platforms": [] },
+  "gbp2": null,
+  "gbp3": null,
+  "social": {
+    "monthlyHistory": [],
+    "reachByWeek": [],
+    "platforms": []
+  },
   "website": {
     "sessionsOverTime": [],
-    "vitals": { "lcp": null, "cls": null, "inp": null, "pagespeedMobile": null },
-    "psiScores": { "mobile": null, "desktop": null },
-    "psiHistory": []
+    "aiReferral": {
+      "total": 0,
+      "platforms": [],
+      "weeklyTrend": []
+    },
+    "vitals": {
+      "lcp": null,
+      "cls": null,
+      "inp": null,
+      "pagespeedMobile": null
+    },
+    "psiScores": {
+      "mobile": {
+        "performance": 56,
+        "accessibility": 88,
+        "bestPractices": 77,
+        "seo": 100
+      },
+      "desktop": {
+        "performance": 67,
+        "accessibility": 91,
+        "bestPractices": 77,
+        "seo": 100
+      }
+    },
+    "psiHistory": [
+      {
+        "date": "2026-07-15",
+        "mobile": {
+          "performance": 56,
+          "accessibility": 88,
+          "bestPractices": 77,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 67,
+          "accessibility": 91,
+          "bestPractices": 77,
+          "seo": 100
+        }
+      }
+    ]
   },
-  "localFalcon": { "lastScanDate": null, "avgRank": null, "top3Pct": null, "top10Pct": null, "gridPoints": null, "gridData": [] }
+  "workLog": []
 }

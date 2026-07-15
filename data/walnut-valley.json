@@ -2,8 +2,8 @@
   "client": "Walnut Valley Meat Market",
   "slug": "walnut-valley",
   "logoPath": null,
-  "period": "May 2026",
-  "generatedAt": "2026-06-05T09:43:00.000Z",
+  "period": "June 2026",
+  "generatedAt": "2026-07-15T09:07:16.537Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -26,7 +26,9 @@
   "seo": {
     "organicSessions": [],
     "trafficChannels": [],
-    "keywords": []
+    "organicSearchSources": [],
+    "keywords": [],
+    "leadSignals": null
   },
   "ads": {
     "monthlyBreakdown": [
@@ -87,11 +89,36 @@
       }
     ],
     "spendByWeek": [
-      { "week": "May 1–7",   "spend": 226.56, "clicks": 2764, "reach": 23173 },
-      { "week": "May 8–14",  "spend": 179.05, "clicks": 2112, "reach": 20685 },
-      { "week": "May 15–21", "spend": 171.29, "clicks": 1975, "reach": 13930 },
-      { "week": "May 22–28", "spend": 191.25, "clicks": 2180, "reach": 16436 },
-      { "week": "May 29–31", "spend": 72.52,  "clicks": 776,  "reach": 9473  }
+      {
+        "week": "May 1–7",
+        "spend": 226.56,
+        "clicks": 2764,
+        "reach": 23173
+      },
+      {
+        "week": "May 8–14",
+        "spend": 179.05,
+        "clicks": 2112,
+        "reach": 20685
+      },
+      {
+        "week": "May 15–21",
+        "spend": 171.29,
+        "clicks": 1975,
+        "reach": 13930
+      },
+      {
+        "week": "May 22–28",
+        "spend": 191.25,
+        "clicks": 2180,
+        "reach": 16436
+      },
+      {
+        "week": "May 29–31",
+        "spend": 72.52,
+        "clicks": 776,
+        "reach": 9473
+      }
     ],
     "campaigns": [
       {
@@ -124,55 +151,35 @@
         "cpc": 0.532,
         "leads": null
       }
-    ],
-    "metrics": {
-      "ctr": 7.03,
-      "cpc": 0.086,
-      "cpm": 6.03,
-      "frequency": 2.70,
-      "linkClicks": 4792,
-      "landingPageViews": 3667,
-      "videoViews": 39695,
-      "reactions": 597,
-      "comments": 53,
-      "saves": 40,
-      "callConfirms": 6
-    },
-    "adBreakdown": [
-      { "adName": "Test — Ashlie ($4.99)",    "live": true,  "spend": 32.30,  "impressions": 4167,  "ctrAll": 8.74,  "ctrLink": 4.87, "cpm": 7.75, "lpViews": 175,  "costPerLP": 0.18 },
-      { "adName": "Test — Angela ($4.99)",    "live": true,  "spend": 52.16,  "impressions": 6984,  "ctrAll": 8.43,  "ctrLink": 4.15, "cpm": 7.47, "lpViews": 249,  "costPerLP": 0.21 },
-      { "adName": "$4.99 Matt — Short",        "live": true,  "spend": 129.61, "impressions": 21210, "ctrAll": 8.19,  "ctrLink": 3.79, "cpm": 6.11, "lpViews": 522,  "costPerLP": 0.25 },
-      { "adName": "Test — Matt Old, Long ($4.99)", "live": true, "spend": 47.52, "impressions": 7775, "ctrAll": 7.88, "ctrLink": 3.37, "cpm": 6.11, "lpViews": 227, "costPerLP": 0.21 },
-      { "adName": "Test — Jennifer ($4.99)",   "live": true,  "spend": 273.78, "impressions": 39716, "ctrAll": 7.43,  "ctrLink": 3.68, "cpm": 6.89, "lpViews": 1290, "costPerLP": 0.21 },
-      { "adName": "Freezer Opening",           "live": true,  "spend": 152.53, "impressions": 31130, "ctrAll": 6.00,  "ctrLink": 2.43, "cpm": 4.90, "lpViews": 435,  "costPerLP": 0.35 },
-      { "adName": "Jennifer",                  "live": false, "spend": 5.86,   "impressions": 621,   "ctrAll": 10.79, "ctrLink": 5.96, "cpm": 9.44, "lpViews": 35,   "costPerLP": 0.17 },
-      { "adName": "Angela",                    "live": false, "spend": 18.76,  "impressions": 2359,  "ctrAll": 8.90,  "ctrLink": 3.82, "cpm": 7.95, "lpViews": 79,   "costPerLP": 0.24 },
-      { "adName": "Matt — Quick Offer",         "live": false, "spend": 3.86,   "impressions": 596,   "ctrAll": 8.39,  "ctrLink": 4.19, "cpm": 6.48, "lpViews": 17,   "costPerLP": 0.23 },
-      { "adName": "$4.50/lb BIG — Best in Town", "live": false, "spend": 10.34, "impressions": 2088,  "ctrAll": 7.33,  "ctrLink": 3.54, "cpm": 4.95, "lpViews": 69,   "costPerLP": 0.15 },
-      { "adName": "Ashlie",                    "live": false, "spend": 10.44,  "impressions": 1374,  "ctrAll": 6.48,  "ctrLink": 3.42, "cpm": 7.60, "lpViews": 43,   "costPerLP": 0.24 }
-    ],
-    "prevMonth": {
-      "spend": 938.84,
-      "impressions": 162799,
-      "reach": 57529,
-      "clicks": 12515,
-      "ctr": 7.69,
-      "cpc": 0.075,
-      "cpm": 5.77,
-      "frequency": 2.83
-    }
+    ]
+  },
+  "localFalcon": {
+    "lastScanDate": null,
+    "topSolv": null,
+    "topSolvKw": null,
+    "avgSolvAll": null,
+    "avgSaiv": null,
+    "googleKeywords": [],
+    "aiPlatforms": [],
+    "topAiKeywords": [],
+    "brandPhrases": null,
+    "campaignPublicUrl": null
   },
   "gbp": {
+    "locationName": "Primary",
     "totalViews": null,
     "calls": null,
     "callsDelta": null,
     "directions": null,
+    "websiteClicks": null,
     "directionsDelta": null,
     "viewsOverTime": [],
     "totalReviews": null,
     "newThisMonth": null,
     "avgRating": null
   },
+  "gbp2": null,
+  "gbp3": null,
   "social": {
     "monthlyHistory": [],
     "reachByWeek": [],
@@ -180,11 +187,48 @@
   },
   "website": {
     "sessionsOverTime": [],
+    "aiReferral": {
+      "total": 0,
+      "platforms": [],
+      "weeklyTrend": []
+    },
     "vitals": {
       "lcp": null,
       "cls": null,
       "inp": null,
       "pagespeedMobile": null
-    }
-  }
+    },
+    "psiScores": {
+      "mobile": {
+        "performance": 68,
+        "accessibility": 72,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "desktop": {
+        "performance": 74,
+        "accessibility": 80,
+        "bestPractices": 100,
+        "seo": 100
+      }
+    },
+    "psiHistory": [
+      {
+        "date": "2026-07-15",
+        "mobile": {
+          "performance": 68,
+          "accessibility": 72,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 74,
+          "accessibility": 80,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      }
+    ]
+  },
+  "workLog": []
 }
