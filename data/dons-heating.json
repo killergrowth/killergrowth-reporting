@@ -3,7 +3,7 @@
   "slug": "dons-heating",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-15T09:04:56.416Z",
+  "generatedAt": "2026-07-16T09:08:43.377Z",
   "overview": {
     "sessions": 826,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 15,
     "rankingsDelta": null,
-    "gbpViews": 2857,
+    "gbpViews": 2890,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -399,7 +399,7 @@
         }
       },
       "gbpCalls": 346,
-      "gbpWebsiteClicks": 192,
+      "gbpWebsiteClicks": 194,
       "gbpDirections": 241
     }
   },
@@ -557,11 +557,11 @@
   },
   "gbp": {
     "locationName": "El Dorado",
-    "totalViews": 2857,
+    "totalViews": 2890,
     "calls": 346,
     "callsDelta": null,
     "directions": 241,
-    "websiteClicks": 192,
+    "websiteClicks": 194,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1693,14 +1693,14 @@
       },
       {
         "date": "2026-07-12",
-        "views": 4,
+        "views": 33,
         "calls": 0,
         "directions": 1,
-        "websiteClicks": 0
+        "websiteClicks": 2
       },
       {
         "date": "2026-07-13",
-        "views": 0,
+        "views": 4,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1718,6 +1718,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-16",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -1726,7 +1733,7 @@
   },
   "gbp2": {
     "locationName": "Emporia",
-    "totalViews": 344,
+    "totalViews": 347,
     "calls": 12,
     "directions": 71,
     "websiteClicks": 35,
@@ -2867,7 +2874,7 @@
       },
       {
         "date": "2026-07-13",
-        "views": 0,
+        "views": 3,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -2885,6 +2892,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-16",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -2892,10 +2906,10 @@
   },
   "gbp3": {
     "locationName": "Hillsboro",
-    "totalViews": 1017,
-    "calls": 44,
+    "totalViews": 1032,
+    "calls": 46,
     "directions": 231,
-    "websiteClicks": 49,
+    "websiteClicks": 50,
     "viewsOverTime": [
       {
         "date": "2026-02-01",
@@ -4026,14 +4040,14 @@
       },
       {
         "date": "2026-07-12",
-        "views": 0,
-        "calls": 0,
+        "views": 9,
+        "calls": 2,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-07-13",
-        "views": 0,
+        "views": 6,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -4047,6 +4061,13 @@
       },
       {
         "date": "2026-07-15",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-16",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -4261,13 +4282,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 66,
+        "performance": 57,
         "accessibility": 90,
         "bestPractices": 73,
         "seo": 100
       },
       "desktop": {
-        "performance": 91,
+        "performance": 92,
         "accessibility": 91,
         "bestPractices": 73,
         "seo": 100
@@ -5094,6 +5115,21 @@
         },
         "desktop": {
           "performance": 91,
+          "accessibility": 91,
+          "bestPractices": 73,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-07-16",
+        "mobile": {
+          "performance": 57,
+          "accessibility": 90,
+          "bestPractices": 73,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 92,
           "accessibility": 91,
           "bestPractices": 73,
           "seo": 100
