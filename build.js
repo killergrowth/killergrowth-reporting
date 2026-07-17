@@ -54,8 +54,13 @@ function buildTemplatePage(sourcePath, destDir) {
   const dataFile   = path.join(ROOT, 'data', clientSlug + '.json');
   let dataScript   = '<script>window.__reportData = null;</script>';
   if (fs.existsSync(dataFile)) {
-    const reportJson = fs.readFileSync(dataFile, 'utf8');
-    dataScript = `<script>\nwindow.__reportData = ${reportJson};\n</script>`;
+    const reportData = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
+    // Merge work-logs/<slug>.json into workLog at build time
+    const workLogFile = path.join(ROOT, 'data', 'work-logs', clientSlug + '.json');
+    if (fs.existsSync(workLogFile)) {
+      try { reportData.workLog = JSON.parse(fs.readFileSync(workLogFile, 'utf8')); } catch { /* keep existing */ }
+    }
+    dataScript = `<script>\nwindow.__reportData = ${JSON.stringify(reportData)};\n</script>`;
   }
 
   // Read master template
@@ -92,8 +97,13 @@ function buildLegacyPage(sourcePath, destDir) {
   const dataFile   = path.join(ROOT, 'data', clientSlug + '.json');
   let dataScript = '';
   if (fs.existsSync(dataFile)) {
-    const reportJson = fs.readFileSync(dataFile, 'utf8');
-    dataScript = `\n    <script>\n    window.__reportData = ${reportJson};\n    </script>`;
+    const reportData = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
+    // Merge work-logs/<slug>.json into workLog at build time
+    const workLogFile = path.join(ROOT, 'data', 'work-logs', clientSlug + '.json');
+    if (fs.existsSync(workLogFile)) {
+      try { reportData.workLog = JSON.parse(fs.readFileSync(workLogFile, 'utf8')); } catch { /* keep existing */ }
+    }
+    dataScript = `\n    <script>\n    window.__reportData = ${JSON.stringify(reportData)};\n    </script>`;
   }
 
   const scriptsIdx = html.indexOf('<!-- SCRIPTS -->');
