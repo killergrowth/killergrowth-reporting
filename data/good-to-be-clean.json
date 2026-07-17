@@ -3,7 +3,7 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-16T09:09:39.219Z",
+  "generatedAt": "2026-07-17T09:05:31.548Z",
   "overview": {
     "sessions": 633,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 18,
     "rankingsDelta": null,
-    "gbpViews": 754,
+    "gbpViews": 761,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -418,7 +418,7 @@
       },
       "gbpCalls": 12,
       "gbpWebsiteClicks": 24,
-      "gbpDirections": 218
+      "gbpDirections": 221
     }
   },
   "ads": {
@@ -477,10 +477,10 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 754,
+    "totalViews": 761,
     "calls": 12,
     "callsDelta": null,
-    "directions": 218,
+    "directions": 221,
     "websiteClicks": 24,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -1620,16 +1620,16 @@
       },
       {
         "date": "2026-07-13",
-        "views": 2,
+        "views": 3,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-14",
-        "views": 0,
+        "views": 6,
         "calls": 0,
-        "directions": 0,
+        "directions": 3,
         "websiteClicks": 0
       },
       {
@@ -1641,6 +1641,13 @@
       },
       {
         "date": "2026-07-16",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-17",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1854,15 +1861,15 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 51,
+        "performance": 47,
         "accessibility": 92,
         "bestPractices": 100,
         "seo": 100
       },
       "desktop": {
-        "performance": 87,
+        "performance": 72,
         "accessibility": 92,
-        "bestPractices": 96,
+        "bestPractices": 100,
         "seo": 100
       }
     },
@@ -2699,6 +2706,21 @@
           "performance": 87,
           "accessibility": 92,
           "bestPractices": 96,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-07-17",
+        "mobile": {
+          "performance": 47,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 72,
+          "accessibility": 92,
+          "bestPractices": 100,
           "seo": 100
         }
       }
