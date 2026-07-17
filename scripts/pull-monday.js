@@ -255,7 +255,7 @@ async function pullMonday(targetSlug = null) {
     const nonMonday = existing.filter(e => e.source !== 'monday');
     const merged = [...unique, ...nonMonday].sort((a, b) => b.date.localeCompare(a.date));
 
-    fs.writeFileSync(logPath, JSON.stringify(merged, null, 2), 'utf8');
+    fs.writeFileSync(logPath, JSON.stringify(merged, null, 2) + '\n', { encoding: 'utf8', flag: 'w' });
     results[slug] = merged.length;
     console.log(`  ${slug}: ${unique.length} monday items written (${merged.length} total)`);
   }
