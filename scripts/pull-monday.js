@@ -101,9 +101,9 @@ async function mondayQuery(query, token) {
 }
 
 // ---------------------------------------------------------------------------
-// Pull items from a board with pagination
+// Pull parent items WITH nested subitems from a board (paginated)
 // ---------------------------------------------------------------------------
-async function pullBoardItems(boardId, columnIds, token) {
+async function pullBoardItemsWithSubitems(boardId, token) {
   const items = [];
   let cursor = null;
 
@@ -111,15 +111,23 @@ async function pullBoardItems(boardId, columnIds, token) {
     const cursorArg = cursor ? `, cursor: "${cursor}"` : '';
     const query = `{
       boards(ids: [${boardId}]) {
-        items_page(limit: 500${cursorArg}) {
+        items_page(limit: 200${cursorArg}) {
           cursor
           items {
             id
             name
             group { id title }
             updated_at
-            column_values(ids: [${columnIds.map(c => `"${c}"`).join(',')}]) {
+            column_values(ids: ["connect_boards","color_mkvx2hdn","date_mkvxgvc6","person"]) {
               id text value
+            }
+            subitems {
+              id
+              name
+              updated_at
+              column_values(ids: ["status","color_mkvx2hdn","date0","date_mkvxgvc6","person"]) {
+                id text value
+              }
             }
           }
         }
@@ -149,94 +157,78 @@ async function pullMonday(targetSlug = null) {
 
   console.log(`\nPulling Monday.com Projects & Tasks (last ${LOOKBACK_DAYS} days)...`);
 
-  // Pull parent board items
-  const parentItems = await pullBoardItems(
-    BOARD_PARENT,
-    ['connect_boards', 'color_mkvx2hdn', 'date_mkvxgvc6', 'person'],
-    token
-  );
-  console.log(`  Parent board: ${parentItems.length} items`);
-
-  // Pull subitem board items
-  const subItems = await pullBoardItems(
-    BOARD_SUBITEMS,
-    ['connect_boards', 'color_mkvx2hdn', 'date_mkvxgvc6', 'person'],
-    token
-  );
-  console.log(`  Subitems board: ${subItems.length} items`);
-
-  const allItems = [
-    ...parentItems.map(i => ({ ...i, _board: 'parent' })),
-    ...subItems.map(i => ({ ...i, _board: 'subitems' })),
-  ];
+  // Pull parent items WITH nested subitems
+  const parentItems = await pullBoardItemsWithSubitems(BOARD_PARENT, token);
+  console.log(`  Parent board: ${parentItems.length} items (with subitems inline)`);
 
   // Group resolved items by client slug
   const bySlug = {};
 
-  for (const item of allItems) {
-    const statusCol = item.column_values.find(c => c.id === 'color_mkvx2hdn');
+  // Helper: resolve a done entry and push to bySlug
+  // statusColIds: ordered list of column ids to check for status (parent uses color_mkvx2hdn, subitems use status)
+  function resolveEntry(item, overrideSlug, parentName, statusColIds = ['color_mkvx2hdn', 'status']) {
+    // Find the first populated status column
+    const statusCol = statusColIds.map(id => item.column_values.find(c => c.id === id)).find(c => c && c.text);
     const status = statusCol?.text ?? '';
     const isDone = DONE_STATUSES.some(s => s.toLowerCase() === status.toLowerCase());
-
-    // Also treat items in the "Completed" group as done regardless of status column
     const inCompletedGroup = item.group?.title?.toLowerCase() === 'completed';
+    if (!isDone && !inCompletedGroup) return;
 
-    if (!isDone && !inCompletedGroup) continue;
-
-    // Date priority:
-    // 1. changed_at from status value JSON (actual completion timestamp)
-    // 2. Due Date column
-    // 3. updated_at fallback
+    // Date: changed_at from status JSON → due date (date_mkvxgvc6 or date0) → updated_at
     let itemDate;
     try {
       const statusVal = statusCol?.value ? JSON.parse(statusCol.value) : null;
-      const changedAt = statusVal?.changed_at;
-      if (changedAt) {
-        itemDate = new Date(changedAt);
-      }
-    } catch { /* ignore parse errors */ }
-
+      if (statusVal?.changed_at) itemDate = new Date(statusVal.changed_at);
+    } catch { /* ignore */ }
     if (!itemDate) {
-      const dueDateCol = item.column_values.find(c => c.id === 'date_mkvxgvc6');
+      const dueDateCol = item.column_values.find(c => c.id === 'date_mkvxgvc6' || c.id === 'date0');
       const dateStr = dueDateCol?.text || item.updated_at;
-      if (!dateStr) continue;
+      if (!dateStr) return;
       itemDate = new Date(dateStr);
     }
+    if (itemDate < cutoff) return;
 
-    if (itemDate < cutoff) continue;
-
-    // Owner
     const personCol = item.column_values.find(c => c.id === 'person');
-    const owner = personCol?.text ?? '';
+    const owner = personCol?.text ?? null;
 
-    // Determine client slug
-    // 1. connect_boards Client column
-    const clientCol = item.column_values.find(c => c.id === 'connect_boards');
-    let slug = matchClientFromText(clientCol?.text ?? '');
-
-    // 2. Item name fuzzy match
-    if (!slug) slug = matchClientFromText(item.name);
-
-    // 3. Group name match (for Website Build groups where item IS the client)
-    if (!slug && item.group?.title?.toLowerCase().includes('website build')) {
-      slug = matchClientFromText(item.name);
-    }
-
-    if (!slug) continue; // can't attribute to a client
-
-    // Skip if filtering to one slug
-    if (targetSlug && slug !== targetSlug) continue;
+    const slug = overrideSlug;
+    if (!slug) return;
+    if (targetSlug && slug !== targetSlug) return;
 
     if (!bySlug[slug]) bySlug[slug] = [];
     bySlug[slug].push({
-      id:     item.id,
-      title:  item.name,
+      id:         item.id,
+      title:      parentName ? `${parentName} — ${item.name}` : item.name,
       status,
-      date:   itemDate.toISOString().split('T')[0],
-      owner:  owner || null,
-      group:  item.group?.title ?? null,
-      source: 'monday',
+      date:       itemDate.toISOString().split('T')[0],
+      owner:      owner || null,
+      group:      item.group?.title ?? null,
+      source:     'monday',
     });
+  }
+
+  for (const parent of parentItems) {
+    // Determine client slug from the parent item
+    const clientCol = parent.column_values.find(c => c.id === 'connect_boards');
+    let slug = matchClientFromText(clientCol?.text ?? '');
+    if (!slug) slug = matchClientFromText(parent.name);
+
+    // Process the parent item itself as a potential done entry
+    if (slug) resolveEntry(parent, slug, null);
+
+    // Process all subitems — use parent's client slug (subitems don't have client column)
+    if (parent.subitems?.length) {
+      // If parent slug is unknown, try to infer from parent name for subitems too
+      const subSlug = slug;
+      if (subSlug) {
+        for (const sub of parent.subitems) {
+          // Attach group from parent for context
+          sub.group = parent.group;
+          // Subitems use 'status' column; pass that first
+          resolveEntry(sub, subSlug, parent.name, ['status', 'color_mkvx2hdn']);
+        }
+      }
+    }
   }
 
   // Sort each client's log newest-first, deduplicate by id
