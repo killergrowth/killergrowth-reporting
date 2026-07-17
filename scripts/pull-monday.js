@@ -34,7 +34,7 @@ const BOARD_SUBITEMS = 10078101097; // Subitems of Projects & Tasks
 const DONE_STATUSES = ['Done', 'Complete', 'Completed', 'Sent', 'Live', 'Launched', 'Published'];
 
 // How far back to look (days)
-const LOOKBACK_DAYS = 90;
+const LOOKBACK_DAYS = 180;
 
 // ---------------------------------------------------------------------------
 // Client name → slug mapping + aliases for fuzzy matching
@@ -44,7 +44,7 @@ const CLIENT_ALIASES = {
   'sunflower':      ['Sunflower Plumbing', 'Sunflower'],
   'dons-heating':   ["Don's Heating", "Dons Heating", "Don's Heating & Air", "Don's HVAC"],
   'good-to-be-clean': ['Good to Be Clean', 'Good To Be Clean', 'GTBC', 'Good2BClean'],
-  'timnath':        ['Timnath Painting', 'Timnath'],
+  'timnath':        ['Timnath Painting', 'Timnath', 'Timnath Painting LLC'],
   'walnut-valley':  ['Walnut Valley Meat Market', 'Walnut Valley', 'WVMM'],
   'stewardright':   ['StewardRight', 'Steward Right'],
   'goff':           ['Goff Heating & Air', 'Goff Heating', 'Goff Heating and Air', 'Goff'],
@@ -116,7 +116,7 @@ async function pullBoardItems(boardId, columnIds, token) {
           items {
             id
             name
-            group { title }
+            group { id title }
             updated_at
             column_values(ids: [${columnIds.map(c => `"${c}"`).join(',')}]) {
               id text value
@@ -176,13 +176,33 @@ async function pullMonday(targetSlug = null) {
   for (const item of allItems) {
     const statusCol = item.column_values.find(c => c.id === 'color_mkvx2hdn');
     const status = statusCol?.text ?? '';
-    if (!DONE_STATUSES.some(s => s.toLowerCase() === status.toLowerCase())) continue;
+    const isDone = DONE_STATUSES.some(s => s.toLowerCase() === status.toLowerCase());
 
-    // Date — use updated_at as fallback if Due Date is empty
-    const dueDateCol = item.column_values.find(c => c.id === 'date_mkvxgvc6');
-    const dateStr = dueDateCol?.text || item.updated_at;
-    if (!dateStr) continue;
-    const itemDate = new Date(dateStr);
+    // Also treat items in the "Completed" group as done regardless of status column
+    const inCompletedGroup = item.group?.title?.toLowerCase() === 'completed';
+
+    if (!isDone && !inCompletedGroup) continue;
+
+    // Date priority:
+    // 1. changed_at from status value JSON (actual completion timestamp)
+    // 2. Due Date column
+    // 3. updated_at fallback
+    let itemDate;
+    try {
+      const statusVal = statusCol?.value ? JSON.parse(statusCol.value) : null;
+      const changedAt = statusVal?.changed_at;
+      if (changedAt) {
+        itemDate = new Date(changedAt);
+      }
+    } catch { /* ignore parse errors */ }
+
+    if (!itemDate) {
+      const dueDateCol = item.column_values.find(c => c.id === 'date_mkvxgvc6');
+      const dateStr = dueDateCol?.text || item.updated_at;
+      if (!dateStr) continue;
+      itemDate = new Date(dateStr);
+    }
+
     if (itemDate < cutoff) continue;
 
     // Owner
