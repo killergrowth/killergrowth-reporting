@@ -33,6 +33,7 @@ const { pullGoogleAds }     = require('./pull-google-ads');
 const { pullPageSpeed }     = require('./pull-pagespeed');
 const { pullLocalFalcon }     = require('./pull-localfalcon');
 const { pullBrandPhrases }    = require('./pull-brand-phrases');
+const { pullMonday }          = require('./pull-monday');
 
 const ROOT    = path.join(__dirname, '..');
 const clients = JSON.parse(fs.readFileSync(path.join(__dirname, 'clients.json'), 'utf8'));
@@ -221,6 +222,17 @@ async function buildReport(slug) {
     }
   };
 
+  // Pull Monday work log for this client
+  try {
+    if (process.env.MONDAY_TOKEN) {
+      await pullMonday(slug);
+    } else {
+      console.log('  Monday: SKIPPED (no MONDAY_TOKEN)');
+    }
+  } catch (e) {
+    console.log('  Monday: ERROR —', e.message);
+  }
+
   // Merge persisted work log (survives data pulls)
   const workLogPath = path.join(ROOT, 'data', 'work-logs', `${slug}.json`);
   try { report.workLog = JSON.parse(fs.readFileSync(workLogPath, 'utf8')); } catch { report.workLog = []; }
@@ -245,6 +257,7 @@ async function buildReport(slug) {
   if (lf.status === 'rejected') console.log('  LF error:', lf.reason?.message);
   if (bp.status === 'rejected') console.log('  BP error:', bp.reason?.message);
 
+  console.log(`  Monday:      ${report.workLog?.length > 0 ? `OK (${report.workLog.length} items)` : 'No items matched'}`);
   if (ga4.status === 'rejected')  console.log('  GA4 error:',  ga4.reason?.message);
   if (gsc.status === 'rejected')  console.log('  GSC error:',  gsc.reason?.message);
   if (gbp.status === 'rejected')  console.log('  GBP error:',  gbp.reason?.message);

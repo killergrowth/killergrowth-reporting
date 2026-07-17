@@ -23,6 +23,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      MONDAY_TOKEN: ${{ secrets.MONDAY_TOKEN }}
 
     steps:
       - name: Checkout
