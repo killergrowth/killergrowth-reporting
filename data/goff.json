@@ -3,7 +3,7 @@
   "slug": "goff",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-17T09:06:42.564Z",
+  "generatedAt": "2026-07-18T08:33:40.060Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -82,13 +82,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 34,
+        "performance": 57,
         "accessibility": 81,
         "bestPractices": 96,
         "seo": 92
       },
       "desktop": {
-        "performance": 77,
+        "performance": 75,
         "accessibility": 85,
         "bestPractices": 96,
         "seo": 92
@@ -139,8 +139,42 @@
           "bestPractices": 96,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-07-18",
+        "mobile": {
+          "performance": 57,
+          "accessibility": 81,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 75,
+          "accessibility": 85,
+          "bestPractices": 96,
+          "seo": 92
+        }
       }
     ]
   },
-  "workLog": []
+  "workLog": [
+    {
+      "id": "11004345736",
+      "title": "Goff FB landing page",
+      "status": "Done",
+      "date": "2026-01-20",
+      "owner": "Tyler Brickley",
+      "group": "Completed",
+      "source": "monday"
+    },
+    {
+      "id": "11041459108",
+      "title": "Goff FB landing page — Set up goffheating.kglanding.com for new landing page",
+      "status": "Done",
+      "date": "2026-01-19",
+      "owner": "Tyler Norris",
+      "group": "Completed",
+      "source": "monday"
+    }
+  ]
 }
