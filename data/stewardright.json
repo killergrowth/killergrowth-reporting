@@ -3,7 +3,7 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "June 2026",
-  "generatedAt": "2026-07-18T08:30:09.334Z",
+  "generatedAt": "2026-07-19T09:02:13.055Z",
   "overview": {
     "sessions": 50,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": null,
     "rankingsDelta": null,
-    "gbpViews": 1992,
+    "gbpViews": 2031,
     "gbpViewsDelta": null,
     "adSpend": 593.29,
     "adImpressions": 25624,
@@ -205,46 +205,46 @@
       },
       "gbpCalls": 14,
       "gbpWebsiteClicks": 82,
-      "gbpDirections": 194
+      "gbpDirections": 195
     }
   },
   "ads": {
     "monthlyBreakdown": [
       {
         "month": "Jan 2026",
-        "adSpend": 616.43,
-        "adClicks": 2258,
-        "adLeads": 0
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       },
       {
         "month": "Feb 2026",
-        "adSpend": 556.74,
-        "adClicks": 2866,
-        "adLeads": 0
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       },
       {
         "month": "Mar 2026",
-        "adSpend": 631.58,
-        "adClicks": 1411,
-        "adLeads": 0
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       },
       {
         "month": "Apr 2026",
-        "adSpend": 597.49,
-        "adClicks": 2529,
-        "adLeads": 0
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       },
       {
         "month": "May 2026",
-        "adSpend": 609.76,
-        "adClicks": 3597,
-        "adLeads": 0
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       },
       {
         "month": "Jun 2026",
-        "adSpend": 593.29,
-        "adClicks": 2690,
-        "adLeads": 0
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       }
     ],
     "spendByWeek": [],
@@ -264,10 +264,10 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 1992,
+    "totalViews": 2031,
     "calls": 14,
     "callsDelta": null,
-    "directions": 194,
+    "directions": 195,
     "websiteClicks": 82,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -1421,16 +1421,16 @@
       },
       {
         "date": "2026-07-15",
-        "views": 2,
+        "views": 39,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-16",
-        "views": 0,
+        "views": 2,
         "calls": 0,
-        "directions": 0,
+        "directions": 1,
         "websiteClicks": 0
       },
       {
@@ -1442,6 +1442,13 @@
       },
       {
         "date": "2026-07-18",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-19",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1645,13 +1652,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 55,
+        "performance": 26,
         "accessibility": 90,
         "bestPractices": 77,
         "seo": 92
       },
       "desktop": {
-        "performance": 80,
+        "performance": 66,
         "accessibility": 90,
         "bestPractices": 77,
         "seo": 92
@@ -2593,6 +2600,21 @@
         },
         "desktop": {
           "performance": 80,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-19",
+        "mobile": {
+          "performance": 26,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 66,
           "accessibility": 90,
           "bestPractices": 77,
           "seo": 92
