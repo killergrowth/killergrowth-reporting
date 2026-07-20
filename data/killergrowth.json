@@ -3,7 +3,7 @@
   "slug": "killergrowth",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-19T09:01:40.675Z",
+  "generatedAt": "2026-07-20T09:48:45.876Z",
   "overview": {
     "sessions": 23,
     "sessionsDelta": 0,
@@ -85,39 +85,39 @@
     "monthlyBreakdown": [
       {
         "month": "Jan 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null
+        "adSpend": 363.23,
+        "adClicks": 1595,
+        "adLeads": 0
       },
       {
         "month": "Feb 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null
+        "adSpend": 587.54,
+        "adClicks": 9696,
+        "adLeads": 0
       },
       {
         "month": "Mar 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null
+        "adSpend": 1056.42,
+        "adClicks": 15857,
+        "adLeads": 0
       },
       {
         "month": "Apr 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null
+        "adSpend": 938.84,
+        "adClicks": 12515,
+        "adLeads": 1
       },
       {
         "month": "May 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null
+        "adSpend": 840.67,
+        "adClicks": 9807,
+        "adLeads": 0
       },
       {
         "month": "Jun 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null
+        "adSpend": 1677.98,
+        "adClicks": 13482,
+        "adLeads": 1
       }
     ],
     "spendByWeek": [],
@@ -239,13 +239,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 90,
+        "performance": 67,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 77,
+        "performance": 76,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
@@ -1221,6 +1221,21 @@
           "bestPractices": 100,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-07-20",
+        "mobile": {
+          "performance": 67,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 76,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
       }
     ]
   },
@@ -1311,15 +1326,6 @@
       "title": "Set up outbound.kglanding.com",
       "status": "Done",
       "date": "2026-01-21",
-      "owner": "Tyler Norris",
-      "group": "Completed",
-      "source": "monday"
-    },
-    {
-      "id": "11050663715",
-      "title": "Build activelyplay.kglanding.com",
-      "status": "Done",
-      "date": "2026-01-20",
       "owner": "Tyler Norris",
       "group": "Completed",
       "source": "monday"
