@@ -3,7 +3,7 @@
   "slug": "timnath",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-17T09:05:57.463Z",
+  "generatedAt": "2026-07-22T09:24:49.330Z",
   "overview": {
     "sessions": 190,
     "sessionsDelta": 0,
@@ -1472,13 +1472,13 @@
     },
     "psiScores": {
       "mobile": {
-        "performance": 56,
+        "performance": 48,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 74,
+        "performance": 66,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
@@ -1734,8 +1734,444 @@
           "bestPractices": 100,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-07-18",
+        "mobile": {
+          "performance": 62,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 73,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-19",
+        "mobile": {
+          "performance": 69,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 74,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-20",
+        "mobile": {
+          "performance": 63,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 75,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-21",
+        "mobile": {
+          "performance": 58,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 74,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-22",
+        "mobile": {
+          "performance": 48,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 66,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        }
       }
     ]
   },
-  "workLog": []
+  "workLog": [
+    {
+      "id": "manual-timnath-001",
+      "group": "Activity Log",
+      "owner": "Tyler Brickley",
+      "source": "manual",
+      "date": "2026-06-22",
+      "title": "Quote Form Spam Protection — Added Cloudflare Turnstile to contact and quote forms",
+      "status": "Done"
+    },
+    {
+      "id": "manual-timnath-002",
+      "group": "Activity Log",
+      "owner": "Tyler Brickley",
+      "source": "manual",
+      "date": "2026-06-16",
+      "title": "Tracking & Bug Fixes — GTM/Feedbucket confirmed active, fixed em dash encoding bug in build.js",
+      "status": "Done"
+    },
+    {
+      "id": "12243289260",
+      "title": "Timnath Painting — Can we get another review here?",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Corrie Ferrell",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "12207226158",
+      "title": "Timnath Painting — New pic or adjust pic?",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Tyler Brickley",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "12161565176",
+      "title": "Timnath Painting — Change header pic",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Corrie Ferrell",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "12158207077",
+      "title": "Timnath Painting — Can we change this picture or at least change the aspect ratio",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Corrie Ferrell",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "12087563375",
+      "title": "Timnath Painting — Revisions",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Corrie Ferrell",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "12087437327",
+      "title": "Timnath Painting — Is this the conversion focused landing page?",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Tyler Brickley",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "11929243226",
+      "title": "Timnath Painting — No 7",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Tyler Brickley",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "11929235409",
+      "title": "Timnath Painting — Socials",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Tyler Brickley",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "11929214164",
+      "title": "Timnath Painting — Subs",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Tyler Brickley",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "11929243046",
+      "title": "Timnath Painting — Minutes",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Tyler Brickley",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "11929254614",
+      "title": "Timnath Painting — CTAs",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Tyler Brickley",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "11929296421",
+      "title": "Timnath Painting — Space",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Tyler Brickley",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "11929275474",
+      "title": "Timnath Painting — Space",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Tyler Brickley",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "11929255994",
+      "title": "Timnath Painting — Indicate Expansion",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Tyler Brickley",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "11929278486",
+      "title": "Timnath Painting — Can't Say",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Tyler Brickley",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "11929214155",
+      "title": "Timnath Painting — Space",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Tyler Brickley",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "11929268665",
+      "title": "Timnath Painting — Space",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Tyler Brickley",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "11929290103",
+      "title": "Timnath Painting — CTA LP",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Tyler Brickley",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "12084940159",
+      "title": "Timnath Painting — Looks good!",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Corrie Ferrell",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "11902372090",
+      "title": "Timnath Painting — Combine sentences",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Tyler Brickley",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "12087417973",
+      "title": "Timnath Painting — Can we add a title over this box that is 'Schedule Your Free Quote'",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Corrie Ferrell",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "11902420906",
+      "title": "Timnath Painting — Different picture - use head shots provided",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Tyler Brickley",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "11902637336",
+      "title": "Timnath Painting — First round",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Tyler Brickley",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "11929223247",
+      "title": "Timnath Painting — Respond",
+      "status": "Done",
+      "date": "2026-06-12",
+      "owner": "Tyler Brickley",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "manual-timnath-003",
+      "group": "Activity Log",
+      "owner": "Tyler Brickley",
+      "source": "manual",
+      "date": "2026-06-10",
+      "title": "Reviews Carousel Update & GA4/GSC Link — Converted reviews to carousel, linked timnathpainting.com to GA4",
+      "status": "Done"
+    },
+    {
+      "id": "manual-timnath-004",
+      "group": "Activity Log",
+      "owner": "Tyler Brickley",
+      "source": "manual",
+      "date": "2026-06-09",
+      "title": "Contact & Quote Page Overhaul — Rebuilt /contact page, fixed service photos, swapped commercial painting image",
+      "status": "Done"
+    },
+    {
+      "id": "manual-timnath-005",
+      "group": "Activity Log",
+      "owner": "Tyler Brickley",
+      "source": "manual",
+      "date": "2026-05-28",
+      "title": "Schema & Structured Data Fix — Fixed missing itemReviewed in review JSON-LD, resolved Rich Results Test failure",
+      "status": "Done"
+    },
+    {
+      "id": "manual-timnath-006",
+      "group": "Activity Log",
+      "owner": "Tyler Brickley",
+      "source": "manual",
+      "date": "2026-05-26",
+      "title": "Content & Photo Updates — Hero image replaced, overlay removed, About image updated, liability references corrected sitewide",
+      "status": "Done"
+    },
+    {
+      "id": "manual-timnath-007",
+      "group": "Activity Log",
+      "owner": "Tyler Brickley",
+      "source": "manual",
+      "date": "2026-05-22",
+      "title": "Jobber Booking Integration Live — Built /get-a-quote/ page with Jobber embed, deployed to production",
+      "status": "Done"
+    },
+    {
+      "id": "manual-timnath-008",
+      "group": "Activity Log",
+      "owner": "Tyler Brickley",
+      "source": "manual",
+      "date": "2026-05-18",
+      "title": "Client Copy Requests & Phone Number Update — Copy changes, new phone (970.670.3965), 'call or text' language added sitewide",
+      "status": "Done"
+    },
+    {
+      "id": "manual-timnath-009",
+      "group": "Activity Log",
+      "owner": "Tyler Brickley",
+      "source": "manual",
+      "date": "2026-05-18",
+      "title": "Service-Area Page Expansion — 40 service + location pages built, nav and footer updated",
+      "status": "Done"
+    },
+    {
+      "id": "manual-timnath-010",
+      "group": "Activity Log",
+      "owner": "Tyler Brickley",
+      "source": "manual",
+      "date": "2026-05-15",
+      "title": "SEO & Tracking Setup — GTM added, canonical tags, XML sitemap, GSC errors resolved, Feedbucket added",
+      "status": "Done"
+    },
+    {
+      "id": "manual-timnath-012",
+      "group": "Activity Log",
+      "owner": "Tyler Brickley",
+      "source": "manual",
+      "date": "2026-05-13",
+      "title": "Photo Gallery Build — 22 photos from Drive, resized via Sharp, uploaded to CF KV gallery API",
+      "status": "Done"
+    },
+    {
+      "id": "manual-timnath-011",
+      "group": "Activity Log",
+      "owner": "Tyler Brickley",
+      "source": "manual",
+      "date": "2026-05-13",
+      "title": "Core Web Vitals Optimization — LCP fix, removed GSAP/jarallax, PurgeCSS, WebP conversion, self-hosted fonts, CLS fixed",
+      "status": "Done"
+    },
+    {
+      "id": "manual-timnath-013",
+      "group": "Activity Log",
+      "owner": "Tyler Brickley",
+      "source": "manual",
+      "date": "2026-05-12",
+      "title": "Site Launched — Flipped to live at timnathpainting.com",
+      "status": "Done"
+    },
+    {
+      "id": "manual-timnath-014",
+      "group": "Activity Log",
+      "owner": "Tyler Brickley",
+      "source": "manual",
+      "date": "2026-05-07",
+      "title": "Content & Copy Updates — Brand copy updates, Google Reviews section built, 'Why Timnath?' added, Areas Served section",
+      "status": "Done"
+    },
+    {
+      "id": "manual-timnath-015",
+      "group": "Activity Log",
+      "owner": "Tyler Brickley",
+      "source": "manual",
+      "date": "2026-04-30",
+      "title": "Design & Layout Refinement — Brand color to red (#AE360E), header/footer redesign, hero animations, /services hub page",
+      "status": "Done"
+    },
+    {
+      "id": "manual-timnath-016",
+      "group": "Activity Log",
+      "owner": "Tyler Brickley",
+      "source": "manual",
+      "date": "2026-04-29",
+      "title": "Initial Site Build — Repo, CF Pages, Wallox template, Josh bio/headshot, 16 photos, 6 service cards, build system",
+      "status": "Done"
+    }
+  ]
 }
