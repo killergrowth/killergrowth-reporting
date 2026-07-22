@@ -1005,12 +1005,16 @@ function renderMeta(ads,social){
     CHARTS['meta']=new Chart(el('c-meta').getContext('2d'),{type:'bar',data:{labels:monthly.map(function(d){return d.month;}),datasets:[{label:'Spend ($)',data:monthly.map(function(d){return d.adSpend;}),backgroundColor:'#252525',borderRadius:3,yAxisID:'y'},{label:'Clicks',data:monthly.map(function(d){return d.adClicks;}),backgroundColor:'#c8f000',borderRadius:3,yAxisID:'y2'}]},options:getDualOpts()});
   }else{sh('e-meta');el('c-meta').style.display='none';}
   var last=monthly.length?monthly[monthly.length-1]:null,fb=platforms.find(function(p){return p.platform==='Facebook';});
+  // Sum spend + clicks across the entire filtered range (not just last month)
+  var totalSpend=monthly.reduce(function(s,d){return s+(d.adSpend||0);},0);
+  var totalClicks=monthly.reduce(function(s,d){return s+(d.adClicks||0);},0);
+  var totalReach=monthly.reduce(function(s,d){return s+(d.adReach||0);},0);
   var mx=ads.metrics||{},prev=ads.prevMonth||{};
   function dlt(cur,prv){if(cur==null||prv==null||prv===0)return '';var pct=((cur-prv)/prv*100).toFixed(1);return Number(pct)>0?'<span style="color:var(--grn);font-size:11px;margin-left:6px">\u2191'+pct+'%</span>':'<span style="color:var(--red);font-size:11px;margin-left:6px">\u2193'+Math.abs(pct)+'%</span>';}
   if(mx.linkClicks!=null){
     el('meta-stats').innerHTML=[
-      ['Spend',last?fmtM(last.adSpend):'\u2014',dlt(last?last.adSpend:null,prev.spend)],
-      ['Reach',last&&last.adReach!=null?fmt(last.adReach):'\u2014',dlt(last?last.adReach:null,prev.reach)],
+      ['Spend',monthly.length?fmtM(totalSpend):'\u2014',null],
+      ['Reach',monthly.length&&totalReach>0?fmt(totalReach):'\u2014',null],
       ['Link Clicks',fmt(mx.linkClicks),null],
       ['Landing Page Views',fmt(mx.landingPageViews),null],
       ['Video Views',fmt(mx.videoViews),null],
@@ -1019,7 +1023,7 @@ function renderMeta(ads,social){
       ['Frequency',mx.frequency!=null?mx.frequency.toFixed(2):'\u2014',null]
     ].map(function(s){return '<div class="sr"><span class="srl">'+s[0]+ki(META_TIPS[s[0]])+'</span><span class="srv">'+s[1]+(s[2]||'')+'</span></div>';}).join('');
   }else{
-    el('meta-stats').innerHTML=[['Total Spend',last?fmtM(last.adSpend):'\u2014'],['Total Clicks',last?fmt(last.adClicks):'\u2014'],['Page Followers',fb?fmt(fb.followers):'\u2014'],['Avg. Reach',fb?fmt(fb.reach):'\u2014']].map(function(s){return '<div class="sr"><span class="srl">'+s[0]+ki(META_TIPS[s[0]])+'</span><span class="srv">'+s[1]+'</span></div>';}).join('');
+    el('meta-stats').innerHTML=[['Total Spend',monthly.length?fmtM(totalSpend):'\u2014'],['Total Clicks',monthly.length?fmt(totalClicks):'\u2014'],['Page Followers',fb?fmt(fb.followers):'\u2014'],['Avg. Reach',fb?fmt(fb.reach):'\u2014']].map(function(s){return '<div class="sr"><span class="srl">'+s[0]+ki(META_TIPS[s[0]])+'</span><span class="srv">'+s[1]+'</span></div>';}).join('');
   }
   var breakdown=ads.adBreakdown||[];
   var bdWrap=el('meta-ad-breakdown');
