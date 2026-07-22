@@ -68,11 +68,26 @@ async function pullCampaignMonthly() {
   }));
 }
 
+async function getAdThumbnails() {
+  // Pull all ads in campaign with their creative thumbnail in one call
+  const url = `${BASE}/${CAMPAIGN_ID}/ads?fields=id,adcreatives{thumbnail_url,video_id,object_type}&limit=50&access_token=${TOKEN}`;
+  const data = await get(url);
+  const map = {};
+  for (const ad of (data.data || [])) {
+    const creative = (ad.adcreatives?.data || [])[0];
+    map[ad.id] = creative?.thumbnail_url || null;
+  }
+  return map;
+}
+
 async function pullAdBreakdown() {
   const { since, until } = last30Days();
 
-  // Get all ads in campaign
-  const adsData = await get(`${BASE}/${CAMPAIGN_ID}/ads?fields=id,name,status&limit=50&access_token=${TOKEN}`);
+  // Get all ads in campaign + thumbnails in parallel
+  const [adsData, thumbnails] = await Promise.all([
+    get(`${BASE}/${CAMPAIGN_ID}/ads?fields=id,name,status&limit=50&access_token=${TOKEN}`),
+    getAdThumbnails()
+  ]);
   const ads = adsData.data || [];
 
   const results = [];
@@ -98,9 +113,10 @@ async function pullAdBreakdown() {
       const cpm         = impressions > 0 ? parseFloat((spend / impressions * 1000).toFixed(3)) : null;
 
       results.push({
-        adId:       ad.id,
-        adName:     ad.name,
-        live:       ad.status === 'ACTIVE',
+        adId:        ad.id,
+        adName:      ad.name,
+        live:        ad.status === 'ACTIVE',
+        thumbnailUrl: thumbnails[ad.id] || null,
         spend,
         clicks,
         impressions,

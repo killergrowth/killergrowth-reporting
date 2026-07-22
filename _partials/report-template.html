@@ -1030,7 +1030,10 @@ function renderMeta(ads,social){
     function adRow(a){
       var ctrC=a.ctrAll>=8?'pg':a.ctrAll>=6?'po':'pm';
       var cpC=a.costPerLP!=null?(a.costPerLP<=0.20?'pg':a.costPerLP<=0.28?'po':'pm'):'';
-      return '<tr><td class="dim">'+a.adName+'</td>'+
+      var thumb=a.thumbnailUrl?'<img src="'+a.thumbnailUrl+'" style="width:56px;height:56px;object-fit:cover;border-radius:4px;display:block" loading="lazy" onerror="this.style.display=\'none\'">':'<div style="width:56px;height:56px;border-radius:4px;background:var(--surface2)"></div>';
+      return '<tr>'+
+        '<td style="vertical-align:middle;padding-right:10px">'+thumb+'</td>'+
+        '<td class="dim" style="vertical-align:middle">'+a.adName+'</td>'+
         '<td class="r">'+fmtM(a.spend)+'</td>'+
         '<td class="r">'+fmt(a.impressions)+'</td>'+
         '<td class="r '+ctrC+'">'+(a.ctrAll!=null?a.ctrAll.toFixed(2)+'%':'\u2014')+'</td>'+
@@ -1040,7 +1043,7 @@ function renderMeta(ads,social){
         '<td class="r '+cpC+'">'+(a.costPerLP!=null?fmtM(a.costPerLP):'\u2014')+'</td>'+
         '</tr>';
     }
-    var thead='<thead><tr><th>Ad Creative</th><th class="r">Spend</th><th class="r">Impressions</th><th class="r">CTR (all)</th><th class="r">CTR (link)</th><th class="r">CPM</th><th class="r">LP Views</th><th class="r">Cost / LP</th></tr></thead>';
+    var thead='<thead><tr><th></th><th>Ad Creative</th><th class="r">Spend</th><th class="r">Impressions</th><th class="r">CTR (all)</th><th class="r">CTR (link)</th><th class="r">CPM</th><th class="r">LP Views</th><th class="r">Cost / LP</th></tr></thead>';
     var legend='<div style="font-size:11px;color:var(--muted);margin-top:10px"><span class="pg" style="font-weight:600">Green</span> = strong &nbsp;&middot;&nbsp; <span class="po" style="font-weight:600">Orange</span> = average &nbsp;&middot;&nbsp; <span class="pm" style="font-weight:600">Red</span> = needs attention</div>';
     var html='';
     if(liveAds.length){
