@@ -461,7 +461,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
         <div class="sh"><span class="sb2">ADS</span><span class="st">Google Ads</span></div>
         <div class="g32">
           <div class="card"><div class="clbl">Spend vs. Leads &mdash; Monthly</div><div style="position:relative;height:220px"><canvas id="c-ads"></canvas></div><div id="e-ads" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
-          <div class="card"><div class="clbl">Campaign Breakdown</div><table class="tbl"><thead><tr><th>Campaign</th><th class="r">Spend</th><th class="r">Clicks</th><th class="r">Leads</th></tr></thead><tbody id="t-camps"></tbody></table><div id="e-camps" class="du h"><div class="du-t">Data updating&hellip;</div></div><div style="display:flex;gap:20px;margin-top:16px"><div><div class="klbl">Total Spend<span class="kinfo" data-tip="Total ad spend for the most recent month shown in the chart.">i</span></div><div class="kv" id="ads-spend">—</div></div><div><div class="klbl">Cost / Lead<span class="kinfo" data-tip="Average cost to generate one lead. Formula: Total Spend ÷ Total Leads. Lower is better.">i</span></div><div class="kv" style="color:var(--lime)" id="ads-cpl">—</div></div></div></div>
+          <div class="card"><div class="clbl">Campaign Breakdown</div><table class="tbl"><thead><tr><th>Campaign</th><th class="r">Spend</th><th class="r">Clicks</th><th class="r">Leads</th></tr></thead><tbody id="t-camps"></tbody></table><div id="e-camps" class="du h"><div class="du-t">Data updating&hellip;</div></div><div style="display:flex;gap:20px;margin-top:16px"><div><div class="klbl">Total Spend<span class="kinfo" data-tip="Total ad spend for the most recent month shown in the chart.">i</span></div><div class="kv" id="ads-spend">ï¿½</div></div><div><div class="klbl">Cost / Lead<span class="kinfo" data-tip="Average cost to generate one lead. Formula: Total Spend ï¿½ Total Leads. Lower is better.">i</span></div><div class="kv" style="color:var(--lime)" id="ads-cpl">ï¿½</div></div></div></div>
         </div>
       </section>
 
@@ -600,13 +600,13 @@ var CHART_DEFAULTS = {
 
 /* -- HELPERS -- */
 function fmt(n, pre, suf) {
-  if (n == null || n === '') return '—';
+  if (n == null || n === '') return 'ï¿½';
   var v = Number(n);
-  if (isNaN(v)) return '—';
+  if (isNaN(v)) return 'ï¿½';
   return (pre || '') + v.toLocaleString() + (suf || '');
 }
-function fmtMoney(n) { return n == null ? '—' : '$' + Number(n).toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2}); }
-function fmtPct(n) { return n == null ? '—' : n.toFixed(1) + '%'; }
+function fmtMoney(n) { return n == null ? 'ï¿½' : '$' + Number(n).toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2}); }
+function fmtPct(n) { return n == null ? 'ï¿½' : n.toFixed(1) + '%'; }
 function h(tag, cls, html, extra) {
   return '<' + tag + (cls ? ' class="' + cls + '"' : '') + (extra || '') + '>' + (html || '') + '</' + tag + '>';
 }
@@ -824,7 +824,7 @@ function dc(key){if(CHARTS[key]){CHARTS[key].destroy();delete CHARTS[key];}}
 function renderOverview(data,mods){
   var ov=data.overview||{},cards=[];
   if(mods.website&&ov.sessions!=null)cards.push(kc('Sessions',fmt(ov.sessions),ov.sessionsDelta,null,'A session is a single visit to the website. One person can have multiple sessions.'));
-  if(mods.seo&&ov.rankingsTop10!=null)cards.push(kc('Top 10 Keywords',fmt(ov.rankingsTop10),ov.rankingsDelta,null,'Keywords your site currently ranks in positions 1–10 on Google. More top-10 rankings = more organic traffic.'));
+  if(mods.seo&&ov.rankingsTop10!=null)cards.push(kc('Top 10 Keywords',fmt(ov.rankingsTop10),ov.rankingsDelta,null,'Keywords your site currently ranks in positions 1ï¿½10 on Google. More top-10 rankings = more organic traffic.'));
   if(mods.gbp&&ov.gbpViews!=null)cards.push(kc('GBP Views',fmt(ov.gbpViews),ov.gbpViewsDelta,null,'Total times your Google Business Profile appeared in Search or Maps this period.'));
   el('krow').innerHTML=cards.length?cards.join(''):'<div style="color:var(--muted);font-size:13px">No overview data available yet.</div>';
 }
@@ -1068,7 +1068,7 @@ function renderMeta(ads,social){
   }
   // Age/gender stacked bar
   // ageGender is already a flat [{age,female,male,unknown}] array after applyRange aggregation
-  // Raw data (before first applyRange) has {month, ageRows} structure — flatten if needed
+  // Raw data (before first applyRange) has {month, ageRows} structure ï¿½ flatten if needed
   var ageRaw=ads.ageGender||[];
   var ageData=ageRaw.length&&ageRaw[0].ageRows
     ? (function(){var AGE_O=["18-24","25-34","35-44","45-54","55-64","65+"],p={};ageRaw.forEach(function(m){(m.ageRows||[]).forEach(function(r){if(!p[r.age])p[r.age]={female:0,male:0,unknown:0};p[r.age].female+=r.female||0;p[r.age].male+=r.male||0;p[r.age].unknown+=r.unknown||0;});});return AGE_O.map(function(a){return{age:a,female:p[a]?p[a].female:0,male:p[a]?p[a].male:0,unknown:p[a]?p[a].unknown:0};});}())
@@ -1083,9 +1083,8 @@ function renderMeta(ads,social){
       data:{
         labels:ageLabels,
         datasets:[
-          {label:'Female',data:ageData.map(function(d){return d.female;}),backgroundColor:'rgba(107,99,246,0.85)',borderRadius:{topLeft:0,topRight:0,bottomLeft:3,bottomRight:3}},
-          {label:'Male',data:ageData.map(function(d){return d.male;}),backgroundColor:'rgba(52,211,153,0.85)',borderRadius:{topLeft:3,topRight:3,bottomLeft:0,bottomRight:0}},
-          {label:'Unknown',data:ageData.map(function(d){return d.unknown;}),backgroundColor:'rgba(150,150,150,0.5)',borderRadius:0}
+          {label:'Female',data:ageData.map(function(d){return d.female;}),backgroundColor:'rgba(107,99,246,0.85)',borderRadius:3,barPercentage:0.4,categoryPercentage:0.8},
+          {label:'Male',data:ageData.map(function(d){return d.male;}),backgroundColor:'rgba(52,211,153,0.85)',borderRadius:3,barPercentage:0.4,categoryPercentage:0.8}
         ]
       },
       options:{
@@ -1096,8 +1095,8 @@ function renderMeta(ads,social){
           tooltip:getTT()
         },
         scales:{
-          x:{stacked:true,grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#888',font:{size:11}},border:{display:false}},
-          y:{stacked:true,grid:{color:'rgba(255,255,255,0.06)'},ticks:{color:'#888',font:{size:11}},border:{display:false},title:{display:true,text:'Clicks',color:'#666',font:{size:10}}}
+          x:{stacked:false,grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#888',font:{size:11}},border:{display:false}},
+          y:{stacked:false,grid:{color:'rgba(255,255,255,0.06)'},ticks:{color:'#888',font:{size:11}},border:{display:false},title:{display:true,text:'Clicks',color:'#666',font:{size:10}}}
         }
       }
     });
@@ -1402,8 +1401,8 @@ function renderWebsite(website,seo){
 else{el('web-ch').innerHTML='<div class="du"><div class="du-t">Data updating.</div></div>';}
 PSI_DATA=website.psiScores||{};renderPSI('mobile');
 }
-var PSI_TIPS={'Accessibility':{def:'How usable your site is for users with disabilities — screen readers, keyboard navigation, and color contrast.',rng:''},'Best Practices':{def:'Checks for modern web standards — HTTPS, no browser errors, no deprecated APIs, and security hygiene.',rng:''},'SEO':{def:'How easily search engines can crawl and index your site — meta tags, structured data, and mobile readiness.',rng:''}};
-function renderPSI(v){PSI_VIEW=v;el('psi-m').classList.toggle('active',v==='mobile');el('psi-d').classList.toggle('active',v==='desktop');var sc=PSI_DATA[v]||{};el('psi-wrap').innerHTML=[['Accessibility',sc.accessibility],['Best Practices',sc.bestPractices],['SEO',sc.seo]].map(function(m){var val=m[1],cls=val==null?'':val>=90?'good':val>=50?'ok':'poor';var t=PSI_TIPS[m[0]]||{};var tip='<div class="psi-tip"><b>'+m[0]+'</b>'+t.def+'<hr><em><span class="tip-g">90–100</span> Great &nbsp;·&nbsp; <span class="tip-o">50–89</span> OK &nbsp;·&nbsp; <span class="tip-r">0–49</span> Poor</em></div>';return '<div class="psi-c '+cls+'">'+tip+'<div class="psi-s">'+(val!=null?val:'\u2014')+'</div><div class="psi-l">'+m[0]+'</div></div>';}).join('');}
+var PSI_TIPS={'Accessibility':{def:'How usable your site is for users with disabilities ï¿½ screen readers, keyboard navigation, and color contrast.',rng:''},'Best Practices':{def:'Checks for modern web standards ï¿½ HTTPS, no browser errors, no deprecated APIs, and security hygiene.',rng:''},'SEO':{def:'How easily search engines can crawl and index your site ï¿½ meta tags, structured data, and mobile readiness.',rng:''}};
+function renderPSI(v){PSI_VIEW=v;el('psi-m').classList.toggle('active',v==='mobile');el('psi-d').classList.toggle('active',v==='desktop');var sc=PSI_DATA[v]||{};el('psi-wrap').innerHTML=[['Accessibility',sc.accessibility],['Best Practices',sc.bestPractices],['SEO',sc.seo]].map(function(m){var val=m[1],cls=val==null?'':val>=90?'good':val>=50?'ok':'poor';var t=PSI_TIPS[m[0]]||{};var tip='<div class="psi-tip"><b>'+m[0]+'</b>'+t.def+'<hr><em><span class="tip-g">90ï¿½100</span> Great &nbsp;ï¿½&nbsp; <span class="tip-o">50ï¿½89</span> OK &nbsp;ï¿½&nbsp; <span class="tip-r">0ï¿½49</span> Poor</em></div>';return '<div class="psi-c '+cls+'">'+tip+'<div class="psi-s">'+(val!=null?val:'\u2014')+'</div><div class="psi-l">'+m[0]+'</div></div>';}).join('');}
 function setPsi(v){renderPSI(v);}
 
 function getTT(){return {backgroundColor:'#1a1a1a',borderColor:'#252525',borderWidth:1,titleColor:'#555',bodyColor:'#ccc',padding:10,cornerRadius:6};}
