@@ -154,13 +154,42 @@ async function pullAdBreakdown() {
   return results;
 }
 
+async function pullAgeGender() {
+  const { since, until } = last30Days();
+  const timeRange = encodeURIComponent(JSON.stringify({ since, until }));
+  const url = BASE + '/' + CAMPAIGN_ID + '/insights?fields=spend,clicks,impressions&time_range=' + timeRange + '&breakdowns=age,gender&access_token=' + TOKEN;
+  const data = await get(url);
+
+  // Pivot into { age: { female: clicks, male: clicks, unknown: clicks } }
+  const AGE_ORDER = ['18-24','25-34','35-44','45-54','55-64','65+'];
+  const pivot = {};
+  for (const row of (data.data || [])) {
+    const age = row.age;
+    if (!AGE_ORDER.includes(age)) continue; // skip Unknown age bucket
+    if (!pivot[age]) pivot[age] = { female: 0, male: 0, unknown: 0, spend: 0 };
+    const g = row.gender === 'female' ? 'female' : row.gender === 'male' ? 'male' : 'unknown';
+    pivot[age][g] += parseInt(row.clicks) || 0;
+    pivot[age].spend += parseFloat(row.spend) || 0;
+  }
+
+  return AGE_ORDER.map(age => ({
+    age,
+    female:  pivot[age] ? pivot[age].female  : 0,
+    male:    pivot[age] ? pivot[age].male    : 0,
+    unknown: pivot[age] ? pivot[age].unknown : 0,
+    spend:   pivot[age] ? parseFloat(pivot[age].spend.toFixed(2)) : 0
+  }));
+}
+
 async function main() {
   console.log('Pulling Walnut Valley Meta Ads...');
 
-  const [monthly, adBreakdown] = await Promise.all([
+  const [monthly, adBreakdown, ageGender] = await Promise.all([
     pullCampaignMonthly(),
-    pullAdBreakdown()
+    pullAdBreakdown(),
+    pullAgeGender()
   ]);
+  console.log('Age/gender rows:', ageGender.length);
 
   console.log(`Campaign monthly: ${monthly.length} months`);
   console.log(`Ad breakdown: ${adBreakdown.length} ads with spend in last 30 days`);
@@ -180,7 +209,8 @@ async function main() {
     campaignId:      CAMPAIGN_ID,
     dateRangeLabel:  'Last 30 days (ad breakdown) / YTD (monthly)',
     monthlyBreakdown: monthly,
-    adBreakdown:     adBreakdown
+    adBreakdown:     adBreakdown,
+    ageGender:       ageGender
   };
 
   existing.generatedAt = new Date().toISOString();

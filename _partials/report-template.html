@@ -475,6 +475,9 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
         <div id="meta-ad-breakdown" style="display:none">
           <div class="card"><div class="clbl">Ad Creative Breakdown</div><div id="meta-ad-table"></div></div>
         </div>
+        <div id="meta-age-wrap" style="display:none;margin-top:14px">
+          <div class="card"><div class="clbl">Clicks by Age &amp; Gender &mdash; Last 30 Days</div><div style="position:relative;height:260px"><canvas id="c-meta-age"></canvas></div></div>
+        </div>
       </section>
 
       <!-- GBP -->
@@ -1062,6 +1065,37 @@ function renderMeta(ads,social){
     }
     html+=legend;
     el('meta-ad-table').innerHTML=html;
+  }
+  // Age/gender stacked bar
+  var ageData=ads.ageGender||[];
+  var ageWrap=el('meta-age-wrap');
+  if(ageData.length&&ageWrap){
+    ageWrap.style.display='';
+    var ageLabels=ageData.map(function(d){return d.age;});
+    if(CHARTS['meta-age'])CHARTS['meta-age'].destroy();
+    CHARTS['meta-age']=new Chart(el('c-meta-age').getContext('2d'),{
+      type:'bar',
+      data:{
+        labels:ageLabels,
+        datasets:[
+          {label:'Female',data:ageData.map(function(d){return d.female;}),backgroundColor:'rgba(107,99,246,0.85)',borderRadius:{topLeft:0,topRight:0,bottomLeft:3,bottomRight:3}},
+          {label:'Male',data:ageData.map(function(d){return d.male;}),backgroundColor:'rgba(52,211,153,0.85)',borderRadius:{topLeft:3,topRight:3,bottomLeft:0,bottomRight:0}},
+          {label:'Unknown',data:ageData.map(function(d){return d.unknown;}),backgroundColor:'rgba(150,150,150,0.5)',borderRadius:0}
+        ]
+      },
+      options:{
+        responsive:true,maintainAspectRatio:false,
+        interaction:{mode:'index',intersect:false},
+        plugins:{
+          legend:{display:true,labels:{color:'#aaa',font:{size:11},boxWidth:12,padding:16}},
+          tooltip:getTT()
+        },
+        scales:{
+          x:{stacked:true,grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#888',font:{size:11}},border:{display:false}},
+          y:{stacked:true,grid:{color:'rgba(255,255,255,0.06)'},ticks:{color:'#888',font:{size:11}},border:{display:false},title:{display:true,text:'Clicks',color:'#666',font:{size:10}}}
+        }
+      }
+    });
   }
 }
 
