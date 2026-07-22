@@ -1041,13 +1041,14 @@ function renderMeta(ads,social){
         '<td class="r">'+fmtM(a.spend)+'</td>'+
         '<td class="r">'+fmt(a.impressions)+'</td>'+
         '<td class="r '+ctrC+'">'+(a.ctrAll!=null?a.ctrAll.toFixed(2)+'%':'\u2014')+'</td>'+
+        '<td class="r">'+(a.linkClicks!=null?fmt(a.linkClicks):'\u2014')+'</td>'+
         '<td class="r">'+(a.ctrLink!=null?a.ctrLink.toFixed(2)+'%':'\u2014')+'</td>'+
-        '<td class="r">'+fmtM(a.cpm)+'</td>'+
-        '<td class="r">'+fmt(a.lpViews)+'</td>'+
+        '<td class="r">'+(a.cpm!=null?fmtM(a.cpm):'\u2014')+'</td>'+
+        '<td class="r">'+(a.lpViews!=null?fmt(a.lpViews):'\u2014')+'</td>'+
         '<td class="r '+cpC+'">'+(a.costPerLP!=null?fmtM(a.costPerLP):'\u2014')+'</td>'+
         '</tr>';
     }
-    var thead='<thead><tr><th></th><th>Ad Creative</th><th class="r">Spend</th><th class="r">Impressions</th><th class="r">CTR (all)</th><th class="r">CTR (link)</th><th class="r">CPM</th><th class="r">LP Views</th><th class="r">Cost / LP</th></tr></thead>';
+    var thead='<thead><tr><th></th><th>Ad Creative</th><th class="r">Spend</th><th class="r">Impressions</th><th class="r">CTR (all)</th><th class="r">Link Clicks</th><th class="r">CTR (link)</th><th class="r">CPM</th><th class="r">LP Views</th><th class="r">Cost / LP</th></tr></thead>';
     var legend='<div style="font-size:11px;color:var(--muted);margin-top:10px"><span class="pg" style="font-weight:600">Green</span> = strong &nbsp;&middot;&nbsp; <span class="po" style="font-weight:600">Orange</span> = average &nbsp;&middot;&nbsp; <span class="pm" style="font-weight:600">Red</span> = needs attention</div>';
     var html='';
     if(liveAds.length){

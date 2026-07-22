@@ -94,7 +94,7 @@ async function pullAdBreakdown() {
   for (const ad of ads) {
     try {
       const timeRange = encodeURIComponent(JSON.stringify({ since, until }));
-      const url = `${BASE}/${ad.id}/insights?fields=spend,clicks,impressions,reach,ctr,cpc,actions&time_range=${timeRange}&access_token=${TOKEN}`;
+      const url = `${BASE}/${ad.id}/insights?fields=spend,clicks,impressions,reach,ctr,cpc,actions,outbound_clicks,inline_link_clicks,video_30_sec_watched_actions,cost_per_outbound_click&time_range=${timeRange}&access_token=${TOKEN}`;
       const insightData = await get(url);
       const row = (insightData.data || [])[0];
       if (!row || !row.spend || parseFloat(row.spend) === 0) continue; // skip zero-spend ads
@@ -103,14 +103,27 @@ async function pullAdBreakdown() {
         a => a.action_type === 'lead' || a.action_type === 'offsite_conversion.lead'
       );
 
-      const spend       = row.spend       ? parseFloat(parseFloat(row.spend).toFixed(2))      : 0;
-      const impressions = row.impressions ? parseInt(row.impressions) : 0;
-      const clicks      = row.clicks      ? parseInt(row.clicks)      : 0;
-      const reach       = row.reach       ? parseInt(row.reach)       : 0;
-      const ctr         = row.ctr         ? parseFloat(parseFloat(row.ctr).toFixed(2))  : 0;
-      const cpc         = row.cpc         ? parseFloat(parseFloat(row.cpc).toFixed(3))  : 0;
-      // CPM = spend / impressions * 1000
-      const cpm         = impressions > 0 ? parseFloat((spend / impressions * 1000).toFixed(3)) : null;
+      const spend        = row.spend       ? parseFloat(parseFloat(row.spend).toFixed(2))  : 0;
+      const impressions  = row.impressions ? parseInt(row.impressions) : 0;
+      const clicks       = row.clicks      ? parseInt(row.clicks)      : 0;
+      const reach        = row.reach       ? parseInt(row.reach)       : 0;
+      const ctrAll       = row.ctr         ? parseFloat(parseFloat(row.ctr).toFixed(2))   : 0;
+      const cpc          = row.cpc         ? parseFloat(parseFloat(row.cpc).toFixed(3))   : 0;
+      const cpm          = impressions > 0 ? parseFloat((spend / impressions * 1000).toFixed(3)) : null;
+
+      // Outbound (link) clicks — clicks that leave FB to the destination URL
+      const outboundClicks = (row.outbound_clicks || []).find(a => a.action_type === 'outbound_click');
+      const linkClicks     = outboundClicks ? parseInt(outboundClicks.value) : null;
+      const ctrLink        = (linkClicks != null && impressions > 0)
+        ? parseFloat((linkClicks / impressions * 100).toFixed(2)) : null;
+
+      // Landing page views (inline_link_clicks = clicks that loaded the destination page)
+      const lpViews   = row.inline_link_clicks ? parseInt(row.inline_link_clicks) : null;
+      const costPerLP = (lpViews && lpViews > 0) ? parseFloat((spend / lpViews).toFixed(2)) : null;
+
+      // Video 30s views
+      const vid30Act  = (row.video_30_sec_watched_actions || []).find(a => a.action_type === 'video_view');
+      const vid30     = vid30Act ? parseInt(vid30Act.value) : null;
 
       results.push({
         adId:        ad.id,
@@ -121,14 +134,15 @@ async function pullAdBreakdown() {
         clicks,
         impressions,
         reach,
-        // template fields
-        ctrAll:     ctr,      // overall CTR
-        ctrLink:    null,     // link CTR not available via this endpoint without action_values
+        ctrAll,
+        ctrLink,
         cpm,
-        lpViews:    null,     // landing page views not available without pixel events
-        costPerLP:  null,     // no LP views = no cost/LP
+        lpViews,
+        costPerLP,
+        linkClicks,
+        vid30,
         cpc,
-        leads:      leads ? parseInt(leads.value) : 0
+        leads: leads ? parseInt(leads.value) : 0
       });
     } catch (e) {
       console.warn(`  [skip] ${ad.name}: ${e.message}`);
