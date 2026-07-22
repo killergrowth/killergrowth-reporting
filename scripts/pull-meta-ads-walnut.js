@@ -155,29 +155,35 @@ async function pullAdBreakdown() {
 }
 
 async function pullAgeGender() {
-  const { since, until } = last30Days();
-  const timeRange = encodeURIComponent(JSON.stringify({ since, until }));
-  const url = BASE + '/' + CAMPAIGN_ID + '/insights?fields=spend,clicks,impressions&time_range=' + timeRange + '&breakdowns=age,gender&access_token=' + TOKEN;
+  // Pull age/gender breakdown month-by-month (YTD) so frontend can re-aggregate on date range change
+  const { since: ytdSince, until: ytdUntil } = ytdRange();
+  const AGE_ORDER = ['18-24','25-34','35-44','45-54','55-64','65+'];
+
+  const timeRange = encodeURIComponent(JSON.stringify({ since: ytdSince, until: ytdUntil }));
+  const url = BASE + '/' + CAMPAIGN_ID + '/insights?fields=spend,clicks,impressions&time_range=' + timeRange + '&breakdowns=age,gender&time_increment=monthly&access_token=' + TOKEN;
   const data = await get(url);
 
-  // Pivot into { age: { female: clicks, male: clicks, unknown: clicks } }
-  const AGE_ORDER = ['18-24','25-34','35-44','45-54','55-64','65+'];
-  const pivot = {};
+  // Group rows by month, then pivot age/gender within each month
+  const byMonth = {};
   for (const row of (data.data || [])) {
     const age = row.age;
-    if (!AGE_ORDER.includes(age)) continue; // skip Unknown age bucket
-    if (!pivot[age]) pivot[age] = { female: 0, male: 0, unknown: 0, spend: 0 };
+    if (!AGE_ORDER.includes(age)) continue;
+    const month = fmtMonth(row.date_start);
+    if (!byMonth[month]) byMonth[month] = {};
+    if (!byMonth[month][age]) byMonth[month][age] = { female: 0, male: 0, unknown: 0 };
     const g = row.gender === 'female' ? 'female' : row.gender === 'male' ? 'male' : 'unknown';
-    pivot[age][g] += parseInt(row.clicks) || 0;
-    pivot[age].spend += parseFloat(row.spend) || 0;
+    byMonth[month][age][g] += parseInt(row.clicks) || 0;
   }
 
-  return AGE_ORDER.map(age => ({
-    age,
-    female:  pivot[age] ? pivot[age].female  : 0,
-    male:    pivot[age] ? pivot[age].male    : 0,
-    unknown: pivot[age] ? pivot[age].unknown : 0,
-    spend:   pivot[age] ? parseFloat(pivot[age].spend.toFixed(2)) : 0
+  // Array of { month, ageRows: [{age, female, male, unknown}] }
+  return Object.keys(byMonth).map(month => ({
+    month,
+    ageRows: AGE_ORDER.map(age => ({
+      age,
+      female:  byMonth[month][age] ? byMonth[month][age].female  : 0,
+      male:    byMonth[month][age] ? byMonth[month][age].male    : 0,
+      unknown: byMonth[month][age] ? byMonth[month][age].unknown : 0
+    }))
   }));
 }
 
