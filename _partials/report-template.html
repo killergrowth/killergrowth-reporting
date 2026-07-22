@@ -469,7 +469,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
       <section id="meta-ads" class="ms" data-module="metaAds">
         <div class="sh"><span class="sb2">META</span><span class="st">Meta Ads</span></div>
         <div class="g32" style="margin-bottom:14px">
-          <div class="card"><div class="clbl">Spend &amp; Reach &mdash; Monthly</div><div style="position:relative;height:220px"><canvas id="c-meta"></canvas></div><div id="e-meta" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
+          <div class="card"><div class="clbl">Spend &amp; Impressions &mdash; Monthly</div><div style="position:relative;height:220px"><canvas id="c-meta"></canvas></div><div id="e-meta" class="du h"><div class="du-t">Data updating&hellip;</div></div></div>
           <div class="card"><div class="clbl">Key Metrics</div><div id="meta-stats"></div></div>
         </div>
         <div id="meta-ad-breakdown" style="display:none">
@@ -1002,7 +1002,7 @@ function renderMeta(ads,social){
   var monthly=(ads.monthlyBreakdown||[]).filter(function(d){return d.adSpend>0;}),platforms=social.platforms||[];
   dc('meta');
   if(monthly.length){hd('e-meta');
-    CHARTS['meta']=new Chart(el('c-meta').getContext('2d'),{type:'bar',data:{labels:monthly.map(function(d){return d.month;}),datasets:[{label:'Spend ($)',data:monthly.map(function(d){return d.adSpend;}),backgroundColor:'#252525',borderRadius:3,yAxisID:'y'},{label:'Clicks',data:monthly.map(function(d){return d.adClicks;}),backgroundColor:'#c8f000',borderRadius:3,yAxisID:'y2'}]},options:getDualOpts()});
+    CHARTS['meta']=new Chart(el('c-meta').getContext('2d'),{type:'bar',data:{labels:monthly.map(function(d){return d.month;}),datasets:[{label:'Spend ($)',data:monthly.map(function(d){return d.adSpend;}),backgroundColor:'rgba(200,240,0,0.85)',borderRadius:4,yAxisID:'y',order:2},{type:'line',label:'Impressions',data:monthly.map(function(d){return d.adImpressions;}),borderColor:'#fff',backgroundColor:'rgba(255,255,255,0.08)',borderWidth:2,pointBackgroundColor:'#fff',pointRadius:3,pointHoverRadius:5,tension:0.3,fill:false,yAxisID:'y2',order:1}]},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{display:true,labels:{color:'#aaa',font:{size:11},boxWidth:12,padding:16}},tooltip:{...getTT(),callbacks:{label:function(ctx){var v=ctx.parsed.y;return ctx.dataset.label+': '+(ctx.dataset.label.startsWith('Spend')?'$'+v.toFixed(2):v>=1000?(v/1000).toFixed(1)+'K':v);}}}},scales:{x:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#666',font:{size:11}},border:{display:false}},y:{position:'left',grid:{color:'rgba(255,255,255,0.06)'},ticks:{color:'#aaa',font:{size:11},callback:function(v){return '$'+v.toLocaleString();}},border:{display:false},title:{display:true,text:'Spend ($)',color:'#666',font:{size:10}}},y2:{position:'right',grid:{display:false},ticks:{color:'#aaa',font:{size:11},callback:function(v){return v>=1000000?(v/1000000).toFixed(1)+'M':v>=1000?(v/1000).toFixed(0)+'K':v;}},border:{display:false},title:{display:true,text:'Impressions',color:'#666',font:{size:10}}}}}})
   }else{sh('e-meta');el('c-meta').style.display='none';}
   var last=monthly.length?monthly[monthly.length-1]:null,fb=platforms.find(function(p){return p.platform==='Facebook';});
   // Sum spend + clicks across the entire filtered range (not just last month)
@@ -1014,7 +1014,7 @@ function renderMeta(ads,social){
   if(mx.linkClicks!=null){
     el('meta-stats').innerHTML=[
       ['Spend',monthly.length?fmtM(totalSpend):'\u2014',null],
-      ['Reach',monthly.length&&totalReach>0?fmt(totalReach):'\u2014',null],
+      ['Impressions',monthly.length&&totalReach>0?fmt(monthly.reduce(function(s,d){return s+(d.adImpressions||0);},0)):'\u2014',null],
       ['Link Clicks',fmt(mx.linkClicks),null],
       ['Landing Page Views',fmt(mx.landingPageViews),null],
       ['Video Views',fmt(mx.videoViews),null],
@@ -1023,7 +1023,8 @@ function renderMeta(ads,social){
       ['Frequency',mx.frequency!=null?mx.frequency.toFixed(2):'\u2014',null]
     ].map(function(s){return '<div class="sr"><span class="srl">'+s[0]+ki(META_TIPS[s[0]])+'</span><span class="srv">'+s[1]+(s[2]||'')+'</span></div>';}).join('');
   }else{
-    el('meta-stats').innerHTML=[['Total Spend',monthly.length?fmtM(totalSpend):'\u2014'],['Total Clicks',monthly.length?fmt(totalClicks):'\u2014'],['Page Followers',fb?fmt(fb.followers):'\u2014'],['Avg. Reach',fb?fmt(fb.reach):'\u2014']].map(function(s){return '<div class="sr"><span class="srl">'+s[0]+ki(META_TIPS[s[0]])+'</span><span class="srv">'+s[1]+'</span></div>';}).join('');
+    var totalImpressions=monthly.reduce(function(s,d){return s+(d.adImpressions||0);},0);
+    el('meta-stats').innerHTML=[['Total Spend',monthly.length?fmtM(totalSpend):'\u2014'],['Impressions',monthly.length?fmt(totalImpressions):'\u2014'],['Total Clicks',monthly.length?fmt(totalClicks):'\u2014'],['Page Followers',fb?fmt(fb.followers):'\u2014']].map(function(s){return '<div class="sr"><span class="srl">'+s[0]+ki(META_TIPS[s[0]])+'</span><span class="srv">'+s[1]+'</span></div>';}).join('');
   }
   var breakdown=ads.adBreakdown||[];
   var bdWrap=el('meta-ad-breakdown');
