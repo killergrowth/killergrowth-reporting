@@ -417,7 +417,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
         <div class="card mb14" id="seo-lead-signals" style="display:none">
           <div class="clbl">Lead Source Breakdown</div>
           <div id="seo-lead-summary" style="font-size:15px;font-weight:700;color:var(--lime);margin-bottom:18px"></div>
-          <div id="seo-lead-krow" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px"></div>
+          <div id="seo-lead-krow" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px"></div>
         </div>
 
         <div class="g21 mb14" id="seo-web-traffic" data-module="website">
@@ -835,7 +835,7 @@ function kc(label,value,delta,sub,info){
 }
 function ki(tip){return tip?'<span class="kinfo" data-tip="'+tip+'">i</span>':'';};
 var META_TIPS={'Spend':'Total amount spent on Meta (Facebook/Instagram) ads this period.','Reach':'Unique people who saw your ads at least once. Broader reach = more brand awareness.','Link Clicks':'Clicks that took someone directly to your website or landing page.','Landing Page Views':'Times your landing page loaded after an ad click. More precise than link clicks.','Video Views':'Times your video ad played for at least 3 seconds.','CTR (link click)':'Click-through rate for link clicks. 1%+ is typical; 2%+ is strong for local.','CPM':'Cost per 1,000 impressions. Under  is solid for local. Lower = more reach per dollar.','Frequency':'Average times each person saw your ad. 1.5-3 is sweet spot; above 4 risks ad fatigue.','Total Spend':'Total amount spent on Meta ads this period.','Total Clicks':'Total clicks on your ads across all placements.','Page Followers':'Total followers on your Facebook page.','Avg. Reach':'Average unique people who saw your content or ads.'};
-var LS_TIPS={'Phone Calls':'Total calls from your website and GBP listing. Each one is a confirmed inbound lead opportunity.','Form Submissions':'Completed contact or lead forms submitted through your website.','Direction Requests':'Times someone tapped Get Directions to your business on Google Maps.'};
+var LS_TIPS={'Phone Calls':'Total calls from your website and GBP listing. Each one is a confirmed inbound lead opportunity.','Form Submissions':'Completed contact or lead forms submitted through your website.','Email Clicks':'Times a visitor clicked an email link on your website.','Direction Requests':'Times someone tapped Get Directions to your business on Google Maps.'};
 
 function renderGEO(lf){
   if(!lf||!lf.googleKeywords||!lf.googleKeywords.length)return;
@@ -941,6 +941,7 @@ function renderSEO(seo){
     var byC=ls.byChannel||{};
     var totalCalls=(ls.phoneCalls||0)+(ls.gbpCalls||0);
     var totalForms=ls.formSubmissions||0;
+    var totalEmails=ls.emailClicks||0;
     var confirmedLeads=totalCalls+totalForms;
     var summaryEl=el('seo-lead-summary');
     if(summaryEl){
@@ -978,6 +979,7 @@ function renderSEO(seo){
       krowEl.innerHTML=[
         lsCard('Phone Calls',totalCalls,'phone_call',ls.gbpCalls||0,'Calls from GBP listing + website'),
         lsCard('Form Submissions',totalForms,'generate_lead',0,'Completed lead forms'),
+        lsCard('Email Clicks',totalEmails,'email_click',0,'Email link clicks on website'),
         lsCard('Direction Requests',ls.gbpDirections||0,'',0,'Tapped directions on Google Maps')
       ].join('');
     }

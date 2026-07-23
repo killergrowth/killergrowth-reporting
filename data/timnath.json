@@ -3,7 +3,7 @@
   "slug": "timnath",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-22T09:24:49.330Z",
+  "generatedAt": "2026-07-22T21:27:31.667Z",
   "overview": {
     "sessions": 190,
     "sessionsDelta": 0,
@@ -111,22 +111,17 @@
       "organicSessions": 37,
       "phoneCalls": 0,
       "formSubmissions": 1,
-      "emailClicks": 3,
+      "emailClicks": 2,
       "ctaClicks": 32,
       "formStarts": 2,
       "byChannel": {
         "cta_click": {
-          "Direct": 20,
-          "Organic Search": 6,
-          "Referral": 5,
-          "Unassigned": 1
-        },
-        "email_click": {
-          "Direct": 2,
+          "Direct": 3,
           "Organic Search": 1
         },
-        "form_start": {
-          "Direct": 2
+        "email_click": {
+          "Direct": 1,
+          "Organic Search": 1
         },
         "generate_lead": {
           "Direct": 1
