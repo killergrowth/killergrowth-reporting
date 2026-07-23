@@ -3,7 +3,7 @@
   "slug": "timnath",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-22T21:27:31.667Z",
+  "generatedAt": "2026-07-23T09:25:14.727Z",
   "overview": {
     "sessions": 190,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 0,
     "rankingsDelta": null,
-    "gbpViews": 644,
+    "gbpViews": 673,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -111,17 +111,22 @@
       "organicSessions": 37,
       "phoneCalls": 0,
       "formSubmissions": 1,
-      "emailClicks": 2,
+      "emailClicks": 3,
       "ctaClicks": 32,
       "formStarts": 2,
       "byChannel": {
         "cta_click": {
-          "Direct": 3,
-          "Organic Search": 1
+          "Direct": 20,
+          "Organic Search": 6,
+          "Referral": 5,
+          "Unassigned": 1
         },
         "email_click": {
-          "Direct": 1,
+          "Direct": 2,
           "Organic Search": 1
+        },
+        "form_start": {
+          "Direct": 2
         },
         "generate_lead": {
           "Direct": 1
@@ -129,7 +134,7 @@
       },
       "gbpCalls": 4,
       "gbpWebsiteClicks": 14,
-      "gbpDirections": 231
+      "gbpDirections": 233
     }
   },
   "ads": {
@@ -229,10 +234,10 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 644,
+    "totalViews": 673,
     "calls": 4,
     "callsDelta": null,
-    "directions": 231,
+    "directions": 233,
     "websiteClicks": 14,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -1365,27 +1370,83 @@
       },
       {
         "date": "2026-07-12",
-        "views": 7,
+        "views": 9,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-13",
-        "views": 0,
+        "views": 11,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-14",
-        "views": 0,
+        "views": 2,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-15",
+        "views": 1,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-16",
+        "views": 5,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-17",
+        "views": 2,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-18",
+        "views": 5,
+        "calls": 0,
+        "directions": 2,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-19",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-20",
+        "views": 1,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-21",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-22",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-23",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1466,14 +1527,9 @@
       "pagespeedMobile": null
     },
     "psiScores": {
-      "mobile": {
-        "performance": 48,
-        "accessibility": 90,
-        "bestPractices": 100,
-        "seo": 92
-      },
+      "mobile": null,
       "desktop": {
-        "performance": 66,
+        "performance": 68,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
@@ -1800,6 +1856,16 @@
         },
         "desktop": {
           "performance": 66,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-23",
+        "mobile": null,
+        "desktop": {
+          "performance": 68,
           "accessibility": 90,
           "bestPractices": 100,
           "seo": 92
