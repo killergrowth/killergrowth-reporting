@@ -1340,7 +1340,10 @@ function renderWebsite(website,seo){
   var channels=rawChannels.slice();
   if(aiTotal>0)channels.push({channel:'AI Traffic',sessions:aiTotal,_isAi:true});
   dc('web');
-  if(sessions.length){hd('e-web');el('c-web').style.display='';dc('web');CHARTS['web']=new Chart(el('c-web').getContext('2d'),{type:'line',data:{labels:sessions.map(function(d){if(d.date){var dt=new Date(d.date+'T12:00:00');return dt.toLocaleDateString('en-US',{month:'short',day:'numeric'});}return 'Wk '+d.week;}),datasets:[{label:'Sessions',data:sessions.map(function(d){return d.sessions;}),borderColor:'#c8f000',backgroundColor:'rgba(200,240,0,0.1)',fill:true,tension:.4,pointRadius:3,pointBackgroundColor:'#c8f000'}]},options:getOpts()});}
+  if(sessions.length){hd('e-web');el('c-web').style.display='';dc('web');
+  if(website._sessionsFallback){var wn=el('web-fallback-note');if(!wn){wn=document.createElement('div');wn.id='web-fallback-note';wn.style='font-size:11px;color:#666;margin-top:6px;font-style:italic';wn.textContent='Showing all available data — current month data not yet collected.';var webCard=el('c-web')&&el('c-web').closest('.card');if(webCard)webCard.appendChild(wn);}}
+  else{var wn2=el('web-fallback-note');if(wn2)wn2.remove();}
+  CHARTS['web']=new Chart(el('c-web').getContext('2d'),{type:'line',data:{labels:sessions.map(function(d){if(d.date){var dt=new Date(d.date+'T12:00:00');return dt.toLocaleDateString('en-US',{month:'short',day:'numeric'});}return 'Wk '+d.week;}),datasets:[{label:'Sessions',data:sessions.map(function(d){return d.sessions;}),borderColor:'#c8f000',backgroundColor:'rgba(200,240,0,0.1)',fill:true,tension:.4,pointRadius:3,pointBackgroundColor:'#c8f000'}]},options:getOpts()});}
   else{sh('e-web');el('c-web').style.display='none';}
   if(channels.length||aiTotal>0){
   var aiPlatforms=(website.aiReferral&&website.aiReferral.platforms)||[];
@@ -1508,11 +1511,15 @@ function applyRange(start,end){
   // Timezone-safe filter for weekly sessions: compare YYYY-MM strings directly
   var _sM=start.getFullYear()+'-'+String(start.getMonth()+1).padStart(2,'0');
   var _eM=end.getFullYear()+'-'+String(end.getMonth()+1).padStart(2,'0');
-  var fWebSessions=(d.website&&d.website.sessionsOverTime||[]).filter(function(s){
+  var _allWebSessions=(d.website&&d.website.sessionsOverTime)||[];
+  var fWebSessions=_allWebSessions.filter(function(s){
     if(!s.date)return true;
     var ym=s.date.substring(0,7);
     return ym>=_sM&&ym<=_eM;
   });
+  // If current month has no sessions data yet, fall back to all available data
+  var _webSessionsFallback=false;
+  if(!fWebSessions.length&&_allWebSessions.length){fWebSessions=_allWebSessions;_webSessionsFallback=true;}
   var fd={};
   // Recalculate GBP scalars from filtered time-series so lead signals match GBP section
   var filteredGbpCalls=fGbp.reduce(function(s,x){return s+(x.calls||0);},0)+fGbp2.reduce(function(s,x){return s+(x.calls||0);},0)+fGbp3.reduce(function(s,x){return s+(x.calls||0);},0);
@@ -1555,7 +1562,7 @@ function applyRange(start,end){
   fd.localFalcon=d.localFalcon||null;
   var psiScores=(d.website||{}).psiScores||{};
   if(fPsiH&&fPsiH.length){var lp=fPsiH[fPsiH.length-1];psiScores={mobile:lp.mobile,desktop:lp.desktop};}
-  fd.website=Object.assign({},d.website||{},{psiHistory:fPsiH,psiScores:psiScores,sessionsOverTime:fWebSessions});
+  fd.website=Object.assign({},d.website||{},{psiHistory:fPsiH,psiScores:psiScores,sessionsOverTime:fWebSessions,_sessionsFallback:_webSessionsFallback});
   var ov=Object.assign({},d.overview||{});
   if(fAds.length){
     ov.adSpend=fAds.reduce(function(s,x){return s+(x.adSpend||0);},0)||null;
