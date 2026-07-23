@@ -74,10 +74,9 @@ async function pullMeta(pageId, client) {
 
   // Page insights
   const metrics = [
-    'page_impressions_unique',   // unique reach
     'page_post_engagements',
     'page_views_total'
-  ].join(',');
+  ].join(',');  // page_impressions_unique deprecated in Meta Graph API v21
 
   const insights = await getWithPageToken(
     `/${pageId}/insights?metric=${metrics}&period=month&since=${since}&until=${until}`,
@@ -87,7 +86,7 @@ async function pullMeta(pageId, client) {
   let reach = 0, engagements = 0, pageViews = 0;
   for (const m of insights.data || []) {
     const val = m.values?.[0]?.value || 0;
-    if (m.name === 'page_impressions_unique') reach = val;
+    if (m.name === 'page_views_total') reach = val;
     if (m.name === 'page_post_engagements')  engagements = val;
     if (m.name === 'page_views_total')        pageViews = val;
   }
@@ -143,14 +142,14 @@ async function pullMeta(pageId, client) {
     const key = cur.toLocaleString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
 
     const mInsights = await getWithPageToken(
-      `/${pageId}/insights?metric=page_impressions_unique,page_post_engagements&period=month&since=${monthStart}&until=${monthEnd}&limit=100`,
+      `/${pageId}/insights?metric=page_post_engagements,page_views_total&period=month&since=${monthStart}&until=${monthEnd}&limit=100`,
       pageToken
     );
 
     let mReach = null, mEng = null;
     for (const m of mInsights.data || []) {
       const lastVal = m.values && m.values.length ? m.values[m.values.length - 1].value : null;
-      if (m.name === 'page_impressions_unique') mReach = lastVal;
+      if (m.name === 'page_views_total') mReach = lastVal;
       if (m.name === 'page_post_engagements')  mEng   = lastVal;
     }
     monthlyOrganic.push({ month: key, reach: mReach, engagements: mEng });
