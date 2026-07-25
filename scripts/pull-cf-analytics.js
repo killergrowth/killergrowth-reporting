@@ -24,7 +24,7 @@ const CF_GRAPHQL = 'https://api.cloudflare.com/client/v4/graphql';
 async function pullCFAnalytics(zoneTag) {
   const token = process.env.CLOUDFLARE_API_TOKEN;
   if (!token) { console.log('  CF Analytics: SKIPPED (no CLOUDFLARE_API_TOKEN)'); return null; }
-  if (!zoneTag || zoneTag === 'FILL_IN') { console.log('  CF Analytics: SKIPPED (no zoneTag)'); return null; }
+  if (!zoneTag || zoneTag === 'FILL_IN' || zoneTag === 'FILL_IN_AT_GOLIVE') { console.log('  CF Analytics: SKIPPED (no zoneTag)'); return null; }
 
   try {
     const now = new Date();

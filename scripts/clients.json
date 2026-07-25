@@ -26,6 +26,7 @@
                   },
     "dons-heating":  {
                          "name":  "Don\u0027s Heating \u0026 Air",
+                         "package": "PKG003",
                          "lfPlaceId":  "ChIJ2Q46PnGzu4cRridw0AfTeV8",
                          "ga4PropertyId":  "418872471",
                          "gscSiteUrl":  "https://www.donsheatingandair.com/",
@@ -71,6 +72,7 @@
                 },
     "walnut-valley":  {
                           "name":  "Walnut Valley Meat Market",
+                          "package": "PKG001",
                           "ga4PropertyId":  "FILL_IN",
                           "gscSiteUrl":  "FILL_IN",
                           "gbpAccountId":  "FILL_IN",
@@ -158,6 +160,7 @@
     },
     "alex-miller": {
         "name": "Alex Miller Auctioneer",
+        "package": "PKG001",
         "ga4PropertyId": "FILL_IN",
         "gscSiteUrl": "FILL_IN",
         "gbpAccountId": "FILL_IN",
@@ -171,6 +174,7 @@
     },
     "cogans-woodshop": {
         "name": "Cogan's Woodshop",
+        "package": "PKG001",
         "ga4PropertyId": "FILL_IN",
         "gscSiteUrl": "FILL_IN",
         "gbpAccountId": "FILL_IN",
@@ -184,6 +188,7 @@
     },
     "iserve-facilities": {
         "name": "IServe Facilities",
+        "package": "PKG001",
         "ga4PropertyId": "FILL_IN",
         "gscSiteUrl": "FILL_IN",
         "gbpAccountId": "FILL_IN",
@@ -209,6 +214,9 @@
     },
     "prairie-pots": {
         "name": "Prairie Pots",
+        "package": "PKG001",
+        "targetDomain": "prairie-pots.com",
+        "note": "Site in build — domain not live yet. Add cfZoneTag once domain is in CF at go-live.",
         "ga4PropertyId": "FILL_IN",
         "gscSiteUrl": "FILL_IN",
         "gbpAccountId": "FILL_IN",
@@ -217,10 +225,14 @@
         "metaAdAccountId": "FILL_IN",
         "googleAdsCustomerId": "FILL_IN",
         "ghlLocationId": "FILL_IN",
-        "dataForSeoTarget": "FILL_IN"
+        "dataForSeoTarget": "prairie-pots.com",
+        "cfZoneTag": "FILL_IN_AT_GOLIVE"
     },
     "demo-sales": {
         "name": "Demo Sales",
+        "package": "PKG001",
+        "targetDomain": "demosalesinc.com",
+        "note": "Site in build — domain not live yet. Add cfZoneTag once domain is in CF at go-live.",
         "ga4PropertyId": "FILL_IN",
         "gscSiteUrl": "FILL_IN",
         "gbpAccountId": "FILL_IN",
@@ -229,10 +241,14 @@
         "metaAdAccountId": "FILL_IN",
         "googleAdsCustomerId": "FILL_IN",
         "ghlLocationId": "FILL_IN",
-        "dataForSeoTarget": "demosalesinc.com"
+        "dataForSeoTarget": "demosalesinc.com",
+        "cfZoneTag": "FILL_IN_AT_GOLIVE"
     },
     "diamond-springs": {
         "name": "Diamond Springs Ranch",
+        "package": "PKG001",
+        "targetDomain": "diamond-springs-ranch.com",
+        "note": "Site in build — domain not live yet. Add cfZoneTag once domain is in CF at go-live.",
         "ga4PropertyId": "FILL_IN",
         "gscSiteUrl": "FILL_IN",
         "gbpAccountId": "FILL_IN",
@@ -241,6 +257,7 @@
         "metaAdAccountId": "FILL_IN",
         "googleAdsCustomerId": "FILL_IN",
         "ghlLocationId": "FILL_IN",
-        "dataForSeoTarget": "FILL_IN"
+        "dataForSeoTarget": "diamond-springs-ranch.com",
+        "cfZoneTag": "FILL_IN_AT_GOLIVE"
     }
 }
