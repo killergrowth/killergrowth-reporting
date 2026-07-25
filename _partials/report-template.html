@@ -279,6 +279,10 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
   /* Footer */
   .print-footer{display:flex!important;position:fixed;bottom:0;left:0;right:0;padding:6px 0;border-top:1px solid #222;background:#0a0a0a;font-size:10px;color:#555;justify-content:space-between}
 }
+/* CF Analytics grid */
+.cf-grid{display:grid;grid-template-columns:2fr 1fr;gap:14px;min-width:0}
+.cf-grid>*{min-width:0}
+@media(max-width:900px){.cf-grid{grid-template-columns:1fr}}
 /* Work Log */
 .wl-row{display:flex;gap:12px;padding:5px 0;border-bottom:1px solid var(--border);align-items:baseline;}
 .wl-row:last-child{border-bottom:none;}
@@ -548,10 +552,10 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:inherit;b
         <!-- CF WEB ANALYTICS -->
         <div id="cf-analytics-wrap" style="display:none;margin-bottom:20px">
           <div class="krow mb14" id="cf-krow"></div>
-          <div class="g21">
+          <div class="cf-grid">
             <div class="card">
               <div class="clbl">Daily Page Views &mdash; Last 30 Days</div>
-              <div style="position:relative;height:200px"><canvas id="c-cf-pv"></canvas></div>
+              <div style="position:relative;height:200px;min-width:0"><canvas id="c-cf-pv" style="max-width:100%"></canvas></div>
             </div>
             <div class="card">
               <div class="clbl">Monthly Traffic History</div>
