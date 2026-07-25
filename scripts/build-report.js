@@ -34,6 +34,7 @@ const { pullPageSpeed }     = require('./pull-pagespeed');
 const { pullLocalFalcon }     = require('./pull-localfalcon');
 const { pullBrandPhrases }    = require('./pull-brand-phrases');
 const { pullMonday }          = require('./pull-monday');
+const { pullCFAnalytics }     = require('./pull-cf-analytics');
 
 const ROOT    = path.join(__dirname, '..');
 const clients = JSON.parse(fs.readFileSync(path.join(__dirname, 'clients.json'), 'utf8'));
@@ -62,7 +63,7 @@ async function buildReport(slug) {
   const lfApiKey = process.env.LF_API_KEY;
 
   // Pull all sources in parallel
-  const [ga4, gsc, gbp, gbp2, gbp3, meta, ghl, dfs, gads, psi, lf, bp] = await Promise.allSettled([
+  const [ga4, gsc, gbp, gbp2, gbp3, meta, ghl, dfs, gads, psi, lf, bp, cfa] = await Promise.allSettled([
     pullGA4(client.ga4PropertyId),
     pullGSC(client.gscSiteUrl),
     pullGBP(client.gbpAccountId, client.gbpLocationId),
@@ -74,7 +75,8 @@ async function buildReport(slug) {
     pullGoogleAds(client.googleAdsCustomerId, slug),
     pullPageSpeed(client.dataForSeoTarget),
     (lfApiKey && client.lfPlaceId) ? pullLocalFalcon(client.lfPlaceId, lfApiKey) : Promise.resolve(null),
-    (lfApiKey && client.lfPlaceId) ? pullBrandPhrases({ placeId: client.lfPlaceId, brandName: client.name, lfApiKey }) : Promise.resolve(null)
+    (lfApiKey && client.lfPlaceId) ? pullBrandPhrases({ placeId: client.lfPlaceId, brandName: client.name, lfApiKey }) : Promise.resolve(null),
+    client.cfZoneTag ? pullCFAnalytics(client.cfZoneTag) : Promise.resolve(null)
   ]);
 
   const v = r => r.status === 'fulfilled' ? r.value : null;
@@ -208,6 +210,13 @@ async function buildReport(slug) {
       sessionsOverTime: v(ga4)?.sessionsOverTime ?? base.website?.sessionsOverTime ?? [],
       aiReferral: v(ga4)?.aiReferral ?? base.website?.aiReferral ?? { total: 0, platforms: [], weeklyTrend: [] },
       vitals: base.website?.vitals ?? { lcp: null, cls: null, inp: null, pagespeedMobile: null },
+      // CF Zone Analytics (used when GA4 is not configured)
+      cfPageViews:      v(cfa)?.pageViewsThisMonth      ?? base.website?.cfPageViews      ?? null,
+      cfUniques:        v(cfa)?.uniqueVisitorsThisMonth  ?? base.website?.cfUniques        ?? null,
+      cfPageViewsDelta: v(cfa)?.pageViewsDelta           ?? base.website?.cfPageViewsDelta ?? null,
+      cfUniquesDelta:   v(cfa)?.uniquesDelta             ?? base.website?.cfUniquesDelta   ?? null,
+      cfDailyPageViews: v(cfa)?.dailyPageViews           ?? base.website?.cfDailyPageViews ?? [],
+      cfMonthlyHistory: v(cfa)?.monthlyHistory           ?? base.website?.cfMonthlyHistory ?? [],
       psiScores: v(psi) ?? base.website?.psiScores ?? { mobile: null, desktop: null },
       psiHistory: (() => {
         const existing = base.website?.psiHistory ?? [];
@@ -254,6 +263,7 @@ async function buildReport(slug) {
   console.log(`  PageSpeed:   ${v(psi)  ? 'OK' : 'SKIPPED/ERROR'}`);
   console.log(`  LocalFalcon: ${v(lf)   ? 'OK' : 'SKIPPED/ERROR'}`);
   console.log(`  BrandPhrases:${v(bp)   ? 'OK' : 'SKIPPED/ERROR'}`);
+  console.log(`  CF Analytics:${v(cfa)  ? 'OK' : 'SKIPPED/ERROR'}`);
   if (lf.status === 'rejected') console.log('  LF error:', lf.reason?.message);
   if (bp.status === 'rejected') console.log('  BP error:', bp.reason?.message);
 
