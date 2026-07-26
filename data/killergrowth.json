@@ -3,7 +3,7 @@
   "slug": "killergrowth",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-24T09:13:54.819Z",
+  "generatedAt": "2026-07-26T09:07:03.156Z",
   "overview": {
     "sessions": 23,
     "sessionsDelta": 0,
@@ -189,7 +189,7 @@
         "platform": "Facebook",
         "reach": 1217,
         "engagements": 1232,
-        "followers": 552
+        "followers": 553
       }
     ]
   },
@@ -237,15 +237,21 @@
       "inp": null,
       "pagespeedMobile": null
     },
+    "cfPageViews": null,
+    "cfUniques": null,
+    "cfPageViewsDelta": null,
+    "cfUniquesDelta": null,
+    "cfDailyPageViews": [],
+    "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 66,
+        "performance": 69,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 77,
+        "performance": 73,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
@@ -1292,6 +1298,21 @@
         },
         "desktop": {
           "performance": 77,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-26",
+        "mobile": {
+          "performance": 69,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 73,
           "accessibility": 91,
           "bestPractices": 100,
           "seo": 92

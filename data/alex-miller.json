@@ -3,7 +3,7 @@
   "slug": "alex-miller",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-25T19:54:44.792Z",
+  "generatedAt": "2026-07-26T09:18:08.250Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -254,10 +254,36 @@
       }
     ],
     "psiScores": {
-      "mobile": null,
-      "desktop": null
+      "mobile": {
+        "performance": 69,
+        "accessibility": 79,
+        "bestPractices": 96,
+        "seo": 100
+      },
+      "desktop": {
+        "performance": 98,
+        "accessibility": 79,
+        "bestPractices": 96,
+        "seo": 100
+      }
     },
-    "psiHistory": []
+    "psiHistory": [
+      {
+        "date": "2026-07-26",
+        "mobile": {
+          "performance": 69,
+          "accessibility": 79,
+          "bestPractices": 96,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 98,
+          "accessibility": 79,
+          "bestPractices": 96,
+          "seo": 100
+        }
+      }
+    ]
   },
   "workLog": [
     {

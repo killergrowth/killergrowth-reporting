@@ -3,7 +3,7 @@
   "slug": "iserve-facilities",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-25T19:55:00.368Z",
+  "generatedAt": "2026-07-26T09:19:44.065Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -254,10 +254,26 @@
       }
     ],
     "psiScores": {
-      "mobile": null,
+      "mobile": {
+        "performance": 70,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      },
       "desktop": null
     },
-    "psiHistory": []
+    "psiHistory": [
+      {
+        "date": "2026-07-26",
+        "mobile": {
+          "performance": 70,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": null
+      }
+    ]
   },
   "workLog": [
     {

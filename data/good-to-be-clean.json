@@ -3,7 +3,7 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-24T09:16:54.075Z",
+  "generatedAt": "2026-07-26T09:12:38.692Z",
   "overview": {
     "sessions": 633,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 18,
     "rankingsDelta": null,
-    "gbpViews": 784,
+    "gbpViews": 800,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -418,7 +418,7 @@
       },
       "gbpCalls": 12,
       "gbpWebsiteClicks": 24,
-      "gbpDirections": 231
+      "gbpDirections": 239
     }
   },
   "ads": {
@@ -477,10 +477,10 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 784,
+    "totalViews": 800,
     "calls": 12,
     "callsDelta": null,
-    "directions": 231,
+    "directions": 239,
     "websiteClicks": 24,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -1676,27 +1676,41 @@
       },
       {
         "date": "2026-07-21",
-        "views": 3,
+        "views": 7,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-22",
-        "views": 0,
+        "views": 11,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-23",
+        "views": 1,
+        "calls": 0,
+        "directions": 8,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-24",
         "views": 0,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
-        "date": "2026-07-24",
+        "date": "2026-07-25",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-26",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1908,19 +1922,20 @@
       "inp": null,
       "pagespeedMobile": null
     },
+    "cfPageViews": null,
+    "cfUniques": null,
+    "cfPageViewsDelta": null,
+    "cfUniquesDelta": null,
+    "cfDailyPageViews": [],
+    "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 47,
+        "performance": 66,
         "accessibility": 92,
         "bestPractices": 100,
         "seo": 100
       },
-      "desktop": {
-        "performance": 91,
-        "accessibility": 92,
-        "bestPractices": 96,
-        "seo": 100
-      }
+      "desktop": null
     },
     "psiHistory": [
       {
@@ -2872,6 +2887,16 @@
           "bestPractices": 96,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-07-26",
+        "mobile": {
+          "performance": 66,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": null
       }
     ]
   },

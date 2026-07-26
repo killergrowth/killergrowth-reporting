@@ -3,7 +3,7 @@
   "slug": "timnath",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-24T09:17:25.935Z",
+  "generatedAt": "2026-07-26T09:15:32.980Z",
   "overview": {
     "sessions": 190,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 0,
     "rankingsDelta": null,
-    "gbpViews": 682,
+    "gbpViews": 702,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -134,7 +134,7 @@
       },
       "gbpCalls": 4,
       "gbpWebsiteClicks": 15,
-      "gbpDirections": 233
+      "gbpDirections": 241
     }
   },
   "ads": {
@@ -234,10 +234,10 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 682,
+    "totalViews": 702,
     "calls": 4,
     "callsDelta": null,
-    "directions": 233,
+    "directions": 241,
     "websiteClicks": 15,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -1433,14 +1433,14 @@
       },
       {
         "date": "2026-07-21",
-        "views": 3,
+        "views": 12,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-22",
-        "views": 0,
+        "views": 11,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1449,11 +1449,25 @@
         "date": "2026-07-23",
         "views": 0,
         "calls": 0,
-        "directions": 0,
+        "directions": 8,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-24",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-25",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-26",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1533,17 +1547,23 @@
       "inp": null,
       "pagespeedMobile": null
     },
+    "cfPageViews": null,
+    "cfUniques": null,
+    "cfPageViewsDelta": null,
+    "cfUniquesDelta": null,
+    "cfDailyPageViews": [],
+    "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 43,
+        "performance": 65,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 75,
+        "performance": 74,
         "accessibility": 90,
-        "bestPractices": 100,
+        "bestPractices": 96,
         "seo": 92
       }
     },
@@ -1895,6 +1915,21 @@
           "performance": 75,
           "accessibility": 90,
           "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-26",
+        "mobile": {
+          "performance": 65,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 74,
+          "accessibility": 90,
+          "bestPractices": 96,
           "seo": 92
         }
       }
