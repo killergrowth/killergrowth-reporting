@@ -35,6 +35,7 @@ const { pullLocalFalcon }     = require('./pull-localfalcon');
 const { pullBrandPhrases }    = require('./pull-brand-phrases');
 const { pullMonday }          = require('./pull-monday');
 const { pullCFAnalytics }     = require('./pull-cf-analytics');
+const { pullFathom }          = require('./pull-fathom');
 
 const ROOT    = path.join(__dirname, '..');
 const clients = JSON.parse(fs.readFileSync(path.join(__dirname, 'clients.json'), 'utf8'));
@@ -63,7 +64,7 @@ async function buildReport(slug) {
   const lfApiKey = process.env.LF_API_KEY;
 
   // Pull all sources in parallel
-  const [ga4, gsc, gbp, gbp2, gbp3, meta, ghl, dfs, gads, psi, lf, bp, cfa] = await Promise.allSettled([
+  const [ga4, gsc, gbp, gbp2, gbp3, meta, ghl, dfs, gads, psi, lf, bp, cfa, fathom] = await Promise.allSettled([
     pullGA4(client.ga4PropertyId),
     pullGSC(client.gscSiteUrl),
     pullGBP(client.gbpAccountId, client.gbpLocationId),
@@ -76,7 +77,8 @@ async function buildReport(slug) {
     pullPageSpeed(client.dataForSeoTarget),
     (lfApiKey && client.lfPlaceId) ? pullLocalFalcon(client.lfPlaceId, lfApiKey) : Promise.resolve(null),
     (lfApiKey && client.lfPlaceId) ? pullBrandPhrases({ placeId: client.lfPlaceId, brandName: client.name, lfApiKey }) : Promise.resolve(null),
-    client.cfZoneTag ? pullCFAnalytics(client.cfZoneTag) : Promise.resolve(null)
+    client.cfZoneTag ? pullCFAnalytics(client.cfZoneTag) : Promise.resolve(null),
+    client.fathomSiteId ? pullFathom(client.fathomSiteId) : Promise.resolve(null)
   ]);
 
   const v = r => r.status === 'fulfilled' ? r.value : null;
@@ -210,7 +212,22 @@ async function buildReport(slug) {
       sessionsOverTime: v(ga4)?.sessionsOverTime ?? base.website?.sessionsOverTime ?? [],
       aiReferral: v(ga4)?.aiReferral ?? base.website?.aiReferral ?? { total: 0, platforms: [], weeklyTrend: [] },
       vitals: base.website?.vitals ?? { lcp: null, cls: null, inp: null, pagespeedMobile: null },
-      // CF Zone Analytics (used when GA4 is not configured)
+      // Fathom Analytics (PKG001/PKG002 — preferred over CF WA when fathomSiteId is set)
+      analyticsSource:  v(fathom)?.analyticsSource      ?? (v(cfa) ? 'cloudflare' : null) ?? base.website?.analyticsSource ?? null,
+      fathomSiteId:     v(fathom)?.fathomSiteId         ?? base.website?.fathomSiteId      ?? null,
+      uniques:          v(fathom)?.uniques               ?? base.website?.uniques           ?? null,
+      visits:           v(fathom)?.visits                ?? base.website?.visits            ?? null,
+      pageviews:        v(fathom)?.pageviews             ?? base.website?.pageviews         ?? null,
+      avgDuration:      v(fathom)?.avgDuration           ?? base.website?.avgDuration       ?? null,
+      bounceRate:       v(fathom)?.bounceRate            ?? base.website?.bounceRate        ?? null,
+      uniquesDelta:     v(fathom)?.uniquesDelta          ?? base.website?.uniquesDelta      ?? null,
+      visitsDelta:      v(fathom)?.visitsDelta           ?? base.website?.visitsDelta       ?? null,
+      pageviewsDelta:   v(fathom)?.pageviewsDelta        ?? base.website?.pageviewsDelta    ?? null,
+      dailyTimeseries:  v(fathom)?.dailyTimeseries       ?? base.website?.dailyTimeseries   ?? [],
+      monthlyHistory:   v(fathom)?.monthlyHistory        ?? base.website?.monthlyHistory    ?? [],
+      topPages:         v(fathom)?.topPages              ?? base.website?.topPages          ?? [],
+      referrers:        v(fathom)?.referrers             ?? base.website?.referrers         ?? [],
+      // CF Zone Analytics (legacy — used when fathomSiteId is NOT set)
       cfPageViews:      v(cfa)?.pageViewsThisMonth      ?? base.website?.cfPageViews      ?? null,
       cfUniques:        v(cfa)?.uniqueVisitorsThisMonth  ?? base.website?.cfUniques        ?? null,
       cfPageViewsDelta: v(cfa)?.pageViewsDelta           ?? base.website?.cfPageViewsDelta ?? null,
