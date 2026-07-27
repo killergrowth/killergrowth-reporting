@@ -552,7 +552,32 @@ canvas{max-width:100%!important;width:100%!important}
           </div>
         </div>
 
-        <!-- CF WEB ANALYTICS -->
+        <!-- FATHOM ANALYTICS (PKG001/PKG002 when fathomSiteId is set) -->
+        <div id="fathom-analytics-wrap" style="display:none;margin-bottom:20px">
+          <div class="krow mb14" id="fathom-krow"></div>
+          <div class="cf-grid">
+            <div class="card">
+              <div class="clbl">Daily Visitors &mdash; Last 30 Days</div>
+              <div style="position:relative;height:200px;min-width:0"><canvas id="c-fathom-daily" style="max-width:100%"></canvas></div>
+            </div>
+            <div class="card">
+              <div class="clbl">Monthly Traffic History</div>
+              <div id="fathom-monthly-tbl"></div>
+            </div>
+          </div>
+          <div class="cf-grid" style="margin-top:16px">
+            <div class="card">
+              <div class="clbl">Top Pages</div>
+              <div id="fathom-top-pages"></div>
+            </div>
+            <div class="card">
+              <div class="clbl">Traffic Sources</div>
+              <div id="fathom-referrers"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CF WEB ANALYTICS (legacy — shown when fathomSiteId is NOT set) -->
         <div id="cf-analytics-wrap" style="display:none;margin-bottom:20px">
           <div class="krow mb14" id="cf-krow"></div>
           <div class="cf-grid">
@@ -1460,8 +1485,100 @@ function renderWebsite(website,seo){
   }).join('');}
 else{el('web-ch').innerHTML='<div class="du"><div class="du-t">Data updating.</div></div>';}
 PSI_DATA=website.psiScores||{};renderPSI('mobile');
-  renderCFAnalytics(website);
+  if(website.analyticsSource==='fathom'){renderFathomAnalytics(website);}else{renderCFAnalytics(website);}
 }
+function renderFathomAnalytics(website) {
+  if (!website || website.analyticsSource !== 'fathom') return;
+  var wrap = el('fathom-analytics-wrap');
+  if (!wrap) return;
+  wrap.style.display = '';
+
+  // KPI cards
+  var krow = el('fathom-krow');
+  if (krow) {
+    var dur = website.avgDuration != null ? (website.avgDuration >= 60 ? Math.floor(website.avgDuration/60)+'m '+Math.round(website.avgDuration%60)+'s' : website.avgDuration+'s') : null;
+    var br = website.bounceRate != null ? parseFloat(website.bounceRate).toFixed(1)+'%' : null;
+    krow.innerHTML = [
+      kc('Unique Visitors', fmt(website.uniques), website.uniquesDelta, null, 'Deduplicated unique visitors per day. Source: Fathom Analytics.'),
+      kc('Sessions', fmt(website.visits), website.visitsDelta, null, 'Total sessions (visits) this month.'),
+      kc('Page Views', fmt(website.pageviews), website.pageviewsDelta, null, 'Total page views this month.'),
+      dur ? kc('Avg Duration', dur, null, null, 'Average time on site per session.') : '',
+      br ? kc('Bounce Rate', br, null, null, 'Percentage of single-page sessions.') : ''
+    ].join('');
+  }
+
+  // Daily timeseries chart
+  var daily = website.dailyTimeseries || [];
+  var fathomCanv = el('c-fathom-daily');
+  if (fathomCanv && daily.length) {
+    dc('fathom-daily');
+    CHARTS['fathom-daily'] = new Chart(fathomCanv.getContext('2d'), {
+      type: 'line',
+      data: {
+        labels: daily.map(function(d) {
+          var dt = new Date(d.date + 'T12:00:00Z');
+          return dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        }),
+        datasets: [
+          { label: 'Unique Visitors', data: daily.map(function(d){ return d.uniques; }), borderColor: '#c8f000', backgroundColor: 'rgba(200,240,0,0.08)', fill: true, tension: 0.4, pointRadius: 2, pointBackgroundColor: '#c8f000' },
+          { label: 'Sessions', data: daily.map(function(d){ return d.visits; }), borderColor: '#3b82f6', backgroundColor: 'rgba(59,130,246,0.05)', fill: true, tension: 0.4, pointRadius: 2, pointBackgroundColor: '#3b82f6' }
+        ]
+      },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: true, labels: { color: '#888', font: { size: 11 }, boxWidth: 10, padding: 12 } }, tooltip: getTT() }, scales: { x: { grid: { color: '#1e1e1e' }, ticks: { color: '#555', font: { size: 10 }, maxTicksLimit: 10 }, border: { display: false } }, y: { grid: { color: '#1e1e1e' }, ticks: { color: '#555', font: { size: 11 } }, border: { display: false } } } }
+    });
+  }
+
+  // Monthly history table
+  var monthly = website.monthlyHistory || [];
+  var tblWrap = el('fathom-monthly-tbl');
+  if (tblWrap && monthly.length) {
+    tblWrap.innerHTML = '<table class="tbl"><thead><tr><th>Month</th><th class="r">Uniques</th><th class="r">Sessions</th><th class="r">Page Views</th></tr></thead><tbody>' +
+      monthly.map(function(m) {
+        return '<tr><td class="dim">' + m.month + '</td><td class="r">' + fmt(m.uniques) + '</td><td class="r">' + fmt(m.visits) + '</td><td class="r">' + fmt(m.pageviews) + '</td></tr>';
+      }).join('') +
+      '</tbody></table>' +
+      '<div style="font-size:10px;color:#333;margin-top:10px">Source: Fathom Analytics</div>';
+  }
+
+  // Top pages
+  var topPages = website.topPages || [];
+  var pagesWrap = el('fathom-top-pages');
+  if (pagesWrap) {
+    if (topPages.length) {
+      var maxPV = Math.max.apply(null, topPages.map(function(p){ return p.pageviews; })) || 1;
+      pagesWrap.innerHTML = topPages.map(function(p) {
+        var pct = ((p.pageviews / maxPV) * 100).toFixed(0);
+        return '<div style="margin-bottom:12px">' +
+          '<div style="display:flex;justify-content:space-between;margin-bottom:5px">' +
+          '<span style="color:var(--sub);font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:70%">' + (p.path || '/') + '</span>' +
+          '<span style="color:var(--w);font-size:12px;font-weight:700">' + fmt(p.pageviews) + '</span></div>' +
+          '<div style="background:#1e1e1e;border-radius:3px;height:4px"><div style="background:var(--lime);border-radius:3px;height:4px;width:' + pct + '%"></div></div></div>';
+      }).join('');
+    } else {
+      pagesWrap.innerHTML = '<div class="du"><div class="du-t">Data updating.</div></div>';
+    }
+  }
+
+  // Referrer sources
+  var referrers = website.referrers || [];
+  var refWrap = el('fathom-referrers');
+  if (refWrap) {
+    if (referrers.length) {
+      var maxRef = Math.max.apply(null, referrers.map(function(r){ return r.visits; })) || 1;
+      refWrap.innerHTML = referrers.map(function(r) {
+        var pct = ((r.visits / maxRef) * 100).toFixed(0);
+        return '<div style="margin-bottom:12px">' +
+          '<div style="display:flex;justify-content:space-between;margin-bottom:5px">' +
+          '<span style="color:var(--sub);font-size:12px">' + (r.source || 'Direct') + '</span>' +
+          '<span style="color:var(--w);font-size:12px;font-weight:700">' + fmt(r.visits) + '</span></div>' +
+          '<div style="background:#1e1e1e;border-radius:3px;height:4px"><div style="background:#3b82f6;border-radius:3px;height:4px;width:' + pct + '%"></div></div></div>';
+      }).join('');
+    } else {
+      refWrap.innerHTML = '<div class="du"><div class="du-t">Data updating.</div></div>';
+    }
+  }
+}
+
 function renderCFAnalytics(website) {
   if (!website || website.cfPageViews == null) return;
   var wrap = el('cf-analytics-wrap');
