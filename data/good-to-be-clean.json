@@ -3,7 +3,7 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-27T10:34:49.343Z",
+  "generatedAt": "2026-07-27T23:42:35.664Z",
   "overview": {
     "sessions": 633,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 18,
     "rankingsDelta": null,
-    "gbpViews": 804,
+    "gbpViews": 806,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -477,7 +477,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 804,
+    "totalViews": 806,
     "calls": 12,
     "callsDelta": null,
     "directions": 239,
@@ -1697,7 +1697,7 @@
       },
       {
         "date": "2026-07-24",
-        "views": 1,
+        "views": 3,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1929,6 +1929,20 @@
       "inp": null,
       "pagespeedMobile": null
     },
+    "analyticsSource": null,
+    "fathomSiteId": null,
+    "uniques": null,
+    "visits": null,
+    "pageviews": null,
+    "avgDuration": null,
+    "bounceRate": null,
+    "uniquesDelta": null,
+    "visitsDelta": null,
+    "pageviewsDelta": null,
+    "dailyTimeseries": [],
+    "monthlyHistory": [],
+    "topPages": [],
+    "referrers": [],
     "cfPageViews": null,
     "cfUniques": null,
     "cfPageViewsDelta": null,
@@ -1937,17 +1951,12 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 49,
+        "performance": 59,
         "accessibility": 92,
         "bestPractices": 100,
         "seo": 100
       },
-      "desktop": {
-        "performance": 89,
-        "accessibility": 92,
-        "bestPractices": 100,
-        "seo": 100
-      }
+      "desktop": null
     },
     "psiHistory": [
       {
@@ -2913,17 +2922,12 @@
       {
         "date": "2026-07-27",
         "mobile": {
-          "performance": 49,
+          "performance": 59,
           "accessibility": 92,
           "bestPractices": 100,
           "seo": 100
         },
-        "desktop": {
-          "performance": 89,
-          "accessibility": 92,
-          "bestPractices": 100,
-          "seo": 100
-        }
+        "desktop": null
       }
     ]
   },
