@@ -444,7 +444,7 @@ canvas{max-width:100%!important;width:100%!important}
           <div id="geo-hero" class="geo-hero"></div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px">
             <div class="geo-stat" style="padding:0">
-              <div style="padding:16px 20px 0;display:flex;align-items:center;gap:6px"><span class="clbl">AI Platforms</span><span class="kg-info-tip" data-tip="Share of AI Voice (SAIV) ? how often this business is mentioned when AI platforms like ChatGPT, Gemini, and Grok answer relevant local searches. Higher % = stronger AI visibility.">&#9432;</span></div>
+              <div style="padding:16px 20px 0;display:flex;align-items:center;gap:6px"><span class="clbl">AI Platforms</span><span class="kg-info-tip" data-tip="Share of AI Voice (SAIV) ? how often this business is mentioned when AI platforms like ChatGPT and Gemini answer relevant local searches. Higher % = stronger AI visibility.">&#9432;</span></div>
               <div id="geo-ai-platforms" style="padding:0 20px 10px"></div>
             </div>
             <div class="geo-stat" style="padding:0">
@@ -868,7 +868,9 @@ function renderOverview(data,mods){
     var callBreakdown='<div style="margin-top:10px;border-top:1px solid var(--border);padding-top:8px;display:flex;flex-direction:column;gap:5px">'+callRows.map(function(r){return '<div style="display:flex;justify-content:space-between;align-items:center;font-size:12px"><span style="display:flex;align-items:center;gap:5px;color:var(--sub)"><span style="width:7px;height:7px;border-radius:50%;background:'+r.clr+';display:inline-block"></span>'+r.src+'</span><span style="font-weight:600;color:'+(r.val>0?'var(--w)':'var(--muted)')+'">'+(r.val!=null?r.val:'\u2014')+'</span></div>';}).join('')+'</div>';
     var ih='<span class="kinfo" data-tip="Total inbound phone calls from your website and GBP listing.">i</span>';
     cards.push('<div class="kc"><div class="klbl">Phone Calls'+ih+'</div><div class="kvr"><span class="kv">'+totalCalls+'</span></div>'+callBreakdown+'</div>');
-    cards.push(kc('Form Submissions',totalForms,null,null,'Completed contact or lead forms submitted through your website.'));
+    var formStarts=ls.formStarts||0;
+    var formSubHtml='<div class="kc"><div class="klbl">Form Submissions<span class="kinfo" data-tip="Completed contact or lead forms submitted through your website.">i</span></div><div class="kvr"><span class="kv">'+totalForms+'</span></div><div style="margin-top:10px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:7px 10px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:var(--sub);display:flex;align-items:center;gap:3px">Form Starts<span class="kinfo" data-tip="Times a visitor began filling out a form. Higher than submissions = drop-off before they hit submit.">i</span></span><span style="font-size:14px;font-weight:700;color:var(--w)">'+formStarts+'</span></div></div>';
+    cards.push(formSubHtml);
     cards.push(kc('Email Clicks',totalEmails,null,null,'Times a visitor clicked an email link on your website.'));
     if(totalDirs!=null)cards.push(kc('Direction Requests',fmt(totalDirs),null,null,'Times someone tapped Get Directions to your business on Google Maps.'));
   }
@@ -913,12 +915,13 @@ function renderGEO(lf){
   var platEl=el('geo-ai-platforms');
   if(platEl){
     var platLabels={chatgpt:'ChatGPT',gemini:'Gemini',aimode:'AI Mode',grok:'Grok'};
-    var platIcons={chatgpt:'??',gemini:'?',aimode:'??',grok:'?'};
+    var platColors={chatgpt:'#10a37f',gemini:'#4285f4',aimode:'#c8f000',grok:'#ff6b35'};
+    var platDots=function(k){return '<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:'+(platColors[k]||'#aaa')+';margin-right:6px;flex-shrink:0"></span>';};
     if(lf.aiPlatforms&&lf.aiPlatforms.length){
       platEl.innerHTML=lf.aiPlatforms.map(function(p){
         var strong=p.saiv>50;
         return '<div class="geo-plat-row">'
-          +'<span class="geo-plat-name">'+(platIcons[p.platform]||'??')+' '+(platLabels[p.platform]||p.platform)+'</span>'
+          +'<span class="geo-plat-name" style="display:flex;align-items:center">'+platDots(p.platform)+(platLabels[p.platform]||p.platform)+'</span>'
           +'<span class="geo-plat-val'+(strong?' strong':'')+'">'+p.saiv+'%</span>'
           +'</div>';
       }).join('');
