@@ -3,7 +3,7 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "June 2026",
-  "generatedAt": "2026-07-27T23:40:45.604Z",
+  "generatedAt": "2026-07-28T09:32:00.776Z",
   "overview": {
     "sessions": 50,
     "sessionsDelta": 0,
@@ -205,7 +205,7 @@
       },
       "gbpCalls": 14,
       "gbpWebsiteClicks": 87,
-      "gbpDirections": 202
+      "gbpDirections": 203
     }
   },
   "ads": {
@@ -267,7 +267,7 @@
     "totalViews": 2166,
     "calls": 14,
     "callsDelta": null,
-    "directions": 202,
+    "directions": 203,
     "websiteClicks": 87,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -1493,7 +1493,7 @@
         "date": "2026-07-25",
         "views": 0,
         "calls": 0,
-        "directions": 0,
+        "directions": 1,
         "websiteClicks": 0
       },
       {
@@ -1505,6 +1505,13 @@
       },
       {
         "date": "2026-07-27",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-28",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1728,15 +1735,15 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 9,
+        "performance": 48,
         "accessibility": 90,
         "bestPractices": 77,
         "seo": 92
       },
       "desktop": {
-        "performance": 65,
+        "performance": 59,
         "accessibility": 90,
-        "bestPractices": 77,
+        "bestPractices": 73,
         "seo": 92
       }
     },
@@ -2793,6 +2800,21 @@
           "performance": 65,
           "accessibility": 90,
           "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-28",
+        "mobile": {
+          "performance": 48,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 59,
+          "accessibility": 90,
+          "bestPractices": 73,
           "seo": 92
         }
       }

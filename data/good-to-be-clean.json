@@ -3,7 +3,7 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-27T23:42:35.664Z",
+  "generatedAt": "2026-07-28T09:33:18.268Z",
   "overview": {
     "sessions": 633,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 18,
     "rankingsDelta": null,
-    "gbpViews": 806,
+    "gbpViews": 807,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -418,7 +418,7 @@
       },
       "gbpCalls": 12,
       "gbpWebsiteClicks": 24,
-      "gbpDirections": 239
+      "gbpDirections": 241
     }
   },
   "ads": {
@@ -477,10 +477,10 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 806,
+    "totalViews": 807,
     "calls": 12,
     "callsDelta": null,
-    "directions": 239,
+    "directions": 241,
     "websiteClicks": 24,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -1704,9 +1704,9 @@
       },
       {
         "date": "2026-07-25",
-        "views": 0,
+        "views": 1,
         "calls": 0,
-        "directions": 0,
+        "directions": 2,
         "websiteClicks": 0
       },
       {
@@ -1718,6 +1718,13 @@
       },
       {
         "date": "2026-07-27",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-28",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1929,20 +1936,57 @@
       "inp": null,
       "pagespeedMobile": null
     },
-    "analyticsSource": null,
-    "fathomSiteId": null,
-    "uniques": null,
-    "visits": null,
-    "pageviews": null,
-    "avgDuration": null,
-    "bounceRate": null,
+    "analyticsSource": "fathom",
+    "fathomSiteId": "MTRAPVNX",
+    "uniques": 8,
+    "visits": 8,
+    "pageviews": 9,
+    "avgDuration": 34,
+    "bounceRate": 87.5,
     "uniquesDelta": null,
     "visitsDelta": null,
     "pageviewsDelta": null,
-    "dailyTimeseries": [],
-    "monthlyHistory": [],
-    "topPages": [],
-    "referrers": [],
+    "dailyTimeseries": [
+      {
+        "date": "2026-07-28",
+        "visits": 8,
+        "uniques": 8,
+        "pageviews": 9
+      }
+    ],
+    "monthlyHistory": [
+      {
+        "month": "Jul 2026",
+        "date": "2026-07",
+        "visits": 8,
+        "uniques": 8,
+        "pageviews": 9
+      }
+    ],
+    "topPages": [
+      {
+        "path": "/",
+        "pageviews": 5,
+        "uniques": 4
+      },
+      {
+        "path": "/service/water-damage-restoration/",
+        "pageviews": 4,
+        "uniques": 4
+      }
+    ],
+    "referrers": [
+      {
+        "source": "Paid/campaign",
+        "visits": 6,
+        "uniques": 6
+      },
+      {
+        "source": "Direct",
+        "visits": 2,
+        "uniques": 2
+      }
+    ],
     "cfPageViews": null,
     "cfUniques": null,
     "cfPageViewsDelta": null,
@@ -1950,12 +1994,7 @@
     "cfDailyPageViews": [],
     "cfMonthlyHistory": [],
     "psiScores": {
-      "mobile": {
-        "performance": 59,
-        "accessibility": 92,
-        "bestPractices": 100,
-        "seo": 100
-      },
+      "mobile": null,
       "desktop": null
     },
     "psiHistory": [
@@ -2927,6 +2966,11 @@
           "bestPractices": 100,
           "seo": 100
         },
+        "desktop": null
+      },
+      {
+        "date": "2026-07-28",
+        "mobile": null,
         "desktop": null
       }
     ]
