@@ -3,7 +3,7 @@
   "slug": "walnut-valley",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-27T23:43:43.148Z",
+  "generatedAt": "2026-07-28T09:37:04.268Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -143,53 +143,79 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "SWIWEOSC",
-    "uniques": 8,
-    "visits": 8,
-    "pageviews": 9,
-    "avgDuration": 49,
-    "bounceRate": 87.5,
+    "uniques": 192,
+    "visits": 192,
+    "pageviews": 209,
+    "avgDuration": 43,
+    "bounceRate": 93.229166666667,
     "uniquesDelta": null,
     "visitsDelta": null,
     "pageviewsDelta": null,
     "dailyTimeseries": [
       {
+        "date": "2026-07-28",
+        "visits": 167,
+        "uniques": 167,
+        "pageviews": 181
+      },
+      {
         "date": "2026-07-27",
-        "visits": 9,
-        "uniques": 9,
-        "pageviews": 10
+        "visits": 25,
+        "uniques": 25,
+        "pageviews": 28
       }
     ],
     "monthlyHistory": [
       {
         "month": "Jul 2026",
         "date": "2026-07",
-        "visits": 9,
-        "uniques": 9,
-        "pageviews": 10
+        "visits": 192,
+        "uniques": 192,
+        "pageviews": 209
       }
     ],
     "topPages": [
       {
         "path": "/best-ground-beef",
-        "pageviews": 8,
-        "uniques": 7
+        "pageviews": 138,
+        "uniques": 129
       },
       {
         "path": "/",
-        "pageviews": 2,
-        "uniques": 2
+        "pageviews": 64,
+        "uniques": 57
+      },
+      {
+        "path": "/Home",
+        "pageviews": 6,
+        "uniques": 5
+      },
+      {
+        "path": "/bundles",
+        "pageviews": 1,
+        "uniques": 1
       }
     ],
     "referrers": [
       {
         "source": "Paid/campaign",
-        "visits": 8,
-        "uniques": 8
+        "visits": 163,
+        "uniques": 163
+      },
+      {
+        "source": "Direct",
+        "visits": 12,
+        "uniques": 12
+      },
+      {
+        "source": "Social",
+        "visits": 9,
+        "uniques": 9
       },
       {
         "source": "Organic",
-        "visits": 1,
-        "uniques": 1
+        "visits": 8,
+        "uniques": 8
       }
     ],
     "cfPageViews": 58255,
@@ -371,18 +397,8 @@
       }
     ],
     "psiScores": {
-      "mobile": {
-        "performance": 70,
-        "accessibility": 72,
-        "bestPractices": 100,
-        "seo": 100
-      },
-      "desktop": {
-        "performance": 46,
-        "accessibility": 80,
-        "bestPractices": 100,
-        "seo": 100
-      }
+      "mobile": null,
+      "desktop": null
     },
     "psiHistory": [
       {
@@ -564,6 +580,11 @@
           "bestPractices": 100,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-07-28",
+        "mobile": null,
+        "desktop": null
       }
     ]
   },

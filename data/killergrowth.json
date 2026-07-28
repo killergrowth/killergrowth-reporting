@@ -3,7 +3,7 @@
   "slug": "killergrowth",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-27T23:40:02.050Z",
+  "generatedAt": "2026-07-28T09:30:21.039Z",
   "overview": {
     "sessions": 23,
     "sessionsDelta": 0,
@@ -237,20 +237,47 @@
       "inp": null,
       "pagespeedMobile": null
     },
-    "analyticsSource": null,
-    "fathomSiteId": null,
-    "uniques": null,
-    "visits": null,
-    "pageviews": null,
-    "avgDuration": null,
-    "bounceRate": null,
+    "analyticsSource": "fathom",
+    "fathomSiteId": "NNTNPDOW",
+    "uniques": 1,
+    "visits": 1,
+    "pageviews": 1,
+    "avgDuration": 9,
+    "bounceRate": 100,
     "uniquesDelta": null,
     "visitsDelta": null,
     "pageviewsDelta": null,
-    "dailyTimeseries": [],
-    "monthlyHistory": [],
-    "topPages": [],
-    "referrers": [],
+    "dailyTimeseries": [
+      {
+        "date": "2026-07-28",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 1
+      }
+    ],
+    "monthlyHistory": [
+      {
+        "month": "Jul 2026",
+        "date": "2026-07",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 1
+      }
+    ],
+    "topPages": [
+      {
+        "path": "/podcast",
+        "pageviews": 1,
+        "uniques": 1
+      }
+    ],
+    "referrers": [
+      {
+        "source": "Paid/campaign",
+        "visits": 1,
+        "uniques": 1
+      }
+    ],
     "cfPageViews": null,
     "cfUniques": null,
     "cfPageViewsDelta": null,
@@ -265,7 +292,7 @@
         "seo": 92
       },
       "desktop": {
-        "performance": 76,
+        "performance": 49,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
@@ -1342,6 +1369,21 @@
         },
         "desktop": {
           "performance": 76,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-28",
+        "mobile": {
+          "performance": 90,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 49,
           "accessibility": 91,
           "bestPractices": 100,
           "seo": 92

@@ -3,7 +3,7 @@
   "slug": "timnath",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-27T23:43:04.817Z",
+  "generatedAt": "2026-07-28T09:34:16.874Z",
   "overview": {
     "sessions": 192,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 0,
     "rankingsDelta": null,
-    "gbpViews": 716,
+    "gbpViews": 721,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -242,7 +242,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 716,
+    "totalViews": 721,
     "calls": 4,
     "callsDelta": null,
     "directions": 243,
@@ -1469,7 +1469,7 @@
       },
       {
         "date": "2026-07-25",
-        "views": 0,
+        "views": 5,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1483,6 +1483,13 @@
       },
       {
         "date": "2026-07-27",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-28",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1562,11 +1569,11 @@
       "inp": null,
       "pagespeedMobile": null
     },
-    "analyticsSource": null,
-    "fathomSiteId": null,
-    "uniques": null,
-    "visits": null,
-    "pageviews": null,
+    "analyticsSource": "fathom",
+    "fathomSiteId": "YNVVPFQV",
+    "uniques": 0,
+    "visits": 0,
+    "pageviews": 0,
     "avgDuration": null,
     "bounceRate": null,
     "uniquesDelta": null,
@@ -1590,7 +1597,7 @@
         "seo": 92
       },
       "desktop": {
-        "performance": 70,
+        "performance": 40,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
@@ -1957,6 +1964,21 @@
         },
         "desktop": {
           "performance": 70,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-28",
+        "mobile": {
+          "performance": 61,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 40,
           "accessibility": 90,
           "bestPractices": 100,
           "seo": 92
