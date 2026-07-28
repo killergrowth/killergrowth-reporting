@@ -20,6 +20,7 @@
     --red:#f87171;
     --yellow:#facc15;
     --purple:#a78bfa;
+    --orange:#fb923c;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px;line-height:1.5}
@@ -37,51 +38,83 @@
 
   /* Layout */
   #app{display:none}
-  .topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:16px}
+  .topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
   .topbar .logo{font-size:18px;font-weight:800;color:var(--lime)}
   .topbar .client{color:var(--muted);font-size:13px}
-  .topbar .date{margin-left:auto;color:var(--muted);font-size:12px}
+  .topbar .meta{margin-left:auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .refresh-btn{background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:6px;padding:6px 12px;font-size:12px;cursor:pointer;display:flex;align-items:center;gap:6px;transition:border-color .15s}
+  .refresh-btn:hover{border-color:var(--lime)}
+  .refresh-btn.loading{opacity:.5;pointer-events:none}
+  .spin{display:inline-block;animation:spin .8s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
 
-  .container{max-width:1100px;margin:0 auto;padding:32px 24px}
+  .container{max-width:1200px;margin:0 auto;padding:32px 24px}
 
-  /* Stat cards */
-  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:36px}
-  .stat{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 20px}
-  .stat .val{font-size:28px;font-weight:800;color:var(--lime);line-height:1}
-  .stat .lbl{color:var(--muted);font-size:12px;margin-top:4px;text-transform:uppercase;letter-spacing:0.5px}
+  /* Stat row */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:36px}
+  .stat{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 18px}
+  .stat .val{font-size:26px;font-weight:800;line-height:1}
+  .stat .lbl{color:var(--muted);font-size:11px;margin-top:4px;text-transform:uppercase;letter-spacing:0.5px}
+  .stat.lime .val{color:var(--lime)}
+  .stat.green .val{color:var(--green)}
+  .stat.blue .val{color:var(--blue)}
+  .stat.teal .val{color:var(--teal)}
+  .stat.purple .val{color:var(--purple)}
+  .stat.orange .val{color:var(--orange)}
 
   /* Section */
-  .section{margin-bottom:40px}
-  .section-hdr{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);border-bottom:1px solid var(--border);padding-bottom:10px;margin-bottom:16px}
+  .section{margin-bottom:44px}
+  .section-hdr{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);border-bottom:1px solid var(--border);padding-bottom:10px;margin-bottom:16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .section-hdr .source-tag{font-size:10px;background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:2px 7px;font-weight:600;letter-spacing:0;text-transform:none}
+  .source-tag.dfs{color:var(--orange);border-color:#3d2200}
+  .source-tag.gsc{color:var(--blue);border-color:#1e3a5f}
+  .section-hdr .date-tag{margin-left:auto;color:var(--muted);font-size:11px;font-weight:400;text-transform:none;letter-spacing:0}
+
+  /* Period selector (GSC only) */
+  .period-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+  .period-btn{background:var(--surface);border:1px solid var(--border);color:var(--muted);border-radius:6px;padding:5px 12px;font-size:12px;cursor:pointer;transition:all .15s}
+  .period-btn.active{border-color:var(--blue);color:var(--blue)}
+  .period-btn:hover:not(.active){border-color:#555;color:var(--text)}
 
   /* Table */
   .tbl{width:100%;border-collapse:collapse}
   .tbl th{text-align:left;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);padding:8px 12px;border-bottom:1px solid var(--border)}
-  .tbl th.r,.tbl td.r{text-align:center}
-  .tbl td{padding:10px 12px;border-bottom:1px solid #1e1e1e;vertical-align:middle}
+  .tbl th.r,.tbl td.r{text-align:right}
+  .tbl th.c,.tbl td.c{text-align:center}
+  .tbl td{padding:9px 12px;border-bottom:1px solid #1e1e1e;vertical-align:middle}
   .tbl tr:hover td{background:var(--surface)}
   .tbl .kw{color:var(--text);font-size:13px}
 
-  /* Rank badges */
-  .rank-badge{display:inline-block;min-width:28px;text-align:center;font-size:13px;font-weight:700;padding:2px 6px;border-radius:5px}
-  .org-top{background:#14532d;color:#4ade80}
-  .org-mid{background:#1e3a5f;color:#60a5fa}
-  .org-low{background:#292524;color:#a8a29e}
-  .maps-1{background:#134e4a;color:var(--teal)}
-  .maps-top{background:#1e3a5f;color:var(--blue)}
-  .maps-low{background:#1c1917;color:#78716c}
-  .rank-dash{color:#444;font-size:13px}
-  .rank-up{color:var(--green);font-size:12px;font-weight:600}
-  .rank-down{color:var(--red);font-size:12px;font-weight:600}
-  .rank-flat{color:#555;font-size:12px}
-  .rank-new{background:#3b1f00;color:var(--yellow);font-size:11px;font-weight:700;padding:2px 6px;border-radius:4px}
-  .aio-cited{background:#2e1065;color:var(--purple);font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px}
-  .aio-appears{background:#1e293b;color:var(--blue);font-size:11px;padding:2px 8px;border-radius:4px}
+  /* Position badges */
+  .pos{display:inline-flex;align-items:center;justify-content:center;min-width:34px;font-size:13px;font-weight:700;padding:3px 7px;border-radius:5px}
+  .pos-1{background:#134e4a;color:var(--teal)}
+  .pos-top3{background:#14532d;color:var(--green)}
+  .pos-top10{background:#1e3a5f;color:var(--blue)}
+  .pos-low{background:#292524;color:#a8a29e}
+  .pos-deep{background:#1c1917;color:#57534e}
+  .rank-dash{color:#3a3a3a;font-size:18px;font-weight:300}
 
-  /* Notice */
-  .notice{background:#1a1a00;border:1px solid #3d3d00;border-radius:8px;padding:16px 20px;margin-bottom:28px;color:#e5e570;font-size:13px}
+  /* AIO badges */
+  .aio-cited{background:#2e1065;color:var(--purple);font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px}
+  .aio-yes{background:#1e293b;color:var(--blue);font-size:10px;padding:2px 7px;border-radius:4px}
 
-  @media(max-width:600px){.stats{grid-template-columns:1fr 1fr}.tbl th:nth-child(3),.tbl td:nth-child(3){display:none}}
+  /* CTR bar */
+  .ctr-wrap{display:flex;align-items:center;gap:6px}
+  .ctr-bar{height:5px;border-radius:3px;background:var(--blue);min-width:2px}
+  .ctr-val{font-size:12px;color:var(--muted);min-width:32px;text-align:right}
+
+  /* Loader / error */
+  .loader{display:flex;align-items:center;justify-content:center;padding:40px;color:var(--muted);font-size:13px;gap:8px}
+  .error-box{background:#1a0a0a;border:1px solid #3d1010;border-radius:8px;padding:14px 18px;color:var(--red);font-size:13px;margin-bottom:24px}
+  .notice{background:#111a00;border:1px solid #2a3d00;border-radius:8px;padding:14px 18px;color:#c8e870;font-size:13px;margin-bottom:24px}
+
+  /* No data */
+  .empty{color:var(--muted);text-align:center;padding:32px;font-size:13px}
+
+  @media(max-width:640px){
+    .stats{grid-template-columns:1fr 1fr}
+    .tbl th:nth-child(n+4),.tbl td:nth-child(n+4){display:none}
+  }
 </style>
 </head>
 <body>
@@ -101,93 +134,262 @@
 <div id="app">
   <div class="topbar">
     <span class="logo">KillerGrowth</span>
-    <span class="client">Timnath Painting · Rankings</span>
-    <span class="date">Rankings · June 1, 2026</span>
+    <span class="client">Timnath Painting &middot; Rankings</span>
+    <div class="meta">
+      <button class="refresh-btn" id="refreshGsc" onclick="loadGSC()">
+        <span id="gscIcon">&#x21BB;</span> Refresh GSC
+      </button>
+    </div>
   </div>
-  <div class="container">
-    
-    <div class="notice">⚡ New site — tracking baseline established. Rankings will grow as pages index and authority builds.</div>
 
-    <div class="stats">
-      <div class="stat"><div class="val">2</div><div class="lbl">Organic Ranked</div></div>
-      <div class="stat"><div class="val">3</div><div class="lbl">Maps #1</div></div>
-      <div class="stat"><div class="val">6</div><div class="lbl">Maps Ranked</div></div>
-      <div class="stat"><div class="val">20</div><div class="lbl">AIO Citations</div></div>
-      <div class="stat"><div class="val">72</div><div class="lbl">AIO Appearances</div></div>
+  <div class="container">
+
+    <!-- ── STAT ROW ─────────────────────────────────────── -->
+    <div class="stats" id="statRow" style="display:none">
+      <div class="stat lime"><div class="val" id="sDfsOrgRanked">—</div><div class="lbl">Organic Ranked</div></div>
+      <div class="stat green"><div class="val" id="sDfsOrgTop10">—</div><div class="lbl">Organic Top 10</div></div>
+      <div class="stat teal"><div class="val" id="sDfsMapsRanked">—</div><div class="lbl">Maps Ranked</div></div>
+      <div class="stat blue"><div class="val" id="sDfsMapsTop3">—</div><div class="lbl">Maps Top 3</div></div>
+      <div class="stat purple"><div class="val" id="sDfsAio">—</div><div class="lbl">AIO Citations</div></div>
+      <div class="stat orange"><div class="val" id="sGscClicks">—</div><div class="lbl">GSC Clicks (28d)</div></div>
     </div>
 
-    <div class="section">
-      <div class="section-hdr">Ranked Keywords · June 1, 2026</div>
-      <table class="tbl">
+    <!-- ── DFS SECTION ───────────────────────────────────── -->
+    <div class="section" id="dfsSection">
+      <div class="section-hdr">
+        Campaign Keyword Rankings
+        <span class="source-tag dfs">DataForSEO</span>
+        <span class="date-tag" id="dfsDateTag">Loading…</span>
+      </div>
+      <div id="dfsNotice" class="notice" style="display:none"></div>
+      <div id="dfsLoader" class="loader"><span class="spin">&#x21BB;</span>&nbsp;Loading DFS data…</div>
+      <table class="tbl" id="dfsTbl" style="display:none">
         <thead><tr>
           <th>Keyword</th>
-          <th class="r">Organic</th>
-          <th class="r">Maps Pack</th>
-          <th class="r">AI Overview</th>
+          <th class="c">Organic</th>
+          <th class="c">Maps Pack</th>
+          <th class="c">AI Overview</th>
         </tr></thead>
-        <tbody>
-    <tr>
-      <td class="kw">commercial painting johnstown co</td>
-      <td class="r"><span class="rank-dash">—</span></td>
-      <td class="r"><span class="rank-badge maps-1">1</span></td>
-      <td class="r"><span class="aio-appears">Appears</span></td>
-    </tr>
-    <tr>
-      <td class="kw">fence staining johnstown co</td>
-      <td class="r"><span class="rank-dash">—</span></td>
-      <td class="r"><span class="rank-badge maps-1">1</span></td>
-      <td class="r"><span class="aio-cited">Cited</span></td>
-    </tr>
-    <tr>
-      <td class="kw">exterior painting johnstown co</td>
-      <td class="r"><span class="rank-dash">—</span></td>
-      <td class="r"><span class="rank-badge maps-1">1</span></td>
-      <td class="r"><span class="aio-cited">Cited</span></td>
-    </tr>
-    <tr>
-      <td class="kw">exterior staining johnstown co</td>
-      <td class="r"><span class="rank-dash">—</span></td>
-      <td class="r"><span class="rank-badge maps-top">2</span></td>
-      <td class="r"><span class="aio-cited">Cited</span></td>
-    </tr>
-    <tr>
-      <td class="kw">exterior painting windsor co</td>
-      <td class="r"><span class="rank-dash">—</span></td>
-      <td class="r"><span class="rank-badge maps-low">7</span></td>
-      <td class="r"><span class="aio-cited">Cited</span></td>
-    </tr>
-    <tr>
-      <td class="kw">exterior painting timnath co</td>
-      <td class="r"><span class="rank-dash">—</span></td>
-      <td class="r"><span class="rank-badge maps-low">9</span></td>
-      <td class="r"><span class="aio-cited">Cited</span></td>
-    </tr>
-    <tr>
-      <td class="kw">exterior staining timnath co</td>
-      <td class="r"><span class="rank-badge org-low">15</span></td>
-      <td class="r"><span class="rank-dash">—</span></td>
-      <td class="r"><span class="aio-cited">Cited</span></td>
-    </tr>
-    <tr>
-      <td class="kw">fence staining timnath co</td>
-      <td class="r"><span class="rank-badge org-mid">7</span></td>
-      <td class="r"><span class="rank-dash">—</span></td>
-      <td class="r"><span class="aio-cited">Cited</span></td>
-    </tr></tbody>
+        <tbody id="dfsBody"></tbody>
       </table>
     </div>
+
+    <!-- ── GSC SECTION ───────────────────────────────────── -->
+    <div class="section" id="gscSection">
+      <div class="section-hdr">
+        Google Search Console &mdash; Top Queries
+        <span class="source-tag gsc">Live GSC</span>
+        <span class="date-tag" id="gscDateTag">Loading…</span>
+      </div>
+      <div class="period-bar">
+        <button class="period-btn active" data-period="last28" onclick="setPeriod(this)">Last 28 Days</button>
+        <button class="period-btn" data-period="last7" onclick="setPeriod(this)">Last 7 Days</button>
+        <button class="period-btn" data-period="lastMonth" onclick="setPeriod(this)">Last Month</button>
+        <button class="period-btn" data-period="last3months" onclick="setPeriod(this)">Last 3 Months</button>
+      </div>
+      <div id="gscError" class="error-box" style="display:none"></div>
+      <div id="gscLoader" class="loader"><span class="spin">&#x21BB;</span>&nbsp;Pulling live GSC data…</div>
+      <table class="tbl" id="gscTbl" style="display:none">
+        <thead><tr>
+          <th>Keyword</th>
+          <th class="r">Avg Position</th>
+          <th class="r">Clicks</th>
+          <th class="r">Impressions</th>
+          <th>CTR</th>
+        </tr></thead>
+        <tbody id="gscBody"></tbody>
+      </table>
+    </div>
+
   </div>
 </div>
 
 <script>
-const PW = 'timnath2026';
-const CK = 'kg_timnath_rankings';
-function getCookie(n){const v='; '+document.cookie;const p=v.split('; '+n+'=');if(p.length===2)return p.pop().split(';').shift();}
+// ── Config ──────────────────────────────────────────────────────────────────
+const PW        = 'timnath2026';
+const CK        = 'kg_timnath_rankings_v2';
+const GSC_SITE  = 'sc-domain:timnathpainting.com';
+const API_BASE  = '/api/gsc';
+
+// DFS data is baked in at build time from data/timnath-dfs-latest.json
+// Falls back to window.__reportData.seo.dfsSnapshot if available
+const DFS_DATA  = (window.__reportData && window.__reportData.seo && window.__reportData.seo.dfsSnapshot)
+  ? window.__reportData.seo.dfsSnapshot
+  : null;
+
+let gscPeriod = 'last28';
+
+const PERIOD_LABELS = {
+  last28:     'Last 28 Days',
+  last7:      'Last 7 Days',
+  lastMonth:  'Last Month',
+  last3months:'Last 3 Months',
+};
+
+// ── Auth gate ────────────────────────────────────────────────────────────────
+function getCookie(n){const v='; '+document.cookie,p=v.split('; '+n+'=');if(p.length===2)return p.pop().split(';').shift();}
 function setCookie(n,v,d){const e=new Date();e.setTime(e.getTime()+(d*24*60*60*1000));document.cookie=n+'='+v+';expires='+e.toUTCString()+';path=/';}
-function unlock(){const v=document.getElementById('pw').value;if(v===PW){setCookie(CK,btoa(PW),30);show();}else{document.getElementById('err').style.display='block';}}
-function show(){document.getElementById('gate').style.display='none';document.getElementById('app').style.display='block';}
+
+function unlock(){
+  if(document.getElementById('pw').value===PW){
+    setCookie(CK,btoa(PW),30);
+    showApp();
+  } else {
+    document.getElementById('err').style.display='block';
+  }
+}
 document.getElementById('pw').addEventListener('keydown',e=>{if(e.key==='Enter')unlock();});
-if(getCookie(CK)===btoa(PW))show();
+if(getCookie(CK)===btoa(PW)) showApp();
+
+function showApp(){
+  document.getElementById('gate').style.display='none';
+  document.getElementById('app').style.display='block';
+  renderDFS();
+  loadGSC();
+}
+
+// ── Helpers ──────────────────────────────────────────────────────────────────
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function posBadge(n, type){
+  if(n === null || n === undefined) return '<span class="rank-dash">&mdash;</span>';
+  const cls = n===1?'pos-1': n<=3?'pos-top3': n<=10?'pos-top10': n<=20?'pos-low':'pos-deep';
+  const label = type==='maps' ? '#'+n : '#'+n;
+  return `<span class="pos ${cls}">${label}</span>`;
+}
+
+function aioBadge(cited, appears){
+  if(cited)   return '<span class="aio-cited">Cited</span>';
+  if(appears) return '<span class="aio-yes">Appears</span>';
+  return '<span class="rank-dash">&mdash;</span>';
+}
+
+function ctrBar(ctr){
+  const w = Math.min(ctr * 1.5, 80);
+  return `<div class="ctr-wrap"><div class="ctr-bar" style="width:${Math.max(w,2)}px"></div><span class="ctr-val">${ctr}%</span></div>`;
+}
+
+// ── DFS render (baked data) ─────────────────────────────────────────────────
+function renderDFS(){
+  const loader  = document.getElementById('dfsLoader');
+  const tbl     = document.getElementById('dfsTbl');
+  const notice  = document.getElementById('dfsNotice');
+  const dateTag = document.getElementById('dfsDateTag');
+  const statRow = document.getElementById('statRow');
+
+  if(!DFS_DATA){
+    loader.style.display = 'none';
+    notice.style.display = 'block';
+    notice.textContent = '⚡ DFS data not yet available — run pull-dfs-timnath.js to populate. GSC data is live below.';
+    return;
+  }
+
+  // Date tag
+  const tracked = new Date(DFS_DATA.trackedAt);
+  dateTag.textContent = 'Last tracked: ' + tracked.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+
+  // Stat row (partial — GSC will fill the clicks stat)
+  const st = DFS_DATA.stats || {};
+  document.getElementById('sDfsOrgRanked').textContent = st.organicRanked ?? '—';
+  document.getElementById('sDfsOrgTop10').textContent  = st.organicTop10  ?? '—';
+  document.getElementById('sDfsMapsRanked').textContent= st.mapsRanked    ?? '—';
+  document.getElementById('sDfsMapsTop3').textContent  = st.mapsTop3      ?? '—';
+  document.getElementById('sDfsAio').textContent       = st.aioCited      ?? '—';
+  statRow.style.display = 'grid';
+
+  // Table — show all keywords that have any rank signal, sort: maps then organic, nulls last
+  const kws = (DFS_DATA.keywords || []).slice().sort((a,b)=>{
+    const aScore = (a.mapsRank??999)*0.5 + (a.organicRank??999);
+    const bScore = (b.mapsRank??999)*0.5 + (b.organicRank??999);
+    return aScore - bScore;
+  });
+
+  const tbody = document.getElementById('dfsBody');
+  tbody.innerHTML = '';
+  for(const kw of kws){
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td class="kw">${esc(kw.keyword)}</td>
+      <td class="c">${posBadge(kw.organicRank,'organic')}</td>
+      <td class="c">${posBadge(kw.mapsRank,'maps')}</td>
+      <td class="c">${aioBadge(kw.citedInAiOverview, kw.inAiOverview)}</td>
+    `;
+    tbody.appendChild(tr);
+  }
+
+  loader.style.display = 'none';
+  tbl.style.display    = 'table';
+}
+
+// ── GSC fetch (live on load) ─────────────────────────────────────────────────
+let gscPending = false;
+async function loadGSC(){
+  if(gscPending) return;
+  gscPending = true;
+
+  const btn     = document.getElementById('refreshGsc');
+  const icon    = document.getElementById('gscIcon');
+  const loader  = document.getElementById('gscLoader');
+  const tbl     = document.getElementById('gscTbl');
+  const errBox  = document.getElementById('gscError');
+  const dateTag = document.getElementById('gscDateTag');
+
+  btn.classList.add('loading');
+  icon.classList.add('spin');
+  loader.style.display = 'flex';
+  tbl.style.display    = 'none';
+  errBox.style.display = 'none';
+
+  try{
+    const url = `${API_BASE}?site=${encodeURIComponent(GSC_SITE)}&rows=50&period=${gscPeriod}&sort=impressions`;
+    const res  = await fetch(url);
+    const data = await res.json();
+    if(data.error) throw new Error(data.error);
+
+    // Update clicks stat
+    document.getElementById('sGscClicks').textContent = data.stats.totalClicks.toLocaleString();
+    document.getElementById('statRow').style.display = 'grid';
+
+    dateTag.textContent = `${data.startDate} \u2192 ${data.endDate} \u00b7 ${data.stats.total} queries`;
+
+    const tbody = document.getElementById('gscBody');
+    tbody.innerHTML = '';
+    if(!data.keywords.length){
+      tbody.innerHTML = '<tr><td colspan="5" class="empty">No queries found for this period.</td></tr>';
+    } else {
+      for(const kw of data.keywords){
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="kw">${esc(kw.keyword)}</td>
+          <td class="r">${posBadge(kw.position,'organic')}</td>
+          <td class="r" style="color:var(--text)">${kw.clicks}</td>
+          <td class="r" style="color:var(--muted)">${kw.impressions.toLocaleString()}</td>
+          <td>${ctrBar(kw.ctr)}</td>
+        `;
+        tbody.appendChild(tr);
+      }
+    }
+
+    loader.style.display = 'none';
+    tbl.style.display    = 'table';
+
+  } catch(e){
+    loader.style.display = 'none';
+    errBox.style.display = 'block';
+    errBox.textContent   = '\u26a0\ufe0f Could not load GSC data: ' + e.message;
+  } finally{
+    btn.classList.remove('loading');
+    icon.classList.remove('spin');
+    gscPending = false;
+  }
+}
+
+function setPeriod(btn){
+  document.querySelectorAll('.period-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  gscPeriod = btn.dataset.period;
+  loadGSC();
+}
 </script>
 </body>
 </html>

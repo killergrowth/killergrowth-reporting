@@ -235,8 +235,8 @@ canvas{max-width:100%!important;width:100%!important}
 #dr-wrap{display:flex;align-items:center;gap:6px}
 #dr-preset{background:#1a1a1a;border:1px solid var(--border);color:var(--sub);font-size:11px;font-weight:600;padding:5px 10px;border-radius:20px;outline:none;cursor:pointer}
 #dr-preset:hover,#dr-preset:focus{border-color:var(--lime);color:var(--w)}
-#dr-custom select{background:#1a1a1a;border:1px solid var(--border);color:var(--sub);font-size:11px;padding:4px 7px;border-radius:6px;outline:none}
-#dr-custom select:focus{border-color:var(--lime)}
+@keyframes dr-spin{to{transform:rotate(360deg)}}
+#ct.dr-loading{opacity:.65;pointer-events:none;transition:opacity .2s}
 /* PRINT COVER / HEADER */
 .print-cover{display:none}
 .print-page-hd{display:none}
@@ -371,18 +371,14 @@ canvas{max-width:100%!important;width:100%!important}
       <div class="tb-r">
         <div id="dr-wrap">
           <select id="dr-preset" onchange="onPresetChange()">
-            <option value="current">This Month</option>
-            <option value="last">Last Month</option>
-            <option value="3m">Last 3 Months</option>
-            <option value="6m">Last 6 Months</option>
+            <option value="last30">Last 30 Days</option>
+            <option value="lastMonth" selected>Last Month</option>
+            <option value="last3months">Last 3 Months</option>
             <option value="ytd">Year to Date</option>
-            <option value="custom">Custom</option>
           </select>
-          <div id="dr-custom" style="display:none">
-            <select id="dr-start" onchange="onCustomChange()"></select>
-            <span style="color:var(--muted)">&#8211;</span>
-            <select id="dr-end" onchange="onCustomChange()"></select>
-            <span id="dr-err" style="display:none;color:var(--red);font-size:10px">Invalid range</span>
+          <div id="dr-loading" style="display:none;align-items:center;gap:5px">
+            <span style="display:inline-block;width:10px;height:10px;border:2px solid var(--lime);border-top-color:transparent;border-radius:50%;animation:dr-spin .7s linear infinite"></span>
+            <span style="font-size:11px;color:var(--muted)">Loading&hellip;</span>
           </div>
         </div>
         <div class="pbadge js-period" id="dr-label"></div>
@@ -1484,8 +1480,9 @@ function renderWebsite(website,seo){
     return row;
   }).join('');}
 else{el('web-ch').innerHTML='<div class="du"><div class="du-t">Data updating.</div></div>';}
-PSI_DATA=website.psiScores||{};renderPSI('mobile');
-  if(website.analyticsSource==='fathom'){renderFathomAnalytics(website);}else{renderCFAnalytics(website);}
+PSI_DATA=website.psiScores||{};renderPSI(PSI_VIEW||'mobile');
+  var _useFathom=website.analyticsSource==='fathom'||!!(website.fathomSiteId);
+  if(_useFathom){renderFathomAnalytics(Object.assign({},website,{analyticsSource:'fathom'}));}else{renderCFAnalytics(website);}
 }
 function renderFathomAnalytics(website) {
   if (!website || website.analyticsSource !== 'fathom') return;
@@ -1683,17 +1680,89 @@ function initDateRange(data){
 }
 function onPresetChange(){
   var v=(el('dr-preset')||{}).value;
-  var dc=el('dr-custom');if(dc)dc.style.display=v==='custom'?'flex':'none';
-  var de=el('dr-err');if(de)de.style.display='none';
-  if(v!=='custom')applyPreset(v);
+  var cfg=window.CLIENT_CONFIG||{};
+  var slug=cfg.slug||'';
+  if(!slug){applyPreset(v);return;}
+  // Show loading state
+  var dl=el('dr-loading');if(dl)dl.style.display='flex';
+  var ct=el('ct');if(ct)ct.classList.add('dr-loading');
+  fetchLiveData(slug,v).then(function(liveData){
+    if(liveData&&!liveData.error)mergeAndApply(v,liveData);
+    else applyPreset(v);
+  }).catch(function(){applyPreset(v);}).finally(function(){
+    var dl2=el('dr-loading');if(dl2)dl2.style.display='none';
+    var ct2=el('ct');if(ct2)ct2.classList.remove('dr-loading');
+  });
 }
-function onCustomChange(){
-  var de=el('dr-err');if(de)de.style.display='none';
-  var sv=(el('dr-start')||{}).value,ev=(el('dr-end')||{}).value;
-  var sd=parseMonthStr(sv),ed=parseMonthStr(ev);
-  if(!sd||!ed)return;
-  if(sd>ed){if(de)de.style.display='';return;}
-  applyRange(sd,ed);
+function fetchLiveData(slug,period){
+  var cfg=window.CLIENT_CONFIG||{};
+  var mods=cfg.modules||{};
+  var calls=[];
+  // Always try GSC + GA4
+  calls.push(fetch('/api/gsc?site='+encodeURIComponent(cfg.gscSiteUrl||'')+"&period="+period+"&rows=50").then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}));
+  calls.push(fetch('/api/ga4?slug='+slug+"&period="+period).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}));
+  // Fathom if website module active
+  if(mods.website!==false)calls.push(fetch('/api/fathom?slug='+slug+"&period="+period).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}));
+  else calls.push(Promise.resolve(null));
+  // GBP if module active
+  if(mods.gbp!==false)calls.push(fetch('/api/gbp?slug='+slug+"&period="+period).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}));
+  else calls.push(Promise.resolve(null));
+  // GHL
+  calls.push(fetch('/api/ghl?slug='+slug+"&period="+period).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}));
+  return Promise.all(calls).then(function(results){
+    return {gsc:results[0],ga4:results[1],fathom:results[2],gbp:results[3],ghl:results[4]};
+  });
+}
+function mergeAndApply(preset,live){
+  if(!DR_DATA)return;
+  var d=DR_DATA;
+  // GSC → seo.keywords, seo stats
+  if(live.gsc&&!live.gsc.error&&!live.gsc.skipped){
+    d.seo=d.seo||{};
+    d.seo.keywords=live.gsc.keywords||d.seo.keywords;
+    d.seo.impressions=live.gsc.stats&&live.gsc.stats.totalImpressions!=null?live.gsc.stats.totalImpressions:d.seo.impressions;
+    d.seo.clicks=live.gsc.stats&&live.gsc.stats.totalClicks!=null?live.gsc.stats.totalClicks:d.seo.clicks;
+    d.seo.rankingsTop10=live.gsc.stats&&live.gsc.stats.top10!=null?live.gsc.stats.top10:d.seo.rankingsTop10;
+  }
+  // GA4 → organic sessions, traffic channels, overview
+  if(live.ga4&&!live.ga4.error&&!live.ga4.skipped){
+    d.seo=d.seo||{};
+    if(live.ga4.seo){
+      if(live.ga4.seo.organicSessions)d.seo.organicSessions=live.ga4.seo.organicSessions;
+      if(live.ga4.seo.trafficChannels)d.seo.trafficChannels=live.ga4.seo.trafficChannels;
+      if(live.ga4.seo.leadSignals)d.seo.leadSignals=live.ga4.seo.leadSignals;
+    }
+    if(live.ga4.overview){
+      d.overview=d.overview||{};
+      d.overview.sessions=live.ga4.overview.sessions!=null?live.ga4.overview.sessions:d.overview.sessions;
+    }
+  }
+  // Fathom → website analytics
+  if(live.fathom&&!live.fathom.error&&!live.fathom.skipped&&live.fathom.website){
+    var fw=live.fathom.website;
+    d.website=d.website||{};
+    d.website.analyticsSource='fathom';
+    if(fw.visits!=null)d.website.visits=fw.visits;
+    if(fw.uniques!=null)d.website.uniques=fw.uniques;
+    if(fw.pageviews!=null)d.website.pageviews=fw.pageviews;
+    if(fw.avgDuration!=null)d.website.avgDuration=fw.avgDuration;
+    if(fw.bounceRate!=null)d.website.bounceRate=fw.bounceRate;
+    if(fw.timeseries)d.website.sessionsOverTime=fw.timeseries.map(function(t){return{date:t.date,sessions:t.visits,conversions:0};});
+    if(fw.topPages)d.website.topPages=fw.topPages;
+    if(fw.referrers)d.website.referrers=fw.referrers;
+  }
+  // GBP → gbp data
+  if(live.gbp&&!live.gbp.error&&!live.gbp.skipped&&live.gbp.gbp){
+    var lg=live.gbp.gbp;
+    d.gbp=d.gbp||{};
+    if(lg.totalViews!=null)d.gbp.totalViews=lg.totalViews;
+    if(lg.calls!=null)d.gbp.calls=lg.calls;
+    if(lg.websiteClicks!=null)d.gbp.websiteClicks=lg.websiteClicks;
+    if(lg.directions!=null)d.gbp.directions=lg.directions;
+    if(lg.viewsOverTime)d.gbp.viewsOverTime=lg.viewsOverTime;
+  }
+  DR_DATA=d;
+  applyPreset(preset);
 }
 function applyPreset(preset){
   if(!DR_DATA)return;
@@ -1703,10 +1772,9 @@ function applyPreset(preset){
   // Anchor presets to today's calendar date (not latest data month), clamped to available data
   var _now=new Date(),nowM=new Date(_now.getFullYear(),_now.getMonth(),1);
   function clampM(dt){if(dt>latest)return latest;if(dt<earliest)return earliest;return dt;}
-  if(preset==='current'){end=clampM(nowM);start=end;}
-  else if(preset==='last'){end=clampM(new Date(nowM.getFullYear(),nowM.getMonth()-1,1));start=end;}
-  else if(preset==='3m'){end=clampM(nowM);start=clampM(new Date(nowM.getFullYear(),nowM.getMonth()-2,1));}
-  else if(preset==='6m'){end=clampM(nowM);start=clampM(new Date(nowM.getFullYear(),nowM.getMonth()-5,1));}
+  if(preset==='last30'||preset==='current'){end=clampM(nowM);start=clampM(new Date(nowM.getFullYear(),nowM.getMonth()-1,1));}
+  else if(preset==='lastMonth'||preset==='last'){end=clampM(new Date(nowM.getFullYear(),nowM.getMonth()-1,1));start=end;}
+  else if(preset==='last3months'||preset==='3m'){end=clampM(nowM);start=clampM(new Date(nowM.getFullYear(),nowM.getMonth()-2,1));}
   else if(preset==='ytd'){end=clampM(nowM);start=clampM(new Date(nowM.getFullYear(),0,1));}
   else{end=latest;start=earliest;}
   applyRange(start,end);

@@ -116,6 +116,14 @@ async function buildReport(slug) {
       trafficChannels:      v(ga4)?.trafficChannels      ?? base.seo?.trafficChannels      ?? [],
       organicSearchSources: v(ga4)?.organicSearchSources ?? base.seo?.organicSearchSources ?? [],
       keywords:        v(gsc)?.keywords          ?? v(dfs)?.keywords          ?? base.seo?.keywords ?? [],
+      dfsSnapshot:     (() => {
+        // Load latest DFS snapshot for this client if it exists
+        const dfsFile = path.join(ROOT, 'data', `${slug}-dfs-latest.json`);
+        if (fs.existsSync(dfsFile)) {
+          try { return JSON.parse(fs.readFileSync(dfsFile, 'utf8')); } catch { return null; }
+        }
+        return null;
+      })(),
       leadSignals: (() => {
         const ls = v(ga4)?.leadSignals ?? base.seo?.leadSignals ?? null;
         if (!ls) return null;
@@ -213,8 +221,8 @@ async function buildReport(slug) {
       aiReferral: v(ga4)?.aiReferral ?? base.website?.aiReferral ?? { total: 0, platforms: [], weeklyTrend: [] },
       vitals: base.website?.vitals ?? { lcp: null, cls: null, inp: null, pagespeedMobile: null },
       // Fathom Analytics (PKG001/PKG002 — preferred over CF WA when fathomSiteId is set)
-      analyticsSource:  v(fathom)?.analyticsSource      ?? (v(cfa) ? 'cloudflare' : null) ?? base.website?.analyticsSource ?? null,
-      fathomSiteId:     v(fathom)?.fathomSiteId         ?? base.website?.fathomSiteId      ?? null,
+      analyticsSource:  v(fathom)?.analyticsSource      ?? (client.fathomSiteId ? 'fathom' : null) ?? (v(cfa) ? 'cloudflare' : null) ?? base.website?.analyticsSource ?? null,
+      fathomSiteId:     v(fathom)?.fathomSiteId         ?? client.fathomSiteId              ?? base.website?.fathomSiteId ?? null,
       uniques:          v(fathom)?.uniques               ?? base.website?.uniques           ?? null,
       visits:           v(fathom)?.visits                ?? base.website?.visits            ?? null,
       pageviews:        v(fathom)?.pageviews             ?? base.website?.pageviews         ?? null,
