@@ -51,6 +51,7 @@ jobs:
           DATAFORSEO_LOGIN:            ${{ secrets.DATAFORSEO_LOGIN }}
           DATAFORSEO_PASSWORD:         ${{ secrets.DATAFORSEO_PASSWORD }}
           PAGESPEED_API_KEY:           ${{ secrets.PAGESPEED_API_KEY }}
+          FATHOM_API_TOKEN:            ${{ secrets.FATHOM_API_TOKEN }}
         run: node scripts/build-report.js killergrowth
 
       - name: Pull data — StewardRight
@@ -86,6 +87,7 @@ jobs:
           GBP_CLIENT_ID:                     ${{ secrets.GBP_CLIENT_ID }}
           GBP_CLIENT_SECRET:                 ${{ secrets.GBP_CLIENT_SECRET }}
           LF_API_KEY:                        ${{ secrets.LF_API_KEY }}
+          FATHOM_API_TOKEN:                  ${{ secrets.FATHOM_API_TOKEN }}
         run: node scripts/build-report.js sunflower
 
       - name: Pull data — Don's Heating & Air
@@ -111,6 +113,7 @@ jobs:
           META_SYSTEM_TOKEN:           ${{ secrets.META_SYSTEM_TOKEN }}
           GHL_API_KEY:                 ${{ secrets.GHL_API_KEY }}
           PAGESPEED_API_KEY:           ${{ secrets.PAGESPEED_API_KEY }}
+          FATHOM_API_TOKEN:            ${{ secrets.FATHOM_API_TOKEN }}
         run: node scripts/build-report.js good-to-be-clean
 
       - name: Pull data — Timnath Painting
@@ -124,6 +127,7 @@ jobs:
           GBP_CLIENT_SECRET:           ${{ secrets.GBP_CLIENT_SECRET }}
           GBP_REFRESH_TOKEN:           ${{ secrets.GBP_REFRESH_TOKEN }}
           LF_API_KEY:                  ${{ secrets.LF_API_KEY }}
+          FATHOM_API_TOKEN:            ${{ secrets.FATHOM_API_TOKEN }}
         run: node scripts/build-report.js timnath
 
       - name: Pull data — Walnut Valley
