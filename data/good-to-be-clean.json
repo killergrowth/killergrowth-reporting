@@ -3,7 +3,7 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-28T09:33:18.268Z",
+  "generatedAt": "2026-07-29T09:33:58.244Z",
   "overview": {
     "sessions": 633,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 18,
     "rankingsDelta": null,
-    "gbpViews": 807,
+    "gbpViews": 811,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -399,6 +399,7 @@
         "position": 8
       }
     ],
+    "dfsSnapshot": null,
     "leadSignals": {
       "organicSessions": 220,
       "phoneCalls": 0,
@@ -477,7 +478,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 807,
+    "totalViews": 811,
     "calls": 12,
     "callsDelta": null,
     "directions": 241,
@@ -1711,7 +1712,7 @@
       },
       {
         "date": "2026-07-26",
-        "views": 0,
+        "views": 4,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1725,6 +1726,13 @@
       },
       {
         "date": "2026-07-28",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-29",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1938,51 +1946,77 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "MTRAPVNX",
-    "uniques": 8,
-    "visits": 8,
-    "pageviews": 9,
-    "avgDuration": 34,
-    "bounceRate": 87.5,
+    "uniques": 19,
+    "visits": 19,
+    "pageviews": 23,
+    "avgDuration": 41,
+    "bounceRate": 78.947368421053,
     "uniquesDelta": null,
     "visitsDelta": null,
     "pageviewsDelta": null,
     "dailyTimeseries": [
       {
         "date": "2026-07-28",
-        "visits": 8,
-        "uniques": 8,
-        "pageviews": 9
+        "visits": 16,
+        "uniques": 16,
+        "pageviews": 20
+      },
+      {
+        "date": "2026-07-29",
+        "visits": 3,
+        "uniques": 3,
+        "pageviews": 3
       }
     ],
     "monthlyHistory": [
       {
         "month": "Jul 2026",
         "date": "2026-07",
-        "visits": 8,
-        "uniques": 8,
-        "pageviews": 9
+        "visits": 19,
+        "uniques": 19,
+        "pageviews": 23
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 5,
-        "uniques": 4
+        "pageviews": 9,
+        "uniques": 8
       },
       {
         "path": "/service/water-damage-restoration/",
-        "pageviews": 4,
-        "uniques": 4
+        "pageviews": 7,
+        "uniques": 6
+      },
+      {
+        "path": "/about/",
+        "pageviews": 2,
+        "uniques": 2
+      },
+      {
+        "path": "/contact/",
+        "pageviews": 2,
+        "uniques": 2
+      },
+      {
+        "path": "/service/carpet-cleaning/",
+        "pageviews": 2,
+        "uniques": 1
       }
     ],
     "referrers": [
       {
         "source": "Paid/campaign",
-        "visits": 6,
-        "uniques": 6
+        "visits": 12,
+        "uniques": 12
       },
       {
         "source": "Direct",
+        "visits": 5,
+        "uniques": 5
+      },
+      {
+        "source": "Organic",
         "visits": 2,
         "uniques": 2
       }
@@ -1994,8 +2028,18 @@
     "cfDailyPageViews": [],
     "cfMonthlyHistory": [],
     "psiScores": {
-      "mobile": null,
-      "desktop": null
+      "mobile": {
+        "performance": 51,
+        "accessibility": 92,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "desktop": {
+        "performance": 75,
+        "accessibility": 92,
+        "bestPractices": 100,
+        "seo": 100
+      }
     },
     "psiHistory": [
       {
@@ -2972,6 +3016,21 @@
         "date": "2026-07-28",
         "mobile": null,
         "desktop": null
+      },
+      {
+        "date": "2026-07-29",
+        "mobile": {
+          "performance": 51,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 75,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        }
       }
     ]
   },

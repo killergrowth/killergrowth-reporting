@@ -3,7 +3,7 @@
   "slug": "iserve-facilities",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-28T09:42:26.989Z",
+  "generatedAt": "2026-07-29T09:39:57.502Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -28,6 +28,7 @@
     "trafficChannels": [],
     "organicSearchSources": [],
     "keywords": [],
+    "dfsSnapshot": null,
     "leadSignals": null
   },
   "ads": {
@@ -82,18 +83,61 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "ANNMTVXC",
-    "uniques": 0,
-    "visits": 0,
-    "pageviews": 0,
-    "avgDuration": null,
-    "bounceRate": null,
+    "uniques": 2,
+    "visits": 2,
+    "pageviews": 3,
+    "avgDuration": 22,
+    "bounceRate": 50,
     "uniquesDelta": null,
     "visitsDelta": null,
     "pageviewsDelta": null,
-    "dailyTimeseries": [],
-    "monthlyHistory": [],
-    "topPages": [],
-    "referrers": [],
+    "dailyTimeseries": [
+      {
+        "date": "2026-07-28",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 2
+      },
+      {
+        "date": "2026-07-29",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 1
+      }
+    ],
+    "monthlyHistory": [
+      {
+        "month": "Jul 2026",
+        "date": "2026-07",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 3
+      }
+    ],
+    "topPages": [
+      {
+        "path": "/",
+        "pageviews": 2,
+        "uniques": 2
+      },
+      {
+        "path": "/apply",
+        "pageviews": 1,
+        "uniques": 1
+      }
+    ],
+    "referrers": [
+      {
+        "source": "Direct",
+        "visits": 1,
+        "uniques": 1
+      },
+      {
+        "source": "Organic",
+        "visits": 1,
+        "uniques": 1
+      }
+    ],
     "cfPageViews": 26736,
     "cfUniques": 6630,
     "cfPageViewsDelta": 164.7,
@@ -269,13 +313,13 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 70,
+        "performance": 67,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100
       },
       "desktop": {
-        "performance": 93,
+        "performance": 95,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100
@@ -317,6 +361,21 @@
         },
         "desktop": {
           "performance": 93,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-07-29",
+        "mobile": {
+          "performance": 67,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 95,
           "accessibility": 100,
           "bestPractices": 100,
           "seo": 100

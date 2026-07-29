@@ -3,7 +3,7 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "June 2026",
-  "generatedAt": "2026-07-28T09:32:00.776Z",
+  "generatedAt": "2026-07-29T09:32:07.419Z",
   "overview": {
     "sessions": 50,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": null,
     "rankingsDelta": null,
-    "gbpViews": 2166,
+    "gbpViews": 2177,
     "gbpViewsDelta": null,
     "adSpend": 593.29,
     "adImpressions": 25624,
@@ -191,6 +191,7 @@
       }
     ],
     "keywords": [],
+    "dfsSnapshot": null,
     "leadSignals": {
       "organicSessions": 18,
       "phoneCalls": 0,
@@ -205,7 +206,7 @@
       },
       "gbpCalls": 14,
       "gbpWebsiteClicks": 87,
-      "gbpDirections": 203
+      "gbpDirections": 204
     }
   },
   "ads": {
@@ -264,10 +265,10 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 2166,
+    "totalViews": 2177,
     "calls": 14,
     "callsDelta": null,
-    "directions": 203,
+    "directions": 204,
     "websiteClicks": 87,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -1491,7 +1492,7 @@
       },
       {
         "date": "2026-07-25",
-        "views": 0,
+        "views": 11,
         "calls": 0,
         "directions": 1,
         "websiteClicks": 0
@@ -1500,7 +1501,7 @@
         "date": "2026-07-26",
         "views": 0,
         "calls": 0,
-        "directions": 0,
+        "directions": 1,
         "websiteClicks": 0
       },
       {
@@ -1512,6 +1513,13 @@
       },
       {
         "date": "2026-07-28",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-29",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1563,7 +1571,7 @@
         "platform": "Facebook",
         "reach": 224,
         "engagements": 2264,
-        "followers": 608
+        "followers": 609
       }
     ]
   },
@@ -1735,15 +1743,15 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 48,
+        "performance": 55,
         "accessibility": 90,
         "bestPractices": 77,
         "seo": 92
       },
       "desktop": {
-        "performance": 59,
+        "performance": 92,
         "accessibility": 90,
-        "bestPractices": 73,
+        "bestPractices": 77,
         "seo": 92
       }
     },
@@ -2815,6 +2823,21 @@
           "performance": 59,
           "accessibility": 90,
           "bestPractices": 73,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-29",
+        "mobile": {
+          "performance": 55,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 92,
+          "accessibility": 90,
+          "bestPractices": 77,
           "seo": 92
         }
       }
