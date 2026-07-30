@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-29T09:32:31.582Z",
+  "generatedAt": "2026-07-30T09:26:20.405Z",
   "overview": {
     "sessions": 603,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 12,
     "rankingsDelta": null,
-    "gbpViews": 5266,
+    "gbpViews": 5344,
     "gbpViewsDelta": null,
     "adSpend": 0,
     "adImpressions": 5282,
@@ -402,7 +402,7 @@
           "Organic Search": 1
         }
       },
-      "gbpCalls": 346,
+      "gbpCalls": 348,
       "gbpWebsiteClicks": 275,
       "gbpDirections": 268
     }
@@ -542,8 +542,8 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 5266,
-    "calls": 346,
+    "totalViews": 5344,
+    "calls": 348,
     "callsDelta": null,
     "directions": 268,
     "websiteClicks": 275,
@@ -1776,14 +1776,14 @@
       },
       {
         "date": "2026-07-26",
-        "views": 1,
-        "calls": 0,
+        "views": 64,
+        "calls": 2,
         "directions": 1,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-27",
-        "views": 0,
+        "views": 15,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1797,6 +1797,13 @@
       },
       {
         "date": "2026-07-29",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-30",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -2014,15 +2021,21 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "XNFHYGMT",
-    "uniques": 22,
-    "visits": 22,
-    "pageviews": 47,
-    "avgDuration": 174,
-    "bounceRate": 63.636363636364,
+    "uniques": 38,
+    "visits": 38,
+    "pageviews": 73,
+    "avgDuration": 137,
+    "bounceRate": 71.052631578947,
     "uniquesDelta": null,
     "visitsDelta": null,
     "pageviewsDelta": null,
     "dailyTimeseries": [
+      {
+        "date": "2026-07-30",
+        "visits": 8,
+        "uniques": 8,
+        "pageviews": 12
+      },
       {
         "date": "2026-07-28",
         "visits": 18,
@@ -2031,25 +2044,30 @@
       },
       {
         "date": "2026-07-29",
-        "visits": 4,
-        "uniques": 4,
-        "pageviews": 4
+        "visits": 12,
+        "uniques": 12,
+        "pageviews": 18
       }
     ],
     "monthlyHistory": [
       {
         "month": "Jul 2026",
         "date": "2026-07",
-        "visits": 22,
-        "uniques": 22,
-        "pageviews": 47
+        "visits": 38,
+        "uniques": 38,
+        "pageviews": 73
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 33,
-        "uniques": 21
+        "pageviews": 54,
+        "uniques": 37
+      },
+      {
+        "path": "/septic/",
+        "pageviews": 5,
+        "uniques": 3
       },
       {
         "path": "/about-us/",
@@ -2058,40 +2076,35 @@
       },
       {
         "path": "/plumbing/",
-        "pageviews": 3,
-        "uniques": 2
+        "pageviews": 4,
+        "uniques": 3
       },
       {
         "path": "/contact-us/",
         "pageviews": 2,
         "uniques": 1
-      },
-      {
-        "path": "/septic/",
-        "pageviews": 2,
-        "uniques": 2
       }
     ],
     "referrers": [
       {
-        "source": "Direct",
-        "visits": 10,
-        "uniques": 10
+        "source": "Paid/campaign",
+        "visits": 17,
+        "uniques": 17
       },
       {
-        "source": "Paid/campaign",
-        "visits": 7,
-        "uniques": 7
+        "source": "Direct",
+        "visits": 14,
+        "uniques": 14
       },
       {
         "source": "Organic",
-        "visits": 3,
-        "uniques": 3
+        "visits": 4,
+        "uniques": 4
       },
       {
         "source": "Social",
-        "visits": 2,
-        "uniques": 2
+        "visits": 3,
+        "uniques": 3
       }
     ],
     "cfPageViews": null,
@@ -2102,13 +2115,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 39,
+        "performance": 55,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 67,
+        "performance": 66,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
@@ -3200,6 +3213,21 @@
         },
         "desktop": {
           "performance": 67,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-30",
+        "mobile": {
+          "performance": 55,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 66,
           "accessibility": 93,
           "bestPractices": 100,
           "seo": 92

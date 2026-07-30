@@ -3,7 +3,7 @@
   "slug": "killergrowth",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-29T09:31:46.151Z",
+  "generatedAt": "2026-07-30T09:24:19.787Z",
   "overview": {
     "sessions": 23,
     "sessionsDelta": 0,
@@ -240,11 +240,11 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "NNTNPDOW",
-    "uniques": 7,
-    "visits": 7,
-    "pageviews": 10,
-    "avgDuration": 53,
-    "bounceRate": 57.142857142857,
+    "uniques": 10,
+    "visits": 10,
+    "pageviews": 14,
+    "avgDuration": 268,
+    "bounceRate": 60,
     "uniquesDelta": null,
     "visitsDelta": null,
     "pageviewsDelta": null,
@@ -257,30 +257,30 @@
       },
       {
         "date": "2026-07-29",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 1
+        "visits": 4,
+        "uniques": 4,
+        "pageviews": 5
       }
     ],
     "monthlyHistory": [
       {
         "month": "Jul 2026",
         "date": "2026-07",
-        "visits": 7,
-        "uniques": 7,
-        "pageviews": 10
+        "visits": 10,
+        "uniques": 10,
+        "pageviews": 14
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 4,
-        "uniques": 3
+        "pageviews": 6,
+        "uniques": 5
       },
       {
         "path": "/podcast",
-        "pageviews": 3,
-        "uniques": 2
+        "pageviews": 5,
+        "uniques": 3
       },
       {
         "path": "/studio-setup",
@@ -296,13 +296,13 @@
     "referrers": [
       {
         "source": "Direct",
-        "visits": 4,
-        "uniques": 4
+        "visits": 5,
+        "uniques": 5
       },
       {
         "source": "Organic",
-        "visits": 2,
-        "uniques": 2
+        "visits": 4,
+        "uniques": 4
       },
       {
         "source": "Paid/campaign",
@@ -318,13 +318,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 66,
+        "performance": 67,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 76,
+        "performance": 75,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
@@ -1431,6 +1431,21 @@
         },
         "desktop": {
           "performance": 76,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-30",
+        "mobile": {
+          "performance": 67,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 75,
           "accessibility": 91,
           "bestPractices": 100,
           "seo": 92

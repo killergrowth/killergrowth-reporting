@@ -3,7 +3,7 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "June 2026",
-  "generatedAt": "2026-07-29T09:32:07.419Z",
+  "generatedAt": "2026-07-30T09:24:47.465Z",
   "overview": {
     "sessions": 50,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": null,
     "rankingsDelta": null,
-    "gbpViews": 2177,
+    "gbpViews": 2184,
     "gbpViewsDelta": null,
     "adSpend": 593.29,
     "adImpressions": 25624,
@@ -206,7 +206,7 @@
       },
       "gbpCalls": 14,
       "gbpWebsiteClicks": 87,
-      "gbpDirections": 204
+      "gbpDirections": 216
     }
   },
   "ads": {
@@ -265,10 +265,10 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 2177,
+    "totalViews": 2184,
     "calls": 14,
     "callsDelta": null,
-    "directions": 204,
+    "directions": 216,
     "websiteClicks": 87,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -1499,7 +1499,7 @@
       },
       {
         "date": "2026-07-26",
-        "views": 0,
+        "views": 7,
         "calls": 0,
         "directions": 1,
         "websiteClicks": 0
@@ -1508,7 +1508,7 @@
         "date": "2026-07-27",
         "views": 0,
         "calls": 0,
-        "directions": 0,
+        "directions": 12,
         "websiteClicks": 0
       },
       {
@@ -1520,6 +1520,13 @@
       },
       {
         "date": "2026-07-29",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-30",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1743,17 +1750,12 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 55,
+        "performance": 43,
         "accessibility": 90,
         "bestPractices": 77,
         "seo": 92
       },
-      "desktop": {
-        "performance": 92,
-        "accessibility": 90,
-        "bestPractices": 77,
-        "seo": 92
-      }
+      "desktop": null
     },
     "psiHistory": [
       {
@@ -2840,6 +2842,16 @@
           "bestPractices": 77,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-07-30",
+        "mobile": {
+          "performance": 43,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": null
       }
     ]
   },
