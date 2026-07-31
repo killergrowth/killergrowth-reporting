@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-30T09:26:20.405Z",
+  "generatedAt": "2026-07-31T09:37:18.913Z",
   "overview": {
     "sessions": 603,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 12,
     "rankingsDelta": null,
-    "gbpViews": 5344,
+    "gbpViews": 5384,
     "gbpViewsDelta": null,
     "adSpend": 0,
     "adImpressions": 5282,
@@ -402,8 +402,8 @@
           "Organic Search": 1
         }
       },
-      "gbpCalls": 348,
-      "gbpWebsiteClicks": 275,
+      "gbpCalls": 354,
+      "gbpWebsiteClicks": 282,
       "gbpDirections": 268
     }
   },
@@ -542,11 +542,11 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 5344,
-    "calls": 348,
+    "totalViews": 5384,
+    "calls": 354,
     "callsDelta": null,
     "directions": 268,
-    "websiteClicks": 275,
+    "websiteClicks": 282,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1783,14 +1783,14 @@
       },
       {
         "date": "2026-07-27",
-        "views": 15,
-        "calls": 0,
+        "views": 39,
+        "calls": 6,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 7
       },
       {
         "date": "2026-07-28",
-        "views": 0,
+        "views": 16,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1804,6 +1804,13 @@
       },
       {
         "date": "2026-07-30",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-31",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1855,7 +1862,7 @@
         "platform": "Facebook",
         "reach": 162,
         "engagements": 243,
-        "followers": 1197
+        "followers": 1196
       }
     ]
   },
@@ -2021,20 +2028,20 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "XNFHYGMT",
-    "uniques": 38,
-    "visits": 38,
-    "pageviews": 73,
-    "avgDuration": 137,
-    "bounceRate": 71.052631578947,
+    "uniques": 49,
+    "visits": 49,
+    "pageviews": 96,
+    "avgDuration": 161,
+    "bounceRate": 65.30612244898,
     "uniquesDelta": null,
     "visitsDelta": null,
     "pageviewsDelta": null,
     "dailyTimeseries": [
       {
         "date": "2026-07-30",
-        "visits": 8,
-        "uniques": 8,
-        "pageviews": 12
+        "visits": 16,
+        "uniques": 16,
+        "pageviews": 23
       },
       {
         "date": "2026-07-28",
@@ -2047,22 +2054,33 @@
         "visits": 12,
         "uniques": 12,
         "pageviews": 18
+      },
+      {
+        "date": "2026-07-31",
+        "visits": 3,
+        "uniques": 3,
+        "pageviews": 12
       }
     ],
     "monthlyHistory": [
       {
         "month": "Jul 2026",
         "date": "2026-07",
-        "visits": 38,
-        "uniques": 38,
-        "pageviews": 73
+        "visits": 49,
+        "uniques": 49,
+        "pageviews": 96
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 54,
-        "uniques": 37
+        "pageviews": 70,
+        "uniques": 48
+      },
+      {
+        "path": "/about-us/",
+        "pageviews": 6,
+        "uniques": 4
       },
       {
         "path": "/septic/",
@@ -2070,7 +2088,7 @@
         "uniques": 3
       },
       {
-        "path": "/about-us/",
+        "path": "/contact-us/",
         "pageviews": 4,
         "uniques": 2
       },
@@ -2078,23 +2096,18 @@
         "path": "/plumbing/",
         "pageviews": 4,
         "uniques": 3
-      },
-      {
-        "path": "/contact-us/",
-        "pageviews": 2,
-        "uniques": 1
       }
     ],
     "referrers": [
       {
         "source": "Paid/campaign",
-        "visits": 17,
-        "uniques": 17
+        "visits": 23,
+        "uniques": 23
       },
       {
         "source": "Direct",
-        "visits": 14,
-        "uniques": 14
+        "visits": 18,
+        "uniques": 18
       },
       {
         "source": "Organic",
@@ -2103,8 +2116,8 @@
       },
       {
         "source": "Social",
-        "visits": 3,
-        "uniques": 3
+        "visits": 4,
+        "uniques": 4
       }
     ],
     "cfPageViews": null,
@@ -2115,13 +2128,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 55,
+        "performance": 49,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 66,
+        "performance": 54,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
@@ -3228,6 +3241,21 @@
         },
         "desktop": {
           "performance": 66,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-31",
+        "mobile": {
+          "performance": 49,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 54,
           "accessibility": 93,
           "bestPractices": 100,
           "seo": 92

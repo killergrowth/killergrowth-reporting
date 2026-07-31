@@ -3,7 +3,7 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-30T09:27:19.295Z",
+  "generatedAt": "2026-07-31T09:40:53.307Z",
   "overview": {
     "sessions": 633,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 18,
     "rankingsDelta": null,
-    "gbpViews": 814,
+    "gbpViews": 825,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -478,7 +478,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 814,
+    "totalViews": 825,
     "calls": 12,
     "callsDelta": null,
     "directions": 241,
@@ -1719,14 +1719,14 @@
       },
       {
         "date": "2026-07-27",
-        "views": 3,
+        "views": 8,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-28",
-        "views": 0,
+        "views": 6,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1740,6 +1740,13 @@
       },
       {
         "date": "2026-07-30",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-31",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1953,20 +1960,20 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "MTRAPVNX",
-    "uniques": 33,
-    "visits": 33,
-    "pageviews": 52,
-    "avgDuration": 47,
-    "bounceRate": 66.666666666667,
+    "uniques": 46,
+    "visits": 46,
+    "pageviews": 75,
+    "avgDuration": 70,
+    "bounceRate": 67.391304347826,
     "uniquesDelta": null,
     "visitsDelta": null,
     "pageviewsDelta": null,
     "dailyTimeseries": [
       {
         "date": "2026-07-30",
-        "visits": 5,
-        "uniques": 5,
-        "pageviews": 6
+        "visits": 15,
+        "uniques": 15,
+        "pageviews": 26
       },
       {
         "date": "2026-07-28",
@@ -1979,59 +1986,65 @@
         "visits": 12,
         "uniques": 12,
         "pageviews": 26
+      },
+      {
+        "date": "2026-07-31",
+        "visits": 3,
+        "uniques": 3,
+        "pageviews": 3
       }
     ],
     "monthlyHistory": [
       {
         "month": "Jul 2026",
         "date": "2026-07",
-        "visits": 33,
-        "uniques": 33,
-        "pageviews": 52
+        "visits": 46,
+        "uniques": 46,
+        "pageviews": 75
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 27,
-        "uniques": 18
+        "pageviews": 33,
+        "uniques": 24
       },
       {
         "path": "/service/water-damage-restoration/",
-        "pageviews": 9,
-        "uniques": 8
+        "pageviews": 11,
+        "uniques": 10
+      },
+      {
+        "path": "/service/air-duct-cleaning/",
+        "pageviews": 8,
+        "uniques": 4
       },
       {
         "path": "/service/carpet-cleaning/",
-        "pageviews": 5,
-        "uniques": 3
+        "pageviews": 6,
+        "uniques": 4
       },
       {
         "path": "/about/",
-        "pageviews": 4,
-        "uniques": 4
-      },
-      {
-        "path": "/contact/",
-        "pageviews": 4,
-        "uniques": 4
+        "pageviews": 5,
+        "uniques": 5
       }
     ],
     "referrers": [
       {
         "source": "Paid/campaign",
-        "visits": 20,
-        "uniques": 20
+        "visits": 27,
+        "uniques": 27
       },
       {
         "source": "Direct",
-        "visits": 10,
-        "uniques": 10
+        "visits": 15,
+        "uniques": 15
       },
       {
         "source": "Organic",
-        "visits": 3,
-        "uniques": 3
+        "visits": 4,
+        "uniques": 4
       }
     ],
     "cfPageViews": null,
@@ -2041,8 +2054,18 @@
     "cfDailyPageViews": [],
     "cfMonthlyHistory": [],
     "psiScores": {
-      "mobile": null,
-      "desktop": null
+      "mobile": {
+        "performance": 63,
+        "accessibility": 92,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "desktop": {
+        "performance": 91,
+        "accessibility": 92,
+        "bestPractices": 100,
+        "seo": 100
+      }
     },
     "psiHistory": [
       {
@@ -3039,6 +3062,21 @@
         "date": "2026-07-30",
         "mobile": null,
         "desktop": null
+      },
+      {
+        "date": "2026-07-31",
+        "mobile": {
+          "performance": 63,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 91,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        }
       }
     ]
   },

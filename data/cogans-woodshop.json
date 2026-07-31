@@ -3,7 +3,7 @@
   "slug": "cogans-woodshop",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-30T09:30:46.058Z",
+  "generatedAt": "2026-07-31T09:45:33.975Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -83,18 +83,55 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "DYSWZSVJ",
-    "uniques": 0,
-    "visits": 0,
-    "pageviews": 0,
-    "avgDuration": null,
-    "bounceRate": null,
+    "uniques": 1,
+    "visits": 1,
+    "pageviews": 3,
+    "avgDuration": 69,
+    "bounceRate": 0,
     "uniquesDelta": null,
     "visitsDelta": null,
     "pageviewsDelta": null,
-    "dailyTimeseries": [],
-    "monthlyHistory": [],
-    "topPages": [],
-    "referrers": [],
+    "dailyTimeseries": [
+      {
+        "date": "2026-07-30",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 3
+      }
+    ],
+    "monthlyHistory": [
+      {
+        "month": "Jul 2026",
+        "date": "2026-07",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 3
+      }
+    ],
+    "topPages": [
+      {
+        "path": "/",
+        "pageviews": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/about",
+        "pageviews": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/gallery",
+        "pageviews": 1,
+        "uniques": 1
+      }
+    ],
+    "referrers": [
+      {
+        "source": "Organic",
+        "visits": 1,
+        "uniques": 1
+      }
+    ],
     "cfPageViews": 20800,
     "cfUniques": 3273,
     "cfPageViewsDelta": 101.1,
@@ -275,7 +312,7 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 70,
+        "performance": 71,
         "accessibility": 92,
         "bestPractices": 92,
         "seo": 92
@@ -352,6 +389,21 @@
         "date": "2026-07-30",
         "mobile": {
           "performance": 70,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 97,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-31",
+        "mobile": {
+          "performance": 71,
           "accessibility": 92,
           "bestPractices": 92,
           "seo": 92

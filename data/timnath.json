@@ -3,7 +3,7 @@
   "slug": "timnath",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-30T09:27:46.417Z",
+  "generatedAt": "2026-07-31T09:41:41.120Z",
   "overview": {
     "sessions": 192,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 0,
     "rankingsDelta": null,
-    "gbpViews": 737,
+    "gbpViews": 743,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -722,7 +722,7 @@
       },
       "gbpCalls": 4,
       "gbpWebsiteClicks": 17,
-      "gbpDirections": 246
+      "gbpDirections": 247
     }
   },
   "ads": {
@@ -835,10 +835,10 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 737,
+    "totalViews": 743,
     "calls": 4,
     "callsDelta": null,
-    "directions": 246,
+    "directions": 247,
     "websiteClicks": 17,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -2076,16 +2076,16 @@
       },
       {
         "date": "2026-07-27",
-        "views": 8,
+        "views": 12,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-28",
-        "views": 0,
+        "views": 2,
         "calls": 0,
-        "directions": 0,
+        "directions": 1,
         "websiteClicks": 0
       },
       {
@@ -2097,6 +2097,13 @@
       },
       {
         "date": "2026-07-30",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-31",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -2178,15 +2185,21 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "YNVVPFQV",
-    "uniques": 2,
-    "visits": 2,
-    "pageviews": 10,
-    "avgDuration": 65,
-    "bounceRate": 50,
+    "uniques": 3,
+    "visits": 3,
+    "pageviews": 12,
+    "avgDuration": 50,
+    "bounceRate": 33.333333333333,
     "uniquesDelta": null,
     "visitsDelta": null,
     "pageviewsDelta": null,
     "dailyTimeseries": [
+      {
+        "date": "2026-07-30",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 2
+      },
       {
         "date": "2026-07-28",
         "visits": 2,
@@ -2198,15 +2211,20 @@
       {
         "month": "Jul 2026",
         "date": "2026-07",
-        "visits": 2,
-        "uniques": 2,
-        "pageviews": 10
+        "visits": 3,
+        "uniques": 3,
+        "pageviews": 12
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 5,
+        "pageviews": 6,
+        "uniques": 3
+      },
+      {
+        "path": "/contact",
+        "pageviews": 2,
         "uniques": 2
       },
       {
@@ -2220,11 +2238,6 @@
         "uniques": 1
       },
       {
-        "path": "/contact",
-        "pageviews": 1,
-        "uniques": 1
-      },
-      {
         "path": "/fence-staining/",
         "pageviews": 1,
         "uniques": 1
@@ -2233,8 +2246,8 @@
     "referrers": [
       {
         "source": "Direct",
-        "visits": 1,
-        "uniques": 1
+        "visits": 2,
+        "uniques": 2
       },
       {
         "source": "Paid/campaign",
@@ -2250,13 +2263,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 44,
+        "performance": 65,
         "accessibility": 90,
-        "bestPractices": 100,
+        "bestPractices": 96,
         "seo": 92
       },
       "desktop": {
-        "performance": 74,
+        "performance": 42,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
@@ -2668,6 +2681,21 @@
         },
         "desktop": {
           "performance": 74,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-31",
+        "mobile": {
+          "performance": 65,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 42,
           "accessibility": 90,
           "bestPractices": 100,
           "seo": 92

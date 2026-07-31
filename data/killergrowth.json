@@ -3,7 +3,7 @@
   "slug": "killergrowth",
   "logoPath": null,
   "period": "June 2026",
-  "generatedAt": "2026-07-30T09:24:19.787Z",
+  "generatedAt": "2026-07-31T09:36:18.641Z",
   "overview": {
     "sessions": 23,
     "sessionsDelta": 0,
@@ -240,15 +240,21 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "NNTNPDOW",
-    "uniques": 10,
-    "visits": 10,
-    "pageviews": 14,
-    "avgDuration": 268,
-    "bounceRate": 60,
+    "uniques": 15,
+    "visits": 15,
+    "pageviews": 25,
+    "avgDuration": 198,
+    "bounceRate": 53.333333333333,
     "uniquesDelta": null,
     "visitsDelta": null,
     "pageviewsDelta": null,
     "dailyTimeseries": [
+      {
+        "date": "2026-07-30",
+        "visits": 4,
+        "uniques": 4,
+        "pageviews": 9
+      },
       {
         "date": "2026-07-28",
         "visits": 6,
@@ -260,52 +266,68 @@
         "visits": 4,
         "uniques": 4,
         "pageviews": 5
+      },
+      {
+        "date": "2026-07-31",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 2
       }
     ],
     "monthlyHistory": [
       {
         "month": "Jul 2026",
         "date": "2026-07",
-        "visits": 10,
-        "uniques": 10,
-        "pageviews": 14
+        "visits": 15,
+        "uniques": 15,
+        "pageviews": 25
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 6,
-        "uniques": 5
+        "pageviews": 11,
+        "uniques": 9
       },
       {
         "path": "/podcast",
-        "pageviews": 5,
-        "uniques": 3
+        "pageviews": 7,
+        "uniques": 5
+      },
+      {
+        "path": "/book-your-podcast",
+        "pageviews": 2,
+        "uniques": 1
+      },
+      {
+        "path": "/booking",
+        "pageviews": 2,
+        "uniques": 2
       },
       {
         "path": "/studio-setup",
         "pageviews": 2,
         "uniques": 2
-      },
-      {
-        "path": "/booking",
-        "pageviews": 1,
-        "uniques": 1
       }
     ],
     "referrers": [
       {
         "source": "Direct",
-        "visits": 5,
-        "uniques": 5
+        "visits": 7,
+        "uniques": 7
       },
       {
         "source": "Organic",
-        "visits": 4,
-        "uniques": 4
+        "visits": 6,
+        "uniques": 6
       },
       {
         "source": "Paid/campaign",
+        "visits": 1,
+        "uniques": 1
+      },
+      {
+        "source": "Social",
         "visits": 1,
         "uniques": 1
       }
@@ -318,13 +340,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 67,
+        "performance": 90,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 75,
+        "performance": 76,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
@@ -1446,6 +1468,21 @@
         },
         "desktop": {
           "performance": 75,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-31",
+        "mobile": {
+          "performance": 90,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 76,
           "accessibility": 91,
           "bestPractices": 100,
           "seo": 92
