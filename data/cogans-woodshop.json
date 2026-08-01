@@ -2,8 +2,8 @@
   "client": "Cogan's Woodshop",
   "slug": "cogans-woodshop",
   "logoPath": null,
-  "period": "June 2026",
-  "generatedAt": "2026-07-31T09:45:33.975Z",
+  "period": "July 2026",
+  "generatedAt": "2026-08-01T09:08:47.805Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -83,14 +83,14 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "DYSWZSVJ",
-    "uniques": 1,
-    "visits": 1,
-    "pageviews": 3,
+    "uniques": 0,
+    "visits": 0,
+    "pageviews": 0,
     "avgDuration": 69,
     "bounceRate": 0,
-    "uniquesDelta": null,
-    "visitsDelta": null,
-    "pageviewsDelta": null,
+    "uniquesDelta": -100,
+    "visitsDelta": -100,
+    "pageviewsDelta": -100,
     "dailyTimeseries": [
       {
         "date": "2026-07-30",
@@ -108,30 +108,8 @@
         "pageviews": 3
       }
     ],
-    "topPages": [
-      {
-        "path": "/",
-        "pageviews": 1,
-        "uniques": 1
-      },
-      {
-        "path": "/about",
-        "pageviews": 1,
-        "uniques": 1
-      },
-      {
-        "path": "/gallery",
-        "pageviews": 1,
-        "uniques": 1
-      }
-    ],
-    "referrers": [
-      {
-        "source": "Organic",
-        "visits": 1,
-        "uniques": 1
-      }
-    ],
+    "topPages": [],
+    "referrers": [],
     "cfPageViews": 20800,
     "cfUniques": 3273,
     "cfPageViewsDelta": 101.1,
@@ -312,13 +290,13 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 71,
+        "performance": 70,
         "accessibility": 92,
         "bestPractices": 92,
         "seo": 92
       },
       "desktop": {
-        "performance": 97,
+        "performance": 94,
         "accessibility": 80,
         "bestPractices": 92,
         "seo": 92
@@ -410,6 +388,21 @@
         },
         "desktop": {
           "performance": 97,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-01",
+        "mobile": {
+          "performance": 70,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 94,
           "accessibility": 80,
           "bestPractices": 92,
           "seo": 92

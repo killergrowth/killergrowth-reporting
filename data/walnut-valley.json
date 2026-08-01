@@ -2,8 +2,8 @@
   "client": "Walnut Valley Meat Market",
   "slug": "walnut-valley",
   "logoPath": null,
-  "period": "June 2026",
-  "generatedAt": "2026-07-31T09:42:07.059Z",
+  "period": "July 2026",
+  "generatedAt": "2026-08-01T09:02:48.646Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -144,26 +144,26 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "SWIWEOSC",
-    "uniques": 1089,
-    "visits": 1089,
-    "pageviews": 1238,
-    "avgDuration": 66,
-    "bounceRate": 90.266299357208,
-    "uniquesDelta": null,
-    "visitsDelta": null,
-    "pageviewsDelta": null,
+    "uniques": 4,
+    "visits": 4,
+    "pageviews": 6,
+    "avgDuration": 37,
+    "bounceRate": 75,
+    "uniquesDelta": -99.7,
+    "visitsDelta": -99.7,
+    "pageviewsDelta": -99.6,
     "dailyTimeseries": [
       {
-        "date": "2026-07-30",
-        "visits": 264,
-        "uniques": 264,
-        "pageviews": 288
+        "date": "2026-08-01",
+        "visits": 4,
+        "uniques": 4,
+        "pageviews": 6
       },
       {
-        "date": "2026-07-28",
-        "visits": 363,
-        "uniques": 363,
-        "pageviews": 406
+        "date": "2026-07-31",
+        "visits": 284,
+        "uniques": 284,
+        "pageviews": 350
       },
       {
         "date": "2026-07-29",
@@ -178,68 +178,51 @@
         "pageviews": 28
       },
       {
-        "date": "2026-07-31",
-        "visits": 134,
-        "uniques": 134,
-        "pageviews": 151
+        "date": "2026-07-28",
+        "visits": 363,
+        "uniques": 363,
+        "pageviews": 406
+      },
+      {
+        "date": "2026-07-30",
+        "visits": 264,
+        "uniques": 264,
+        "pageviews": 288
       }
     ],
     "monthlyHistory": [
       {
         "month": "Jul 2026",
         "date": "2026-07",
-        "visits": 1089,
-        "uniques": 1089,
-        "pageviews": 1238
+        "visits": 1239,
+        "uniques": 1239,
+        "pageviews": 1437
+      },
+      {
+        "month": "Aug 2026",
+        "date": "2026-08",
+        "visits": 4,
+        "uniques": 4,
+        "pageviews": 6
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 675,
-        "uniques": 576
-      },
-      {
-        "path": "/best-ground-beef",
-        "pageviews": 513,
-        "uniques": 482
-      },
-      {
-        "path": "/Home",
-        "pageviews": 41,
-        "uniques": 36
-      },
-      {
-        "path": "/locations",
-        "pageviews": 3,
-        "uniques": 2
-      },
-      {
-        "path": "/our-story",
-        "pageviews": 3,
-        "uniques": 2
+        "pageviews": 6,
+        "uniques": 4
       }
     ],
     "referrers": [
       {
-        "source": "Paid/campaign",
-        "visits": 803,
-        "uniques": 803
-      },
-      {
         "source": "Organic",
-        "visits": 134,
-        "uniques": 134
+        "visits": 3,
+        "uniques": 3
       },
       {
         "source": "Direct",
-        "visits": 89,
-        "uniques": 89
-      },
-      {
-        "source": "Social",
-        "visits": 63,
-        "uniques": 63
+        "visits": 1,
+        "uniques": 1
       }
     ],
     "cfPageViews": 58255,
@@ -422,14 +405,14 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 67,
-        "accessibility": 72,
+        "performance": 68,
+        "accessibility": 82,
         "bestPractices": 100,
         "seo": 100
       },
       "desktop": {
-        "performance": 73,
-        "accessibility": 80,
+        "performance": 75,
+        "accessibility": 91,
         "bestPractices": 100,
         "seo": 100
       }
@@ -661,6 +644,21 @@
         "desktop": {
           "performance": 73,
           "accessibility": 80,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-01",
+        "mobile": {
+          "performance": 68,
+          "accessibility": 82,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 75,
+          "accessibility": 91,
           "bestPractices": 100,
           "seo": 100
         }

@@ -2,8 +2,8 @@
   "client": "Shaw's Pest Control",
   "slug": "shaws-pest",
   "logoPath": null,
-  "period": "June 2026",
-  "generatedAt": "2026-07-31T09:46:30.930Z",
+  "period": "July 2026",
+  "generatedAt": "2026-08-01T09:09:39.570Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -103,17 +103,12 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 53,
+        "performance": 65,
         "accessibility": 86,
         "bestPractices": 96,
         "seo": 92
       },
-      "desktop": {
-        "performance": 83,
-        "accessibility": 86,
-        "bestPractices": 96,
-        "seo": 92
-      }
+      "desktop": null
     },
     "psiHistory": [
       {
@@ -350,6 +345,16 @@
           "bestPractices": 96,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-08-01",
+        "mobile": {
+          "performance": 65,
+          "accessibility": 86,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": null
       }
     ]
   },

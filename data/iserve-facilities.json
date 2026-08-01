@@ -2,8 +2,8 @@
   "client": "IServe Facilities",
   "slug": "iserve-facilities",
   "logoPath": null,
-  "period": "June 2026",
-  "generatedAt": "2026-07-31T09:45:55.590Z",
+  "period": "July 2026",
+  "generatedAt": "2026-08-01T09:09:11.906Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -83,15 +83,21 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "ANNMTVXC",
-    "uniques": 6,
-    "visits": 6,
-    "pageviews": 16,
-    "avgDuration": 282,
-    "bounceRate": 16.666666666667,
-    "uniquesDelta": null,
-    "visitsDelta": null,
-    "pageviewsDelta": null,
+    "uniques": 1,
+    "visits": 1,
+    "pageviews": 4,
+    "avgDuration": 73,
+    "bounceRate": 0,
+    "uniquesDelta": -83.3,
+    "visitsDelta": -83.3,
+    "pageviewsDelta": -75,
     "dailyTimeseries": [
+      {
+        "date": "2026-08-01",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 4
+      },
       {
         "date": "2026-07-30",
         "visits": 2,
@@ -124,21 +130,23 @@
         "visits": 6,
         "uniques": 6,
         "pageviews": 16
+      },
+      {
+        "month": "Aug 2026",
+        "date": "2026-08",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 4
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 12,
-        "uniques": 6
+        "pageviews": 3,
+        "uniques": 1
       },
       {
         "path": "/apply",
-        "pageviews": 3,
-        "uniques": 3
-      },
-      {
-        "path": "/contact",
         "pageviews": 1,
         "uniques": 1
       }
@@ -146,13 +154,8 @@
     "referrers": [
       {
         "source": "Organic",
-        "visits": 4,
-        "uniques": 4
-      },
-      {
-        "source": "Direct",
-        "visits": 2,
-        "uniques": 2
+        "visits": 1,
+        "uniques": 1
       }
     ],
     "cfPageViews": 26736,
@@ -415,6 +418,21 @@
       },
       {
         "date": "2026-07-31",
+        "mobile": {
+          "performance": 71,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 79,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-01",
         "mobile": {
           "performance": 71,
           "accessibility": 100,
