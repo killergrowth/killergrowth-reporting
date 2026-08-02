@@ -3,7 +3,7 @@
   "slug": "walnut-valley",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-01T09:02:48.646Z",
+  "generatedAt": "2026-08-02T09:08:12.419Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -146,18 +146,18 @@
     "fathomSiteId": "SWIWEOSC",
     "uniques": 4,
     "visits": 4,
-    "pageviews": 6,
-    "avgDuration": 37,
-    "bounceRate": 75,
+    "pageviews": 7,
+    "avgDuration": 38,
+    "bounceRate": 50,
     "uniquesDelta": -99.7,
     "visitsDelta": -99.7,
-    "pageviewsDelta": -99.6,
+    "pageviewsDelta": -99.5,
     "dailyTimeseries": [
       {
         "date": "2026-08-01",
         "visits": 4,
         "uniques": 4,
-        "pageviews": 6
+        "pageviews": 7
       },
       {
         "date": "2026-07-31",
@@ -203,13 +203,13 @@
         "date": "2026-08",
         "visits": 4,
         "uniques": 4,
-        "pageviews": 6
+        "pageviews": 7
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 6,
+        "pageviews": 7,
         "uniques": 4
       }
     ],
@@ -405,16 +405,16 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 68,
+        "performance": 61,
         "accessibility": 82,
         "bestPractices": 100,
-        "seo": 100
+        "seo": 92
       },
       "desktop": {
-        "performance": 75,
+        "performance": 72,
         "accessibility": 91,
         "bestPractices": 100,
-        "seo": 100
+        "seo": 92
       }
     },
     "psiHistory": [
@@ -661,6 +661,21 @@
           "accessibility": 91,
           "bestPractices": 100,
           "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-02",
+        "mobile": {
+          "performance": 61,
+          "accessibility": 82,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 72,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
         }
       }
     ]
