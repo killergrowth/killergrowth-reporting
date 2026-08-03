@@ -3,7 +3,7 @@
   "slug": "killergrowth",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-02T09:04:37.455Z",
+  "generatedAt": "2026-08-03T10:31:03.014Z",
   "overview": {
     "sessions": 23,
     "sessionsDelta": 0,
@@ -201,7 +201,7 @@
         "platform": "Facebook",
         "reach": 388,
         "engagements": 317,
-        "followers": 554
+        "followers": 553
       }
     ]
   },
@@ -251,14 +251,14 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "NNTNPDOW",
-    "uniques": 1,
-    "visits": 1,
-    "pageviews": 1,
-    "avgDuration": 4,
-    "bounceRate": 100,
-    "uniquesDelta": -93.8,
-    "visitsDelta": -93.8,
-    "pageviewsDelta": -96.2,
+    "uniques": 4,
+    "visits": 4,
+    "pageviews": 5,
+    "avgDuration": 87,
+    "bounceRate": 75,
+    "uniquesDelta": -75,
+    "visitsDelta": -75,
+    "pageviewsDelta": -80.8,
     "dailyTimeseries": [
       {
         "date": "2026-08-01",
@@ -279,10 +279,22 @@
         "pageviews": 9
       },
       {
+        "date": "2026-08-02",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 3
+      },
+      {
         "date": "2026-07-29",
         "visits": 4,
         "uniques": 4,
         "pageviews": 5
+      },
+      {
+        "date": "2026-08-03",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 1
       },
       {
         "date": "2026-07-31",
@@ -302,23 +314,23 @@
       {
         "month": "Aug 2026",
         "date": "2026-08",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 1
+        "visits": 4,
+        "uniques": 4,
+        "pageviews": 5
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 1,
-        "uniques": 1
+        "pageviews": 5,
+        "uniques": 4
       }
     ],
     "referrers": [
       {
         "source": "Organic",
-        "visits": 1,
-        "uniques": 1
+        "visits": 4,
+        "uniques": 4
       }
     ],
     "cfPageViews": null,
@@ -329,7 +341,7 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 90,
+        "performance": 69,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
@@ -1496,6 +1508,21 @@
         "date": "2026-08-02",
         "mobile": {
           "performance": 90,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 76,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-03",
+        "mobile": {
+          "performance": 69,
           "accessibility": 91,
           "bestPractices": 100,
           "seo": 92

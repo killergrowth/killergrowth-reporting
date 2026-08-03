@@ -3,7 +3,7 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-02T09:07:08.494Z",
+  "generatedAt": "2026-08-03T10:33:13.247Z",
   "overview": {
     "sessions": 633,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 18,
     "rankingsDelta": null,
-    "gbpViews": 728,
+    "gbpViews": 729,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -484,7 +484,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 728,
+    "totalViews": 729,
     "calls": 11,
     "callsDelta": null,
     "directions": 215,
@@ -1550,7 +1550,7 @@
       },
       {
         "date": "2026-07-30",
-        "views": 0,
+        "views": 1,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1571,6 +1571,13 @@
       },
       {
         "date": "2026-08-02",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-03",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1789,14 +1796,14 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "MTRAPVNX",
-    "uniques": 7,
-    "visits": 7,
-    "pageviews": 8,
-    "avgDuration": 24,
-    "bounceRate": 85.714285714286,
-    "uniquesDelta": -87,
-    "visitsDelta": -87,
-    "pageviewsDelta": -90.6,
+    "uniques": 16,
+    "visits": 16,
+    "pageviews": 22,
+    "avgDuration": 85,
+    "bounceRate": 81.25,
+    "uniquesDelta": -70.4,
+    "visitsDelta": -70.4,
+    "pageviewsDelta": -74.1,
     "dailyTimeseries": [
       {
         "date": "2026-08-01",
@@ -1805,16 +1812,10 @@
         "pageviews": 8
       },
       {
-        "date": "2026-07-29",
-        "visits": 12,
-        "uniques": 12,
+        "date": "2026-07-30",
+        "visits": 15,
+        "uniques": 15,
         "pageviews": 26
-      },
-      {
-        "date": "2026-07-31",
-        "visits": 11,
-        "uniques": 11,
-        "pageviews": 13
       },
       {
         "date": "2026-07-28",
@@ -1823,10 +1824,28 @@
         "pageviews": 20
       },
       {
-        "date": "2026-07-30",
-        "visits": 15,
-        "uniques": 15,
+        "date": "2026-08-02",
+        "visits": 5,
+        "uniques": 5,
+        "pageviews": 10
+      },
+      {
+        "date": "2026-07-29",
+        "visits": 12,
+        "uniques": 12,
         "pageviews": 26
+      },
+      {
+        "date": "2026-08-03",
+        "visits": 4,
+        "uniques": 4,
+        "pageviews": 4
+      },
+      {
+        "date": "2026-07-31",
+        "visits": 11,
+        "uniques": 11,
+        "pageviews": 13
       }
     ],
     "monthlyHistory": [
@@ -1840,16 +1859,26 @@
       {
         "month": "Aug 2026",
         "date": "2026-08",
-        "visits": 7,
-        "uniques": 7,
-        "pageviews": 8
+        "visits": 16,
+        "uniques": 16,
+        "pageviews": 22
       }
     ],
     "topPages": [
       {
+        "path": "/service/water-damage-restoration/",
+        "pageviews": 8,
+        "uniques": 8
+      },
+      {
         "path": "/",
-        "pageviews": 3,
-        "uniques": 3
+        "pageviews": 6,
+        "uniques": 5
+      },
+      {
+        "path": "/about/",
+        "pageviews": 2,
+        "uniques": 1
       },
       {
         "path": "/areas-served/wichita-ks/",
@@ -1857,26 +1886,21 @@
         "uniques": 1
       },
       {
-        "path": "/service/water-damage-restoration/",
+        "path": "/service/carpet-cleaning/",
         "pageviews": 2,
-        "uniques": 2
-      },
-      {
-        "path": "/areas-served/newton-ks/",
-        "pageviews": 1,
         "uniques": 1
       }
     ],
     "referrers": [
       {
-        "source": "Direct",
-        "visits": 3,
-        "uniques": 3
+        "source": "Paid/campaign",
+        "visits": 11,
+        "uniques": 11
       },
       {
-        "source": "Paid/campaign",
-        "visits": 3,
-        "uniques": 3
+        "source": "Direct",
+        "visits": 4,
+        "uniques": 4
       },
       {
         "source": "Organic",
@@ -1892,13 +1916,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 54,
+        "performance": 57,
         "accessibility": 92,
         "bestPractices": 100,
         "seo": 100
       },
       "desktop": {
-        "performance": 75,
+        "performance": 79,
         "accessibility": 92,
         "bestPractices": 100,
         "seo": 100
@@ -2940,6 +2964,21 @@
         },
         "desktop": {
           "performance": 75,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-03",
+        "mobile": {
+          "performance": 57,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 79,
           "accessibility": 92,
           "bestPractices": 100,
           "seo": 100
