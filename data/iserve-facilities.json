@@ -3,7 +3,7 @@
   "slug": "iserve-facilities",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-03T10:37:29.286Z",
+  "generatedAt": "2026-08-04T09:38:03.947Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -83,14 +83,14 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "ANNMTVXC",
-    "uniques": 7,
-    "visits": 7,
-    "pageviews": 11,
-    "avgDuration": 29,
-    "bounceRate": 71.428571428571,
-    "uniquesDelta": 16.7,
-    "visitsDelta": 16.7,
-    "pageviewsDelta": -31.3,
+    "uniques": 9,
+    "visits": 9,
+    "pageviews": 17,
+    "avgDuration": 52,
+    "bounceRate": 55.555555555556,
+    "uniquesDelta": 50,
+    "visitsDelta": 50,
+    "pageviewsDelta": 6.3,
     "dailyTimeseries": [
       {
         "date": "2026-08-01",
@@ -124,9 +124,9 @@
       },
       {
         "date": "2026-08-03",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 1
+        "visits": 3,
+        "uniques": 3,
+        "pageviews": 7
       },
       {
         "date": "2026-07-31",
@@ -146,29 +146,44 @@
       {
         "month": "Aug 2026",
         "date": "2026-08",
-        "visits": 7,
-        "uniques": 7,
-        "pageviews": 11
+        "visits": 9,
+        "uniques": 9,
+        "pageviews": 17
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 9,
-        "uniques": 7
+        "pageviews": 10,
+        "uniques": 8
       },
       {
         "path": "/about",
-        "pageviews": 1,
-        "uniques": 1
+        "pageviews": 2,
+        "uniques": 2
       },
       {
         "path": "/apply",
         "pageviews": 1,
         "uniques": 1
+      },
+      {
+        "path": "/contact",
+        "pageviews": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/gallery",
+        "pageviews": 1,
+        "uniques": 1
       }
     ],
     "referrers": [
+      {
+        "source": "Organic",
+        "visits": 4,
+        "uniques": 4
+      },
       {
         "source": "Paid/campaign",
         "visits": 3,
@@ -176,11 +191,6 @@
       },
       {
         "source": "Direct",
-        "visits": 2,
-        "uniques": 2
-      },
-      {
-        "source": "Organic",
         "visits": 2,
         "uniques": 2
       }
@@ -360,13 +370,13 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 71,
+        "performance": 70,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100
       },
       "desktop": {
-        "performance": 86,
+        "performance": 96,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100
@@ -498,6 +508,21 @@
         },
         "desktop": {
           "performance": 86,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-04",
+        "mobile": {
+          "performance": 70,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 96,
           "accessibility": 100,
           "bestPractices": 100,
           "seo": 100

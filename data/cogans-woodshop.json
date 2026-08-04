@@ -3,7 +3,7 @@
   "slug": "cogans-woodshop",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-03T10:37:10.195Z",
+  "generatedAt": "2026-08-04T09:37:41.737Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -83,20 +83,26 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "DYSWZSVJ",
-    "uniques": 0,
-    "visits": 0,
-    "pageviews": 0,
-    "avgDuration": 69,
-    "bounceRate": 0,
-    "uniquesDelta": -100,
-    "visitsDelta": -100,
-    "pageviewsDelta": -100,
+    "uniques": 3,
+    "visits": 3,
+    "pageviews": 6,
+    "avgDuration": 293,
+    "bounceRate": 66.666666666667,
+    "uniquesDelta": 200,
+    "visitsDelta": 200,
+    "pageviewsDelta": 100,
     "dailyTimeseries": [
       {
         "date": "2026-07-30",
         "visits": 1,
         "uniques": 1,
         "pageviews": 3
+      },
+      {
+        "date": "2026-08-03",
+        "visits": 3,
+        "uniques": 3,
+        "pageviews": 6
       }
     ],
     "monthlyHistory": [
@@ -106,10 +112,54 @@
         "visits": 1,
         "uniques": 1,
         "pageviews": 3
+      },
+      {
+        "month": "Aug 2026",
+        "date": "2026-08",
+        "visits": 3,
+        "uniques": 3,
+        "pageviews": 6
       }
     ],
-    "topPages": [],
-    "referrers": [],
+    "topPages": [
+      {
+        "path": "/",
+        "pageviews": 2,
+        "uniques": 2
+      },
+      {
+        "path": "/Home",
+        "pageviews": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/consult",
+        "pageviews": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/custom",
+        "pageviews": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/prefab",
+        "pageviews": 1,
+        "uniques": 1
+      }
+    ],
+    "referrers": [
+      {
+        "source": "Organic",
+        "visits": 2,
+        "uniques": 2
+      },
+      {
+        "source": "Direct",
+        "visits": 1,
+        "uniques": 1
+      }
+    ],
     "cfPageViews": 20800,
     "cfUniques": 3273,
     "cfPageViewsDelta": 101.1,
@@ -290,13 +340,13 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 73,
+        "performance": 74,
         "accessibility": 92,
         "bestPractices": 92,
         "seo": 92
       },
       "desktop": {
-        "performance": 93,
+        "performance": 94,
         "accessibility": 80,
         "bestPractices": 92,
         "seo": 92
@@ -433,6 +483,21 @@
         },
         "desktop": {
           "performance": 93,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-04",
+        "mobile": {
+          "performance": 74,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 94,
           "accessibility": 80,
           "bestPractices": 92,
           "seo": 92
