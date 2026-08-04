@@ -186,6 +186,24 @@ if (fs.existsSync(path.join(ROOT, '_redirects'))) {
   console.log('  ✓ _redirects');
 }
 
+// 4b. Inject DFS snapshots into Pages Function
+const dfsFnPath = path.join(ROOT, 'functions', 'api', 'dfs.js');
+if (fs.existsSync(dfsFnPath)) {
+  const dataDir = path.join(ROOT, 'data');
+  const snapshots = {};
+  for (const file of fs.readdirSync(dataDir)) {
+    const m = file.match(/^(.+)-dfs-latest\.json$/);
+    if (m) {
+      try { snapshots[m[1]] = JSON.parse(fs.readFileSync(path.join(dataDir, file), 'utf8')); } catch {}
+    }
+  }
+  const fnSrc = fs.readFileSync(dfsFnPath, 'utf8').replace('__DFS_SNAPSHOTS__', JSON.stringify(snapshots));
+  const fnDist = path.join(DIST, '..', 'functions', 'api');
+  mkdir(fnDist);
+  fs.writeFileSync(path.join(fnDist, 'dfs.js'), fnSrc, 'utf8');
+  console.log(`  ✓ /api/dfs function injected (${Object.keys(snapshots).length} snapshots)`);
+}
+
 // 4. Standalone sub-pages
 const pagesDir = path.join(ROOT, 'pages');
 if (fs.existsSync(pagesDir)) {

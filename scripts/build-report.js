@@ -151,8 +151,11 @@ async function buildReport(slug) {
         adClicks: m.adClicks,
         adLeads:  m.adLeads
       })) ?? base.ads?.monthlyBreakdown ?? [],
-      spendByWeek: base.ads?.spendByWeek ?? [],
-      campaigns:   v(gads)?.campaigns   ?? base.ads?.campaigns   ?? []
+      spendByWeek:    base.ads?.spendByWeek    ?? [],
+      campaigns:      v(gads)?.campaigns       ?? base.ads?.campaigns      ?? [],
+      phoneCalls:     v(gads)?.phoneCalls      ?? base.ads?.phoneCalls     ?? null,
+      allConversions: v(gads)?.allConversions  ?? base.ads?.allConversions ?? null,
+      costPerLead:    v(gads)?.costPerLead     ?? base.ads?.costPerLead    ?? null,
     },
 
     localFalcon: {

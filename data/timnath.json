@@ -3,15 +3,15 @@
   "slug": "timnath",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-04T09:34:59.447Z",
+  "generatedAt": "2026-08-03T11:20:00.849Z",
   "overview": {
-    "sessions": 192,
+    "sessions": 120,
     "sessionsDelta": 0,
     "leads": null,
     "leadsDelta": null,
-    "rankingsTop10": 0,
+    "rankingsTop10": 12,
     "rankingsDelta": null,
-    "gbpViews": 676,
+    "gbpViews": 721,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -70,14 +70,38 @@
       {
         "week": "27",
         "date": "2026-06-29",
-        "sessions": 40,
+        "sessions": 43,
         "conversions": 0
+      },
+      {
+        "week": "28",
+        "date": "2026-07-06",
+        "sessions": 7,
+        "conversions": 0
+      },
+      {
+        "week": "29",
+        "date": "2026-07-13",
+        "sessions": 20,
+        "conversions": 0
+      },
+      {
+        "week": "30",
+        "date": "2026-07-20",
+        "sessions": 55,
+        "conversions": 3
+      },
+      {
+        "week": "31",
+        "date": "2026-07-27",
+        "sessions": 32,
+        "conversions": 5
       }
     ],
     "trafficChannels": [
       {
         "channel": "Direct",
-        "sessions": 134
+        "sessions": 61
       },
       {
         "channel": "Organic Search",
@@ -85,36 +109,204 @@
       },
       {
         "channel": "Referral",
-        "sessions": 21
+        "sessions": 22
       }
     ],
     "organicSearchSources": [
       {
         "source": "google",
-        "sessions": 25
-      },
-      {
-        "source": "search.google.com",
-        "sessions": 10
-      },
-      {
-        "source": "bing",
-        "sessions": 2
+        "sessions": 37
       }
     ],
-    "keywords": [],
+    "keywords": [
+      {
+        "keyword": "painting companies near me",
+        "clicks": 1,
+        "impressions": 230,
+        "ctr": 0.4,
+        "position": 1.1
+      },
+      {
+        "keyword": "timnath painting",
+        "clicks": 1,
+        "impressions": 15,
+        "ctr": 6.7,
+        "position": 1.6
+      },
+      {
+        "keyword": "\"benjamin moore\"",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 125
+      },
+      {
+        "keyword": "\"sherwin williams\"",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 216
+      },
+      {
+        "keyword": "affordable painter near me",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 33
+      },
+      {
+        "keyword": "apartment painting near me",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keyword": "apartment painting service",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 21
+      },
+      {
+        "keyword": "basement contractor timnath",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 86
+      },
+      {
+        "keyword": "basement finishing timnath",
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 63.7
+      },
+      {
+        "keyword": "basement painting near me",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keyword": "bathroom painter weld county",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 1.1
+      },
+      {
+        "keyword": "bathroom painting near me",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keyword": "best commercial exterior paint fort collins",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 72
+      },
+      {
+        "keyword": "best exterior paint for colorado",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 64.3
+      },
+      {
+        "keyword": "best exterior painting company in fort collins using premium sherwin-williams paint products",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keyword": "building painters near me",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 21
+      },
+      {
+        "keyword": "cabinet painters berthoud co",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keyword": "cabinet painters windsor co",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keyword": "cabinet painting",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11.5
+      },
+      {
+        "keyword": "cabinet painting contractors berthoud co",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keyword": "cabinet painting contractors windsor co",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keyword": "cabinet painting near me",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6.5
+      },
+      {
+        "keyword": "ceramic coating timnath",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 30.5
+      },
+      {
+        "keyword": "commercial exterior painters near me",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "keyword": "commercial exterior painting contractors",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      }
+    ],
     "dfsSnapshot": {
       "client": "Timnath Painting",
       "slug": "timnath-painting",
       "domain": "timnathpainting.com",
-      "trackedAt": "2026-07-28T15:36:09.226Z",
+      "trackedAt": "2026-08-03T11:19:58.527Z",
       "locationCode": 1014517,
       "keywordCount": 72,
       "stats": {
         "organicRanked": 0,
         "organicTop10": 0,
-        "mapsRanked": 43,
-        "mapsTop3": 5,
+        "mapsRanked": 54,
+        "mapsTop3": 6,
         "aioCited": 0
       },
       "keywords": [
@@ -122,7 +314,7 @@
           "keyword": "affordable exterior painters",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": null,
+          "mapsRank": 35,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -130,7 +322,7 @@
           "keyword": "best exterior painters",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": null,
+          "mapsRank": 29,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -162,7 +354,7 @@
           "keyword": "commercial painting johnstown co",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": null,
+          "mapsRank": 1,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -186,7 +378,7 @@
           "keyword": "commercial painting timnath co",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 6,
+          "mapsRank": 5,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -202,7 +394,7 @@
           "keyword": "commercial painting windsor co",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 26,
+          "mapsRank": 22,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -210,7 +402,7 @@
           "keyword": "exterior home painting",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 48,
+          "mapsRank": 49,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -218,7 +410,7 @@
           "keyword": "exterior home painting colours",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 58,
+          "mapsRank": 56,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -234,7 +426,7 @@
           "keyword": "exterior home painting ideas",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 31,
+          "mapsRank": 28,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -242,7 +434,7 @@
           "keyword": "exterior house painting contractors",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 37,
+          "mapsRank": 39,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -250,7 +442,7 @@
           "keyword": "exterior house painting contractors near me",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 82,
+          "mapsRank": 80,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -258,7 +450,7 @@
           "keyword": "exterior paint contractors",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 54,
+          "mapsRank": 57,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -266,7 +458,7 @@
           "keyword": "exterior painters",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 57,
+          "mapsRank": 56,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -274,7 +466,7 @@
           "keyword": "exterior painting",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": null,
+          "mapsRank": 47,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -282,7 +474,7 @@
           "keyword": "exterior painting colors",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": null,
+          "mapsRank": 43,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -290,7 +482,7 @@
           "keyword": "exterior painting companies",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": null,
+          "mapsRank": 54,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -298,7 +490,7 @@
           "keyword": "exterior painting company",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": null,
+          "mapsRank": 56,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -306,7 +498,7 @@
           "keyword": "exterior painting contractor",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 45,
+          "mapsRank": 47,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -338,7 +530,7 @@
           "keyword": "exterior painting ideas",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 28,
+          "mapsRank": 25,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -354,7 +546,7 @@
           "keyword": "exterior painting loveland co",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": null,
+          "mapsRank": 8,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -362,7 +554,7 @@
           "keyword": "exterior painting near me",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 99,
+          "mapsRank": 90,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -378,7 +570,7 @@
           "keyword": "exterior painting specialist",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": null,
+          "mapsRank": 27,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -394,7 +586,7 @@
           "keyword": "exterior painting wellington co",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 29,
+          "mapsRank": 30,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -410,7 +602,7 @@
           "keyword": "exterior staining",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 52,
+          "mapsRank": 54,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -442,7 +634,7 @@
           "keyword": "exterior staining loveland co",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 27,
+          "mapsRank": 28,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -450,7 +642,7 @@
           "keyword": "exterior staining severance co",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 36,
+          "mapsRank": 38,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -458,7 +650,7 @@
           "keyword": "exterior staining timnath co",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 15,
+          "mapsRank": 17,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -474,7 +666,7 @@
           "keyword": "exterior staining windsor co",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 39,
+          "mapsRank": 37,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -482,7 +674,7 @@
           "keyword": "fence staining",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 30,
+          "mapsRank": 31,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -490,7 +682,7 @@
           "keyword": "fence staining company",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 20,
+          "mapsRank": 21,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -506,7 +698,7 @@
           "keyword": "fence staining greeley co",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 23,
+          "mapsRank": 26,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -522,7 +714,7 @@
           "keyword": "fence staining loveland co",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": null,
+          "mapsRank": 23,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -530,7 +722,7 @@
           "keyword": "fence staining near me",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 40,
+          "mapsRank": 39,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -538,7 +730,7 @@
           "keyword": "fence staining severance co",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 20,
+          "mapsRank": 19,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -546,7 +738,7 @@
           "keyword": "fence staining timnath co",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": null,
+          "mapsRank": 7,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -602,7 +794,7 @@
           "keyword": "hoa painting loveland co",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 5,
+          "mapsRank": 7,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -642,7 +834,7 @@
           "keyword": "house exterior painting contractor",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 42,
+          "mapsRank": 43,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -650,7 +842,7 @@
           "keyword": "house exterior painting contractors",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 37,
+          "mapsRank": 36,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -674,7 +866,7 @@
           "keyword": "professional exterior painters",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 52,
+          "mapsRank": 53,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -682,7 +874,7 @@
           "keyword": "residential exterior painters",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 54,
+          "mapsRank": 55,
           "inAiOverview": false,
           "citedInAiOverview": false
         },
@@ -690,7 +882,7 @@
           "keyword": "wood fence staining",
           "organicRank": null,
           "organicUrl": null,
-          "mapsRank": 26,
+          "mapsRank": 25,
           "inAiOverview": false,
           "citedInAiOverview": false
         }
@@ -698,37 +890,44 @@
     },
     "leadSignals": {
       "organicSessions": 37,
-      "phoneCalls": 0,
-      "formSubmissions": 1,
-      "emailClicks": 3,
-      "ctaClicks": 32,
-      "formStarts": 2,
+      "phoneCalls": 5,
+      "formSubmissions": 3,
+      "emailClicks": 2,
+      "ctaClicks": 8,
+      "formStarts": 7,
       "byChannel": {
         "cta_click": {
-          "Direct": 21,
-          "Organic Search": 6,
-          "Referral": 5
+          "Direct": 7,
+          "Referral": 1
         },
-        "email_click": {
-          "Direct": 2,
-          "Organic Search": 1
+        "phone_call": {
+          "Direct": 5
         },
         "form_start": {
-          "Direct": 2
+          "Direct": 4,
+          "Referral": 3
         },
         "generate_lead": {
-          "Direct": 1
+          "Direct": 2,
+          "Referral": 1
+        },
+        "email_click": {
+          "Direct": 1,
+          "Organic Search": 1
         }
       },
-      "gbpCalls": 3,
+      "gbpCalls": 4,
       "gbpWebsiteClicks": 17,
-      "gbpDirections": 221
+      "gbpDirections": 243
     }
   },
   "ads": {
     "monthlyBreakdown": [],
     "spendByWeek": [],
-    "campaigns": []
+    "campaigns": [],
+    "phoneCalls": null,
+    "allConversions": null,
+    "costPerLead": null
   },
   "localFalcon": {
     "lastScanDate": "7/27/2026 3:14 PM",
@@ -835,13 +1034,209 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 676,
-    "calls": 3,
+    "totalViews": 721,
+    "calls": 4,
     "callsDelta": null,
-    "directions": 221,
+    "directions": 243,
     "websiteClicks": 17,
     "directionsDelta": null,
     "viewsOverTime": [
+      {
+        "date": "2026-02-01",
+        "views": 3,
+        "calls": 0,
+        "directions": 1,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-02",
+        "views": 6,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-03",
+        "views": 3,
+        "calls": 0,
+        "directions": 8,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-04",
+        "views": 3,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-05",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-06",
+        "views": 5,
+        "calls": 1,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-07",
+        "views": 2,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-08",
+        "views": 6,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-09",
+        "views": 3,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-10",
+        "views": 5,
+        "calls": 0,
+        "directions": 2,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-11",
+        "views": 3,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-12",
+        "views": 3,
+        "calls": 0,
+        "directions": 1,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-13",
+        "views": 3,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-14",
+        "views": 2,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-15",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-16",
+        "views": 5,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-17",
+        "views": 7,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-18",
+        "views": 2,
+        "calls": 0,
+        "directions": 1,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-19",
+        "views": 3,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-20",
+        "views": 2,
+        "calls": 0,
+        "directions": 3,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-21",
+        "views": 4,
+        "calls": 0,
+        "directions": 7,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-22",
+        "views": 4,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-23",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-24",
+        "views": 2,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-25",
+        "views": 3,
+        "calls": 0,
+        "directions": 1,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-26",
+        "views": 2,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-27",
+        "views": 4,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-02-28",
+        "views": 4,
+        "calls": 0,
+        "directions": 2,
+        "websiteClicks": 0
+      },
       {
         "date": "2026-03-01",
         "views": 4,
@@ -1866,76 +2261,27 @@
       },
       {
         "date": "2026-07-25",
-        "views": 8,
+        "views": 5,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-26",
-        "views": 5,
+        "views": 0,
         "calls": 0,
-        "directions": 3,
+        "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-27",
-        "views": 12,
+        "views": 0,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-28",
-        "views": 6,
-        "calls": 0,
-        "directions": 1,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-07-29",
-        "views": 3,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-07-30",
-        "views": 3,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-07-31",
-        "views": 12,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-01",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-02",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-03",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-04",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -2000,8 +2346,32 @@
       {
         "week": "27",
         "date": "2026-06-29",
-        "sessions": 40,
+        "sessions": 43,
         "conversions": 0
+      },
+      {
+        "week": "28",
+        "date": "2026-07-06",
+        "sessions": 7,
+        "conversions": 0
+      },
+      {
+        "week": "29",
+        "date": "2026-07-13",
+        "sessions": 20,
+        "conversions": 0
+      },
+      {
+        "week": "30",
+        "date": "2026-07-20",
+        "sessions": 55,
+        "conversions": 3
+      },
+      {
+        "week": "31",
+        "date": "2026-07-27",
+        "sessions": 32,
+        "conversions": 5
       }
     ],
     "aiReferral": {
@@ -2017,80 +2387,18 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "YNVVPFQV",
-    "uniques": 2,
-    "visits": 2,
-    "pageviews": 5,
-    "avgDuration": 41,
-    "bounceRate": 50,
-    "uniquesDelta": -66.7,
-    "visitsDelta": -66.7,
-    "pageviewsDelta": -68.8,
-    "dailyTimeseries": [
-      {
-        "date": "2026-07-30",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 2
-      },
-      {
-        "date": "2026-07-28",
-        "visits": 2,
-        "uniques": 2,
-        "pageviews": 10
-      },
-      {
-        "date": "2026-08-03",
-        "visits": 2,
-        "uniques": 2,
-        "pageviews": 5
-      },
-      {
-        "date": "2026-07-31",
-        "visits": 3,
-        "uniques": 3,
-        "pageviews": 4
-      }
-    ],
-    "monthlyHistory": [
-      {
-        "month": "Jul 2026",
-        "date": "2026-07",
-        "visits": 6,
-        "uniques": 6,
-        "pageviews": 16
-      },
-      {
-        "month": "Aug 2026",
-        "date": "2026-08",
-        "visits": 2,
-        "uniques": 2,
-        "pageviews": 5
-      }
-    ],
-    "topPages": [
-      {
-        "path": "/",
-        "pageviews": 4,
-        "uniques": 2
-      },
-      {
-        "path": "/areas-served/",
-        "pageviews": 1,
-        "uniques": 1
-      }
-    ],
-    "referrers": [
-      {
-        "source": "Direct",
-        "visits": 1,
-        "uniques": 1
-      },
-      {
-        "source": "Paid/campaign",
-        "visits": 1,
-        "uniques": 1
-      }
-    ],
+    "uniques": 0,
+    "visits": 0,
+    "pageviews": 0,
+    "avgDuration": null,
+    "bounceRate": null,
+    "uniquesDelta": null,
+    "visitsDelta": null,
+    "pageviewsDelta": null,
+    "dailyTimeseries": [],
+    "monthlyHistory": [],
+    "topPages": [],
+    "referrers": [],
     "cfPageViews": null,
     "cfUniques": null,
     "cfPageViewsDelta": null,
@@ -2099,13 +2407,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 65,
+        "performance": 61,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 93,
+        "performance": 40,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
@@ -2487,111 +2795,6 @@
         },
         "desktop": {
           "performance": 40,
-          "accessibility": 90,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-07-29",
-        "mobile": {
-          "performance": 42,
-          "accessibility": 90,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 72,
-          "accessibility": 90,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-07-30",
-        "mobile": {
-          "performance": 44,
-          "accessibility": 90,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 74,
-          "accessibility": 90,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-07-31",
-        "mobile": {
-          "performance": 65,
-          "accessibility": 90,
-          "bestPractices": 96,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 42,
-          "accessibility": 90,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-08-01",
-        "mobile": {
-          "performance": 59,
-          "accessibility": 90,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 96,
-          "accessibility": 90,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-08-02",
-        "mobile": {
-          "performance": 63,
-          "accessibility": 90,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 65,
-          "accessibility": 90,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-08-03",
-        "mobile": {
-          "performance": 61,
-          "accessibility": 90,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 70,
-          "accessibility": 90,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-08-04",
-        "mobile": {
-          "performance": 65,
-          "accessibility": 90,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 93,
           "accessibility": 90,
           "bestPractices": 100,
           "seo": 92

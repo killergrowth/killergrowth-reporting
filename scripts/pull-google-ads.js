@@ -66,25 +66,35 @@ function normalizeDate(val) {
 // Aggregation — shared by all read paths
 // ---------------------------------------------------------------------------
 
-function aggregateRows(rows) {
+function aggregateRows(rows, conversionRows) {
   // rows: [{date, campaignName, cost, clicks, conversions, impressions}]
+  // conversionRows (optional): [{date, conversionActionCategory, conversionActionName, conversions}]
   const fmtDate = d => d.toISOString().split('T')[0];
   const now     = new Date();
 
-  // Last full month
-  const lmStart = new Date(now.getFullYear(), now.getMonth() - 1, 1);
-  const lmEnd   = new Date(now.getFullYear(), now.getMonth(), 0);
-  const lmRows  = rows.filter(r => r.date >= fmtDate(lmStart) && r.date <= fmtDate(lmEnd));
+  // Current period: current month MTD if we have data for it, else last full month
+  const cmStart    = new Date(now.getFullYear(), now.getMonth(), 1);
+  const cmEnd      = now; // today
+  const cmRows     = rows.filter(r => r.date >= fmtDate(cmStart) && r.date <= fmtDate(cmEnd));
+  const lmStart    = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+  const lmEnd      = new Date(now.getFullYear(), now.getMonth(), 0);
+  // Use current month if it has data, otherwise fall back to last full month
+  const useCurrent = cmRows.length > 0 && cmRows.some(r => r.cost > 0 || r.clicks > 0);
+  const lmRows     = useCurrent ? cmRows : rows.filter(r => r.date >= fmtDate(lmStart) && r.date <= fmtDate(lmEnd));
+  const periodStart = useCurrent ? cmStart : lmStart;
+  const periodEnd   = useCurrent ? cmEnd   : lmEnd;
+  console.log('[Google Ads] Using period:', useCurrent ? 'current month MTD' : 'last full month', fmtDate(periodStart), '-', fmtDate(periodEnd), '| rows:', lmRows.length);
 
-  let totalSpend = 0, totalClicks = 0, totalLeads = 0;
+  let totalSpend = 0, totalClicks = 0, totalLeads = 0, totalPhoneCallsMetric = 0;
   const campaignMap = {};
 
   let totalImpressions = 0;
   for (const r of lmRows) {
-    totalSpend       += r.cost;
-    totalClicks      += r.clicks;
-    totalLeads       += r.conversions;
-    totalImpressions += (r.impressions || 0);
+    totalSpend            += r.cost;
+    totalClicks           += r.clicks;
+    totalLeads            += r.conversions;
+    totalImpressions      += (r.impressions || 0);
+    totalPhoneCallsMetric += (r.phoneCalls  || 0);
 
     if (!campaignMap[r.campaignName]) {
       campaignMap[r.campaignName] = { name: r.campaignName, spend: 0, clicks: 0, leads: 0, impressions: 0 };
@@ -106,31 +116,140 @@ function aggregateRows(rows) {
     .filter(c => c.spend > 0 || c.clicks > 0)
     .sort((a, b) => b.spend - a.spend);
 
-  // Monthly breakdown — last 5 months
+  // Phone call name/category matchers — defined here so convTotalsForPeriod can use them
+  const PHONE_CALL_NAMES_LOCAL = [
+    'business profile - tracked call',
+    'business profile - call',
+    'gbp - clicks to call',
+    'calls from ads',
+  ];
+  const PHONE_CALL_CATEGORIES_LOCAL = ['PHONE_CALL_LEAD', 'AD_CALL', 'CALLS_FROM_ADS'];
+
+  // Helper: compute phone + form totals from conversionRows for a date window
+  function convTotalsForPeriod(pStart, pEnd) {
+    if (!conversionRows || !conversionRows.length) return { phoneCalls: null, allConversions: null, formSubmissions: null };
+    const pRows = conversionRows.filter(r => r.date >= fmtDate(pStart) && r.date <= fmtDate(pEnd));
+    let phoneTotal = 0, phoneCallsMetric = 0, allConvTotal = 0, formTotal = 0;
+    // phone_calls metric from main rows
+    const mainPRows = rows.filter(r => r.date >= fmtDate(pStart) && r.date <= fmtDate(pEnd));
+    for (const r of mainPRows) phoneCallsMetric += (r.phoneCalls || 0);
+    for (const r of pRows) {
+      allConvTotal += r.allConversions;
+      const nameLower = (r.conversionActionName || '').toLowerCase();
+      const isPhone = PHONE_CALL_NAMES_LOCAL.some(n => nameLower.includes(n)) ||
+                      PHONE_CALL_CATEGORIES_LOCAL.includes(r.conversionActionCategory);
+      if (isPhone) phoneTotal += r.allConversions;
+      if (r.conversionActionCategory === 'SUBMIT_LEAD_FORM') formTotal += r.allConversions;
+    }
+    const combinedPhone = Math.round(phoneTotal + phoneCallsMetric);
+    return {
+      phoneCalls:     combinedPhone || null,
+      allConversions: allConvTotal > 0 ? Math.round(allConvTotal) : null,
+      formSubmissions: formTotal > 0 ? Math.round(formTotal) : null,
+    };
+  }
+
+  // Monthly breakdown — last 4 full months + current month MTD
   const monthlyBreakdown = [];
-  for (let i = 4; i >= 0; i--) {
-    const start = new Date(now.getFullYear(), now.getMonth() - i - 1, 1);
-    const end   = new Date(now.getFullYear(), now.getMonth() - i, 0);
+  for (let i = 4; i >= 1; i--) {
+    const start = new Date(now.getFullYear(), now.getMonth() - i, 1);
+    const end   = new Date(now.getFullYear(), now.getMonth() - i + 1, 0);
     const label = start.toLocaleString('en-US', { month: 'short', year: 'numeric' });
     const mRows = rows.filter(r => r.date >= fmtDate(start) && r.date <= fmtDate(end));
     let mSpend = 0, mClicks = 0, mLeads = 0, mImpressions = 0;
     for (const r of mRows) { mSpend += r.cost; mClicks += r.clicks; mLeads += r.conversions; mImpressions += (r.impressions || 0); }
+    const mConv = convTotalsForPeriod(start, end);
     monthlyBreakdown.push({
-      month:         label,
-      adSpend:       Math.round(mSpend  * 100) / 100,
-      adClicks:      mClicks,
-      adLeads:       Math.round(mLeads),
-      adImpressions: mImpressions || null,
+      month:          label,
+      adSpend:        Math.round(mSpend  * 100) / 100,
+      adClicks:       mClicks,
+      adLeads:        Math.round(mLeads),
+      adImpressions:  mImpressions || null,
+      adPhoneCalls:   mConv.phoneCalls,
+      adAllConv:      mConv.allConversions,
+      adFormSubs:     mConv.formSubmissions,
     });
   }
+  // Current month MTD
+  {
+    const start = new Date(now.getFullYear(), now.getMonth(), 1);
+    const label = start.toLocaleString('en-US', { month: 'short', year: 'numeric' }) + ' (MTD)';
+    const mRows = rows.filter(r => r.date >= fmtDate(start) && r.date <= fmtDate(now));
+    let mSpend = 0, mClicks = 0, mLeads = 0, mImpressions = 0;
+    for (const r of mRows) { mSpend += r.cost; mClicks += r.clicks; mLeads += r.conversions; mImpressions += (r.impressions || 0); }
+    const mConv = convTotalsForPeriod(start, now);
+    if (mSpend > 0 || mClicks > 0) {
+      monthlyBreakdown.push({
+        month:          label,
+        adSpend:        Math.round(mSpend  * 100) / 100,
+        adClicks:       mClicks,
+        adLeads:        Math.round(mLeads),
+        adImpressions:  mImpressions || null,
+        adPhoneCalls:   mConv.phoneCalls,
+        adAllConv:      mConv.allConversions,
+        adFormSubs:     mConv.formSubmissions,
+      });
+    }
+  }
 
+  // Phone calls — from conversion action breakdown (last full month)
+  // Match by name (exact or partial) for all phone call action types.
+  // Phil's spec: Business profile - Tracked call, Business profile - Call,
+  //              GBP - Clicks to call, Calls from ads
+  // Also include any PHONE_CALL_LEAD category as a safety net.
+  const PHONE_CALL_NAMES = [
+    'business profile - tracked call',
+    'business profile - call',
+    'gbp - clicks to call',
+    'calls from ads',
+  ];
+  const PHONE_CALL_CATEGORIES = ['PHONE_CALL_LEAD', 'AD_CALL', 'CALLS_FROM_ADS'];
+
+  let phoneCalls = null;
+  let allConversions = Math.round(totalLeads); // fallback to conversions metric
+  if (conversionRows && conversionRows.length > 0) {
+    const lmConv = conversionRows.filter(r => r.date >= fmtDate(periodStart) && r.date <= fmtDate(periodEnd));
+    let phoneTotal = 0, allConvTotal = 0, formTotal = 0;
+    for (const r of lmConv) {
+      allConvTotal += r.allConversions;
+      const nameLower = (r.conversionActionName || '').toLowerCase();
+      const isPhone = PHONE_CALL_NAMES.some(n => nameLower.includes(n)) ||
+                      PHONE_CALL_CATEGORIES.includes(r.conversionActionCategory);
+      if (isPhone) phoneTotal += r.allConversions;
+      // Form submissions = SUBMIT_LEAD_FORM category
+      if (r.conversionActionCategory === 'SUBMIT_LEAD_FORM') formTotal += r.allConversions;
+    }
+    if (allConvTotal > 0) allConversions = Math.round(allConvTotal);
+    // Add metrics.phone_calls (call extension clicks) on top of conversion-action phone totals
+    const combinedPhone = Math.round(phoneTotal + totalPhoneCallsMetric);
+    if (combinedPhone > 0) phoneCalls = combinedPhone;
+    console.log('[Google Ads] phone breakdown: convAction=' + phoneTotal.toFixed(1) + ' phoneCallsMetric=' + totalPhoneCallsMetric + ' total=' + combinedPhone);
+    // CPL denominator = phone calls + form submissions (meaningful leads only)
+    const meaningfulLeads = phoneTotal + formTotal;
+    const costPerLeadFinal = meaningfulLeads > 0 ? Math.round((totalSpend / meaningfulLeads) * 100) / 100 : null;
+    return {
+      spend:          Math.round(totalSpend * 100) / 100,
+      clicks:         totalClicks,
+      leads:          allConversions,
+      phoneCalls:     phoneCalls || 0,
+      allConversions: allConversions,
+      impressions:    totalImpressions || null,
+      costPerLead:    costPerLeadFinal,
+      campaigns,
+      monthlyBreakdown,
+    };
+  }
+
+  // fallback if no conversionRows
   const costPerLead = totalLeads > 0 ? Math.round((totalSpend / totalLeads) * 100) / 100 : null;
 
   return {
-    spend:       Math.round(totalSpend  * 100) / 100,
-    clicks:      totalClicks,
-    leads:       Math.round(totalLeads),
-    impressions: totalImpressions || null,
+    spend:          Math.round(totalSpend  * 100) / 100,
+    clicks:         totalClicks,
+    leads:          allConversions,
+    phoneCalls:     phoneCalls,
+    allConversions: allConversions,
+    impressions:    totalImpressions || null,
     costPerLead,
     campaigns,
     monthlyBreakdown,
@@ -252,9 +371,41 @@ async function pullFromLegacySheet(slug, token) {
 // Direct API fallback (returns null gracefully until token approved)
 // ---------------------------------------------------------------------------
 
-const API_VERSION = 'v19';
+const API_VERSION = 'v21';
 const BASE        = `https://googleads.googleapis.com/${API_VERSION}`;
 
+// SA JWT auth (primary — confirmed working 2026-07-22)
+// Signs JWT manually and exchanges for access token
+async function getAdsTokenSA() {
+  const raw = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
+  if (!raw) throw new Error('No GOOGLE_SERVICE_ACCOUNT_JSON');
+  const sa = JSON.parse(raw);
+  const crypto = require('crypto');
+  const now = Math.floor(Date.now() / 1000);
+  const header  = Buffer.from(JSON.stringify({ alg: 'RS256', typ: 'JWT' })).toString('base64url');
+  const payload = Buffer.from(JSON.stringify({
+    iss:   sa.client_email,
+    sub:   'tylerbrickley@killergrowth.com',
+    scope: 'https://www.googleapis.com/auth/adwords',
+    aud:   'https://oauth2.googleapis.com/token',
+    iat:   now,
+    exp:   now + 3600,
+  })).toString('base64url');
+  const sign = crypto.createSign('RSA-SHA256');
+  sign.update(`${header}.${payload}`);
+  const sig = sign.sign(sa.private_key, 'base64url');
+  const jwt = `${header}.${payload}.${sig}`;
+  const res = await fetch('https://oauth2.googleapis.com/token', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: `grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=${jwt}`,
+  });
+  const data = await res.json();
+  if (!data.access_token) throw new Error('No access token: ' + JSON.stringify(data));
+  return data.access_token;
+}
+
+// OAuth refresh token auth (legacy fallback)
 async function getAdsToken() {
   const body = new URLSearchParams({
     client_id:     process.env.GOOGLE_ADS_CLIENT_ID,
@@ -276,7 +427,9 @@ async function gaqlSearch(cid, query, accessToken) {
     'developer-token': process.env.GOOGLE_ADS_DEVELOPER_TOKEN,
     'Content-Type':    'application/json',
   };
-  if (process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID) headers['login-customer-id'] = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID;
+  // Always pass MCC as login-customer-id when available
+  const loginCid = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID || '9760213886';
+  headers['login-customer-id'] = loginCid;
   const res = await fetch(`${BASE}/customers/${cid}/googleAds:search`, {
     method: 'POST', headers, body: JSON.stringify({ query }),
   });
@@ -286,28 +439,74 @@ async function gaqlSearch(cid, query, accessToken) {
 
 async function pullGoogleAdsDirect(customerId) {
   if (!customerId || customerId === 'FILL_IN') return null;
-  const required = ['GOOGLE_ADS_CLIENT_ID', 'GOOGLE_ADS_CLIENT_SECRET', 'GOOGLE_ADS_REFRESH_TOKEN', 'GOOGLE_ADS_DEVELOPER_TOKEN'];
-  for (const k of required) { if (!process.env[k]) { console.log(`[Google Ads] Missing ${k} — skipping`); return null; } }
+  if (!process.env.GOOGLE_ADS_DEVELOPER_TOKEN) { console.log('[Google Ads] Missing GOOGLE_ADS_DEVELOPER_TOKEN — skipping'); return null; }
+
+  // Try SA+DWD first (confirmed working), fall back to OAuth refresh token
+  let accessToken;
+  try {
+    accessToken = await getAdsTokenSA();
+    console.log('[Google Ads] Using SA+DWD auth');
+  } catch (e) {
+    console.warn('[Google Ads] SA auth failed, trying OAuth:', e.message);
+    const oauthRequired = ['GOOGLE_ADS_CLIENT_ID', 'GOOGLE_ADS_CLIENT_SECRET', 'GOOGLE_ADS_REFRESH_TOKEN'];
+    if (oauthRequired.every(k => process.env[k])) {
+      try { accessToken = await getAdsToken(); } catch (e2) { console.warn('[Google Ads] OAuth also failed:', e2.message); return null; }
+    } else {
+      console.log('[Google Ads] No valid auth available — skipping');
+      return null;
+    }
+  }
 
   try {
-    const accessToken = await getAdsToken();
+    // accessToken already set above (SA+DWD or OAuth fallback)
     const cid = customerId.replace(/-/g, '');
     const now   = new Date();
-    const since = new Date(now.getFullYear(), now.getMonth() - 1, 1).toISOString().split('T')[0];
-    const until = new Date(now.getFullYear(), now.getMonth(), 0).toISOString().split('T')[0];
+    // Pull last 6 months of daily data so aggregateRows can build monthly breakdown
+    const since = new Date(now.getFullYear(), now.getMonth() - 5, 1).toISOString().split('T')[0];
+    const until = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1).toISOString().split('T')[0];
 
-    const q = `SELECT campaign.name, metrics.cost_micros, metrics.clicks, metrics.conversions, metrics.all_conversions
-      FROM campaign WHERE segments.date BETWEEN '${since}' AND '${until}' AND campaign.status = 'ENABLED' ORDER BY metrics.cost_micros DESC`;
+    const q = `SELECT campaign.name, segments.date, metrics.cost_micros, metrics.clicks,
+      metrics.conversions, metrics.impressions, metrics.phone_calls
+      FROM campaign
+      WHERE segments.date BETWEEN '${since}' AND '${until}'
+      ORDER BY segments.date DESC
+      LIMIT 10000`;
     const d = await gaqlSearch(cid, q, accessToken);
     const rows = (d.results || []).map(r => ({
-      date: since, campaignName: r.campaign?.name || '',
-      cost: (r.metrics?.costMicros || 0) / 1e6,
-      clicks: r.metrics?.clicks || 0,
-      conversions: r.metrics?.conversions || r.metrics?.allConversions || 0,
-      impressions: 0,
+      date:         r.segments?.date || since,
+      campaignName: r.campaign?.name || '',
+      cost:         (r.metrics?.costMicros || 0) / 1e6,
+      clicks:       parseInt(r.metrics?.clicks)      || 0,
+      conversions:  parseFloat(r.metrics?.conversions) || 0,
+      impressions:  parseInt(r.metrics?.impressions)  || 0,
+      phoneCalls:   parseInt(r.metrics?.phoneCalls)   || 0,
     }));
-    const result = aggregateRows(rows);
-    console.log(`[Google Ads] [direct API] spend=$${result.spend} clicks=${result.clicks}`);
+
+    // Pull conversion action breakdown for phone call categorization
+    let conversionRows = [];
+    try {
+      const qConv = `SELECT segments.date, segments.conversion_action_category,
+        segments.conversion_action_name, metrics.all_conversions
+        FROM campaign
+        WHERE segments.date BETWEEN '${since}' AND '${until}'
+          AND metrics.all_conversions > 0
+        ORDER BY segments.date DESC
+        LIMIT 5000`;
+      const dConv = await gaqlSearch(cid, qConv, accessToken);
+      conversionRows = (dConv.results || []).map(r => ({
+        date:                     r.segments?.date || since,
+        conversionActionCategory: r.segments?.conversionActionCategory || '',
+        conversionActionName:     r.segments?.conversionActionName || '',
+        allConversions:           parseFloat(r.metrics?.allConversions) || 0,
+        conversions:              parseFloat(r.metrics?.allConversions) || 0, // compat
+      }));
+      console.log(`[Google Ads] Conversion action rows: ${conversionRows.length}`);
+    } catch (e) {
+      console.warn('[Google Ads] Conversion action pull failed (non-fatal):', e.message);
+    }
+
+    const result = aggregateRows(rows, conversionRows);
+    console.log(`[Google Ads] [direct API] spend=$${result.spend} clicks=${result.clicks} phoneCalls=${result.phoneCalls} allConv=${result.allConversions}`);
     return result;
   } catch (e) {
     console.warn('[Google Ads] API error:', e.message);

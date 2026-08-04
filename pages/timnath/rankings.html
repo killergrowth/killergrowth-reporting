@@ -211,11 +211,8 @@ const CK        = 'kg_timnath_rankings_v2';
 const GSC_SITE  = 'sc-domain:timnathpainting.com';
 const API_BASE  = '/api/gsc';
 
-// DFS data is baked in at build time from data/timnath-dfs-latest.json
-// Falls back to window.__reportData.seo.dfsSnapshot if available
-const DFS_DATA  = (window.__reportData && window.__reportData.seo && window.__reportData.seo.dfsSnapshot)
-  ? window.__reportData.seo.dfsSnapshot
-  : null;
+const DFS_SLUG = 'timnath';
+let DFS_DATA   = null; // loaded async from /api/dfs
 
 let gscPeriod = 'last28';
 
@@ -241,11 +238,24 @@ function unlock(){
 document.getElementById('pw').addEventListener('keydown',e=>{if(e.key==='Enter')unlock();});
 if(getCookie(CK)===btoa(PW)) showApp();
 
-function showApp(){
+async function showApp(){
   document.getElementById('gate').style.display='none';
   document.getElementById('app').style.display='block';
-  renderDFS();
+  await loadDFS();
   loadGSC();
+}
+
+async function loadDFS(){
+  try {
+    const res  = await fetch(`/api/dfs?slug=${DFS_SLUG}`);
+    const data = await res.json();
+    if (data.error) throw new Error(data.error);
+    DFS_DATA = data;
+  } catch(e) {
+    console.warn('DFS load failed:', e.message);
+    DFS_DATA = null;
+  }
+  renderDFS();
 }
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
