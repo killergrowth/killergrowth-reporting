@@ -2,8 +2,8 @@
   "client": "Cogan's Woodshop",
   "slug": "cogans-woodshop",
   "logoPath": null,
-  "period": "June 2026",
-  "generatedAt": "2026-07-28T09:42:06.856Z",
+  "period": "July 2026",
+  "generatedAt": "2026-08-04T09:37:41.737Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -28,6 +28,7 @@
     "trafficChannels": [],
     "organicSearchSources": [],
     "keywords": [],
+    "dfsSnapshot": null,
     "leadSignals": null
   },
   "ads": {
@@ -82,18 +83,83 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "DYSWZSVJ",
-    "uniques": 0,
-    "visits": 0,
-    "pageviews": 0,
-    "avgDuration": null,
-    "bounceRate": null,
-    "uniquesDelta": null,
-    "visitsDelta": null,
-    "pageviewsDelta": null,
-    "dailyTimeseries": [],
-    "monthlyHistory": [],
-    "topPages": [],
-    "referrers": [],
+    "uniques": 3,
+    "visits": 3,
+    "pageviews": 6,
+    "avgDuration": 293,
+    "bounceRate": 66.666666666667,
+    "uniquesDelta": 200,
+    "visitsDelta": 200,
+    "pageviewsDelta": 100,
+    "dailyTimeseries": [
+      {
+        "date": "2026-07-30",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 3
+      },
+      {
+        "date": "2026-08-03",
+        "visits": 3,
+        "uniques": 3,
+        "pageviews": 6
+      }
+    ],
+    "monthlyHistory": [
+      {
+        "month": "Jul 2026",
+        "date": "2026-07",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 3
+      },
+      {
+        "month": "Aug 2026",
+        "date": "2026-08",
+        "visits": 3,
+        "uniques": 3,
+        "pageviews": 6
+      }
+    ],
+    "topPages": [
+      {
+        "path": "/",
+        "pageviews": 2,
+        "uniques": 2
+      },
+      {
+        "path": "/Home",
+        "pageviews": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/consult",
+        "pageviews": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/custom",
+        "pageviews": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/prefab",
+        "pageviews": 1,
+        "uniques": 1
+      }
+    ],
+    "referrers": [
+      {
+        "source": "Organic",
+        "visits": 2,
+        "uniques": 2
+      },
+      {
+        "source": "Direct",
+        "visits": 1,
+        "uniques": 1
+      }
+    ],
     "cfPageViews": 20800,
     "cfUniques": 3273,
     "cfPageViewsDelta": 101.1,
@@ -274,13 +340,13 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 71,
+        "performance": 74,
         "accessibility": 92,
         "bestPractices": 92,
         "seo": 92
       },
       "desktop": {
-        "performance": 95,
+        "performance": 94,
         "accessibility": 80,
         "bestPractices": 92,
         "seo": 92
@@ -327,6 +393,111 @@
         },
         "desktop": {
           "performance": 95,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-29",
+        "mobile": {
+          "performance": 72,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 94,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-30",
+        "mobile": {
+          "performance": 70,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 97,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-31",
+        "mobile": {
+          "performance": 71,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 97,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-01",
+        "mobile": {
+          "performance": 70,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 94,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-02",
+        "mobile": {
+          "performance": 73,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 94,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-03",
+        "mobile": {
+          "performance": 73,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 93,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-04",
+        "mobile": {
+          "performance": 74,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 94,
           "accessibility": 80,
           "bestPractices": 92,
           "seo": 92

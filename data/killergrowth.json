@@ -2,8 +2,8 @@
   "client": "KillerGrowth",
   "slug": "killergrowth",
   "logoPath": null,
-  "period": "June 2026",
-  "generatedAt": "2026-07-28T09:30:21.039Z",
+  "period": "July 2026",
+  "generatedAt": "2026-08-04T09:32:14.639Z",
   "overview": {
     "sessions": 23,
     "sessionsDelta": 0,
@@ -13,12 +13,12 @@
     "rankingsDelta": null,
     "gbpViews": null,
     "gbpViewsDelta": null,
-    "adSpend": 1677.98,
+    "adSpend": 1922.47,
     "adImpressions": null,
     "adBudget": null,
     "costPerLead": 1677.98,
     "costPerLeadDelta": null,
-    "socialReach": 1217,
+    "socialReach": 388,
     "socialReachDelta": null,
     "reviewCount": null,
     "avgRating": null
@@ -68,6 +68,7 @@
     ],
     "organicSearchSources": [],
     "keywords": [],
+    "dfsSnapshot": null,
     "leadSignals": {
       "organicSessions": null,
       "phoneCalls": 0,
@@ -118,6 +119,12 @@
         "adSpend": 1677.98,
         "adClicks": 13482,
         "adLeads": 1
+      },
+      {
+        "month": "Jul 2026",
+        "adSpend": 1922.47,
+        "adClicks": 14672,
+        "adLeads": 0
       }
     ],
     "spendByWeek": [],
@@ -181,15 +188,20 @@
         "month": "Jun 2026",
         "reach": 384,
         "engagements": 323
+      },
+      {
+        "month": "Jul 2026",
+        "reach": 729,
+        "engagements": 2097
       }
     ],
     "reachByWeek": [],
     "platforms": [
       {
         "platform": "Facebook",
-        "reach": 1217,
-        "engagements": 1232,
-        "followers": 554
+        "reach": 388,
+        "engagements": 317,
+        "followers": 552
       }
     ]
   },
@@ -239,39 +251,107 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "NNTNPDOW",
-    "uniques": 1,
-    "visits": 1,
-    "pageviews": 1,
-    "avgDuration": 9,
-    "bounceRate": 100,
-    "uniquesDelta": null,
-    "visitsDelta": null,
-    "pageviewsDelta": null,
+    "uniques": 9,
+    "visits": 9,
+    "pageviews": 14,
+    "avgDuration": 55,
+    "bounceRate": 66.666666666667,
+    "uniquesDelta": -43.8,
+    "visitsDelta": -43.8,
+    "pageviewsDelta": -46.2,
     "dailyTimeseries": [
       {
-        "date": "2026-07-28",
+        "date": "2026-08-01",
         "visits": 1,
         "uniques": 1,
         "pageviews": 1
+      },
+      {
+        "date": "2026-07-30",
+        "visits": 4,
+        "uniques": 4,
+        "pageviews": 9
+      },
+      {
+        "date": "2026-07-28",
+        "visits": 6,
+        "uniques": 6,
+        "pageviews": 9
+      },
+      {
+        "date": "2026-08-02",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 3
+      },
+      {
+        "date": "2026-07-29",
+        "visits": 4,
+        "uniques": 4,
+        "pageviews": 5
+      },
+      {
+        "date": "2026-08-03",
+        "visits": 6,
+        "uniques": 6,
+        "pageviews": 10
+      },
+      {
+        "date": "2026-07-31",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 3
       }
     ],
     "monthlyHistory": [
       {
         "month": "Jul 2026",
         "date": "2026-07",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 1
+        "visits": 16,
+        "uniques": 16,
+        "pageviews": 26
+      },
+      {
+        "month": "Aug 2026",
+        "date": "2026-08",
+        "visits": 9,
+        "uniques": 9,
+        "pageviews": 14
       }
     ],
     "topPages": [
       {
-        "path": "/podcast",
+        "path": "/",
+        "pageviews": 11,
+        "uniques": 8
+      },
+      {
+        "path": "/privacy-policy",
+        "pageviews": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/terms-of-service",
+        "pageviews": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/tyler-b-booking",
         "pageviews": 1,
         "uniques": 1
       }
     ],
     "referrers": [
+      {
+        "source": "Organic",
+        "visits": 5,
+        "uniques": 5
+      },
+      {
+        "source": "Direct",
+        "visits": 3,
+        "uniques": 3
+      },
       {
         "source": "Paid/campaign",
         "visits": 1,
@@ -286,13 +366,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 90,
+        "performance": 68,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 49,
+        "performance": 77,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
@@ -1384,6 +1464,111 @@
         },
         "desktop": {
           "performance": 49,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-29",
+        "mobile": {
+          "performance": 66,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 76,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-30",
+        "mobile": {
+          "performance": 67,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 75,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-31",
+        "mobile": {
+          "performance": 90,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 76,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-01",
+        "mobile": {
+          "performance": 64,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 76,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-02",
+        "mobile": {
+          "performance": 90,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 76,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-03",
+        "mobile": {
+          "performance": 69,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 76,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-04",
+        "mobile": {
+          "performance": 68,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 77,
           "accessibility": 91,
           "bestPractices": 100,
           "seo": 92

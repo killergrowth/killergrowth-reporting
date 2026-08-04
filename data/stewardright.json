@@ -2,8 +2,8 @@
   "client": "StewardRight",
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
-  "period": "June 2026",
-  "generatedAt": "2026-07-28T09:32:00.776Z",
+  "period": "July 2026",
+  "generatedAt": "2026-08-04T09:32:37.305Z",
   "overview": {
     "sessions": 50,
     "sessionsDelta": 0,
@@ -11,14 +11,14 @@
     "leadsDelta": null,
     "rankingsTop10": null,
     "rankingsDelta": null,
-    "gbpViews": 2166,
+    "gbpViews": 1941,
     "gbpViewsDelta": null,
-    "adSpend": 593.29,
+    "adSpend": 555.57,
     "adImpressions": 25624,
     "adBudget": null,
     "costPerLead": null,
     "costPerLeadDelta": null,
-    "socialReach": 224,
+    "socialReach": 152,
     "socialReachDelta": 22,
     "reviewCount": 0,
     "avgRating": null
@@ -191,6 +191,7 @@
       }
     ],
     "keywords": [],
+    "dfsSnapshot": null,
     "leadSignals": {
       "organicSessions": 18,
       "phoneCalls": 0,
@@ -203,9 +204,9 @@
           "Direct": 2
         }
       },
-      "gbpCalls": 14,
-      "gbpWebsiteClicks": 87,
-      "gbpDirections": 203
+      "gbpCalls": 12,
+      "gbpWebsiteClicks": 75,
+      "gbpDirections": 191
     }
   },
   "ads": {
@@ -245,6 +246,12 @@
         "adSpend": 593.29,
         "adClicks": 2690,
         "adLeads": 0
+      },
+      {
+        "month": "Jul 2026",
+        "adSpend": 555.57,
+        "adClicks": 3747,
+        "adLeads": 0
       }
     ],
     "spendByWeek": [],
@@ -264,209 +271,13 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 2166,
-    "calls": 14,
+    "totalViews": 1941,
+    "calls": 12,
     "callsDelta": null,
-    "directions": 203,
-    "websiteClicks": 87,
+    "directions": 191,
+    "websiteClicks": 75,
     "directionsDelta": null,
     "viewsOverTime": [
-      {
-        "date": "2026-02-01",
-        "views": 6,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-02-02",
-        "views": 18,
-        "calls": 0,
-        "directions": 2,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-02-03",
-        "views": 4,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-02-04",
-        "views": 14,
-        "calls": 1,
-        "directions": 6,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-02-05",
-        "views": 17,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-02-06",
-        "views": 10,
-        "calls": 0,
-        "directions": 1,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-02-07",
-        "views": 11,
-        "calls": 0,
-        "directions": 3,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-02-08",
-        "views": 9,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-02-09",
-        "views": 12,
-        "calls": 0,
-        "directions": 4,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-02-10",
-        "views": 15,
-        "calls": 0,
-        "directions": 1,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-02-11",
-        "views": 22,
-        "calls": 0,
-        "directions": 2,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-02-12",
-        "views": 14,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-02-13",
-        "views": 10,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-02-14",
-        "views": 5,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 3
-      },
-      {
-        "date": "2026-02-15",
-        "views": 3,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-02-16",
-        "views": 14,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-02-17",
-        "views": 13,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-02-18",
-        "views": 12,
-        "calls": 0,
-        "directions": 2,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-02-19",
-        "views": 21,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-02-20",
-        "views": 12,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-02-21",
-        "views": 4,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-02-22",
-        "views": 7,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-02-23",
-        "views": 10,
-        "calls": 0,
-        "directions": 2,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-02-24",
-        "views": 10,
-        "calls": 1,
-        "directions": 4,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-02-25",
-        "views": 10,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-02-26",
-        "views": 14,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-02-27",
-        "views": 12,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-02-28",
-        "views": 14,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 1
-      },
       {
         "date": "2026-03-01",
         "views": 9,
@@ -1491,27 +1302,76 @@
       },
       {
         "date": "2026-07-25",
-        "views": 0,
+        "views": 11,
         "calls": 0,
         "directions": 1,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-26",
-        "views": 0,
+        "views": 7,
         "calls": 0,
-        "directions": 0,
+        "directions": 1,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-27",
+        "views": 14,
+        "calls": 0,
+        "directions": 12,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-28",
+        "views": 12,
+        "calls": 0,
+        "directions": 2,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-29",
+        "views": 22,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-30",
+        "views": 17,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-07-31",
+        "views": 15,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-01",
         "views": 0,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
-        "date": "2026-07-28",
+        "date": "2026-08-02",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-03",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-04",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1555,14 +1415,19 @@
         "month": "Jun 2026",
         "reach": 157,
         "engagements": 2226
+      },
+      {
+        "month": "Jul 2026",
+        "reach": 198,
+        "engagements": 2222
       }
     ],
     "reachByWeek": [],
     "platforms": [
       {
         "platform": "Facebook",
-        "reach": 224,
-        "engagements": 2264,
+        "reach": 152,
+        "engagements": 2242,
         "followers": 608
       }
     ]
@@ -1735,15 +1600,15 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 48,
+        "performance": 60,
         "accessibility": 90,
-        "bestPractices": 77,
+        "bestPractices": 92,
         "seo": 92
       },
       "desktop": {
-        "performance": 59,
+        "performance": 77,
         "accessibility": 90,
-        "bestPractices": 73,
+        "bestPractices": 92,
         "seo": 92
       }
     },
@@ -2815,6 +2680,106 @@
           "performance": 59,
           "accessibility": 90,
           "bestPractices": 73,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-29",
+        "mobile": {
+          "performance": 55,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 92,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-07-30",
+        "mobile": {
+          "performance": 43,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": null
+      },
+      {
+        "date": "2026-07-31",
+        "mobile": {
+          "performance": 55,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 66,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-01",
+        "mobile": {
+          "performance": 53,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 72,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-02",
+        "mobile": {
+          "performance": 55,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 92,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-03",
+        "mobile": {
+          "performance": 66,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 78,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-04",
+        "mobile": {
+          "performance": 60,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 77,
+          "accessibility": 90,
+          "bestPractices": 92,
           "seo": 92
         }
       }

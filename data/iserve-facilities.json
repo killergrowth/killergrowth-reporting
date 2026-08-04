@@ -2,8 +2,8 @@
   "client": "IServe Facilities",
   "slug": "iserve-facilities",
   "logoPath": null,
-  "period": "June 2026",
-  "generatedAt": "2026-07-28T09:42:26.989Z",
+  "period": "July 2026",
+  "generatedAt": "2026-08-04T09:38:03.947Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -28,6 +28,7 @@
     "trafficChannels": [],
     "organicSearchSources": [],
     "keywords": [],
+    "dfsSnapshot": null,
     "leadSignals": null
   },
   "ads": {
@@ -82,18 +83,118 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "ANNMTVXC",
-    "uniques": 0,
-    "visits": 0,
-    "pageviews": 0,
-    "avgDuration": null,
-    "bounceRate": null,
-    "uniquesDelta": null,
-    "visitsDelta": null,
-    "pageviewsDelta": null,
-    "dailyTimeseries": [],
-    "monthlyHistory": [],
-    "topPages": [],
-    "referrers": [],
+    "uniques": 9,
+    "visits": 9,
+    "pageviews": 17,
+    "avgDuration": 52,
+    "bounceRate": 55.555555555556,
+    "uniquesDelta": 50,
+    "visitsDelta": 50,
+    "pageviewsDelta": 6.3,
+    "dailyTimeseries": [
+      {
+        "date": "2026-08-01",
+        "visits": 3,
+        "uniques": 3,
+        "pageviews": 7
+      },
+      {
+        "date": "2026-07-30",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 4
+      },
+      {
+        "date": "2026-07-28",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 2
+      },
+      {
+        "date": "2026-08-02",
+        "visits": 3,
+        "uniques": 3,
+        "pageviews": 3
+      },
+      {
+        "date": "2026-07-29",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 6
+      },
+      {
+        "date": "2026-08-03",
+        "visits": 3,
+        "uniques": 3,
+        "pageviews": 7
+      },
+      {
+        "date": "2026-07-31",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 4
+      }
+    ],
+    "monthlyHistory": [
+      {
+        "month": "Jul 2026",
+        "date": "2026-07",
+        "visits": 6,
+        "uniques": 6,
+        "pageviews": 16
+      },
+      {
+        "month": "Aug 2026",
+        "date": "2026-08",
+        "visits": 9,
+        "uniques": 9,
+        "pageviews": 17
+      }
+    ],
+    "topPages": [
+      {
+        "path": "/",
+        "pageviews": 10,
+        "uniques": 8
+      },
+      {
+        "path": "/about",
+        "pageviews": 2,
+        "uniques": 2
+      },
+      {
+        "path": "/apply",
+        "pageviews": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/contact",
+        "pageviews": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/gallery",
+        "pageviews": 1,
+        "uniques": 1
+      }
+    ],
+    "referrers": [
+      {
+        "source": "Organic",
+        "visits": 4,
+        "uniques": 4
+      },
+      {
+        "source": "Paid/campaign",
+        "visits": 3,
+        "uniques": 3
+      },
+      {
+        "source": "Direct",
+        "visits": 2,
+        "uniques": 2
+      }
+    ],
     "cfPageViews": 26736,
     "cfUniques": 6630,
     "cfPageViewsDelta": 164.7,
@@ -275,7 +376,7 @@
         "seo": 100
       },
       "desktop": {
-        "performance": 93,
+        "performance": 96,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100
@@ -317,6 +418,111 @@
         },
         "desktop": {
           "performance": 93,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-07-29",
+        "mobile": {
+          "performance": 67,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 95,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-07-30",
+        "mobile": {
+          "performance": 67,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 79,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-07-31",
+        "mobile": {
+          "performance": 71,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 79,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-01",
+        "mobile": {
+          "performance": 71,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 79,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-02",
+        "mobile": {
+          "performance": 70,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 79,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-03",
+        "mobile": {
+          "performance": 71,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 86,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-04",
+        "mobile": {
+          "performance": 70,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 96,
           "accessibility": 100,
           "bestPractices": 100,
           "seo": 100
