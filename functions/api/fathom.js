@@ -24,6 +24,7 @@ const CLIENT_MAP = {
   'good-to-be-clean': 'MTRAPVNX',
   'sunflower':        'XNFHYGMT',
   'timnath':          'YNVVPFQV',
+  'dons-heating':     'NRMNQDNK',
 };
 
 // ── Date helpers ──────────────────────────────────────────────────────────────
