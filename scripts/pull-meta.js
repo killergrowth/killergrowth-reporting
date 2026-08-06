@@ -30,13 +30,14 @@ const HISTORY_START = '2026-01-01'; // pull YTD from this date
 function getHistoricalRange() {
   const now = new Date();
   const firstOfThisMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+  const firstOfNextMonth = new Date(now.getFullYear(), now.getMonth() + 1, 1); // include current month
   const lastMonthEnd = new Date(firstOfThisMonth - 1);
   const fmt = d => d.toISOString().split('T')[0];
   return {
     since:        Math.floor(new Date(HISTORY_START).getTime() / 1000),
-    until:        Math.floor(firstOfThisMonth.getTime() / 1000),
+    until:        Math.floor(firstOfNextMonth.getTime() / 1000),
     startDateStr: HISTORY_START,
-    endDateStr:   fmt(lastMonthEnd)
+    endDateStr:   fmt(new Date(firstOfNextMonth - 1))
   };
 }
 
