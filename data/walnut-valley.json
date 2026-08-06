@@ -3,7 +3,7 @@
   "slug": "walnut-valley",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-04T09:35:23.554Z",
+  "generatedAt": "2026-08-06T21:30:28.163Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -95,7 +95,10 @@
       }
     ],
     "spendByWeek": [],
-    "campaigns": []
+    "campaigns": [],
+    "phoneCalls": null,
+    "allConversions": null,
+    "costPerLead": null
   },
   "localFalcon": {
     "lastScanDate": null,
@@ -144,14 +147,14 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "SWIWEOSC",
-    "uniques": 4,
-    "visits": 4,
-    "pageviews": 7,
-    "avgDuration": 38,
-    "bounceRate": 50,
-    "uniquesDelta": -99.7,
-    "visitsDelta": -99.7,
-    "pageviewsDelta": -99.5,
+    "uniques": 7,
+    "visits": 7,
+    "pageviews": 10,
+    "avgDuration": 147,
+    "bounceRate": 71.428571428571,
+    "uniquesDelta": -99.4,
+    "visitsDelta": -99.4,
+    "pageviewsDelta": -99.3,
     "dailyTimeseries": [
       {
         "date": "2026-08-01",
@@ -160,22 +163,16 @@
         "pageviews": 7
       },
       {
-        "date": "2026-07-29",
-        "visits": 303,
-        "uniques": 303,
-        "pageviews": 365
+        "date": "2026-08-04",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 2
       },
       {
-        "date": "2026-07-31",
-        "visits": 284,
-        "uniques": 284,
-        "pageviews": 350
-      },
-      {
-        "date": "2026-07-27",
-        "visits": 25,
-        "uniques": 25,
-        "pageviews": 28
+        "date": "2026-07-30",
+        "visits": 264,
+        "uniques": 264,
+        "pageviews": 288
       },
       {
         "date": "2026-07-28",
@@ -184,10 +181,28 @@
         "pageviews": 406
       },
       {
-        "date": "2026-07-30",
-        "visits": 264,
-        "uniques": 264,
-        "pageviews": 288
+        "date": "2026-08-06",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 1
+      },
+      {
+        "date": "2026-07-29",
+        "visits": 303,
+        "uniques": 303,
+        "pageviews": 365
+      },
+      {
+        "date": "2026-07-27",
+        "visits": 25,
+        "uniques": 25,
+        "pageviews": 28
+      },
+      {
+        "date": "2026-07-31",
+        "visits": 284,
+        "uniques": 284,
+        "pageviews": 350
       }
     ],
     "monthlyHistory": [
@@ -201,28 +216,28 @@
       {
         "month": "Aug 2026",
         "date": "2026-08",
-        "visits": 4,
-        "uniques": 4,
-        "pageviews": 7
+        "visits": 7,
+        "uniques": 7,
+        "pageviews": 10
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 7,
-        "uniques": 4
+        "pageviews": 10,
+        "uniques": 7
       }
     ],
     "referrers": [
       {
         "source": "Organic",
-        "visits": 3,
-        "uniques": 3
+        "visits": 5,
+        "uniques": 5
       },
       {
         "source": "Direct",
-        "visits": 1,
-        "uniques": 1
+        "visits": 2,
+        "uniques": 2
       }
     ],
     "cfPageViews": 58255,
@@ -408,13 +423,13 @@
         "performance": 67,
         "accessibility": 82,
         "bestPractices": 100,
-        "seo": 100
+        "seo": 92
       },
       "desktop": {
-        "performance": 75,
+        "performance": 73,
         "accessibility": 91,
         "bestPractices": 100,
-        "seo": 100
+        "seo": 92
       }
     },
     "psiHistory": [
@@ -706,6 +721,21 @@
           "accessibility": 91,
           "bestPractices": 100,
           "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-06",
+        "mobile": {
+          "performance": 67,
+          "accessibility": 82,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 73,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
         }
       }
     ]

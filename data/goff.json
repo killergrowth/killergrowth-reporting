@@ -3,7 +3,7 @@
   "slug": "goff",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-04T09:35:56.258Z",
+  "generatedAt": "2026-08-06T21:30:59.854Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -34,7 +34,10 @@
   "ads": {
     "monthlyBreakdown": [],
     "spendByWeek": [],
-    "campaigns": []
+    "campaigns": [],
+    "phoneCalls": null,
+    "allConversions": null,
+    "costPerLead": null
   },
   "localFalcon": {
     "lastScanDate": null,
@@ -103,13 +106,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 37,
+        "performance": 49,
         "accessibility": 81,
         "bestPractices": 96,
         "seo": 92
       },
       "desktop": {
-        "performance": 69,
+        "performance": 68,
         "accessibility": 85,
         "bestPractices": 96,
         "seo": 92
@@ -406,6 +409,21 @@
         },
         "desktop": {
           "performance": 69,
+          "accessibility": 85,
+          "bestPractices": 96,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-06",
+        "mobile": {
+          "performance": 49,
+          "accessibility": 81,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 68,
           "accessibility": 85,
           "bestPractices": 96,
           "seo": 92

@@ -3,7 +3,7 @@
   "slug": "316-health",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-04T09:36:39.274Z",
+  "generatedAt": "2026-08-06T21:31:34.453Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -34,7 +34,10 @@
   "ads": {
     "monthlyBreakdown": [],
     "spendByWeek": [],
-    "campaigns": []
+    "campaigns": [],
+    "phoneCalls": null,
+    "allConversions": null,
+    "costPerLead": null
   },
   "localFalcon": {
     "lastScanDate": null,
@@ -81,8 +84,8 @@
       "inp": null,
       "pagespeedMobile": null
     },
-    "analyticsSource": null,
-    "fathomSiteId": null,
+    "analyticsSource": "fathom",
+    "fathomSiteId": "URWQAMZT",
     "uniques": null,
     "visits": null,
     "pageviews": null,
@@ -103,7 +106,7 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 48,
+        "performance": 57,
         "accessibility": 88,
         "bestPractices": 77,
         "seo": 100
@@ -112,7 +115,7 @@
         "performance": 81,
         "accessibility": 91,
         "bestPractices": 77,
-        "seo": 100
+        "seo": 92
       }
     },
     "psiHistory": [
@@ -384,6 +387,21 @@
           "accessibility": 91,
           "bestPractices": 77,
           "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-06",
+        "mobile": {
+          "performance": 57,
+          "accessibility": 88,
+          "bestPractices": 77,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 81,
+          "accessibility": 91,
+          "bestPractices": 77,
+          "seo": 92
         }
       }
     ]

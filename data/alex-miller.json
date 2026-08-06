@@ -3,7 +3,7 @@
   "slug": "alex-miller",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-04T09:37:23.790Z",
+  "generatedAt": "2026-08-06T21:32:18.395Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -34,7 +34,10 @@
   "ads": {
     "monthlyBreakdown": [],
     "spendByWeek": [],
-    "campaigns": []
+    "campaigns": [],
+    "phoneCalls": null,
+    "allConversions": null,
+    "costPerLead": null
   },
   "localFalcon": {
     "lastScanDate": null,
@@ -83,18 +86,60 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "IAVAKIOA",
-    "uniques": 0,
-    "visits": 0,
-    "pageviews": 0,
-    "avgDuration": null,
-    "bounceRate": null,
+    "uniques": 1,
+    "visits": 1,
+    "pageviews": 4,
+    "avgDuration": 37,
+    "bounceRate": 0,
     "uniquesDelta": null,
     "visitsDelta": null,
     "pageviewsDelta": null,
-    "dailyTimeseries": [],
-    "monthlyHistory": [],
-    "topPages": [],
-    "referrers": [],
+    "dailyTimeseries": [
+      {
+        "date": "2026-08-04",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 4
+      }
+    ],
+    "monthlyHistory": [
+      {
+        "month": "Aug 2026",
+        "date": "2026-08",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 4
+      }
+    ],
+    "topPages": [
+      {
+        "path": "/",
+        "pageviews": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/auctions/",
+        "pageviews": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/auctions/home-in-hutchinson-ks-164706/",
+        "pageviews": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/auctions/longton-ks-147-acres-164500/",
+        "pageviews": 1,
+        "uniques": 1
+      }
+    ],
+    "referrers": [
+      {
+        "source": "Direct",
+        "visits": 1,
+        "uniques": 1
+      }
+    ],
     "cfPageViews": 10890,
     "cfUniques": 4145,
     "cfPageViewsDelta": -7.4,
@@ -270,12 +315,17 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 80,
+        "performance": 72,
         "accessibility": 79,
         "bestPractices": 96,
         "seo": 100
       },
-      "desktop": null
+      "desktop": {
+        "performance": 98,
+        "accessibility": 79,
+        "bestPractices": 96,
+        "seo": 100
+      }
     },
     "psiHistory": [
       {
@@ -422,6 +472,21 @@
           "seo": 100
         },
         "desktop": null
+      },
+      {
+        "date": "2026-08-06",
+        "mobile": {
+          "performance": 72,
+          "accessibility": 79,
+          "bestPractices": 96,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 98,
+          "accessibility": 79,
+          "bestPractices": 96,
+          "seo": 100
+        }
       }
     ]
   },

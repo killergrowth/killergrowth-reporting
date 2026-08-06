@@ -3,7 +3,7 @@
   "slug": "killergrowth",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-04T09:32:14.639Z",
+  "generatedAt": "2026-08-06T21:27:22.318Z",
   "overview": {
     "sessions": 23,
     "sessionsDelta": 0,
@@ -125,10 +125,19 @@
         "adSpend": 1922.47,
         "adClicks": 14672,
         "adLeads": 0
+      },
+      {
+        "month": "Aug 2026",
+        "adSpend": 255.97,
+        "adClicks": 3064,
+        "adLeads": 0
       }
     ],
     "spendByWeek": [],
-    "campaigns": []
+    "campaigns": [],
+    "phoneCalls": null,
+    "allConversions": null,
+    "costPerLead": null
   },
   "localFalcon": {
     "lastScanDate": null,
@@ -193,6 +202,11 @@
         "month": "Jul 2026",
         "reach": 729,
         "engagements": 2097
+      },
+      {
+        "month": "Aug 2026",
+        "reach": 24,
+        "engagements": 42
       }
     ],
     "reachByWeek": [],
@@ -251,20 +265,26 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "NNTNPDOW",
-    "uniques": 9,
-    "visits": 9,
-    "pageviews": 14,
-    "avgDuration": 55,
-    "bounceRate": 66.666666666667,
-    "uniquesDelta": -43.8,
-    "visitsDelta": -43.8,
-    "pageviewsDelta": -46.2,
+    "uniques": 58,
+    "visits": 58,
+    "pageviews": 177,
+    "avgDuration": 135,
+    "bounceRate": 67.241379310345,
+    "uniquesDelta": 262.5,
+    "visitsDelta": 262.5,
+    "pageviewsDelta": 580.8,
     "dailyTimeseries": [
       {
         "date": "2026-08-01",
         "visits": 1,
         "uniques": 1,
         "pageviews": 1
+      },
+      {
+        "date": "2026-08-04",
+        "visits": 12,
+        "uniques": 12,
+        "pageviews": 18
       },
       {
         "date": "2026-07-30",
@@ -285,6 +305,12 @@
         "pageviews": 3
       },
       {
+        "date": "2026-08-06",
+        "visits": 22,
+        "uniques": 22,
+        "pageviews": 29
+      },
+      {
         "date": "2026-07-29",
         "visits": 4,
         "uniques": 4,
@@ -295,6 +321,12 @@
         "visits": 6,
         "uniques": 6,
         "pageviews": 10
+      },
+      {
+        "date": "2026-08-05",
+        "visits": 15,
+        "uniques": 15,
+        "pageviews": 116
       },
       {
         "date": "2026-07-31",
@@ -314,48 +346,58 @@
       {
         "month": "Aug 2026",
         "date": "2026-08",
-        "visits": 9,
-        "uniques": 9,
-        "pageviews": 14
+        "visits": 58,
+        "uniques": 58,
+        "pageviews": 177
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 11,
-        "uniques": 8
+        "pageviews": 52,
+        "uniques": 31
       },
       {
-        "path": "/privacy-policy",
-        "pageviews": 1,
-        "uniques": 1
+        "path": "/podcast",
+        "pageviews": 50,
+        "uniques": 9
       },
       {
-        "path": "/terms-of-service",
-        "pageviews": 1,
-        "uniques": 1
+        "path": "/blog/",
+        "pageviews": 15,
+        "uniques": 2
       },
       {
-        "path": "/tyler-b-booking",
-        "pageviews": 1,
-        "uniques": 1
+        "path": "/booking",
+        "pageviews": 14,
+        "uniques": 10
+      },
+      {
+        "path": "/podcast/ep-71-emma-schlittenhardt/",
+        "pageviews": 9,
+        "uniques": 2
       }
     ],
     "referrers": [
       {
-        "source": "Organic",
-        "visits": 5,
-        "uniques": 5
+        "source": "Direct",
+        "visits": 32,
+        "uniques": 32
       },
       {
-        "source": "Direct",
+        "source": "Organic",
+        "visits": 20,
+        "uniques": 20
+      },
+      {
+        "source": "Paid/campaign",
         "visits": 3,
         "uniques": 3
       },
       {
-        "source": "Paid/campaign",
-        "visits": 1,
-        "uniques": 1
+        "source": "Social",
+        "visits": 3,
+        "uniques": 3
       }
     ],
     "cfPageViews": null,
@@ -366,13 +408,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 68,
+        "performance": 71,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 77,
+        "performance": 76,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
@@ -1573,6 +1615,21 @@
           "bestPractices": 100,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-08-06",
+        "mobile": {
+          "performance": 71,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 76,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
       }
     ]
   },
@@ -1645,15 +1702,6 @@
       "title": "Add stewardright.kglanding.com",
       "status": "Done",
       "date": "2026-02-10",
-      "owner": "Tyler Norris",
-      "group": "Completed",
-      "source": "monday"
-    },
-    {
-      "id": "11201246505",
-      "title": "Build walnutvalley.kglanding.com and stewardright.kglanding.com",
-      "status": "Done",
-      "date": "2026-02-05",
       "owner": "Tyler Norris",
       "group": "Completed",
       "source": "monday"

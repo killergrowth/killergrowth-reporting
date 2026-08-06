@@ -3,7 +3,7 @@
   "slug": "demo-sales",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-04T09:39:25.393Z",
+  "generatedAt": "2026-08-06T21:34:17.792Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -34,7 +34,10 @@
   "ads": {
     "monthlyBreakdown": [],
     "spendByWeek": [],
-    "campaigns": []
+    "campaigns": [],
+    "phoneCalls": null,
+    "allConversions": null,
+    "costPerLead": null
   },
   "localFalcon": {
     "lastScanDate": null,
@@ -203,6 +206,11 @@
       },
       {
         "date": "2026-08-04",
+        "mobile": null,
+        "desktop": null
+      },
+      {
+        "date": "2026-08-06",
         "mobile": null,
         "desktop": null
       }

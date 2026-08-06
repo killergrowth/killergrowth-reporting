@@ -3,7 +3,7 @@
   "slug": "cogans-woodshop",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-04T09:37:41.737Z",
+  "generatedAt": "2026-08-06T21:32:38.384Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -34,7 +34,10 @@
   "ads": {
     "monthlyBreakdown": [],
     "spendByWeek": [],
-    "campaigns": []
+    "campaigns": [],
+    "phoneCalls": null,
+    "allConversions": null,
+    "costPerLead": null
   },
   "localFalcon": {
     "lastScanDate": null,
@@ -340,13 +343,13 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 74,
+        "performance": 71,
         "accessibility": 92,
         "bestPractices": 92,
         "seo": 92
       },
       "desktop": {
-        "performance": 94,
+        "performance": 93,
         "accessibility": 80,
         "bestPractices": 92,
         "seo": 92
@@ -498,6 +501,21 @@
         },
         "desktop": {
           "performance": 94,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-06",
+        "mobile": {
+          "performance": 71,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 93,
           "accessibility": 80,
           "bestPractices": 92,
           "seo": 92
