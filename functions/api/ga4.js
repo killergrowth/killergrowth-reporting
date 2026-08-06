@@ -196,7 +196,7 @@ export async function onRequest(context) {
       ['eventCount']
     );
     const byChannel = {};
-    let phoneCalls = 0, formSubmissions = 0, emailClicks = 0, formStarts = 0, ctaClicks = 0;
+    let phoneCalls = 0, formSubmissions = 0, emailClicks = 0, formStarts = 0, ctaClicks = 0, bookingClicks = 0;
     (convReport.rows || []).forEach(r => {
       const evt = rowDim(r, 0);
       const ch  = rowDim(r, 1);
@@ -208,6 +208,7 @@ export async function onRequest(context) {
       if (evt === 'email_click')    emailClicks     += cnt;
       if (evt === 'form_start')     formStarts      += cnt;
       if (evt === 'cta_click')      ctaClicks       += cnt;
+      if (evt === 'booking_click')  bookingClicks   += cnt;
     });
 
     return Response.json({
@@ -225,6 +226,7 @@ export async function onRequest(context) {
           emailClicks,
           formStarts,
           ctaClicks,
+          bookingClicks,
           byChannel,
         },
       },
