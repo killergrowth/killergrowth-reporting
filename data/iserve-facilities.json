@@ -3,7 +3,7 @@
   "slug": "iserve-facilities",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-06T21:33:03.525Z",
+  "generatedAt": "2026-08-07T08:09:56.888Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -86,14 +86,14 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "ANNMTVXC",
-    "uniques": 22,
-    "visits": 22,
-    "pageviews": 45,
-    "avgDuration": 105,
-    "bounceRate": 50,
-    "uniquesDelta": 266.7,
-    "visitsDelta": 266.7,
-    "pageviewsDelta": 181.3,
+    "uniques": 23,
+    "visits": 23,
+    "pageviews": 50,
+    "avgDuration": 107,
+    "bounceRate": 47.826086956522,
+    "uniquesDelta": 283.3,
+    "visitsDelta": 283.3,
+    "pageviewsDelta": 212.5,
     "dailyTimeseries": [
       {
         "date": "2026-08-01",
@@ -127,9 +127,9 @@
       },
       {
         "date": "2026-08-06",
-        "visits": 3,
-        "uniques": 3,
-        "pageviews": 4
+        "visits": 4,
+        "uniques": 4,
+        "pageviews": 9
       },
       {
         "date": "2026-07-29",
@@ -167,31 +167,31 @@
       {
         "month": "Aug 2026",
         "date": "2026-08",
-        "visits": 22,
-        "uniques": 22,
-        "pageviews": 45
+        "visits": 23,
+        "uniques": 23,
+        "pageviews": 50
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 25,
-        "uniques": 20
+        "pageviews": 26,
+        "uniques": 21
       },
       {
         "path": "/apply",
-        "pageviews": 9,
-        "uniques": 6
+        "pageviews": 10,
+        "uniques": 7
       },
       {
         "path": "/about",
-        "pageviews": 4,
-        "uniques": 4
+        "pageviews": 6,
+        "uniques": 5
       },
       {
         "path": "/contact",
-        "pageviews": 2,
-        "uniques": 2
+        "pageviews": 3,
+        "uniques": 3
       },
       {
         "path": "/gallery",
@@ -202,8 +202,8 @@
     "referrers": [
       {
         "source": "Organic",
-        "visits": 11,
-        "uniques": 11
+        "visits": 12,
+        "uniques": 12
       },
       {
         "source": "Direct",
@@ -396,7 +396,7 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 67,
+        "performance": 71,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100
@@ -558,6 +558,21 @@
         "date": "2026-08-06",
         "mobile": {
           "performance": 67,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 79,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-07",
+        "mobile": {
+          "performance": 71,
           "accessibility": 100,
           "bestPractices": 100,
           "seo": 100

@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-06T21:28:07.853Z",
+  "generatedAt": "2026-08-07T08:04:59.158Z",
   "overview": {
     "sessions": 871,
     "sessionsDelta": 0,
@@ -13,10 +13,10 @@
     "rankingsDelta": null,
     "gbpViews": 4814,
     "gbpViewsDelta": null,
-    "adSpend": 276.46,
-    "adImpressions": 6478,
+    "adSpend": 381.87,
+    "adImpressions": 7963,
     "adBudget": null,
-    "costPerLead": 12.02,
+    "costPerLead": 9.79,
     "costPerLeadDelta": null,
     "socialReach": 166,
     "socialReachDelta": null,
@@ -447,46 +447,46 @@
       },
       {
         "month": "Aug 2026 (MTD)",
-        "adSpend": 276.46,
-        "adClicks": 172,
-        "adLeads": 2,
-        "adImpressions": 6478
+        "adSpend": 381.87,
+        "adClicks": 193,
+        "adLeads": 3,
+        "adImpressions": 7963
       }
     ],
     "spendByWeek": [],
     "campaigns": [
       {
         "name": "KG | New - Plumbing",
-        "spend": 207.23,
-        "clicks": 14,
+        "spend": 217.46,
+        "clicks": 15,
         "leads": 1,
-        "impressions": 156
-      },
-      {
-        "name": "KG | 2025 | Butler County | PMax | RL 9/11/25",
-        "spend": 42.55,
-        "clicks": 120,
-        "leads": 1,
-        "impressions": 4340
-      },
-      {
-        "name": "KG | 2025 | Plumber Near You",
-        "spend": 26.68,
-        "clicks": 35,
-        "leads": 0,
-        "impressions": 1922
+        "impressions": 236
       },
       {
         "name": "LocalServicesCampaign:SystemGenerated:0005d4e425019745",
-        "spend": 0,
-        "clicks": 3,
+        "spend": 83.87,
+        "clicks": 8,
+        "leads": 1,
+        "impressions": 100
+      },
+      {
+        "name": "KG | 2025 | Butler County | PMax | RL 9/11/25",
+        "spend": 43.01,
+        "clicks": 121,
+        "leads": 1,
+        "impressions": 4529
+      },
+      {
+        "name": "KG | 2025 | Plumber Near You",
+        "spend": 37.53,
+        "clicks": 49,
         "leads": 0,
-        "impressions": 60
+        "impressions": 3098
       }
     ],
-    "phoneCalls": 4,
-    "allConversions": 23,
-    "costPerLead": 276.46
+    "phoneCalls": 6,
+    "allConversions": 39,
+    "costPerLead": 127.29
   },
   "localFalcon": {
     "lastScanDate": "6/7/2026 9:11 AM",
@@ -1700,6 +1700,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-07",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -1747,8 +1754,8 @@
       },
       {
         "month": "Aug 2026",
-        "reach": 171,
-        "engagements": 527
+        "reach": 186,
+        "engagements": 543
       }
     ],
     "reachByWeek": [],
@@ -1757,7 +1764,7 @@
         "platform": "Facebook",
         "reach": 166,
         "engagements": 218,
-        "followers": 1203
+        "followers": 1204
       }
     ]
   },
@@ -1919,38 +1926,26 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "XNFHYGMT",
-    "uniques": 62,
-    "visits": 62,
-    "pageviews": 148,
-    "avgDuration": 182,
-    "bounceRate": 74.193548387097,
-    "uniquesDelta": 12.7,
-    "visitsDelta": 12.7,
-    "pageviewsDelta": 34.5,
+    "uniques": 65,
+    "visits": 65,
+    "pageviews": 151,
+    "avgDuration": 179,
+    "bounceRate": 75.384615384615,
+    "uniquesDelta": 18.2,
+    "visitsDelta": 18.2,
+    "pageviewsDelta": 37.3,
     "dailyTimeseries": [
       {
-        "date": "2026-08-04",
-        "visits": 32,
-        "uniques": 32,
-        "pageviews": 56
-      },
-      {
-        "date": "2026-07-30",
-        "visits": 16,
-        "uniques": 16,
-        "pageviews": 23
-      },
-      {
-        "date": "2026-07-28",
-        "visits": 18,
-        "uniques": 18,
-        "pageviews": 43
+        "date": "2026-08-07",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 2
       },
       {
         "date": "2026-08-06",
-        "visits": 9,
-        "uniques": 9,
-        "pageviews": 63
+        "visits": 10,
+        "uniques": 10,
+        "pageviews": 64
       },
       {
         "date": "2026-07-29",
@@ -1959,16 +1954,34 @@
         "pageviews": 18
       },
       {
+        "date": "2026-07-31",
+        "visits": 9,
+        "uniques": 9,
+        "pageviews": 26
+      },
+      {
+        "date": "2026-08-04",
+        "visits": 32,
+        "uniques": 32,
+        "pageviews": 56
+      },
+      {
         "date": "2026-08-05",
         "visits": 21,
         "uniques": 21,
         "pageviews": 29
       },
       {
-        "date": "2026-07-31",
-        "visits": 9,
-        "uniques": 9,
-        "pageviews": 26
+        "date": "2026-07-28",
+        "visits": 18,
+        "uniques": 18,
+        "pageviews": 43
+      },
+      {
+        "date": "2026-07-30",
+        "visits": 16,
+        "uniques": 16,
+        "pageviews": 23
       }
     ],
     "monthlyHistory": [
@@ -1982,21 +1995,21 @@
       {
         "month": "Aug 2026",
         "date": "2026-08",
-        "visits": 62,
-        "uniques": 62,
-        "pageviews": 148
+        "visits": 65,
+        "uniques": 65,
+        "pageviews": 151
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 69,
-        "uniques": 41
+        "pageviews": 71,
+        "uniques": 43
       },
       {
         "path": "/reliable/",
-        "pageviews": 15,
-        "uniques": 2
+        "pageviews": 16,
+        "uniques": 3
       },
       {
         "path": "/areas-served/",
@@ -2017,13 +2030,13 @@
     "referrers": [
       {
         "source": "Direct",
-        "visits": 38,
-        "uniques": 38
+        "visits": 40,
+        "uniques": 40
       },
       {
         "source": "Paid/campaign",
-        "visits": 13,
-        "uniques": 13
+        "visits": 14,
+        "uniques": 14
       },
       {
         "source": "Social",
@@ -2044,13 +2057,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 52,
+        "performance": 51,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 72,
+        "performance": 67,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
@@ -3142,6 +3155,21 @@
         },
         "desktop": {
           "performance": 72,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-07",
+        "mobile": {
+          "performance": 51,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 67,
           "accessibility": 93,
           "bestPractices": 100,
           "seo": 92
