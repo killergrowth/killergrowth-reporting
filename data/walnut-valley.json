@@ -3,7 +3,7 @@
   "slug": "walnut-valley",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-07T08:07:10.986Z",
+  "generatedAt": "2026-08-08T07:41:59.937Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -163,34 +163,16 @@
         "pageviews": 7
       },
       {
-        "date": "2026-08-04",
-        "visits": 2,
-        "uniques": 2,
-        "pageviews": 2
-      },
-      {
-        "date": "2026-07-30",
-        "visits": 264,
-        "uniques": 264,
-        "pageviews": 288
-      },
-      {
-        "date": "2026-07-28",
-        "visits": 363,
-        "uniques": 363,
-        "pageviews": 406
-      },
-      {
         "date": "2026-08-06",
         "visits": 1,
         "uniques": 1,
         "pageviews": 1
       },
       {
-        "date": "2026-07-29",
-        "visits": 303,
-        "uniques": 303,
-        "pageviews": 365
+        "date": "2026-07-31",
+        "visits": 284,
+        "uniques": 284,
+        "pageviews": 350
       },
       {
         "date": "2026-07-27",
@@ -199,10 +181,28 @@
         "pageviews": 28
       },
       {
-        "date": "2026-07-31",
-        "visits": 284,
-        "uniques": 284,
-        "pageviews": 350
+        "date": "2026-07-29",
+        "visits": 303,
+        "uniques": 303,
+        "pageviews": 365
+      },
+      {
+        "date": "2026-08-04",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 2
+      },
+      {
+        "date": "2026-07-28",
+        "visits": 363,
+        "uniques": 363,
+        "pageviews": 406
+      },
+      {
+        "date": "2026-07-30",
+        "visits": 264,
+        "uniques": 264,
+        "pageviews": 288
       }
     ],
     "monthlyHistory": [
@@ -420,7 +420,7 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 67,
+        "performance": 68,
         "accessibility": 82,
         "bestPractices": 100,
         "seo": 92
@@ -742,6 +742,21 @@
         "date": "2026-08-07",
         "mobile": {
           "performance": 67,
+          "accessibility": 82,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 75,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-08",
+        "mobile": {
+          "performance": 68,
           "accessibility": 82,
           "bestPractices": 100,
           "seo": 92

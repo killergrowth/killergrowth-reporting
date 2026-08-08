@@ -3,7 +3,7 @@
   "slug": "killergrowth",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-07T08:04:12.742Z",
+  "generatedAt": "2026-08-08T07:39:00.143Z",
   "overview": {
     "sessions": 23,
     "sessionsDelta": 0,
@@ -128,8 +128,8 @@
       },
       {
         "month": "Aug 2026",
-        "adSpend": 279.52,
-        "adClicks": 3345,
+        "adSpend": 337.41,
+        "adClicks": 4037,
         "adLeads": 0
       }
     ],
@@ -205,8 +205,8 @@
       },
       {
         "month": "Aug 2026",
-        "reach": 25,
-        "engagements": 44
+        "reach": 26,
+        "engagements": 48
       }
     ],
     "reachByWeek": [],
@@ -265,14 +265,14 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "NNTNPDOW",
-    "uniques": 62,
-    "visits": 62,
-    "pageviews": 188,
-    "avgDuration": 143,
-    "bounceRate": 64.516129032258,
-    "uniquesDelta": 287.5,
-    "visitsDelta": 287.5,
-    "pageviewsDelta": 623.1,
+    "uniques": 65,
+    "visits": 65,
+    "pageviews": 194,
+    "avgDuration": 161,
+    "bounceRate": 63.076923076923,
+    "uniquesDelta": 306.3,
+    "visitsDelta": 306.3,
+    "pageviewsDelta": 646.2,
     "dailyTimeseries": [
       {
         "date": "2026-08-01",
@@ -294,9 +294,9 @@
       },
       {
         "date": "2026-08-07",
-        "visits": 2,
-        "uniques": 2,
-        "pageviews": 2
+        "visits": 5,
+        "uniques": 5,
+        "pageviews": 8
       },
       {
         "date": "2026-07-28",
@@ -352,21 +352,21 @@
       {
         "month": "Aug 2026",
         "date": "2026-08",
-        "visits": 62,
-        "uniques": 62,
-        "pageviews": 188
+        "visits": 65,
+        "uniques": 65,
+        "pageviews": 194
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 56,
-        "uniques": 34
+        "pageviews": 59,
+        "uniques": 36
       },
       {
         "path": "/podcast",
-        "pageviews": 51,
-        "uniques": 10
+        "pageviews": 52,
+        "uniques": 11
       },
       {
         "path": "/booking",
@@ -375,8 +375,8 @@
       },
       {
         "path": "/blog/",
-        "pageviews": 16,
-        "uniques": 3
+        "pageviews": 17,
+        "uniques": 4
       },
       {
         "path": "/podcast/ep-71-emma-schlittenhardt/",
@@ -387,13 +387,13 @@
     "referrers": [
       {
         "source": "Direct",
-        "visits": 34,
-        "uniques": 34
+        "visits": 36,
+        "uniques": 36
       },
       {
         "source": "Organic",
-        "visits": 22,
-        "uniques": 22
+        "visits": 23,
+        "uniques": 23
       },
       {
         "source": "Paid/campaign",
@@ -414,13 +414,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 90,
+        "performance": 86,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 76,
+        "performance": 74,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
@@ -1647,6 +1647,21 @@
         },
         "desktop": {
           "performance": 76,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-08",
+        "mobile": {
+          "performance": 86,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 74,
           "accessibility": 91,
           "bestPractices": 100,
           "seo": 92

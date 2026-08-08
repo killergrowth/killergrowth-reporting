@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-07T08:04:59.158Z",
+  "generatedAt": "2026-08-08T07:39:43.193Z",
   "overview": {
     "sessions": 871,
     "sessionsDelta": 0,
@@ -11,12 +11,12 @@
     "leadsDelta": null,
     "rankingsTop10": 17,
     "rankingsDelta": null,
-    "gbpViews": 4814,
+    "gbpViews": 4841,
     "gbpViewsDelta": null,
-    "adSpend": 381.87,
-    "adImpressions": 7963,
+    "adSpend": 432.1,
+    "adImpressions": 10036,
     "adBudget": null,
-    "costPerLead": 9.79,
+    "costPerLead": 10.29,
     "costPerLeadDelta": null,
     "socialReach": 166,
     "socialReachDelta": null,
@@ -411,8 +411,8 @@
         }
       },
       "gbpCalls": 297,
-      "gbpWebsiteClicks": 231,
-      "gbpDirections": 214
+      "gbpWebsiteClicks": 238,
+      "gbpDirections": 220
     }
   },
   "ads": {
@@ -447,46 +447,46 @@
       },
       {
         "month": "Aug 2026 (MTD)",
-        "adSpend": 381.87,
-        "adClicks": 193,
-        "adLeads": 3,
-        "adImpressions": 7963
+        "adSpend": 432.1,
+        "adClicks": 227,
+        "adLeads": 4,
+        "adImpressions": 10036
       }
     ],
     "spendByWeek": [],
     "campaigns": [
       {
         "name": "KG | New - Plumbing",
-        "spend": 217.46,
-        "clicks": 15,
-        "leads": 1,
-        "impressions": 236
+        "spend": 251.73,
+        "clicks": 19,
+        "leads": 2,
+        "impressions": 542
       },
       {
         "name": "LocalServicesCampaign:SystemGenerated:0005d4e425019745",
         "spend": 83.87,
-        "clicks": 8,
+        "clicks": 10,
         "leads": 1,
-        "impressions": 100
-      },
-      {
-        "name": "KG | 2025 | Butler County | PMax | RL 9/11/25",
-        "spend": 43.01,
-        "clicks": 121,
-        "leads": 1,
-        "impressions": 4529
+        "impressions": 131
       },
       {
         "name": "KG | 2025 | Plumber Near You",
-        "spend": 37.53,
-        "clicks": 49,
+        "spend": 51.81,
+        "clicks": 69,
         "leads": 0,
-        "impressions": 3098
+        "impressions": 4364
+      },
+      {
+        "name": "KG | 2025 | Butler County | PMax | RL 9/11/25",
+        "spend": 44.68,
+        "clicks": 129,
+        "leads": 1,
+        "impressions": 4999
       }
     ],
     "phoneCalls": 6,
-    "allConversions": 39,
-    "costPerLead": 127.29
+    "allConversions": 42,
+    "costPerLead": 144.03
   },
   "localFalcon": {
     "lastScanDate": "6/7/2026 9:11 AM",
@@ -581,11 +581,11 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 4814,
+    "totalViews": 4841,
     "calls": 297,
     "callsDelta": null,
-    "directions": 214,
-    "websiteClicks": 231,
+    "directions": 220,
+    "websiteClicks": 238,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1647,51 +1647,51 @@
       },
       {
         "date": "2026-07-30",
-        "views": 22,
+        "views": 24,
         "calls": 1,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-07-31",
-        "views": 38,
+        "views": 44,
         "calls": 1,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-08-01",
-        "views": 35,
+        "views": 42,
         "calls": 1,
         "directions": 5,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-08-02",
-        "views": 30,
+        "views": 34,
         "calls": 0,
         "directions": 1,
         "websiteClicks": 0
       },
       {
         "date": "2026-08-03",
-        "views": 0,
+        "views": 5,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 3
       },
       {
         "date": "2026-08-04",
-        "views": 0,
+        "views": 3,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-08-05",
         "views": 0,
         "calls": 0,
-        "directions": 0,
+        "directions": 6,
         "websiteClicks": 0
       },
       {
@@ -1703,6 +1703,13 @@
       },
       {
         "date": "2026-08-07",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-08",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1754,8 +1761,8 @@
       },
       {
         "month": "Aug 2026",
-        "reach": 186,
-        "engagements": 543
+        "reach": 192,
+        "engagements": 551
       }
     ],
     "reachByWeek": [],
@@ -1926,20 +1933,38 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "XNFHYGMT",
-    "uniques": 65,
-    "visits": 65,
-    "pageviews": 151,
-    "avgDuration": 179,
-    "bounceRate": 75.384615384615,
-    "uniquesDelta": 18.2,
-    "visitsDelta": 18.2,
-    "pageviewsDelta": 37.3,
+    "uniques": 81,
+    "visits": 81,
+    "pageviews": 174,
+    "avgDuration": 166,
+    "bounceRate": 75.308641975309,
+    "uniquesDelta": 47.3,
+    "visitsDelta": 47.3,
+    "pageviewsDelta": 58.2,
     "dailyTimeseries": [
       {
+        "date": "2026-08-04",
+        "visits": 32,
+        "uniques": 32,
+        "pageviews": 56
+      },
+      {
+        "date": "2026-07-30",
+        "visits": 16,
+        "uniques": 16,
+        "pageviews": 23
+      },
+      {
         "date": "2026-08-07",
-        "visits": 2,
-        "uniques": 2,
-        "pageviews": 2
+        "visits": 15,
+        "uniques": 15,
+        "pageviews": 19
+      },
+      {
+        "date": "2026-07-28",
+        "visits": 18,
+        "uniques": 18,
+        "pageviews": 43
       },
       {
         "date": "2026-08-06",
@@ -1954,16 +1979,10 @@
         "pageviews": 18
       },
       {
-        "date": "2026-07-31",
-        "visits": 9,
-        "uniques": 9,
-        "pageviews": 26
-      },
-      {
-        "date": "2026-08-04",
-        "visits": 32,
-        "uniques": 32,
-        "pageviews": 56
+        "date": "2026-08-08",
+        "visits": 3,
+        "uniques": 3,
+        "pageviews": 6
       },
       {
         "date": "2026-08-05",
@@ -1972,16 +1991,10 @@
         "pageviews": 29
       },
       {
-        "date": "2026-07-28",
-        "visits": 18,
-        "uniques": 18,
-        "pageviews": 43
-      },
-      {
-        "date": "2026-07-30",
-        "visits": 16,
-        "uniques": 16,
-        "pageviews": 23
+        "date": "2026-07-31",
+        "visits": 9,
+        "uniques": 9,
+        "pageviews": 26
       }
     ],
     "monthlyHistory": [
@@ -1995,48 +2008,48 @@
       {
         "month": "Aug 2026",
         "date": "2026-08",
-        "visits": 65,
-        "uniques": 65,
-        "pageviews": 151
+        "visits": 81,
+        "uniques": 81,
+        "pageviews": 174
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 71,
-        "uniques": 43
+        "pageviews": 77,
+        "uniques": 49
       },
       {
         "path": "/reliable/",
-        "pageviews": 16,
-        "uniques": 3
+        "pageviews": 20,
+        "uniques": 6
       },
       {
         "path": "/areas-served/",
-        "pageviews": 12,
-        "uniques": 10
+        "pageviews": 14,
+        "uniques": 11
       },
       {
         "path": "/sign-up/",
-        "pageviews": 10,
-        "uniques": 9
+        "pageviews": 13,
+        "uniques": 12
       },
       {
         "path": "/plumbing/",
-        "pageviews": 6,
-        "uniques": 5
+        "pageviews": 7,
+        "uniques": 6
       }
     ],
     "referrers": [
       {
         "source": "Direct",
-        "visits": 40,
-        "uniques": 40
+        "visits": 47,
+        "uniques": 47
       },
       {
         "source": "Paid/campaign",
-        "visits": 14,
-        "uniques": 14
+        "visits": 19,
+        "uniques": 19
       },
       {
         "source": "Social",
@@ -2045,8 +2058,8 @@
       },
       {
         "source": "Organic",
-        "visits": 3,
-        "uniques": 3
+        "visits": 7,
+        "uniques": 7
       }
     ],
     "cfPageViews": null,
@@ -2063,7 +2076,7 @@
         "seo": 92
       },
       "desktop": {
-        "performance": 67,
+        "performance": 69,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
@@ -3170,6 +3183,21 @@
         },
         "desktop": {
           "performance": 67,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-08",
+        "mobile": {
+          "performance": 51,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 69,
           "accessibility": 93,
           "bestPractices": 100,
           "seo": 92
