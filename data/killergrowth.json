@@ -3,7 +3,7 @@
   "slug": "killergrowth",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-08T07:39:00.143Z",
+  "generatedAt": "2026-08-09T07:43:11.390Z",
   "overview": {
     "sessions": 23,
     "sessionsDelta": 0,
@@ -128,8 +128,8 @@
       },
       {
         "month": "Aug 2026",
-        "adSpend": 337.41,
-        "adClicks": 4037,
+        "adSpend": 408.85,
+        "adClicks": 4923,
         "adLeads": 0
       }
     ],
@@ -206,7 +206,7 @@
       {
         "month": "Aug 2026",
         "reach": 26,
-        "engagements": 48
+        "engagements": 52
       }
     ],
     "reachByWeek": [],
@@ -265,14 +265,14 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "NNTNPDOW",
-    "uniques": 65,
-    "visits": 65,
-    "pageviews": 194,
-    "avgDuration": 161,
-    "bounceRate": 63.076923076923,
-    "uniquesDelta": 306.3,
-    "visitsDelta": 306.3,
-    "pageviewsDelta": 646.2,
+    "uniques": 67,
+    "visits": 67,
+    "pageviews": 199,
+    "avgDuration": 157,
+    "bounceRate": 61.194029850746,
+    "uniquesDelta": 318.8,
+    "visitsDelta": 318.8,
+    "pageviewsDelta": 665.4,
     "dailyTimeseries": [
       {
         "date": "2026-08-01",
@@ -305,6 +305,12 @@
         "pageviews": 9
       },
       {
+        "date": "2026-08-09",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 2
+      },
+      {
         "date": "2026-08-02",
         "visits": 2,
         "uniques": 2,
@@ -327,6 +333,12 @@
         "visits": 6,
         "uniques": 6,
         "pageviews": 10
+      },
+      {
+        "date": "2026-08-08",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 3
       },
       {
         "date": "2026-08-05",
@@ -352,21 +364,21 @@
       {
         "month": "Aug 2026",
         "date": "2026-08",
-        "visits": 65,
-        "uniques": 65,
-        "pageviews": 194
+        "visits": 67,
+        "uniques": 67,
+        "pageviews": 199
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 59,
-        "uniques": 36
+        "pageviews": 60,
+        "uniques": 37
       },
       {
         "path": "/podcast",
-        "pageviews": 52,
-        "uniques": 11
+        "pageviews": 53,
+        "uniques": 12
       },
       {
         "path": "/booking",
@@ -387,8 +399,8 @@
     "referrers": [
       {
         "source": "Direct",
-        "visits": 36,
-        "uniques": 36
+        "visits": 38,
+        "uniques": 38
       },
       {
         "source": "Organic",
@@ -414,13 +426,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 86,
+        "performance": 90,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 74,
+        "performance": 72,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
@@ -1662,6 +1674,21 @@
         },
         "desktop": {
           "performance": 74,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-09",
+        "mobile": {
+          "performance": 90,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 72,
           "accessibility": 91,
           "bestPractices": 100,
           "seo": 92
