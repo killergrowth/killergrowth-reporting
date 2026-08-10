@@ -3,7 +3,7 @@
   "slug": "timnath",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-09T07:45:59.023Z",
+  "generatedAt": "2026-08-10T08:22:15.347Z",
   "overview": {
     "sessions": 120,
     "sessionsDelta": 0,
@@ -2085,14 +2085,14 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "YNVVPFQV",
-    "uniques": 11,
-    "visits": 11,
-    "pageviews": 31,
+    "uniques": 12,
+    "visits": 12,
+    "pageviews": 32,
     "avgDuration": 166,
-    "bounceRate": 45.454545454545,
-    "uniquesDelta": 83.3,
-    "visitsDelta": 83.3,
-    "pageviewsDelta": 93.8,
+    "bounceRate": 50,
+    "uniquesDelta": 100,
+    "visitsDelta": 100,
+    "pageviewsDelta": 100,
     "dailyTimeseries": [
       {
         "date": "2026-07-30",
@@ -2137,6 +2137,12 @@
         "pageviews": 3
       },
       {
+        "date": "2026-08-10",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 1
+      },
+      {
         "date": "2026-07-31",
         "visits": 3,
         "uniques": 3,
@@ -2154,16 +2160,16 @@
       {
         "month": "Aug 2026",
         "date": "2026-08",
-        "visits": 11,
-        "uniques": 11,
-        "pageviews": 31
+        "visits": 12,
+        "uniques": 12,
+        "pageviews": 32
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 17,
-        "uniques": 11
+        "pageviews": 18,
+        "uniques": 12
       },
       {
         "path": "/areas-served/",
@@ -2189,8 +2195,8 @@
     "referrers": [
       {
         "source": "Direct",
-        "visits": 9,
-        "uniques": 9
+        "visits": 10,
+        "uniques": 10
       },
       {
         "source": "Paid/campaign",
@@ -2206,13 +2212,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 64,
+        "performance": 43,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 68,
+        "performance": 96,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
@@ -2654,6 +2660,21 @@
         },
         "desktop": {
           "performance": 68,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-10",
+        "mobile": {
+          "performance": 43,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 96,
           "accessibility": 90,
           "bestPractices": 100,
           "seo": 92
