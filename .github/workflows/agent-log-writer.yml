@@ -46,7 +46,7 @@ jobs:
           repository: killergrowth/killergrowth-openclaw-v2.1
           token: ${{ secrets.KILLERGROWTH_REPO_TOKEN }}
           sparse-checkout: |
-            tools/agent-log-writer
+            workspace/tools/agent-log-writer
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -66,7 +66,7 @@ jobs:
             DRY_RUN_FLAG="--dry-run"
           fi
 
-          node tools/agent-log-writer/log-agent-work.mjs \
+          node workspace/tools/agent-log-writer/log-agent-work.mjs \
             --mode deploy \
             --client "$CLIENT" \
             --summary "$SUMMARY" \
