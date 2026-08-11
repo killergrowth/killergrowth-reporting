@@ -3,15 +3,15 @@
   "slug": "dons-heating",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-10T08:20:43.836Z",
+  "generatedAt": "2026-08-05T13:45:01.241Z",
   "overview": {
-    "sessions": 826,
+    "sessions": 884,
     "sessionsDelta": 0,
-    "leads": 0,
+    "leads": 4,
     "leadsDelta": null,
-    "rankingsTop10": 15,
+    "rankingsTop10": 14,
     "rankingsDelta": null,
-    "gbpViews": 3541,
+    "gbpViews": 3345,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -25,30 +25,6 @@
   },
   "seo": {
     "organicSessions": [
-      {
-        "week": "06",
-        "date": "2026-02-02",
-        "sessions": 240,
-        "conversions": 5
-      },
-      {
-        "week": "07",
-        "date": "2026-02-09",
-        "sessions": 157,
-        "conversions": 2
-      },
-      {
-        "week": "08",
-        "date": "2026-02-16",
-        "sessions": 166,
-        "conversions": 1
-      },
-      {
-        "week": "09",
-        "date": "2026-02-23",
-        "sessions": 189,
-        "conversions": 1
-      },
       {
         "week": "10",
         "date": "2026-03-02",
@@ -154,254 +130,299 @@
       {
         "week": "27",
         "date": "2026-06-29",
-        "sessions": 140,
-        "conversions": 5
+        "sessions": 239,
+        "conversions": 10
+      },
+      {
+        "week": "28",
+        "date": "2026-07-06",
+        "sessions": 204,
+        "conversions": 17
+      },
+      {
+        "week": "29",
+        "date": "2026-07-13",
+        "sessions": 234,
+        "conversions": 18
+      },
+      {
+        "week": "30",
+        "date": "2026-07-20",
+        "sessions": 135,
+        "conversions": 9
+      },
+      {
+        "week": "31",
+        "date": "2026-07-27",
+        "sessions": 191,
+        "conversions": 12
       }
     ],
     "trafficChannels": [
       {
         "channel": "Direct",
-        "sessions": 507
-      },
-      {
-        "channel": "Unassigned",
-        "sessions": 162
+        "sessions": 594
       },
       {
         "channel": "Organic Search",
-        "sessions": 136
+        "sessions": 257
       },
       {
         "channel": "Display",
-        "sessions": 13
+        "sessions": 11
       },
       {
         "channel": "Referral",
-        "sessions": 6
-      },
-      {
-        "channel": "Organic Social",
-        "sessions": 2
-      },
-      {
-        "channel": "AI Assistant",
-        "sessions": 1
+        "sessions": 11
       },
       {
         "channel": "Cross-network",
+        "sessions": 3
+      },
+      {
+        "channel": "AI Assistant",
+        "sessions": 2
+      },
+      {
+        "channel": "Paid Search",
+        "sessions": 2
+      },
+      {
+        "channel": "Unassigned",
+        "sessions": 2
+      },
+      {
+        "channel": "Organic Social",
         "sessions": 1
       }
     ],
     "organicSearchSources": [
       {
         "source": "google",
-        "sessions": 122
+        "sessions": 217
       },
       {
         "source": "bing",
-        "sessions": 11
+        "sessions": 24
+      },
+      {
+        "source": "yahoo",
+        "sessions": 8
       },
       {
         "source": "duckduckgo",
-        "sessions": 3
+        "sessions": 7
+      },
+      {
+        "source": "chatgpt.com",
+        "sessions": 1
       }
     ],
     "keywords": [
       {
         "keyword": "don's heating and air",
-        "clicks": 7,
-        "impressions": 193,
-        "ctr": 3.6,
-        "position": 16.3
+        "clicks": 11,
+        "impressions": 224,
+        "ctr": 4.9,
+        "position": 3.9
       },
       {
         "keyword": "don's heating and cooling",
-        "clicks": 4,
-        "impressions": 49,
-        "ctr": 8.2,
-        "position": 5.6
-      },
-      {
-        "keyword": "don heating and cooling",
-        "clicks": 2,
-        "impressions": 59,
-        "ctr": 3.4,
-        "position": 33.6
-      },
-      {
-        "keyword": "don's heating and air conditioning",
-        "clicks": 2,
-        "impressions": 9,
-        "ctr": 22.2,
-        "position": 5.2
-      },
-      {
-        "keyword": "dons hvac",
-        "clicks": 2,
-        "impressions": 20,
-        "ctr": 10,
-        "position": 23.2
-      },
-      {
-        "keyword": "ac company near me",
-        "clicks": 1,
-        "impressions": 1,
-        "ctr": 100,
-        "position": 7
-      },
-      {
-        "keyword": "air conditioner service near me",
-        "clicks": 1,
-        "impressions": 4,
-        "ctr": 25,
-        "position": 3.3
-      },
-      {
-        "keyword": "don's heating & air conditioning",
-        "clicks": 1,
-        "impressions": 66,
-        "ctr": 1.5,
-        "position": 3.4
+        "clicks": 3,
+        "impressions": 90,
+        "ctr": 3.3,
+        "position": 8.3
       },
       {
         "keyword": "dons heating and air",
+        "clicks": 2,
+        "impressions": 48,
+        "ctr": 4.2,
+        "position": 2.7
+      },
+      {
+        "keyword": "don's heating and air conditioning",
         "clicks": 1,
         "impressions": 37,
         "ctr": 2.7,
-        "position": 1.4
+        "position": 14.9
+      },
+      {
+        "keyword": "don's heating and plumbing",
+        "clicks": 1,
+        "impressions": 7,
+        "ctr": 14.3,
+        "position": 6.6
+      },
+      {
+        "keyword": "dons ac service",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 1
+      },
+      {
+        "keyword": "dons heating",
+        "clicks": 1,
+        "impressions": 18,
+        "ctr": 5.6,
+        "position": 22.3
+      },
+      {
+        "keyword": "el dorado ac",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 1
+      },
+      {
+        "keyword": "eldorado ac repair",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 2
       },
       {
         "keyword": "heating and air el dorado ks",
         "clicks": 1,
-        "impressions": 65,
-        "ctr": 1.5,
-        "position": 16.8
+        "impressions": 97,
+        "ctr": 1,
+        "position": 10.2
       },
       {
-        "keyword": "heating and cooling near me",
+        "keyword": "hvac augusta ks",
+        "clicks": 1,
+        "impressions": 12,
+        "ctr": 8.3,
+        "position": 5.1
+      },
+      {
+        "keyword": "hvac el dorado ks",
         "clicks": 1,
         "impressions": 25,
         "ctr": 4,
-        "position": 18.8
+        "position": 2
       },
       {
-        "keyword": "hvac emporia ks",
-        "clicks": 1,
-        "impressions": 17,
-        "ctr": 5.9,
-        "position": 6
-      },
-      {
-        "keyword": "\"commercial hvac maintenance\" \"request service\"",
+        "keyword": "\"central air conditioning installation\"",
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 6,
         "ctr": 0,
-        "position": 5
+        "position": 25.7
       },
       {
         "keyword": "'dunco heating and cooling'",
         "clicks": 0,
         "impressions": 1,
         "ctr": 0,
-        "position": 39
+        "position": 36
       },
       {
-        "keyword": "24 hours air conditioning service",
+        "keyword": "509 ductless",
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 2,
         "ctr": 0,
-        "position": 7
+        "position": 29
       },
       {
         "keyword": "a c contractor in marion",
         "clicks": 0,
         "impressions": 2,
         "ctr": 0,
-        "position": 75
+        "position": 70.5
       },
       {
         "keyword": "a c contractor marion",
         "clicks": 0,
         "impressions": 2,
         "ctr": 0,
-        "position": 90
+        "position": 85
+      },
+      {
+        "keyword": "a c service near me",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
       },
       {
         "keyword": "a heating and air conditioning repair",
         "clicks": 0,
-        "impressions": 58,
+        "impressions": 16,
         "ctr": 0,
-        "position": 25.2
+        "position": 34.4
       },
       {
-        "keyword": "a/c companies near me",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 7
-      },
-      {
-        "keyword": "a/c repair near me",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 1
-      },
-      {
-        "keyword": "a/c technician near me",
+        "keyword": "a/c heating and cooling",
         "clicks": 0,
         "impressions": 1,
         "ctr": 0,
         "position": 5
       },
       {
-        "keyword": "ac",
+        "keyword": "ac business near me",
         "clicks": 0,
         "impressions": 1,
         "ctr": 0,
-        "position": 8
+        "position": 3
       },
       {
-        "keyword": "ac and heating services",
+        "keyword": "ac check up cost",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 13.2
+      },
+      {
+        "keyword": "ac cleaning service",
         "clicks": 0,
         "impressions": 1,
         "ctr": 0,
-        "position": 9
+        "position": 3
       },
       {
         "keyword": "ac companies el dorado",
         "clicks": 0,
-        "impressions": 7,
+        "impressions": 6,
         "ctr": 0,
-        "position": 4.7
+        "position": 14.7
       },
       {
         "keyword": "ac companies near me",
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 1,
         "ctr": 0,
-        "position": 16
+        "position": 5
       }
     ],
     "dfsSnapshot": null,
     "leadSignals": {
-      "organicSessions": 136,
+      "organicSessions": 257,
       "phoneCalls": 0,
-      "formSubmissions": 0,
-      "emailClicks": 0,
-      "ctaClicks": 0,
-      "formStarts": 41,
+      "formSubmissions": 1,
+      "emailClicks": 2,
+      "ctaClicks": 22,
+      "formStarts": 65,
       "byChannel": {
         "form_start": {
-          "Direct": 27,
-          "Organic Search": 8,
-          "Unassigned": 5,
-          "Referral": 1
+          "Direct": 41,
+          "Organic Search": 23,
+          "AI Assistant": 1
+        },
+        "cta_click": {
+          "Direct": 16,
+          "Referral": 6
+        },
+        "email_click": {
+          "Referral": 2
+        },
+        "generate_lead": {
+          "Direct": 1
         }
       },
-      "gbpCalls": 421,
-      "gbpWebsiteClicks": 212,
-      "gbpDirections": 251
+      "gbpCalls": 413,
+      "gbpWebsiteClicks": 200,
+      "gbpDirections": 232
     }
   },
   "ads": {
@@ -444,12 +465,6 @@
       },
       {
         "month": "Jul 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null
-      },
-      {
-        "month": "Aug 2026",
         "adSpend": null,
         "adClicks": null,
         "adLeads": null
@@ -563,7 +578,7 @@
       }
     ],
     "brandPhrases": {
-      "scannedAt": "2026-07-01T20:24:04.347Z",
+      "scannedAt": "2026-08-05T13:44:58.924Z",
       "queryCount": 5,
       "mentionCount": 0,
       "mentionRate": 0,
@@ -573,11 +588,11 @@
   },
   "gbp": {
     "locationName": "El Dorado",
-    "totalViews": 3541,
-    "calls": 421,
+    "totalViews": 3345,
+    "calls": 413,
     "callsDelta": null,
-    "directions": 251,
-    "websiteClicks": 212,
+    "directions": 232,
+    "websiteClicks": 200,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1639,83 +1654,48 @@
       },
       {
         "date": "2026-07-30",
-        "views": 44,
+        "views": 38,
         "calls": 5,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-31",
-        "views": 49,
+        "views": 37,
         "calls": 5,
         "directions": 1,
         "websiteClicks": 0
       },
       {
         "date": "2026-08-01",
-        "views": 28,
+        "views": 27,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 2
+        "websiteClicks": 0
       },
       {
         "date": "2026-08-02",
-        "views": 25,
+        "views": 0,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-08-03",
-        "views": 40,
-        "calls": 4,
-        "directions": 6,
-        "websiteClicks": 2
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       },
       {
         "date": "2026-08-04",
-        "views": 34,
+        "views": 0,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 2
+        "websiteClicks": 0
       },
       {
         "date": "2026-08-05",
-        "views": 32,
-        "calls": 3,
-        "directions": 3,
-        "websiteClicks": 4
-      },
-      {
-        "date": "2026-08-06",
-        "views": 2,
-        "calls": 1,
-        "directions": 10,
-        "websiteClicks": 2
-      },
-      {
-        "date": "2026-08-07",
-        "views": 44,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-08",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-09",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-10",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1728,9 +1708,9 @@
   },
   "gbp2": {
     "locationName": "Emporia",
-    "totalViews": 528,
-    "calls": 23,
-    "directions": 114,
+    "totalViews": 497,
+    "calls": 22,
+    "directions": 108,
     "websiteClicks": 38,
     "viewsOverTime": [
       {
@@ -2792,14 +2772,14 @@
       },
       {
         "date": "2026-07-30",
-        "views": 8,
+        "views": 6,
         "calls": 1,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-31",
-        "views": 9,
+        "views": 8,
         "calls": 1,
         "directions": 9,
         "websiteClicks": 0
@@ -2813,62 +2793,27 @@
       },
       {
         "date": "2026-08-02",
-        "views": 3,
+        "views": 0,
         "calls": 0,
         "directions": 6,
         "websiteClicks": 0
       },
       {
         "date": "2026-08-03",
-        "views": 4,
+        "views": 0,
         "calls": 0,
-        "directions": 3,
+        "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-08-04",
-        "views": 13,
+        "views": 0,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-08-05",
-        "views": 4,
-        "calls": 0,
-        "directions": 1,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-06",
-        "views": 3,
-        "calls": 1,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-07",
-        "views": 1,
-        "calls": 0,
-        "directions": 2,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-08",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-09",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-10",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -2880,10 +2825,10 @@
   },
   "gbp3": {
     "locationName": "Hillsboro",
-    "totalViews": 1136,
-    "calls": 72,
-    "directions": 224,
-    "websiteClicks": 52,
+    "totalViews": 1090,
+    "calls": 66,
+    "directions": 216,
+    "websiteClicks": 48,
     "viewsOverTime": [
       {
         "date": "2026-03-01",
@@ -3944,83 +3889,48 @@
       },
       {
         "date": "2026-07-30",
-        "views": 13,
+        "views": 10,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-07-31",
-        "views": 13,
+        "views": 12,
         "calls": 0,
         "directions": 9,
-        "websiteClicks": 1
+        "websiteClicks": 0
       },
       {
         "date": "2026-08-01",
-        "views": 11,
+        "views": 10,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-08-02",
-        "views": 7,
-        "calls": 2,
+        "views": 0,
+        "calls": 0,
         "directions": 0,
-        "websiteClicks": 1
+        "websiteClicks": 0
       },
       {
         "date": "2026-08-03",
-        "views": 15,
-        "calls": 2,
+        "views": 0,
+        "calls": 0,
         "directions": 0,
-        "websiteClicks": 1
+        "websiteClicks": 0
       },
       {
         "date": "2026-08-04",
-        "views": 11,
+        "views": 0,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 1
+        "websiteClicks": 0
       },
       {
         "date": "2026-08-05",
-        "views": 5,
-        "calls": 2,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-06",
-        "views": 3,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-07",
-        "views": 0,
-        "calls": 0,
-        "directions": 8,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-08",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-09",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-10",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -4066,11 +3976,6 @@
         "month": "Jul 2026",
         "reach": 291,
         "engagements": 333
-      },
-      {
-        "month": "Aug 2026",
-        "reach": 29,
-        "engagements": 21
       }
     ],
     "reachByWeek": [],
@@ -4085,30 +3990,6 @@
   },
   "website": {
     "sessionsOverTime": [
-      {
-        "week": "06",
-        "date": "2026-02-02",
-        "sessions": 240,
-        "conversions": 5
-      },
-      {
-        "week": "07",
-        "date": "2026-02-09",
-        "sessions": 157,
-        "conversions": 2
-      },
-      {
-        "week": "08",
-        "date": "2026-02-16",
-        "sessions": 166,
-        "conversions": 1
-      },
-      {
-        "week": "09",
-        "date": "2026-02-23",
-        "sessions": 189,
-        "conversions": 1
-      },
       {
         "week": "10",
         "date": "2026-03-02",
@@ -4214,25 +4095,49 @@
       {
         "week": "27",
         "date": "2026-06-29",
-        "sessions": 140,
-        "conversions": 5
+        "sessions": 239,
+        "conversions": 10
+      },
+      {
+        "week": "28",
+        "date": "2026-07-06",
+        "sessions": 204,
+        "conversions": 17
+      },
+      {
+        "week": "29",
+        "date": "2026-07-13",
+        "sessions": 234,
+        "conversions": 18
+      },
+      {
+        "week": "30",
+        "date": "2026-07-20",
+        "sessions": 135,
+        "conversions": 9
+      },
+      {
+        "week": "31",
+        "date": "2026-07-27",
+        "sessions": 191,
+        "conversions": 12
       }
     ],
     "aiReferral": {
-      "total": 2,
+      "total": 3,
       "platforms": [
         {
           "name": "ChatGPT",
-          "sessions": 2
+          "sessions": 3
         }
       ],
       "weeklyTrend": [
         {
-          "week": "23",
-          "sessions": 1
+          "week": "28",
+          "sessions": 2
         },
         {
-          "week": "25",
+          "week": "30",
           "sessions": 1
         }
       ]
@@ -4245,9 +4150,9 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "NRMNQDNK",
-    "uniques": null,
-    "visits": null,
-    "pageviews": null,
+    "uniques": 0,
+    "visits": 0,
+    "pageviews": 0,
     "avgDuration": null,
     "bounceRate": null,
     "uniquesDelta": null,
@@ -4265,7 +4170,7 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 57,
+        "performance": 60,
         "accessibility": 90,
         "bestPractices": 73,
         "seo": 100
@@ -5367,81 +5272,6 @@
         "date": "2026-08-04",
         "mobile": {
           "performance": 60,
-          "accessibility": 90,
-          "bestPractices": 73,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 88,
-          "accessibility": 91,
-          "bestPractices": 73,
-          "seo": 100
-        }
-      },
-      {
-        "date": "2026-08-06",
-        "mobile": {
-          "performance": 47,
-          "accessibility": 90,
-          "bestPractices": 73,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 88,
-          "accessibility": 91,
-          "bestPractices": 73,
-          "seo": 100
-        }
-      },
-      {
-        "date": "2026-08-07",
-        "mobile": {
-          "performance": 60,
-          "accessibility": 90,
-          "bestPractices": 73,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 91,
-          "accessibility": 91,
-          "bestPractices": 73,
-          "seo": 100
-        }
-      },
-      {
-        "date": "2026-08-08",
-        "mobile": {
-          "performance": 58,
-          "accessibility": 90,
-          "bestPractices": 73,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 92,
-          "accessibility": 91,
-          "bestPractices": 73,
-          "seo": 100
-        }
-      },
-      {
-        "date": "2026-08-09",
-        "mobile": {
-          "performance": 61,
-          "accessibility": 90,
-          "bestPractices": 73,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 91,
-          "accessibility": 91,
-          "bestPractices": 73,
-          "seo": 100
-        }
-      },
-      {
-        "date": "2026-08-10",
-        "mobile": {
-          "performance": 57,
           "accessibility": 90,
           "bestPractices": 73,
           "seo": 100

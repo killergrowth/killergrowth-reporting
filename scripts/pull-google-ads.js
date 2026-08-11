@@ -223,7 +223,28 @@ function aggregateRows(rows, conversionRows) {
     // Add metrics.phone_calls (call extension clicks) on top of conversion-action phone totals
     const combinedPhone = Math.round(phoneTotal + totalPhoneCallsMetric);
     if (combinedPhone > 0) phoneCalls = combinedPhone;
+    // Per-type call breakdown
+    let gbpCallsTotal = 0, callExtTotal = 0, websiteCallsTotal = 0, otherCallsTotal = 0;
+    const GBP_NAMES   = ['business profile - tracked call', 'business profile - call', 'gbp - clicks to call'];
+    const EXT_NAMES   = ['calls from ads'];
+    const WEB_NAMES   = ['phone number click', 'website call', 'phone call from website', 'phone_click', 'phone call - website'];
+    for (const r of lmConv) {
+      const nl = (r.conversionActionName || '').toLowerCase();
+      const cat = r.conversionActionCategory || '';
+      if (GBP_NAMES.some(n => nl.includes(n)) || cat === 'AD_CALL') {
+        gbpCallsTotal += r.allConversions;
+      } else if (EXT_NAMES.some(n => nl.includes(n)) || cat === 'CALLS_FROM_ADS') {
+        callExtTotal += r.allConversions;
+      } else if (WEB_NAMES.some(n => nl.includes(n)) || cat === 'PHONE_CALL_LEAD') {
+        websiteCallsTotal += r.allConversions;
+      } else if (PHONE_CALL_NAMES.some(n => nl.includes(n)) || PHONE_CALL_CATEGORIES.includes(cat)) {
+        otherCallsTotal += r.allConversions;
+      }
+    }
+    // phone_calls metric (call extension clicks not captured as conversion actions)
+    if (totalPhoneCallsMetric > 0 && callExtTotal === 0) callExtTotal += totalPhoneCallsMetric;
     console.log('[Google Ads] phone breakdown: convAction=' + phoneTotal.toFixed(1) + ' phoneCallsMetric=' + totalPhoneCallsMetric + ' total=' + combinedPhone);
+    console.log('[Google Ads] call types: gbp=' + gbpCallsTotal.toFixed(1) + ' ext=' + callExtTotal.toFixed(1) + ' web=' + websiteCallsTotal.toFixed(1) + ' other=' + otherCallsTotal.toFixed(1));
     // CPL denominator = phone calls + form submissions (meaningful leads only)
     const meaningfulLeads = phoneTotal + formTotal;
     const costPerLeadFinal = meaningfulLeads > 0 ? Math.round((totalSpend / meaningfulLeads) * 100) / 100 : null;
@@ -232,6 +253,10 @@ function aggregateRows(rows, conversionRows) {
       clicks:         totalClicks,
       leads:          allConversions,
       phoneCalls:     phoneCalls || 0,
+      gbpCalls:       gbpCallsTotal > 0 ? Math.round(gbpCallsTotal) : null,
+      callExtensionCalls: callExtTotal > 0 ? Math.round(callExtTotal) : null,
+      websiteCalls:   websiteCallsTotal > 0 ? Math.round(websiteCallsTotal) : null,
+      otherCalls:     otherCallsTotal > 0 ? Math.round(otherCallsTotal) : null,
       allConversions: allConversions,
       impressions:    totalImpressions || null,
       costPerLead:    costPerLeadFinal,

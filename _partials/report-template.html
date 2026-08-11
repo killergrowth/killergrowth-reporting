@@ -287,6 +287,20 @@ canvas{max-width:100%!important;width:100%!important}
 .cf-grid>*{min-width:0}
 @media(max-width:900px){.cf-grid{grid-template-columns:1fr}}
 /* Work Log */
+/* -- MONTHLY UPDATES -- */
+.mu-year-tabs{display:flex;gap:8px;margin-bottom:20px;}
+.mu-year-btn{background:transparent;border:1px solid var(--border);color:var(--sub);font-size:12px;font-weight:700;padding:5px 14px;border-radius:20px;cursor:pointer;transition:all .15s;letter-spacing:.03em;}
+.mu-year-btn.active{background:var(--lime);border-color:var(--lime);color:#000;}
+.mu-year-btn:hover:not(.active){border-color:var(--lime);color:var(--lime);}
+.mu-entry{border:1px solid var(--border);border-radius:10px;margin-bottom:10px;overflow:hidden;}
+.mu-header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;cursor:pointer;user-select:none;background:transparent;border:none;width:100%;text-align:left;}
+.mu-header:hover .mu-month{color:var(--lime);}
+.mu-month{font-size:14px;font-weight:700;color:var(--w);transition:color .15s;}
+.mu-chevron{font-size:11px;color:var(--sub);transition:transform .2s;flex-shrink:0;}
+.mu-chevron.open{transform:rotate(90deg);}
+.mu-body{padding:0 18px 16px;font-size:14px;color:var(--sub);line-height:1.75;display:none;}
+.mu-body.open{display:block;}
+/* -- WORK LOG -- */
 .wl-row{display:flex;gap:12px;padding:5px 0;border-bottom:1px solid var(--border);align-items:baseline;}
 .wl-row:last-child{border-bottom:none;}
 .wl-meta{display:flex;flex-direction:column;gap:2px;min-width:110px;flex-shrink:0;}
@@ -347,7 +361,7 @@ canvas{max-width:100%!important;width:100%!important}
       <li data-nav="localFalcon"><a href="#" data-s="map">Map Rankings</a></li>
       <li data-nav="social"><a href="#" data-s="social">Social Media</a></li>
       <li data-nav="website"><a href="#" data-s="website">Website</a></li>
-      <li><a href="#" data-s="worklog">Work Log</a></li>
+      <li id="nav-updates-li"><a href="#" data-s="worklog-legacy" id="nav-updates-link">Monthly Updates</a></li>
     </ul>
     <div id="gh-panel">
       <div class="gh-lbl">Deploy Modules</div>
@@ -538,13 +552,7 @@ canvas{max-width:100%!important;width:100%!important}
 
       <!-- WEBSITE -->
       <section id="website" class="ms" data-module="website">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;">
-          <div class="sh" style="margin-bottom:0"><span class="sb2">WEB</span><span class="st">Site Health</span></div>
-          <div class="psi-tw">
-            <button class="psi-t active" id="psi-m" onclick="setPsi('mobile')">Mobile</button>
-            <button class="psi-t" id="psi-d" onclick="setPsi('desktop')">Desktop</button>
-          </div>
-        </div>
+        <div class="sh" style="margin-bottom:18px"><span class="sb2">WEB</span><span class="st">Site Health</span></div>
 
         <!-- FATHOM ANALYTICS (PKG001/PKG002 when fathomSiteId is set) -->
         <div id="fathom-analytics-wrap" style="display:none;margin-bottom:20px">
@@ -586,13 +594,21 @@ canvas{max-width:100%!important;width:100%!important}
           </div>
         </div>
 
+        <div style="font-size:12px;color:var(--sub);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;margin-top:4px">Page Speed Scores</div>
         <div class="g3" id="psi-wrap"></div>
       </section>
 
 
 
-      <!-- WORK LOG -->
-      <section id="worklog" class="ms">
+      <!-- MONTHLY UPDATES (monthlyUpdates clients only) -->
+      <section class="ms" id="mu-section" style="display:none">
+        <div class="sh"><span class="sb2">UPDATES</span><span class="st">Monthly Updates</span></div>
+        <div class="mu-year-tabs" id="mu-year-tabs"></div>
+        <div id="mu-list"></div>
+      </section>
+
+      <!-- WORK LOG (standard clients) -->
+      <section id="worklog-legacy" class="ms">
         <div class="sh"><span class="sb2">LOG</span><span class="st">Work Completed</span></div>
         <div id="wl-list"></div>
       </section>
@@ -733,7 +749,19 @@ function initDash(data) {
     document.querySelectorAll('[data-module]').forEach(function(s){if(!resolvedMods[s.getAttribute('data-module')])s.style.display='none';});
     initDateRange(data);
     initNav();
-    renderWorkLog(sanitizeWorkLog(data.workLog||[]));
+    var _cfg=window.CLIENT_CONFIG||{};
+    if(_cfg.monthlyUpdates&&data.monthlyUpdates&&data.monthlyUpdates.length){
+      var muSection=document.getElementById('mu-section');
+      if(muSection)muSection.style.display='';
+      var wlLegacy=document.getElementById('worklog-legacy');
+      if(wlLegacy)wlLegacy.style.display='none';
+      // Point nav link at the monthly updates section
+      var navLink=document.getElementById('nav-updates-link');
+      if(navLink)navLink.setAttribute('data-s','mu-section');
+      renderMonthlyUpdates(data.monthlyUpdates);
+    } else {
+      renderWorkLog(sanitizeWorkLog(data.workLog||[]));
+    }
   }
   var _slug = cfg.slug||'';
   if (_slug) {
@@ -768,7 +796,7 @@ function initNav() {
   });
   var ct=document.getElementById('ct');
   ct.addEventListener('scroll',function(){
-    var secs=['overview','seo','google-ads','meta-ads','gbp','social','website','map'],active='overview';
+    var secs=['overview','seo','geo','google-ads','meta-ads','gbp','map','social','website','mu-section','worklog-legacy'],active='overview';
     secs.forEach(function(id){var s=document.getElementById(id);if(s&&s.style.display!=='none'&&s.getBoundingClientRect().top<=80)active=id;});
     links.forEach(function(a){a.classList.toggle('active',a.getAttribute('data-s')===active);});
   });
@@ -1620,18 +1648,18 @@ function renderFathomAnalytics(website) {
   if (fathomCanv && daily.length) {
     dc('fathom-daily');
     CHARTS['fathom-daily'] = new Chart(fathomCanv.getContext('2d'), {
-      type: 'line',
+      type: 'bar',
       data: {
         labels: daily.map(function(d) {
           var dt = new Date(d.date + 'T12:00:00Z');
           return dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
         }),
         datasets: [
-          { label: 'Unique Visitors', data: daily.map(function(d){ return d.uniques; }), borderColor: '#c8f000', backgroundColor: 'rgba(200,240,0,0.08)', fill: true, tension: 0.4, pointRadius: 2, pointBackgroundColor: '#c8f000' },
-          { label: 'Sessions', data: daily.map(function(d){ return d.visits; }), borderColor: '#3b82f6', backgroundColor: 'rgba(59,130,246,0.05)', fill: true, tension: 0.4, pointRadius: 2, pointBackgroundColor: '#3b82f6' }
+          { label: 'Unique Visitors', data: daily.map(function(d){ return d.uniques; }), backgroundColor: 'rgba(200,240,0,0.75)', borderColor: '#c8f000', borderWidth: 1 },
+          { label: 'Sessions', data: daily.map(function(d){ return d.visits; }), backgroundColor: 'rgba(59,130,246,0.6)', borderColor: '#3b82f6', borderWidth: 1 }
         ]
       },
-      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: true, labels: { color: '#888', font: { size: 11 }, boxWidth: 10, padding: 12 } }, tooltip: getTT() }, scales: { x: { grid: { color: '#1e1e1e' }, ticks: { color: '#555', font: { size: 10 }, maxTicksLimit: 10 }, border: { display: false } }, y: { grid: { color: '#1e1e1e' }, ticks: { color: '#555', font: { size: 11 } }, border: { display: false } } } }
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: true, labels: { color: '#888', font: { size: 11 }, boxWidth: 10, padding: 12 } }, tooltip: getTT() }, scales: { x: { grid: { color: '#1e1e1e' }, ticks: { color: '#555', font: { size: 10 }, maxTicksLimit: 10 }, border: { display: false } }, y: { grid: { color: '#1e1e1e' }, ticks: { color: '#555', font: { size: 11 } }, border: { display: false }, beginAtZero: true } } }
     });
   }
 
@@ -1657,7 +1685,7 @@ function renderFathomAnalytics(website) {
         var pct = ((p.pageviews / maxPV) * 100).toFixed(0);
         return '<div style="margin-bottom:12px">' +
           '<div style="display:flex;justify-content:space-between;margin-bottom:5px">' +
-          '<span style="color:var(--sub);font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:70%">' + (p.path || '/') + '</span>' +
+          '<span style="color:var(--sub);font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:70%">' + (p.page || p.path || '/') + '</span>' +
           '<span style="color:var(--w);font-size:12px;font-weight:700">' + fmt(p.pageviews) + '</span></div>' +
           '<div style="background:#1e1e1e;border-radius:3px;height:4px"><div style="background:var(--lime);border-radius:3px;height:4px;width:' + pct + '%"></div></div></div>';
       }).join('');
@@ -1872,7 +1900,7 @@ function mergeAndApply(preset,live){
     if(fw.pageviews!=null)d.website.pageviews=fw.pageviews;
     if(fw.avgDuration!=null)d.website.avgDuration=fw.avgDuration;
     if(fw.bounceRate!=null)d.website.bounceRate=fw.bounceRate;
-    if(fw.timeseries)d.website.sessionsOverTime=fw.timeseries.map(function(t){return{date:t.date,sessions:t.visits,conversions:0};});
+    if(fw.timeseries){d.website.dailyTimeseries=fw.timeseries;d.website.sessionsOverTime=fw.timeseries.map(function(t){return{date:t.date,sessions:t.visits,conversions:0};});}
     if(fw.topPages)d.website.topPages=fw.topPages;
     if(fw.referrers)d.website.referrers=fw.referrers;
   }
@@ -2008,6 +2036,68 @@ function applyRange(start,end){
 }
 /* -- EXPORT -- */
 /* WORK LOG */
+/* ---- MONTHLY UPDATES ---- */
+var MU_YEAR = null;
+function renderMonthlyUpdates(updates){
+  if(!updates||!updates.length)return;
+  // Sort descending by year then month
+  var monthOrder={Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12};
+  function parseUpdate(u){
+    var parts=(u.month||'').split(' ');
+    return {mo:monthOrder[parts[0]]||0,yr:parseInt(parts[1])||0,u:u};
+  }
+  var parsed=updates.map(parseUpdate).sort(function(a,b){return b.yr-a.yr||b.mo-a.mo;});
+  // Get unique years descending
+  var years=[...new Set(parsed.map(function(p){return p.yr;}))].sort(function(a,b){return b-a;});
+  var currentYear=years[0];
+  if(!MU_YEAR)MU_YEAR=currentYear;
+  // Render year tabs
+  var tabsEl=document.getElementById('mu-year-tabs');
+  if(tabsEl){
+    tabsEl.innerHTML=years.map(function(y){
+      return '<button class="mu-year-btn'+(y===MU_YEAR?' active':'')+('" onclick="muSetYear('+y+')">'+y+'</button>');
+    }).join('');
+    if(years.length<=1)tabsEl.style.display='none';
+  }
+  // Render entries for active year
+  var forYear=parsed.filter(function(p){return p.yr===MU_YEAR;});
+  var listEl=document.getElementById('mu-list');
+  if(!listEl)return;
+  var html='';
+  forYear.forEach(function(p,i){
+    var uid='mu-'+i;
+    var expanded=i<3;
+    html+='<div class="mu-entry">';
+    html+='<button class="mu-header" onclick="muToggle(\'' + uid + '\')" aria-expanded="'+(expanded?'true':'false')+'">';
+    html+='<span class="mu-month">'+p.u.month+'</span>';
+    html+='<span class="mu-chevron'+(expanded?' open':'')+('" id="muChv-'+uid+'">&#9654;</span>');
+    html+='</button>';
+    html+='<div class="mu-body'+(expanded?' open':'')+'" id="'+uid+'">'+p.u.text+'</div>';
+    html+='</div>';
+  });
+  listEl.innerHTML=html;
+}
+function muToggle(uid){
+  var body=document.getElementById(uid);
+  var chv=document.getElementById('muChv-'+uid);
+  if(!body)return;
+  var open=body.classList.contains('open');
+  body.classList.toggle('open',!open);
+  if(chv)chv.classList.toggle('open',!open);
+}
+function muSetYear(y){
+  MU_YEAR=y;
+  var cfg=window.CLIENT_CONFIG||{};
+  var slug=cfg.slug||'';
+  if(slug&&window.DR_DATA&&DR_DATA.monthlyUpdates){
+    renderMonthlyUpdates(DR_DATA.monthlyUpdates);
+  }
+  document.querySelectorAll('.mu-year-btn').forEach(function(b){
+    b.classList.toggle('active',parseInt(b.textContent)===y);
+  });
+}
+/* ---- END MONTHLY UPDATES ---- */
+
 function sanitizeWorkLog(entries){
   return entries.map(function(e){
     var t=(e.title||'');
