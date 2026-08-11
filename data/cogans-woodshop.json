@@ -3,7 +3,7 @@
   "slug": "cogans-woodshop",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-04T09:37:41.737Z",
+  "generatedAt": "2026-08-10T08:25:04.791Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -34,7 +34,10 @@
   "ads": {
     "monthlyBreakdown": [],
     "spendByWeek": [],
-    "campaigns": []
+    "campaigns": [],
+    "phoneCalls": null,
+    "allConversions": null,
+    "costPerLead": null
   },
   "localFalcon": {
     "lastScanDate": null,
@@ -83,20 +86,26 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "DYSWZSVJ",
-    "uniques": 3,
-    "visits": 3,
-    "pageviews": 6,
-    "avgDuration": 293,
-    "bounceRate": 66.666666666667,
-    "uniquesDelta": 200,
-    "visitsDelta": 200,
-    "pageviewsDelta": 100,
+    "uniques": 4,
+    "visits": 4,
+    "pageviews": 8,
+    "avgDuration": 221,
+    "bounceRate": 50,
+    "uniquesDelta": 300,
+    "visitsDelta": 300,
+    "pageviewsDelta": 166.7,
     "dailyTimeseries": [
       {
         "date": "2026-07-30",
         "visits": 1,
         "uniques": 1,
         "pageviews": 3
+      },
+      {
+        "date": "2026-08-07",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 2
       },
       {
         "date": "2026-08-03",
@@ -116,19 +125,24 @@
       {
         "month": "Aug 2026",
         "date": "2026-08",
-        "visits": 3,
-        "uniques": 3,
-        "pageviews": 6
+        "visits": 4,
+        "uniques": 4,
+        "pageviews": 8
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 2,
-        "uniques": 2
+        "pageviews": 3,
+        "uniques": 3
       },
       {
         "path": "/Home",
+        "pageviews": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/about",
         "pageviews": 1,
         "uniques": 1
       },
@@ -141,23 +155,18 @@
         "path": "/custom",
         "pageviews": 1,
         "uniques": 1
-      },
-      {
-        "path": "/prefab",
-        "pageviews": 1,
-        "uniques": 1
       }
     ],
     "referrers": [
       {
-        "source": "Organic",
+        "source": "Direct",
         "visits": 2,
         "uniques": 2
       },
       {
-        "source": "Direct",
-        "visits": 1,
-        "uniques": 1
+        "source": "Organic",
+        "visits": 2,
+        "uniques": 2
       }
     ],
     "cfPageViews": 20800,
@@ -340,13 +349,13 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 74,
+        "performance": 70,
         "accessibility": 92,
         "bestPractices": 92,
         "seo": 92
       },
       "desktop": {
-        "performance": 94,
+        "performance": 93,
         "accessibility": 80,
         "bestPractices": 92,
         "seo": 92
@@ -498,6 +507,81 @@
         },
         "desktop": {
           "performance": 94,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-06",
+        "mobile": {
+          "performance": 71,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 93,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-07",
+        "mobile": {
+          "performance": 70,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 93,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-08",
+        "mobile": {
+          "performance": 70,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 95,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-09",
+        "mobile": {
+          "performance": 70,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 97,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-10",
+        "mobile": {
+          "performance": 70,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 93,
           "accessibility": 80,
           "bestPractices": 92,
           "seo": 92

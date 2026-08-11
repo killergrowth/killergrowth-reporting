@@ -3,7 +3,7 @@
   "slug": "iserve-facilities",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-04T09:38:03.947Z",
+  "generatedAt": "2026-08-10T08:25:22.581Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -34,7 +34,10 @@
   "ads": {
     "monthlyBreakdown": [],
     "spendByWeek": [],
-    "campaigns": []
+    "campaigns": [],
+    "phoneCalls": null,
+    "allConversions": null,
+    "costPerLead": null
   },
   "localFalcon": {
     "lastScanDate": null,
@@ -83,14 +86,14 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "ANNMTVXC",
-    "uniques": 9,
-    "visits": 9,
-    "pageviews": 17,
-    "avgDuration": 52,
+    "uniques": 27,
+    "visits": 27,
+    "pageviews": 54,
+    "avgDuration": 94,
     "bounceRate": 55.555555555556,
-    "uniquesDelta": 50,
-    "visitsDelta": 50,
-    "pageviewsDelta": 6.3,
+    "uniquesDelta": 350,
+    "visitsDelta": 350,
+    "pageviewsDelta": 237.5,
     "dailyTimeseries": [
       {
         "date": "2026-08-01",
@@ -99,10 +102,22 @@
         "pageviews": 7
       },
       {
+        "date": "2026-08-04",
+        "visits": 6,
+        "uniques": 6,
+        "pageviews": 19
+      },
+      {
         "date": "2026-07-30",
         "visits": 2,
         "uniques": 2,
         "pageviews": 4
+      },
+      {
+        "date": "2026-08-07",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 1
       },
       {
         "date": "2026-07-28",
@@ -111,10 +126,22 @@
         "pageviews": 2
       },
       {
+        "date": "2026-08-09",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 1
+      },
+      {
         "date": "2026-08-02",
         "visits": 3,
         "uniques": 3,
         "pageviews": 3
+      },
+      {
+        "date": "2026-08-06",
+        "visits": 4,
+        "uniques": 4,
+        "pageviews": 9
       },
       {
         "date": "2026-07-29",
@@ -127,6 +154,18 @@
         "visits": 3,
         "uniques": 3,
         "pageviews": 7
+      },
+      {
+        "date": "2026-08-08",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 2
+      },
+      {
+        "date": "2026-08-05",
+        "visits": 4,
+        "uniques": 4,
+        "pageviews": 5
       },
       {
         "date": "2026-07-31",
@@ -146,53 +185,58 @@
       {
         "month": "Aug 2026",
         "date": "2026-08",
-        "visits": 9,
-        "uniques": 9,
-        "pageviews": 17
+        "visits": 27,
+        "uniques": 27,
+        "pageviews": 54
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 10,
-        "uniques": 8
-      },
-      {
-        "path": "/about",
-        "pageviews": 2,
-        "uniques": 2
+        "pageviews": 30,
+        "uniques": 25
       },
       {
         "path": "/apply",
-        "pageviews": 1,
-        "uniques": 1
+        "pageviews": 10,
+        "uniques": 7
+      },
+      {
+        "path": "/about",
+        "pageviews": 6,
+        "uniques": 5
       },
       {
         "path": "/contact",
-        "pageviews": 1,
-        "uniques": 1
+        "pageviews": 3,
+        "uniques": 3
       },
       {
         "path": "/gallery",
-        "pageviews": 1,
-        "uniques": 1
+        "pageviews": 2,
+        "uniques": 2
       }
     ],
     "referrers": [
       {
         "source": "Organic",
-        "visits": 4,
-        "uniques": 4
-      },
-      {
-        "source": "Paid/campaign",
-        "visits": 3,
-        "uniques": 3
+        "visits": 14,
+        "uniques": 14
       },
       {
         "source": "Direct",
-        "visits": 2,
-        "uniques": 2
+        "visits": 7,
+        "uniques": 7
+      },
+      {
+        "source": "Paid/campaign",
+        "visits": 5,
+        "uniques": 5
+      },
+      {
+        "source": "Social",
+        "visits": 1,
+        "uniques": 1
       }
     ],
     "cfPageViews": 26736,
@@ -370,13 +414,13 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 70,
+        "performance": 72,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100
       },
       "desktop": {
-        "performance": 96,
+        "performance": 79,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100
@@ -523,6 +567,81 @@
         },
         "desktop": {
           "performance": 96,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-06",
+        "mobile": {
+          "performance": 67,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 79,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-07",
+        "mobile": {
+          "performance": 71,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 79,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-08",
+        "mobile": {
+          "performance": 68,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 79,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-09",
+        "mobile": {
+          "performance": 67,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 94,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-10",
+        "mobile": {
+          "performance": 72,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 79,
           "accessibility": 100,
           "bestPractices": 100,
           "seo": 100
