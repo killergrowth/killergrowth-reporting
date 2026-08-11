@@ -1,0 +1,74 @@
+name: Agent Log Writer
+
+# Fires on every push to a client site repo (via repository_dispatch)
+# and on manual trigger for testing or catch-up runs.
+#
+# The script runs entirely in CI — no connection to KGAI-001 needed.
+# It writes directly to Monday.com using MONDAY_TOKEN (already set on this repo).
+#
+# Session digest mode (reading OpenClaw chat history) is a future phase
+# that will require exposing the OpenClaw gateway via the cloudflared tunnel.
+# For now: deploy mode only — GitHub push → commit context → Monday log.
+
+on:
+  # Manual trigger — useful for testing or logging work that wasn't auto-captured
+  workflow_dispatch:
+    inputs:
+      client:
+        description: 'Client slug (e.g. dons-heating)'
+        required: true
+      summary:
+        description: 'What was done — plain language, 1-3 sentences'
+        required: true
+      agent:
+        description: 'Agent name (e.g. Brickley Jr, Norris Jr, Claudia)'
+        required: false
+        default: 'Agent'
+      dry_run:
+        description: 'Dry run — no writes to Monday (true/false)'
+        required: false
+        default: 'false'
+
+  # Fired by individual site repos on push to main via site-push-trigger.yml
+  repository_dispatch:
+    types:
+      - agent-log-deploy
+
+jobs:
+  log-deploy:
+    name: Log Deploy to Monday
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout workspace tools
+        uses: actions/checkout@v4
+        with:
+          repository: killergrowth/killergrowth-openclaw-v2.1
+          token: ${{ secrets.KILLERGROWTH_REPO_TOKEN }}
+          sparse-checkout: |
+            tools/agent-log-writer
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Log deploy event
+        env:
+          MONDAY_TOKEN: ${{ secrets.MONDAY_TOKEN }}
+        run: |
+          CLIENT="${{ github.event.client_payload.client || github.event.inputs.client }}"
+          SUMMARY="${{ github.event.client_payload.summary || github.event.inputs.summary }}"
+          AGENT="${{ github.event.client_payload.agent || github.event.inputs.agent || 'Agent' }}"
+
+          DRY_RUN_FLAG=""
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            DRY_RUN_FLAG="--dry-run"
+          fi
+
+          node tools/agent-log-writer/log-agent-work.mjs \
+            --mode deploy \
+            --client "$CLIENT" \
+            --summary "$SUMMARY" \
+            --agent "$AGENT" \
+            $DRY_RUN_FLAG
