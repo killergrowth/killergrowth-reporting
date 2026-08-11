@@ -1,27 +1,27 @@
 name: Agent Log Writer
 
-# Fires on every push to a client site repo (via repository_dispatch)
-# and on manual trigger for testing or catch-up runs.
-#
-# The script runs entirely in CI — no connection to KGAI-001 needed.
-# It writes directly to Monday.com using MONDAY_TOKEN (already set on this repo).
-#
-# Session digest mode (reading OpenClaw chat history) is a future phase
-# that will require exposing the OpenClaw gateway via the cloudflared tunnel.
-# For now: deploy mode only — GitHub push → commit context → Monday log.
+# Two jobs:
+#   log-deploy: fires on push to any client site repo (repository_dispatch) or manual trigger
+#   email-scan: runs nightly at midnight CDT (05:00 UTC) to scan Tyler B's Gmail
 
 on:
-  # Manual trigger — useful for testing or logging work that wasn't auto-captured
+  schedule:
+    - cron: '0 5 * * *'   # midnight CDT — email + Zoom meeting scan
+
   workflow_dispatch:
     inputs:
+      mode:
+        description: 'deploy or email-scan'
+        required: false
+        default: 'deploy'
       client:
-        description: 'Client slug (e.g. dons-heating)'
-        required: true
+        description: 'Client slug (deploy mode)'
+        required: false
       summary:
-        description: 'What was done — plain language, 1-3 sentences'
-        required: true
+        description: 'What was done (deploy mode)'
+        required: false
       agent:
-        description: 'Agent name (e.g. Brickley Jr, Norris Jr, Claudia)'
+        description: 'Agent name (deploy mode)'
         required: false
         default: 'Agent'
       dry_run:
@@ -29,7 +29,6 @@ on:
         required: false
         default: 'false'
 
-  # Fired by individual site repos on push to main via site-push-trigger.yml
   repository_dispatch:
     types:
       - agent-log-deploy
@@ -38,6 +37,9 @@ jobs:
   log-deploy:
     name: Log Deploy to Monday
     runs-on: ubuntu-latest
+    if: |
+      github.event_name == 'repository_dispatch' ||
+      (github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'deploy')
 
     steps:
       - name: Checkout workspace tools
@@ -52,6 +54,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+
+      - name: Install deps
+        run: cd workspace/tools/agent-log-writer && npm install
 
       - name: Log deploy event
         env:
@@ -71,4 +76,43 @@ jobs:
             --client "$CLIENT" \
             --summary "$SUMMARY" \
             --agent "$AGENT" \
+            $DRY_RUN_FLAG
+
+  email-scan:
+    name: Nightly Email + Meeting Scan
+    runs-on: ubuntu-latest
+    if: |
+      github.event_name == 'schedule' ||
+      (github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'email-scan')
+
+    steps:
+      - name: Checkout workspace tools
+        uses: actions/checkout@v4
+        with:
+          repository: killergrowth/killergrowth-openclaw-v2.1
+          token: ${{ secrets.KILLERGROWTH_REPO_TOKEN }}
+          sparse-checkout: |
+            workspace/tools/agent-log-writer
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install deps
+        run: cd workspace/tools/agent-log-writer && npm install
+
+      - name: Scan emails and Zoom summaries
+        env:
+          MONDAY_TOKEN: ${{ secrets.MONDAY_TOKEN }}
+          GOOGLE_TOKEN_JSON: ${{ secrets.GOOGLE_TOKEN_JSON }}
+          GOOGLE_CREDS_JSON: ${{ secrets.GOOGLE_CREDS_JSON }}
+        run: |
+          DRY_RUN_FLAG=""
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            DRY_RUN_FLAG="--dry-run"
+          fi
+
+          node workspace/tools/agent-log-writer/scan-emails.mjs \
+            --hours 26 \
             $DRY_RUN_FLAG
