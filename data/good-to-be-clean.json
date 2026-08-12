@@ -3,7 +3,7 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-11T08:04:41.246Z",
+  "generatedAt": "2026-08-12T08:10:56.029Z",
   "overview": {
     "sessions": 633,
     "sessionsDelta": 0,
@@ -1647,6 +1647,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-12",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -1694,7 +1701,7 @@
       },
       {
         "month": "Aug 2026",
-        "reach": 70,
+        "reach": 76,
         "engagements": 7
       }
     ],
@@ -1866,19 +1873,25 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "MTRAPVNX",
-    "uniques": 136,
-    "visits": 136,
-    "pageviews": 262,
-    "avgDuration": 180,
-    "bounceRate": 66.176470588235,
-    "uniquesDelta": 151.9,
-    "visitsDelta": 151.9,
-    "pageviewsDelta": 208.2,
+    "uniques": 158,
+    "visits": 158,
+    "pageviews": 295,
+    "avgDuration": 163,
+    "bounceRate": 67.721518987342,
+    "uniquesDelta": 192.6,
+    "visitsDelta": 192.6,
+    "pageviewsDelta": 247.1,
     "dailyTimeseries": [
       {
         "date": "2026-08-07",
         "visits": 18,
         "uniques": 18,
+        "pageviews": 24
+      },
+      {
+        "date": "2026-08-11",
+        "visits": 13,
+        "uniques": 13,
         "pageviews": 24
       },
       {
@@ -1888,16 +1901,16 @@
         "pageviews": 16
       },
       {
-        "date": "2026-08-10",
-        "visits": 16,
-        "uniques": 16,
-        "pageviews": 31
-      },
-      {
         "date": "2026-08-08",
         "visits": 6,
         "uniques": 6,
         "pageviews": 19
+      },
+      {
+        "date": "2026-08-10",
+        "visits": 16,
+        "uniques": 16,
+        "pageviews": 31
       },
       {
         "date": "2026-08-06",
@@ -1912,10 +1925,10 @@
         "pageviews": 8
       },
       {
-        "date": "2026-07-31",
-        "visits": 11,
-        "uniques": 11,
-        "pageviews": 13
+        "date": "2026-08-12",
+        "visits": 9,
+        "uniques": 9,
+        "pageviews": 9
       },
       {
         "date": "2026-07-29",
@@ -1924,22 +1937,28 @@
         "pageviews": 26
       },
       {
+        "date": "2026-07-31",
+        "visits": 11,
+        "uniques": 11,
+        "pageviews": 13
+      },
+      {
         "date": "2026-08-03",
         "visits": 19,
         "uniques": 19,
         "pageviews": 32
       },
       {
-        "date": "2026-08-02",
-        "visits": 5,
-        "uniques": 5,
-        "pageviews": 10
-      },
-      {
         "date": "2026-08-04",
         "visits": 17,
         "uniques": 17,
         "pageviews": 25
+      },
+      {
+        "date": "2026-08-02",
+        "visits": 5,
+        "uniques": 5,
+        "pageviews": 10
       },
       {
         "date": "2026-08-05",
@@ -1971,31 +1990,31 @@
       {
         "month": "Aug 2026",
         "date": "2026-08",
-        "visits": 136,
-        "uniques": 136,
-        "pageviews": 262
+        "visits": 158,
+        "uniques": 158,
+        "pageviews": 295
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 124,
-        "uniques": 89
+        "pageviews": 139,
+        "uniques": 100
       },
       {
         "path": "/service/carpet-cleaning/",
+        "pageviews": 23,
+        "uniques": 18
+      },
+      {
+        "path": "/service/mold-removal/",
         "pageviews": 22,
-        "uniques": 17
+        "uniques": 13
       },
       {
         "path": "/about/",
         "pageviews": 21,
         "uniques": 19
-      },
-      {
-        "path": "/service/mold-removal/",
-        "pageviews": 21,
-        "uniques": 12
       },
       {
         "path": "/service/water-damage-restoration/",
@@ -2005,19 +2024,19 @@
     ],
     "referrers": [
       {
-        "source": "Paid/campaign",
-        "visits": 62,
-        "uniques": 62
+        "source": "Direct",
+        "visits": 74,
+        "uniques": 74
       },
       {
-        "source": "Direct",
-        "visits": 59,
-        "uniques": 59
+        "source": "Paid/campaign",
+        "visits": 67,
+        "uniques": 67
       },
       {
         "source": "Organic",
-        "visits": 14,
-        "uniques": 14
+        "visits": 16,
+        "uniques": 16
       },
       {
         "source": "Social",
@@ -2032,18 +2051,8 @@
     "cfDailyPageViews": [],
     "cfMonthlyHistory": [],
     "psiScores": {
-      "mobile": {
-        "performance": 55,
-        "accessibility": 92,
-        "bestPractices": 96,
-        "seo": 100
-      },
-      "desktop": {
-        "performance": 69,
-        "accessibility": 92,
-        "bestPractices": 96,
-        "seo": 100
-      }
+      "mobile": null,
+      "desktop": null
     },
     "psiHistory": [
       {
@@ -3205,6 +3214,11 @@
           "bestPractices": 96,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-08-12",
+        "mobile": null,
+        "desktop": null
       }
     ]
   },

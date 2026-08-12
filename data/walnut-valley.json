@@ -3,7 +3,7 @@
   "slug": "walnut-valley",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-11T08:06:30.112Z",
+  "generatedAt": "2026-08-12T08:11:47.429Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -157,34 +157,10 @@
     "pageviewsDelta": -99.3,
     "dailyTimeseries": [
       {
-        "date": "2026-08-06",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 1
-      },
-      {
         "date": "2026-08-01",
         "visits": 4,
         "uniques": 4,
         "pageviews": 7
-      },
-      {
-        "date": "2026-07-29",
-        "visits": 303,
-        "uniques": 303,
-        "pageviews": 365
-      },
-      {
-        "date": "2026-07-31",
-        "visits": 284,
-        "uniques": 284,
-        "pageviews": 350
-      },
-      {
-        "date": "2026-07-27",
-        "visits": 25,
-        "uniques": 25,
-        "pageviews": 28
       },
       {
         "date": "2026-08-04",
@@ -203,6 +179,30 @@
         "visits": 363,
         "uniques": 363,
         "pageviews": 406
+      },
+      {
+        "date": "2026-08-06",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 1
+      },
+      {
+        "date": "2026-07-29",
+        "visits": 303,
+        "uniques": 303,
+        "pageviews": 365
+      },
+      {
+        "date": "2026-07-27",
+        "visits": 25,
+        "uniques": 25,
+        "pageviews": 28
+      },
+      {
+        "date": "2026-07-31",
+        "visits": 284,
+        "uniques": 284,
+        "pageviews": 350
       }
     ],
     "monthlyHistory": [
@@ -421,7 +421,7 @@
     "psiScores": {
       "mobile": {
         "performance": 68,
-        "accessibility": 82,
+        "accessibility": 96,
         "bestPractices": 100,
         "seo": 92
       },
@@ -798,6 +798,16 @@
         "mobile": {
           "performance": 68,
           "accessibility": 82,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": null
+      },
+      {
+        "date": "2026-08-12",
+        "mobile": {
+          "performance": 68,
+          "accessibility": 96,
           "bestPractices": 100,
           "seo": 92
         },
