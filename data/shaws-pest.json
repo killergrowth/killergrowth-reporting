@@ -3,7 +3,7 @@
   "slug": "shaws-pest",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-12T08:15:19.096Z",
+  "generatedAt": "2026-08-13T08:18:22.236Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -105,9 +105,14 @@
     "cfDailyPageViews": [],
     "cfMonthlyHistory": [],
     "psiScores": {
-      "mobile": null,
+      "mobile": {
+        "performance": 51,
+        "accessibility": 86,
+        "bestPractices": 96,
+        "seo": 92
+      },
       "desktop": {
-        "performance": 81,
+        "performance": 93,
         "accessibility": 86,
         "bestPractices": 96,
         "seo": 92
@@ -499,6 +504,21 @@
         "mobile": null,
         "desktop": {
           "performance": 81,
+          "accessibility": 86,
+          "bestPractices": 96,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-13",
+        "mobile": {
+          "performance": 51,
+          "accessibility": 86,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 93,
           "accessibility": 86,
           "bestPractices": 96,
           "seo": 92

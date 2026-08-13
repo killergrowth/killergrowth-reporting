@@ -3,7 +3,7 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-12T08:10:56.029Z",
+  "generatedAt": "2026-08-13T08:14:01.014Z",
   "overview": {
     "sessions": 633,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 18,
     "rankingsDelta": null,
-    "gbpViews": 766,
+    "gbpViews": 776,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -493,7 +493,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 766,
+    "totalViews": 776,
     "calls": 11,
     "callsDelta": null,
     "directions": 220,
@@ -1622,14 +1622,14 @@
       },
       {
         "date": "2026-08-08",
-        "views": 1,
+        "views": 3,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-08-09",
-        "views": 0,
+        "views": 8,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1650,6 +1650,13 @@
       },
       {
         "date": "2026-08-12",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-13",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1701,7 +1708,7 @@
       },
       {
         "month": "Aug 2026",
-        "reach": 76,
+        "reach": 77,
         "engagements": 7
       }
     ],
@@ -1711,7 +1718,7 @@
         "platform": "Facebook",
         "reach": 206,
         "engagements": 37,
-        "followers": 2527
+        "followers": 2528
       }
     ]
   },
@@ -1873,14 +1880,14 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "MTRAPVNX",
-    "uniques": 158,
-    "visits": 158,
-    "pageviews": 295,
-    "avgDuration": 163,
-    "bounceRate": 67.721518987342,
-    "uniquesDelta": 192.6,
-    "visitsDelta": 192.6,
-    "pageviewsDelta": 247.1,
+    "uniques": 170,
+    "visits": 170,
+    "pageviews": 483,
+    "avgDuration": 192,
+    "bounceRate": 65.294117647059,
+    "uniquesDelta": 214.8,
+    "visitsDelta": 214.8,
+    "pageviewsDelta": 468.2,
     "dailyTimeseries": [
       {
         "date": "2026-08-07",
@@ -1901,22 +1908,16 @@
         "pageviews": 16
       },
       {
-        "date": "2026-08-08",
-        "visits": 6,
-        "uniques": 6,
-        "pageviews": 19
-      },
-      {
         "date": "2026-08-10",
         "visits": 16,
         "uniques": 16,
         "pageviews": 31
       },
       {
-        "date": "2026-08-06",
-        "visits": 20,
-        "uniques": 20,
-        "pageviews": 58
+        "date": "2026-08-08",
+        "visits": 6,
+        "uniques": 6,
+        "pageviews": 19
       },
       {
         "date": "2026-08-01",
@@ -1925,10 +1926,16 @@
         "pageviews": 8
       },
       {
+        "date": "2026-08-06",
+        "visits": 20,
+        "uniques": 20,
+        "pageviews": 58
+      },
+      {
         "date": "2026-08-12",
-        "visits": 9,
-        "uniques": 9,
-        "pageviews": 9
+        "visits": 19,
+        "uniques": 19,
+        "pageviews": 160
       },
       {
         "date": "2026-07-29",
@@ -1937,16 +1944,16 @@
         "pageviews": 26
       },
       {
-        "date": "2026-07-31",
-        "visits": 11,
-        "uniques": 11,
-        "pageviews": 13
-      },
-      {
         "date": "2026-08-03",
         "visits": 19,
         "uniques": 19,
         "pageviews": 32
+      },
+      {
+        "date": "2026-07-31",
+        "visits": 11,
+        "uniques": 11,
+        "pageviews": 13
       },
       {
         "date": "2026-08-04",
@@ -1955,16 +1962,22 @@
         "pageviews": 25
       },
       {
+        "date": "2026-08-05",
+        "visits": 18,
+        "uniques": 18,
+        "pageviews": 39
+      },
+      {
         "date": "2026-08-02",
         "visits": 5,
         "uniques": 5,
         "pageviews": 10
       },
       {
-        "date": "2026-08-05",
-        "visits": 18,
-        "uniques": 18,
-        "pageviews": 39
+        "date": "2026-08-13",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 37
       },
       {
         "date": "2026-07-28",
@@ -1990,16 +2003,26 @@
       {
         "month": "Aug 2026",
         "date": "2026-08",
-        "visits": 158,
-        "uniques": 158,
-        "pageviews": 295
+        "visits": 170,
+        "uniques": 170,
+        "pageviews": 483
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 139,
-        "uniques": 100
+        "pageviews": 193,
+        "uniques": 109
+      },
+      {
+        "path": "/about/",
+        "pageviews": 67,
+        "uniques": 23
+      },
+      {
+        "path": "/contact/",
+        "pageviews": 46,
+        "uniques": 13
       },
       {
         "path": "/service/carpet-cleaning/",
@@ -2008,35 +2031,25 @@
       },
       {
         "path": "/service/mold-removal/",
-        "pageviews": 22,
-        "uniques": 13
-      },
-      {
-        "path": "/about/",
-        "pageviews": 21,
-        "uniques": 19
-      },
-      {
-        "path": "/service/water-damage-restoration/",
-        "pageviews": 18,
-        "uniques": 18
+        "pageviews": 23,
+        "uniques": 14
       }
     ],
     "referrers": [
       {
         "source": "Direct",
-        "visits": 74,
-        "uniques": 74
+        "visits": 82,
+        "uniques": 82
       },
       {
         "source": "Paid/campaign",
-        "visits": 67,
-        "uniques": 67
+        "visits": 69,
+        "uniques": 69
       },
       {
         "source": "Organic",
-        "visits": 16,
-        "uniques": 16
+        "visits": 18,
+        "uniques": 18
       },
       {
         "source": "Social",
@@ -2052,7 +2065,12 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": null,
-      "desktop": null
+      "desktop": {
+        "performance": 73,
+        "accessibility": 92,
+        "bestPractices": 100,
+        "seo": 100
+      }
     },
     "psiHistory": [
       {
@@ -3219,6 +3237,16 @@
         "date": "2026-08-12",
         "mobile": null,
         "desktop": null
+      },
+      {
+        "date": "2026-08-13",
+        "mobile": null,
+        "desktop": {
+          "performance": 73,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        }
       }
     ]
   },

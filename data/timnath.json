@@ -3,7 +3,7 @@
   "slug": "timnath",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-12T08:11:26.913Z",
+  "generatedAt": "2026-08-13T08:14:30.129Z",
   "overview": {
     "sessions": 120,
     "sessionsDelta": 0,
@@ -2109,14 +2109,14 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "YNVVPFQV",
-    "uniques": 16,
-    "visits": 16,
-    "pageviews": 43,
-    "avgDuration": 136,
-    "bounceRate": 50,
-    "uniquesDelta": 166.7,
-    "visitsDelta": 166.7,
-    "pageviewsDelta": 168.8,
+    "uniques": 23,
+    "visits": 23,
+    "pageviews": 51,
+    "avgDuration": 198,
+    "bounceRate": 60.869565217391,
+    "uniquesDelta": 283.3,
+    "visitsDelta": 283.3,
+    "pageviewsDelta": 218.8,
     "dailyTimeseries": [
       {
         "date": "2026-08-11",
@@ -2150,9 +2150,9 @@
       },
       {
         "date": "2026-08-12",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 1
+        "visits": 7,
+        "uniques": 7,
+        "pageviews": 8
       },
       {
         "date": "2026-08-06",
@@ -2165,6 +2165,12 @@
         "visits": 2,
         "uniques": 2,
         "pageviews": 5
+      },
+      {
+        "date": "2026-08-13",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 1
       },
       {
         "date": "2026-08-05",
@@ -2196,16 +2202,16 @@
       {
         "month": "Aug 2026",
         "date": "2026-08",
-        "visits": 16,
-        "uniques": 16,
-        "pageviews": 43
+        "visits": 23,
+        "uniques": 23,
+        "pageviews": 51
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 23,
-        "uniques": 16
+        "pageviews": 31,
+        "uniques": 23
       },
       {
         "path": "/areas-served/",
@@ -2231,8 +2237,8 @@
     "referrers": [
       {
         "source": "Direct",
-        "visits": 14,
-        "uniques": 14
+        "visits": 21,
+        "uniques": 21
       },
       {
         "source": "Paid/campaign",
@@ -2247,9 +2253,14 @@
     "cfDailyPageViews": [],
     "cfMonthlyHistory": [],
     "psiScores": {
-      "mobile": null,
+      "mobile": {
+        "performance": 62,
+        "accessibility": 90,
+        "bestPractices": 100,
+        "seo": 92
+      },
       "desktop": {
-        "performance": 96,
+        "performance": 73,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
@@ -2656,6 +2667,21 @@
         "mobile": null,
         "desktop": {
           "performance": 96,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-13",
+        "mobile": {
+          "performance": 62,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 73,
           "accessibility": 90,
           "bestPractices": 100,
           "seo": 92
