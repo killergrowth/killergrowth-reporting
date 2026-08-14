@@ -3,7 +3,7 @@
   "slug": "iserve-facilities",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-13T08:17:43.525Z",
+  "generatedAt": "2026-08-14T08:14:47.176Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -86,20 +86,26 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "ANNMTVXC",
-    "uniques": 48,
-    "visits": 48,
-    "pageviews": 99,
-    "avgDuration": 79,
-    "bounceRate": 58.333333333333,
-    "uniquesDelta": 700,
-    "visitsDelta": 700,
-    "pageviewsDelta": 518.8,
+    "uniques": 49,
+    "visits": 49,
+    "pageviews": 100,
+    "avgDuration": 78,
+    "bounceRate": 59.183673469388,
+    "uniquesDelta": 716.7,
+    "visitsDelta": 716.7,
+    "pageviewsDelta": 525,
     "dailyTimeseries": [
       {
-        "date": "2026-08-07",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 1
+        "date": "2026-08-01",
+        "visits": 3,
+        "uniques": 3,
+        "pageviews": 7
+      },
+      {
+        "date": "2026-08-04",
+        "visits": 6,
+        "uniques": 6,
+        "pageviews": 19
       },
       {
         "date": "2026-08-11",
@@ -108,40 +114,46 @@
         "pageviews": 11
       },
       {
+        "date": "2026-07-30",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 4
+      },
+      {
+        "date": "2026-08-07",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 1
+      },
+      {
+        "date": "2026-07-28",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 2
+      },
+      {
         "date": "2026-08-09",
         "visits": 1,
         "uniques": 1,
         "pageviews": 1
       },
       {
-        "date": "2026-08-08",
-        "visits": 2,
-        "uniques": 2,
-        "pageviews": 2
-      },
-      {
-        "date": "2026-08-10",
-        "visits": 7,
-        "uniques": 7,
-        "pageviews": 19
-      },
-      {
-        "date": "2026-08-01",
+        "date": "2026-08-02",
         "visits": 3,
         "uniques": 3,
-        "pageviews": 7
-      },
-      {
-        "date": "2026-08-06",
-        "visits": 4,
-        "uniques": 4,
-        "pageviews": 9
+        "pageviews": 3
       },
       {
         "date": "2026-08-12",
         "visits": 4,
         "uniques": 4,
         "pageviews": 12
+      },
+      {
+        "date": "2026-08-06",
+        "visits": 4,
+        "uniques": 4,
+        "pageviews": 9
       },
       {
         "date": "2026-07-29",
@@ -156,22 +168,16 @@
         "pageviews": 7
       },
       {
-        "date": "2026-07-31",
-        "visits": 1,
-        "uniques": 1,
+        "date": "2026-08-08",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 2
+      },
+      {
+        "date": "2026-08-13",
+        "visits": 4,
+        "uniques": 4,
         "pageviews": 4
-      },
-      {
-        "date": "2026-08-04",
-        "visits": 6,
-        "uniques": 6,
-        "pageviews": 19
-      },
-      {
-        "date": "2026-08-02",
-        "visits": 3,
-        "uniques": 3,
-        "pageviews": 3
       },
       {
         "date": "2026-08-05",
@@ -180,21 +186,15 @@
         "pageviews": 5
       },
       {
-        "date": "2026-08-13",
-        "visits": 3,
-        "uniques": 3,
-        "pageviews": 3
+        "date": "2026-08-10",
+        "visits": 7,
+        "uniques": 7,
+        "pageviews": 19
       },
       {
-        "date": "2026-07-28",
+        "date": "2026-07-31",
         "visits": 1,
         "uniques": 1,
-        "pageviews": 2
-      },
-      {
-        "date": "2026-07-30",
-        "visits": 2,
-        "uniques": 2,
         "pageviews": 4
       }
     ],
@@ -209,16 +209,16 @@
       {
         "month": "Aug 2026",
         "date": "2026-08",
-        "visits": 48,
-        "uniques": 48,
-        "pageviews": 99
+        "visits": 49,
+        "uniques": 49,
+        "pageviews": 100
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 50,
-        "uniques": 43
+        "pageviews": 51,
+        "uniques": 44
       },
       {
         "path": "/apply",
@@ -243,14 +243,14 @@
     ],
     "referrers": [
       {
-        "source": "Organic",
+        "source": "Direct",
         "visits": 20,
         "uniques": 20
       },
       {
-        "source": "Direct",
-        "visits": 19,
-        "uniques": 19
+        "source": "Organic",
+        "visits": 20,
+        "uniques": 20
       },
       {
         "source": "Paid/campaign",
@@ -437,14 +437,9 @@
       }
     ],
     "psiScores": {
-      "mobile": {
-        "performance": 70,
-        "accessibility": 100,
-        "bestPractices": 100,
-        "seo": 100
-      },
+      "mobile": null,
       "desktop": {
-        "performance": 79,
+        "performance": 83,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100
@@ -711,6 +706,16 @@
         },
         "desktop": {
           "performance": 79,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-14",
+        "mobile": null,
+        "desktop": {
+          "performance": 83,
           "accessibility": 100,
           "bestPractices": 100,
           "seo": 100

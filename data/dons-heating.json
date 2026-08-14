@@ -3,7 +3,7 @@
   "slug": "dons-heating",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-13T08:10:55.097Z",
+  "generatedAt": "2026-08-14T08:08:16.714Z",
   "overview": {
     "sessions": 884,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 14,
     "rankingsDelta": null,
-    "gbpViews": 3684,
+    "gbpViews": 3717,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -420,9 +420,9 @@
           "Direct": 1
         }
       },
-      "gbpCalls": 428,
+      "gbpCalls": 436,
       "gbpWebsiteClicks": 216,
-      "gbpDirections": 258
+      "gbpDirections": 261
     }
   },
   "ads": {
@@ -594,10 +594,10 @@
   },
   "gbp": {
     "locationName": "El Dorado",
-    "totalViews": 3684,
-    "calls": 428,
+    "totalViews": 3717,
+    "calls": 436,
     "callsDelta": null,
-    "directions": 258,
+    "directions": 261,
     "websiteClicks": 216,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -1731,22 +1731,22 @@
       {
         "date": "2026-08-09",
         "views": 52,
-        "calls": 0,
+        "calls": 1,
         "directions": 0,
         "websiteClicks": 1
       },
       {
         "date": "2026-08-10",
-        "views": 2,
-        "calls": 0,
+        "views": 33,
+        "calls": 7,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-08-11",
-        "views": 0,
+        "views": 2,
         "calls": 0,
-        "directions": 0,
+        "directions": 3,
         "websiteClicks": 0
       },
       {
@@ -1762,6 +1762,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-14",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -1770,9 +1777,9 @@
   },
   "gbp2": {
     "locationName": "Emporia",
-    "totalViews": 552,
+    "totalViews": 559,
     "calls": 25,
-    "directions": 114,
+    "directions": 126,
     "websiteClicks": 39,
     "viewsOverTime": [
       {
@@ -2906,21 +2913,21 @@
         "date": "2026-08-09",
         "views": 3,
         "calls": 0,
-        "directions": 0,
+        "directions": 1,
         "websiteClicks": 1
       },
       {
         "date": "2026-08-10",
-        "views": 3,
+        "views": 9,
         "calls": 0,
-        "directions": 0,
+        "directions": 6,
         "websiteClicks": 0
       },
       {
         "date": "2026-08-11",
-        "views": 0,
+        "views": 1,
         "calls": 0,
-        "directions": 0,
+        "directions": 5,
         "websiteClicks": 0
       },
       {
@@ -2936,6 +2943,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-14",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -2943,9 +2957,9 @@
   },
   "gbp3": {
     "locationName": "Hillsboro",
-    "totalViews": 1171,
-    "calls": 72,
-    "directions": 228,
+    "totalViews": 1194,
+    "calls": 74,
+    "directions": 232,
     "websiteClicks": 53,
     "viewsOverTime": [
       {
@@ -4078,20 +4092,20 @@
       {
         "date": "2026-08-09",
         "views": 13,
-        "calls": 0,
-        "directions": 0,
+        "calls": 1,
+        "directions": 2,
         "websiteClicks": 1
       },
       {
         "date": "2026-08-10",
-        "views": 1,
-        "calls": 0,
-        "directions": 0,
+        "views": 16,
+        "calls": 1,
+        "directions": 2,
         "websiteClicks": 0
       },
       {
         "date": "2026-08-11",
-        "views": 0,
+        "views": 8,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -4105,6 +4119,13 @@
       },
       {
         "date": "2026-08-13",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-14",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -4153,8 +4174,8 @@
       },
       {
         "month": "Aug 2026",
-        "reach": 41,
-        "engagements": 23
+        "reach": 50,
+        "engagements": 96
       }
     ],
     "reachByWeek": [],
@@ -4163,7 +4184,7 @@
         "platform": "Facebook",
         "reach": 180,
         "engagements": 15,
-        "followers": 205
+        "followers": 206
       }
     ]
   },
@@ -4349,17 +4370,12 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 61,
+        "performance": 66,
         "accessibility": 90,
         "bestPractices": 73,
         "seo": 100
       },
-      "desktop": {
-        "performance": 91,
-        "accessibility": 91,
-        "bestPractices": 73,
-        "seo": 100
-      }
+      "desktop": null
     },
     "psiHistory": [
       {
@@ -5501,6 +5517,16 @@
           "bestPractices": 73,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-08-14",
+        "mobile": {
+          "performance": 66,
+          "accessibility": 90,
+          "bestPractices": 73,
+          "seo": 100
+        },
+        "desktop": null
       }
     ]
   },
