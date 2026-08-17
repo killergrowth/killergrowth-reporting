@@ -1425,7 +1425,10 @@ function gbpFilteredStats(gbp,rawOverride){
   if(GBP_RANGE==='6m')return gbp;
   var raw=rawOverride||(DR_DATA&&DR_DATA.gbp&&DR_DATA.gbp.viewsOverTime)||gbp.viewsOverTime||[];
   var f=gbpFilterByWindow(raw);
-  return {totalViews:f.reduce(function(s,d){return s+(d.views||0);},0),calls:f.reduce(function(s,d){return s+(d.calls||0);},0),directions:f.reduce(function(s,d){return s+(d.directions||0);},0),websiteClicks:f.reduce(function(s,d){return s+(d.websiteClicks||0);},0),totalReviews:gbp.totalReviews,avgRating:gbp.avgRating};
+  var fCalls=f.reduce(function(s,d){return s+(d.calls||0);},0);
+  // If daily call data is empty but scalar exists, trust the scalar (GBP API CALL_CLICKS gap)
+  var resolvedCalls=fCalls>0?fCalls:(gbp.calls||0);
+  return {totalViews:f.reduce(function(s,d){return s+(d.views||0);},0),calls:resolvedCalls,directions:f.reduce(function(s,d){return s+(d.directions||0);},0),websiteClicks:f.reduce(function(s,d){return s+(d.websiteClicks||0);},0),totalReviews:gbp.totalReviews,avgRating:gbp.avgRating};
 }
 function renderGBPStats(){
   var gbp=GBP_DATA;if(!gbp)return;
