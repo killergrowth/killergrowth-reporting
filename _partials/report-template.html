@@ -361,7 +361,7 @@ canvas{max-width:100%!important;width:100%!important}
       <li data-nav="localFalcon"><a href="#" data-s="map">Map Rankings</a></li>
       <li data-nav="social"><a href="#" data-s="social">Social Media</a></li>
       <li data-nav="website"><a href="#" data-s="website">Website</a></li>
-      <li id="nav-updates-li"><a href="#" data-s="worklog-legacy" id="nav-updates-link">Monthly Updates</a></li>
+      <li id="nav-updates-li"><a href="#" data-s="mu-section" id="nav-updates-link">Monthly Updates</a></li>
     </ul>
     <div id="gh-panel">
       <div class="gh-lbl">Deploy Modules</div>
@@ -470,6 +470,14 @@ canvas{max-width:100%!important;width:100%!important}
               <tbody></tbody>
             </table>
           </div>
+          <!-- GEO MoM Trend Chart -->
+          <div class="card mb14" id="geo-mom-wrap" style="display:none">
+            <div style="display:flex;align-items:center;gap:6px;margin-bottom:14px">
+              <span class="clbl">GEO Trend &mdash; Month over Month</span>
+              <span class="kg-info-tip" data-tip="AI Share of Voice (SAIV) and Local Pack SoLV tracked each month from Local Falcon scans.">&#9432;</span>
+            </div>
+            <div style="position:relative;height:220px"><canvas id="c-geo-mom"></canvas></div>
+          </div>
         </div>
       </section>
 
@@ -552,7 +560,13 @@ canvas{max-width:100%!important;width:100%!important}
 
       <!-- WEBSITE -->
       <section id="website" class="ms" data-module="website">
-        <div class="sh" style="margin-bottom:18px"><span class="sb2">WEB</span><span class="st">Site Health</span></div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;">
+          <div class="sh" style="margin-bottom:0"><span class="sb2">WEB</span><span class="st">Site Health</span></div>
+          <div class="psi-tw">
+            <button class="psi-t active" id="psi-m" onclick="setPsi('mobile')">Mobile</button>
+            <button class="psi-t" id="psi-d" onclick="setPsi('desktop')">Desktop</button>
+          </div>
+        </div>
 
         <!-- FATHOM ANALYTICS (PKG001/PKG002 when fathomSiteId is set) -->
         <div id="fathom-analytics-wrap" style="display:none;margin-bottom:20px">
@@ -579,7 +593,7 @@ canvas{max-width:100%!important;width:100%!important}
           </div>
         </div>
 
-        <!-- CF WEB ANALYTICS (legacy â€” shown when fathomSiteId is NOT set) -->
+        <!-- CF WEB ANALYTICS (legacy " shown when fathomSiteId is NOT set) -->
         <div id="cf-analytics-wrap" style="display:none;margin-bottom:20px">
           <div class="krow mb14" id="cf-krow"></div>
           <div class="cf-grid">
@@ -600,17 +614,11 @@ canvas{max-width:100%!important;width:100%!important}
 
 
 
-      <!-- MONTHLY UPDATES (monthlyUpdates clients only) -->
-      <section class="ms" id="mu-section" style="display:none">
+      <!-- MONTHLY UPDATES -->
+      <section class="ms" id="mu-section">
         <div class="sh"><span class="sb2">UPDATES</span><span class="st">Monthly Updates</span></div>
         <div class="mu-year-tabs" id="mu-year-tabs"></div>
         <div id="mu-list"></div>
-      </section>
-
-      <!-- WORK LOG (standard clients) -->
-      <section id="worklog-legacy" class="ms">
-        <div class="sh"><span class="sb2">LOG</span><span class="st">Work Completed</span></div>
-        <div id="wl-list"></div>
       </section>
 
       <!-- PRINT FOOTER -->
@@ -658,13 +666,13 @@ var CHART_DEFAULTS = {
 
 /* -- HELPERS -- */
 function fmt(n, pre, suf) {
-  if (n == null || n === '') return 'â€”';
+  if (n == null || n === '') return '-';
   var v = Number(n);
-  if (isNaN(v)) return 'â€”';
+  if (isNaN(v)) return '-';
   return (pre || '') + v.toLocaleString() + (suf || '');
 }
-function fmtMoney(n) { return n == null ? 'â€”' : '$' + Number(n).toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2}); }
-function fmtPct(n) { return n == null ? 'â€”' : n.toFixed(1) + '%'; }
+function fmtMoney(n) { return n == null ? '-' : '$' + Number(n).toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2}); }
+function fmtPct(n) { return n == null ? '-' : n.toFixed(1) + '%'; }
 function h(tag, cls, html, extra) {
   return '<' + tag + (cls ? ' class="' + cls + '"' : '') + (extra || '') + '>' + (html || '') + '</' + tag + '>';
 }
@@ -747,21 +755,14 @@ function initDash(data) {
     }
     document.querySelectorAll('[data-nav]').forEach(function(li){if(!resolvedMods[li.getAttribute('data-nav')])li.style.display='none';});
     document.querySelectorAll('[data-module]').forEach(function(s){if(!resolvedMods[s.getAttribute('data-module')])s.style.display='none';});
+    var _cfg=window.CLIENT_CONFIG||{};
+    if(_cfg.hideOverview){
+      var ovSec=document.getElementById('overview');if(ovSec)ovSec.style.display='none';
+      var ovNav=document.querySelector('[data-s="overview"]');if(ovNav)ovNav.parentElement.style.display='none';
+    }
     initDateRange(data);
     initNav();
-    var _cfg=window.CLIENT_CONFIG||{};
-    if(_cfg.monthlyUpdates&&data.monthlyUpdates&&data.monthlyUpdates.length){
-      var muSection=document.getElementById('mu-section');
-      if(muSection)muSection.style.display='';
-      var wlLegacy=document.getElementById('worklog-legacy');
-      if(wlLegacy)wlLegacy.style.display='none';
-      // Point nav link at the monthly updates section
-      var navLink=document.getElementById('nav-updates-link');
-      if(navLink)navLink.setAttribute('data-s','mu-section');
-      renderMonthlyUpdates(data.monthlyUpdates);
-    } else {
-      renderWorkLog(sanitizeWorkLog(data.workLog||[]));
-    }
+    renderMonthlyUpdates(data.monthlyUpdates||[]);
   }
   var _slug = cfg.slug||'';
   if (_slug) {
@@ -796,7 +797,7 @@ function initNav() {
   });
   var ct=document.getElementById('ct');
   ct.addEventListener('scroll',function(){
-    var secs=['overview','seo','geo','google-ads','meta-ads','gbp','map','social','website','mu-section','worklog-legacy'],active='overview';
+    var secs=['overview','seo','geo','google-ads','meta-ads','gbp','map','social','website','mu-section'],active='overview';
     secs.forEach(function(id){var s=document.getElementById(id);if(s&&s.style.display!=='none'&&s.getBoundingClientRect().top<=80)active=id;});
     links.forEach(function(a){a.classList.toggle('active',a.getAttribute('data-s')===active);});
   });
@@ -899,8 +900,13 @@ function initDashFromData(data, cc) {
   DR_DATA = data; DR_MODS = mods;
   document.querySelectorAll('[data-module]').forEach(function(s){s.style.display=mods[s.getAttribute('data-module')]?'':'none';});
   document.querySelectorAll('[data-nav]').forEach(function(li){li.style.display=mods[li.getAttribute('data-nav')]?'':'none';});
+  // Hide overview section if config says so
+  if(cc.hideOverview){
+    var ovSec=el('overview');if(ovSec)ovSec.style.display='none';
+    var ovNav=document.querySelector('[data-s="overview"]');if(ovNav)ovNav.parentElement.style.display='none';
+  }
   initDateRange(data);
-  renderWorkLog(sanitizeWorkLog(data.workLog||[]));
+  renderMonthlyUpdates(data.monthlyUpdates||[]);
 }
 
 function fmt(n,p,s){if(n==null||n==='')return '\u2014';var v=Number(n);if(isNaN(v))return '\u2014';return (p||'')+v.toLocaleString()+(s||'');}
@@ -944,7 +950,15 @@ function renderOverview(data,mods){
     } else {
       cards.push(kc('Email Clicks',totalEmails,null,null,'Times a visitor clicked an email link on your website.'));
     }
-    if(totalDirs!=null)cards.push(kc('Direction Requests',fmt(totalDirs),null,null,'Times someone tapped Get Directions to your business on Google Maps.'));
+    if(totalDirs!=null&&!(window.CLIENT_CONFIG&&window.CLIENT_CONFIG.hideDirections))cards.push(kc('Direction Requests',fmt(totalDirs),null,null,'Times someone tapped Get Directions to your business on Google Maps.'));
+  }
+  // GHL CRM card
+  if(ov.ghlNewContacts!=null||ov.ghlConversations!=null){
+    var ghlContacts=ov.ghlNewContacts!=null?ov.ghlNewContacts:'\u2014';
+    var ghlConvs=ov.ghlConversations!=null?ov.ghlConversations:'\u2014';
+    var ghlIh='<span class="kinfo" data-tip="New contacts and inbound conversations tracked in GoHighLevel CRM this period.">i</span>';
+    var ghlSub='<div style="margin-top:10px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:7px 10px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:var(--sub)">Conversations</span><span style="font-size:14px;font-weight:700;color:var(--w)">'+ghlConvs+'</span></div>';
+    cards.push('<div class="kc"><div class="klbl">CRM New Contacts'+ghlIh+'</div><div class="kvr"><span class="kv">'+ghlContacts+'</span></div>'+ghlSub+'</div>');
   }
   el('krow').innerHTML=cards.length?cards.join(''):'<div style="color:var(--muted);font-size:13px">No overview data available yet.</div>';
 }
@@ -1049,6 +1063,65 @@ function renderGEO(lf){
         +'<span class="geo-kw-val">'+k.solv+'%</span>'
         +'</div>';
     }).join('');
+  }
+
+  // MoM Trend Chart
+  var momWrap=el('geo-mom-wrap');
+  if(momWrap&&lf.localFalconHistory&&lf.localFalconHistory.length>0){
+    momWrap.style.display='';
+    var hist=lf.localFalconHistory;
+    var labels=hist.map(function(h){return h.month;});
+    var saivData=hist.map(function(h){return h.avgSaiv!=null?h.avgSaiv:null;});
+    var solvData=hist.map(function(h){return h.avgSolvAll!=null?h.avgSolvAll:null;});
+    dc('geo-mom');
+    var cGeo=el('c-geo-mom');
+    if(cGeo){
+      CHARTS['geo-mom']=new Chart(cGeo.getContext('2d'),{
+        type:'line',
+        data:{
+          labels:labels,
+          datasets:[
+            {
+              label:'AI Share of Voice (SAIV %)',
+              data:saivData,
+              borderColor:'#c8f000',
+              backgroundColor:'rgba(200,240,0,0.08)',
+              borderWidth:2,
+              pointBackgroundColor:'#c8f000',
+              pointRadius:4,
+              tension:0.3,
+              fill:true,
+              yAxisID:'y'
+            },
+            {
+              label:'Local Pack SoLV (%)',
+              data:solvData,
+              borderColor:'#4285f4',
+              backgroundColor:'rgba(66,133,244,0.08)',
+              borderWidth:2,
+              pointBackgroundColor:'#4285f4',
+              pointRadius:4,
+              tension:0.3,
+              fill:true,
+              yAxisID:'y'
+            }
+          ]
+        },
+        options:{
+          responsive:true,
+          maintainAspectRatio:false,
+          interaction:{mode:'index',intersect:false},
+          plugins:{
+            legend:{display:true,labels:{color:'#aaa',font:{size:11},boxWidth:12,padding:16}},
+            tooltip:{...getTT(),callbacks:{label:function(ctx){return ctx.dataset.label+': '+ctx.parsed.y+'%';}}}
+          },
+          scales:{
+            x:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#666',font:{size:11}},border:{display:false}},
+            y:{min:0,max:100,grid:{color:'rgba(255,255,255,0.06)'},ticks:{color:'#aaa',font:{size:11},callback:function(v){return v+'%';}},border:{display:false}}
+          }
+        }
+      });
+    }
   }
 }
 
@@ -1242,7 +1315,7 @@ function renderMeta(ads,social){
       ['Frequency',mx.frequency!=null?mx.frequency.toFixed(2):'\u2014',null]
     ].map(function(s){return '<div class="sr"><span class="srl">'+s[0]+ki(META_TIPS[s[0]])+'</span><span class="srv">'+s[1]+(s[2]||'')+'</span></div>';}).join('');
   }else{
-    var totalImpressions=monthly.reduce(function(s,d){return s+(d.adImpressions||0);},0);var totalCtr=totalImpressions>0?parseFloat((totalClicks/totalImpressions*100).toFixed(2)):null;var totalCpc=totalClicks>0?parseFloat((totalSpend/totalClicks).toFixed(2)):null;var allM=(ads.monthlyBreakdown||[]).filter(function(d){return d.adSpend>0;}),curKeys=monthly.map(function(m){return m.month;}),priorM=allM.filter(function(m){return curKeys.indexOf(m.month)===-1;});var pSpend=priorM.reduce(function(s,d){return s+(d.adSpend||0);},0),pImpr=priorM.reduce(function(s,d){return s+(d.adImpressions||0);},0),pClicks=priorM.reduce(function(s,d){return s+(d.adClicks||0);},0);var pCtr=pImpr>0?parseFloat((pClicks/pImpr*100).toFixed(2)):null,pCpc=pClicks>0?parseFloat((pSpend/pClicks).toFixed(2)):null;function mCard(l,v,c,p){var dh='';if(c!=null&&p!=null&&p!==0){var pct=(c-p)/Math.abs(p)*100,pos=pct>=0;dh='<span style="display:inline-block;margin-top:8px;padding:2px 9px;border-radius:20px;font-size:12px;font-weight:600;background:'+(pos?'rgba(74,222,128,0.12)':'rgba(248,113,113,0.12)')+';color:'+(pos?'#4ade80':'#f87171')+'\'>'+(pos?'â†‘':'â†“')+Math.abs(pct).toFixed(1)+'%</span>';}return '<div style="background:var(--surface2);border-radius:10px;padding:18px 20px"><div style="font-size:12px;color:#888;font-weight:500;margin-bottom:8px">'+l+'</div><div style="font-size:26px;font-weight:700;color:#fff;line-height:1">'+v+'</div>'+dh+'</div>';}el('meta-stats').innerHTML='<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">'+mCard('Amount Spent',monthly.length?fmtM(totalSpend):'â€”',totalSpend,pSpend)+mCard('Impressions',monthly.length?fmt(totalImpressions):'â€”',totalImpressions,pImpr)+mCard('Link Clicks',monthly.length?fmt(totalClicks):'â€”',totalClicks,pClicks)+mCard('CTR',totalCtr!=null?totalCtr.toFixed(2)+'%':'â€”',totalCtr,pCtr)+mCard('CPC',totalCpc!=null?('$'+totalCpc):'â€”',totalCpc!=null&&pCpc!=null?-totalCpc:null,pCpc!=null?-pCpc:null)+mCard('Followers',fb?fmt(fb.followers):'â€”',null,null)+'</div>';
+    var totalImpressions=monthly.reduce(function(s,d){return s+(d.adImpressions||0);},0);var totalCtr=totalImpressions>0?parseFloat((totalClicks/totalImpressions*100).toFixed(2)):null;var totalCpc=totalClicks>0?parseFloat((totalSpend/totalClicks).toFixed(2)):null;var allM=(ads.monthlyBreakdown||[]).filter(function(d){return d.adSpend>0;}),curKeys=monthly.map(function(m){return m.month;}),priorM=allM.filter(function(m){return curKeys.indexOf(m.month)===-1;});var pSpend=priorM.reduce(function(s,d){return s+(d.adSpend||0);},0),pImpr=priorM.reduce(function(s,d){return s+(d.adImpressions||0);},0),pClicks=priorM.reduce(function(s,d){return s+(d.adClicks||0);},0);var pCtr=pImpr>0?parseFloat((pClicks/pImpr*100).toFixed(2)):null,pCpc=pClicks>0?parseFloat((pSpend/pClicks).toFixed(2)):null;function mCard(l,v,c,p){var dh='';if(c!=null&&p!=null&&p!==0){var pct=(c-p)/Math.abs(p)*100,pos=pct>=0;dh='<span style="display:inline-block;margin-top:8px;padding:2px 9px;border-radius:20px;font-size:12px;font-weight:600;background:'+(pos?'rgba(74,222,128,0.12)':'rgba(248,113,113,0.12)')+';color:'+(pos?'#4ade80':'#f87171')+'\'>'+(pos?'↑':'↓')+Math.abs(pct).toFixed(1)+'%</span>';}return '<div style="background:var(--surface2);border-radius:10px;padding:18px 20px"><div style="font-size:12px;color:#888;font-weight:500;margin-bottom:8px">'+l+'</div><div style="font-size:26px;font-weight:700;color:#fff;line-height:1">'+v+'</div>'+dh+'</div>';}el('meta-stats').innerHTML='<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">'+mCard('Amount Spent',monthly.length?fmtM(totalSpend):'"',totalSpend,pSpend)+mCard('Impressions',monthly.length?fmt(totalImpressions):'"',totalImpressions,pImpr)+mCard('Link Clicks',monthly.length?fmt(totalClicks):'"',totalClicks,pClicks)+mCard('CTR',totalCtr!=null?totalCtr.toFixed(2)+'%':'"',totalCtr,pCtr)+mCard('CPC',totalCpc!=null?('$'+totalCpc):'"',totalCpc!=null&&pCpc!=null?-totalCpc:null,pCpc!=null?-pCpc:null)+(fb&&fb.followers!=null?mCard('Followers',fmt(fb.followers),null,null):'')+'</div>';
   }
   var breakdown=ads.adBreakdown||[];
   var bdWrap=el('meta-ad-breakdown');
@@ -1283,7 +1356,7 @@ function renderMeta(ads,social){
   }
   // Age/gender stacked bar
   // ageGender is already a flat [{age,female,male,unknown}] array after applyRange aggregation
-  // Raw data (before first applyRange) has {month, ageRows} structure â€” flatten if needed
+  // Raw data (before first applyRange) has {month, ageRows} structure " flatten if needed
   var ageRaw=ads.ageGender||[];
   var ageData=ageRaw.length&&ageRaw[0].ageRows
     ? (function(){var AGE_O=["18-24","25-34","35-44","45-54","55-64","65+"],p={};ageRaw.forEach(function(m){(m.ageRows||[]).forEach(function(r){if(!p[r.age])p[r.age]={female:0,male:0,unknown:0};p[r.age].female+=r.female||0;p[r.age].male+=r.male||0;p[r.age].unknown+=r.unknown||0;});});return AGE_O.map(function(a){return{age:a,female:p[a]?p[a].female:0,male:p[a]?p[a].male:0,unknown:p[a]?p[a].unknown:0};});}())
@@ -1360,10 +1433,10 @@ function renderGBPStats(){
   var rows=[
     {key:'views', label:'GBP Views', val:fmt(s.totalViews), sel:true},
     {key:'calls', label:'Phone Calls', val:fmt(s.calls), sel:true},
-    {key:'directions', label:'Direction Requests', val:fmt(s.directions), sel:true},
+    {key:'directions', label:'Direction Requests', val:fmt(s.directions), sel:!(window.CLIENT_CONFIG&&window.CLIENT_CONFIG.hideDirections), hide:!!(window.CLIENT_CONFIG&&window.CLIENT_CONFIG.hideDirections)},
     {key:'websiteClicks', label:'Website Clicks', val:fmt(s.websiteClicks), sel:true},
   ];
-  el('gbp-stats').innerHTML='<div class="clbl">GBP Stats</div>'+rows.map(function(r){
+  el('gbp-stats').innerHTML='<div class="clbl">GBP Stats</div>'+rows.filter(function(r){return !r.hide;}).map(function(r){
     var active=r.sel&&r.key===GBP_METRIC;
     var cls='sr'+(r.sel?' gbp-stat-row':'')+(active?' gbp-stat-sel':'');
     var oc=r.sel?' onclick="setGbpMetric(\''+r.key+'\')"':'';
@@ -1556,7 +1629,7 @@ function renderWebsite(website,seo){
   if(aiTotal>0)channels.push({channel:'AI Traffic',sessions:aiTotal,_isAi:true});
   dc('web');
   if(sessions.length){hd('e-web');el('c-web').style.display='';dc('web');
-  if(website._sessionsFallback){var wn=el('web-fallback-note');if(!wn){wn=document.createElement('div');wn.id='web-fallback-note';wn.style='font-size:11px;color:#666;margin-top:6px;font-style:italic';wn.textContent='Showing all available data â€” current month data not yet collected.';var webCard=el('c-web')&&el('c-web').closest('.card');if(webCard)webCard.appendChild(wn);}}
+  if(website._sessionsFallback){var wn=el('web-fallback-note');if(!wn){wn=document.createElement('div');wn.id='web-fallback-note';wn.style='font-size:11px;color:#666;margin-top:6px;font-style:italic';wn.textContent='Showing all available data " current month data not yet collected.';var webCard=el('c-web')&&el('c-web').closest('.card');if(webCard)webCard.appendChild(wn);}}
   else{var wn2=el('web-fallback-note');if(wn2)wn2.remove();}
   CHARTS['web']=new Chart(el('c-web').getContext('2d'),{type:'line',data:{labels:sessions.map(function(d){if(d.label)return d.label;if(d.date){var dt=new Date(d.date+'T12:00:00');return dt.toLocaleDateString('en-US',{month:'short',year:'numeric'});}return 'Wk '+d.week;}),datasets:[{label:'Sessions',data:sessions.map(function(d){return d.sessions;}),borderColor:'#c8f000',backgroundColor:'rgba(200,240,0,0.1)',fill:true,tension:.4,pointRadius:3,pointBackgroundColor:'#c8f000'}]},options:getOpts()});}
   else{sh('e-web');var cWeb=el('c-web');if(cWeb)cWeb.style.display='none';}
@@ -1763,8 +1836,8 @@ function renderCFAnalytics(website) {
   }
 }
 
-var PSI_TIPS={'Accessibility':{def:'How usable your site is for users with disabilities â€” screen readers, keyboard navigation, and color contrast.',rng:''},'Best Practices':{def:'Checks for modern web standards â€” HTTPS, no browser errors, no deprecated APIs, and security hygiene.',rng:''},'SEO':{def:'How easily search engines can crawl and index your site â€” meta tags, structured data, and mobile readiness.',rng:''}};
-function renderPSI(v){PSI_VIEW=v;el('psi-m').classList.toggle('active',v==='mobile');el('psi-d').classList.toggle('active',v==='desktop');var sc=PSI_DATA[v]||{};el('psi-wrap').innerHTML=[['Accessibility',sc.accessibility],['Best Practices',sc.bestPractices],['SEO',sc.seo]].map(function(m){var val=m[1],cls=val==null?'':val>=90?'good':val>=50?'ok':'poor';var t=PSI_TIPS[m[0]]||{};var tip='<div class="psi-tip"><b>'+m[0]+'</b>'+t.def+'<hr><em><span class="tip-g">90â€”100</span> Great &nbsp;â€”&nbsp; <span class="tip-o">50â€”89</span> OK &nbsp;â€”&nbsp; <span class="tip-r">0â€”49</span> Poor</em></div>';return '<div class="psi-c '+cls+'">'+tip+'<div class="psi-s">'+(val!=null?val:'\u2014')+'</div><div class="psi-l">'+m[0]+'</div></div>';}).join('');}
+var PSI_TIPS={'Accessibility':{def:'How usable your site is for users with disabilities - screen readers, keyboard navigation, and color contrast.',rng:''},'Best Practices':{def:'Checks for modern web standards - HTTPS, no browser errors, no deprecated APIs, and security hygiene.',rng:''},'SEO':{def:'How easily search engines can crawl and index your site - meta tags, structured data, and mobile readiness.',rng:''}};
+function renderPSI(v){PSI_VIEW=v;el('psi-m').classList.toggle('active',v==='mobile');el('psi-d').classList.toggle('active',v==='desktop');var sc=PSI_DATA[v]||{};el('psi-wrap').innerHTML=[['Accessibility',sc.accessibility],['Best Practices',sc.bestPractices],['SEO',sc.seo]].map(function(m){var val=m[1],cls=val==null?'':val>=90?'good':val>=50?'ok':'poor';var t=PSI_TIPS[m[0]]||{};var tip='<div class="psi-tip"><b>'+m[0]+'</b>'+t.def+'<hr><em><span class="tip-g">90-100</span> Great &nbsp;&middot;&nbsp; <span class="tip-o">50-89</span> OK &nbsp;&middot;&nbsp; <span class="tip-r">0-49</span> Poor</em></div>';return '<div class="psi-c '+cls+'">'+tip+'<div class="psi-s">'+(val!=null?val:'\u2014')+'</div><div class="psi-l">'+m[0]+'</div></div>';}).join('');}
 function setPsi(v){renderPSI(v);}
 
 function getTT(){return {backgroundColor:'#1a1a1a',borderColor:'#252525',borderWidth:1,titleColor:'#555',bodyColor:'#ccc',padding:10,cornerRadius:6};}
@@ -1814,7 +1887,7 @@ function initDateRange(data){
   }
   var preset=el('dr-preset');if(preset)preset.value='lastMonth';
   var dc=el('dr-custom');if(dc)dc.style.display='none';
-  // Trigger live fetch on page load — same path as preset clicks, so load and picker are consistent
+  // Trigger live fetch on page load - same path as preset clicks, so load and picker are consistent
   var cfg=window.CLIENT_CONFIG||{};
   var slug=cfg.slug||'';
   if(slug){
@@ -1869,7 +1942,7 @@ function fetchLiveData(slug,period){
 function mergeAndApply(preset,live){
   if(!DR_DATA)return;
   var d=DR_DATA;
-  // GSC â†’ seo.keywords, seo stats
+  // GSC ' seo.keywords, seo stats
   if(live.gsc&&!live.gsc.error&&!live.gsc.skipped){
     d.seo=d.seo||{};
     d.seo.keywords=live.gsc.keywords||d.seo.keywords;
@@ -1877,7 +1950,7 @@ function mergeAndApply(preset,live){
     d.seo.clicks=live.gsc.stats&&live.gsc.stats.totalClicks!=null?live.gsc.stats.totalClicks:d.seo.clicks;
     d.seo.rankingsTop10=live.gsc.stats&&live.gsc.stats.top10!=null?live.gsc.stats.top10:d.seo.rankingsTop10;
   }
-  // GA4 â†’ organic sessions, traffic channels, overview
+  // GA4 ' organic sessions, traffic channels, overview
   if(live.ga4&&!live.ga4.error&&!live.ga4.skipped){
     d.seo=d.seo||{};
     if(live.ga4.seo){
@@ -1890,7 +1963,7 @@ function mergeAndApply(preset,live){
       d.overview.sessions=live.ga4.overview.sessions!=null?live.ga4.overview.sessions:d.overview.sessions;
     }
   }
-  // Fathom â†’ website analytics
+  // Fathom ' website analytics
   if(live.fathom&&!live.fathom.error&&!live.fathom.skipped&&live.fathom.website){
     var fw=live.fathom.website;
     d.website=d.website||{};
@@ -1904,7 +1977,7 @@ function mergeAndApply(preset,live){
     if(fw.topPages)d.website.topPages=fw.topPages;
     if(fw.referrers)d.website.referrers=fw.referrers;
   }
-  // GBP â†’ gbp data
+  // GBP ' gbp data
   if(live.gbp&&!live.gbp.error&&!live.gbp.skipped&&live.gbp.gbp){
     var lg=live.gbp.gbp;
     d.gbp=d.gbp||{};
@@ -2011,8 +2084,8 @@ function applyRange(start,end){
   fd.gbp2=d.gbp2||null;
   fd.gbp3=d.gbp3||null;
   fd.localFalcon=d.localFalcon||null;
+  // Always use current psiScores for the score circles — history is for the chart only
   var psiScores=(d.website||{}).psiScores||{};
-  if(fPsiH&&fPsiH.length){var lp=fPsiH[fPsiH.length-1];psiScores={mobile:lp.mobile,desktop:lp.desktop};}
   fd.website=Object.assign({},d.website||{},{psiHistory:fPsiH,psiScores:psiScores,sessionsOverTime:fWebSessions,_sessionsFallback:_webSessionsFallback});
   var ov=Object.assign({},d.overview||{});
   if(fAds.length){

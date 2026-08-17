@@ -13,10 +13,8 @@
  */
 
 // Per-client GHL location IDs — matches clients.json ghlLocationId
-const CLIENT_MAP = {
-  'sunflower':        'D7hKz0cgJ5MpjIAtajBg',
-  // Add others as wired
-};
+// GHL is NOT a dashboard data source — this endpoint is disabled.
+const CLIENT_MAP = {};
 
 const GHL_BASE = 'https://services.leadconnectorhq.com';
 

@@ -57,6 +57,10 @@ async function buildReport(slug) {
   console.log(`\nBuilding report for: ${client.name} (${slug})`);
   console.log('---');
 
+  // Report month = previous calendar month
+  const now = new Date();
+  const reportMonthRef = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+
   // Load existing data file as base (preserves manual edits)
   const dataPath = path.join(ROOT, 'data', `${slug}.json`);
   const base = fs.existsSync(dataPath) ? JSON.parse(fs.readFileSync(dataPath, 'utf8')) : {};
@@ -78,7 +82,7 @@ async function buildReport(slug) {
     (lfApiKey && client.lfPlaceId) ? pullLocalFalcon(client.lfPlaceId, lfApiKey) : Promise.resolve(null),
     (lfApiKey && client.lfPlaceId) ? pullBrandPhrases({ placeId: client.lfPlaceId, brandName: client.name, lfApiKey }) : Promise.resolve(null),
     client.cfZoneTag ? pullCFAnalytics(client.cfZoneTag) : Promise.resolve(null),
-    client.fathomSiteId ? pullFathom(client.fathomSiteId) : Promise.resolve(null)
+    client.fathomSiteId ? pullFathom(client.fathomSiteId, reportMonthRef) : Promise.resolve(null)
   ]);
 
   const v = r => r.status === 'fulfilled' ? r.value : null;
@@ -158,18 +162,50 @@ async function buildReport(slug) {
       costPerLead:    v(gads)?.costPerLead     ?? base.ads?.costPerLead    ?? null,
     },
 
-    localFalcon: {
-      lastScanDate:    v(lf)?.lastScanDate    ?? base.localFalcon?.lastScanDate    ?? null,
-      topSolv:         v(lf)?.topSolv         ?? base.localFalcon?.topSolv         ?? null,
-      topSolvKw:       v(lf)?.topSolvKw       ?? base.localFalcon?.topSolvKw       ?? null,
-      avgSolvAll:      v(lf)?.avgSolvAll      ?? base.localFalcon?.avgSolvAll      ?? null,
-      avgSaiv:         v(lf)?.avgSaiv         ?? base.localFalcon?.avgSaiv         ?? null,
-      googleKeywords:  v(lf)?.googleKeywords  ?? base.localFalcon?.googleKeywords  ?? [],
-      aiPlatforms:     v(lf)?.aiPlatforms     ?? base.localFalcon?.aiPlatforms     ?? [],
-      topAiKeywords:   v(lf)?.topAiKeywords   ?? base.localFalcon?.topAiKeywords   ?? [],
-      brandPhrases:    v(bp)                  ?? base.localFalcon?.brandPhrases    ?? null,
-      campaignPublicUrl: client.lfCampaignUrl   ?? v(lf)?.campaignPublicUrl ?? base.localFalcon?.campaignPublicUrl ?? null
-    },
+    localFalcon: (() => {
+      // Merge fresh LF data with base
+      const lfData = {
+        lastScanDate:    v(lf)?.lastScanDate    ?? base.localFalcon?.lastScanDate    ?? null,
+        topSolv:         v(lf)?.topSolv         ?? base.localFalcon?.topSolv         ?? null,
+        topSolvKw:       v(lf)?.topSolvKw       ?? base.localFalcon?.topSolvKw       ?? null,
+        avgSolvAll:      v(lf)?.avgSolvAll      ?? base.localFalcon?.avgSolvAll      ?? null,
+        avgSaiv:         v(lf)?.avgSaiv         ?? base.localFalcon?.avgSaiv         ?? null,
+        googleKeywords:  v(lf)?.googleKeywords  ?? base.localFalcon?.googleKeywords  ?? [],
+        aiPlatforms:     v(lf)?.aiPlatforms     ?? base.localFalcon?.aiPlatforms     ?? [],
+        topAiKeywords:   v(lf)?.topAiKeywords   ?? base.localFalcon?.topAiKeywords   ?? [],
+        brandPhrases:    v(bp)                  ?? base.localFalcon?.brandPhrases    ?? null,
+        campaignPublicUrl: client.lfCampaignUrl ?? v(lf)?.campaignPublicUrl ?? base.localFalcon?.campaignPublicUrl ?? null
+      };
+
+      // Snapshot history: carry forward existing history, append new month if we have a fresh LF pull
+      const existingHistory = Array.isArray(base.localFalcon?.localFalconHistory)
+        ? base.localFalcon.localFalconHistory
+        : (base.localFalcon?.localFalconHistory ? [base.localFalcon.localFalconHistory] : []);
+
+      if (v(lf) && lfData.avgSaiv != null) {
+        // Determine month label from the scan date (or now)
+        const scanRaw = lfData.lastScanDate || new Date().toISOString();
+        const scanDate = new Date(scanRaw);
+        const monthLabel = scanDate.toLocaleString('default', { month: 'short', year: 'numeric' });
+        // Only add if this month isn't already recorded
+        const alreadyRecorded = existingHistory.some(h => h.month === monthLabel);
+        if (!alreadyRecorded) {
+          existingHistory.push({
+            month:      monthLabel,
+            scanDate:   lfData.lastScanDate,
+            avgSaiv:    lfData.avgSaiv,
+            avgSolvAll: lfData.avgSolvAll,
+            platforms:  lfData.aiPlatforms ?? []
+          });
+          console.log(`  [LocalFalcon] Snapshotted ${monthLabel} into history (${existingHistory.length} total months)`);
+        } else {
+          console.log(`  [LocalFalcon] History already has ${monthLabel} — no snapshot added`);
+        }
+      }
+
+      lfData.localFalconHistory = existingHistory;
+      return lfData;
+    })(),
 
     gbp: {
       locationName:  client.gbpLocationName  ?? 'Primary',

@@ -68,14 +68,20 @@ function monthStart(monthsAgo) {
 /**
  * Pull all Fathom analytics for a given site ID.
  * Returns the `website` block for data/<slug>.json
+ *
+ * @param {string} siteId  - Fathom site ID
+ * @param {Date}   [refDate] - Reference date for the report month (defaults to today).
+ *                             Pass the first day of the desired month to pull a specific month.
+ *                             e.g. new Date(2026, 6, 1) for July 2026.
  */
-async function pullFathom(siteId) {
-  const now = new Date();
-  const last30 = lastNDays(30);
+async function pullFathom(siteId, refDate) {
+  const now = refDate ? new Date(refDate) : new Date();
 
-  // --- Current month range ---
+  // --- Report month range (always full calendar month) ---
   const monthFrom = fmt(new Date(now.getFullYear(), now.getMonth(), 1));
-  const monthTo = fmt(now);
+  // If reporting on the current month, cap at today; otherwise use last day of month
+  const isCurrentMonth = (() => { const t = new Date(); return t.getFullYear() === now.getFullYear() && t.getMonth() === now.getMonth(); })();
+  const monthTo = isCurrentMonth ? fmt(new Date()) : fmt(new Date(now.getFullYear(), now.getMonth() + 1, 0));
 
   // 1. Top-level KPIs for current month
   const [kpiResult] = await fathomGet('/aggregations', {
@@ -109,16 +115,19 @@ async function pullFathom(siteId) {
 
   function delta(current, previous) {
     if (!previous || previous === 0) return null;
-    return parseFloat(((current - previous) / previous * 100).toFixed(1));
+    // Suppress extreme deltas caused by first month of tracking (no real baseline)
+    const pct = parseFloat(((current - previous) / previous * 100).toFixed(1));
+    if (Math.abs(pct) >= 95) return null; // not meaningful — likely first month of data
+    return pct;
   }
 
-  // 3. Daily timeseries — last 30 days
+  // 3. Daily timeseries — scoped to report month (not a rolling 30-day window)
   const dailyRaw = await fathomGet('/aggregations', {
     entity: 'pageview',
     entity_id: siteId,
     aggregates: 'visits,uniques,pageviews',
-    date_from: last30.date_from,
-    date_to: last30.date_to,
+    date_from: monthFrom,
+    date_to: monthTo,
     date_grouping: 'day'
   });
 

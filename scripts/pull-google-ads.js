@@ -396,7 +396,7 @@ async function pullFromLegacySheet(slug, token) {
 // Direct API fallback (returns null gracefully until token approved)
 // ---------------------------------------------------------------------------
 
-const API_VERSION = 'v21';
+const API_VERSION = 'v25';
 const BASE        = `https://googleads.googleapis.com/${API_VERSION}`;
 
 // SA JWT auth (primary — confirmed working 2026-07-22)

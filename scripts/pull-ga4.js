@@ -151,7 +151,7 @@ async function pullGA4(propertyId) {
   }
 
   // 4. Lead events by channel (all sources — for attribution breakdown)
-  const LEAD_EVENTS = ['phone_call', 'generate_lead', 'email_click', 'cta_click', 'form_start'];
+  const LEAD_EVENTS = ['phone_click', 'phone_call', 'generate_lead', 'form_submit', 'email_click', 'cta_click', 'form_start'];
   const channelEventReport = await runReport(propertyId, token, {
     dateRanges: [{ startDate, endDate }],
     dimensions: [
@@ -182,8 +182,8 @@ async function pullGA4(propertyId) {
 
   const leadSignals = {
     organicSessions:  organicChannel?.sessions ?? null,
-    phoneCalls:       sumByEvent('phone_call'),
-    formSubmissions:  sumByEvent('generate_lead'),
+    phoneCalls:       sumByEvent('phone_click') || sumByEvent('phone_call'),
+    formSubmissions:  sumByEvent('generate_lead') || sumByEvent('form_submit'),
     emailClicks:      sumByEvent('email_click'),
     ctaClicks:        sumByEvent('cta_click'),
     formStarts:       sumByEvent('form_start'),
