@@ -3,7 +3,7 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-17T19:45:27.820Z",
+  "generatedAt": "2026-08-17T20:16:12.935Z",
   "overview": {
     "sessions": 939,
     "sessionsDelta": 0,
@@ -455,39 +455,58 @@
   "ads": {
     "monthlyBreakdown": [
       {
+        "month": "Jan 2026",
+        "adSpend": 540.18,
+        "adClicks": 589,
+        "adLeads": 3
+      },
+      {
+        "month": "Feb 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
+      },
+      {
+        "month": "Mar 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
+      },
+      {
         "month": "Apr 2026",
-        "adSpend": 1089.62,
-        "adClicks": 127,
-        "adLeads": 11,
-        "adImpressions": 2489
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       },
       {
         "month": "May 2026",
-        "adSpend": 1088.7,
-        "adClicks": 128,
-        "adLeads": 12,
-        "adImpressions": 2100
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       },
       {
         "month": "Jun 2026",
-        "adSpend": 1518.67,
-        "adClicks": 209,
-        "adLeads": 22,
-        "adImpressions": 2507
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       },
       {
         "month": "Jul 2026",
-        "adSpend": 1758.99,
-        "adClicks": 365,
-        "adLeads": 31,
-        "adImpressions": 5897
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       },
       {
-        "month": "Aug 2026 (MTD)",
-        "adSpend": 733.56,
-        "adClicks": 98,
-        "adLeads": 9,
-        "adImpressions": 2018
+        "month": "Aug 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
+      },
+      {
+        "month": "Sep 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       }
     ],
     "spendByWeek": [],
@@ -1734,8 +1753,13 @@
       },
       {
         "month": "Aug 2026",
-        "reach": 64,
+        "reach": 86,
         "engagements": 7
+      },
+      {
+        "month": "Sep 2026",
+        "reach": 0,
+        "engagements": 0
       }
     ],
     "reachByWeek": [],
@@ -1744,9 +1768,92 @@
         "platform": "Facebook",
         "reach": 206,
         "engagements": 37,
-        "followers": 2527
+        "followers": 2528
       }
     ]
+  },
+  "meta": {
+    "monthlyBreakdown": [
+      {
+        "month": "Jan 2026",
+        "adSpend": 540.18,
+        "adClicks": 589,
+        "adLeads": 3,
+        "adImpressions": 46714,
+        "adReach": 1000
+      },
+      {
+        "month": "Feb 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null,
+        "adImpressions": null,
+        "adReach": 1081
+      },
+      {
+        "month": "Mar 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null,
+        "adImpressions": null,
+        "adReach": 459
+      },
+      {
+        "month": "Apr 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null,
+        "adImpressions": null,
+        "adReach": 259
+      },
+      {
+        "month": "May 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null,
+        "adImpressions": null,
+        "adReach": 141
+      },
+      {
+        "month": "Jun 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null,
+        "adImpressions": null,
+        "adReach": 221
+      },
+      {
+        "month": "Jul 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null,
+        "adImpressions": null,
+        "adReach": 192
+      },
+      {
+        "month": "Aug 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null,
+        "adImpressions": null,
+        "adReach": 86
+      },
+      {
+        "month": "Sep 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null,
+        "adImpressions": null,
+        "adReach": 0
+      }
+    ],
+    "metrics": null,
+    "adBreakdown": [],
+    "ageGender": [],
+    "adSpend": null,
+    "adClicks": null,
+    "adImpressions": null,
+    "adLeads": null
   },
   "website": {
     "sessionsOverTime": [

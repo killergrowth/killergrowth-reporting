@@ -255,6 +255,24 @@ async function buildReport(slug) {
       ] : (base.social?.platforms ?? [])
     },
 
+    meta: v(meta) ? {
+      monthlyBreakdown: v(meta)?.monthlyHistory?.map(m => ({
+        month:         m.month,
+        adSpend:       m.adSpend       ?? null,
+        adClicks:      m.adClicks      ?? null,
+        adLeads:       m.adLeads       ?? null,
+        adImpressions: m.adImpressions ?? null,
+        adReach:       m.reach         ?? null,
+      })) ?? base.meta?.monthlyBreakdown ?? [],
+      metrics:     v(meta)?.metrics     ?? base.meta?.metrics     ?? null,
+      adBreakdown: v(meta)?.adBreakdown ?? base.meta?.adBreakdown ?? [],
+      ageGender:   v(meta)?.ageGender   ?? base.meta?.ageGender   ?? [],
+      adSpend:       v(meta)?.adSpend       ?? null,
+      adClicks:      v(meta)?.adClicks      ?? null,
+      adImpressions: v(meta)?.adImpressions ?? null,
+      adLeads:       v(meta)?.adLeads       ?? null,
+    } : (base.meta ?? null),
+
     website: {
       sessionsOverTime: v(ga4)?.sessionsOverTime ?? base.website?.sessionsOverTime ?? [],
       aiReferral: v(ga4)?.aiReferral ?? base.website?.aiReferral ?? { total: 0, platforms: [], weeklyTrend: [] },

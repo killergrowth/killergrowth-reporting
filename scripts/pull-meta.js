@@ -115,7 +115,7 @@ async function pullMeta(pageId, client) {
   if (process.env.META_AD_ACCOUNT_ID || client?.metaAdAccountId) {
     const adAcct = process.env.META_AD_ACCOUNT_ID || client.metaAdAccountId;
     const timeRange = JSON.stringify({ since: startDateStr, until: endDateStr });
-    const adsUrl = `${BASE}/${adAcct}/insights?fields=spend,actions,clicks,impressions,reach&time_range=${encodeURIComponent(timeRange)}&access_token=${process.env.META_SYSTEM_TOKEN}`;
+    const adsUrl = `${BASE}/act_${adAcct}/insights?fields=spend,actions,clicks,impressions,reach&time_range=${encodeURIComponent(timeRange)}&access_token=${process.env.META_SYSTEM_TOKEN}`;
     const adsRes = await fetch(adsUrl);
     const adsData = await adsRes.json();
     const row = (adsData.data || [])[0] || {};
@@ -163,7 +163,7 @@ async function pullMeta(pageId, client) {
   if (process.env.META_AD_ACCOUNT_ID || client?.metaAdAccountId) {
     const adAcctId = process.env.META_AD_ACCOUNT_ID || client.metaAdAccountId;
     const timeRange = encodeURIComponent(JSON.stringify({ since: hist.startDateStr, until: hist.endDateStr }));
-    const adsHistUrl = `${BASE}/${adAcctId}/insights?fields=spend,actions,clicks,impressions&time_range=${timeRange}&time_increment=monthly&access_token=${process.env.META_SYSTEM_TOKEN}`;
+    const adsHistUrl = `${BASE}/act_${adAcctId}/insights?fields=spend,actions,clicks,impressions&time_range=${timeRange}&time_increment=monthly&access_token=${process.env.META_SYSTEM_TOKEN}`;
     const adsHistRes = await fetch(adsHistUrl);
     const adsHistData = await adsHistRes.json();
     monthlyAds = (adsHistData.data || []).map(row => {
@@ -175,7 +175,8 @@ async function pullMeta(pageId, client) {
         adSpend:       row.spend       ? parseFloat(row.spend)     : 0,
         adClicks:      row.clicks      ? parseInt(row.clicks)      : 0,
         adImpressions: row.impressions ? parseInt(row.impressions) : 0,
-        adLeads:       leadsAct        ? parseInt(leadsAct.value)  : 0
+        adLeads:       leadsAct        ? parseInt(leadsAct.value)  : 0,
+        adReach:       row.reach       ? parseInt(row.reach)       : 0
       };
     });
     console.log(`[Meta Ads Historical] ${monthlyAds.length} months pulled`);
@@ -190,7 +191,9 @@ async function pullMeta(pageId, client) {
       engagements:   m.engagements,
       adSpend:       ads.adSpend       ?? null,
       adClicks:      ads.adClicks      ?? null,
-      adLeads:       ads.adLeads       ?? null
+      adLeads:       ads.adLeads       ?? null,
+      adImpressions: ads.adImpressions ?? null,
+      adReach:       ads.adReach       ?? null
     };
   });
 
