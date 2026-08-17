@@ -2084,6 +2084,7 @@ function applyRange(start,end){
   fd.gbp2=d.gbp2||null;
   fd.gbp3=d.gbp3||null;
   fd.localFalcon=d.localFalcon||null;
+  fd.meta=d.meta||null;
   // Always use current psiScores for the score circles — history is for the chart only
   var psiScores=(d.website||{}).psiScores||{};
   fd.website=Object.assign({},d.website||{},{psiHistory:fPsiH,psiScores:psiScores,sessionsOverTime:fWebSessions,_sessionsFallback:_webSessionsFallback});
@@ -2102,7 +2103,7 @@ function applyRange(start,end){
   if(mods.seo)renderSEO(fd.seo,fd,mods);
   if(fd.localFalcon)renderGEO(fd.localFalcon);
   if(mods.googleAds)renderAds(fd.ads);
-  if(mods.metaAds)renderMeta(fd.meta,fd.social);
+  if(mods.metaAds&&fd.meta)renderMeta(fd.meta,fd.social);
   if(mods.gbp)renderGBP(fd.gbp,fd.gbp2||null,fd.gbp3||null);
   if(mods.social)renderSocial(fd.social);
   if(mods.website)renderWebsite(fd.website,fd.seo);
