@@ -1959,7 +1959,13 @@ function mergeAndApply(preset,live){
     if(live.ga4.seo){
       if(live.ga4.seo.organicSessions)d.seo.organicSessions=live.ga4.seo.organicSessions;
       if(live.ga4.seo.trafficChannels)d.seo.trafficChannels=live.ga4.seo.trafficChannels;
-      if(live.ga4.seo.leadSignals)d.seo.leadSignals=live.ga4.seo.leadSignals;
+      if(live.ga4.seo.leadSignals){
+        // Preserve gbpCalls from baked data — live GA4 API doesn't know GBP call count
+        var prevGbpCalls=d.seo&&d.seo.leadSignals&&d.seo.leadSignals.gbpCalls!=null?d.seo.leadSignals.gbpCalls:0;
+        var prevGbpWebClick=d.seo&&d.seo.leadSignals&&d.seo.leadSignals.gbpWebsiteClicks!=null?d.seo.leadSignals.gbpWebsiteClicks:0;
+        var prevGbpDirs=d.seo&&d.seo.leadSignals&&d.seo.leadSignals.gbpDirections!=null?d.seo.leadSignals.gbpDirections:0;
+        d.seo.leadSignals=Object.assign({},live.ga4.seo.leadSignals,{gbpCalls:prevGbpCalls,gbpWebsiteClicks:prevGbpWebClick,gbpDirections:prevGbpDirs});
+      }
     }
     if(live.ga4.overview){
       d.overview=d.overview||{};

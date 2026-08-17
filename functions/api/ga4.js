@@ -203,8 +203,8 @@ export async function onRequest(context) {
       const cnt = parseInt(rowVal(r, 0) || '0');
       if (!byChannel[evt]) byChannel[evt] = {};
       byChannel[evt][ch] = (byChannel[evt][ch] || 0) + cnt;
-      if (evt === 'phone_click')    phoneCalls      += cnt;
-      if (evt === 'generate_lead')  formSubmissions += cnt;
+      if (evt === 'phone_click' || evt === 'phone_call') phoneCalls += cnt;
+      if (evt === 'generate_lead' || evt === 'form_submit') formSubmissions += cnt;
       if (evt === 'email_click')    emailClicks     += cnt;
       if (evt === 'form_start')     formStarts      += cnt;
       if (evt === 'cta_click')      ctaClicks       += cnt;
