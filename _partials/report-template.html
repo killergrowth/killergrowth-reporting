@@ -887,7 +887,7 @@ function applyMods(mods){
 function destroyAllCharts(){Object.keys(CHARTS).forEach(function(k){if(CHARTS[k])CHARTS[k].destroy();});CHARTS={};}
 
 function initDashFromData(data, cc) {
-  var savedMods=null;try{savedMods=JSON.parse(localStorage.getItem('kg_modules_'+cc.slug));}catch(e){}
+  var savedMods=null;try{var _sv=localStorage.getItem('kg_modules_'+cc.slug);if(_sv){var _sp=JSON.parse(_sv);if(!cc.configVersion||_sp.__v===cc.configVersion){savedMods=_sp;}else{localStorage.removeItem('kg_modules_'+cc.slug);}}}catch(e){}
   var mods=savedMods||cc.modules||{},period=data.period||fmtPeriod(new Date());
   document.querySelectorAll('.js-period').forEach(function(e){e.textContent=period;});
   document.getElementById('tb-ttl').textContent=cc.name||'';
