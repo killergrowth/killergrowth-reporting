@@ -3,7 +3,7 @@
   "slug": "cogans-woodshop",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-16T07:26:42.563Z",
+  "generatedAt": "2026-08-17T07:49:24.742Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -86,14 +86,14 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "DYSWZSVJ",
-    "uniques": 11,
-    "visits": 11,
-    "pageviews": 17,
-    "avgDuration": 166,
-    "bounceRate": 72.727272727273,
-    "uniquesDelta": 1000,
-    "visitsDelta": 1000,
-    "pageviewsDelta": 466.7,
+    "uniques": 12,
+    "visits": 12,
+    "pageviews": 18,
+    "avgDuration": 146,
+    "bounceRate": 75,
+    "uniquesDelta": 1100,
+    "visitsDelta": 1100,
+    "pageviewsDelta": 500,
     "dailyTimeseries": [
       {
         "date": "2026-08-11",
@@ -126,6 +126,12 @@
         "pageviews": 6
       },
       {
+        "date": "2026-08-16",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 1
+      },
+      {
         "date": "2026-08-10",
         "visits": 3,
         "uniques": 3,
@@ -143,16 +149,16 @@
       {
         "month": "Aug 2026",
         "date": "2026-08",
-        "visits": 11,
-        "uniques": 11,
-        "pageviews": 17
+        "visits": 12,
+        "uniques": 12,
+        "pageviews": 18
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 11,
-        "uniques": 10
+        "pageviews": 12,
+        "uniques": 11
       },
       {
         "path": "/consult",
@@ -183,8 +189,8 @@
       },
       {
         "source": "Organic",
-        "visits": 3,
-        "uniques": 3
+        "visits": 4,
+        "uniques": 4
       }
     ],
     "cfPageViews": 20800,
@@ -367,13 +373,13 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 70,
+        "performance": 71,
         "accessibility": 92,
         "bestPractices": 92,
         "seo": 92
       },
       "desktop": {
-        "performance": 95,
+        "performance": 94,
         "accessibility": 80,
         "bestPractices": 92,
         "seo": 92
@@ -685,6 +691,21 @@
         },
         "desktop": {
           "performance": 95,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-17",
+        "mobile": {
+          "performance": 71,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 94,
           "accessibility": 80,
           "bestPractices": 92,
           "seo": 92
