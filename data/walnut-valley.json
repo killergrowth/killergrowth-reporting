@@ -3,7 +3,7 @@
   "slug": "walnut-valley",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-17T07:46:00.473Z",
+  "generatedAt": "2026-08-18T07:32:13.476Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -110,7 +110,8 @@
     "aiPlatforms": [],
     "topAiKeywords": [],
     "brandPhrases": null,
-    "campaignPublicUrl": null
+    "campaignPublicUrl": null,
+    "localFalconHistory": []
   },
   "gbp": {
     "locationName": "Primary",
@@ -132,6 +133,7 @@
     "reachByWeek": [],
     "platforms": []
   },
+  "meta": null,
   "website": {
     "sessionsOverTime": [],
     "aiReferral": {
@@ -147,27 +149,15 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "SWIWEOSC",
-    "uniques": 7,
-    "visits": 7,
-    "pageviews": 10,
-    "avgDuration": 147,
-    "bounceRate": 71.428571428571,
+    "uniques": 1239,
+    "visits": 1239,
+    "pageviews": 1437,
+    "avgDuration": 65,
+    "bounceRate": 89.346246973366,
     "uniquesDelta": -99.4,
     "visitsDelta": -99.4,
     "pageviewsDelta": -99.3,
     "dailyTimeseries": [
-      {
-        "date": "2026-08-01",
-        "visits": 4,
-        "uniques": 4,
-        "pageviews": 7
-      },
-      {
-        "date": "2026-08-04",
-        "visits": 2,
-        "uniques": 2,
-        "pageviews": 2
-      },
       {
         "date": "2026-07-30",
         "visits": 264,
@@ -179,12 +169,6 @@
         "visits": 363,
         "uniques": 363,
         "pageviews": 406
-      },
-      {
-        "date": "2026-08-06",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 1
       },
       {
         "date": "2026-07-29",
@@ -212,32 +196,55 @@
         "visits": 1239,
         "uniques": 1239,
         "pageviews": 1437
-      },
-      {
-        "month": "Aug 2026",
-        "date": "2026-08",
-        "visits": 7,
-        "uniques": 7,
-        "pageviews": 10
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 10,
-        "uniques": 7
+        "pageviews": 787,
+        "uniques": 653
+      },
+      {
+        "path": "/best-ground-beef",
+        "pageviews": 591,
+        "uniques": 554
+      },
+      {
+        "path": "/Home",
+        "pageviews": 44,
+        "uniques": 39
+      },
+      {
+        "path": "/api/preview/walnut-valley-meat-market/staging/",
+        "pageviews": 6,
+        "uniques": 1
+      },
+      {
+        "path": "/locations",
+        "pageviews": 3,
+        "uniques": 2
       }
     ],
     "referrers": [
       {
+        "source": "Paid/campaign",
+        "visits": 887,
+        "uniques": 887
+      },
+      {
         "source": "Organic",
-        "visits": 5,
-        "uniques": 5
+        "visits": 177,
+        "uniques": 177
       },
       {
         "source": "Direct",
-        "visits": 2,
-        "uniques": 2
+        "visits": 108,
+        "uniques": 108
+      },
+      {
+        "source": "Social",
+        "visits": 67,
+        "uniques": 67
       }
     ],
     "cfPageViews": 58255,
@@ -420,13 +427,13 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 68,
+        "performance": 67,
         "accessibility": 96,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 75,
+        "performance": 56,
         "accessibility": 94,
         "bestPractices": 100,
         "seo": 92
@@ -888,6 +895,21 @@
         },
         "desktop": {
           "performance": 75,
+          "accessibility": 94,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-18",
+        "mobile": {
+          "performance": 67,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 56,
           "accessibility": 94,
           "bestPractices": 100,
           "seo": 92

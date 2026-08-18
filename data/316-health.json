@@ -3,7 +3,7 @@
   "slug": "316-health",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-17T07:48:16.175Z",
+  "generatedAt": "2026-08-18T07:33:22.171Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -49,7 +49,8 @@
     "aiPlatforms": [],
     "topAiKeywords": [],
     "brandPhrases": null,
-    "campaignPublicUrl": null
+    "campaignPublicUrl": null,
+    "localFalconHistory": []
   },
   "gbp": {
     "locationName": "Primary",
@@ -71,6 +72,7 @@
     "reachByWeek": [],
     "platforms": []
   },
+  "meta": null,
   "website": {
     "sessionsOverTime": [],
     "aiReferral": {
@@ -112,7 +114,7 @@
         "seo": 100
       },
       "desktop": {
-        "performance": 61,
+        "performance": 81,
         "accessibility": 91,
         "bestPractices": 77,
         "seo": 100
@@ -488,15 +490,23 @@
           "bestPractices": 77,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-08-18",
+        "mobile": {
+          "performance": 57,
+          "accessibility": 88,
+          "bestPractices": 77,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 81,
+          "accessibility": 91,
+          "bestPractices": 77,
+          "seo": 100
+        }
       }
     ]
   },
-  "workLog": [],
-  "monthlyUpdates": [
-    {
-      "month": "Jul 2026",
-      "year": 2026,
-      "text": "July was an active content month for 316 Health Insurance. Two rounds of updates were pushed through the KG Site Builder to production, keeping the site current heading into fall open enrollment season. The site is not yet wired for web analytics, so traffic reporting will begin once Fathom tracking is confirmed."
-    }
-  ]
+  "workLog": []
 }

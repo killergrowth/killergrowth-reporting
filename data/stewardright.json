@@ -3,7 +3,7 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "July 2026",
-  "generatedAt": "2026-08-17T07:42:08.432Z",
+  "generatedAt": "2026-08-18T07:28:54.389Z",
   "overview": {
     "sessions": 50,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": null,
     "rankingsDelta": null,
-    "gbpViews": 2193,
+    "gbpViews": 2218,
     "gbpViewsDelta": null,
     "adSpend": 555.57,
     "adImpressions": 25624,
@@ -213,51 +213,51 @@
     "monthlyBreakdown": [
       {
         "month": "Jan 2026",
-        "adSpend": 616.43,
-        "adClicks": 2258,
-        "adLeads": 0
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       },
       {
         "month": "Feb 2026",
-        "adSpend": 556.74,
-        "adClicks": 2866,
-        "adLeads": 0
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       },
       {
         "month": "Mar 2026",
-        "adSpend": 631.58,
-        "adClicks": 1411,
-        "adLeads": 0
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       },
       {
         "month": "Apr 2026",
-        "adSpend": 597.49,
-        "adClicks": 2529,
-        "adLeads": 0
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       },
       {
         "month": "May 2026",
-        "adSpend": 609.76,
-        "adClicks": 3597,
-        "adLeads": 0
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       },
       {
         "month": "Jun 2026",
-        "adSpend": 593.29,
-        "adClicks": 2690,
-        "adLeads": 0
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       },
       {
         "month": "Jul 2026",
-        "adSpend": 555.57,
-        "adClicks": 3747,
-        "adLeads": 0
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       },
       {
         "month": "Aug 2026",
-        "adSpend": 212.33,
-        "adClicks": 2756,
-        "adLeads": 0
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       }
     ],
     "spendByWeek": [],
@@ -276,11 +276,12 @@
     "aiPlatforms": [],
     "topAiKeywords": [],
     "brandPhrases": null,
-    "campaignPublicUrl": null
+    "campaignPublicUrl": null,
+    "localFalconHistory": []
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 2193,
+    "totalViews": 2218,
     "calls": 12,
     "callsDelta": null,
     "directions": 204,
@@ -1451,7 +1452,7 @@
       },
       {
         "date": "2026-08-14",
-        "views": 4,
+        "views": 29,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1472,6 +1473,13 @@
       },
       {
         "date": "2026-08-17",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-18",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1523,8 +1531,8 @@
       },
       {
         "month": "Aug 2026",
-        "reach": 76,
-        "engagements": 246
+        "reach": 79,
+        "engagements": 276
       }
     ],
     "reachByWeek": [],
@@ -1536,6 +1544,81 @@
         "followers": 608
       }
     ]
+  },
+  "meta": {
+    "monthlyBreakdown": [
+      {
+        "month": "Jan 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null,
+        "adImpressions": null,
+        "adReach": 332
+      },
+      {
+        "month": "Feb 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null,
+        "adImpressions": null,
+        "adReach": 544
+      },
+      {
+        "month": "Mar 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null,
+        "adImpressions": null,
+        "adReach": 189
+      },
+      {
+        "month": "Apr 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null,
+        "adImpressions": null,
+        "adReach": 272
+      },
+      {
+        "month": "May 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null,
+        "adImpressions": null,
+        "adReach": 217
+      },
+      {
+        "month": "Jun 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null,
+        "adImpressions": null,
+        "adReach": 157
+      },
+      {
+        "month": "Jul 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null,
+        "adImpressions": null,
+        "adReach": 198
+      },
+      {
+        "month": "Aug 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null,
+        "adImpressions": null,
+        "adReach": 79
+      }
+    ],
+    "metrics": null,
+    "adBreakdown": [],
+    "ageGender": [],
+    "adSpend": null,
+    "adClicks": null,
+    "adImpressions": null,
+    "adLeads": null
   },
   "website": {
     "sessionsOverTime": [
@@ -1705,34 +1788,14 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 60,
+        "performance": 61,
         "accessibility": 89,
         "bestPractices": 92,
         "seo": 92
       },
-      "desktop": {
-        "performance": 77,
-        "accessibility": 90,
-        "bestPractices": 92,
-        "seo": 92
-      }
+      "desktop": null
     },
     "psiHistory": [
-      {
-        "date": "2026-05-17",
-        "mobile": {
-          "performance": 43,
-          "accessibility": 92,
-          "bestPractices": 77,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 54,
-          "accessibility": 92,
-          "bestPractices": 73,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-05-18",
         "mobile": {
@@ -3022,6 +3085,16 @@
           "bestPractices": 92,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-08-18",
+        "mobile": {
+          "performance": 61,
+          "accessibility": 89,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": null
       }
     ]
   },
@@ -3106,13 +3179,6 @@
       "owner": "Tyler Norris",
       "group": "Completed",
       "source": "monday"
-    }
-  ],
-  "monthlyUpdates": [
-    {
-      "month": "Jul 2026",
-      "year": 2026,
-      "text": "July was StewardRight's most intensive pre-launch month. The site went through a full home page v2 redesign, GTM was installed across 14 pages, Turnstile was added to the contact form, and individual advisor booking pages went live for Mike Proctor, Lyndon Zielke, and Bryan Looper with their own Calendly embeds. GBP tracked 12 calls ahead of full launch."
     }
   ]
 }

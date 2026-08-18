@@ -3,7 +3,7 @@
   "slug": "cogans-woodshop",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-17T07:49:24.742Z",
+  "generatedAt": "2026-08-18T07:34:55.379Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -49,7 +49,8 @@
     "aiPlatforms": [],
     "topAiKeywords": [],
     "brandPhrases": null,
-    "campaignPublicUrl": null
+    "campaignPublicUrl": null,
+    "localFalconHistory": []
   },
   "gbp": {
     "locationName": "Primary",
@@ -71,6 +72,7 @@
     "reachByWeek": [],
     "platforms": []
   },
+  "meta": null,
   "website": {
     "sessionsOverTime": [],
     "aiReferral": {
@@ -373,13 +375,13 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 71,
+        "performance": 72,
         "accessibility": 92,
         "bestPractices": 92,
         "seo": 92
       },
       "desktop": {
-        "performance": 94,
+        "performance": 93,
         "accessibility": 80,
         "bestPractices": 92,
         "seo": 92
@@ -710,6 +712,21 @@
           "bestPractices": 92,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-08-18",
+        "mobile": {
+          "performance": 72,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 93,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "seo": 92
+        }
       }
     ]
   },
@@ -722,13 +739,6 @@
       "owner": null,
       "group": "Website Maintenance (Corrie)",
       "source": "monday"
-    }
-  ],
-  "monthlyUpdates": [
-    {
-      "month": "Jul 2026",
-      "year": 2026,
-      "text": "July was quiet on the build side for Cogan's Woodshop — no new deploys this month. The site recorded 4 unique visitors in July, up from 1 in the prior tracked period. Traffic is low but expected for a site still building early search presence."
     }
   ]
 }
