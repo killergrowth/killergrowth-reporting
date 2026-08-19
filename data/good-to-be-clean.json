@@ -3,7 +3,7 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-18T07:31:32.338Z",
+  "generatedAt": "2026-08-19T07:44:06.695Z",
   "overview": {
     "sessions": 939,
     "sessionsDelta": 0,
@@ -1756,6 +1756,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-19",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -1803,7 +1810,7 @@
       },
       {
         "month": "Aug 2026",
-        "reach": 90,
+        "reach": 97,
         "engagements": 7
       }
     ],
@@ -1881,7 +1888,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 90
+        "adReach": 97
       }
     ],
     "metrics": null,
@@ -2164,17 +2171,12 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 41,
+        "performance": 67,
         "accessibility": 92,
         "bestPractices": 100,
         "seo": 100
       },
-      "desktop": {
-        "performance": 77,
-        "accessibility": 92,
-        "bestPractices": 100,
-        "seo": 100
-      }
+      "desktop": null
     },
     "psiHistory": [
       {
@@ -3336,6 +3338,16 @@
           "bestPractices": 100,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-08-19",
+        "mobile": {
+          "performance": 67,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": null
       }
     ]
   },

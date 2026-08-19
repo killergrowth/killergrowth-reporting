@@ -3,7 +3,7 @@
   "slug": "dons-heating",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-18T07:29:44.690Z",
+  "generatedAt": "2026-08-19T07:40:00.757Z",
   "overview": {
     "sessions": 884,
     "sessionsDelta": 0,
@@ -1798,6 +1798,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-19",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -3003,6 +3010,13 @@
       },
       {
         "date": "2026-08-18",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-19",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -4215,6 +4229,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-19",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -4259,8 +4280,8 @@
       },
       {
         "month": "Aug 2026",
-        "reach": 66,
-        "engagements": 134
+        "reach": 87,
+        "engagements": 137
       }
     ],
     "reachByWeek": [],
@@ -4337,7 +4358,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 66
+        "adReach": 87
       }
     ],
     "metrics": null,
@@ -4529,18 +4550,8 @@
     "cfDailyPageViews": [],
     "cfMonthlyHistory": [],
     "psiScores": {
-      "mobile": {
-        "performance": 61,
-        "accessibility": 90,
-        "bestPractices": 73,
-        "seo": 100
-      },
-      "desktop": {
-        "performance": 83,
-        "accessibility": 91,
-        "bestPractices": 73,
-        "seo": 100
-      }
+      "mobile": null,
+      "desktop": null
     },
     "psiHistory": [
       {
@@ -5752,6 +5763,11 @@
           "bestPractices": 73,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-08-19",
+        "mobile": null,
+        "desktop": null
       }
     ]
   },

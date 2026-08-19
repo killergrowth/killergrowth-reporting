@@ -3,7 +3,7 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "July 2026",
-  "generatedAt": "2026-08-18T07:28:54.389Z",
+  "generatedAt": "2026-08-19T07:31:46.352Z",
   "overview": {
     "sessions": 50,
     "sessionsDelta": 0,
@@ -1484,6 +1484,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-19",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -1531,8 +1538,8 @@
       },
       {
         "month": "Aug 2026",
-        "reach": 79,
-        "engagements": 276
+        "reach": 82,
+        "engagements": 334
       }
     ],
     "reachByWeek": [],
@@ -1609,7 +1616,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 79
+        "adReach": 82
       }
     ],
     "metrics": null,
@@ -1787,30 +1794,10 @@
     "cfDailyPageViews": [],
     "cfMonthlyHistory": [],
     "psiScores": {
-      "mobile": {
-        "performance": 61,
-        "accessibility": 89,
-        "bestPractices": 92,
-        "seo": 92
-      },
+      "mobile": null,
       "desktop": null
     },
     "psiHistory": [
-      {
-        "date": "2026-05-18",
-        "mobile": {
-          "performance": 25,
-          "accessibility": 92,
-          "bestPractices": 77,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 49,
-          "accessibility": 92,
-          "bestPractices": 77,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-05-19",
         "mobile": {
@@ -3094,6 +3081,11 @@
           "bestPractices": 92,
           "seo": 92
         },
+        "desktop": null
+      },
+      {
+        "date": "2026-08-19",
+        "mobile": null,
         "desktop": null
       }
     ]
