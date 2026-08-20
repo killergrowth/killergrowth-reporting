@@ -3,7 +3,7 @@
   "slug": "killergrowth",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-19T07:30:30.456Z",
+  "generatedAt": "2026-08-20T07:31:10.822Z",
   "overview": {
     "sessions": 23,
     "sessionsDelta": 0,
@@ -206,8 +206,8 @@
       },
       {
         "month": "Aug 2026",
-        "reach": 807,
-        "engagements": 2464
+        "reach": 824,
+        "engagements": 2506
       }
     ],
     "reachByWeek": [],
@@ -284,7 +284,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 807
+        "adReach": 824
       }
     ],
     "metrics": null,
@@ -440,25 +440,20 @@
     "cfDailyPageViews": [],
     "cfMonthlyHistory": [],
     "psiScores": {
-      "mobile": null,
-      "desktop": null
+      "mobile": {
+        "performance": 88,
+        "accessibility": 91,
+        "bestPractices": 100,
+        "seo": 92
+      },
+      "desktop": {
+        "performance": 76,
+        "accessibility": 91,
+        "bestPractices": 100,
+        "seo": 92
+      }
     },
     "psiHistory": [
-      {
-        "date": "2026-05-19",
-        "mobile": {
-          "performance": 75,
-          "accessibility": 92,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 75,
-          "accessibility": 92,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-05-20",
         "mobile": {
@@ -1763,6 +1758,21 @@
         "date": "2026-08-19",
         "mobile": null,
         "desktop": null
+      },
+      {
+        "date": "2026-08-20",
+        "mobile": {
+          "performance": 88,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 76,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
       }
     ]
   },
@@ -1799,24 +1809,6 @@
       "title": "Add iserve.kglanding.com",
       "status": "Done",
       "date": "2026-03-03",
-      "owner": "Tyler Norris",
-      "group": "Completed",
-      "source": "monday"
-    },
-    {
-      "id": "11146964927",
-      "title": "Experiment with KillerGrowth Podcast CRM",
-      "status": "Done",
-      "date": "2026-02-20",
-      "owner": "Corrie Ferrell",
-      "group": "Completed",
-      "source": "monday"
-    },
-    {
-      "id": "11241190305",
-      "title": "Try to make KillerGrowth App Monitor work",
-      "status": "Done",
-      "date": "2026-02-20",
       "owner": "Tyler Norris",
       "group": "Completed",
       "source": "monday"
