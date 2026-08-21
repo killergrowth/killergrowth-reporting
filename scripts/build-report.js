@@ -328,6 +328,14 @@ async function buildReport(slug) {
   const workLogPath = path.join(ROOT, 'data', 'work-logs', `${slug}.json`);
   try { report.workLog = JSON.parse(fs.readFileSync(workLogPath, 'utf8')); } catch { report.workLog = []; }
 
+  // Preserve manually-managed fields that CI should never clobber
+  if (base.monthlyUpdates?.length) report.monthlyUpdates = base.monthlyUpdates;
+  if (base.seo?.leadSignals?.formSubmissionsMonthly) {
+    report.seo = report.seo || {};
+    report.seo.leadSignals = report.seo.leadSignals || {};
+    report.seo.leadSignals.formSubmissionsMonthly = base.seo.leadSignals.formSubmissionsMonthly;
+  }
+
   fs.writeFileSync(dataPath, JSON.stringify(report, null, 2), 'utf8');
   console.log(`\nWrote ${dataPath}`);
 
