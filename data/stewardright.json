@@ -3,15 +3,15 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "July 2026",
-  "generatedAt": "2026-08-21T07:35:31.382Z",
+  "generatedAt": "2026-08-20T18:15:14.736Z",
   "overview": {
-    "sessions": 50,
+    "sessions": 47,
     "sessionsDelta": 0,
     "leads": 0,
     "leadsDelta": null,
     "rankingsTop10": null,
     "rankingsDelta": null,
-    "gbpViews": 2267,
+    "gbpViews": 2193,
     "gbpViewsDelta": null,
     "adSpend": 555.57,
     "adImpressions": 25624,
@@ -26,158 +26,60 @@
   "seo": {
     "organicSessions": [
       {
-        "week": "06",
-        "date": "2026-02-02",
-        "sessions": 263,
+        "week": "202602",
+        "date": "2026-02-01",
+        "label": "Jan 2026",
+        "sessions": 2647,
         "conversions": 0
       },
       {
-        "week": "07",
-        "date": "2026-02-09",
-        "sessions": 933,
+        "week": "202603",
+        "date": "2026-03-01",
+        "label": "Feb 2026",
+        "sessions": 1155,
         "conversions": 0
       },
       {
-        "week": "08",
-        "date": "2026-02-16",
-        "sessions": 860,
+        "week": "202604",
+        "date": "2026-04-01",
+        "label": "Mar 2026",
+        "sessions": 52,
         "conversions": 0
       },
       {
-        "week": "09",
-        "date": "2026-02-23",
-        "sessions": 588,
+        "week": "202605",
+        "date": "2026-05-01",
+        "label": "Apr 2026",
+        "sessions": 52,
         "conversions": 0
       },
       {
-        "week": "10",
-        "date": "2026-03-02",
-        "sessions": 369,
-        "conversions": 0
-      },
-      {
-        "week": "11",
-        "date": "2026-03-09",
-        "sessions": 352,
-        "conversions": 0
-      },
-      {
-        "week": "12",
-        "date": "2026-03-16",
-        "sessions": 314,
-        "conversions": 0
-      },
-      {
-        "week": "13",
-        "date": "2026-03-23",
-        "sessions": 114,
-        "conversions": 0
-      },
-      {
-        "week": "14",
-        "date": "2026-03-30",
-        "sessions": 18,
-        "conversions": 0
-      },
-      {
-        "week": "15",
-        "date": "2026-04-06",
-        "sessions": 10,
-        "conversions": 0
-      },
-      {
-        "week": "16",
-        "date": "2026-04-13",
-        "sessions": 12,
-        "conversions": 0
-      },
-      {
-        "week": "17",
-        "date": "2026-04-20",
-        "sessions": 16,
-        "conversions": 0
-      },
-      {
-        "week": "18",
-        "date": "2026-04-27",
-        "sessions": 5,
-        "conversions": 0
-      },
-      {
-        "week": "19",
-        "date": "2026-05-04",
-        "sessions": 15,
-        "conversions": 0
-      },
-      {
-        "week": "20",
-        "date": "2026-05-11",
-        "sessions": 13,
-        "conversions": 0
-      },
-      {
-        "week": "21",
-        "date": "2026-05-18",
-        "sessions": 17,
-        "conversions": 0
-      },
-      {
-        "week": "22",
-        "date": "2026-05-25",
-        "sessions": 7,
-        "conversions": 0
-      },
-      {
-        "week": "23",
+        "week": "202606",
         "date": "2026-06-01",
-        "sessions": 11,
+        "label": "May 2026",
+        "sessions": 49,
         "conversions": 0
       },
       {
-        "week": "24",
-        "date": "2026-06-08",
-        "sessions": 12,
-        "conversions": 0
-      },
-      {
-        "week": "25",
-        "date": "2026-06-15",
-        "sessions": 12,
-        "conversions": 0
-      },
-      {
-        "week": "26",
-        "date": "2026-06-22",
-        "sessions": 10,
-        "conversions": 0
-      },
-      {
-        "week": "27",
-        "date": "2026-06-29",
-        "sessions": 5,
+        "week": "202607",
+        "date": "2026-07-01",
+        "label": "Jun 2026",
+        "sessions": 47,
         "conversions": 0
       }
     ],
     "trafficChannels": [
       {
         "channel": "Direct",
-        "sessions": 25
+        "sessions": 26
       },
       {
         "channel": "Organic Search",
-        "sessions": 18
+        "sessions": 16
       },
       {
         "channel": "Email",
-        "sessions": 3
-      },
-      {
-        "channel": "Referral",
-        "sessions": 2
-      },
-      {
-        "channel": "Organic Social",
-        "sessions": 1
+        "sessions": 4
       },
       {
         "channel": "Unassigned",
@@ -187,26 +89,31 @@
     "organicSearchSources": [
       {
         "source": "google",
-        "sessions": 18
+        "sessions": 13
+      },
+      {
+        "source": "yahoo",
+        "sessions": 3
       }
     ],
     "keywords": [],
     "dfsSnapshot": null,
     "leadSignals": {
-      "organicSessions": 18,
+      "organicSessions": 16,
       "phoneCalls": 0,
       "formSubmissions": 0,
       "emailClicks": 0,
       "ctaClicks": 0,
-      "formStarts": 2,
+      "formStarts": 3,
       "byChannel": {
         "form_start": {
-          "Direct": 2
+          "Direct": 2,
+          "Organic Search": 1
         }
       },
       "gbpCalls": 12,
-      "gbpWebsiteClicks": 92,
-      "gbpDirections": 205,
+      "gbpWebsiteClicks": 89,
+      "gbpDirections": 204,
       "formSubmissionsMonthly": [
         {
           "month": "Jul 2026",
@@ -223,48 +130,54 @@
     "monthlyBreakdown": [
       {
         "month": "Jan 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null
+        "adSpend": 616.43,
+        "adClicks": 2258,
+        "adLeads": 0
       },
       {
         "month": "Feb 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null
+        "adSpend": 556.74,
+        "adClicks": 2866,
+        "adLeads": 0
       },
       {
         "month": "Mar 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null
+        "adSpend": 631.58,
+        "adClicks": 1411,
+        "adLeads": 0
       },
       {
         "month": "Apr 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null
+        "adSpend": 597.49,
+        "adClicks": 2529,
+        "adLeads": 0
       },
       {
         "month": "May 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null
+        "adSpend": 609.76,
+        "adClicks": 3597,
+        "adLeads": 0
       },
       {
         "month": "Jun 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null
+        "adSpend": 593.29,
+        "adClicks": 2690,
+        "adLeads": 0
       },
       {
         "month": "Jul 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null
+        "adSpend": 555.57,
+        "adClicks": 3747,
+        "adLeads": 0
       },
       {
         "month": "Aug 2026",
+        "adSpend": 263.39,
+        "adClicks": 3201,
+        "adLeads": 0
+      },
+      {
+        "month": "Sep 2026",
         "adSpend": null,
         "adClicks": null,
         "adLeads": null
@@ -291,11 +204,11 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 2267,
+    "totalViews": 2193,
     "calls": 12,
     "callsDelta": null,
-    "directions": 205,
-    "websiteClicks": 92,
+    "directions": 204,
+    "websiteClicks": 89,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1462,55 +1375,27 @@
       },
       {
         "date": "2026-08-14",
-        "views": 29,
+        "views": 4,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-08-15",
-        "views": 10,
+        "views": 0,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 1
+        "websiteClicks": 0
       },
       {
         "date": "2026-08-16",
-        "views": 19,
+        "views": 0,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 2
+        "websiteClicks": 0
       },
       {
         "date": "2026-08-17",
-        "views": 20,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-18",
-        "views": 0,
-        "calls": 0,
-        "directions": 1,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-19",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-20",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-21",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1562,8 +1447,13 @@
       },
       {
         "month": "Aug 2026",
-        "reach": 90,
-        "engagements": 366
+        "reach": 83,
+        "engagements": 357
+      },
+      {
+        "month": "Sep 2026",
+        "reach": 0,
+        "engagements": 0
       }
     ],
     "reachByWeek": [],
@@ -1580,209 +1470,127 @@
     "monthlyBreakdown": [
       {
         "month": "Jan 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null,
-        "adImpressions": null,
+        "adSpend": 616.43,
+        "adClicks": 2258,
+        "adLeads": 0,
+        "adImpressions": 32746,
         "adReach": 332
       },
       {
         "month": "Feb 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null,
-        "adImpressions": null,
+        "adSpend": 556.74,
+        "adClicks": 2866,
+        "adLeads": 0,
+        "adImpressions": 25650,
         "adReach": 544
       },
       {
         "month": "Mar 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null,
-        "adImpressions": null,
+        "adSpend": 631.58,
+        "adClicks": 1411,
+        "adLeads": 0,
+        "adImpressions": 22435,
         "adReach": 189
       },
       {
         "month": "Apr 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null,
-        "adImpressions": null,
+        "adSpend": 597.49,
+        "adClicks": 2529,
+        "adLeads": 0,
+        "adImpressions": 21091,
         "adReach": 272
       },
       {
         "month": "May 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null,
-        "adImpressions": null,
+        "adSpend": 609.76,
+        "adClicks": 3597,
+        "adLeads": 0,
+        "adImpressions": 25624,
         "adReach": 217
       },
       {
         "month": "Jun 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null,
-        "adImpressions": null,
+        "adSpend": 593.29,
+        "adClicks": 2690,
+        "adLeads": 0,
+        "adImpressions": 29075,
         "adReach": 157
       },
       {
         "month": "Jul 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null,
-        "adImpressions": null,
+        "adSpend": 555.57,
+        "adClicks": 3747,
+        "adLeads": 0,
+        "adImpressions": 33402,
         "adReach": 198
       },
       {
         "month": "Aug 2026",
+        "adSpend": 263.39,
+        "adClicks": 3201,
+        "adLeads": 0,
+        "adImpressions": 14193,
+        "adReach": 83
+      },
+      {
+        "month": "Sep 2026",
         "adSpend": null,
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 90
+        "adReach": 0
       }
     ],
     "metrics": null,
     "adBreakdown": [],
     "ageGender": [],
-    "adSpend": null,
-    "adClicks": null,
-    "adImpressions": null,
+    "adSpend": 555.57,
+    "adClicks": 3747,
+    "adImpressions": 33402,
     "adLeads": null
   },
   "website": {
     "sessionsOverTime": [
       {
-        "week": "06",
-        "date": "2026-02-02",
-        "sessions": 263,
+        "week": "202602",
+        "date": "2026-02-01",
+        "label": "Jan 2026",
+        "sessions": 2647,
         "conversions": 0
       },
       {
-        "week": "07",
-        "date": "2026-02-09",
-        "sessions": 933,
+        "week": "202603",
+        "date": "2026-03-01",
+        "label": "Feb 2026",
+        "sessions": 1155,
         "conversions": 0
       },
       {
-        "week": "08",
-        "date": "2026-02-16",
-        "sessions": 860,
+        "week": "202604",
+        "date": "2026-04-01",
+        "label": "Mar 2026",
+        "sessions": 52,
         "conversions": 0
       },
       {
-        "week": "09",
-        "date": "2026-02-23",
-        "sessions": 588,
+        "week": "202605",
+        "date": "2026-05-01",
+        "label": "Apr 2026",
+        "sessions": 52,
         "conversions": 0
       },
       {
-        "week": "10",
-        "date": "2026-03-02",
-        "sessions": 369,
-        "conversions": 0
-      },
-      {
-        "week": "11",
-        "date": "2026-03-09",
-        "sessions": 352,
-        "conversions": 0
-      },
-      {
-        "week": "12",
-        "date": "2026-03-16",
-        "sessions": 314,
-        "conversions": 0
-      },
-      {
-        "week": "13",
-        "date": "2026-03-23",
-        "sessions": 114,
-        "conversions": 0
-      },
-      {
-        "week": "14",
-        "date": "2026-03-30",
-        "sessions": 18,
-        "conversions": 0
-      },
-      {
-        "week": "15",
-        "date": "2026-04-06",
-        "sessions": 10,
-        "conversions": 0
-      },
-      {
-        "week": "16",
-        "date": "2026-04-13",
-        "sessions": 12,
-        "conversions": 0
-      },
-      {
-        "week": "17",
-        "date": "2026-04-20",
-        "sessions": 16,
-        "conversions": 0
-      },
-      {
-        "week": "18",
-        "date": "2026-04-27",
-        "sessions": 5,
-        "conversions": 0
-      },
-      {
-        "week": "19",
-        "date": "2026-05-04",
-        "sessions": 15,
-        "conversions": 0
-      },
-      {
-        "week": "20",
-        "date": "2026-05-11",
-        "sessions": 13,
-        "conversions": 0
-      },
-      {
-        "week": "21",
-        "date": "2026-05-18",
-        "sessions": 17,
-        "conversions": 0
-      },
-      {
-        "week": "22",
-        "date": "2026-05-25",
-        "sessions": 7,
-        "conversions": 0
-      },
-      {
-        "week": "23",
+        "week": "202606",
         "date": "2026-06-01",
-        "sessions": 11,
+        "label": "May 2026",
+        "sessions": 49,
         "conversions": 0
       },
       {
-        "week": "24",
-        "date": "2026-06-08",
-        "sessions": 12,
-        "conversions": 0
-      },
-      {
-        "week": "25",
-        "date": "2026-06-15",
-        "sessions": 12,
-        "conversions": 0
-      },
-      {
-        "week": "26",
-        "date": "2026-06-22",
-        "sessions": 10,
-        "conversions": 0
-      },
-      {
-        "week": "27",
-        "date": "2026-06-29",
-        "sessions": 5,
+        "week": "202607",
+        "date": "2026-07-01",
+        "label": "Jun 2026",
+        "sessions": 47,
         "conversions": 0
       }
     ],
@@ -1799,18 +1607,176 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "QLWIRMOC",
-    "uniques": null,
-    "visits": null,
-    "pageviews": null,
-    "avgDuration": null,
-    "bounceRate": null,
+    "uniques": 244,
+    "visits": 244,
+    "pageviews": 437,
+    "avgDuration": 150,
+    "bounceRate": 72.540983606557,
     "uniquesDelta": null,
     "visitsDelta": null,
     "pageviewsDelta": null,
-    "dailyTimeseries": [],
-    "monthlyHistory": [],
-    "topPages": [],
-    "referrers": [],
+    "dailyTimeseries": [
+      {
+        "date": "2026-08-07",
+        "visits": 10,
+        "uniques": 10,
+        "pageviews": 12
+      },
+      {
+        "date": "2026-08-18",
+        "visits": 16,
+        "uniques": 16,
+        "pageviews": 37
+      },
+      {
+        "date": "2026-08-16",
+        "visits": 8,
+        "uniques": 8,
+        "pageviews": 21
+      },
+      {
+        "date": "2026-08-11",
+        "visits": 9,
+        "uniques": 9,
+        "pageviews": 14
+      },
+      {
+        "date": "2026-08-09",
+        "visits": 3,
+        "uniques": 3,
+        "pageviews": 7
+      },
+      {
+        "date": "2026-08-17",
+        "visits": 30,
+        "uniques": 30,
+        "pageviews": 60
+      },
+      {
+        "date": "2026-08-10",
+        "visits": 11,
+        "uniques": 11,
+        "pageviews": 27
+      },
+      {
+        "date": "2026-08-08",
+        "visits": 3,
+        "uniques": 3,
+        "pageviews": 6
+      },
+      {
+        "date": "2026-08-06",
+        "visits": 18,
+        "uniques": 18,
+        "pageviews": 24
+      },
+      {
+        "date": "2026-08-12",
+        "visits": 24,
+        "uniques": 24,
+        "pageviews": 41
+      },
+      {
+        "date": "2026-08-20",
+        "visits": 6,
+        "uniques": 6,
+        "pageviews": 8
+      },
+      {
+        "date": "2026-08-19",
+        "visits": 18,
+        "uniques": 18,
+        "pageviews": 34
+      },
+      {
+        "date": "2026-08-15",
+        "visits": 13,
+        "uniques": 13,
+        "pageviews": 13
+      },
+      {
+        "date": "2026-08-04",
+        "visits": 5,
+        "uniques": 5,
+        "pageviews": 14
+      },
+      {
+        "date": "2026-08-05",
+        "visits": 17,
+        "uniques": 17,
+        "pageviews": 28
+      },
+      {
+        "date": "2026-08-14",
+        "visits": 25,
+        "uniques": 25,
+        "pageviews": 49
+      },
+      {
+        "date": "2026-08-13",
+        "visits": 28,
+        "uniques": 28,
+        "pageviews": 42
+      }
+    ],
+    "monthlyHistory": [
+      {
+        "month": "Aug 2026",
+        "date": "2026-08",
+        "visits": 244,
+        "uniques": 244,
+        "pageviews": 437
+      }
+    ],
+    "topPages": [
+      {
+        "path": "/",
+        "pageviews": 225,
+        "uniques": 178
+      },
+      {
+        "path": "/meet/bryan-looper/",
+        "pageviews": 43,
+        "uniques": 33
+      },
+      {
+        "path": "/meet/mike-proctor/",
+        "pageviews": 37,
+        "uniques": 35
+      },
+      {
+        "path": "/about/",
+        "pageviews": 27,
+        "uniques": 25
+      },
+      {
+        "path": "/client-resources/",
+        "pageviews": 16,
+        "uniques": 7
+      }
+    ],
+    "referrers": [
+      {
+        "source": "Direct",
+        "visits": 116,
+        "uniques": 116
+      },
+      {
+        "source": "Organic",
+        "visits": 77,
+        "uniques": 77
+      },
+      {
+        "source": "Paid/campaign",
+        "visits": 47,
+        "uniques": 47
+      },
+      {
+        "source": "Social",
+        "visits": 4,
+        "uniques": 4
+      }
+    ],
     "cfPageViews": null,
     "cfUniques": null,
     "cfPageViewsDelta": null,
@@ -1819,19 +1785,79 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 69,
+        "performance": 60,
         "accessibility": 89,
         "bestPractices": 92,
         "seo": 92
       },
       "desktop": {
-        "performance": 78,
+        "performance": 77,
         "accessibility": 90,
         "bestPractices": 92,
         "seo": 92
       }
     },
     "psiHistory": [
+      {
+        "date": "2026-05-17",
+        "mobile": {
+          "performance": 43,
+          "accessibility": 92,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 54,
+          "accessibility": 92,
+          "bestPractices": 73,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-05-18",
+        "mobile": {
+          "performance": 25,
+          "accessibility": 92,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 49,
+          "accessibility": 92,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-05-19",
+        "mobile": {
+          "performance": 48,
+          "accessibility": 92,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 65,
+          "accessibility": 92,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-05-20",
+        "mobile": {
+          "performance": 44,
+          "accessibility": 92,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 58,
+          "accessibility": 92,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
       {
         "date": "2026-05-21",
         "mobile": {
@@ -3076,51 +3102,6 @@
           "bestPractices": 92,
           "seo": 92
         }
-      },
-      {
-        "date": "2026-08-18",
-        "mobile": {
-          "performance": 61,
-          "accessibility": 89,
-          "bestPractices": 92,
-          "seo": 92
-        },
-        "desktop": null
-      },
-      {
-        "date": "2026-08-19",
-        "mobile": null,
-        "desktop": null
-      },
-      {
-        "date": "2026-08-20",
-        "mobile": {
-          "performance": 61,
-          "accessibility": 89,
-          "bestPractices": 92,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 77,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-08-21",
-        "mobile": {
-          "performance": 69,
-          "accessibility": 89,
-          "bestPractices": 92,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 78,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 92
-        }
       }
     ]
   },
@@ -3205,6 +3186,13 @@
       "owner": "Tyler Norris",
       "group": "Completed",
       "source": "monday"
+    }
+  ],
+  "monthlyUpdates": [
+    {
+      "month": "Jul 2026",
+      "year": 2026,
+      "text": "July was StewardRight's most intensive pre-launch month. The site went through a full home page v2 redesign, GTM was installed across 14 pages, Turnstile was added to the contact form, and individual advisor booking pages went live for Mike Proctor, Lyndon Zielke, and Bryan Looper with their own Calendly embeds. GBP tracked 12 calls ahead of full launch."
     }
   ]
 }
