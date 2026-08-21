@@ -3,7 +3,7 @@
   "slug": "shaws-pest",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-17T07:50:20.050Z",
+  "generatedAt": "2026-08-21T07:44:22.098Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -49,7 +49,8 @@
     "aiPlatforms": [],
     "topAiKeywords": [],
     "brandPhrases": null,
-    "campaignPublicUrl": null
+    "campaignPublicUrl": null,
+    "localFalconHistory": []
   },
   "gbp": {
     "locationName": "Primary",
@@ -71,6 +72,7 @@
     "reachByWeek": [],
     "platforms": []
   },
+  "meta": null,
   "website": {
     "sessionsOverTime": [],
     "aiReferral": {
@@ -106,7 +108,7 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 64,
+        "performance": 58,
         "accessibility": 89,
         "bestPractices": 96,
         "seo": 92
@@ -583,15 +585,63 @@
           "bestPractices": 96,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-08-18",
+        "mobile": {
+          "performance": 56,
+          "accessibility": 89,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 67,
+          "accessibility": 89,
+          "bestPractices": 96,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-19",
+        "mobile": null,
+        "desktop": {
+          "performance": 77,
+          "accessibility": 89,
+          "bestPractices": 96,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-20",
+        "mobile": {
+          "performance": 54,
+          "accessibility": 89,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 79,
+          "accessibility": 89,
+          "bestPractices": 96,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-21",
+        "mobile": {
+          "performance": 58,
+          "accessibility": 89,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 92,
+          "accessibility": 89,
+          "bestPractices": 96,
+          "seo": 92
+        }
       }
     ]
   },
-  "workLog": [],
-  "monthlyUpdates": [
-    {
-      "month": "Jul 2026",
-      "year": 2026,
-      "text": "July was a major launch month for Shaw's Pest Control. The site received a full KillerSite rebuild — 77 pages across a service and location architecture, updated brand colors, a new hero image, and refreshed NAP pulled from GBP (4.9 stars, 52 reviews). The site is newly live and not yet accumulating a full month of web analytics; traffic reporting will ramp up in August."
-    }
-  ]
+  "workLog": []
 }

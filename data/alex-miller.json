@@ -3,7 +3,7 @@
   "slug": "alex-miller",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-17T07:48:58.290Z",
+  "generatedAt": "2026-08-21T07:42:05.328Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -49,7 +49,8 @@
     "aiPlatforms": [],
     "topAiKeywords": [],
     "brandPhrases": null,
-    "campaignPublicUrl": null
+    "campaignPublicUrl": null,
+    "localFalconHistory": []
   },
   "gbp": {
     "locationName": "Primary",
@@ -71,6 +72,7 @@
     "reachByWeek": [],
     "platforms": []
   },
+  "meta": null,
   "website": {
     "sessionsOverTime": [],
     "aiReferral": {
@@ -86,60 +88,18 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "IAVAKIOA",
-    "uniques": 1,
-    "visits": 1,
-    "pageviews": 4,
+    "uniques": 0,
+    "visits": 0,
+    "pageviews": 0,
     "avgDuration": 37,
     "bounceRate": 0,
     "uniquesDelta": null,
     "visitsDelta": null,
     "pageviewsDelta": null,
-    "dailyTimeseries": [
-      {
-        "date": "2026-08-04",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 4
-      }
-    ],
-    "monthlyHistory": [
-      {
-        "month": "Aug 2026",
-        "date": "2026-08",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 4
-      }
-    ],
-    "topPages": [
-      {
-        "path": "/",
-        "pageviews": 1,
-        "uniques": 1
-      },
-      {
-        "path": "/auctions/",
-        "pageviews": 1,
-        "uniques": 1
-      },
-      {
-        "path": "/auctions/home-in-hutchinson-ks-164706/",
-        "pageviews": 1,
-        "uniques": 1
-      },
-      {
-        "path": "/auctions/longton-ks-147-acres-164500/",
-        "pageviews": 1,
-        "uniques": 1
-      }
-    ],
-    "referrers": [
-      {
-        "source": "Direct",
-        "visits": 1,
-        "uniques": 1
-      }
-    ],
+    "dailyTimeseries": [],
+    "monthlyHistory": [],
+    "topPages": [],
+    "referrers": [],
     "cfPageViews": 10890,
     "cfUniques": 4145,
     "cfPageViewsDelta": -7.4,
@@ -315,14 +275,14 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 71,
-        "accessibility": 79,
+        "performance": 67,
+        "accessibility": 74,
         "bestPractices": 96,
         "seo": 100
       },
       "desktop": {
         "performance": 98,
-        "accessibility": 79,
+        "accessibility": 74,
         "bestPractices": 96,
         "seo": 100
       }
@@ -647,10 +607,87 @@
           "bestPractices": 96,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-08-18",
+        "mobile": {
+          "performance": 68,
+          "accessibility": 79,
+          "bestPractices": 96,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 98,
+          "accessibility": 79,
+          "bestPractices": 96,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-19",
+        "mobile": null,
+        "desktop": null
+      },
+      {
+        "date": "2026-08-20",
+        "mobile": {
+          "performance": 68,
+          "accessibility": 74,
+          "bestPractices": 96,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 98,
+          "accessibility": 74,
+          "bestPractices": 96,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-21",
+        "mobile": {
+          "performance": 67,
+          "accessibility": 74,
+          "bestPractices": 96,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 98,
+          "accessibility": 74,
+          "bestPractices": 96,
+          "seo": 100
+        }
       }
     ]
   },
   "workLog": [
+    {
+      "id": "12778712277",
+      "title": "Alex Miller Real Estate and Auction",
+      "status": "Done",
+      "date": "2026-08-18",
+      "owner": "Corrie Ferrell",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "12778910099",
+      "title": "Alex Miller Real Estate and Auction",
+      "status": "Done",
+      "date": "2026-08-18",
+      "owner": "Corrie Ferrell",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "12603885782",
+      "title": "Email Blog Form to Alex Miller",
+      "status": "Done",
+      "date": "2026-08-18",
+      "owner": "Tyler Brickley",
+      "group": "Completed",
+      "source": "monday"
+    },
     {
       "id": "11819418212",
       "title": "Implement Alex Miller's new photos onto his website",
@@ -668,13 +705,6 @@
       "owner": "Tyler Norris",
       "group": "Completed",
       "source": "monday"
-    }
-  ],
-  "monthlyUpdates": [
-    {
-      "month": "Jul 2026",
-      "year": 2026,
-      "text": "The Alex Miller Auctioneer site received two meaningful UX improvements in July. Auction cards are now fully clickable with a hover lift effect, and the site was upgraded to a cleaner /auctions/ URL structure with proper redirects from the old page. The site recorded 1 tracked visitor in July — Fathom tracking should be verified to ensure full coverage is in place."
     }
   ]
 }

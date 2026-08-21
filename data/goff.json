@@ -3,7 +3,7 @@
   "slug": "goff",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-17T07:46:37.967Z",
+  "generatedAt": "2026-08-21T07:39:51.350Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -49,7 +49,8 @@
     "aiPlatforms": [],
     "topAiKeywords": [],
     "brandPhrases": null,
-    "campaignPublicUrl": null
+    "campaignPublicUrl": null,
+    "localFalconHistory": []
   },
   "gbp": {
     "locationName": "Primary",
@@ -71,6 +72,7 @@
     "reachByWeek": [],
     "platforms": []
   },
+  "meta": null,
   "website": {
     "sessionsOverTime": [],
     "aiReferral": {
@@ -106,13 +108,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 53,
+        "performance": 49,
         "accessibility": 81,
         "bestPractices": 96,
         "seo": 92
       },
       "desktop": {
-        "performance": 64,
+        "performance": 69,
         "accessibility": 85,
         "bestPractices": 96,
         "seo": 92
@@ -593,15 +595,58 @@
           "bestPractices": 96,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-08-18",
+        "mobile": {
+          "performance": 41,
+          "accessibility": 81,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 55,
+          "accessibility": 85,
+          "bestPractices": 96,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-19",
+        "mobile": null,
+        "desktop": null
+      },
+      {
+        "date": "2026-08-20",
+        "mobile": {
+          "performance": 56,
+          "accessibility": 81,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 80,
+          "accessibility": 85,
+          "bestPractices": 96,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-21",
+        "mobile": {
+          "performance": 49,
+          "accessibility": 81,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 69,
+          "accessibility": 85,
+          "bestPractices": 96,
+          "seo": 92
+        }
       }
     ]
   },
-  "workLog": [],
-  "monthlyUpdates": [
-    {
-      "month": "Jul 2026",
-      "year": 2026,
-      "text": "July was Goff Heating's launch month — an initial shell site was stood up and wired for KG Builder GMB post publishing. The site is in early build phase and not yet wired for web analytics; traffic reporting will begin as the site goes fully live."
-    }
-  ]
+  "workLog": []
 }
