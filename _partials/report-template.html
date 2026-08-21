@@ -947,7 +947,7 @@ function renderOverview(data,mods){
     cards.push(formSubHtml);
     if(window.CLIENT_CONFIG&&window.CLIENT_CONFIG.kpis&&window.CLIENT_CONFIG.kpis.bookingClicks){
       cards.push(kc('Booking Clicks',totalBookings,null,null,'Times a visitor clicked the Book Online button on your website.'));
-    } else {
+    } else if(!(window.CLIENT_CONFIG&&window.CLIENT_CONFIG.hideEmailClicks)){
       cards.push(kc('Email Clicks',totalEmails,null,null,'Times a visitor clicked an email link on your website.'));
     }
     if(totalDirs!=null&&!(window.CLIENT_CONFIG&&window.CLIENT_CONFIG.hideDirections))cards.push(kc('Direction Requests',fmt(totalDirs),null,null,'Times someone tapped Get Directions to your business on Google Maps.'));
@@ -2054,6 +2054,9 @@ function applyRange(start,end){
   var _webSessionsFallback=false;
   if(!fWebSessions.length&&_allWebSessions.length){fWebSessions=_allWebSessions;_webSessionsFallback=true;}
   var fd={};
+  // Recalculate form submissions from monthly breakdown if available
+  var fFormMonthly=filterMonthArr(d.seo&&d.seo.leadSignals&&d.seo.leadSignals.formSubmissionsMonthly,start,end,'month');
+  var filteredFormSubmissions=fFormMonthly.length?fFormMonthly.reduce(function(s,x){return s+(x.formSubmissions||0);},0):null;
   // Recalculate GBP scalars from filtered time-series so lead signals match GBP section
   var filteredGbpCalls=fGbp.reduce(function(s,x){return s+(x.calls||0);},0)+fGbp2.reduce(function(s,x){return s+(x.calls||0);},0)+fGbp3.reduce(function(s,x){return s+(x.calls||0);},0);
   var filteredGbpWeb=fGbp.reduce(function(s,x){return s+(x.websiteClicks||0);},0)+fGbp2.reduce(function(s,x){return s+(x.websiteClicks||0);},0)+fGbp3.reduce(function(s,x){return s+(x.websiteClicks||0);},0);
@@ -2069,7 +2072,8 @@ function applyRange(start,end){
   fd.seo=baseLS?Object.assign({},patchedSeo,{leadSignals:Object.assign({},baseLS,{
     gbpCalls:filteredGbpCalls,
     gbpWebsiteClicks:filteredGbpWeb,
-    gbpDirections:filteredGbpDir
+    gbpDirections:filteredGbpDir,
+    formSubmissions:filteredFormSubmissions!=null?filteredFormSubmissions:baseLS.formSubmissions
   })}):patchedSeo;
   // Filter ageGender monthly rows to selected range and re-aggregate
   var ageMonthly=(d.ads&&d.ads.ageGender)||[];
@@ -2093,7 +2097,8 @@ function applyRange(start,end){
   fd.gbp2=d.gbp2||null;
   fd.gbp3=d.gbp3||null;
   fd.localFalcon=d.localFalcon||null;
-  fd.meta=d.meta||null;
+  var fMeta=filterMonthArr(d.meta&&d.meta.monthlyBreakdown,start,end,'month');
+  fd.meta=d.meta?Object.assign({},d.meta,{monthlyBreakdown:fMeta}):null;
   // Always use current psiScores for the score circles — history is for the chart only
   var psiScores=(d.website||{}).psiScores||{};
   fd.website=Object.assign({},d.website||{},{psiHistory:fPsiH,psiScores:psiScores,sessionsOverTime:fWebSessions,_sessionsFallback:_webSessionsFallback});
