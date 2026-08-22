@@ -3,7 +3,7 @@
   "slug": "timnath",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-21T07:38:45.385Z",
+  "generatedAt": "2026-08-22T07:24:36.443Z",
   "overview": {
     "sessions": 120,
     "sessionsDelta": 0,
@@ -2219,17 +2219,12 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 55,
+        "performance": 60,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
       },
-      "desktop": {
-        "performance": 68,
-        "accessibility": 90,
-        "bestPractices": 100,
-        "seo": 92
-      }
+      "desktop": null
     },
     "psiHistory": [
       {
@@ -2661,6 +2656,16 @@
           "bestPractices": 100,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-08-22",
+        "mobile": {
+          "performance": 60,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": null
       }
     ]
   },
