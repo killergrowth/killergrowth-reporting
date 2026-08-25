@@ -3,7 +3,7 @@
   "slug": "dons-heating",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-24T07:49:09.618Z",
+  "generatedAt": "2026-08-25T07:36:54.269Z",
   "overview": {
     "sessions": 884,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 14,
     "rankingsDelta": null,
-    "gbpViews": 4177,
+    "gbpViews": 4208,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -420,8 +420,8 @@
           "Direct": 1
         }
       },
-      "gbpCalls": 470,
-      "gbpWebsiteClicks": 241,
+      "gbpCalls": 474,
+      "gbpWebsiteClicks": 242,
       "gbpDirections": 270
     }
   },
@@ -595,11 +595,11 @@
   },
   "gbp": {
     "locationName": "El Dorado",
-    "totalViews": 4177,
-    "calls": 470,
+    "totalViews": 4208,
+    "calls": 474,
     "callsDelta": null,
     "directions": 270,
-    "websiteClicks": 241,
+    "websiteClicks": 242,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1815,14 +1815,14 @@
       },
       {
         "date": "2026-08-21",
-        "views": 6,
-        "calls": 0,
+        "views": 34,
+        "calls": 4,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-08-22",
-        "views": 0,
+        "views": 3,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1840,6 +1840,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-25",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -1848,8 +1855,8 @@
   },
   "gbp2": {
     "locationName": "Emporia",
-    "totalViews": 610,
-    "calls": 36,
+    "totalViews": 618,
+    "calls": 37,
     "directions": 132,
     "websiteClicks": 44,
     "viewsOverTime": [
@@ -3066,14 +3073,14 @@
       },
       {
         "date": "2026-08-21",
-        "views": 2,
-        "calls": 0,
+        "views": 8,
+        "calls": 1,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-08-22",
-        "views": 0,
+        "views": 2,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -3091,6 +3098,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-25",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -3098,8 +3112,8 @@
   },
   "gbp3": {
     "locationName": "Hillsboro",
-    "totalViews": 1319,
-    "calls": 85,
+    "totalViews": 1326,
+    "calls": 87,
     "directions": 243,
     "websiteClicks": 56,
     "viewsOverTime": [
@@ -4316,8 +4330,8 @@
       },
       {
         "date": "2026-08-21",
-        "views": 1,
-        "calls": 0,
+        "views": 8,
+        "calls": 2,
         "directions": 0,
         "websiteClicks": 0
       },
@@ -4337,6 +4351,13 @@
       },
       {
         "date": "2026-08-24",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-25",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -4385,7 +4406,7 @@
       },
       {
         "month": "Aug 2026",
-        "reach": 123,
+        "reach": 139,
         "engagements": 142
       }
     ],
@@ -4463,7 +4484,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 123
+        "adReach": 139
       }
     ],
     "metrics": null,
@@ -4662,7 +4683,7 @@
         "seo": 92
       },
       "desktop": {
-        "performance": 71,
+        "performance": 37,
         "accessibility": 90,
         "bestPractices": 96,
         "seo": 92
@@ -5958,10 +5979,34 @@
           "bestPractices": 96,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-08-25",
+        "mobile": {
+          "performance": 58,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 37,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "seo": 92
+        }
       }
     ]
   },
   "workLog": [
+    {
+      "id": "11738493419",
+      "title": "Schedule meeting - Don's Heating and Air new Emporia location",
+      "status": "Done",
+      "date": "2026-08-24",
+      "owner": "Phil Anderson",
+      "group": "Completed",
+      "source": "monday"
+    },
     {
       "id": "11834461575",
       "title": "Don's Heating and Air - New Google Business Location Setup",

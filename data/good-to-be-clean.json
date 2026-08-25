@@ -3,7 +3,7 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-24T07:50:13.102Z",
+  "generatedAt": "2026-08-25T07:38:26.560Z",
   "overview": {
     "sessions": 939,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 19,
     "rankingsDelta": null,
-    "gbpViews": 823,
+    "gbpViews": 830,
     "gbpViewsDelta": null,
     "adSpend": 733.56,
     "adImpressions": 2018,
@@ -448,7 +448,7 @@
         }
       },
       "gbpCalls": 13,
-      "gbpWebsiteClicks": 24,
+      "gbpWebsiteClicks": 26,
       "gbpDirections": 246
     }
   },
@@ -553,11 +553,11 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 823,
+    "totalViews": 830,
     "calls": 13,
     "callsDelta": null,
     "directions": 246,
-    "websiteClicks": 24,
+    "websiteClicks": 26,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1773,14 +1773,14 @@
       },
       {
         "date": "2026-08-21",
-        "views": 1,
+        "views": 5,
         "calls": 0,
         "directions": 12,
-        "websiteClicks": 0
+        "websiteClicks": 2
       },
       {
         "date": "2026-08-22",
-        "views": 0,
+        "views": 3,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1794,6 +1794,13 @@
       },
       {
         "date": "2026-08-24",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-25",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1845,8 +1852,8 @@
       },
       {
         "month": "Aug 2026",
-        "reach": 127,
-        "engagements": 7
+        "reach": 131,
+        "engagements": 8
       }
     ],
     "reachByWeek": [],
@@ -1855,7 +1862,7 @@
         "platform": "Facebook",
         "reach": 206,
         "engagements": 37,
-        "followers": 2528
+        "followers": 2527
       }
     ]
   },
@@ -1923,7 +1930,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 127
+        "adReach": 131
       }
     ],
     "metrics": null,
@@ -2206,13 +2213,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 48,
+        "performance": 55,
         "accessibility": 92,
         "bestPractices": 100,
         "seo": 100
       },
       "desktop": {
-        "performance": 94,
+        "performance": 75,
         "accessibility": 92,
         "bestPractices": 100,
         "seo": 100
@@ -3463,8 +3470,33 @@
           "bestPractices": 100,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-08-25",
+        "mobile": {
+          "performance": 55,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 75,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        }
       }
     ]
   },
-  "workLog": []
+  "workLog": [
+    {
+      "id": "12771816767",
+      "title": "GTBC Housecall Pro widget",
+      "status": "Done",
+      "date": "2026-08-24",
+      "owner": "Samuel McVay",
+      "group": "Completed",
+      "source": "monday"
+    }
+  ]
 }

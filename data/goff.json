@@ -3,7 +3,7 @@
   "slug": "goff",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-24T07:51:31.448Z",
+  "generatedAt": "2026-08-25T07:39:51.258Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -108,13 +108,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 63,
+        "performance": 49,
         "accessibility": 81,
         "bestPractices": 96,
         "seo": 92
       },
       "desktop": {
-        "performance": 69,
+        "performance": 78,
         "accessibility": 85,
         "bestPractices": 96,
         "seo": 92
@@ -690,8 +690,33 @@
           "bestPractices": 96,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-08-25",
+        "mobile": {
+          "performance": 49,
+          "accessibility": 81,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 78,
+          "accessibility": 85,
+          "bestPractices": 96,
+          "seo": 92
+        }
       }
     ]
   },
-  "workLog": []
+  "workLog": [
+    {
+      "id": "12854636368",
+      "title": "Goff, Paul Dendiu",
+      "status": "Done",
+      "date": "2026-08-24",
+      "owner": null,
+      "group": "Completed",
+      "source": "monday"
+    }
+  ]
 }
