@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-25T07:36:12.022Z",
+  "generatedAt": "2026-08-26T07:36:50.272Z",
   "overview": {
     "sessions": 871,
     "sessionsDelta": 0,
@@ -11,12 +11,12 @@
     "leadsDelta": null,
     "rankingsTop10": 17,
     "rankingsDelta": null,
-    "gbpViews": 5555,
+    "gbpViews": 5560,
     "gbpViewsDelta": null,
-    "adSpend": 1761.69,
-    "adImpressions": 33932,
+    "adSpend": 1804.6,
+    "adImpressions": 35825,
     "adBudget": null,
-    "costPerLead": 9.79,
+    "costPerLead": 9.5,
     "costPerLeadDelta": null,
     "socialReach": 166,
     "socialReachDelta": null,
@@ -399,20 +399,20 @@
       },
       {
         "month": "Aug 2026 (MTD)",
-        "adSpend": 1761.69,
-        "adClicks": 789,
-        "adLeads": 23,
-        "adImpressions": 33932
+        "adSpend": 1804.6,
+        "adClicks": 829,
+        "adLeads": 24,
+        "adImpressions": 35825
       }
     ],
     "spendByWeek": [],
     "campaigns": [
       {
         "name": "KG | New - Plumbing",
-        "spend": 864.88,
-        "clicks": 135,
+        "spend": 896.47,
+        "clicks": 145,
         "leads": 7,
-        "impressions": 5074
+        "impressions": 5846
       },
       {
         "name": "LocalServicesCampaign:SystemGenerated:0005d4e425019745",
@@ -423,22 +423,22 @@
       },
       {
         "name": "KG | 2025 | Plumber Near You",
-        "spend": 231.74,
-        "clicks": 405,
-        "leads": 5,
-        "impressions": 18410
+        "spend": 241.41,
+        "clicks": 429,
+        "leads": 6,
+        "impressions": 19240
       },
       {
         "name": "KG | 2025 | Butler County | PMax | RL 9/11/25",
-        "spend": 131.05,
-        "clicks": 212,
+        "spend": 132.7,
+        "clicks": 218,
         "leads": 3,
-        "impressions": 10079
+        "impressions": 10370
       }
     ],
     "phoneCalls": 27,
-    "allConversions": 180,
-    "costPerLead": 92.72
+    "allConversions": 190,
+    "costPerLead": 94.98
   },
   "localFalcon": {
     "lastScanDate": "6/7/2026 9:11 AM",
@@ -548,7 +548,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 5555,
+    "totalViews": 5560,
     "calls": 329,
     "callsDelta": null,
     "directions": 241,
@@ -1782,7 +1782,7 @@
       },
       {
         "date": "2026-08-23",
-        "views": 0,
+        "views": 5,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1796,6 +1796,13 @@
       },
       {
         "date": "2026-08-25",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-26",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1847,7 +1854,7 @@
       },
       {
         "month": "Aug 2026",
-        "reach": 555,
+        "reach": 559,
         "engagements": 1164
       }
     ],
@@ -1857,7 +1864,7 @@
         "platform": "Facebook",
         "reach": 166,
         "engagements": 218,
-        "followers": 1201
+        "followers": 1200
       }
     ]
   },
@@ -1925,7 +1932,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 555
+        "adReach": 559
       }
     ],
     "metrics": null,
@@ -2146,13 +2153,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 59,
+        "performance": 56,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 28,
+        "performance": 58,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
@@ -3339,6 +3346,21 @@
         },
         "desktop": {
           "performance": 28,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-26",
+        "mobile": {
+          "performance": 56,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 58,
           "accessibility": 93,
           "bestPractices": 100,
           "seo": 92

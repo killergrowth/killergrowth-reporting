@@ -3,7 +3,7 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "July 2026",
-  "generatedAt": "2026-08-25T07:35:09.387Z",
+  "generatedAt": "2026-08-26T07:36:27.269Z",
   "overview": {
     "sessions": 47,
     "sessionsDelta": 0,
@@ -113,7 +113,7 @@
       },
       "gbpCalls": 12,
       "gbpWebsiteClicks": 99,
-      "gbpDirections": 212,
+      "gbpDirections": 214,
       "formSubmissionsMonthly": [
         {
           "month": "Jul 2026",
@@ -201,7 +201,7 @@
     "totalViews": 2359,
     "calls": 12,
     "callsDelta": null,
-    "directions": 212,
+    "directions": 214,
     "websiteClicks": 99,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -1427,14 +1427,14 @@
         "date": "2026-08-22",
         "views": 1,
         "calls": 0,
-        "directions": 0,
+        "directions": 1,
         "websiteClicks": 0
       },
       {
         "date": "2026-08-23",
         "views": 0,
         "calls": 0,
-        "directions": 0,
+        "directions": 1,
         "websiteClicks": 0
       },
       {
@@ -1446,6 +1446,13 @@
       },
       {
         "date": "2026-08-25",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-26",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1497,8 +1504,8 @@
       },
       {
         "month": "Aug 2026",
-        "reach": 91,
-        "engagements": 413
+        "reach": 102,
+        "engagements": 415
       }
     ],
     "reachByWeek": [],
@@ -1575,7 +1582,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 91
+        "adReach": 102
       }
     ],
     "metrics": null,
@@ -1822,34 +1829,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 60,
+        "performance": 62,
         "accessibility": 89,
         "bestPractices": 92,
         "seo": 92
       },
       "desktop": {
-        "performance": 56,
+        "performance": 77,
         "accessibility": 90,
         "bestPractices": 92,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-05-21",
-        "mobile": {
-          "performance": 42,
-          "accessibility": 92,
-          "bestPractices": 77,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 49,
-          "accessibility": 92,
-          "bestPractices": 77,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-05-22",
         "mobile": {
@@ -3135,6 +3127,21 @@
         },
         "desktop": {
           "performance": 56,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-08-26",
+        "mobile": {
+          "performance": 62,
+          "accessibility": 89,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 77,
           "accessibility": 90,
           "bestPractices": 92,
           "seo": 92
