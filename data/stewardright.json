@@ -3,7 +3,7 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "July 2026",
-  "generatedAt": "2026-08-27T17:57:39.620Z",
+  "generatedAt": "2026-08-28T19:10:36.081Z",
   "overview": {
     "sessions": 47,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": null,
     "rankingsDelta": null,
-    "gbpViews": 2360,
+    "gbpViews": 2361,
     "gbpViewsDelta": null,
     "adSpend": 555.57,
     "adImpressions": 25624,
@@ -198,7 +198,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 2360,
+    "totalViews": 2361,
     "calls": 12,
     "callsDelta": null,
     "directions": 214,
@@ -1446,7 +1446,7 @@
       },
       {
         "date": "2026-08-25",
-        "views": 0,
+        "views": 1,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1460,6 +1460,13 @@
       },
       {
         "date": "2026-08-27",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-28",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1512,7 +1519,7 @@
       {
         "month": "Aug 2026",
         "reach": 103,
-        "engagements": 421
+        "engagements": 439
       }
     ],
     "reachByWeek": [],
@@ -1836,34 +1843,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 63,
+        "performance": 69,
         "accessibility": 90,
         "bestPractices": 92,
         "seo": 100
       },
       "desktop": {
-        "performance": 94,
+        "performance": 93,
         "accessibility": 90,
         "bestPractices": 92,
         "seo": 100
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-05-23",
-        "mobile": {
-          "performance": 46,
-          "accessibility": 92,
-          "bestPractices": 77,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 71,
-          "accessibility": 92,
-          "bestPractices": 77,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-05-24",
         "mobile": {
@@ -3149,6 +3141,21 @@
         },
         "desktop": {
           "performance": 94,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-08-28",
+        "mobile": {
+          "performance": 69,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 93,
           "accessibility": 90,
           "bestPractices": 92,
           "seo": 100
