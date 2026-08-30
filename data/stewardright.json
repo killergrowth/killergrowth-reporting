@@ -3,7 +3,7 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "July 2026",
-  "generatedAt": "2026-08-29T12:51:59.734Z",
+  "generatedAt": "2026-08-30T12:21:35.699Z",
   "overview": {
     "sessions": 47,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": null,
     "rankingsDelta": null,
-    "gbpViews": 2361,
+    "gbpViews": 2370,
     "gbpViewsDelta": null,
     "adSpend": 555.57,
     "adImpressions": 25624,
@@ -198,7 +198,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 2361,
+    "totalViews": 2370,
     "calls": 12,
     "callsDelta": null,
     "directions": 215,
@@ -1453,14 +1453,14 @@
       },
       {
         "date": "2026-08-26",
-        "views": 0,
+        "views": 8,
         "calls": 0,
         "directions": 1,
         "websiteClicks": 0
       },
       {
         "date": "2026-08-27",
-        "views": 0,
+        "views": 1,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1474,6 +1474,13 @@
       },
       {
         "date": "2026-08-29",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-08-30",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1526,7 +1533,7 @@
       {
         "month": "Aug 2026",
         "reach": 103,
-        "engagements": 460
+        "engagements": 477
       }
     ],
     "reachByWeek": [],
@@ -1850,34 +1857,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 77,
+        "performance": 65,
         "accessibility": 90,
         "bestPractices": 92,
         "seo": 100
       },
       "desktop": {
-        "performance": 98,
+        "performance": 95,
         "accessibility": 90,
         "bestPractices": 92,
         "seo": 100
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-05-25",
-        "mobile": {
-          "performance": 40,
-          "accessibility": 90,
-          "bestPractices": 77,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 48,
-          "accessibility": 90,
-          "bestPractices": 77,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-05-26",
         "mobile": {
@@ -3167,6 +3159,21 @@
           "bestPractices": 92,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-08-30",
+        "mobile": {
+          "performance": 65,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 95,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 100
+        }
       }
     ]
   },
@@ -3231,15 +3238,6 @@
       "status": "Done",
       "date": "2026-03-30",
       "owner": "Samuel McVay",
-      "group": "Completed",
-      "source": "monday"
-    },
-    {
-      "id": "11330107929",
-      "title": "Steward Right Graphic for April Event.",
-      "status": "Done",
-      "date": "2026-03-02",
-      "owner": "Cayla Burlingame, Tyler Norris",
       "group": "Completed",
       "source": "monday"
     }
