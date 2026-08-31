@@ -3,7 +3,7 @@
   "slug": "killergrowth",
   "logoPath": null,
   "period": "July 2026",
-  "generatedAt": "2026-08-30T12:21:16.438Z",
+  "generatedAt": "2026-08-31T14:31:47.681Z",
   "overview": {
     "sessions": 23,
     "sessionsDelta": 0,
@@ -206,8 +206,8 @@
       },
       {
         "month": "Aug 2026",
-        "reach": 1163,
-        "engagements": 2942
+        "reach": 1229,
+        "engagements": 3069
       }
     ],
     "reachByWeek": [],
@@ -216,7 +216,7 @@
         "platform": "Facebook",
         "reach": 388,
         "engagements": 317,
-        "followers": 622
+        "followers": 627
       }
     ]
   },
@@ -284,7 +284,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 1163
+        "adReach": 1229
       }
     ],
     "metrics": null,
@@ -441,34 +441,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 69,
+        "performance": 68,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 73,
+        "performance": 76,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-05-30",
-        "mobile": {
-          "performance": 80,
-          "accessibility": 91,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 75,
-          "accessibility": 91,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-05-31",
         "mobile": {
@@ -1773,6 +1758,21 @@
           "bestPractices": 100,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-08-31",
+        "mobile": {
+          "performance": 68,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 76,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
       }
     ]
   },
@@ -1800,15 +1800,6 @@
       "title": "Add activelyplayoffers.kglanding.com",
       "status": "Done",
       "date": "2026-03-09",
-      "owner": "Tyler Norris",
-      "group": "Completed",
-      "source": "monday"
-    },
-    {
-      "id": "11415768364",
-      "title": "Add iserve.kglanding.com",
-      "status": "Done",
-      "date": "2026-03-03",
       "owner": "Tyler Norris",
       "group": "Completed",
       "source": "monday"
