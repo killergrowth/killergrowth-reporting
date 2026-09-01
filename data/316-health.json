@@ -2,8 +2,8 @@
   "client": "316 Health Insurance",
   "slug": "316-health",
   "logoPath": null,
-  "period": "July 2026",
-  "generatedAt": "2026-08-31T14:36:41.548Z",
+  "period": "August 2026",
+  "generatedAt": "2026-09-01T12:15:49.076Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -108,17 +108,12 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 59,
+        "performance": 57,
         "accessibility": 88,
         "bestPractices": 77,
         "seo": 100
       },
-      "desktop": {
-        "performance": 83,
-        "accessibility": 91,
-        "bestPractices": 77,
-        "seo": 100
-      }
+      "desktop": null
     },
     "psiHistory": [
       {
@@ -690,6 +685,16 @@
           "bestPractices": 77,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-09-01",
+        "mobile": {
+          "performance": 57,
+          "accessibility": 88,
+          "bestPractices": 77,
+          "seo": 100
+        },
+        "desktop": null
       }
     ]
   },

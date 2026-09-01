@@ -2,8 +2,8 @@
   "client": "Goff Heating & Air",
   "slug": "goff",
   "logoPath": null,
-  "period": "July 2026",
-  "generatedAt": "2026-08-31T14:36:05.782Z",
+  "period": "August 2026",
+  "generatedAt": "2026-09-01T12:15:11.192Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -107,18 +107,8 @@
     "cfDailyPageViews": [],
     "cfMonthlyHistory": [],
     "psiScores": {
-      "mobile": {
-        "performance": 54,
-        "accessibility": 81,
-        "bestPractices": 96,
-        "seo": 92
-      },
-      "desktop": {
-        "performance": 58,
-        "accessibility": 85,
-        "bestPractices": 96,
-        "seo": 92
-      }
+      "mobile": null,
+      "desktop": null
     },
     "psiHistory": [
       {
@@ -795,6 +785,11 @@
           "bestPractices": 96,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-09-01",
+        "mobile": null,
+        "desktop": null
       }
     ]
   },

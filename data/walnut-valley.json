@@ -2,8 +2,8 @@
   "client": "Walnut Valley Meat Market",
   "slug": "walnut-valley",
   "logoPath": null,
-  "period": "July 2026",
-  "generatedAt": "2026-08-31T14:35:21.680Z",
+  "period": "August 2026",
+  "generatedAt": "2026-09-01T12:14:43.403Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -149,44 +149,32 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "SWIWEOSC",
-    "uniques": 1239,
-    "visits": 1239,
-    "pageviews": 1437,
-    "avgDuration": 65,
-    "bounceRate": 89.346246973366,
+    "uniques": 7,
+    "visits": 7,
+    "pageviews": 10,
+    "avgDuration": 147,
+    "bounceRate": 71.428571428571,
     "uniquesDelta": -99.4,
     "visitsDelta": -99.4,
     "pageviewsDelta": -99.3,
     "dailyTimeseries": [
       {
-        "date": "2026-07-30",
-        "visits": 264,
-        "uniques": 264,
-        "pageviews": 288
+        "date": "2026-08-01",
+        "visits": 4,
+        "uniques": 4,
+        "pageviews": 7
       },
       {
-        "date": "2026-07-28",
-        "visits": 363,
-        "uniques": 363,
-        "pageviews": 406
+        "date": "2026-08-04",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 2
       },
       {
-        "date": "2026-07-29",
-        "visits": 303,
-        "uniques": 303,
-        "pageviews": 365
-      },
-      {
-        "date": "2026-07-27",
-        "visits": 25,
-        "uniques": 25,
-        "pageviews": 28
-      },
-      {
-        "date": "2026-07-31",
-        "visits": 284,
-        "uniques": 284,
-        "pageviews": 350
+        "date": "2026-08-06",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 1
       }
     ],
     "monthlyHistory": [
@@ -196,55 +184,32 @@
         "visits": 1239,
         "uniques": 1239,
         "pageviews": 1437
+      },
+      {
+        "month": "Aug 2026",
+        "date": "2026-08",
+        "visits": 7,
+        "uniques": 7,
+        "pageviews": 10
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 787,
-        "uniques": 653
-      },
-      {
-        "path": "/best-ground-beef",
-        "pageviews": 591,
-        "uniques": 554
-      },
-      {
-        "path": "/Home",
-        "pageviews": 44,
-        "uniques": 39
-      },
-      {
-        "path": "/api/preview/walnut-valley-meat-market/staging/",
-        "pageviews": 6,
-        "uniques": 1
-      },
-      {
-        "path": "/locations",
-        "pageviews": 3,
-        "uniques": 2
+        "pageviews": 10,
+        "uniques": 7
       }
     ],
     "referrers": [
       {
-        "source": "Paid/campaign",
-        "visits": 887,
-        "uniques": 887
-      },
-      {
         "source": "Organic",
-        "visits": 177,
-        "uniques": 177
+        "visits": 5,
+        "uniques": 5
       },
       {
         "source": "Direct",
-        "visits": 108,
-        "uniques": 108
-      },
-      {
-        "source": "Social",
-        "visits": 67,
-        "uniques": 67
+        "visits": 2,
+        "uniques": 2
       }
     ],
     "cfPageViews": 58255,
@@ -426,18 +391,8 @@
       }
     ],
     "psiScores": {
-      "mobile": {
-        "performance": 68,
-        "accessibility": 82,
-        "bestPractices": 100,
-        "seo": 92
-      },
-      "desktop": {
-        "performance": 55,
-        "accessibility": 91,
-        "bestPractices": 100,
-        "seo": 92
-      }
+      "mobile": null,
+      "desktop": null
     },
     "psiHistory": [
       {
@@ -1104,6 +1059,11 @@
           "bestPractices": 100,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-09-01",
+        "mobile": null,
+        "desktop": null
       }
     ]
   },
@@ -1141,15 +1101,6 @@
       "status": "Done",
       "date": "2026-04-27",
       "owner": "Tyler Norris",
-      "group": "Completed",
-      "source": "monday"
-    },
-    {
-      "id": "10928498543",
-      "title": "Onboarding Walnut Valley Packing",
-      "status": "Done",
-      "date": "2026-03-04",
-      "owner": "Phil Anderson, Tyler Brickley",
       "group": "Completed",
       "source": "monday"
     }

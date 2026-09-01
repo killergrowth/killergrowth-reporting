@@ -2,8 +2,8 @@
   "client": "Alex Miller Auctioneer",
   "slug": "alex-miller",
   "logoPath": null,
-  "period": "July 2026",
-  "generatedAt": "2026-08-31T14:37:26.810Z",
+  "period": "August 2026",
+  "generatedAt": "2026-09-01T12:16:32.421Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -88,18 +88,124 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "IAVAKIOA",
-    "uniques": 0,
-    "visits": 0,
-    "pageviews": 0,
-    "avgDuration": 37,
-    "bounceRate": 0,
+    "uniques": 18,
+    "visits": 18,
+    "pageviews": 32,
+    "avgDuration": 61,
+    "bounceRate": 55.555555555556,
     "uniquesDelta": null,
     "visitsDelta": null,
     "pageviewsDelta": null,
-    "dailyTimeseries": [],
-    "monthlyHistory": [],
-    "topPages": [],
-    "referrers": [],
+    "dailyTimeseries": [
+      {
+        "date": "2026-08-04",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 4
+      },
+      {
+        "date": "2026-08-21",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 2
+      },
+      {
+        "date": "2026-08-31",
+        "visits": 4,
+        "uniques": 4,
+        "pageviews": 4
+      },
+      {
+        "date": "2026-08-19",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 2
+      },
+      {
+        "date": "2026-08-20",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 3
+      },
+      {
+        "date": "2026-08-25",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 2
+      },
+      {
+        "date": "2026-08-30",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 1
+      },
+      {
+        "date": "2026-08-18",
+        "visits": 3,
+        "uniques": 3,
+        "pageviews": 7
+      },
+      {
+        "date": "2026-08-26",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 1
+      },
+      {
+        "date": "2026-08-28",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 6
+      }
+    ],
+    "monthlyHistory": [
+      {
+        "month": "Aug 2026",
+        "date": "2026-08",
+        "visits": 18,
+        "uniques": 18,
+        "pageviews": 32
+      }
+    ],
+    "topPages": [
+      {
+        "path": "/",
+        "pageviews": 26,
+        "uniques": 18
+      },
+      {
+        "path": "/listings.html",
+        "pageviews": 2,
+        "uniques": 2
+      },
+      {
+        "path": "/auctions/",
+        "pageviews": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/auctions/home-in-hutchinson-ks-164706/",
+        "pageviews": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/auctions/longton-ks-147-acres-164500/",
+        "pageviews": 1,
+        "uniques": 1
+      }
+    ],
+    "referrers": [
+      {
+        "source": "Direct",
+        "visits": 16,
+        "uniques": 16
+      },
+      {
+        "source": "Organic",
+        "visits": 2,
+        "uniques": 2
+      }
+    ],
     "cfPageViews": 10890,
     "cfUniques": 4145,
     "cfPageViewsDelta": -7.4,
@@ -275,7 +381,7 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 68,
+        "performance": 69,
         "accessibility": 74,
         "bestPractices": 96,
         "seo": 100
@@ -792,6 +898,21 @@
         "date": "2026-08-31",
         "mobile": {
           "performance": 68,
+          "accessibility": 74,
+          "bestPractices": 96,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 98,
+          "accessibility": 74,
+          "bestPractices": 96,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-09-01",
+        "mobile": {
+          "performance": 69,
           "accessibility": 74,
           "bestPractices": 96,
           "seo": 100
