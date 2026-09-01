@@ -1,7 +1,14 @@
-var fs = require('fs');
-var html = fs.readFileSync('dist/killergrowth/index.html', 'utf8');
-console.log('Has loadData:', html.includes('loadData'));
-console.log('Footer chart duplication gone:', !html.includes('const months ='));
-console.log('Has sub-nav items (bad):', html.includes('Ad Performance'));
-console.log('Has direct sidebar links (good):', html.includes('section-ads-overview'));
-console.log('Has adSpend in data (good):', html.includes('killergrowth.json'));
+const fs = require('fs');
+const html = fs.readFileSync('C:\\Users\\KillerGrowth\\.openclaw\\workspace\\sites\\killergrowth-reporting\\dist\\dons-heating\\index.html', 'utf8');
+const match = html.match(/window\.__reportData\s*=\s*(\{.{0,500})/);
+if (match) {
+  try {
+    // Extract just enough to find formSubmissions
+    const snippet = html.match(/formSubmissions["\s:]+(\d+)/);
+    console.log('formSubmissions in dist:', snippet ? snippet[1] : 'NOT FOUND');
+    const period = html.match(/"period":"([^"]+)"/);
+    console.log('period:', period ? period[1] : 'not found');
+    const genAt = html.match(/"generatedAt":"([^"]+)"/);
+    console.log('generatedAt:', genAt ? genAt[1] : 'not found');
+  } catch(e) { console.log(e.message); }
+}

@@ -3,22 +3,22 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "August 2026",
-  "generatedAt": "2026-09-01T12:12:24.956Z",
+  "generatedAt": "2026-09-01T12:00:22.258Z",
   "overview": {
-    "sessions": 871,
+    "sessions": 1194,
     "sessionsDelta": 0,
     "leads": 0,
     "leadsDelta": null,
     "rankingsTop10": 17,
     "rankingsDelta": null,
-    "gbpViews": 4721,
+    "gbpViews": 5426,
     "gbpViewsDelta": null,
     "adSpend": 2111.02,
     "adImpressions": 46053,
     "adBudget": null,
     "costPerLead": 8.98,
     "costPerLeadDelta": null,
-    "socialReach": 187,
+    "socialReach": 166,
     "socialReachDelta": null,
     "reviewCount": 0,
     "avgRating": null
@@ -106,143 +106,136 @@
         "week": "202608",
         "date": "2026-08-01",
         "label": "Jul 2026",
-        "sessions": 5,
+        "sessions": 1177,
+        "conversions": 13
+      },
+      {
+        "week": "202609",
+        "date": "2026-09-01",
+        "label": "Aug 2026",
+        "sessions": 17,
         "conversions": 0
       }
     ],
     "trafficChannels": [
       {
         "channel": "Direct",
-        "sessions": 546
-      },
-      {
-        "channel": "Organic Search",
-        "sessions": 115
-      },
-      {
-        "channel": "Cross-network",
-        "sessions": 108
-      },
-      {
-        "channel": "Paid Search",
-        "sessions": 58
-      },
-      {
-        "channel": "Organic Social",
-        "sessions": 19
+        "sessions": 648
       },
       {
         "channel": "Display",
-        "sessions": 14
+        "sessions": 184
+      },
+      {
+        "channel": "Organic Search",
+        "sessions": 80
       },
       {
         "channel": "Referral",
-        "sessions": 9
+        "sessions": 77
+      },
+      {
+        "channel": "Cross-network",
+        "sessions": 70
+      },
+      {
+        "channel": "Paid Search",
+        "sessions": 62
+      },
+      {
+        "channel": "Organic Social",
+        "sessions": 41
+      },
+      {
+        "channel": "Paid Video",
+        "sessions": 23
       },
       {
         "channel": "Unassigned",
-        "sessions": 5
+        "sessions": 22
       },
       {
         "channel": "AI Assistant",
-        "sessions": 1
+        "sessions": 2
       }
     ],
     "organicSearchSources": [
       {
         "source": "google",
-        "sessions": 104
-      },
-      {
-        "source": "bing",
-        "sessions": 7
+        "sessions": 67
       },
       {
         "source": "duckduckgo",
-        "sessions": 2
+        "sessions": 7
       },
       {
-        "source": "yahoo",
-        "sessions": 2
+        "source": "bing",
+        "sessions": 6
       }
     ],
     "keywords": [
       {
         "keyword": "sunflower plumbing",
-        "clicks": 20,
-        "impressions": 138,
-        "ctr": 14.5,
-        "position": 5.6
+        "clicks": 11,
+        "impressions": 98,
+        "ctr": 11.2,
+        "position": 4.3
       },
       {
         "keyword": "sunflower plumbing el dorado ks",
-        "clicks": 4,
-        "impressions": 22,
-        "ctr": 18.2,
-        "position": 1.8
-      },
-      {
-        "keyword": "sunflower services",
-        "clicks": 3,
-        "impressions": 611,
-        "ctr": 0.5,
-        "position": 1.1
+        "clicks": 2,
+        "impressions": 23,
+        "ctr": 8.7,
+        "position": 2
       },
       {
         "keyword": "plumbers el dorado ks",
-        "clicks": 2,
-        "impressions": 32,
-        "ctr": 6.3,
-        "position": 15.3
+        "clicks": 1,
+        "impressions": 44,
+        "ctr": 2.3,
+        "position": 32
       },
       {
         "keyword": "plumbers near me",
         "clicks": 1,
-        "impressions": 20,
-        "ctr": 5,
-        "position": 6.1
+        "impressions": 12,
+        "ctr": 8.3,
+        "position": 10.1
       },
       {
-        "keyword": "plumbing near me",
+        "keyword": "sewage pumping services",
         "clicks": 1,
-        "impressions": 3,
-        "ctr": 33.3,
-        "position": 6.3
-      },
-      {
-        "keyword": "plumbing repair service",
-        "clicks": 1,
-        "impressions": 2,
-        "ctr": 50,
-        "position": 7
-      },
-      {
-        "keyword": "septic pumping near me",
-        "clicks": 1,
-        "impressions": 2,
-        "ctr": 50,
-        "position": 1
-      },
-      {
-        "keyword": "septic tank pumping",
-        "clicks": 1,
-        "impressions": 8,
-        "ctr": 12.5,
-        "position": 5.3
+        "impressions": 1,
+        "ctr": 100,
+        "position": 5
       },
       {
         "keyword": "sunflower septic",
         "clicks": 1,
-        "impressions": 25,
-        "ctr": 4,
-        "position": 4.8
+        "impressions": 16,
+        "ctr": 6.3,
+        "position": 8.2
+      },
+      {
+        "keyword": "sunflower services",
+        "clicks": 1,
+        "impressions": 177,
+        "ctr": 0.6,
+        "position": 1.6
+      },
+      {
+        "keyword": "24 hour emergency plumber",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
       },
       {
         "keyword": "24 hour plumber",
         "clicks": 0,
-        "impressions": 19,
+        "impressions": 10,
         "ctr": 0,
-        "position": 2.1
+        "position": 1
       },
       {
         "keyword": "24 hour plumbers",
@@ -254,16 +247,9 @@
       {
         "keyword": "24 hour plumbing service",
         "clicks": 0,
-        "impressions": 44,
+        "impressions": 13,
         "ctr": 0,
-        "position": 12.1
-      },
-      {
-        "keyword": "24 hour plumbing service near me",
-        "clicks": 0,
-        "impressions": 2,
-        "ctr": 0,
-        "position": 1
+        "position": 21
       },
       {
         "keyword": "24-hour plumber",
@@ -273,98 +259,126 @@
         "position": 13
       },
       {
-        "keyword": "24hr plumber near me",
+        "keyword": "24hr plumber",
         "clicks": 0,
         "impressions": 2,
         "ctr": 0,
-        "position": 3.5
-      },
-      {
-        "keyword": "913-488-6156",
-        "clicks": 0,
-        "impressions": 8,
-        "ctr": 0,
-        "position": 33.8
-      },
-      {
-        "keyword": "affordable drain cleaning",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 74
-      },
-      {
-        "keyword": "affordable septic system installation",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 13
+        "position": 1
       },
       {
         "keyword": "affordable septic system replacement",
         "clicks": 0,
-        "impressions": 4,
+        "impressions": 3,
         "ctr": 0,
-        "position": 4.5
+        "position": 6
       },
       {
         "keyword": "affordable water line repair",
         "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 6.8
+      },
+      {
+        "keyword": "air conditioner repair near me",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keyword": "backflow testing el dorado ks",
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keyword": "basement companies near me",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 19
+      },
+      {
+        "keyword": "bathroom renovations mulvane",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 35
+      },
+      {
+        "keyword": "bathroom tub replacement el dorado",
+        "clicks": 0,
         "impressions": 7,
         "ctr": 0,
-        "position": 10.6
+        "position": 2.3
       },
       {
-        "keyword": "ahower drain",
+        "keyword": "bathroom tub replacement mulvane",
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 4,
         "ctr": 0,
-        "position": 10
+        "position": 34.3
       },
       {
-        "keyword": "andover kansas plumbers",
+        "keyword": "bathtub installation",
         "clicks": 0,
-        "impressions": 28,
-        "ctr": 0,
-        "position": 74.2
-      },
-      {
-        "keyword": "angie's list plumbers",
-        "clicks": 0,
-        "impressions": 1,
+        "impressions": 10,
         "ctr": 0,
         "position": 1
       },
       {
-        "keyword": "annual septic maintenance",
+        "keyword": "bathtub installers el dorado",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keyword": "bathtub replacement el dorado",
         "clicks": 0,
         "impressions": 3,
         "ctr": 0,
-        "position": 1
+        "position": 5.3
+      },
+      {
+        "keyword": "bathtub replacement mulvane",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 29.3
       }
     ],
     "dfsSnapshot": null,
     "leadSignals": {
-      "organicSessions": 115,
-      "phoneCalls": 0,
-      "formSubmissions": 7,
+      "organicSessions": 80,
+      "phoneCalls": 11,
+      "formSubmissions": 2,
       "emailClicks": 0,
       "ctaClicks": 0,
-      "formStarts": 32,
+      "formStarts": 24,
       "byChannel": {
         "form_start": {
-          "Direct": 28,
-          "Organic Search": 3,
-          "Paid Search": 1
+          "Paid Search": 9,
+          "Display": 7,
+          "Organic Search": 4,
+          "Direct": 2,
+          "Organic Social": 2
+        },
+        "phone_click": {
+          "Paid Search": 6,
+          "Display": 3,
+          "Cross-network": 1,
+          "Direct": 1
         },
         "generate_lead": {
-          "Direct": 5,
-          "Organic Search": 2
+          "Paid Search": 2
         }
       },
-      "gbpCalls": 260,
-      "gbpWebsiteClicks": 217,
-      "gbpDirections": 223
+      "gbpCalls": 321,
+      "gbpWebsiteClicks": 253,
+      "gbpDirections": 234
     }
   },
   "ads": {
@@ -541,13 +555,230 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 4721,
-    "calls": 260,
+    "totalViews": 5426,
+    "calls": 321,
     "callsDelta": null,
-    "directions": 223,
-    "websiteClicks": 217,
+    "directions": 234,
+    "websiteClicks": 253,
     "directionsDelta": null,
     "viewsOverTime": [
+      {
+        "date": "2026-03-01",
+        "views": 31,
+        "calls": 0,
+        "directions": 5,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-03-02",
+        "views": 39,
+        "calls": 7,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-03-03",
+        "views": 17,
+        "calls": 1,
+        "directions": 0,
+        "websiteClicks": 4
+      },
+      {
+        "date": "2026-03-04",
+        "views": 22,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-03-05",
+        "views": 38,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-03-06",
+        "views": 15,
+        "calls": 2,
+        "directions": 9,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-03-07",
+        "views": 24,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-03-08",
+        "views": 37,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-03-09",
+        "views": 49,
+        "calls": 1,
+        "directions": 0,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-03-10",
+        "views": 26,
+        "calls": 3,
+        "directions": 0,
+        "websiteClicks": 6
+      },
+      {
+        "date": "2026-03-11",
+        "views": 25,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 4
+      },
+      {
+        "date": "2026-03-12",
+        "views": 28,
+        "calls": 1,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-03-13",
+        "views": 31,
+        "calls": 2,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-03-14",
+        "views": 13,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-03-15",
+        "views": 32,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-03-16",
+        "views": 22,
+        "calls": 5,
+        "directions": 1,
+        "websiteClicks": 4
+      },
+      {
+        "date": "2026-03-17",
+        "views": 27,
+        "calls": 4,
+        "directions": 4,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-03-18",
+        "views": 23,
+        "calls": 9,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-03-19",
+        "views": 41,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-03-20",
+        "views": 19,
+        "calls": 1,
+        "directions": 1,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-03-21",
+        "views": 23,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-03-22",
+        "views": 32,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-03-23",
+        "views": 26,
+        "calls": 3,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-03-24",
+        "views": 37,
+        "calls": 3,
+        "directions": 0,
+        "websiteClicks": 3
+      },
+      {
+        "date": "2026-03-25",
+        "views": 31,
+        "calls": 18,
+        "directions": 4,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-03-26",
+        "views": 25,
+        "calls": 5,
+        "directions": 0,
+        "websiteClicks": 1
+      },
+      {
+        "date": "2026-03-27",
+        "views": 51,
+        "calls": 1,
+        "directions": 0,
+        "websiteClicks": 2
+      },
+      {
+        "date": "2026-03-28",
+        "views": 32,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-03-29",
+        "views": 41,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-03-30",
+        "views": 64,
+        "calls": 3,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-03-31",
+        "views": 47,
+        "calls": 3,
+        "directions": 0,
+        "websiteClicks": 0
+      },
       {
         "date": "2026-04-01",
         "views": 77,
@@ -1519,108 +1750,31 @@
         "views": 27,
         "calls": 2,
         "directions": 1,
-        "websiteClicks": 2
+        "websiteClicks": 0
       },
       {
         "date": "2026-08-18",
-        "views": 31,
-        "calls": 5,
+        "views": 0,
+        "calls": 0,
         "directions": 1,
-        "websiteClicks": 3
+        "websiteClicks": 0
       },
       {
         "date": "2026-08-19",
-        "views": 29,
+        "views": 0,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 4
+        "websiteClicks": 0
       },
       {
         "date": "2026-08-20",
-        "views": 32,
-        "calls": 2,
-        "directions": 7,
-        "websiteClicks": 4
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       },
       {
         "date": "2026-08-21",
-        "views": 19,
-        "calls": 1,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-22",
-        "views": 33,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-23",
-        "views": 21,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-24",
-        "views": 39,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-08-25",
-        "views": 32,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-26",
-        "views": 6,
-        "calls": 2,
-        "directions": 0,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-08-27",
-        "views": 11,
-        "calls": 1,
-        "directions": 2,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-28",
-        "views": 7,
-        "calls": 0,
-        "directions": 4,
-        "websiteClicks": 2
-      },
-      {
-        "date": "2026-08-29",
-        "views": 3,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-30",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-08-31",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-09-01",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1672,22 +1826,17 @@
       },
       {
         "month": "Aug 2026",
-        "reach": 586,
-        "engagements": 1197
-      },
-      {
-        "month": "Sep 2026",
-        "reach": 0,
-        "engagements": 0
+        "reach": 526,
+        "engagements": 1138
       }
     ],
     "reachByWeek": [],
     "platforms": [
       {
         "platform": "Facebook",
-        "reach": 187,
-        "engagements": 156,
-        "followers": 1200
+        "reach": 166,
+        "engagements": 218,
+        "followers": 1203
       }
     ]
   },
@@ -1755,15 +1904,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 586
-      },
-      {
-        "month": "Sep 2026",
-        "adSpend": null,
-        "adClicks": null,
-        "adLeads": null,
-        "adImpressions": null,
-        "adReach": 0
+        "adReach": 526
       }
     ],
     "metrics": null,
@@ -1857,22 +1998,29 @@
         "week": "202608",
         "date": "2026-08-01",
         "label": "Jul 2026",
-        "sessions": 5,
+        "sessions": 1177,
+        "conversions": 13
+      },
+      {
+        "week": "202609",
+        "date": "2026-09-01",
+        "label": "Aug 2026",
+        "sessions": 17,
         "conversions": 0
       }
     ],
     "aiReferral": {
-      "total": 1,
+      "total": 2,
       "platforms": [
         {
           "name": "ChatGPT",
-          "sessions": 1
+          "sessions": 2
         }
       ],
       "weeklyTrend": [
         {
-          "week": "31",
-          "sessions": 1
+          "week": "34",
+          "sessions": 2
         }
       ]
     },
@@ -1884,182 +2032,38 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "XNFHYGMT",
-    "uniques": 563,
-    "visits": 563,
-    "pageviews": 918,
-    "avgDuration": 99,
-    "bounceRate": 74.422735346359,
+    "uniques": 55,
+    "visits": 55,
+    "pageviews": 110,
+    "avgDuration": 210,
+    "bounceRate": 65.454545454545,
     "uniquesDelta": null,
     "visitsDelta": null,
     "pageviewsDelta": null,
     "dailyTimeseries": [
       {
-        "date": "2026-08-27",
-        "visits": 34,
-        "uniques": 34,
-        "pageviews": 41
+        "date": "2026-07-30",
+        "visits": 16,
+        "uniques": 16,
+        "pageviews": 23
       },
       {
-        "date": "2026-08-22",
+        "date": "2026-07-28",
         "visits": 18,
         "uniques": 18,
-        "pageviews": 41
+        "pageviews": 43
       },
       {
-        "date": "2026-08-04",
-        "visits": 32,
-        "uniques": 32,
-        "pageviews": 56
-      },
-      {
-        "date": "2026-08-29",
-        "visits": 10,
-        "uniques": 10,
-        "pageviews": 13
-      },
-      {
-        "date": "2026-08-11",
-        "visits": 16,
-        "uniques": 16,
-        "pageviews": 29
-      },
-      {
-        "date": "2026-08-14",
-        "visits": 20,
-        "uniques": 20,
-        "pageviews": 26
-      },
-      {
-        "date": "2026-08-07",
-        "visits": 15,
-        "uniques": 15,
-        "pageviews": 19
-      },
-      {
-        "date": "2026-08-21",
-        "visits": 22,
-        "uniques": 22,
-        "pageviews": 34
-      },
-      {
-        "date": "2026-08-09",
-        "visits": 23,
-        "uniques": 23,
-        "pageviews": 38
-      },
-      {
-        "date": "2026-08-24",
-        "visits": 8,
-        "uniques": 8,
-        "pageviews": 12
-      },
-      {
-        "date": "2026-08-17",
-        "visits": 16,
-        "uniques": 16,
-        "pageviews": 22
-      },
-      {
-        "date": "2026-08-31",
-        "visits": 22,
-        "uniques": 22,
-        "pageviews": 44
-      },
-      {
-        "date": "2026-08-19",
-        "visits": 26,
-        "uniques": 26,
-        "pageviews": 50
-      },
-      {
-        "date": "2026-08-12",
-        "visits": 30,
-        "uniques": 30,
-        "pageviews": 37
-      },
-      {
-        "date": "2026-08-20",
-        "visits": 26,
-        "uniques": 26,
-        "pageviews": 62
-      },
-      {
-        "date": "2026-08-06",
-        "visits": 10,
-        "uniques": 10,
-        "pageviews": 64
-      },
-      {
-        "date": "2026-08-08",
-        "visits": 20,
-        "uniques": 20,
-        "pageviews": 23
-      },
-      {
-        "date": "2026-08-25",
-        "visits": 19,
-        "uniques": 19,
-        "pageviews": 28
-      },
-      {
-        "date": "2026-08-30",
-        "visits": 26,
-        "uniques": 26,
-        "pageviews": 30
-      },
-      {
-        "date": "2026-08-16",
-        "visits": 16,
-        "uniques": 16,
-        "pageviews": 22
-      },
-      {
-        "date": "2026-08-13",
-        "visits": 23,
-        "uniques": 23,
-        "pageviews": 28
-      },
-      {
-        "date": "2026-08-18",
-        "visits": 15,
-        "uniques": 15,
-        "pageviews": 23
-      },
-      {
-        "date": "2026-08-26",
-        "visits": 14,
-        "uniques": 14,
+        "date": "2026-07-29",
+        "visits": 12,
+        "uniques": 12,
         "pageviews": 18
       },
       {
-        "date": "2026-08-05",
-        "visits": 21,
-        "uniques": 21,
-        "pageviews": 29
-      },
-      {
-        "date": "2026-08-28",
-        "visits": 27,
-        "uniques": 27,
-        "pageviews": 39
-      },
-      {
-        "date": "2026-08-23",
-        "visits": 12,
-        "uniques": 12,
-        "pageviews": 22
-      },
-      {
-        "date": "2026-08-10",
-        "visits": 27,
-        "uniques": 27,
-        "pageviews": 45
-      },
-      {
-        "date": "2026-08-15",
-        "visits": 15,
-        "uniques": 15,
-        "pageviews": 23
+        "date": "2026-07-31",
+        "visits": 9,
+        "uniques": 9,
+        "pageviews": 26
       }
     ],
     "monthlyHistory": [
@@ -2069,62 +2073,55 @@
         "visits": 55,
         "uniques": 55,
         "pageviews": 110
-      },
-      {
-        "month": "Aug 2026",
-        "date": "2026-08",
-        "visits": 563,
-        "uniques": 563,
-        "pageviews": 918
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 308,
-        "uniques": 239
+        "pageviews": 79,
+        "uniques": 54
       },
       {
-        "path": "/sign-up/",
-        "pageviews": 238,
-        "uniques": 184
+        "path": "/about-us/",
+        "pageviews": 7,
+        "uniques": 4
       },
       {
-        "path": "/reliable/",
-        "pageviews": 111,
-        "uniques": 72
+        "path": "/plumbing/",
+        "pageviews": 6,
+        "uniques": 4
       },
       {
-        "path": "/areas-served/",
-        "pageviews": 32,
-        "uniques": 28
+        "path": "/septic/",
+        "pageviews": 6,
+        "uniques": 4
       },
       {
-        "path": "/excavation/backfill-grading/",
-        "pageviews": 27,
-        "uniques": 21
+        "path": "/contact-us/",
+        "pageviews": 4,
+        "uniques": 2
       }
     ],
     "referrers": [
       {
         "source": "Paid/campaign",
-        "visits": 272,
-        "uniques": 272
+        "visits": 23,
+        "uniques": 23
       },
       {
         "source": "Direct",
-        "visits": 171,
-        "uniques": 171
+        "visits": 22,
+        "uniques": 22
       },
       {
         "source": "Organic",
-        "visits": 89,
-        "uniques": 89
+        "visits": 5,
+        "uniques": 5
       },
       {
         "source": "Social",
-        "visits": 31,
-        "uniques": 31
+        "visits": 5,
+        "uniques": 5
       }
     ],
     "cfPageViews": null,
@@ -2135,13 +2132,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 52,
+        "performance": 58,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 67,
+        "performance": 66,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
@@ -3268,171 +3265,6 @@
         },
         "desktop": {
           "performance": 66,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-08-22",
-        "mobile": {
-          "performance": 49,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 65,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-08-23",
-        "mobile": {
-          "performance": 46,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 68,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-08-24",
-        "mobile": {
-          "performance": 53,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 66,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-08-25",
-        "mobile": {
-          "performance": 59,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 28,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-08-26",
-        "mobile": {
-          "performance": 56,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 58,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-08-27",
-        "mobile": {
-          "performance": 22,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 67,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-08-28",
-        "mobile": {
-          "performance": 54,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 69,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-08-29",
-        "mobile": {
-          "performance": 51,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 66,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-08-30",
-        "mobile": {
-          "performance": 50,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 66,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-08-31",
-        "mobile": {
-          "performance": 63,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 60,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-09-01",
-        "mobile": {
-          "performance": 52,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 67,
           "accessibility": 93,
           "bestPractices": 100,
           "seo": 92
