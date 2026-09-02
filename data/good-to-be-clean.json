@@ -3,7 +3,7 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "August 2026",
-  "generatedAt": "2026-09-01T12:13:19.300Z",
+  "generatedAt": "2026-09-02T11:50:30.834Z",
   "overview": {
     "sessions": 939,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 19,
     "rankingsDelta": null,
-    "gbpViews": 747,
+    "gbpViews": 756,
     "gbpViewsDelta": null,
     "adSpend": 733.56,
     "adImpressions": 2018,
@@ -449,7 +449,7 @@
       },
       "gbpCalls": 11,
       "gbpWebsiteClicks": 26,
-      "gbpDirections": 182
+      "gbpDirections": 186
     }
   },
   "ads": {
@@ -559,10 +559,10 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 747,
+    "totalViews": 756,
     "calls": 11,
     "callsDelta": null,
-    "directions": 182,
+    "directions": 186,
     "websiteClicks": 26,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -1597,14 +1597,14 @@
       },
       {
         "date": "2026-08-26",
-        "views": 0,
+        "views": 2,
         "calls": 0,
         "directions": 1,
         "websiteClicks": 0
       },
       {
         "date": "2026-08-27",
-        "views": 2,
+        "views": 9,
         "calls": 0,
         "directions": 3,
         "websiteClicks": 0
@@ -1627,7 +1627,7 @@
         "date": "2026-08-30",
         "views": 0,
         "calls": 0,
-        "directions": 0,
+        "directions": 4,
         "websiteClicks": 0
       },
       {
@@ -1639,6 +1639,13 @@
       },
       {
         "date": "2026-09-01",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-09-02",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1695,7 +1702,7 @@
       },
       {
         "month": "Sep 2026",
-        "reach": 0,
+        "reach": 16,
         "engagements": 0
       }
     ],
@@ -1781,7 +1788,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 0
+        "adReach": 16
       }
     ],
     "metrics": null,
@@ -2237,25 +2244,15 @@
     "cfDailyPageViews": [],
     "cfMonthlyHistory": [],
     "psiScores": {
-      "mobile": null,
+      "mobile": {
+        "performance": 64,
+        "accessibility": 92,
+        "bestPractices": 100,
+        "seo": 100
+      },
       "desktop": null
     },
     "psiHistory": [
-      {
-        "date": "2026-05-20",
-        "mobile": {
-          "performance": 47,
-          "accessibility": 89,
-          "bestPractices": 100,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 87,
-          "accessibility": 89,
-          "bestPractices": 100,
-          "seo": 100
-        }
-      },
       {
         "date": "2026-05-21",
         "mobile": {
@@ -3519,6 +3516,16 @@
       {
         "date": "2026-09-01",
         "mobile": null,
+        "desktop": null
+      },
+      {
+        "date": "2026-09-02",
+        "mobile": {
+          "performance": 64,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        },
         "desktop": null
       }
     ]
