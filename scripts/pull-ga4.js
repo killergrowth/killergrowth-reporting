@@ -66,33 +66,29 @@ async function pullGA4(propertyId) {
   const conversions  = parseInt(thisMonth[1]?.value || '0');
   const prevSessions = parseInt(prevMonth[0]?.value || '0');
 
-  // 2. Sessions over time (weekly) — pull 6 months for timeframe chart
-  const now = new Date();
-  const sixMonthsAgo = new Date(now.getFullYear(), now.getMonth() - 5, 1);
-  const weeklyStartDate = sixMonthsAgo.toISOString().split('T')[0];
-  const weekly = await runReport(propertyId, token, {
-    dateRanges: [{ startDate: weeklyStartDate, endDate }],
-    dimensions: [{ name: 'week' }],
+  // 2. Sessions over time (monthly, all-time) — yearMonth dimension for accurate multi-year data
+  const allTimeStart = '2020-01-01'; // GA4 returns only what exists; safe floor
+  const monthly = await runReport(propertyId, token, {
+    dateRanges: [{ startDate: allTimeStart, endDate }],
+    dimensions: [{ name: 'yearMonth' }],
     metrics: [{ name: 'sessions' }, { name: 'conversions' }],
-    orderBys: [{ dimension: { dimensionName: 'week' } }]
+    orderBys: [{ dimension: { dimensionName: 'yearMonth' } }]
   });
 
-  // Helper: ISO week number → Monday date string (YYYY-MM-DD)
-  function isoWeekToDate(year, week) {
-    // Jan 4 is always in ISO week 1
-    const jan4 = new Date(year, 0, 4);
-    const dayOfWeek = jan4.getDay() || 7; // Mon=1..Sun=7
-    const week1Mon = new Date(jan4);
-    week1Mon.setDate(jan4.getDate() - dayOfWeek + 1);
-    const target = new Date(week1Mon);
-    target.setDate(week1Mon.getDate() + (week - 1) * 7);
-    return target.toISOString().split('T')[0];
+  // yearMonth = 'YYYYMM' → YYYY-MM-01 date string
+  function yearMonthToDate(ym) {
+    return `${ym.slice(0, 4)}-${ym.slice(4, 6)}-01`;
   }
-  const pullYear = new Date(endDate).getFullYear();
+  // Label: 'Jan 2024'
+  function yearMonthToLabel(ym) {
+    const d = new Date(`${ym.slice(0, 4)}-${ym.slice(4, 6)}-01`);
+    return d.toLocaleString('en-US', { month: 'short', year: 'numeric' });
+  }
 
-  const sessionsOverTime = (weekly.rows || []).map(r => ({
-    week: r.dimensionValues[0].value,
-    date: isoWeekToDate(pullYear, parseInt(r.dimensionValues[0].value)),
+  const sessionsOverTime = (monthly.rows || []).map(r => ({
+    week: r.dimensionValues[0].value,          // reuse 'week' key for compat
+    date: yearMonthToDate(r.dimensionValues[0].value),
+    label: yearMonthToLabel(r.dimensionValues[0].value),
     sessions: parseInt(r.metricValues[0].value),
     conversions: parseInt(r.metricValues[1].value)
   }));
@@ -155,7 +151,7 @@ async function pullGA4(propertyId) {
   }
 
   // 4. Lead events by channel (all sources — for attribution breakdown)
-  const LEAD_EVENTS = ['phone_call', 'generate_lead', 'email_click', 'cta_click', 'form_start'];
+  const LEAD_EVENTS = ['phone_click', 'phone_call', 'generate_lead', 'form_submit', 'contact_form_submission', 'request_service_form_submission', 'booking_click', 'email_click', 'cta_click', 'form_start'];
   const channelEventReport = await runReport(propertyId, token, {
     dateRanges: [{ startDate, endDate }],
     dimensions: [
@@ -186,8 +182,9 @@ async function pullGA4(propertyId) {
 
   const leadSignals = {
     organicSessions:  organicChannel?.sessions ?? null,
-    phoneCalls:       sumByEvent('phone_call'),
-    formSubmissions:  sumByEvent('generate_lead'),
+    phoneCalls:       sumByEvent('phone_click') || sumByEvent('phone_call'),
+    formSubmissions:  sumByEvent('generate_lead') + sumByEvent('form_submit') + sumByEvent('contact_form_submission') + sumByEvent('request_service_form_submission'),
+    bookingClicks:    sumByEvent('booking_click'),
     emailClicks:      sumByEvent('email_click'),
     ctaClicks:        sumByEvent('cta_click'),
     formStarts:       sumByEvent('form_start'),
