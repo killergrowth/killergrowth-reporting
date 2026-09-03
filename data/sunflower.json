@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "August 2026",
-  "generatedAt": "2026-09-02T17:59:05.502Z",
+  "generatedAt": "2026-09-03T11:49:26.974Z",
   "overview": {
     "sessions": 1194,
     "sessionsDelta": 0,
@@ -11,12 +11,12 @@
     "leadsDelta": null,
     "rankingsTop10": 17,
     "rankingsDelta": null,
-    "gbpViews": 4776,
+    "gbpViews": 4800,
     "gbpViewsDelta": null,
-    "adSpend": 24.74,
-    "adImpressions": 2108,
+    "adSpend": 134.71,
+    "adImpressions": 4236,
     "adBudget": null,
-    "costPerLead": 8.98,
+    "costPerLead": 134.71,
     "costPerLeadDelta": null,
     "socialReach": 187,
     "socialReachDelta": null,
@@ -377,7 +377,7 @@
         }
       },
       "gbpCalls": 267,
-      "gbpWebsiteClicks": 217,
+      "gbpWebsiteClicks": 219,
       "gbpDirections": 223
     }
   },
@@ -408,51 +408,51 @@
         "month": "Aug 2026",
         "adSpend": 2111.02,
         "adClicks": 1015,
-        "adLeads": 37,
+        "adLeads": 39,
         "adImpressions": 46053
       },
       {
         "month": "Sep 2026 (MTD)",
-        "adSpend": 24.74,
-        "adClicks": 35,
-        "adLeads": 0,
-        "adImpressions": 2108
+        "adSpend": 134.71,
+        "adClicks": 68,
+        "adLeads": 1,
+        "adImpressions": 4236
       }
     ],
     "spendByWeek": [],
     "campaigns": [
       {
         "name": "KG | New - Plumbing",
-        "spend": 17.5,
-        "clicks": 16,
+        "spend": 71.71,
+        "clicks": 20,
         "leads": 0,
-        "impressions": 1401
-      },
-      {
-        "name": "KG | 2025 | Plumber Near You",
-        "spend": 6.32,
-        "clicks": 13,
-        "leads": 0,
-        "impressions": 315
-      },
-      {
-        "name": "KG | 2025 | Butler County | PMax | RL 9/11/25",
-        "spend": 0.91,
-        "clicks": 5,
-        "leads": 0,
-        "impressions": 359
+        "impressions": 2535
       },
       {
         "name": "LocalServicesCampaign:SystemGenerated:0005d4e425019745",
-        "spend": 0,
-        "clicks": 1,
+        "spend": 32.21,
+        "clicks": 5,
+        "leads": 1,
+        "impressions": 85
+      },
+      {
+        "name": "KG | 2025 | Butler County | PMax | RL 9/11/25",
+        "spend": 16.66,
+        "clicks": 15,
         "leads": 0,
-        "impressions": 33
+        "impressions": 640
+      },
+      {
+        "name": "KG | 2025 | Plumber Near You",
+        "spend": 14.12,
+        "clicks": 28,
+        "leads": 0,
+        "impressions": 976
       }
     ],
-    "phoneCalls": 0,
-    "allConversions": 0,
-    "costPerLead": 75.39
+    "phoneCalls": 6,
+    "allConversions": 1,
+    "costPerLead": 134.71
   },
   "localFalcon": {
     "lastScanDate": "6/7/2026 9:11 AM",
@@ -562,11 +562,11 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 4776,
+    "totalViews": 4800,
     "calls": 267,
     "callsDelta": null,
     "directions": 223,
-    "websiteClicks": 217,
+    "websiteClicks": 219,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1621,14 +1621,14 @@
       },
       {
         "date": "2026-08-29",
-        "views": 3,
+        "views": 10,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 2
       },
       {
         "date": "2026-08-30",
-        "views": 0,
+        "views": 17,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1649,6 +1649,13 @@
       },
       {
         "date": "2026-09-02",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-09-03",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1705,8 +1712,8 @@
       },
       {
         "month": "Sep 2026",
-        "reach": 0,
-        "engagements": 4
+        "reach": 5,
+        "engagements": 5
       }
     ],
     "reachByWeek": [],
@@ -1791,7 +1798,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 0
+        "adReach": 5
       }
     ],
     "metrics": null,
@@ -2171,7 +2178,7 @@
     "psiScores": {
       "mobile": null,
       "desktop": {
-        "performance": 60,
+        "performance": 61,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
@@ -3308,6 +3315,16 @@
         "mobile": null,
         "desktop": {
           "performance": 60,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-09-03",
+        "mobile": null,
+        "desktop": {
+          "performance": 61,
           "accessibility": 93,
           "bestPractices": 100,
           "seo": 92
