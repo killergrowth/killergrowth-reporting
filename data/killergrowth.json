@@ -3,7 +3,7 @@
   "slug": "killergrowth",
   "logoPath": null,
   "period": "August 2026",
-  "generatedAt": "2026-09-03T11:48:31.421Z",
+  "generatedAt": "2026-09-04T11:55:08.165Z",
   "overview": {
     "sessions": 23,
     "sessionsDelta": 0,
@@ -217,8 +217,8 @@
       },
       {
         "month": "Sep 2026",
-        "reach": 102,
-        "engagements": 80
+        "reach": 124,
+        "engagements": 92
       }
     ],
     "reachByWeek": [],
@@ -227,7 +227,7 @@
         "platform": "Facebook",
         "reach": 704,
         "engagements": 2094,
-        "followers": 634
+        "followers": 635
       }
     ]
   },
@@ -303,7 +303,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 102
+        "adReach": 124
       }
     ],
     "metrics": null,
@@ -623,29 +623,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 65,
+        "performance": 56,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
       },
-      "desktop": null
+      "desktop": {
+        "performance": 75,
+        "accessibility": 91,
+        "bestPractices": 100,
+        "seo": 92
+      }
     },
     "psiHistory": [
-      {
-        "date": "2026-06-03",
-        "mobile": {
-          "performance": 74,
-          "accessibility": 91,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 77,
-          "accessibility": 91,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-06-04",
         "mobile": {
@@ -1940,6 +1930,21 @@
           "seo": 92
         },
         "desktop": null
+      },
+      {
+        "date": "2026-09-04",
+        "mobile": {
+          "performance": 56,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 75,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
       }
     ]
   },
