@@ -113,7 +113,8 @@ async function pullMeta(pageId, client) {
   // === Meta Ads ===
   let adSpend = null, adClicks = null, adImpressions = null, adLeads = null;
   if (process.env.META_AD_ACCOUNT_ID || client?.metaAdAccountId) {
-    const adAcct = process.env.META_AD_ACCOUNT_ID || client.metaAdAccountId;
+    const adAcctRaw = process.env.META_AD_ACCOUNT_ID || client.metaAdAccountId;
+    const adAcct = adAcctRaw.replace(/^act_/, '');
     const timeRange = JSON.stringify({ since: startDateStr, until: endDateStr });
     const adsUrl = `${BASE}/act_${adAcct}/insights?fields=spend,actions,clicks,impressions,reach&time_range=${encodeURIComponent(timeRange)}&access_token=${process.env.META_SYSTEM_TOKEN}`;
     const adsRes = await fetch(adsUrl);
@@ -161,7 +162,8 @@ async function pullMeta(pageId, client) {
   // Ads monthly breakdown
   let monthlyAds = [];
   if (process.env.META_AD_ACCOUNT_ID || client?.metaAdAccountId) {
-    const adAcctId = process.env.META_AD_ACCOUNT_ID || client.metaAdAccountId;
+    const adAcctIdRaw = process.env.META_AD_ACCOUNT_ID || client.metaAdAccountId;
+    const adAcctId = adAcctIdRaw.replace(/^act_/, '');
     const timeRange = encodeURIComponent(JSON.stringify({ since: hist.startDateStr, until: hist.endDateStr }));
     const adsHistUrl = `${BASE}/act_${adAcctId}/insights?fields=spend,actions,clicks,impressions&time_range=${timeRange}&time_increment=monthly&access_token=${process.env.META_SYSTEM_TOKEN}`;
     const adsHistRes = await fetch(adsHistUrl);
