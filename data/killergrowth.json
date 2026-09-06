@@ -3,7 +3,7 @@
   "slug": "killergrowth",
   "logoPath": null,
   "period": "August 2026",
-  "generatedAt": "2026-09-05T10:59:10.945Z",
+  "generatedAt": "2026-09-06T11:24:29.853Z",
   "overview": {
     "sessions": 23,
     "sessionsDelta": 0,
@@ -134,8 +134,8 @@
       },
       {
         "month": "Sep 2026",
-        "adSpend": 448.92,
-        "adClicks": 2340,
+        "adSpend": 450.56,
+        "adClicks": 2353,
         "adLeads": 0
       }
     ],
@@ -217,8 +217,8 @@
       },
       {
         "month": "Sep 2026",
-        "reach": 137,
-        "engagements": 135
+        "reach": 140,
+        "engagements": 140
       }
     ],
     "reachByWeek": [],
@@ -299,11 +299,11 @@
       },
       {
         "month": "Sep 2026",
-        "adSpend": 448.92,
-        "adClicks": 2340,
+        "adSpend": 450.56,
+        "adClicks": 2353,
         "adLeads": 0,
-        "adImpressions": 71006,
-        "adReach": 137
+        "adImpressions": 71186,
+        "adReach": 140
       }
     ],
     "metrics": null,
@@ -623,34 +623,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 70,
+        "performance": 63,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 70,
+        "performance": 61,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-06-05",
-        "mobile": {
-          "performance": 75,
-          "accessibility": 91,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 74,
-          "accessibility": 91,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-06-06",
         "mobile": {
@@ -1945,6 +1930,21 @@
           "bestPractices": 100,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-09-06",
+        "mobile": {
+          "performance": 63,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 61,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
       }
     ]
   },
@@ -1964,15 +1964,6 @@
       "status": "Revisions Needed",
       "date": "2026-05-19",
       "owner": "Tyler Brickley, Corrie Ferrell",
-      "group": "Completed",
-      "source": "monday"
-    },
-    {
-      "id": "11461837396",
-      "title": "Add activelyplayoffers.kglanding.com",
-      "status": "Done",
-      "date": "2026-03-09",
-      "owner": "Tyler Norris",
       "group": "Completed",
       "source": "monday"
     }
