@@ -3,7 +3,7 @@
   "slug": "dons-heating",
   "logoPath": null,
   "period": "August 2026",
-  "generatedAt": "2026-09-08T11:52:29.488Z",
+  "generatedAt": "2026-09-09T12:03:23.664Z",
   "overview": {
     "sessions": 884,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 14,
     "rankingsDelta": null,
-    "gbpViews": 4240,
+    "gbpViews": 4282,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -420,7 +420,7 @@
           "Direct": 1
         }
       },
-      "gbpCalls": 437,
+      "gbpCalls": 449,
       "gbpWebsiteClicks": 230,
       "gbpDirections": 243
     }
@@ -601,8 +601,8 @@
   },
   "gbp": {
     "locationName": "El Dorado",
-    "totalViews": 4240,
-    "calls": 437,
+    "totalViews": 4282,
+    "calls": 449,
     "callsDelta": null,
     "directions": 243,
     "websiteClicks": 230,
@@ -1675,7 +1675,7 @@
       {
         "date": "2026-08-31",
         "views": 49,
-        "calls": 0,
+        "calls": 12,
         "directions": 0,
         "websiteClicks": 0
       },
@@ -1709,7 +1709,7 @@
       },
       {
         "date": "2026-09-05",
-        "views": 103,
+        "views": 145,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1734,6 +1734,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-09-09",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -1742,7 +1749,7 @@
   },
   "gbp2": {
     "locationName": "Emporia",
-    "totalViews": 724,
+    "totalViews": 734,
     "calls": 41,
     "directions": 144,
     "websiteClicks": 45,
@@ -2848,14 +2855,14 @@
       },
       {
         "date": "2026-09-05",
-        "views": 1,
+        "views": 9,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-09-06",
-        "views": 0,
+        "views": 2,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -2873,6 +2880,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-09-09",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -2880,8 +2894,8 @@
   },
   "gbp3": {
     "locationName": "Hillsboro",
-    "totalViews": 1245,
-    "calls": 84,
+    "totalViews": 1255,
+    "calls": 85,
     "directions": 237,
     "websiteClicks": 54,
     "viewsOverTime": [
@@ -3952,7 +3966,7 @@
       {
         "date": "2026-08-31",
         "views": 16,
-        "calls": 0,
+        "calls": 1,
         "directions": 0,
         "websiteClicks": 0
       },
@@ -3986,14 +4000,14 @@
       },
       {
         "date": "2026-09-05",
-        "views": 3,
+        "views": 11,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-09-06",
-        "views": 0,
+        "views": 2,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -4007,6 +4021,13 @@
       },
       {
         "date": "2026-09-08",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-09-09",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -4060,7 +4081,7 @@
       },
       {
         "month": "Sep 2026",
-        "reach": 33,
+        "reach": 34,
         "engagements": 9
       }
     ],
@@ -4146,7 +4167,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 33
+        "adReach": 34
       }
     ],
     "metrics": null,
@@ -4339,34 +4360,14 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 55,
+        "performance": 54,
         "accessibility": 90,
         "bestPractices": 96,
         "seo": 92
       },
-      "desktop": {
-        "performance": 34,
-        "accessibility": 90,
-        "bestPractices": 96,
-        "seo": 92
-      }
+      "desktop": null
     },
     "psiHistory": [
-      {
-        "date": "2026-05-29",
-        "mobile": {
-          "performance": 62,
-          "accessibility": 90,
-          "bestPractices": 73,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 93,
-          "accessibility": 91,
-          "bestPractices": 73,
-          "seo": 100
-        }
-      },
       {
         "date": "2026-05-30",
         "mobile": {
@@ -5631,6 +5632,16 @@
           "bestPractices": 96,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-09-09",
+        "mobile": {
+          "performance": 54,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": null
       }
     ]
   },
