@@ -3,7 +3,7 @@
   "slug": "goff",
   "logoPath": null,
   "period": "August 2026",
-  "generatedAt": "2026-09-10T12:02:48.952Z",
+  "generatedAt": "2026-09-12T11:26:44.843Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -107,14 +107,9 @@
     "cfDailyPageViews": [],
     "cfMonthlyHistory": [],
     "psiScores": {
-      "mobile": {
-        "performance": 50,
-        "accessibility": 81,
-        "bestPractices": 96,
-        "seo": 92
-      },
+      "mobile": null,
       "desktop": {
-        "performance": 69,
+        "performance": 74,
         "accessibility": 85,
         "bestPractices": 96,
         "seo": 92
@@ -921,6 +916,16 @@
         },
         "desktop": {
           "performance": 69,
+          "accessibility": 85,
+          "bestPractices": 96,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-09-12",
+        "mobile": null,
+        "desktop": {
+          "performance": 74,
           "accessibility": 85,
           "bestPractices": 96,
           "seo": 92

@@ -3,7 +3,7 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "August 2026",
-  "generatedAt": "2026-09-10T11:55:59.741Z",
+  "generatedAt": "2026-09-12T11:21:08.008Z",
   "overview": {
     "sessions": 47,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": null,
     "rankingsDelta": null,
-    "gbpViews": 2217,
+    "gbpViews": 2218,
     "gbpViewsDelta": null,
     "adSpend": 511.13,
     "adImpressions": 25624,
@@ -112,8 +112,8 @@
         }
       },
       "gbpCalls": 9,
-      "gbpWebsiteClicks": 87,
-      "gbpDirections": 186,
+      "gbpWebsiteClicks": 88,
+      "gbpDirections": 189,
       "formSubmissionsMonthly": [
         {
           "month": "Jul 2026",
@@ -178,8 +178,8 @@
       },
       {
         "month": "Sep 2026",
-        "adSpend": 191.14,
-        "adClicks": 2815,
+        "adSpend": 229.24,
+        "adClicks": 3624,
         "adLeads": 0
       }
     ],
@@ -204,11 +204,11 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 2217,
+    "totalViews": 2218,
     "calls": 9,
     "callsDelta": null,
-    "directions": 186,
-    "websiteClicks": 87,
+    "directions": 189,
+    "websiteClicks": 88,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1291,7 +1291,7 @@
       },
       {
         "date": "2026-09-02",
-        "views": 17,
+        "views": 18,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 2
@@ -1307,14 +1307,14 @@
         "date": "2026-09-04",
         "views": 19,
         "calls": 0,
-        "directions": 0,
+        "directions": 2,
         "websiteClicks": 0
       },
       {
         "date": "2026-09-05",
         "views": 8,
         "calls": 0,
-        "directions": 0,
+        "directions": 1,
         "websiteClicks": 0
       },
       {
@@ -1329,7 +1329,7 @@
         "views": 1,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-09-08",
@@ -1347,6 +1347,20 @@
       },
       {
         "date": "2026-09-10",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-09-11",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-09-12",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1403,8 +1417,8 @@
       },
       {
         "month": "Sep 2026",
-        "reach": 39,
-        "engagements": 111
+        "reach": 48,
+        "engagements": 122
       }
     ],
     "reachByWeek": [],
@@ -1485,11 +1499,11 @@
       },
       {
         "month": "Sep 2026",
-        "adSpend": 191.14,
-        "adClicks": 2815,
+        "adSpend": 229.24,
+        "adClicks": 3624,
         "adLeads": 0,
-        "adImpressions": 7997,
-        "adReach": 39
+        "adImpressions": 9868,
+        "adReach": 48
       }
     ],
     "metrics": null,
@@ -1736,34 +1750,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 66,
+        "performance": 65,
         "accessibility": 90,
         "bestPractices": 92,
         "seo": 100
       },
       "desktop": {
-        "performance": 92,
+        "performance": 96,
         "accessibility": 90,
         "bestPractices": 92,
         "seo": 100
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-06-06",
-        "mobile": {
-          "performance": 51,
-          "accessibility": 90,
-          "bestPractices": 77,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 68,
-          "accessibility": 90,
-          "bestPractices": 77,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-06-07",
         "mobile": {
@@ -3048,10 +3047,34 @@
           "bestPractices": 92,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-09-12",
+        "mobile": {
+          "performance": 65,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 96,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 100
+        }
       }
     ]
   },
   "workLog": [
+    {
+      "id": "12503591326",
+      "title": "StewardRight — first comments",
+      "status": "Done",
+      "date": "2026-09-10",
+      "owner": "Tyler Brickley",
+      "group": "Website Build (Tyler B)",
+      "source": "monday"
+    },
     {
       "id": "11902031121",
       "title": "Follow up with Irah for content for steward right for the week of 5/11.",
