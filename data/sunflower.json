@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "August 2026",
-  "generatedAt": "2026-09-12T11:21:58.862Z",
+  "generatedAt": "2026-09-13T12:24:44.296Z",
   "overview": {
     "sessions": 1194,
     "sessionsDelta": 0,
@@ -11,12 +11,12 @@
     "leadsDelta": null,
     "rankingsTop10": 17,
     "rankingsDelta": null,
-    "gbpViews": 4947,
+    "gbpViews": 4997,
     "gbpViewsDelta": null,
-    "adSpend": 1028.94,
-    "adImpressions": 14389,
+    "adSpend": 1123.88,
+    "adImpressions": 17333,
     "adBudget": null,
-    "costPerLead": 12.4,
+    "costPerLead": 13.22,
     "costPerLeadDelta": null,
     "socialReach": 187,
     "socialReachDelta": null,
@@ -376,9 +376,9 @@
           "Paid Search": 2
         }
       },
-      "gbpCalls": 280,
-      "gbpWebsiteClicks": 227,
-      "gbpDirections": 238
+      "gbpCalls": 282,
+      "gbpWebsiteClicks": 229,
+      "gbpDirections": 245
     }
   },
   "ads": {
@@ -413,46 +413,46 @@
       },
       {
         "month": "Sep 2026 (MTD)",
-        "adSpend": 1028.94,
-        "adClicks": 393,
-        "adLeads": 24,
-        "adImpressions": 14389
+        "adSpend": 1123.88,
+        "adClicks": 452,
+        "adLeads": 26,
+        "adImpressions": 17333
       }
     ],
     "spendByWeek": [],
     "campaigns": [
       {
         "name": "LocalServicesCampaign:SystemGenerated:0005d4e425019745",
-        "spend": 488.17,
-        "clicks": 39,
-        "leads": 9,
-        "impressions": 358
+        "spend": 541.73,
+        "clicks": 40,
+        "leads": 10,
+        "impressions": 360
       },
       {
         "name": "KG | New - Plumbing",
-        "spend": 368.52,
-        "clicks": 49,
-        "leads": 3,
-        "impressions": 4154
+        "spend": 395.27,
+        "clicks": 52,
+        "leads": 4,
+        "impressions": 4233
       },
       {
         "name": "KG | 2025 | Plumber Near You",
-        "spend": 105.84,
-        "clicks": 130,
+        "spend": 114.6,
+        "clicks": 153,
         "leads": 8,
-        "impressions": 4003
+        "impressions": 5254
       },
       {
         "name": "KG | 2025 | Butler County | PMax | RL 9/11/25",
-        "spend": 66.41,
-        "clicks": 175,
+        "spend": 72.28,
+        "clicks": 207,
         "leads": 4,
-        "impressions": 5874
+        "impressions": 7486
       }
     ],
-    "phoneCalls": 32,
-    "allConversions": 83,
-    "costPerLead": 54.15
+    "phoneCalls": 33,
+    "allConversions": 85,
+    "costPerLead": 59.15
   },
   "localFalcon": {
     "lastScanDate": "6/7/2026 9:11 AM",
@@ -562,11 +562,11 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 4947,
-    "calls": 280,
+    "totalViews": 4997,
+    "calls": 282,
     "callsDelta": null,
-    "directions": 238,
-    "websiteClicks": 227,
+    "directions": 245,
+    "websiteClicks": 229,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1672,35 +1672,35 @@
         "date": "2026-09-05",
         "views": 21,
         "calls": 1,
-        "directions": 5,
+        "directions": 4,
         "websiteClicks": 1
       },
       {
         "date": "2026-09-06",
-        "views": 6,
+        "views": 16,
         "calls": 1,
         "directions": 3,
         "websiteClicks": 1
       },
       {
         "date": "2026-09-07",
-        "views": 2,
+        "views": 15,
         "calls": 0,
-        "directions": 0,
+        "directions": 1,
         "websiteClicks": 0
       },
       {
         "date": "2026-09-08",
-        "views": 0,
+        "views": 27,
         "calls": 2,
-        "directions": 0,
-        "websiteClicks": 0
+        "directions": 1,
+        "websiteClicks": 2
       },
       {
         "date": "2026-09-09",
         "views": 0,
-        "calls": 0,
-        "directions": 0,
+        "calls": 2,
+        "directions": 6,
         "websiteClicks": 0
       },
       {
@@ -1719,6 +1719,13 @@
       },
       {
         "date": "2026-09-12",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-09-13",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1775,8 +1782,8 @@
       },
       {
         "month": "Sep 2026",
-        "reach": 71,
-        "engagements": 99
+        "reach": 81,
+        "engagements": 105
       }
     ],
     "reachByWeek": [],
@@ -1861,7 +1868,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 71
+        "adReach": 81
       }
     ],
     "metrics": null,
@@ -2239,8 +2246,18 @@
     "cfDailyPageViews": [],
     "cfMonthlyHistory": [],
     "psiScores": {
-      "mobile": null,
-      "desktop": null
+      "mobile": {
+        "performance": 35,
+        "accessibility": 93,
+        "bestPractices": 100,
+        "seo": 92
+      },
+      "desktop": {
+        "performance": 43,
+        "accessibility": 93,
+        "bestPractices": 100,
+        "seo": 92
+      }
     },
     "psiHistory": [
       {
@@ -3482,6 +3499,21 @@
         "date": "2026-09-12",
         "mobile": null,
         "desktop": null
+      },
+      {
+        "date": "2026-09-13",
+        "mobile": {
+          "performance": 35,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 43,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        }
       }
     ]
   },
