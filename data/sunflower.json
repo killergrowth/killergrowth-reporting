@@ -3,15 +3,15 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "August 2026",
-  "generatedAt": "2026-09-14T13:27:49.013Z",
+  "generatedAt": "2026-09-14T12:00:45.523Z",
   "overview": {
-    "sessions": 1194,
+    "sessions": 1300,
     "sessionsDelta": 0,
     "leads": 0,
     "leadsDelta": null,
-    "rankingsTop10": 17,
+    "rankingsTop10": 16,
     "rankingsDelta": null,
-    "gbpViews": 5016,
+    "gbpViews": 4826,
     "gbpViewsDelta": null,
     "adSpend": 1160.23,
     "adImpressions": 19349,
@@ -106,41 +106,41 @@
         "week": "202608",
         "date": "2026-08-01",
         "label": "Jul 2026",
-        "sessions": 1177,
+        "sessions": 1183,
         "conversions": 13
       },
       {
         "week": "202609",
         "date": "2026-09-01",
         "label": "Aug 2026",
-        "sessions": 17,
+        "sessions": 116,
         "conversions": 0
       }
     ],
     "trafficChannels": [
       {
         "channel": "Direct",
-        "sessions": 648
+        "sessions": 730
       },
       {
         "channel": "Display",
-        "sessions": 184
+        "sessions": 201
       },
       {
         "channel": "Organic Search",
-        "sessions": 80
+        "sessions": 81
       },
       {
         "channel": "Referral",
-        "sessions": 77
+        "sessions": 78
       },
       {
         "channel": "Cross-network",
-        "sessions": 70
+        "sessions": 71
       },
       {
         "channel": "Paid Search",
-        "sessions": 62
+        "sessions": 64
       },
       {
         "channel": "Organic Social",
@@ -148,11 +148,11 @@
       },
       {
         "channel": "Paid Video",
-        "sessions": 23
+        "sessions": 24
       },
       {
         "channel": "Unassigned",
-        "sessions": 22
+        "sessions": 6
       },
       {
         "channel": "AI Assistant",
@@ -162,7 +162,7 @@
     "organicSearchSources": [
       {
         "source": "google",
-        "sessions": 67
+        "sessions": 68
       },
       {
         "source": "duckduckgo",
@@ -177,29 +177,29 @@
       {
         "keyword": "sunflower plumbing",
         "clicks": 11,
-        "impressions": 98,
-        "ctr": 11.2,
+        "impressions": 102,
+        "ctr": 10.8,
         "position": 4.3
       },
       {
         "keyword": "sunflower plumbing el dorado ks",
         "clicks": 2,
-        "impressions": 23,
-        "ctr": 8.7,
+        "impressions": 24,
+        "ctr": 8.3,
         "position": 2
       },
       {
         "keyword": "plumbers el dorado ks",
         "clicks": 1,
-        "impressions": 44,
-        "ctr": 2.3,
-        "position": 32
+        "impressions": 49,
+        "ctr": 2,
+        "position": 33.9
       },
       {
         "keyword": "plumbers near me",
         "clicks": 1,
-        "impressions": 12,
-        "ctr": 8.3,
+        "impressions": 13,
+        "ctr": 7.7,
         "position": 10.1
       },
       {
@@ -212,14 +212,14 @@
       {
         "keyword": "sunflower septic",
         "clicks": 1,
-        "impressions": 16,
-        "ctr": 6.3,
-        "position": 8.2
+        "impressions": 17,
+        "ctr": 5.9,
+        "position": 7.8
       },
       {
         "keyword": "sunflower services",
         "clicks": 1,
-        "impressions": 177,
+        "impressions": 179,
         "ctr": 0.6,
         "position": 1.6
       },
@@ -233,7 +233,7 @@
       {
         "keyword": "24 hour plumber",
         "clicks": 0,
-        "impressions": 10,
+        "impressions": 12,
         "ctr": 0,
         "position": 1
       },
@@ -247,7 +247,7 @@
       {
         "keyword": "24 hour plumbing service",
         "clicks": 0,
-        "impressions": 13,
+        "impressions": 19,
         "ctr": 0,
         "position": 21
       },
@@ -268,16 +268,16 @@
       {
         "keyword": "affordable septic system replacement",
         "clicks": 0,
-        "impressions": 3,
+        "impressions": 4,
         "ctr": 0,
-        "position": 6
+        "position": 5
       },
       {
         "keyword": "affordable water line repair",
         "clicks": 0,
-        "impressions": 6,
+        "impressions": 8,
         "ctr": 0,
-        "position": 6.8
+        "position": 6.4
       },
       {
         "keyword": "air conditioner repair near me",
@@ -289,9 +289,9 @@
       {
         "keyword": "backflow testing el dorado ks",
         "clicks": 0,
-        "impressions": 11,
+        "impressions": 14,
         "ctr": 0,
-        "position": 8
+        "position": 10.9
       },
       {
         "keyword": "basement companies near me",
@@ -299,6 +299,13 @@
         "impressions": 1,
         "ctr": 0,
         "position": 19
+      },
+      {
+        "keyword": "bathroom faucet replacement mclouth ks",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 77
       },
       {
         "keyword": "bathroom renovations mulvane",
@@ -341,20 +348,14 @@
         "impressions": 3,
         "ctr": 0,
         "position": 5.3
-      },
-      {
-        "keyword": "bathtub replacement mulvane",
-        "clicks": 0,
-        "impressions": 4,
-        "ctr": 0,
-        "position": 29.3
       }
     ],
     "dfsSnapshot": null,
     "leadSignals": {
-      "organicSessions": 80,
+      "organicSessions": 81,
       "phoneCalls": 11,
       "formSubmissions": 2,
+      "bookingClicks": 12,
       "emailClicks": 0,
       "ctaClicks": 0,
       "formStarts": 24,
@@ -372,13 +373,18 @@
           "Cross-network": 1,
           "Direct": 1
         },
+        "booking_click": {
+          "Organic Search": 5,
+          "Direct": 4,
+          "Cross-network": 3
+        },
         "generate_lead": {
           "Paid Search": 2
         }
       },
-      "gbpCalls": 282,
-      "gbpWebsiteClicks": 231,
-      "gbpDirections": 245
+      "gbpCalls": 267,
+      "gbpWebsiteClicks": 219,
+      "gbpDirections": 223
     }
   },
   "ads": {
@@ -562,11 +568,11 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 5016,
-    "calls": 282,
+    "totalViews": 4826,
+    "calls": 267,
     "callsDelta": null,
-    "directions": 245,
-    "websiteClicks": 231,
+    "directions": 223,
+    "websiteClicks": 219,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1628,7 +1634,7 @@
       },
       {
         "date": "2026-08-30",
-        "views": 19,
+        "views": 17,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1636,103 +1642,33 @@
       {
         "date": "2026-08-31",
         "views": 26,
-        "calls": 2,
-        "directions": 4,
-        "websiteClicks": 1
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       },
       {
         "date": "2026-09-01",
-        "views": 16,
-        "calls": 1,
-        "directions": 3,
-        "websiteClicks": 2
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       },
       {
         "date": "2026-09-02",
-        "views": 19,
-        "calls": 2,
+        "views": 0,
+        "calls": 0,
         "directions": 0,
-        "websiteClicks": 2
+        "websiteClicks": 0
       },
       {
         "date": "2026-09-03",
-        "views": 30,
-        "calls": 2,
+        "views": 0,
+        "calls": 0,
         "directions": 0,
-        "websiteClicks": 1
+        "websiteClicks": 0
       },
       {
         "date": "2026-09-04",
-        "views": 25,
-        "calls": 2,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-09-05",
-        "views": 21,
-        "calls": 1,
-        "directions": 4,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-09-06",
-        "views": 16,
-        "calls": 1,
-        "directions": 3,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-09-07",
-        "views": 15,
-        "calls": 0,
-        "directions": 1,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-09-08",
-        "views": 27,
-        "calls": 2,
-        "directions": 1,
-        "websiteClicks": 2
-      },
-      {
-        "date": "2026-09-09",
-        "views": 0,
-        "calls": 2,
-        "directions": 6,
-        "websiteClicks": 2
-      },
-      {
-        "date": "2026-09-10",
-        "views": 15,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-09-11",
-        "views": 4,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-09-12",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-09-13",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-09-14",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1789,8 +1725,8 @@
       },
       {
         "month": "Sep 2026",
-        "reach": 84,
-        "engagements": 107
+        "reach": 5,
+        "engagements": 5
       }
     ],
     "reachByWeek": [],
@@ -1875,7 +1811,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 84
+        "adReach": 5
       }
     ],
     "metrics": null,
@@ -1969,14 +1905,14 @@
         "week": "202608",
         "date": "2026-08-01",
         "label": "Jul 2026",
-        "sessions": 1177,
+        "sessions": 1183,
         "conversions": 13
       },
       {
         "week": "202609",
         "date": "2026-09-01",
         "label": "Aug 2026",
-        "sessions": 17,
+        "sessions": 116,
         "conversions": 0
       }
     ],
@@ -2254,13 +2190,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 35,
+        "performance": 43,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 86,
+        "performance": 42,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
@@ -3422,116 +3358,6 @@
         },
         "desktop": {
           "performance": 42,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-09-05",
-        "mobile": {
-          "performance": 60,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 65,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-09-06",
-        "mobile": null,
-        "desktop": {
-          "performance": 81,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-09-07",
-        "mobile": {
-          "performance": 47,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": null
-      },
-      {
-        "date": "2026-09-08",
-        "mobile": {
-          "performance": 23,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": null
-      },
-      {
-        "date": "2026-09-09",
-        "mobile": {
-          "performance": 53,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 50,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-09-10",
-        "mobile": {
-          "performance": 47,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 54,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-09-12",
-        "mobile": null,
-        "desktop": null
-      },
-      {
-        "date": "2026-09-13",
-        "mobile": {
-          "performance": 35,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 43,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
-      {
-        "date": "2026-09-14",
-        "mobile": {
-          "performance": 35,
-          "accessibility": 93,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 86,
           "accessibility": 93,
           "bestPractices": 100,
           "seo": 92

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Keystone Painting — August Update</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@700;800;900&display=swap">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: transparent;
+    color: #e0e0e0;
+    width: 816px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  #page-wrap {
+    background: #0e0e0e;
+    min-height: 1056px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: #c8f000;
+    padding: 22px 40px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .header-logo {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+  }
+  .header-divider {
+    width: 2px;
+    height: 52px;
+    background: rgba(0,0,0,0.2);
+    flex-shrink: 0;
+  }
+  .header-text {}
+  .header-brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #000;
+    opacity: 0.6;
+    margin-bottom: 2px;
+  }
+  .header-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #000;
+    line-height: 1;
+  }
+  .header-sub {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.55);
+    margin-top: 3px;
+  }
+  .header-right {
+    margin-left: auto;
+    text-align: right;
+  }
+  .header-date {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: #000;
+    letter-spacing: 0.04em;
+  }
+  .header-label {
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* ── BODY ── */
+  .body {
+    padding: 22px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* ── SECTION LABELS ── */
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #c8f000;
+    margin-bottom: 7px;
+  }
+
+  /* ── SUMMARY ── */
+  .summary-box {
+    background: #181818;
+    border: 1px solid #252525;
+    border-left: 3px solid #c8f000;
+    border-radius: 6px;
+    padding: 14px 18px;
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: #ccc;
+  }
+
+  /* ── KPI GRID ── */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .kpi-card {
+    background: #181818;
+    border: 1px solid #252525;
+    border-radius: 6px;
+    padding: 12px 14px;
+    text-align: center;
+  }
+  .kpi-value {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 38px;
+    color: #c8f000;
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+  .kpi-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+  .kpi-sub {
+    font-size: 10px;
+    color: #555;
+    margin-top: 3px;
+  }
+
+  /* ── TWO COL ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  /* ── WIN CARDS ── */
+  .win-card {
+    background: #181818;
+    border: 1px solid #252525;
+    border-radius: 6px;
+    padding: 16px 18px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .win-icon {
+    font-size: 22px;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .win-content {}
+  .win-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #e8e8e8;
+    margin-bottom: 3px;
+  }
+  .win-desc {
+    font-size: 11.5px;
+    color: #777;
+    line-height: 1.5;
+  }
+
+  /* ── CURRENT WORK ── */
+  .work-list {
+    background: #181818;
+    border: 1px solid #252525;
+    border-radius: 6px;
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .work-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .work-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #c8f000;
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+  .work-text {
+    font-size: 12.5px;
+    color: #bbb;
+    line-height: 1.5;
+  }
+  .work-text strong {
+    color: #e0e0e0;
+    font-weight: 600;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: #c8f000;
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+  .footer-left {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #000;
+  }
+  .footer-right {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.55);
+  }
+
+  @media print {
+    html, body { width: 100%; height: auto !important; min-height: unset !important; overflow: visible; display: block !important; background: #0e0e0e !important; }
+    @page { margin: 0; size: letter portrait; }
+    #page-wrap { page-break-inside: avoid; break-inside: avoid; }
+    .body { padding: 16px 40px 14px; gap: 12px; display: flex; }
+    .summary-box { padding: 11px 16px; font-size: 12px; line-height: 1.5; }
+    .header { padding: 18px 40px; }
+    .work-list { padding: 11px 16px; gap: 7px; }
+    .kpi-card { padding: 10px 12px; }
+    .kpi-value { font-size: 26px !important; }
+    .section-label { margin-bottom: 5px; }
+    .footer { margin-top: 0 !important; }
+  }
+</style>
+</head>
+<body>
+<div id="page-wrap">
+
+<!-- HEADER -->
+<div class="header">
+  <img src="/images/kg-icon.png" class="header-logo" alt="KillerGrowth" style="filter:brightness(0);border-radius:4px;">
+  <div class="header-divider"></div>
+  <div class="header-text">
+    <div class="header-brand">KillerGrowth</div>
+    <div class="header-title">Keystone Painting — August Update</div>
+    <div class="header-sub">Timnath, CO &nbsp;·&nbsp; killergrowth.com</div>
+  </div>
+  <div class="header-right">
+    <div class="header-label">Reporting Period</div>
+    <div class="header-date">July 2026</div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="body">
+
+  <!-- MONTHLY SUMMARY -->
+  <div>
+    <div class="section-label">Monthly Summary</div>
+    <div class="summary-box">
+      July was a productive build month for Keystone Painting. A conversion tracking audit was performed to validate tracking and attribution — no updates were needed. 9 new blog posts &amp; corresponding GBP posts were added with imagery. A google ad landing page was created for use upon google ad campaign launch. Tracking was added to populate the "Site Health" section of this dashboard, and the site captured 3 form submissions and 4 GBP calls in July — solid early signals with more expected as the new content indexes.<br><br>Lastly for reference here is the local <a href="https://www.localrankingtracker.com/campaign-report/c66cd7120ad32ab/b9b51b2f923f4a7/" target="_blank" style="color:#c8f000;font-weight:600;text-decoration:none;">heatmap report</a>.
+    </div>
+  </div>
+
+  <!-- KPIs -->
+  <div>
+    <div class="section-label">July KPIs</div>
+    <div class="kpi-grid" style="grid-template-columns: repeat(4, 1fr);">
+      <div class="kpi-card">
+        <div class="kpi-value" style="font-size:28px">13.4%</div>
+        <div class="kpi-label">AI Share of Voice</div>
+        <div class="kpi-sub">↑ +5% vs. last month</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value" style="font-size:28px">17.9%</div>
+        <div class="kpi-label">Local Pack SoLV</div>
+        <div class="kpi-sub">↑ +4% vs. last month</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value" style="font-size:38px">4</div>
+        <div class="kpi-label">GBP Calls</div>
+        <div class="kpi-sub">from Google listing</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value" style="font-size:38px">3</div>
+        <div class="kpi-label">Form Fills</div>
+        <div class="kpi-sub">via website</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI RANKING DETAIL -->
+  <div>
+    <div class="section-label">AI Search Visibility — Query Breakdown</div>
+    <div style="background:#181818;border:1px solid #252525;border-radius:6px;overflow:hidden;">
+      <div style="display:grid;grid-template-columns:1fr 80px 80px 80px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#555;padding:10px 18px;border-bottom:1px solid #1e1e1e;">
+        <span>Search Query</span><span style="text-align:center">ChatGPT</span><span style="text-align:center">Claude</span><span style="text-align:center">Gemini</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 80px 80px 80px;padding:9px 18px;border-bottom:1px solid #1a1a1a;align-items:center;">
+        <span style="font-size:12px;color:#bbb">&ldquo;Exterior painter Timnath, CO&rdquo;</span>
+        <span style="text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;color:#c8f000">#1</span>
+        <span style="text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;color:#c8f000">#5</span>
+        <span style="text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;color:#c8f000">#2</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 80px 80px 80px;padding:9px 18px;border-bottom:1px solid #1a1a1a;align-items:center;">
+        <span style="font-size:12px;color:#bbb">&ldquo;Exterior painter Severance, CO&rdquo;</span>
+        <span style="text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;color:#c8f000">#1</span>
+        <span style="text-align:center;font-size:11px;color:#444">not listed</span>
+        <span style="text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;color:#c8f000">#3</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 80px 80px 80px;padding:9px 18px;border-bottom:1px solid #1a1a1a;align-items:center;">
+        <span style="font-size:12px;color:#bbb">&ldquo;Exterior painter Windsor, CO&rdquo;</span>
+        <span style="text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;color:#888">#6</span>
+        <span style="text-align:center;font-size:11px;color:#444">not listed</span>
+        <span style="text-align:center;font-size:11px;color:#444">not listed</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CURRENT WORK -->
+  <div>
+    <div class="section-label">What We're Working On in August</div>
+    <div class="work-list">
+      <div class="work-item">
+        <div class="work-dot"></div>
+        <div class="work-text"><strong>Neighborhood Location Pages</strong> — Building out dedicated pages for Timnath Ranch, Timnath Lakes, Serratoga Falls, Kitchel Lake, Wildwing, and Trailside on Harmony to capture hyperlocal search traffic.</div>
+      </div>
+      <div class="work-item">
+        <div class="work-dot"></div>
+        <div class="work-text"><strong>Windsor AI Visibility</strong> — Keystone Painting isn’t showing up in ChatGPT or Claude results for Windsor, CO yet. Building the content and citations to change that.</div>
+      </div>
+      <div class="work-item">
+        <div class="work-dot"></div>
+        <div class="work-text"><strong>Google Ads Overview</strong> — <a href="https://docs.google.com/document/d/1Ve9paQuSmBUnXxSWBFO4TJ8Qq8-tLLyBWCd0YdhkCQg/edit?tab=t.0" target="_blank" style="color:#c8f000;font-weight:600;text-decoration:none;">Keyword and Competitor research</a> has been completed &amp; initial version of landing page has been created for future review.</div>
+      </div>
+      <div class="work-item">
+        <div class="work-dot"></div>
+        <div class="work-text"><strong>Content Indexing + Rankings</strong> — Monitoring Google ranking movement as the 8 new blog posts index over the next 4–6 weeks.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-left">KillerGrowth &nbsp;·&nbsp; Keystone Painting &nbsp;·&nbsp; August 2026</div>
+  <div class="footer-right">killit@killergrowth.com &nbsp;|&nbsp; killergrowth.com &nbsp;|&nbsp; (316) 330-1584</div>
+</div>
+
+</div><!-- /page-wrap -->
+</body>
+</html>

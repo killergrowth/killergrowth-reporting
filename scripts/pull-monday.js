@@ -44,7 +44,7 @@ const CLIENT_ALIASES = {
   'sunflower':      ['Sunflower Plumbing', 'Sunflower'],
   'dons-heating':   ["Don's Heating", "Dons Heating", "Don's Heating & Air", "Don's HVAC"],
   'good-to-be-clean': ['Good to Be Clean', 'Good To Be Clean', 'GTBC', 'Good2BClean'],
-  'timnath':        ['Timnath Painting', 'Timnath', 'Timnath Painting LLC'],
+  'timnath':        ['Keystone Painting', 'Timnath', 'Keystone Painting LLC'],
   'walnut-valley':  ['Walnut Valley Meat Market', 'Walnut Valley', 'WVMM'],
   'stewardright':   ['StewardRight', 'Steward Right'],
   'goff':           ['Goff Heating & Air', 'Goff Heating', 'Goff Heating and Air', 'Goff'],

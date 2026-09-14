@@ -3,15 +3,15 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "August 2026",
-  "generatedAt": "2026-09-14T13:27:20.703Z",
+  "generatedAt": "2026-09-04T17:46:34.408Z",
   "overview": {
-    "sessions": 47,
+    "sessions": 105,
     "sessionsDelta": 0,
     "leads": 0,
     "leadsDelta": null,
     "rankingsTop10": null,
     "rankingsDelta": null,
-    "gbpViews": 2284,
+    "gbpViews": 2149,
     "gbpViewsDelta": null,
     "adSpend": 511.13,
     "adImpressions": 25624,
@@ -66,54 +66,70 @@
         "label": "Jun 2026",
         "sessions": 47,
         "conversions": 0
+      },
+      {
+        "week": "202608",
+        "date": "2026-08-01",
+        "label": "Jul 2026",
+        "sessions": 94,
+        "conversions": 5
+      },
+      {
+        "week": "202609",
+        "date": "2026-09-01",
+        "label": "Aug 2026",
+        "sessions": 11,
+        "conversions": 0
       }
     ],
     "trafficChannels": [
       {
         "channel": "Direct",
-        "sessions": 26
+        "sessions": 92
       },
       {
         "channel": "Organic Search",
-        "sessions": 16
+        "sessions": 12
       },
       {
-        "channel": "Email",
-        "sessions": 4
-      },
-      {
-        "channel": "Unassigned",
+        "channel": "AI Assistant",
         "sessions": 1
       }
     ],
     "organicSearchSources": [
       {
         "source": "google",
-        "sessions": 13
+        "sessions": 11
       },
       {
-        "source": "yahoo",
-        "sessions": 3
+        "source": "duckduckgo",
+        "sessions": 1
       }
     ],
     "keywords": [],
     "dfsSnapshot": null,
     "leadSignals": {
-      "organicSessions": 16,
-      "phoneCalls": 0,
-      "formSubmissions": 0,
+      "organicSessions": 12,
+      "phoneCalls": 1,
+      "formSubmissions": 4,
+      "bookingClicks": 0,
       "emailClicks": 0,
       "ctaClicks": 0,
       "formStarts": 3,
       "byChannel": {
+        "form_submit": {
+          "Direct": 4
+        },
         "form_start": {
-          "Direct": 2,
+          "Direct": 3
+        },
+        "phone_click": {
           "Organic Search": 1
         }
       },
       "gbpCalls": 9,
-      "gbpWebsiteClicks": 89,
-      "gbpDirections": 196,
+      "gbpWebsiteClicks": 84,
+      "gbpDirections": 186,
       "formSubmissionsMonthly": [
         {
           "month": "Jul 2026",
@@ -178,9 +194,15 @@
       },
       {
         "month": "Sep 2026",
-        "adSpend": 261.71,
-        "adClicks": 4320,
+        "adSpend": 78.16,
+        "adClicks": 958,
         "adLeads": 0
+      },
+      {
+        "month": "Oct 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null
       }
     ],
     "spendByWeek": [],
@@ -204,11 +226,11 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 2284,
+    "totalViews": 2149,
     "calls": 9,
     "callsDelta": null,
-    "directions": 196,
-    "websiteClicks": 89,
+    "directions": 186,
+    "websiteClicks": 84,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1291,90 +1313,20 @@
       },
       {
         "date": "2026-09-02",
-        "views": 18,
+        "views": 0,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 2
+        "websiteClicks": 0
       },
       {
         "date": "2026-09-03",
-        "views": 23,
+        "views": 0,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 1
+        "websiteClicks": 0
       },
       {
         "date": "2026-09-04",
-        "views": 19,
-        "calls": 0,
-        "directions": 2,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-09-05",
-        "views": 8,
-        "calls": 0,
-        "directions": 6,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-09-06",
-        "views": 3,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-09-07",
-        "views": 9,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-09-08",
-        "views": 23,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-09-09",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-09-10",
-        "views": 28,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-09-11",
-        "views": 4,
-        "calls": 0,
-        "directions": 2,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-09-12",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-09-13",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-09-14",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1431,8 +1383,13 @@
       },
       {
         "month": "Sep 2026",
-        "reach": 55,
-        "engagements": 137
+        "reach": 30,
+        "engagements": 42
+      },
+      {
+        "month": "Oct 2026",
+        "reach": 0,
+        "engagements": 0
       }
     ],
     "reachByWeek": [],
@@ -1441,7 +1398,7 @@
         "platform": "Facebook",
         "reach": 176,
         "engagements": 2143,
-        "followers": 609
+        "followers": 608
       }
     ]
   },
@@ -1513,11 +1470,19 @@
       },
       {
         "month": "Sep 2026",
-        "adSpend": 261.71,
-        "adClicks": 4320,
+        "adSpend": 78.16,
+        "adClicks": 958,
         "adLeads": 0,
-        "adImpressions": 11434,
-        "adReach": 55
+        "adImpressions": 3155,
+        "adReach": 30
+      },
+      {
+        "month": "Oct 2026",
+        "adSpend": null,
+        "adClicks": null,
+        "adLeads": null,
+        "adImpressions": null,
+        "adReach": 0
       }
     ],
     "metrics": null,
@@ -1571,12 +1536,36 @@
         "label": "Jun 2026",
         "sessions": 47,
         "conversions": 0
+      },
+      {
+        "week": "202608",
+        "date": "2026-08-01",
+        "label": "Jul 2026",
+        "sessions": 94,
+        "conversions": 5
+      },
+      {
+        "week": "202609",
+        "date": "2026-09-01",
+        "label": "Aug 2026",
+        "sessions": 11,
+        "conversions": 0
       }
     ],
     "aiReferral": {
-      "total": 0,
-      "platforms": [],
-      "weeklyTrend": []
+      "total": 1,
+      "platforms": [
+        {
+          "name": "ChatGPT",
+          "sessions": 1
+        }
+      ],
+      "weeklyTrend": [
+        {
+          "week": "36",
+          "sessions": 1
+        }
+      ]
     },
     "vitals": {
       "lcp": null,
@@ -1763,20 +1752,145 @@
     "cfDailyPageViews": [],
     "cfMonthlyHistory": [],
     "psiScores": {
-      "mobile": {
-        "performance": 64,
-        "accessibility": 90,
-        "bestPractices": 92,
-        "seo": 100
-      },
-      "desktop": {
-        "performance": 87,
-        "accessibility": 90,
-        "bestPractices": 92,
-        "seo": 100
-      }
+      "mobile": null,
+      "desktop": null
     },
     "psiHistory": [
+      {
+        "date": "2026-05-31",
+        "mobile": {
+          "performance": 17,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 66,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-06-01",
+        "mobile": {
+          "performance": 39,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 92,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-06-02",
+        "mobile": {
+          "performance": 56,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 84,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-06-03",
+        "mobile": {
+          "performance": 57,
+          "accessibility": 90,
+          "bestPractices": 58,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 74,
+          "accessibility": 90,
+          "bestPractices": 58,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-06-04",
+        "mobile": {
+          "performance": 52,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 74,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-06-05",
+        "mobile": {
+          "performance": 48,
+          "accessibility": 90,
+          "bestPractices": 73,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 80,
+          "accessibility": 90,
+          "bestPractices": 73,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-06-06",
+        "mobile": {
+          "performance": 51,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 68,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-06-07",
+        "mobile": {
+          "performance": 40,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 74,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-06-08",
+        "mobile": {
+          "performance": 54,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 75,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 92
+        }
+      },
       {
         "date": "2026-06-09",
         "mobile": {
@@ -2934,161 +3048,12 @@
       },
       {
         "date": "2026-09-04",
-        "mobile": {
-          "performance": 74,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 94,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 100
-        }
-      },
-      {
-        "date": "2026-09-05",
-        "mobile": {
-          "performance": 66,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 96,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 100
-        }
-      },
-      {
-        "date": "2026-09-06",
-        "mobile": {
-          "performance": 66,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 71,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 100
-        }
-      },
-      {
-        "date": "2026-09-07",
-        "mobile": {
-          "performance": 66,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 96,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 100
-        }
-      },
-      {
-        "date": "2026-09-08",
-        "mobile": {
-          "performance": 67,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 90,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 100
-        }
-      },
-      {
-        "date": "2026-09-09",
-        "mobile": {
-          "performance": 66,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 100
-        },
+        "mobile": null,
         "desktop": null
-      },
-      {
-        "date": "2026-09-10",
-        "mobile": {
-          "performance": 66,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 92,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 100
-        }
-      },
-      {
-        "date": "2026-09-12",
-        "mobile": {
-          "performance": 65,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 96,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 100
-        }
-      },
-      {
-        "date": "2026-09-13",
-        "mobile": {
-          "performance": 65,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 96,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 100
-        }
-      },
-      {
-        "date": "2026-09-14",
-        "mobile": {
-          "performance": 64,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 87,
-          "accessibility": 90,
-          "bestPractices": 92,
-          "seo": 100
-        }
       }
     ]
   },
   "workLog": [
-    {
-      "id": "12503591326",
-      "title": "StewardRight — first comments",
-      "status": "Done",
-      "date": "2026-09-10",
-      "owner": "Tyler Brickley",
-      "group": "Website Build (Tyler B)",
-      "source": "monday"
-    },
     {
       "id": "11902031121",
       "title": "Follow up with Irah for content for steward right for the week of 5/11.",
