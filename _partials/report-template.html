@@ -562,10 +562,7 @@ canvas{max-width:100%!important;width:100%!important}
       <section id="website" class="ms" data-module="website">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;">
           <div class="sh" style="margin-bottom:0"><span class="sb2">WEB</span><span class="st">Site Health</span></div>
-          <div class="psi-tw">
-            <button class="psi-t active" id="psi-m" onclick="setPsi('mobile')">Mobile</button>
-            <button class="psi-t" id="psi-d" onclick="setPsi('desktop')">Desktop</button>
-          </div>
+
         </div>
 
         <!-- FATHOM ANALYTICS (PKG001/PKG002 when fathomSiteId is set) -->
@@ -608,6 +605,7 @@ canvas{max-width:100%!important;width:100%!important}
           </div>
         </div>
 
+        <div id="fathom-live-btn-wrap"></div>
         <div style="font-size:12px;color:var(--sub);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;margin-top:4px">Page Speed Scores</div>
         <div class="g3" id="psi-wrap"></div>
       </section>
@@ -1695,6 +1693,7 @@ function renderWebsite(website,seo){
   }).join('');}
 else{el('web-ch').innerHTML='<div class="du"><div class="du-t">Data updating.</div></div>';}
 PSI_DATA=website.psiScores||{};renderPSI(PSI_VIEW||'mobile');
+(function(){var cfg=window.CLIENT_CONFIG||{};var btnWrap=el('fathom-live-btn-wrap');if(btnWrap&&cfg.fathomShareUrl){btnWrap.style.marginBottom='20px';btnWrap.innerHTML='<a href="'+cfg.fathomShareUrl+'" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:rgba(200,240,0,0.08);border:1px solid rgba(200,240,0,0.25);color:var(--lime);font-size:13px;font-weight:600;padding:10px 18px;border-radius:8px;text-decoration:none;transition:background .15s;">&#8599; View Live Analytics</a>';}})();
   var _useFathom=website.analyticsSource==='fathom'||!!(website.fathomSiteId);
   if(_useFathom){renderFathomAnalytics(Object.assign({},website,{analyticsSource:'fathom'}));}else{renderCFAnalytics(website);}
 }
