@@ -3,7 +3,7 @@
   "slug": "dons-heating",
   "logoPath": null,
   "period": "August 2026",
-  "generatedAt": "2026-09-13T12:25:18.610Z",
+  "generatedAt": "2026-09-14T13:28:30.945Z",
   "overview": {
     "sessions": 884,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 14,
     "rankingsDelta": null,
-    "gbpViews": 4397,
+    "gbpViews": 4436,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -421,7 +421,7 @@
         }
       },
       "gbpCalls": 489,
-      "gbpWebsiteClicks": 249,
+      "gbpWebsiteClicks": 251,
       "gbpDirections": 256
     }
   },
@@ -601,11 +601,11 @@
   },
   "gbp": {
     "locationName": "El Dorado",
-    "totalViews": 4397,
+    "totalViews": 4436,
     "calls": 489,
     "callsDelta": null,
     "directions": 256,
-    "websiteClicks": 249,
+    "websiteClicks": 251,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1744,14 +1744,14 @@
       },
       {
         "date": "2026-09-10",
-        "views": 0,
+        "views": 33,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 2
       },
       {
         "date": "2026-09-11",
-        "views": 0,
+        "views": 6,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1769,6 +1769,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-09-14",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -1777,10 +1784,10 @@
   },
   "gbp2": {
     "locationName": "Emporia",
-    "totalViews": 757,
+    "totalViews": 772,
     "calls": 42,
-    "directions": 153,
-    "websiteClicks": 47,
+    "directions": 156,
+    "websiteClicks": 48,
     "viewsOverTime": [
       {
         "date": "2026-04-01",
@@ -2918,16 +2925,16 @@
       },
       {
         "date": "2026-09-10",
-        "views": 0,
+        "views": 12,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-09-11",
-        "views": 0,
+        "views": 3,
         "calls": 0,
-        "directions": 0,
+        "directions": 3,
         "websiteClicks": 0
       },
       {
@@ -2943,6 +2950,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-09-14",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -2950,7 +2964,7 @@
   },
   "gbp3": {
     "locationName": "Hillsboro",
-    "totalViews": 1312,
+    "totalViews": 1319,
     "calls": 88,
     "directions": 244,
     "websiteClicks": 59,
@@ -4091,14 +4105,14 @@
       },
       {
         "date": "2026-09-10",
-        "views": 0,
+        "views": 6,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-09-11",
-        "views": 0,
+        "views": 1,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -4112,6 +4126,13 @@
       },
       {
         "date": "2026-09-13",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-09-14",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -4166,7 +4187,7 @@
       {
         "month": "Sep 2026",
         "reach": 63,
-        "engagements": 51
+        "engagements": 52
       }
     ],
     "reachByWeek": [],
@@ -4444,34 +4465,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 63,
+        "performance": 53,
         "accessibility": 90,
         "bestPractices": 96,
         "seo": 92
       },
       "desktop": {
-        "performance": 61,
+        "performance": 69,
         "accessibility": 90,
         "bestPractices": 96,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-06-02",
-        "mobile": {
-          "performance": 59,
-          "accessibility": 90,
-          "bestPractices": 73,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 92,
-          "accessibility": 91,
-          "bestPractices": 73,
-          "seo": 100
-        }
-      },
       {
         "date": "2026-06-03",
         "mobile": {
@@ -5726,6 +5732,21 @@
           "bestPractices": 96,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-09-14",
+        "mobile": {
+          "performance": 53,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 69,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "seo": 92
+        }
       }
     ]
   },
@@ -6024,15 +6045,6 @@
       "status": "Done",
       "date": "2026-04-09",
       "owner": "Phil Anderson",
-      "group": "Completed",
-      "source": "monday"
-    },
-    {
-      "id": "11064957027",
-      "title": "Don's Heating and Air Budget",
-      "status": "Done",
-      "date": "2026-03-17",
-      "owner": "Phil Anderson, Samuel McVay",
       "group": "Completed",
       "source": "monday"
     }
