@@ -225,6 +225,21 @@ jobs:
       # Add a step like the one above for each new client.
       # Copy the step, change the client slug and the if condition.
 
+
+      - name: Pull data u2014 Keystone Painting
+        if: ${{ github.event.inputs.client == '' || github.event.inputs.client == 'keystone' }}
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          DATAFORSEO_LOGIN:            ${{ secrets.DATAFORSEO_LOGIN }}
+          DATAFORSEO_PASSWORD:         ${{ secrets.DATAFORSEO_PASSWORD }}
+          PAGESPEED_API_KEY:           ${{ secrets.PAGESPEED_API_KEY }}
+          GBP_CLIENT_ID:               ${{ secrets.GBP_CLIENT_ID }}
+          GBP_CLIENT_SECRET:           ${{ secrets.GBP_CLIENT_SECRET }}
+          GBP_REFRESH_TOKEN:           ${{ secrets.GBP_REFRESH_TOKEN }}
+          LF_API_KEY:                  ${{ secrets.LF_API_KEY }}
+          FATHOM_API_TOKEN:            ${{ secrets.FATHOM_API_TOKEN }}
+        run: node scripts/build-report.js keystone
+
       - name: Build site
         run: node build.js
 
