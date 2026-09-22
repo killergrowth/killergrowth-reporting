@@ -3,13 +3,13 @@
   "slug": "goff",
   "logoPath": null,
   "period": "August 2026",
-  "generatedAt": "2026-09-14T13:31:41.285Z",
+  "generatedAt": "2026-09-22T12:15:59.343Z",
   "overview": {
-    "sessions": null,
-    "sessionsDelta": null,
+    "sessions": 2156,
+    "sessionsDelta": 0,
     "leads": null,
     "leadsDelta": null,
-    "rankingsTop10": null,
+    "rankingsTop10": 22,
     "rankingsDelta": null,
     "gbpViews": null,
     "gbpViewsDelta": null,
@@ -24,12 +24,560 @@
     "avgRating": null
   },
   "seo": {
-    "organicSessions": [],
-    "trafficChannels": [],
-    "organicSearchSources": [],
-    "keywords": [],
+    "organicSessions": [
+      {
+        "week": "202305",
+        "date": "2023-05-01",
+        "label": "May 2023",
+        "sessions": 274,
+        "conversions": 0
+      },
+      {
+        "week": "202306",
+        "date": "2023-06-01",
+        "label": "Jun 2023",
+        "sessions": 665,
+        "conversions": 7
+      },
+      {
+        "week": "202307",
+        "date": "2023-07-01",
+        "label": "Jul 2023",
+        "sessions": 663,
+        "conversions": 310
+      },
+      {
+        "week": "202308",
+        "date": "2023-08-01",
+        "label": "Aug 2023",
+        "sessions": 547,
+        "conversions": 297
+      },
+      {
+        "week": "202309",
+        "date": "2023-09-01",
+        "label": "Sep 2023",
+        "sessions": 627,
+        "conversions": 282
+      },
+      {
+        "week": "202310",
+        "date": "2023-10-01",
+        "label": "Oct 2023",
+        "sessions": 747,
+        "conversions": 497
+      },
+      {
+        "week": "202311",
+        "date": "2023-11-01",
+        "label": "Nov 2023",
+        "sessions": 1274,
+        "conversions": 428
+      },
+      {
+        "week": "202312",
+        "date": "2023-12-01",
+        "label": "Dec 2023",
+        "sessions": 3258,
+        "conversions": 270
+      },
+      {
+        "week": "202401",
+        "date": "2024-01-01",
+        "label": "Jan 2024",
+        "sessions": 3872,
+        "conversions": 550
+      },
+      {
+        "week": "202402",
+        "date": "2024-02-01",
+        "label": "Feb 2024",
+        "sessions": 10730,
+        "conversions": 220
+      },
+      {
+        "week": "202403",
+        "date": "2024-03-01",
+        "label": "Mar 2024",
+        "sessions": 47883,
+        "conversions": 256
+      },
+      {
+        "week": "202404",
+        "date": "2024-04-01",
+        "label": "Apr 2024",
+        "sessions": 19369,
+        "conversions": 328
+      },
+      {
+        "week": "202405",
+        "date": "2024-05-01",
+        "label": "May 2024",
+        "sessions": 26726,
+        "conversions": 418
+      },
+      {
+        "week": "202406",
+        "date": "2024-06-01",
+        "label": "Jun 2024",
+        "sessions": 2537,
+        "conversions": 476
+      },
+      {
+        "week": "202407",
+        "date": "2024-07-01",
+        "label": "Jul 2024",
+        "sessions": 3048,
+        "conversions": 755
+      },
+      {
+        "week": "202408",
+        "date": "2024-08-01",
+        "label": "Aug 2024",
+        "sessions": 2570,
+        "conversions": 971
+      },
+      {
+        "week": "202409",
+        "date": "2024-09-01",
+        "label": "Sep 2024",
+        "sessions": 2394,
+        "conversions": 1093
+      },
+      {
+        "week": "202410",
+        "date": "2024-10-01",
+        "label": "Oct 2024",
+        "sessions": 3082,
+        "conversions": 1190
+      },
+      {
+        "week": "202411",
+        "date": "2024-11-01",
+        "label": "Nov 2024",
+        "sessions": 2664,
+        "conversions": 1543
+      },
+      {
+        "week": "202412",
+        "date": "2024-12-01",
+        "label": "Dec 2024",
+        "sessions": 3011,
+        "conversions": 584
+      },
+      {
+        "week": "202501",
+        "date": "2025-01-01",
+        "label": "Jan 2025",
+        "sessions": 3399,
+        "conversions": 580
+      },
+      {
+        "week": "202502",
+        "date": "2025-02-01",
+        "label": "Feb 2025",
+        "sessions": 3715,
+        "conversions": 832
+      },
+      {
+        "week": "202503",
+        "date": "2025-03-01",
+        "label": "Mar 2025",
+        "sessions": 3904,
+        "conversions": 861
+      },
+      {
+        "week": "202504",
+        "date": "2025-04-01",
+        "label": "Apr 2025",
+        "sessions": 4392,
+        "conversions": 1191
+      },
+      {
+        "week": "202505",
+        "date": "2025-05-01",
+        "label": "May 2025",
+        "sessions": 4496,
+        "conversions": 1199
+      },
+      {
+        "week": "202506",
+        "date": "2025-06-01",
+        "label": "Jun 2025",
+        "sessions": 4730,
+        "conversions": 1326
+      },
+      {
+        "week": "202507",
+        "date": "2025-07-01",
+        "label": "Jul 2025",
+        "sessions": 3891,
+        "conversions": 1141
+      },
+      {
+        "week": "202508",
+        "date": "2025-08-01",
+        "label": "Aug 2025",
+        "sessions": 4738,
+        "conversions": 1215
+      },
+      {
+        "week": "202509",
+        "date": "2025-09-01",
+        "label": "Sep 2025",
+        "sessions": 2560,
+        "conversions": 637
+      },
+      {
+        "week": "202510",
+        "date": "2025-10-01",
+        "label": "Oct 2025",
+        "sessions": 2273,
+        "conversions": 515
+      },
+      {
+        "week": "202511",
+        "date": "2025-11-01",
+        "label": "Nov 2025",
+        "sessions": 2467,
+        "conversions": 401
+      },
+      {
+        "week": "202512",
+        "date": "2025-12-01",
+        "label": "Dec 2025",
+        "sessions": 3009,
+        "conversions": 521
+      },
+      {
+        "week": "202601",
+        "date": "2026-01-01",
+        "label": "Jan 2026",
+        "sessions": 2384,
+        "conversions": 264
+      },
+      {
+        "week": "202602",
+        "date": "2026-02-01",
+        "label": "Feb 2026",
+        "sessions": 2159,
+        "conversions": 299
+      },
+      {
+        "week": "202603",
+        "date": "2026-03-01",
+        "label": "Mar 2026",
+        "sessions": 2440,
+        "conversions": 386
+      },
+      {
+        "week": "202604",
+        "date": "2026-04-01",
+        "label": "Apr 2026",
+        "sessions": 2314,
+        "conversions": 992
+      },
+      {
+        "week": "202605",
+        "date": "2026-05-01",
+        "label": "May 2026",
+        "sessions": 2354,
+        "conversions": 782
+      },
+      {
+        "week": "202606",
+        "date": "2026-06-01",
+        "label": "Jun 2026",
+        "sessions": 2242,
+        "conversions": 541
+      },
+      {
+        "week": "202607",
+        "date": "2026-07-01",
+        "label": "Jul 2026",
+        "sessions": 2495,
+        "conversions": 445
+      },
+      {
+        "week": "202608",
+        "date": "2026-08-01",
+        "label": "Aug 2026",
+        "sessions": 2156,
+        "conversions": 317
+      }
+    ],
+    "trafficChannels": [
+      {
+        "channel": "Direct",
+        "sessions": 1087
+      },
+      {
+        "channel": "Paid Search",
+        "sessions": 459
+      },
+      {
+        "channel": "Organic Search",
+        "sessions": 409
+      },
+      {
+        "channel": "Cross-network",
+        "sessions": 75
+      },
+      {
+        "channel": "Referral",
+        "sessions": 43
+      },
+      {
+        "channel": "Unassigned",
+        "sessions": 40
+      },
+      {
+        "channel": "Organic Social",
+        "sessions": 18
+      },
+      {
+        "channel": "Paid Other",
+        "sessions": 16
+      },
+      {
+        "channel": "AI Assistant",
+        "sessions": 10
+      }
+    ],
+    "organicSearchSources": [
+      {
+        "source": "google",
+        "sessions": 343
+      },
+      {
+        "source": "bing",
+        "sessions": 37
+      },
+      {
+        "source": "google.com",
+        "sessions": 10
+      },
+      {
+        "source": "duckduckgo",
+        "sessions": 8
+      },
+      {
+        "source": "yahoo",
+        "sessions": 5
+      },
+      {
+        "source": "duckduckgo_organic",
+        "sessions": 2
+      },
+      {
+        "source": "qwant.com",
+        "sessions": 2
+      },
+      {
+        "source": "chatgpt.com",
+        "sessions": 1
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "goff heating",
+        "clicks": 55,
+        "impressions": 278,
+        "ctr": 19.8,
+        "position": 3.1
+      },
+      {
+        "keyword": "goff heating and air conditioning",
+        "clicks": 16,
+        "impressions": 125,
+        "ctr": 12.8,
+        "position": 1.9
+      },
+      {
+        "keyword": "goff heating and cooling",
+        "clicks": 8,
+        "impressions": 31,
+        "ctr": 25.8,
+        "position": 3.4
+      },
+      {
+        "keyword": "goff hvac",
+        "clicks": 3,
+        "impressions": 16,
+        "ctr": 18.8,
+        "position": 2.4
+      },
+      {
+        "keyword": "hvac near me",
+        "clicks": 3,
+        "impressions": 93,
+        "ctr": 3.2,
+        "position": 4.4
+      },
+      {
+        "keyword": "bioforce defender",
+        "clicks": 2,
+        "impressions": 35,
+        "ctr": 5.7,
+        "position": 2.9
+      },
+      {
+        "keyword": "goff plumbing",
+        "clicks": 2,
+        "impressions": 56,
+        "ctr": 3.6,
+        "position": 12.5
+      },
+      {
+        "keyword": "hvac south bend",
+        "clicks": 2,
+        "impressions": 184,
+        "ctr": 1.1,
+        "position": 9.1
+      },
+      {
+        "keyword": "sump pump repair near me",
+        "clicks": 2,
+        "impressions": 4,
+        "ctr": 50,
+        "position": 8.5
+      },
+      {
+        "keyword": "best hvac companies near me",
+        "clicks": 1,
+        "impressions": 11,
+        "ctr": 9.1,
+        "position": 14.2
+      },
+      {
+        "keyword": "bioforce defender uv air cleaning system",
+        "clicks": 1,
+        "impressions": 17,
+        "ctr": 5.9,
+        "position": 3.8
+      },
+      {
+        "keyword": "bristol plumbing and heating",
+        "clicks": 1,
+        "impressions": 12,
+        "ctr": 8.3,
+        "position": 9.6
+      },
+      {
+        "keyword": "central air conditioning unit",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 4
+      },
+      {
+        "keyword": "find hvac technician near me",
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 50,
+        "position": 1
+      },
+      {
+        "keyword": "gas water heaters",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 1
+      },
+      {
+        "keyword": "geoff plumbing",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 1
+      },
+      {
+        "keyword": "goff heating and air",
+        "clicks": 1,
+        "impressions": 66,
+        "ctr": 1.5,
+        "position": 7.9
+      },
+      {
+        "keyword": "heating and air conditioning businesses",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 4
+      },
+      {
+        "keyword": "heating and air conditioning near me",
+        "clicks": 1,
+        "impressions": 20,
+        "ctr": 5,
+        "position": 8.9
+      },
+      {
+        "keyword": "heating and cooling south bend",
+        "clicks": 1,
+        "impressions": 2127,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keyword": "how long does a furnace tune up take",
+        "clicks": 1,
+        "impressions": 102,
+        "ctr": 1,
+        "position": 1.5
+      },
+      {
+        "keyword": "how many co detectors do i need",
+        "clicks": 1,
+        "impressions": 16,
+        "ctr": 6.3,
+        "position": 22.3
+      },
+      {
+        "keyword": "hvac companies hiring apprentices near me",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 4
+      },
+      {
+        "keyword": "hvac contractors near me",
+        "clicks": 1,
+        "impressions": 21,
+        "ctr": 4.8,
+        "position": 8.3
+      },
+      {
+        "keyword": "hvac filter change",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 7
+      }
+    ],
     "dfsSnapshot": null,
-    "leadSignals": null
+    "leadSignals": {
+      "organicSessions": 409,
+      "phoneCalls": 269,
+      "formSubmissions": 0,
+      "bookingClicks": 0,
+      "emailClicks": 0,
+      "ctaClicks": 0,
+      "formStarts": 0,
+      "byChannel": {
+        "phone_call": {
+          "Unassigned": 158,
+          "Organic Search": 38,
+          "Direct": 29,
+          "Paid Search": 20,
+          "Cross-network": 16,
+          "Referral": 8
+        }
+      },
+      "gbpCalls": 0,
+      "gbpWebsiteClicks": 0,
+      "gbpDirections": 0
+    }
   },
   "ads": {
     "monthlyBreakdown": [],
@@ -74,11 +622,322 @@
   },
   "meta": null,
   "website": {
-    "sessionsOverTime": [],
+    "sessionsOverTime": [
+      {
+        "week": "202305",
+        "date": "2023-05-01",
+        "label": "May 2023",
+        "sessions": 274,
+        "conversions": 0
+      },
+      {
+        "week": "202306",
+        "date": "2023-06-01",
+        "label": "Jun 2023",
+        "sessions": 665,
+        "conversions": 7
+      },
+      {
+        "week": "202307",
+        "date": "2023-07-01",
+        "label": "Jul 2023",
+        "sessions": 663,
+        "conversions": 310
+      },
+      {
+        "week": "202308",
+        "date": "2023-08-01",
+        "label": "Aug 2023",
+        "sessions": 547,
+        "conversions": 297
+      },
+      {
+        "week": "202309",
+        "date": "2023-09-01",
+        "label": "Sep 2023",
+        "sessions": 627,
+        "conversions": 282
+      },
+      {
+        "week": "202310",
+        "date": "2023-10-01",
+        "label": "Oct 2023",
+        "sessions": 747,
+        "conversions": 497
+      },
+      {
+        "week": "202311",
+        "date": "2023-11-01",
+        "label": "Nov 2023",
+        "sessions": 1274,
+        "conversions": 428
+      },
+      {
+        "week": "202312",
+        "date": "2023-12-01",
+        "label": "Dec 2023",
+        "sessions": 3258,
+        "conversions": 270
+      },
+      {
+        "week": "202401",
+        "date": "2024-01-01",
+        "label": "Jan 2024",
+        "sessions": 3872,
+        "conversions": 550
+      },
+      {
+        "week": "202402",
+        "date": "2024-02-01",
+        "label": "Feb 2024",
+        "sessions": 10730,
+        "conversions": 220
+      },
+      {
+        "week": "202403",
+        "date": "2024-03-01",
+        "label": "Mar 2024",
+        "sessions": 47883,
+        "conversions": 256
+      },
+      {
+        "week": "202404",
+        "date": "2024-04-01",
+        "label": "Apr 2024",
+        "sessions": 19369,
+        "conversions": 328
+      },
+      {
+        "week": "202405",
+        "date": "2024-05-01",
+        "label": "May 2024",
+        "sessions": 26726,
+        "conversions": 418
+      },
+      {
+        "week": "202406",
+        "date": "2024-06-01",
+        "label": "Jun 2024",
+        "sessions": 2537,
+        "conversions": 476
+      },
+      {
+        "week": "202407",
+        "date": "2024-07-01",
+        "label": "Jul 2024",
+        "sessions": 3048,
+        "conversions": 755
+      },
+      {
+        "week": "202408",
+        "date": "2024-08-01",
+        "label": "Aug 2024",
+        "sessions": 2570,
+        "conversions": 971
+      },
+      {
+        "week": "202409",
+        "date": "2024-09-01",
+        "label": "Sep 2024",
+        "sessions": 2394,
+        "conversions": 1093
+      },
+      {
+        "week": "202410",
+        "date": "2024-10-01",
+        "label": "Oct 2024",
+        "sessions": 3082,
+        "conversions": 1190
+      },
+      {
+        "week": "202411",
+        "date": "2024-11-01",
+        "label": "Nov 2024",
+        "sessions": 2664,
+        "conversions": 1543
+      },
+      {
+        "week": "202412",
+        "date": "2024-12-01",
+        "label": "Dec 2024",
+        "sessions": 3011,
+        "conversions": 584
+      },
+      {
+        "week": "202501",
+        "date": "2025-01-01",
+        "label": "Jan 2025",
+        "sessions": 3399,
+        "conversions": 580
+      },
+      {
+        "week": "202502",
+        "date": "2025-02-01",
+        "label": "Feb 2025",
+        "sessions": 3715,
+        "conversions": 832
+      },
+      {
+        "week": "202503",
+        "date": "2025-03-01",
+        "label": "Mar 2025",
+        "sessions": 3904,
+        "conversions": 861
+      },
+      {
+        "week": "202504",
+        "date": "2025-04-01",
+        "label": "Apr 2025",
+        "sessions": 4392,
+        "conversions": 1191
+      },
+      {
+        "week": "202505",
+        "date": "2025-05-01",
+        "label": "May 2025",
+        "sessions": 4496,
+        "conversions": 1199
+      },
+      {
+        "week": "202506",
+        "date": "2025-06-01",
+        "label": "Jun 2025",
+        "sessions": 4730,
+        "conversions": 1326
+      },
+      {
+        "week": "202507",
+        "date": "2025-07-01",
+        "label": "Jul 2025",
+        "sessions": 3891,
+        "conversions": 1141
+      },
+      {
+        "week": "202508",
+        "date": "2025-08-01",
+        "label": "Aug 2025",
+        "sessions": 4738,
+        "conversions": 1215
+      },
+      {
+        "week": "202509",
+        "date": "2025-09-01",
+        "label": "Sep 2025",
+        "sessions": 2560,
+        "conversions": 637
+      },
+      {
+        "week": "202510",
+        "date": "2025-10-01",
+        "label": "Oct 2025",
+        "sessions": 2273,
+        "conversions": 515
+      },
+      {
+        "week": "202511",
+        "date": "2025-11-01",
+        "label": "Nov 2025",
+        "sessions": 2467,
+        "conversions": 401
+      },
+      {
+        "week": "202512",
+        "date": "2025-12-01",
+        "label": "Dec 2025",
+        "sessions": 3009,
+        "conversions": 521
+      },
+      {
+        "week": "202601",
+        "date": "2026-01-01",
+        "label": "Jan 2026",
+        "sessions": 2384,
+        "conversions": 264
+      },
+      {
+        "week": "202602",
+        "date": "2026-02-01",
+        "label": "Feb 2026",
+        "sessions": 2159,
+        "conversions": 299
+      },
+      {
+        "week": "202603",
+        "date": "2026-03-01",
+        "label": "Mar 2026",
+        "sessions": 2440,
+        "conversions": 386
+      },
+      {
+        "week": "202604",
+        "date": "2026-04-01",
+        "label": "Apr 2026",
+        "sessions": 2314,
+        "conversions": 992
+      },
+      {
+        "week": "202605",
+        "date": "2026-05-01",
+        "label": "May 2026",
+        "sessions": 2354,
+        "conversions": 782
+      },
+      {
+        "week": "202606",
+        "date": "2026-06-01",
+        "label": "Jun 2026",
+        "sessions": 2242,
+        "conversions": 541
+      },
+      {
+        "week": "202607",
+        "date": "2026-07-01",
+        "label": "Jul 2026",
+        "sessions": 2495,
+        "conversions": 445
+      },
+      {
+        "week": "202608",
+        "date": "2026-08-01",
+        "label": "Aug 2026",
+        "sessions": 2156,
+        "conversions": 317
+      }
+    ],
     "aiReferral": {
-      "total": 0,
-      "platforms": [],
-      "weeklyTrend": []
+      "total": 11,
+      "platforms": [
+        {
+          "name": "ChatGPT",
+          "sessions": 10
+        },
+        {
+          "name": "Gemini",
+          "sessions": 1
+        }
+      ],
+      "weeklyTrend": [
+        {
+          "week": "31",
+          "sessions": 1
+        },
+        {
+          "week": "33",
+          "sessions": 5
+        },
+        {
+          "week": "34",
+          "sessions": 3
+        },
+        {
+          "week": "35",
+          "sessions": 1
+        },
+        {
+          "week": "36",
+          "sessions": 1
+        }
+      ]
     },
     "vitals": {
       "lcp": null,
@@ -108,13 +967,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 48,
+        "performance": 47,
         "accessibility": 81,
         "bestPractices": 96,
         "seo": 92
       },
       "desktop": {
-        "performance": 76,
+        "performance": 81,
         "accessibility": 85,
         "bestPractices": 96,
         "seo": 92
@@ -961,6 +1820,21 @@
         },
         "desktop": {
           "performance": 76,
+          "accessibility": 85,
+          "bestPractices": 96,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-09-22",
+        "mobile": {
+          "performance": 47,
+          "accessibility": 81,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 81,
           "accessibility": 85,
           "bestPractices": 96,
           "seo": 92

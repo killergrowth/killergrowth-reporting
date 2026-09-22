@@ -1,11 +1,11 @@
 {
   "client": "Keystone Painting",
-  "slug": "timnath",
+  "slug": "keystone",
   "logoPath": null,
   "period": "August 2026",
-  "generatedAt": "2026-09-07T11:14:33.436Z",
+  "generatedAt": "2026-09-22T12:23:22.820Z",
   "overview": {
-    "sessions": 726,
+    "sessions": 693,
     "sessionsDelta": 0,
     "leads": null,
     "leadsDelta": null,
@@ -28,47 +28,40 @@
       {
         "week": "202605",
         "date": "2026-05-01",
-        "label": "Apr 2026",
+        "label": "May 2026",
         "sessions": 125,
         "conversions": 3
       },
       {
         "week": "202606",
         "date": "2026-06-01",
-        "label": "May 2026",
+        "label": "Jun 2026",
         "sessions": 189,
         "conversions": 1
       },
       {
         "week": "202607",
         "date": "2026-07-01",
-        "label": "Jun 2026",
+        "label": "Jul 2026",
         "sessions": 120,
         "conversions": 8
       },
       {
         "week": "202608",
         "date": "2026-08-01",
-        "label": "Jul 2026",
+        "label": "Aug 2026",
         "sessions": 693,
         "conversions": 2
-      },
-      {
-        "week": "202609",
-        "date": "2026-09-01",
-        "label": "Aug 2026",
-        "sessions": 33,
-        "conversions": 0
       }
     ],
     "trafficChannels": [
       {
         "channel": "Direct",
-        "sessions": 566
+        "sessions": 536
       },
       {
         "channel": "Organic Search",
-        "sessions": 118
+        "sessions": 115
       },
       {
         "channel": "Referral",
@@ -94,7 +87,7 @@
     "organicSearchSources": [
       {
         "source": "google",
-        "sessions": 103
+        "sessions": 100
       },
       {
         "source": "bing",
@@ -115,7 +108,7 @@
     ],
     "keywords": [
       {
-        "keyword": "Keystone Painting",
+        "keyword": "timnath painting",
         "clicks": 3,
         "impressions": 23,
         "ctr": 13,
@@ -166,9 +159,9 @@
       {
         "keyword": "basement finishing timnath",
         "clicks": 0,
-        "impressions": 11,
+        "impressions": 9,
         "ctr": 0,
-        "position": 77.8
+        "position": 79.4
       },
       {
         "keyword": "basement painting near me",
@@ -215,9 +208,9 @@
       {
         "keyword": "best commercial exterior paint fort collins",
         "clicks": 0,
-        "impressions": 18,
+        "impressions": 17,
         "ctr": 0,
-        "position": 30.7
+        "position": 31.7
       },
       {
         "keyword": "best exterior painters",
@@ -884,17 +877,17 @@
       ]
     },
     "leadSignals": {
-      "organicSessions": 118,
+      "organicSessions": 115,
       "phoneCalls": 0,
-      "formSubmissions": 37,
+      "formSubmissions": 36,
       "bookingClicks": 0,
       "emailClicks": 0,
       "ctaClicks": 20,
-      "formStarts": 13,
+      "formStarts": 12,
       "byChannel": {
         "form_submit": {
           "Organic Search": 30,
-          "Direct": 5
+          "Direct": 4
         },
         "cta_click": {
           "Direct": 14,
@@ -903,7 +896,7 @@
           "AI Assistant": 1
         },
         "form_start": {
-          "Direct": 8,
+          "Direct": 7,
           "Organic Search": 3,
           "Referral": 2
         },
@@ -2320,37 +2313,30 @@
       {
         "week": "202605",
         "date": "2026-05-01",
-        "label": "Apr 2026",
+        "label": "May 2026",
         "sessions": 125,
         "conversions": 3
       },
       {
         "week": "202606",
         "date": "2026-06-01",
-        "label": "May 2026",
+        "label": "Jun 2026",
         "sessions": 189,
         "conversions": 1
       },
       {
         "week": "202607",
         "date": "2026-07-01",
-        "label": "Jun 2026",
+        "label": "Jul 2026",
         "sessions": 120,
         "conversions": 8
       },
       {
         "week": "202608",
         "date": "2026-08-01",
-        "label": "Jul 2026",
+        "label": "Aug 2026",
         "sessions": 693,
         "conversions": 2
-      },
-      {
-        "week": "202609",
-        "date": "2026-09-01",
-        "label": "Aug 2026",
-        "sessions": 33,
-        "conversions": 0
       }
     ],
     "aiReferral": {
@@ -2582,16 +2568,16 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 63,
+        "performance": 51,
         "accessibility": 90,
         "bestPractices": 100,
-        "seo": 92
+        "seo": 100
       },
       "desktop": {
-        "performance": 92,
-        "accessibility": 90,
+        "performance": 44,
+        "accessibility": 93,
         "bestPractices": 100,
-        "seo": 92
+        "seo": 100
       }
     },
     "psiHistory": [
@@ -3064,6 +3050,21 @@
           "bestPractices": 100,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-09-22",
+        "mobile": {
+          "performance": 51,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 44,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 100
+        }
       }
     ]
   },
@@ -3130,222 +3131,6 @@
       "date": "2026-06-16",
       "title": "Tracking & Bug Fixes — GTM/Feedbucket confirmed active, fixed em dash encoding bug in build.js",
       "status": "Done"
-    },
-    {
-      "id": "12243289260",
-      "title": "Keystone Painting — Can we get another review here?",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Corrie Ferrell",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "12207226158",
-      "title": "Keystone Painting — New pic or adjust pic?",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Tyler Brickley",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "12161565176",
-      "title": "Keystone Painting — Change header pic",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Corrie Ferrell",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "12158207077",
-      "title": "Keystone Painting — Can we change this picture or at least change the aspect ratio",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Corrie Ferrell",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "12087563375",
-      "title": "Keystone Painting — Revisions",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Corrie Ferrell",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "12087437327",
-      "title": "Keystone Painting — Is this the conversion focused landing page?",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Tyler Brickley",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "11929243226",
-      "title": "Keystone Painting — No 7",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Tyler Brickley",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "11929235409",
-      "title": "Keystone Painting — Socials",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Tyler Brickley",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "11929214164",
-      "title": "Keystone Painting — Subs",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Tyler Brickley",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "11929243046",
-      "title": "Keystone Painting — Minutes",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Tyler Brickley",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "11929254614",
-      "title": "Keystone Painting — CTAs",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Tyler Brickley",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "11929296421",
-      "title": "Keystone Painting — Space",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Tyler Brickley",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "11929275474",
-      "title": "Keystone Painting — Space",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Tyler Brickley",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "11929255994",
-      "title": "Keystone Painting — Indicate Expansion",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Tyler Brickley",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "11929278486",
-      "title": "Keystone Painting — Can't Say",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Tyler Brickley",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "11929214155",
-      "title": "Keystone Painting — Space",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Tyler Brickley",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "11929268665",
-      "title": "Keystone Painting — Space",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Tyler Brickley",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "11929290103",
-      "title": "Keystone Painting — CTA LP",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Tyler Brickley",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "12084940159",
-      "title": "Keystone Painting — Looks good!",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Corrie Ferrell",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "11902372090",
-      "title": "Keystone Painting — Combine sentences",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Tyler Brickley",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "12087417973",
-      "title": "Keystone Painting — Can we add a title over this box that is 'Schedule Your Free Quote'",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Corrie Ferrell",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "11902420906",
-      "title": "Keystone Painting — Different picture - use head shots provided",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Tyler Brickley",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "11902637336",
-      "title": "Keystone Painting — First round",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Tyler Brickley",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "11929223247",
-      "title": "Keystone Painting — Respond",
-      "status": "Done",
-      "date": "2026-06-12",
-      "owner": "Tyler Brickley",
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
     },
     {
       "id": "manual-timnath-003",
