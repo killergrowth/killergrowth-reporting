@@ -3,7 +3,7 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "August 2026",
-  "generatedAt": "2026-09-23T12:23:23.949Z",
+  "generatedAt": "2026-09-24T12:24:17.053Z",
   "overview": {
     "sessions": 94,
     "sessionsDelta": 0,
@@ -117,7 +117,7 @@
         }
       },
       "gbpCalls": 10,
-      "gbpWebsiteClicks": 90,
+      "gbpWebsiteClicks": 96,
       "gbpDirections": 219,
       "formSubmissionsMonthly": [
         {
@@ -183,8 +183,8 @@
       },
       {
         "month": "Sep 2026",
-        "adSpend": 447.82,
-        "adClicks": 6833,
+        "adSpend": 466.97,
+        "adClicks": 6887,
         "adLeads": 0
       }
     ],
@@ -213,7 +213,7 @@
     "calls": 10,
     "callsDelta": null,
     "directions": 219,
-    "websiteClicks": 90,
+    "websiteClicks": 96,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1390,28 +1390,28 @@
         "views": 4,
         "calls": 0,
         "directions": 3,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-09-16",
         "views": 13,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 3
       },
       {
         "date": "2026-09-17",
         "views": 2,
         "calls": 0,
         "directions": 14,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-09-18",
         "views": 4,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-09-19",
@@ -1443,6 +1443,13 @@
       },
       {
         "date": "2026-09-23",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-09-24",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1500,7 +1507,7 @@
       {
         "month": "Sep 2026",
         "reach": 89,
-        "engagements": 269
+        "engagements": 288
       }
     ],
     "reachByWeek": [],
@@ -1581,10 +1588,10 @@
       },
       {
         "month": "Sep 2026",
-        "adSpend": 447.82,
-        "adClicks": 6833,
+        "adSpend": 466.97,
+        "adClicks": 6887,
         "adLeads": 0,
-        "adImpressions": 22299,
+        "adImpressions": 23030,
         "adReach": 89
       }
     ],
@@ -1849,34 +1856,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 65,
+        "performance": 66,
         "accessibility": 90,
         "bestPractices": 92,
         "seo": 100
       },
       "desktop": {
-        "performance": 74,
+        "performance": 94,
         "accessibility": 90,
         "bestPractices": 92,
         "seo": 100
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-06-02",
-        "mobile": {
-          "performance": 56,
-          "accessibility": 90,
-          "bestPractices": 77,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 84,
-          "accessibility": 90,
-          "bestPractices": 77,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-06-03",
         "mobile": {
@@ -3156,6 +3148,21 @@
           "bestPractices": 92,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-09-24",
+        "mobile": {
+          "performance": 66,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 94,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 100
+        }
       }
     ]
   },
@@ -3166,7 +3173,7 @@
       "status": "Done",
       "date": "2026-09-10",
       "owner": "Tyler Brickley",
-      "group": "Website Build (Tyler B)",
+      "group": "Website Maintenance (Corrie)",
       "source": "monday"
     },
     {

@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "August 2026",
-  "generatedAt": "2026-09-23T12:23:49.405Z",
+  "generatedAt": "2026-09-24T12:26:35.812Z",
   "overview": {
     "sessions": 1183,
     "sessionsDelta": 0,
@@ -375,9 +375,9 @@
           "Paid Search": 2
         }
       },
-      "gbpCalls": 297,
-      "gbpWebsiteClicks": 236,
-      "gbpDirections": 249
+      "gbpCalls": 303,
+      "gbpWebsiteClicks": 245,
+      "gbpDirections": 252
     }
   },
   "ads": {
@@ -526,10 +526,10 @@
   "gbp": {
     "locationName": "Primary",
     "totalViews": 5121,
-    "calls": 297,
+    "calls": 303,
     "callsDelta": null,
-    "directions": 249,
-    "websiteClicks": 236,
+    "directions": 252,
+    "websiteClicks": 245,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1706,35 +1706,35 @@
         "views": 5,
         "calls": 2,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 2
       },
       {
         "date": "2026-09-16",
         "views": 11,
-        "calls": 0,
+        "calls": 3,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 3
       },
       {
         "date": "2026-09-17",
         "views": 1,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 2
       },
       {
         "date": "2026-09-18",
         "views": 0,
-        "calls": 0,
+        "calls": 2,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-09-19",
         "views": 3,
-        "calls": 0,
+        "calls": 1,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 2
       },
       {
         "date": "2026-09-20",
@@ -1747,7 +1747,7 @@
         "date": "2026-09-21",
         "views": 0,
         "calls": 0,
-        "directions": 0,
+        "directions": 3,
         "websiteClicks": 0
       },
       {
@@ -1759,6 +1759,13 @@
       },
       {
         "date": "2026-09-23",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-09-24",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1815,8 +1822,8 @@
       },
       {
         "month": "Sep 2026",
-        "reach": 153,
-        "engagements": 160
+        "reach": 164,
+        "engagements": 196
       }
     ],
     "reachByWeek": [],
@@ -1825,7 +1832,7 @@
         "platform": "Facebook",
         "reach": 187,
         "engagements": 156,
-        "followers": 1198
+        "followers": 1199
       }
     ]
   },
@@ -1901,7 +1908,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 153
+        "adReach": 164
       }
     ],
     "metrics": null,
@@ -2273,17 +2280,12 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 50,
+        "performance": 52,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
       },
-      "desktop": {
-        "performance": 67,
-        "accessibility": 93,
-        "bestPractices": 100,
-        "seo": 92
-      }
+      "desktop": null
     },
     "psiHistory": [
       {
@@ -3475,6 +3477,16 @@
           "bestPractices": 100,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-09-24",
+        "mobile": {
+          "performance": 52,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": null
       }
     ]
   },
@@ -3485,7 +3497,7 @@
       "status": "Done",
       "date": "2026-09-10",
       "owner": "Tyler Brickley",
-      "group": "Website Build (Tyler B)",
+      "group": "Website Maintenance (Corrie)",
       "source": "monday"
     },
     {
@@ -3494,7 +3506,7 @@
       "status": "Done",
       "date": "2026-09-10",
       "owner": "Tyler Brickley",
-      "group": "Website Build (Tyler B)",
+      "group": "Website Maintenance (Corrie)",
       "source": "monday"
     },
     {
@@ -3503,7 +3515,7 @@
       "status": "Done",
       "date": "2026-09-10",
       "owner": "Tyler Brickley",
-      "group": "Website Build (Tyler B)",
+      "group": "Website Maintenance (Corrie)",
       "source": "monday"
     },
     {
@@ -3512,7 +3524,7 @@
       "status": "Done",
       "date": "2026-09-10",
       "owner": "Tyler Brickley",
-      "group": "Website Build (Tyler B)",
+      "group": "Website Maintenance (Corrie)",
       "source": "monday"
     },
     {
@@ -3521,7 +3533,7 @@
       "status": "Done",
       "date": "2026-09-10",
       "owner": "Tyler Brickley",
-      "group": "Website Build (Tyler B)",
+      "group": "Website Maintenance (Corrie)",
       "source": "monday"
     },
     {
@@ -3530,7 +3542,7 @@
       "status": "Done",
       "date": "2026-09-10",
       "owner": "Tyler Brickley",
-      "group": "Website Build (Tyler B)",
+      "group": "Website Maintenance (Corrie)",
       "source": "monday"
     },
     {
@@ -3539,7 +3551,7 @@
       "status": "Done",
       "date": "2026-09-10",
       "owner": "Tyler Brickley",
-      "group": "Website Build (Tyler B)",
+      "group": "Website Maintenance (Corrie)",
       "source": "monday"
     },
     {
@@ -3548,7 +3560,7 @@
       "status": "Done",
       "date": "2026-09-10",
       "owner": "Tyler Brickley",
-      "group": "Website Build (Tyler B)",
+      "group": "Website Maintenance (Corrie)",
       "source": "monday"
     },
     {
@@ -3577,7 +3589,7 @@
       "status": "Done",
       "date": "2026-06-30",
       "owner": "Tyler Brickley",
-      "group": "Website Build (Tyler B)",
+      "group": "Website Maintenance (Corrie)",
       "source": "monday"
     },
     {
@@ -3586,7 +3598,7 @@
       "status": "Done",
       "date": "2026-06-30",
       "owner": "Tyler Brickley",
-      "group": "Website Build (Tyler B)",
+      "group": "Website Maintenance (Corrie)",
       "source": "monday"
     },
     {
@@ -3595,7 +3607,7 @@
       "status": "Done",
       "date": "2026-06-30",
       "owner": "Tyler Brickley",
-      "group": "Website Build (Tyler B)",
+      "group": "Website Maintenance (Corrie)",
       "source": "monday"
     },
     {
@@ -3604,7 +3616,7 @@
       "status": "Done",
       "date": "2026-06-30",
       "owner": "Tyler Brickley",
-      "group": "Website Build (Tyler B)",
+      "group": "Website Maintenance (Corrie)",
       "source": "monday"
     },
     {
@@ -3613,7 +3625,7 @@
       "status": "Done",
       "date": "2026-06-30",
       "owner": "Tyler Brickley",
-      "group": "Website Build (Tyler B)",
+      "group": "Website Maintenance (Corrie)",
       "source": "monday"
     },
     {
@@ -3622,7 +3634,7 @@
       "status": "Done",
       "date": "2026-06-30",
       "owner": "Tyler Brickley",
-      "group": "Website Build (Tyler B)",
+      "group": "Website Maintenance (Corrie)",
       "source": "monday"
     },
     {
@@ -3631,7 +3643,7 @@
       "status": "Done",
       "date": "2026-06-30",
       "owner": "Tyler Brickley",
-      "group": "Website Build (Tyler B)",
+      "group": "Website Maintenance (Corrie)",
       "source": "monday"
     },
     {

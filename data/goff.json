@@ -3,7 +3,7 @@
   "slug": "goff",
   "logoPath": null,
   "period": "August 2026",
-  "generatedAt": "2026-09-23T12:27:42.843Z",
+  "generatedAt": "2026-09-24T12:31:26.867Z",
   "overview": {
     "sessions": 2156,
     "sessionsDelta": 0,
@@ -967,13 +967,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 39,
+        "performance": 44,
         "accessibility": 81,
         "bestPractices": 96,
         "seo": 92
       },
       "desktop": {
-        "performance": 72,
+        "performance": 69,
         "accessibility": 85,
         "bestPractices": 96,
         "seo": 92
@@ -1854,10 +1854,43 @@
           "bestPractices": 96,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-09-24",
+        "mobile": {
+          "performance": 44,
+          "accessibility": 81,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 69,
+          "accessibility": 85,
+          "bestPractices": 96,
+          "seo": 92
+        }
       }
     ]
   },
   "workLog": [
+    {
+      "id": "13107439909",
+      "title": "Goff, Paul Dendiu",
+      "status": "Done",
+      "date": "2026-09-23",
+      "owner": "Tyler Norris",
+      "group": "Completed",
+      "source": "monday"
+    },
+    {
+      "id": "13117674581",
+      "title": "Goff, Paul Dendiu",
+      "status": "Done",
+      "date": "2026-09-23",
+      "owner": "Tyler Norris",
+      "group": "Completed",
+      "source": "monday"
+    },
     {
       "id": "12915625463",
       "title": "Goff, Paul Dendiu",
