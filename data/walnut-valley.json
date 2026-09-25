@@ -3,7 +3,7 @@
   "slug": "walnut-valley",
   "logoPath": null,
   "period": "August 2026",
-  "generatedAt": "2026-09-24T12:30:48.300Z",
+  "generatedAt": "2026-09-25T12:28:37.882Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -391,18 +391,8 @@
       }
     ],
     "psiScores": {
-      "mobile": {
-        "performance": 58,
-        "accessibility": 82,
-        "bestPractices": 100,
-        "seo": 92
-      },
-      "desktop": {
-        "performance": 74,
-        "accessibility": 91,
-        "bestPractices": 100,
-        "seo": 92
-      }
+      "mobile": null,
+      "desktop": null
     },
     "psiHistory": [
       {
@@ -1274,6 +1264,11 @@
           "bestPractices": 100,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-09-25",
+        "mobile": null,
+        "desktop": null
       }
     ]
   },

@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "August 2026",
-  "generatedAt": "2026-09-24T12:26:35.812Z",
+  "generatedAt": "2026-09-25T12:25:51.477Z",
   "overview": {
     "sessions": 1183,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 16,
     "rankingsDelta": null,
-    "gbpViews": 5121,
+    "gbpViews": 5201,
     "gbpViewsDelta": null,
     "adSpend": 0,
     "adImpressions": 19349,
@@ -525,7 +525,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 5121,
+    "totalViews": 5201,
     "calls": 303,
     "callsDelta": null,
     "directions": 252,
@@ -1717,7 +1717,7 @@
       },
       {
         "date": "2026-09-17",
-        "views": 1,
+        "views": 19,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 2
@@ -1738,21 +1738,21 @@
       },
       {
         "date": "2026-09-20",
-        "views": 0,
+        "views": 4,
         "calls": 0,
         "directions": 1,
         "websiteClicks": 0
       },
       {
         "date": "2026-09-21",
-        "views": 0,
+        "views": 4,
         "calls": 0,
         "directions": 3,
         "websiteClicks": 0
       },
       {
         "date": "2026-09-22",
-        "views": 0,
+        "views": 54,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1766,6 +1766,13 @@
       },
       {
         "date": "2026-09-24",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-09-25",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1822,8 +1829,8 @@
       },
       {
         "month": "Sep 2026",
-        "reach": 164,
-        "engagements": 196
+        "reach": 168,
+        "engagements": 199
       }
     ],
     "reachByWeek": [],
@@ -1908,7 +1915,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 164
+        "adReach": 168
       }
     ],
     "metrics": null,
@@ -2285,7 +2292,12 @@
         "bestPractices": 100,
         "seo": 92
       },
-      "desktop": null
+      "desktop": {
+        "performance": 59,
+        "accessibility": 93,
+        "bestPractices": 100,
+        "seo": 92
+      }
     },
     "psiHistory": [
       {
@@ -3487,10 +3499,34 @@
           "seo": 92
         },
         "desktop": null
+      },
+      {
+        "date": "2026-09-25",
+        "mobile": {
+          "performance": 52,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 59,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        }
       }
     ]
   },
   "workLog": [
+    {
+      "id": "13118559610",
+      "title": "Update Sunflowers logo and profile pic on FB and IG",
+      "status": "Done",
+      "date": "2026-09-24",
+      "owner": "Tyler Brickley",
+      "group": "Completed",
+      "source": "monday"
+    },
     {
       "id": "12432566297",
       "title": "Sunflower Plumbing — #1",

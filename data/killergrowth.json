@@ -3,7 +3,7 @@
   "slug": "killergrowth",
   "logoPath": null,
   "period": "August 2026",
-  "generatedAt": "2026-09-24T12:22:44.489Z",
+  "generatedAt": "2026-09-25T12:23:46.794Z",
   "overview": {
     "sessions": 73,
     "sessionsDelta": 0,
@@ -305,8 +305,8 @@
       },
       {
         "month": "Sep 2026",
-        "adSpend": 2351.14,
-        "adClicks": 11623,
+        "adSpend": 2495.97,
+        "adClicks": 12405,
         "adLeads": 0
       }
     ],
@@ -388,8 +388,8 @@
       },
       {
         "month": "Sep 2026",
-        "reach": 469,
-        "engagements": 2362
+        "reach": 514,
+        "engagements": 2533
       }
     ],
     "reachByWeek": [],
@@ -398,7 +398,7 @@
         "platform": "Facebook",
         "reach": 704,
         "engagements": 2094,
-        "followers": 660
+        "followers": 661
       }
     ]
   },
@@ -470,11 +470,11 @@
       },
       {
         "month": "Sep 2026",
-        "adSpend": 2351.14,
-        "adClicks": 11623,
+        "adSpend": 2495.97,
+        "adClicks": 12405,
         "adLeads": 0,
-        "adImpressions": 381985,
-        "adReach": 469
+        "adImpressions": 402647,
+        "adReach": 514
       }
     ],
     "metrics": null,
@@ -797,35 +797,10 @@
     "cfDailyPageViews": [],
     "cfMonthlyHistory": [],
     "psiScores": {
-      "mobile": {
-        "performance": 61,
-        "accessibility": 91,
-        "bestPractices": 100,
-        "seo": 92
-      },
-      "desktop": {
-        "performance": 75,
-        "accessibility": 91,
-        "bestPractices": 100,
-        "seo": 92
-      }
+      "mobile": null,
+      "desktop": null
     },
     "psiHistory": [
-      {
-        "date": "2026-06-16",
-        "mobile": {
-          "performance": 77,
-          "accessibility": 91,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 75,
-          "accessibility": 91,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-06-17",
         "mobile": {
@@ -2105,6 +2080,11 @@
           "bestPractices": 100,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-09-25",
+        "mobile": null,
+        "desktop": null
       }
     ]
   },
