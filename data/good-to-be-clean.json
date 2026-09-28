@@ -3,7 +3,7 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "August 2026",
-  "generatedAt": "2026-09-27T12:35:39.522Z",
+  "generatedAt": "2026-09-28T14:45:29.376Z",
   "overview": {
     "sessions": 991,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 19,
     "rankingsDelta": null,
-    "gbpViews": 893,
+    "gbpViews": 897,
     "gbpViewsDelta": null,
     "adSpend": 733.56,
     "adImpressions": 2018,
@@ -448,7 +448,7 @@
       },
       "gbpCalls": 13,
       "gbpWebsiteClicks": 28,
-      "gbpDirections": 229
+      "gbpDirections": 234
     }
   },
   "ads": {
@@ -558,10 +558,10 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 893,
+    "totalViews": 897,
     "calls": 13,
     "callsDelta": null,
-    "directions": 229,
+    "directions": 234,
     "websiteClicks": 28,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -1799,16 +1799,16 @@
       },
       {
         "date": "2026-09-24",
-        "views": 5,
+        "views": 7,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-09-25",
-        "views": 0,
+        "views": 2,
         "calls": 0,
-        "directions": 0,
+        "directions": 5,
         "websiteClicks": 0
       },
       {
@@ -1820,6 +1820,13 @@
       },
       {
         "date": "2026-09-27",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-09-28",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1876,7 +1883,7 @@
       },
       {
         "month": "Sep 2026",
-        "reach": 161,
+        "reach": 164,
         "engagements": 59
       }
     ],
@@ -1962,7 +1969,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 161
+        "adReach": 164
       }
     ],
     "metrics": null,
@@ -2433,9 +2440,9 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 37,
+        "performance": 67,
         "accessibility": 92,
-        "bestPractices": 96,
+        "bestPractices": 100,
         "seo": 100
       },
       "desktop": {
@@ -2446,21 +2453,6 @@
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-06-07",
-        "mobile": {
-          "performance": 51,
-          "accessibility": 92,
-          "bestPractices": 100,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 85,
-          "accessibility": 92,
-          "bestPractices": 100,
-          "seo": 100
-        }
-      },
       {
         "date": "2026-06-08",
         "mobile": {
@@ -3677,6 +3669,21 @@
           "performance": 37,
           "accessibility": 92,
           "bestPractices": 96,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 93,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-09-28",
+        "mobile": {
+          "performance": 67,
+          "accessibility": 92,
+          "bestPractices": 100,
           "seo": 100
         },
         "desktop": {
