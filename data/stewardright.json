@@ -2,23 +2,23 @@
   "client": "StewardRight",
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
-  "period": "August 2026",
-  "generatedAt": "2026-09-30T13:07:17.067Z",
+  "period": "September 2026",
+  "generatedAt": "2026-10-01T13:59:48.276Z",
   "overview": {
-    "sessions": 94,
+    "sessions": 359,
     "sessionsDelta": 0,
     "leads": 0,
     "leadsDelta": null,
     "rankingsTop10": null,
     "rankingsDelta": null,
-    "gbpViews": 2658,
+    "gbpViews": 2336,
     "gbpViewsDelta": null,
-    "adSpend": 511.13,
+    "adSpend": 605.67,
     "adImpressions": 25624,
     "adBudget": null,
     "costPerLead": null,
     "costPerLeadDelta": null,
-    "socialReach": 176,
+    "socialReach": 122,
     "socialReachDelta": 22,
     "reviewCount": 0,
     "avgRating": null
@@ -73,52 +73,81 @@
         "label": "Aug 2026",
         "sessions": 94,
         "conversions": 5
+      },
+      {
+        "week": "202609",
+        "date": "2026-09-01",
+        "label": "Sep 2026",
+        "sessions": 359,
+        "conversions": 10
       }
     ],
     "trafficChannels": [
       {
         "channel": "Direct",
-        "sessions": 83
+        "sessions": 274
+      },
+      {
+        "channel": "Email",
+        "sessions": 41
       },
       {
         "channel": "Organic Search",
-        "sessions": 10
+        "sessions": 36
       },
       {
         "channel": "AI Assistant",
-        "sessions": 1
+        "sessions": 4
+      },
+      {
+        "channel": "Referral",
+        "sessions": 2
+      },
+      {
+        "channel": "Unassigned",
+        "sessions": 2
       }
     ],
     "organicSearchSources": [
       {
         "source": "google",
-        "sessions": 10
+        "sessions": 33
+      },
+      {
+        "source": "bing",
+        "sessions": 2
+      },
+      {
+        "source": "duckduckgo",
+        "sessions": 1
       }
     ],
     "keywords": [],
     "dfsSnapshot": null,
     "leadSignals": {
-      "organicSessions": 10,
+      "organicSessions": 36,
       "phoneCalls": 1,
-      "formSubmissions": 4,
+      "formSubmissions": 9,
       "bookingClicks": 0,
       "emailClicks": 0,
       "ctaClicks": 0,
-      "formStarts": 3,
+      "formStarts": 9,
       "byChannel": {
-        "form_submit": {
-          "Direct": 4
-        },
         "form_start": {
-          "Direct": 3
+          "Direct": 8,
+          "Organic Search": 1
+        },
+        "form_submit": {
+          "Direct": 8,
+          "Organic Search": 1
         },
         "phone_click": {
           "Organic Search": 1
         }
       },
-      "gbpCalls": 10,
-      "gbpWebsiteClicks": 100,
-      "gbpDirections": 231,
+      "gbpCalls": 7,
+      "gbpWebsiteClicks": 91,
+      "gbpDirections": 188,
       "formSubmissionsMonthly": [
         {
           "month": "Jul 2026",
@@ -183,8 +212,14 @@
       },
       {
         "month": "Sep 2026",
-        "adSpend": 595.09,
-        "adClicks": 7193,
+        "adSpend": 605.67,
+        "adClicks": 7304,
+        "adLeads": 0
+      },
+      {
+        "month": "Oct 2026",
+        "adSpend": 4.04,
+        "adClicks": 14,
         "adLeads": 0
       }
     ],
@@ -209,223 +244,13 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 2658,
-    "calls": 10,
+    "totalViews": 2336,
+    "calls": 7,
     "callsDelta": null,
-    "directions": 231,
-    "websiteClicks": 100,
+    "directions": 188,
+    "websiteClicks": 91,
     "directionsDelta": null,
     "viewsOverTime": [
-      {
-        "date": "2026-04-01",
-        "views": 13,
-        "calls": 0,
-        "directions": 5,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-02",
-        "views": 11,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-04-03",
-        "views": 10,
-        "calls": 1,
-        "directions": 0,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-04-04",
-        "views": 7,
-        "calls": 0,
-        "directions": 1,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-04-05",
-        "views": 6,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-06",
-        "views": 9,
-        "calls": 0,
-        "directions": 2,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-07",
-        "views": 21,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-04-08",
-        "views": 16,
-        "calls": 0,
-        "directions": 2,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-09",
-        "views": 18,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-10",
-        "views": 15,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-11",
-        "views": 13,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-12",
-        "views": 7,
-        "calls": 0,
-        "directions": 1,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-13",
-        "views": 11,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-14",
-        "views": 16,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-15",
-        "views": 9,
-        "calls": 2,
-        "directions": 1,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-16",
-        "views": 12,
-        "calls": 0,
-        "directions": 4,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-17",
-        "views": 14,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-18",
-        "views": 6,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-19",
-        "views": 3,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-04-20",
-        "views": 13,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 2
-      },
-      {
-        "date": "2026-04-21",
-        "views": 9,
-        "calls": 0,
-        "directions": 13,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-22",
-        "views": 10,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-23",
-        "views": 16,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-24",
-        "views": 8,
-        "calls": 0,
-        "directions": 7,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-25",
-        "views": 4,
-        "calls": 0,
-        "directions": 2,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-26",
-        "views": 10,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-27",
-        "views": 17,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-04-28",
-        "views": 9,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-29",
-        "views": 11,
-        "calls": 0,
-        "directions": 4,
-        "websiteClicks": 1
-      },
-      {
-        "date": "2026-04-30",
-        "views": 9,
-        "calls": 0,
-        "directions": 1,
-        "websiteClicks": 0
-      },
       {
         "date": "2026-05-01",
         "views": 7,
@@ -1471,7 +1296,7 @@
       },
       {
         "date": "2026-09-27",
-        "views": 1,
+        "views": 12,
         "calls": 0,
         "directions": 2,
         "websiteClicks": 0
@@ -1492,6 +1317,13 @@
       },
       {
         "date": "2026-09-30",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-10-01",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1549,15 +1381,20 @@
       {
         "month": "Sep 2026",
         "reach": 104,
-        "engagements": 364
+        "engagements": 373
+      },
+      {
+        "month": "Oct 2026",
+        "reach": 0,
+        "engagements": 0
       }
     ],
     "reachByWeek": [],
     "platforms": [
       {
         "platform": "Facebook",
-        "reach": 176,
-        "engagements": 2143,
+        "reach": 122,
+        "engagements": 537,
         "followers": 609
       }
     ]
@@ -1630,19 +1467,27 @@
       },
       {
         "month": "Sep 2026",
-        "adSpend": 595.09,
-        "adClicks": 7193,
+        "adSpend": 605.67,
+        "adClicks": 7304,
         "adLeads": 0,
-        "adImpressions": 26761,
+        "adImpressions": 27310,
         "adReach": 104
+      },
+      {
+        "month": "Oct 2026",
+        "adSpend": 4.04,
+        "adClicks": 14,
+        "adLeads": 0,
+        "adImpressions": 131,
+        "adReach": 0
       }
     ],
     "metrics": null,
     "adBreakdown": [],
     "ageGender": [],
-    "adSpend": 511.13,
-    "adClicks": 7703,
-    "adImpressions": 28789,
+    "adSpend": 605.67,
+    "adClicks": 7304,
+    "adImpressions": 27310,
     "adLeads": null
   },
   "website": {
@@ -1695,19 +1540,34 @@
         "label": "Aug 2026",
         "sessions": 94,
         "conversions": 5
+      },
+      {
+        "week": "202609",
+        "date": "2026-09-01",
+        "label": "Sep 2026",
+        "sessions": 359,
+        "conversions": 10
       }
     ],
     "aiReferral": {
-      "total": 1,
+      "total": 4,
       "platforms": [
         {
           "name": "ChatGPT",
-          "sessions": 1
+          "sessions": 4
         }
       ],
       "weeklyTrend": [
         {
           "week": "36",
+          "sessions": 2
+        },
+        {
+          "week": "38",
+          "sessions": 1
+        },
+        {
+          "week": "39",
           "sessions": 1
         }
       ]
@@ -1911,21 +1771,6 @@
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-06-09",
-        "mobile": {
-          "performance": 43,
-          "accessibility": 90,
-          "bestPractices": 77,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 93,
-          "accessibility": 90,
-          "bestPractices": 77,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-06-10",
         "mobile": {
@@ -3193,6 +3038,21 @@
       },
       {
         "date": "2026-09-30",
+        "mobile": {
+          "performance": 66,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 94,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-10-01",
         "mobile": {
           "performance": 66,
           "accessibility": 90,

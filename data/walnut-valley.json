@@ -2,8 +2,8 @@
   "client": "Walnut Valley Meat Market",
   "slug": "walnut-valley",
   "logoPath": null,
-  "period": "August 2026",
-  "generatedAt": "2026-09-30T13:09:57.006Z",
+  "period": "September 2026",
+  "generatedAt": "2026-10-01T14:02:25.948Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -149,34 +149,15 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "SWIWEOSC",
-    "uniques": 7,
-    "visits": 7,
-    "pageviews": 10,
+    "uniques": 0,
+    "visits": 0,
+    "pageviews": 0,
     "avgDuration": 147,
     "bounceRate": 71.428571428571,
     "uniquesDelta": -99.4,
     "visitsDelta": -99.4,
     "pageviewsDelta": -99.3,
-    "dailyTimeseries": [
-      {
-        "date": "2026-08-01",
-        "visits": 4,
-        "uniques": 4,
-        "pageviews": 7
-      },
-      {
-        "date": "2026-08-04",
-        "visits": 2,
-        "uniques": 2,
-        "pageviews": 2
-      },
-      {
-        "date": "2026-08-06",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 1
-      }
-    ],
+    "dailyTimeseries": [],
     "monthlyHistory": [
       {
         "month": "Jul 2026",
@@ -193,25 +174,8 @@
         "pageviews": 10
       }
     ],
-    "topPages": [
-      {
-        "path": "/",
-        "pageviews": 10,
-        "uniques": 7
-      }
-    ],
-    "referrers": [
-      {
-        "source": "Organic",
-        "visits": 5,
-        "uniques": 5
-      },
-      {
-        "source": "Direct",
-        "visits": 2,
-        "uniques": 2
-      }
-    ],
+    "topPages": [],
+    "referrers": [],
     "cfPageViews": 58255,
     "cfUniques": 27116,
     "cfPageViewsDelta": 43.1,
@@ -398,7 +362,7 @@
         "seo": 92
       },
       "desktop": {
-        "performance": 68,
+        "performance": 56,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
@@ -1350,6 +1314,21 @@
         },
         "desktop": {
           "performance": 68,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-10-01",
+        "mobile": {
+          "performance": 67,
+          "accessibility": 82,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 56,
           "accessibility": 91,
           "bestPractices": 100,
           "seo": 92

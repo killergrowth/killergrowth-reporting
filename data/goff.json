@@ -2,14 +2,14 @@
   "client": "Goff Heating & Air",
   "slug": "goff",
   "logoPath": null,
-  "period": "August 2026",
-  "generatedAt": "2026-09-30T13:11:01.541Z",
+  "period": "September 2026",
+  "generatedAt": "2026-10-01T14:02:57.249Z",
   "overview": {
-    "sessions": 2156,
+    "sessions": 2247,
     "sessionsDelta": 0,
     "leads": null,
     "leadsDelta": null,
-    "rankingsTop10": 22,
+    "rankingsTop10": 23,
     "rankingsDelta": null,
     "gbpViews": null,
     "gbpViewsDelta": null,
@@ -304,261 +304,268 @@
         "label": "Aug 2026",
         "sessions": 2156,
         "conversions": 317
+      },
+      {
+        "week": "202609",
+        "date": "2026-09-01",
+        "label": "Sep 2026",
+        "sessions": 2247,
+        "conversions": 376
       }
     ],
     "trafficChannels": [
       {
         "channel": "Direct",
-        "sessions": 1087
+        "sessions": 1134
       },
       {
         "channel": "Paid Search",
-        "sessions": 459
+        "sessions": 499
       },
       {
         "channel": "Organic Search",
-        "sessions": 409
+        "sessions": 445
       },
       {
         "channel": "Cross-network",
-        "sessions": 75
-      },
-      {
-        "channel": "Referral",
-        "sessions": 43
+        "sessions": 57
       },
       {
         "channel": "Unassigned",
-        "sessions": 40
+        "sessions": 49
       },
       {
-        "channel": "Organic Social",
-        "sessions": 18
-      },
-      {
-        "channel": "Paid Other",
-        "sessions": 16
+        "channel": "Referral",
+        "sessions": 39
       },
       {
         "channel": "AI Assistant",
+        "sessions": 13
+      },
+      {
+        "channel": "Organic Social",
         "sessions": 10
+      },
+      {
+        "channel": "Paid Video",
+        "sessions": 8
+      },
+      {
+        "channel": "Paid Other",
+        "sessions": 5
+      },
+      {
+        "channel": "Paid Social",
+        "sessions": 2
       }
     ],
     "organicSearchSources": [
       {
         "source": "google",
-        "sessions": 343
+        "sessions": 388
       },
       {
         "source": "bing",
-        "sessions": 37
-      },
-      {
-        "source": "google.com",
-        "sessions": 10
+        "sessions": 23
       },
       {
         "source": "duckduckgo",
-        "sessions": 8
-      },
-      {
-        "source": "yahoo",
-        "sessions": 5
-      },
-      {
-        "source": "duckduckgo_organic",
-        "sessions": 2
-      },
-      {
-        "source": "qwant.com",
-        "sessions": 2
+        "sessions": 16
       },
       {
         "source": "chatgpt.com",
+        "sessions": 9
+      },
+      {
+        "source": "yahoo",
+        "sessions": 8
+      },
+      {
+        "source": "duckduckgo_organic",
         "sessions": 1
       }
     ],
     "keywords": [
       {
         "keyword": "goff heating",
-        "clicks": 55,
-        "impressions": 278,
-        "ctr": 19.8,
-        "position": 3.1
+        "clicks": 62,
+        "impressions": 247,
+        "ctr": 25.1,
+        "position": 1.4
       },
       {
         "keyword": "goff heating and air conditioning",
-        "clicks": 16,
-        "impressions": 125,
-        "ctr": 12.8,
-        "position": 1.9
+        "clicks": 29,
+        "impressions": 148,
+        "ctr": 19.6,
+        "position": 1.5
+      },
+      {
+        "keyword": "goff",
+        "clicks": 5,
+        "impressions": 581,
+        "ctr": 0.9,
+        "position": 5.2
       },
       {
         "keyword": "goff heating and cooling",
-        "clicks": 8,
-        "impressions": 31,
-        "ctr": 25.8,
-        "position": 3.4
+        "clicks": 5,
+        "impressions": 27,
+        "ctr": 18.5,
+        "position": 1
+      },
+      {
+        "keyword": "hvac south bend",
+        "clicks": 4,
+        "impressions": 156,
+        "ctr": 2.6,
+        "position": 7.3
+      },
+      {
+        "keyword": "air conditioner",
+        "clicks": 2,
+        "impressions": 51,
+        "ctr": 3.9,
+        "position": 3.8
+      },
+      {
+        "keyword": "goff heating and air conditioning reviews",
+        "clicks": 2,
+        "impressions": 15,
+        "ctr": 13.3,
+        "position": 1.9
       },
       {
         "keyword": "goff hvac",
-        "clicks": 3,
-        "impressions": 16,
-        "ctr": 18.8,
-        "position": 2.4
-      },
-      {
-        "keyword": "hvac near me",
-        "clicks": 3,
-        "impressions": 93,
-        "ctr": 3.2,
-        "position": 4.4
-      },
-      {
-        "keyword": "bioforce defender",
         "clicks": 2,
-        "impressions": 35,
-        "ctr": 5.7,
-        "position": 2.9
+        "impressions": 17,
+        "ctr": 11.8,
+        "position": 1.6
       },
       {
         "keyword": "goff plumbing",
         "clicks": 2,
-        "impressions": 56,
-        "ctr": 3.6,
-        "position": 12.5
+        "impressions": 40,
+        "ctr": 5,
+        "position": 6.5
       },
       {
-        "keyword": "hvac south bend",
+        "keyword": "how long does a furnace tune up take",
         "clicks": 2,
-        "impressions": 184,
-        "ctr": 1.1,
-        "position": 9.1
+        "impressions": 150,
+        "ctr": 1.3,
+        "position": 1.8
       },
       {
-        "keyword": "sump pump repair near me",
-        "clicks": 2,
-        "impressions": 4,
-        "ctr": 50,
-        "position": 8.5
-      },
-      {
-        "keyword": "best hvac companies near me",
+        "keyword": "ac companies near me",
         "clicks": 1,
-        "impressions": 11,
-        "ctr": 9.1,
-        "position": 14.2
+        "impressions": 1,
+        "ctr": 100,
+        "position": 1
+      },
+      {
+        "keyword": "ac repair south bend",
+        "clicks": 1,
+        "impressions": 9,
+        "ctr": 11.1,
+        "position": 1.9
+      },
+      {
+        "keyword": "air-conditioning",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 2
+      },
+      {
+        "keyword": "bioforce defender",
+        "clicks": 1,
+        "impressions": 36,
+        "ctr": 2.8,
+        "position": 3.3
       },
       {
         "keyword": "bioforce defender uv air cleaning system",
         "clicks": 1,
-        "impressions": 17,
-        "ctr": 5.9,
-        "position": 3.8
+        "impressions": 11,
+        "ctr": 9.1,
+        "position": 4.2
       },
       {
-        "keyword": "bristol plumbing and heating",
-        "clicks": 1,
-        "impressions": 12,
-        "ctr": 8.3,
-        "position": 9.6
-      },
-      {
-        "keyword": "central air conditioning unit",
-        "clicks": 1,
-        "impressions": 1,
-        "ctr": 100,
-        "position": 4
-      },
-      {
-        "keyword": "find hvac technician near me",
+        "keyword": "cost?",
         "clicks": 1,
         "impressions": 2,
         "ctr": 50,
-        "position": 1
+        "position": 4.5
       },
       {
-        "keyword": "gas water heaters",
+        "keyword": "emergency furnace repair service",
         "clicks": 1,
-        "impressions": 1,
-        "ctr": 100,
-        "position": 1
+        "impressions": 2,
+        "ctr": 50,
+        "position": 9.5
       },
       {
-        "keyword": "geoff plumbing",
-        "clicks": 1,
-        "impressions": 1,
-        "ctr": 100,
-        "position": 1
-      },
-      {
-        "keyword": "goff heating and air",
-        "clicks": 1,
-        "impressions": 66,
-        "ctr": 1.5,
-        "position": 7.9
-      },
-      {
-        "keyword": "heating and air conditioning businesses",
-        "clicks": 1,
-        "impressions": 1,
-        "ctr": 100,
-        "position": 4
-      },
-      {
-        "keyword": "heating and air conditioning near me",
-        "clicks": 1,
-        "impressions": 20,
-        "ctr": 5,
-        "position": 8.9
-      },
-      {
-        "keyword": "heating and cooling south bend",
-        "clicks": 1,
-        "impressions": 2127,
-        "ctr": 0,
-        "position": 2
-      },
-      {
-        "keyword": "how long does a furnace tune up take",
-        "clicks": 1,
-        "impressions": 102,
-        "ctr": 1,
-        "position": 1.5
-      },
-      {
-        "keyword": "how many co detectors do i need",
-        "clicks": 1,
-        "impressions": 16,
-        "ctr": 6.3,
-        "position": 22.3
-      },
-      {
-        "keyword": "hvac companies hiring apprentices near me",
-        "clicks": 1,
-        "impressions": 1,
-        "ctr": 100,
-        "position": 4
-      },
-      {
-        "keyword": "hvac contractors near me",
-        "clicks": 1,
-        "impressions": 21,
-        "ctr": 4.8,
-        "position": 8.3
-      },
-      {
-        "keyword": "hvac filter change",
+        "keyword": "furnace cleaning specials near me",
         "clicks": 1,
         "impressions": 1,
         "ctr": 100,
         "position": 7
+      },
+      {
+        "keyword": "furnace tune-up near me",
+        "clicks": 1,
+        "impressions": 10,
+        "ctr": 10,
+        "position": 67.2
+      },
+      {
+        "keyword": "furnace tuneup",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 3
+      },
+      {
+        "keyword": "goff heating and air",
+        "clicks": 1,
+        "impressions": 61,
+        "ctr": 1.6,
+        "position": 8
+      },
+      {
+        "keyword": "heating and air conditioning near me",
+        "clicks": 1,
+        "impressions": 11,
+        "ctr": 9.1,
+        "position": 8.4
+      },
+      {
+        "keyword": "how does a heat pump work in winter",
+        "clicks": 1,
+        "impressions": 461,
+        "ctr": 0.2,
+        "position": 71.1
+      },
+      {
+        "keyword": "hvac",
+        "clicks": 1,
+        "impressions": 213,
+        "ctr": 0.5,
+        "position": 2.6
+      },
+      {
+        "keyword": "hvac near me",
+        "clicks": 1,
+        "impressions": 47,
+        "ctr": 2.1,
+        "position": 7.5
       }
     ],
     "dfsSnapshot": null,
     "leadSignals": {
-      "organicSessions": 409,
-      "phoneCalls": 269,
+      "organicSessions": 445,
+      "phoneCalls": 304,
       "formSubmissions": 0,
       "bookingClicks": 0,
       "emailClicks": 0,
@@ -566,12 +573,13 @@
       "formStarts": 0,
       "byChannel": {
         "phone_call": {
-          "Unassigned": 158,
-          "Organic Search": 38,
-          "Direct": 29,
-          "Paid Search": 20,
-          "Cross-network": 16,
-          "Referral": 8
+          "Unassigned": 184,
+          "Organic Search": 51,
+          "Direct": 31,
+          "Paid Search": 29,
+          "Cross-network": 6,
+          "AI Assistant": 2,
+          "Referral": 1
         }
       },
       "gbpCalls": 0,
@@ -902,40 +910,51 @@
         "label": "Aug 2026",
         "sessions": 2156,
         "conversions": 317
+      },
+      {
+        "week": "202609",
+        "date": "2026-09-01",
+        "label": "Sep 2026",
+        "sessions": 2247,
+        "conversions": 376
       }
     ],
     "aiReferral": {
-      "total": 11,
+      "total": 22,
       "platforms": [
         {
           "name": "ChatGPT",
-          "sessions": 10
+          "sessions": 18
         },
         {
           "name": "Gemini",
-          "sessions": 1
+          "sessions": 2
+        },
+        {
+          "name": "Perplexity",
+          "sessions": 2
         }
       ],
       "weeklyTrend": [
         {
-          "week": "31",
-          "sessions": 1
-        },
-        {
-          "week": "33",
-          "sessions": 5
-        },
-        {
-          "week": "34",
+          "week": "36",
           "sessions": 3
         },
         {
-          "week": "35",
-          "sessions": 1
+          "week": "37",
+          "sessions": 3
         },
         {
-          "week": "36",
-          "sessions": 1
+          "week": "38",
+          "sessions": 4
+        },
+        {
+          "week": "39",
+          "sessions": 4
+        },
+        {
+          "week": "40",
+          "sessions": 8
         }
       ]
     },
@@ -967,13 +986,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 32,
+        "performance": 43,
         "accessibility": 81,
         "bestPractices": 96,
         "seo": 92
       },
       "desktop": {
-        "performance": 80,
+        "performance": 70,
         "accessibility": 85,
         "bestPractices": 96,
         "seo": 92
@@ -1944,10 +1963,43 @@
           "bestPractices": 96,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-10-01",
+        "mobile": {
+          "performance": 43,
+          "accessibility": 81,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 70,
+          "accessibility": 85,
+          "bestPractices": 96,
+          "seo": 92
+        }
       }
     ]
   },
   "workLog": [
+    {
+      "id": "13118037916",
+      "title": "Goff, Paul Dendiu",
+      "status": "Done",
+      "date": "2026-09-30",
+      "owner": "Tyler Norris",
+      "group": "Completed",
+      "source": "monday"
+    },
+    {
+      "id": "13072077253",
+      "title": "Goff, Paul Dendiu",
+      "status": "Done",
+      "date": "2026-09-30",
+      "owner": "Tyler Norris",
+      "group": "Completed",
+      "source": "monday"
+    },
     {
       "id": "13107439909",
       "title": "Goff, Paul Dendiu",

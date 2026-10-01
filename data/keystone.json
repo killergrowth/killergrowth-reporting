@@ -2,16 +2,16 @@
   "client": "Keystone Painting",
   "slug": "keystone",
   "logoPath": null,
-  "period": "August 2026",
-  "generatedAt": "2026-09-30T13:16:30.195Z",
+  "period": "September 2026",
+  "generatedAt": "2026-10-01T14:08:25.013Z",
   "overview": {
-    "sessions": 693,
+    "sessions": 445,
     "sessionsDelta": 0,
     "leads": null,
     "leadsDelta": null,
-    "rankingsTop10": 14,
+    "rankingsTop10": 16,
     "rankingsDelta": null,
-    "gbpViews": 1030,
+    "gbpViews": 917,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -52,88 +52,87 @@
         "label": "Aug 2026",
         "sessions": 693,
         "conversions": 2
+      },
+      {
+        "week": "202609",
+        "date": "2026-09-01",
+        "label": "Sep 2026",
+        "sessions": 445,
+        "conversions": 44
       }
     ],
     "trafficChannels": [
       {
         "channel": "Direct",
-        "sessions": 536
+        "sessions": 332
       },
       {
         "channel": "Organic Search",
-        "sessions": 115
-      },
-      {
-        "channel": "Referral",
-        "sessions": 31
+        "sessions": 83
       },
       {
         "channel": "Paid Search",
-        "sessions": 5
+        "sessions": 15
+      },
+      {
+        "channel": "Referral",
+        "sessions": 7
+      },
+      {
+        "channel": "Unassigned",
+        "sessions": 7
+      },
+      {
+        "channel": "Cross-network",
+        "sessions": 3
       },
       {
         "channel": "AI Assistant",
         "sessions": 2
-      },
-      {
-        "channel": "Unassigned",
-        "sessions": 2
-      },
-      {
-        "channel": "Cross-network",
-        "sessions": 1
       }
     ],
     "organicSearchSources": [
       {
         "source": "google",
-        "sessions": 100
+        "sessions": 75
       },
       {
         "source": "bing",
-        "sessions": 8
+        "sessions": 7
       },
       {
         "source": "duckduckgo",
-        "sessions": 5
-      },
-      {
-        "source": "chatgpt.com",
-        "sessions": 1
-      },
-      {
-        "source": "yahoo",
         "sessions": 1
       }
     ],
     "keywords": [
       {
+        "keyword": "keystone painting",
+        "clicks": 2,
+        "impressions": 5,
+        "ctr": 40,
+        "position": 9.4
+      },
+      {
         "keyword": "timnath painting",
-        "clicks": 3,
-        "impressions": 23,
-        "ctr": 13,
-        "position": 1.6
+        "clicks": 2,
+        "impressions": 11,
+        "ctr": 18.2,
+        "position": 2
       },
       {
         "keyword": "affordable exterior painters",
         "clicks": 0,
-        "impressions": 15,
+        "impressions": 2,
         "ctr": 0,
-        "position": 14.8
+        "position": 23
       },
       {
-        "keyword": "affordable fence staining",
+        "keyword": "affordable exterior painters near me",
         "clicks": 0,
         "impressions": 1,
         "ctr": 0,
-        "position": 3
-      },
-      {
-        "keyword": "affordable painter near me",
-        "clicks": 0,
-        "impressions": 5,
-        "ctr": 0,
-        "position": 33
+        "position": 18
       },
       {
         "keyword": "apartment painting near me",
@@ -143,25 +142,11 @@
         "position": 1
       },
       {
-        "keyword": "apartment painting service",
-        "clicks": 0,
-        "impressions": 2,
-        "ctr": 0,
-        "position": 16
-      },
-      {
-        "keyword": "basement contractor timnath",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 82
-      },
-      {
         "keyword": "basement finishing timnath",
         "clicks": 0,
-        "impressions": 9,
+        "impressions": 5,
         "ctr": 0,
-        "position": 79.4
+        "position": 58.4
       },
       {
         "keyword": "basement painting near me",
@@ -171,18 +156,18 @@
         "position": 1
       },
       {
-        "keyword": "basement remodeling johnstown",
+        "keyword": "bathroom near me",
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 1,
         "ctr": 0,
-        "position": 21
+        "position": 2
       },
       {
         "keyword": "bathroom painter weld county",
         "clicks": 0,
-        "impressions": 12,
+        "impressions": 8,
         "ctr": 0,
-        "position": 1.7
+        "position": 1.8
       },
       {
         "keyword": "bathroom painting near me",
@@ -194,58 +179,51 @@
       {
         "keyword": "bedroom painting near me",
         "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keyword": "best commercial exterior paint fort collins",
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 17.4
+      },
+      {
+        "keyword": "best exterior painters",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keyword": "best exterior painting company in fort collins using premium sherwin-williams paint products",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10.7
+      },
+      {
+        "keyword": "cabinet painter",
+        "clicks": 0,
         "impressions": 1,
         "ctr": 0,
         "position": 1
       },
       {
-        "keyword": "best cabinet painters near me",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 7
-      },
-      {
-        "keyword": "best commercial exterior paint fort collins",
-        "clicks": 0,
-        "impressions": 17,
-        "ctr": 0,
-        "position": 31.7
-      },
-      {
-        "keyword": "best exterior painters",
-        "clicks": 0,
-        "impressions": 17,
-        "ctr": 0,
-        "position": 9.4
-      },
-      {
-        "keyword": "best exterior painters near me",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 17
-      },
-      {
-        "keyword": "best exterior painting company in fort collins using premium sherwin-williams paint products",
-        "clicks": 0,
-        "impressions": 5,
-        "ctr": 0,
-        "position": 7.4
-      },
-      {
-        "keyword": "building painters near me",
-        "clicks": 0,
-        "impressions": 2,
-        "ctr": 0,
-        "position": 21
-      },
-      {
         "keyword": "cabinet painters berthoud co",
         "clicks": 0,
-        "impressions": 38,
+        "impressions": 15,
         "ctr": 0,
-        "position": 1.2
+        "position": 1
+      },
+      {
+        "keyword": "cabinet painters near me",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
       },
       {
         "keyword": "cabinet painters windsor co",
@@ -255,32 +233,53 @@
         "position": 1
       },
       {
-        "keyword": "cabinet painting",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 21
-      },
-      {
-        "keyword": "cabinet painting contractors berthoud co",
+        "keyword": "cabinet painting near me",
         "clicks": 0,
         "impressions": 5,
         "ctr": 0,
-        "position": 1
+        "position": 3
       },
       {
-        "keyword": "cabinet painting contractors timnath co",
+        "keyword": "ceramic coating timnath",
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 1,
         "ctr": 0,
-        "position": 1
+        "position": 41
       },
       {
-        "keyword": "cabinet painting near me",
+        "keyword": "colorado",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keyword": "commercial exterior painters near me",
         "clicks": 0,
         "impressions": 3,
         "ctr": 0,
-        "position": 14.3
+        "position": 18
+      },
+      {
+        "keyword": "commercial exterior painting northern colorado",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 18.5
+      },
+      {
+        "keyword": "commercial paint contractors near me",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 27
+      },
+      {
+        "keyword": "commercial painters berthoud co",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 1
       }
     ],
     "dfsSnapshot": {
@@ -877,36 +876,55 @@
       ]
     },
     "leadSignals": {
-      "organicSessions": 115,
-      "phoneCalls": 0,
-      "formSubmissions": 36,
+      "organicSessions": 83,
+      "phoneCalls": 21,
+      "formSubmissions": 25,
       "bookingClicks": 0,
-      "emailClicks": 0,
-      "ctaClicks": 20,
-      "formStarts": 12,
+      "emailClicks": 23,
+      "ctaClicks": 40,
+      "formStarts": 2,
       "byChannel": {
-        "form_submit": {
-          "Organic Search": 30,
-          "Direct": 4
-        },
         "cta_click": {
-          "Direct": 14,
-          "Referral": 3,
-          "Organic Search": 2,
-          "AI Assistant": 1
+          "Direct": 27,
+          "Organic Search": 4,
+          "Paid Search": 4,
+          "Cross-network": 3,
+          "Unassigned": 2
         },
-        "form_start": {
-          "Direct": 7,
-          "Organic Search": 3,
-          "Referral": 2
+        "email_click": {
+          "Direct": 15,
+          "Unassigned": 4,
+          "Cross-network": 2,
+          "Organic Search": 1,
+          "Paid Search": 1
         },
         "generate_lead": {
+          "Direct": 14,
+          "Unassigned": 5,
+          "Cross-network": 2,
+          "Organic Search": 2,
+          "Paid Search": 1
+        },
+        "phone_click": {
+          "Direct": 13,
+          "Cross-network": 3,
+          "Organic Search": 2,
+          "Unassigned": 2,
+          "Paid Search": 1
+        },
+        "form_start": {
           "Direct": 2
+        },
+        "form_submit": {
+          "Direct": 1
+        },
+        "phone_call": {
+          "Unassigned": 1
         }
       },
-      "gbpCalls": 4,
-      "gbpWebsiteClicks": 25,
-      "gbpDirections": 268
+      "gbpCalls": 3,
+      "gbpWebsiteClicks": 26,
+      "gbpDirections": 214
     }
   },
   "ads": {
@@ -1042,223 +1060,13 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 1030,
-    "calls": 4,
+    "totalViews": 917,
+    "calls": 3,
     "callsDelta": null,
-    "directions": 268,
-    "websiteClicks": 25,
+    "directions": 214,
+    "websiteClicks": 26,
     "directionsDelta": null,
     "viewsOverTime": [
-      {
-        "date": "2026-04-01",
-        "views": 9,
-        "calls": 0,
-        "directions": 5,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-02",
-        "views": 1,
-        "calls": 0,
-        "directions": 3,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-03",
-        "views": 4,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-04",
-        "views": 1,
-        "calls": 0,
-        "directions": 3,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-05",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-06",
-        "views": 5,
-        "calls": 0,
-        "directions": 7,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-07",
-        "views": 2,
-        "calls": 0,
-        "directions": 1,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-08",
-        "views": 5,
-        "calls": 0,
-        "directions": 4,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-09",
-        "views": 4,
-        "calls": 1,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-10",
-        "views": 10,
-        "calls": 0,
-        "directions": 3,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-11",
-        "views": 1,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-12",
-        "views": 4,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-13",
-        "views": 1,
-        "calls": 0,
-        "directions": 1,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-14",
-        "views": 4,
-        "calls": 0,
-        "directions": 3,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-15",
-        "views": 0,
-        "calls": 0,
-        "directions": 4,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-16",
-        "views": 0,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-17",
-        "views": 2,
-        "calls": 0,
-        "directions": 10,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-18",
-        "views": 4,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-19",
-        "views": 6,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-20",
-        "views": 4,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-21",
-        "views": 3,
-        "calls": 0,
-        "directions": 1,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-22",
-        "views": 4,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-23",
-        "views": 8,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-24",
-        "views": 13,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-25",
-        "views": 6,
-        "calls": 0,
-        "directions": 3,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-26",
-        "views": 2,
-        "calls": 0,
-        "directions": 1,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-27",
-        "views": 1,
-        "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-28",
-        "views": 1,
-        "calls": 0,
-        "directions": 6,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-29",
-        "views": 3,
-        "calls": 0,
-        "directions": 1,
-        "websiteClicks": 0
-      },
-      {
-        "date": "2026-04-30",
-        "views": 8,
-        "calls": 0,
-        "directions": 1,
-        "websiteClicks": 0
-      },
       {
         "date": "2026-05-01",
         "views": 4,
@@ -2304,16 +2112,16 @@
       },
       {
         "date": "2026-09-27",
-        "views": 2,
+        "views": 5,
         "calls": 0,
         "directions": 4,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-09-28",
         "views": 0,
         "calls": 0,
-        "directions": 0,
+        "directions": 3,
         "websiteClicks": 0
       },
       {
@@ -2325,6 +2133,13 @@
       },
       {
         "date": "2026-09-30",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-10-01",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -2372,28 +2187,27 @@
         "label": "Aug 2026",
         "sessions": 693,
         "conversions": 2
+      },
+      {
+        "week": "202609",
+        "date": "2026-09-01",
+        "label": "Sep 2026",
+        "sessions": 445,
+        "conversions": 44
       }
     ],
     "aiReferral": {
-      "total": 3,
+      "total": 2,
       "platforms": [
         {
           "name": "ChatGPT",
-          "sessions": 3
+          "sessions": 2
         }
       ],
       "weeklyTrend": [
         {
-          "week": "32",
-          "sessions": 1
-        },
-        {
-          "week": "34",
-          "sessions": 1
-        },
-        {
-          "week": "35",
-          "sessions": 1
+          "week": "38",
+          "sessions": 2
         }
       ]
     },
@@ -2405,134 +2219,146 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "YNVVPFQV",
-    "uniques": 72,
-    "visits": 72,
-    "pageviews": 273,
-    "avgDuration": 495,
-    "bounceRate": 52.777777777778,
-    "uniquesDelta": null,
-    "visitsDelta": null,
-    "pageviewsDelta": null,
+    "uniques": 105,
+    "visits": 105,
+    "pageviews": 130,
+    "avgDuration": 66,
+    "bounceRate": 84.761904761905,
+    "uniquesDelta": 45.8,
+    "visitsDelta": 45.8,
+    "pageviewsDelta": -52.4,
     "dailyTimeseries": [
       {
-        "date": "2026-08-27",
+        "date": "2026-09-30",
+        "visits": 8,
+        "uniques": 8,
+        "pageviews": 9
+      },
+      {
+        "date": "2026-09-16",
+        "visits": 18,
+        "uniques": 18,
+        "pageviews": 20
+      },
+      {
+        "date": "2026-09-18",
+        "visits": 11,
+        "uniques": 11,
+        "pageviews": 25
+      },
+      {
+        "date": "2026-09-20",
+        "visits": 7,
+        "uniques": 7,
+        "pageviews": 7
+      },
+      {
+        "date": "2026-09-25",
+        "visits": 6,
+        "uniques": 6,
+        "pageviews": 9
+      },
+      {
+        "date": "2026-09-10",
         "visits": 5,
         "uniques": 5,
-        "pageviews": 5
+        "pageviews": 6
       },
       {
-        "date": "2026-08-29",
-        "visits": 3,
-        "uniques": 3,
-        "pageviews": 11
-      },
-      {
-        "date": "2026-08-11",
-        "visits": 3,
-        "uniques": 3,
-        "pageviews": 10
-      },
-      {
-        "date": "2026-08-07",
+        "date": "2026-09-15",
         "visits": 4,
         "uniques": 4,
         "pageviews": 4
       },
       {
-        "date": "2026-08-21",
+        "date": "2026-09-26",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 3
+      },
+      {
+        "date": "2026-09-28",
+        "visits": 5,
+        "uniques": 5,
+        "pageviews": 6
+      },
+      {
+        "date": "2026-09-11",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 2
+      },
+      {
+        "date": "2026-09-14",
+        "visits": 3,
+        "uniques": 3,
+        "pageviews": 3
+      },
+      {
+        "date": "2026-09-01",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 1
+      },
+      {
+        "date": "2026-09-27",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 2
+      },
+      {
+        "date": "2026-09-22",
+        "visits": 3,
+        "uniques": 3,
+        "pageviews": 4
+      },
+      {
+        "date": "2026-09-29",
         "visits": 4,
         "uniques": 4,
         "pageviews": 4
       },
       {
-        "date": "2026-08-09",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 3
-      },
-      {
-        "date": "2026-08-24",
-        "visits": 5,
-        "uniques": 5,
-        "pageviews": 21
-      },
-      {
-        "date": "2026-08-17",
+        "date": "2026-09-04",
         "visits": 1,
         "uniques": 1,
         "pageviews": 1
       },
       {
-        "date": "2026-08-31",
-        "visits": 2,
-        "uniques": 2,
-        "pageviews": 10
-      },
-      {
-        "date": "2026-08-12",
+        "date": "2026-09-17",
         "visits": 7,
         "uniques": 7,
-        "pageviews": 8
+        "pageviews": 7
       },
       {
-        "date": "2026-08-20",
-        "visits": 7,
-        "uniques": 7,
-        "pageviews": 19
-      },
-      {
-        "date": "2026-08-06",
-        "visits": 3,
-        "uniques": 3,
-        "pageviews": 16
-      },
-      {
-        "date": "2026-08-03",
-        "visits": 2,
-        "uniques": 2,
-        "pageviews": 5
-      },
-      {
-        "date": "2026-08-25",
-        "visits": 10,
-        "uniques": 10,
-        "pageviews": 116
-      },
-      {
-        "date": "2026-08-13",
+        "date": "2026-09-19",
         "visits": 4,
         "uniques": 4,
-        "pageviews": 19
+        "pageviews": 4
       },
       {
-        "date": "2026-08-26",
-        "visits": 7,
-        "uniques": 7,
-        "pageviews": 15
-      },
-      {
-        "date": "2026-08-05",
-        "visits": 1,
-        "uniques": 1,
+        "date": "2026-09-12",
+        "visits": 3,
+        "uniques": 3,
         "pageviews": 3
       },
       {
-        "date": "2026-08-28",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 1
+        "date": "2026-09-21",
+        "visits": 3,
+        "uniques": 3,
+        "pageviews": 4
       },
       {
-        "date": "2026-08-23",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 1
+        "date": "2026-09-24",
+        "visits": 4,
+        "uniques": 4,
+        "pageviews": 4
       },
       {
-        "date": "2026-08-10",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 1
+        "date": "2026-09-02",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 2
       }
     ],
     "monthlyHistory": [
@@ -2549,50 +2375,57 @@
         "visits": 72,
         "uniques": 72,
         "pageviews": 273
+      },
+      {
+        "month": "Sep 2026",
+        "date": "2026-09",
+        "visits": 105,
+        "uniques": 105,
+        "pageviews": 130
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "pageviews": 131,
-        "uniques": 62
+        "pageviews": 73,
+        "uniques": 65
       },
       {
         "path": "/sign-up/",
-        "pageviews": 30,
+        "pageviews": 33,
+        "uniques": 28
+      },
+      {
+        "path": "/areas-served/fort-collins-co/",
+        "pageviews": 7,
+        "uniques": 6
+      },
+      {
+        "path": "/areas-served/loveland-co/",
+        "pageviews": 3,
+        "uniques": 2
+      },
+      {
+        "path": "/contact",
+        "pageviews": 3,
         "uniques": 3
-      },
-      {
-        "path": "/projects/interior-painting-loveland-whole-home-repaint/",
-        "pageviews": 25,
-        "uniques": 8
-      },
-      {
-        "path": "/areas-served/",
-        "pageviews": 24,
-        "uniques": 13
-      },
-      {
-        "path": "/neighborhoods/wildwing/",
-        "pageviews": 14,
-        "uniques": 5
       }
     ],
     "referrers": [
       {
         "source": "Direct",
-        "visits": 59,
-        "uniques": 59
+        "visits": 62,
+        "uniques": 62
       },
       {
         "source": "Organic",
-        "visits": 7,
-        "uniques": 7
+        "visits": 29,
+        "uniques": 29
       },
       {
         "source": "Paid/campaign",
-        "visits": 6,
-        "uniques": 6
+        "visits": 14,
+        "uniques": 14
       }
     ],
     "cfPageViews": null,
@@ -2603,13 +2436,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 28,
+        "performance": 34,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 85
       },
       "desktop": {
-        "performance": 50,
+        "performance": 58,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 85
@@ -3216,6 +3049,21 @@
         },
         "desktop": {
           "performance": 50,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 85
+        }
+      },
+      {
+        "date": "2026-10-01",
+        "mobile": {
+          "performance": 34,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 85
+        },
+        "desktop": {
+          "performance": 58,
           "accessibility": 93,
           "bestPractices": 100,
           "seo": 85
