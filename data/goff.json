@@ -3,9 +3,9 @@
   "slug": "goff",
   "logoPath": null,
   "period": "September 2026",
-  "generatedAt": "2026-10-01T14:02:57.249Z",
+  "generatedAt": "2026-10-02T13:21:12.400Z",
   "overview": {
-    "sessions": 2247,
+    "sessions": 2257,
     "sessionsDelta": 0,
     "leads": null,
     "leadsDelta": null,
@@ -309,34 +309,34 @@
         "week": "202609",
         "date": "2026-09-01",
         "label": "Sep 2026",
-        "sessions": 2247,
-        "conversions": 376
+        "sessions": 2257,
+        "conversions": 377
       }
     ],
     "trafficChannels": [
       {
         "channel": "Direct",
-        "sessions": 1134
+        "sessions": 1140
       },
       {
         "channel": "Paid Search",
-        "sessions": 499
+        "sessions": 508
       },
       {
         "channel": "Organic Search",
-        "sessions": 445
+        "sessions": 452
       },
       {
         "channel": "Cross-network",
-        "sessions": 57
-      },
-      {
-        "channel": "Unassigned",
-        "sessions": 49
+        "sessions": 45
       },
       {
         "channel": "Referral",
-        "sessions": 39
+        "sessions": 40
+      },
+      {
+        "channel": "Unassigned",
+        "sessions": 40
       },
       {
         "channel": "AI Assistant",
@@ -362,7 +362,7 @@
     "organicSearchSources": [
       {
         "source": "google",
-        "sessions": 388
+        "sessions": 394
       },
       {
         "source": "bing",
@@ -370,7 +370,7 @@
       },
       {
         "source": "duckduckgo",
-        "sessions": 16
+        "sessions": 17
       },
       {
         "source": "chatgpt.com",
@@ -388,9 +388,9 @@
     "keywords": [
       {
         "keyword": "goff heating",
-        "clicks": 62,
-        "impressions": 247,
-        "ctr": 25.1,
+        "clicks": 69,
+        "impressions": 268,
+        "ctr": 25.7,
         "position": 1.4
       },
       {
@@ -403,8 +403,8 @@
       {
         "keyword": "goff",
         "clicks": 5,
-        "impressions": 581,
-        "ctr": 0.9,
+        "impressions": 590,
+        "ctr": 0.8,
         "position": 5.2
       },
       {
@@ -417,15 +417,15 @@
       {
         "keyword": "hvac south bend",
         "clicks": 4,
-        "impressions": 156,
-        "ctr": 2.6,
-        "position": 7.3
+        "impressions": 162,
+        "ctr": 2.5,
+        "position": 7.2
       },
       {
         "keyword": "air conditioner",
         "clicks": 2,
-        "impressions": 51,
-        "ctr": 3.9,
+        "impressions": 52,
+        "ctr": 3.8,
         "position": 3.8
       },
       {
@@ -445,15 +445,15 @@
       {
         "keyword": "goff plumbing",
         "clicks": 2,
-        "impressions": 40,
-        "ctr": 5,
-        "position": 6.5
+        "impressions": 41,
+        "ctr": 4.9,
+        "position": 6.4
       },
       {
         "keyword": "how long does a furnace tune up take",
         "clicks": 2,
-        "impressions": 150,
-        "ctr": 1.3,
+        "impressions": 164,
+        "ctr": 1.2,
         "position": 1.8
       },
       {
@@ -480,16 +480,16 @@
       {
         "keyword": "bioforce defender",
         "clicks": 1,
-        "impressions": 36,
-        "ctr": 2.8,
+        "impressions": 39,
+        "ctr": 2.6,
         "position": 3.3
       },
       {
         "keyword": "bioforce defender uv air cleaning system",
         "clicks": 1,
-        "impressions": 11,
-        "ctr": 9.1,
-        "position": 4.2
+        "impressions": 12,
+        "ctr": 8.3,
+        "position": 4.3
       },
       {
         "keyword": "cost?",
@@ -501,9 +501,9 @@
       {
         "keyword": "emergency furnace repair service",
         "clicks": 1,
-        "impressions": 2,
-        "ctr": 50,
-        "position": 9.5
+        "impressions": 3,
+        "ctr": 33.3,
+        "position": 9
       },
       {
         "keyword": "furnace cleaning specials near me",
@@ -529,16 +529,16 @@
       {
         "keyword": "goff heating and air",
         "clicks": 1,
-        "impressions": 61,
-        "ctr": 1.6,
+        "impressions": 65,
+        "ctr": 1.5,
         "position": 8
       },
       {
         "keyword": "heating and air conditioning near me",
         "clicks": 1,
-        "impressions": 11,
-        "ctr": 9.1,
-        "position": 8.4
+        "impressions": 12,
+        "ctr": 8.3,
+        "position": 8.6
       },
       {
         "keyword": "how does a heat pump work in winter",
@@ -550,22 +550,22 @@
       {
         "keyword": "hvac",
         "clicks": 1,
-        "impressions": 213,
+        "impressions": 215,
         "ctr": 0.5,
         "position": 2.6
       },
       {
         "keyword": "hvac near me",
         "clicks": 1,
-        "impressions": 47,
-        "ctr": 2.1,
-        "position": 7.5
+        "impressions": 49,
+        "ctr": 2,
+        "position": 7.4
       }
     ],
     "dfsSnapshot": null,
     "leadSignals": {
-      "organicSessions": 445,
-      "phoneCalls": 304,
+      "organicSessions": 452,
+      "phoneCalls": 305,
       "formSubmissions": 0,
       "bookingClicks": 0,
       "emailClicks": 0,
@@ -577,7 +577,7 @@
           "Organic Search": 51,
           "Direct": 31,
           "Paid Search": 29,
-          "Cross-network": 6,
+          "Cross-network": 7,
           "AI Assistant": 2,
           "Referral": 1
         }
@@ -915,8 +915,8 @@
         "week": "202609",
         "date": "2026-09-01",
         "label": "Sep 2026",
-        "sessions": 2247,
-        "conversions": 376
+        "sessions": 2257,
+        "conversions": 377
       }
     ],
     "aiReferral": {
@@ -986,13 +986,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 43,
+        "performance": 50,
         "accessibility": 81,
         "bestPractices": 96,
         "seo": 92
       },
       "desktop": {
-        "performance": 70,
+        "performance": 67,
         "accessibility": 85,
         "bestPractices": 96,
         "seo": 92
@@ -1974,6 +1974,21 @@
         },
         "desktop": {
           "performance": 70,
+          "accessibility": 85,
+          "bestPractices": 96,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-10-02",
+        "mobile": {
+          "performance": 50,
+          "accessibility": 81,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 67,
           "accessibility": 85,
           "bestPractices": 96,
           "seo": 92

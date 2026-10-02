@@ -3,7 +3,7 @@
   "slug": "keystone",
   "logoPath": null,
   "period": "September 2026",
-  "generatedAt": "2026-10-01T14:08:25.013Z",
+  "generatedAt": "2026-10-02T13:26:32.261Z",
   "overview": {
     "sessions": 445,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 16,
     "rankingsDelta": null,
-    "gbpViews": 917,
+    "gbpViews": 921,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -58,7 +58,7 @@
         "date": "2026-09-01",
         "label": "Sep 2026",
         "sessions": 445,
-        "conversions": 44
+        "conversions": 45
       }
     ],
     "trafficChannels": [
@@ -72,22 +72,18 @@
       },
       {
         "channel": "Paid Search",
-        "sessions": 15
+        "sessions": 18
       },
       {
         "channel": "Referral",
         "sessions": 7
       },
       {
-        "channel": "Unassigned",
-        "sessions": 7
-      },
-      {
-        "channel": "Cross-network",
-        "sessions": 3
-      },
-      {
         "channel": "AI Assistant",
+        "sessions": 2
+      },
+      {
+        "channel": "Unassigned",
         "sessions": 2
       }
     ],
@@ -877,40 +873,32 @@
     },
     "leadSignals": {
       "organicSessions": 83,
-      "phoneCalls": 21,
-      "formSubmissions": 25,
+      "phoneCalls": 23,
+      "formSubmissions": 24,
       "bookingClicks": 0,
       "emailClicks": 23,
-      "ctaClicks": 40,
+      "ctaClicks": 41,
       "formStarts": 2,
       "byChannel": {
         "cta_click": {
-          "Direct": 27,
-          "Organic Search": 4,
-          "Paid Search": 4,
-          "Cross-network": 3,
-          "Unassigned": 2
+          "Direct": 28,
+          "Paid Search": 7,
+          "Organic Search": 6
         },
         "email_click": {
-          "Direct": 15,
-          "Unassigned": 4,
-          "Cross-network": 2,
-          "Organic Search": 1,
-          "Paid Search": 1
+          "Direct": 16,
+          "Paid Search": 4,
+          "Organic Search": 3
         },
         "generate_lead": {
-          "Direct": 14,
-          "Unassigned": 5,
-          "Cross-network": 2,
-          "Organic Search": 2,
-          "Paid Search": 1
+          "Direct": 16,
+          "Paid Search": 4,
+          "Organic Search": 3
         },
         "phone_click": {
-          "Direct": 13,
-          "Cross-network": 3,
-          "Organic Search": 2,
-          "Unassigned": 2,
-          "Paid Search": 1
+          "Direct": 16,
+          "Paid Search": 4,
+          "Organic Search": 3
         },
         "form_start": {
           "Direct": 2
@@ -1060,7 +1048,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 917,
+    "totalViews": 921,
     "calls": 3,
     "callsDelta": null,
     "directions": 214,
@@ -2119,7 +2107,7 @@
       },
       {
         "date": "2026-09-28",
-        "views": 0,
+        "views": 4,
         "calls": 0,
         "directions": 3,
         "websiteClicks": 0
@@ -2140,6 +2128,13 @@
       },
       {
         "date": "2026-10-01",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-10-02",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -2193,7 +2188,7 @@
         "date": "2026-09-01",
         "label": "Sep 2026",
         "sessions": 445,
-        "conversions": 44
+        "conversions": 45
       }
     ],
     "aiReferral": {
@@ -2436,13 +2431,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 34,
+        "performance": 50,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 85
       },
       "desktop": {
-        "performance": 58,
+        "performance": 46,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 85
@@ -3064,6 +3059,21 @@
         },
         "desktop": {
           "performance": 58,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 85
+        }
+      },
+      {
+        "date": "2026-10-02",
+        "mobile": {
+          "performance": 50,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 85
+        },
+        "desktop": {
+          "performance": 46,
           "accessibility": 93,
           "bestPractices": 100,
           "seo": 85

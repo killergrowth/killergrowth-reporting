@@ -3,15 +3,15 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "September 2026",
-  "generatedAt": "2026-10-01T14:02:00.422Z",
+  "generatedAt": "2026-10-02T13:20:02.217Z",
   "overview": {
-    "sessions": 991,
+    "sessions": 995,
     "sessionsDelta": 0,
     "leads": null,
     "leadsDelta": null,
     "rankingsTop10": 18,
     "rankingsDelta": null,
-    "gbpViews": 755,
+    "gbpViews": 756,
     "gbpViewsDelta": null,
     "adSpend": 733.56,
     "adImpressions": 2018,
@@ -190,22 +190,22 @@
         "week": "202609",
         "date": "2026-09-01",
         "label": "Sep 2026",
-        "sessions": 991,
+        "sessions": 995,
         "conversions": 29
       }
     ],
     "trafficChannels": [
       {
         "channel": "Direct",
-        "sessions": 691
+        "sessions": 696
       },
       {
         "channel": "Paid Search",
-        "sessions": 129
+        "sessions": 130
       },
       {
         "channel": "Organic Search",
-        "sessions": 125
+        "sessions": 126
       },
       {
         "channel": "Display",
@@ -213,11 +213,7 @@
       },
       {
         "channel": "Cross-network",
-        "sessions": 6
-      },
-      {
-        "channel": "Unassigned",
-        "sessions": 6
+        "sessions": 5
       },
       {
         "channel": "Organic Social",
@@ -230,12 +226,16 @@
       {
         "channel": "Referral",
         "sessions": 3
+      },
+      {
+        "channel": "Unassigned",
+        "sessions": 1
       }
     ],
     "organicSearchSources": [
       {
         "source": "google",
-        "sessions": 115
+        "sessions": 116
       },
       {
         "source": "bing",
@@ -408,9 +408,9 @@
       {
         "keyword": "affordable carpet cleaning service",
         "clicks": 0,
-        "impressions": 3,
+        "impressions": 4,
         "ctr": 0,
-        "position": 25.7
+        "position": 24.5
       },
       {
         "keyword": "affordable carpet cleaning specialist",
@@ -429,7 +429,7 @@
     ],
     "dfsSnapshot": null,
     "leadSignals": {
-      "organicSessions": 125,
+      "organicSessions": 126,
       "phoneCalls": 16,
       "formSubmissions": 11,
       "bookingClicks": 0,
@@ -574,7 +574,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 755,
+    "totalViews": 756,
     "calls": 9,
     "callsDelta": null,
     "directions": 203,
@@ -1633,7 +1633,7 @@
       },
       {
         "date": "2026-09-28",
-        "views": 0,
+        "views": 1,
         "calls": 0,
         "directions": 3,
         "websiteClicks": 0
@@ -1654,6 +1654,13 @@
       },
       {
         "date": "2026-10-01",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-10-02",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1715,7 +1722,7 @@
       },
       {
         "month": "Oct 2026",
-        "reach": 0,
+        "reach": 1,
         "engagements": 0
       }
     ],
@@ -1809,7 +1816,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 0
+        "adReach": 1
       }
     ],
     "metrics": null,
@@ -1987,7 +1994,7 @@
         "week": "202609",
         "date": "2026-09-01",
         "label": "Sep 2026",
-        "sessions": 991,
+        "sessions": 995,
         "conversions": 29
       }
     ],
@@ -2270,8 +2277,8 @@
       },
       {
         "source": "Paid/campaign",
-        "visits": 162,
-        "uniques": 162
+        "visits": 159,
+        "uniques": 159
       },
       {
         "source": "Organic",
@@ -2282,6 +2289,11 @@
         "source": "Social",
         "visits": 4,
         "uniques": 4
+      },
+      {
+        "source": "AI",
+        "visits": 3,
+        "uniques": 3
       }
     ],
     "cfPageViews": null,
@@ -2292,34 +2304,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 58,
+        "performance": 67,
         "accessibility": 92,
         "bestPractices": 100,
         "seo": 100
       },
       "desktop": {
-        "performance": 70,
+        "performance": 74,
         "accessibility": 92,
         "bestPractices": 100,
         "seo": 100
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-06-11",
-        "mobile": {
-          "performance": 65,
-          "accessibility": 92,
-          "bestPractices": 100,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 83,
-          "accessibility": 92,
-          "bestPractices": 100,
-          "seo": 100
-        }
-      },
       {
         "date": "2026-06-12",
         "mobile": {
@@ -3540,6 +3537,21 @@
         },
         "desktop": {
           "performance": 70,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-10-02",
+        "mobile": {
+          "performance": 67,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 74,
           "accessibility": 92,
           "bestPractices": 100,
           "seo": 100

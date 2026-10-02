@@ -3,7 +3,7 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "September 2026",
-  "generatedAt": "2026-10-01T13:59:48.276Z",
+  "generatedAt": "2026-10-02T13:17:49.526Z",
   "overview": {
     "sessions": 359,
     "sessionsDelta": 0,
@@ -11,9 +11,9 @@
     "leadsDelta": null,
     "rankingsTop10": null,
     "rankingsDelta": null,
-    "gbpViews": 2336,
+    "gbpViews": 2341,
     "gbpViewsDelta": null,
-    "adSpend": 605.67,
+    "adSpend": 605.79,
     "adImpressions": 25624,
     "adBudget": null,
     "costPerLead": null,
@@ -146,7 +146,7 @@
         }
       },
       "gbpCalls": 7,
-      "gbpWebsiteClicks": 91,
+      "gbpWebsiteClicks": 93,
       "gbpDirections": 188,
       "formSubmissionsMonthly": [
         {
@@ -212,14 +212,14 @@
       },
       {
         "month": "Sep 2026",
-        "adSpend": 605.67,
+        "adSpend": 605.79,
         "adClicks": 7304,
         "adLeads": 0
       },
       {
         "month": "Oct 2026",
-        "adSpend": 4.04,
-        "adClicks": 14,
+        "adSpend": 22.47,
+        "adClicks": 155,
         "adLeads": 0
       }
     ],
@@ -244,11 +244,11 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 2336,
+    "totalViews": 2341,
     "calls": 7,
     "callsDelta": null,
     "directions": 188,
-    "websiteClicks": 91,
+    "websiteClicks": 93,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1303,10 +1303,10 @@
       },
       {
         "date": "2026-09-28",
-        "views": 0,
+        "views": 5,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 2
       },
       {
         "date": "2026-09-29",
@@ -1324,6 +1324,13 @@
       },
       {
         "date": "2026-10-01",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-10-02",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1467,27 +1474,27 @@
       },
       {
         "month": "Sep 2026",
-        "adSpend": 605.67,
+        "adSpend": 605.79,
         "adClicks": 7304,
         "adLeads": 0,
-        "adImpressions": 27310,
+        "adImpressions": 27311,
         "adReach": 104
       },
       {
         "month": "Oct 2026",
-        "adSpend": 4.04,
-        "adClicks": 14,
+        "adSpend": 22.47,
+        "adClicks": 155,
         "adLeads": 0,
-        "adImpressions": 131,
+        "adImpressions": 1252,
         "adReach": 0
       }
     ],
     "metrics": null,
     "adBreakdown": [],
     "ageGender": [],
-    "adSpend": 605.67,
+    "adSpend": 605.79,
     "adClicks": 7304,
-    "adImpressions": 27310,
+    "adImpressions": 27311,
     "adLeads": null
   },
   "website": {
@@ -1758,34 +1765,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 66,
+        "performance": 64,
         "accessibility": 90,
         "bestPractices": 92,
         "seo": 100
       },
       "desktop": {
-        "performance": 94,
+        "performance": 84,
         "accessibility": 90,
         "bestPractices": 92,
         "seo": 100
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-06-10",
-        "mobile": {
-          "performance": 48,
-          "accessibility": 90,
-          "bestPractices": 77,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 91,
-          "accessibility": 90,
-          "bestPractices": 77,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-06-11",
         "mobile": {
@@ -3061,6 +3053,21 @@
         },
         "desktop": {
           "performance": 94,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-10-02",
+        "mobile": {
+          "performance": 64,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 84,
           "accessibility": 90,
           "bestPractices": 92,
           "seo": 100
