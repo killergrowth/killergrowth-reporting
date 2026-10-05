@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "September 2026",
-  "generatedAt": "2026-10-04T12:55:39.395Z",
+  "generatedAt": "2026-10-05T15:23:03.541Z",
   "overview": {
     "sessions": 1303,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 19,
     "rankingsDelta": null,
-    "gbpViews": 4359,
+    "gbpViews": 4376,
     "gbpViewsDelta": null,
     "adSpend": 0,
     "adImpressions": 19349,
@@ -181,9 +181,9 @@
       {
         "keyword": "sunflower plumbing",
         "clicks": 8,
-        "impressions": 96,
-        "ctr": 8.3,
-        "position": 5.1
+        "impressions": 97,
+        "ctr": 8.2,
+        "position": 5
       },
       {
         "keyword": "plumbers el dorado ks",
@@ -207,6 +207,13 @@
         "position": 1.5
       },
       {
+        "keyword": "sunflower septic",
+        "clicks": 2,
+        "impressions": 13,
+        "ctr": 15.4,
+        "position": 2.3
+      },
+      {
         "keyword": "drain camera service near me",
         "clicks": 1,
         "impressions": 1,
@@ -219,13 +226,6 @@
         "impressions": 6,
         "ctr": 16.7,
         "position": 1.7
-      },
-      {
-        "keyword": "sunflower septic",
-        "clicks": 1,
-        "impressions": 12,
-        "ctr": 8.3,
-        "position": 2.4
       },
       {
         "keyword": "sunshine plumbing",
@@ -300,9 +300,9 @@
       {
         "keyword": "backflow testing el dorado ks",
         "clicks": 0,
-        "impressions": 10,
+        "impressions": 12,
         "ctr": 0,
-        "position": 1.5
+        "position": 1.4
       },
       {
         "keyword": "bathroom faucet replacement mclouth ks",
@@ -321,9 +321,9 @@
       {
         "keyword": "bel aire, kansas plumbers",
         "clicks": 0,
-        "impressions": 5,
+        "impressions": 6,
         "ctr": 0,
-        "position": 8.6
+        "position": 8.8
       },
       {
         "keyword": "best plumbers near",
@@ -536,7 +536,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 4359,
+    "totalViews": 4376,
     "calls": 257,
     "callsDelta": null,
     "directions": 223,
@@ -1616,7 +1616,7 @@
       },
       {
         "date": "2026-10-01",
-        "views": 5,
+        "views": 22,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1637,6 +1637,13 @@
       },
       {
         "date": "2026-10-04",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-10-05",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1698,8 +1705,8 @@
       },
       {
         "month": "Oct 2026",
-        "reach": 19,
-        "engagements": 16
+        "reach": 22,
+        "engagements": 17
       }
     ],
     "reachByWeek": [],
@@ -1792,7 +1799,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 19
+        "adReach": 22
       }
     ],
     "metrics": null,
@@ -2199,34 +2206,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 59,
+        "performance": 49,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 84,
+        "performance": 83,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-05-18",
-        "mobile": {
-          "performance": 58,
-          "accessibility": 75,
-          "bestPractices": 96,
-          "seo": 85
-        },
-        "desktop": {
-          "performance": 51,
-          "accessibility": 77,
-          "bestPractices": 96,
-          "seo": 85
-        }
-      },
       {
         "date": "2026-05-19",
         "mobile": null,
@@ -3512,6 +3504,21 @@
         },
         "desktop": {
           "performance": 84,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-10-05",
+        "mobile": {
+          "performance": 49,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 83,
           "accessibility": 93,
           "bestPractices": 100,
           "seo": 92
