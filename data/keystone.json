@@ -3,7 +3,7 @@
   "slug": "keystone",
   "logoPath": null,
   "period": "September 2026",
-  "generatedAt": "2026-10-05T15:30:21.955Z",
+  "generatedAt": "2026-10-06T13:51:52.232Z",
   "overview": {
     "sessions": 445,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 16,
     "rankingsDelta": null,
-    "gbpViews": 956,
+    "gbpViews": 977,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -1048,7 +1048,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 956,
+    "totalViews": 977,
     "calls": 3,
     "callsDelta": null,
     "directions": 216,
@@ -2135,14 +2135,14 @@
       },
       {
         "date": "2026-10-02",
-        "views": 0,
+        "views": 12,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-10-03",
-        "views": 0,
+        "views": 9,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -2156,6 +2156,13 @@
       },
       {
         "date": "2026-10-05",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-10-06",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -2379,11 +2386,11 @@
     ],
     "monthlyHistory": [
       {
-        "month": "Jul 2026",
-        "date": "2026-07",
-        "visits": 6,
-        "uniques": 6,
-        "pageviews": 16
+        "month": "Sep 2026",
+        "date": "2026-09",
+        "visits": 105,
+        "uniques": 105,
+        "pageviews": 130
       },
       {
         "month": "Aug 2026",
@@ -2393,11 +2400,11 @@
         "pageviews": 273
       },
       {
-        "month": "Sep 2026",
-        "date": "2026-09",
-        "visits": 105,
-        "uniques": 105,
-        "pageviews": 130
+        "month": "Jul 2026",
+        "date": "2026-07",
+        "visits": 6,
+        "uniques": 6,
+        "pageviews": 16
       }
     ],
     "topPages": [
@@ -2452,13 +2459,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 54,
+        "performance": 56,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 85
       },
       "desktop": {
-        "performance": 68,
+        "performance": 58,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 85
@@ -3140,6 +3147,21 @@
         },
         "desktop": {
           "performance": 68,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 85
+        }
+      },
+      {
+        "date": "2026-10-06",
+        "mobile": {
+          "performance": 56,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 85
+        },
+        "desktop": {
+          "performance": 58,
           "accessibility": 93,
           "bestPractices": 100,
           "seo": 85
