@@ -3,7 +3,7 @@
   "slug": "dons-heating",
   "logoPath": null,
   "period": "September 2026",
-  "generatedAt": "2026-10-06T13:44:55.074Z",
+  "generatedAt": "2026-10-07T14:04:24.182Z",
   "overview": {
     "sessions": 850,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 13,
     "rankingsDelta": null,
-    "gbpViews": 4616,
+    "gbpViews": 4629,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -512,8 +512,8 @@
         }
       },
       "gbpCalls": 502,
-      "gbpWebsiteClicks": 222,
-      "gbpDirections": 223
+      "gbpWebsiteClicks": 224,
+      "gbpDirections": 224
     }
   },
   "ads": {
@@ -698,11 +698,11 @@
   },
   "gbp": {
     "locationName": "El Dorado",
-    "totalViews": 4616,
+    "totalViews": 4629,
     "calls": 502,
     "callsDelta": null,
-    "directions": 223,
-    "websiteClicks": 222,
+    "directions": 224,
+    "websiteClicks": 224,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1780,8 +1780,8 @@
         "date": "2026-10-01",
         "views": 22,
         "calls": 0,
-        "directions": 0,
-        "websiteClicks": 0
+        "directions": 1,
+        "websiteClicks": 2
       },
       {
         "date": "2026-10-02",
@@ -1792,7 +1792,7 @@
       },
       {
         "date": "2026-10-03",
-        "views": 6,
+        "views": 19,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1817,6 +1817,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-10-07",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -1827,7 +1834,7 @@
     "locationName": "Emporia",
     "totalViews": 927,
     "calls": 46,
-    "directions": 175,
+    "directions": 185,
     "websiteClicks": 51,
     "viewsOverTime": [
       {
@@ -2905,21 +2912,21 @@
         "date": "2026-10-01",
         "views": 8,
         "calls": 1,
-        "directions": 0,
+        "directions": 7,
         "websiteClicks": 0
       },
       {
         "date": "2026-10-02",
         "views": 5,
         "calls": 0,
-        "directions": 0,
+        "directions": 1,
         "websiteClicks": 0
       },
       {
         "date": "2026-10-03",
         "views": 1,
         "calls": 0,
-        "directions": 0,
+        "directions": 2,
         "websiteClicks": 0
       },
       {
@@ -2942,6 +2949,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-10-07",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -2951,8 +2965,8 @@
     "locationName": "Hillsboro",
     "totalViews": 1321,
     "calls": 87,
-    "directions": 248,
-    "websiteClicks": 52,
+    "directions": 250,
+    "websiteClicks": 56,
     "viewsOverTime": [
       {
         "date": "2026-05-01",
@@ -4023,20 +4037,20 @@
         "views": 9,
         "calls": 1,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 4
       },
       {
         "date": "2026-10-01",
         "views": 9,
         "calls": 1,
-        "directions": 0,
+        "directions": 1,
         "websiteClicks": 0
       },
       {
         "date": "2026-10-02",
         "views": 10,
         "calls": 1,
-        "directions": 0,
+        "directions": 1,
         "websiteClicks": 0
       },
       {
@@ -4062,6 +4076,13 @@
       },
       {
         "date": "2026-10-06",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-10-07",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -4120,8 +4141,8 @@
       },
       {
         "month": "Oct 2026",
-        "reach": 17,
-        "engagements": 5
+        "reach": 21,
+        "engagements": 6
       }
     ],
     "reachByWeek": [],
@@ -4214,7 +4235,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 17
+        "adReach": 21
       }
     ],
     "metrics": null,
@@ -4495,34 +4516,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 57,
+        "performance": 53,
         "accessibility": 90,
         "bestPractices": 96,
         "seo": 92
       },
       "desktop": {
-        "performance": 67,
+        "performance": 55,
         "accessibility": 90,
         "bestPractices": 96,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-06-18",
-        "mobile": {
-          "performance": 66,
-          "accessibility": 90,
-          "bestPractices": 73,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 94,
-          "accessibility": 91,
-          "bestPractices": 73,
-          "seo": 100
-        }
-      },
       {
         "date": "2026-06-19",
         "mobile": {
@@ -5772,6 +5778,21 @@
           "bestPractices": 96,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-10-07",
+        "mobile": {
+          "performance": 53,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 55,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "seo": 92
+        }
       }
     ]
   },
@@ -6061,15 +6082,6 @@
       "status": "Done",
       "date": "2026-04-27",
       "owner": "Tyler Norris",
-      "group": "Completed",
-      "source": "monday"
-    },
-    {
-      "id": "11701671492",
-      "title": "Follow up with Don's Heating & Air about QR code",
-      "status": "Done",
-      "date": "2026-04-09",
-      "owner": "Phil Anderson",
       "group": "Completed",
       "source": "monday"
     }
