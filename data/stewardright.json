@@ -3,7 +3,7 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "September 2026",
-  "generatedAt": "2026-10-07T14:02:20.659Z",
+  "generatedAt": "2026-10-08T14:08:54.067Z",
   "overview": {
     "sessions": 359,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": null,
     "rankingsDelta": null,
-    "gbpViews": 2449,
+    "gbpViews": 2453,
     "gbpViewsDelta": null,
     "adSpend": 605.79,
     "adImpressions": 25624,
@@ -218,8 +218,8 @@
       },
       {
         "month": "Oct 2026",
-        "adSpend": 131.29,
-        "adClicks": 815,
+        "adSpend": 150.74,
+        "adClicks": 908,
         "adLeads": 0
       }
     ],
@@ -244,7 +244,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 2449,
+    "totalViews": 2453,
     "calls": 8,
     "callsDelta": null,
     "directions": 209,
@@ -1345,7 +1345,7 @@
       },
       {
         "date": "2026-10-04",
-        "views": 0,
+        "views": 4,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1366,6 +1366,13 @@
       },
       {
         "date": "2026-10-07",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-10-08",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1427,8 +1434,8 @@
       },
       {
         "month": "Oct 2026",
-        "reach": 16,
-        "engagements": 41
+        "reach": 20,
+        "engagements": 45
       }
     ],
     "reachByWeek": [],
@@ -1517,11 +1524,11 @@
       },
       {
         "month": "Oct 2026",
-        "adSpend": 131.29,
-        "adClicks": 815,
+        "adSpend": 150.74,
+        "adClicks": 908,
         "adLeads": 0,
-        "adImpressions": 6124,
-        "adReach": 16
+        "adImpressions": 6644,
+        "adReach": 20
       }
     ],
     "metrics": null,
@@ -1800,34 +1807,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 67,
+        "performance": 64,
         "accessibility": 90,
         "bestPractices": 92,
         "seo": 100
       },
       "desktop": {
-        "performance": 97,
+        "performance": 61,
         "accessibility": 90,
         "bestPractices": 92,
         "seo": 100
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-06-16",
-        "mobile": {
-          "performance": 42,
-          "accessibility": 90,
-          "bestPractices": 77,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 83,
-          "accessibility": 90,
-          "bestPractices": 77,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-06-17",
         "mobile": {
@@ -3107,6 +3099,21 @@
           "bestPractices": 92,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-10-08",
+        "mobile": {
+          "performance": 64,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 61,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 100
+        }
       }
     ]
   },
@@ -3161,15 +3168,6 @@
       "title": "Follow up with Steward Right - Cal for content approval",
       "status": "Done",
       "date": "2026-05-01",
-      "owner": "Cayla Burlingame",
-      "group": "Completed",
-      "source": "monday"
-    },
-    {
-      "id": "11653848259",
-      "title": "Post clips from podcast with steward right",
-      "status": "Done",
-      "date": "2026-04-10",
       "owner": "Cayla Burlingame",
       "group": "Completed",
       "source": "monday"

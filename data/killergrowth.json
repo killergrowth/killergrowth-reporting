@@ -3,7 +3,7 @@
   "slug": "killergrowth",
   "logoPath": null,
   "period": "September 2026",
-  "generatedAt": "2026-10-07T14:01:48.101Z",
+  "generatedAt": "2026-10-08T14:08:16.035Z",
   "overview": {
     "sessions": 33,
     "sessionsDelta": 0,
@@ -410,8 +410,8 @@
       },
       {
         "month": "Oct 2026",
-        "reach": 100,
-        "engagements": 66
+        "reach": 177,
+        "engagements": 93
       }
     ],
     "reachByWeek": [],
@@ -504,7 +504,7 @@
         "adClicks": 1426,
         "adLeads": 0,
         "adImpressions": 42268,
-        "adReach": 100
+        "adReach": 177
       }
     ],
     "metrics": null,
@@ -841,34 +841,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 62,
+        "performance": 65,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 61,
+        "performance": 73,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-06-30",
-        "mobile": {
-          "performance": 90,
-          "accessibility": 91,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 74,
-          "accessibility": 91,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-07-01",
         "mobile": {
@@ -2134,6 +2119,21 @@
         },
         "desktop": {
           "performance": 61,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-10-08",
+        "mobile": {
+          "performance": 65,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 73,
           "accessibility": 91,
           "bestPractices": 100,
           "seo": 92
