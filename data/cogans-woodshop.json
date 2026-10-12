@@ -3,7 +3,7 @@
   "slug": "cogans-woodshop",
   "logoPath": null,
   "period": "September 2026",
-  "generatedAt": "2026-10-11T13:41:17.636Z",
+  "generatedAt": "2026-10-12T16:19:09.333Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -110,16 +110,28 @@
         "pageviews": 2
       },
       {
-        "date": "2026-09-18",
+        "date": "2026-09-05",
         "visits": 1,
         "uniques": 1,
         "pageviews": 1
+      },
+      {
+        "date": "2026-09-04",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 3
       },
       {
         "date": "2026-09-25",
         "visits": 1,
         "uniques": 1,
         "pageviews": 4
+      },
+      {
+        "date": "2026-09-17",
+        "visits": 2,
+        "uniques": 2,
+        "pageviews": 2
       },
       {
         "date": "2026-09-08",
@@ -134,33 +146,21 @@
         "pageviews": 1
       },
       {
-        "date": "2026-09-05",
+        "date": "2026-09-18",
         "visits": 1,
         "uniques": 1,
         "pageviews": 1
       },
       {
-        "date": "2026-09-11",
-        "visits": 3,
-        "uniques": 3,
-        "pageviews": 6
-      },
-      {
-        "date": "2026-09-04",
-        "visits": 2,
-        "uniques": 2,
-        "pageviews": 3
-      },
-      {
-        "date": "2026-09-17",
-        "visits": 2,
-        "uniques": 2,
-        "pageviews": 2
-      },
-      {
         "date": "2026-09-09",
         "visits": 1,
         "uniques": 1,
+        "pageviews": 6
+      },
+      {
+        "date": "2026-09-11",
+        "visits": 3,
+        "uniques": 3,
         "pageviews": 6
       }
     ],
@@ -406,13 +406,13 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 72,
+        "performance": 70,
         "accessibility": 92,
         "bestPractices": 92,
         "seo": 92
       },
       "desktop": {
-        "performance": 95,
+        "performance": 93,
         "accessibility": 80,
         "bestPractices": 92,
         "seo": 92
@@ -1404,6 +1404,21 @@
         },
         "desktop": {
           "performance": 95,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-10-12",
+        "mobile": {
+          "performance": 70,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 93,
           "accessibility": 80,
           "bestPractices": 92,
           "seo": 92

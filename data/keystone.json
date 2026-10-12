@@ -3,7 +3,7 @@
   "slug": "keystone",
   "logoPath": null,
   "period": "September 2026",
-  "generatedAt": "2026-10-11T13:44:04.975Z",
+  "generatedAt": "2026-10-12T16:22:07.166Z",
   "overview": {
     "sessions": 445,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 16,
     "rankingsDelta": null,
-    "gbpViews": 1022,
+    "gbpViews": 1035,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -912,7 +912,7 @@
       },
       "gbpCalls": 4,
       "gbpWebsiteClicks": 29,
-      "gbpDirections": 246
+      "gbpDirections": 251
     }
   },
   "ads": {
@@ -1048,10 +1048,10 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 1022,
+    "totalViews": 1035,
     "calls": 4,
     "callsDelta": null,
-    "directions": 246,
+    "directions": 251,
     "websiteClicks": 29,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -2177,16 +2177,16 @@
       },
       {
         "date": "2026-10-08",
-        "views": 3,
+        "views": 12,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-10-09",
-        "views": 0,
+        "views": 4,
         "calls": 0,
-        "directions": 0,
+        "directions": 5,
         "websiteClicks": 0
       },
       {
@@ -2198,6 +2198,13 @@
       },
       {
         "date": "2026-10-11",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-10-12",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -2494,13 +2501,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 58,
+        "performance": 25,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 85
       },
       "desktop": {
-        "performance": 63,
+        "performance": 48,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 85
@@ -3272,6 +3279,21 @@
         },
         "desktop": {
           "performance": 63,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 85
+        }
+      },
+      {
+        "date": "2026-10-12",
+        "mobile": {
+          "performance": 25,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 85
+        },
+        "desktop": {
+          "performance": 48,
           "accessibility": 93,
           "bestPractices": 100,
           "seo": 85
