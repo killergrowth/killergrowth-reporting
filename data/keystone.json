@@ -3,7 +3,7 @@
   "slug": "keystone",
   "logoPath": null,
   "period": "September 2026",
-  "generatedAt": "2026-10-16T12:08:10.002Z",
+  "generatedAt": "2026-10-17T11:23:15.304Z",
   "overview": {
     "sessions": 445,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 16,
     "rankingsDelta": null,
-    "gbpViews": 1069,
+    "gbpViews": 1079,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -1048,7 +1048,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 1069,
+    "totalViews": 1079,
     "calls": 4,
     "callsDelta": null,
     "directions": 254,
@@ -2205,14 +2205,14 @@
       },
       {
         "date": "2026-10-12",
-        "views": 7,
+        "views": 15,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-10-13",
-        "views": 0,
+        "views": 2,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -2233,6 +2233,13 @@
       },
       {
         "date": "2026-10-16",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-10-17",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -2529,13 +2536,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 54,
+        "performance": 32,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 85
       },
       "desktop": {
-        "performance": 86,
+        "performance": 55,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 85
@@ -3367,6 +3374,21 @@
         },
         "desktop": {
           "performance": 86,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 85
+        }
+      },
+      {
+        "date": "2026-10-17",
+        "mobile": {
+          "performance": 32,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 85
+        },
+        "desktop": {
+          "performance": 55,
           "accessibility": 93,
           "bestPractices": 100,
           "seo": 85
