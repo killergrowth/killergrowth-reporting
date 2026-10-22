@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "September 2026",
-  "generatedAt": "2026-10-21T12:31:21.011Z",
+  "generatedAt": "2026-10-22T12:35:55.380Z",
   "overview": {
     "sessions": 1303,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 19,
     "rankingsDelta": null,
-    "gbpViews": 4698,
+    "gbpViews": 4715,
     "gbpViewsDelta": null,
     "adSpend": 0,
     "adImpressions": 19349,
@@ -388,7 +388,7 @@
       },
       "gbpCalls": 273,
       "gbpWebsiteClicks": 224,
-      "gbpDirections": 265
+      "gbpDirections": 266
     }
   },
   "ads": {
@@ -536,10 +536,10 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 4698,
+    "totalViews": 4715,
     "calls": 273,
     "callsDelta": null,
-    "directions": 265,
+    "directions": 266,
     "websiteClicks": 224,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -1735,16 +1735,16 @@
       },
       {
         "date": "2026-10-18",
-        "views": 4,
+        "views": 14,
         "calls": 0,
         "directions": 1,
         "websiteClicks": 0
       },
       {
         "date": "2026-10-19",
-        "views": 0,
+        "views": 7,
         "calls": 0,
-        "directions": 0,
+        "directions": 1,
         "websiteClicks": 0
       },
       {
@@ -1756,6 +1756,13 @@
       },
       {
         "date": "2026-10-21",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-10-22",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1818,7 +1825,7 @@
       {
         "month": "Oct 2026",
         "reach": 153,
-        "engagements": 48
+        "engagements": 68
       }
     ],
     "reachByWeek": [],
@@ -2053,16 +2060,22 @@
     "pageviewsDelta": 0.7,
     "dailyTimeseries": [
       {
+        "date": "2026-09-02",
+        "visits": 14,
+        "uniques": 14,
+        "pageviews": 16
+      },
+      {
         "date": "2026-09-30",
         "visits": 19,
         "uniques": 19,
         "pageviews": 27
       },
       {
-        "date": "2026-09-16",
-        "visits": 31,
-        "uniques": 31,
-        "pageviews": 43
+        "date": "2026-09-28",
+        "visits": 32,
+        "uniques": 32,
+        "pageviews": 40
       },
       {
         "date": "2026-09-13",
@@ -2071,10 +2084,34 @@
         "pageviews": 12
       },
       {
-        "date": "2026-09-18",
-        "visits": 10,
-        "uniques": 10,
-        "pageviews": 16
+        "date": "2026-09-05",
+        "visits": 11,
+        "uniques": 11,
+        "pageviews": 17
+      },
+      {
+        "date": "2026-09-21",
+        "visits": 28,
+        "uniques": 28,
+        "pageviews": 33
+      },
+      {
+        "date": "2026-09-26",
+        "visits": 38,
+        "uniques": 38,
+        "pageviews": 45
+      },
+      {
+        "date": "2026-09-12",
+        "visits": 23,
+        "uniques": 23,
+        "pageviews": 27
+      },
+      {
+        "date": "2026-09-14",
+        "visits": 34,
+        "uniques": 34,
+        "pageviews": 43
       },
       {
         "date": "2026-09-20",
@@ -2083,16 +2120,46 @@
         "pageviews": 26
       },
       {
-        "date": "2026-09-06",
-        "visits": 11,
-        "uniques": 11,
-        "pageviews": 17
+        "date": "2026-09-15",
+        "visits": 34,
+        "uniques": 34,
+        "pageviews": 44
+      },
+      {
+        "date": "2026-09-27",
+        "visits": 27,
+        "uniques": 27,
+        "pageviews": 38
+      },
+      {
+        "date": "2026-09-29",
+        "visits": 27,
+        "uniques": 27,
+        "pageviews": 36
+      },
+      {
+        "date": "2026-09-17",
+        "visits": 26,
+        "uniques": 26,
+        "pageviews": 64
       },
       {
         "date": "2026-09-03",
         "visits": 19,
         "uniques": 19,
         "pageviews": 30
+      },
+      {
+        "date": "2026-09-04",
+        "visits": 20,
+        "uniques": 20,
+        "pageviews": 26
+      },
+      {
+        "date": "2026-09-22",
+        "visits": 21,
+        "uniques": 21,
+        "pageviews": 32
       },
       {
         "date": "2026-09-25",
@@ -2113,82 +2180,10 @@
         "pageviews": 30
       },
       {
-        "date": "2026-09-15",
-        "visits": 34,
-        "uniques": 34,
-        "pageviews": 44
-      },
-      {
-        "date": "2026-09-26",
-        "visits": 38,
-        "uniques": 38,
-        "pageviews": 45
-      },
-      {
-        "date": "2026-09-28",
-        "visits": 32,
-        "uniques": 32,
-        "pageviews": 40
-      },
-      {
-        "date": "2026-09-05",
+        "date": "2026-09-06",
         "visits": 11,
         "uniques": 11,
         "pageviews": 17
-      },
-      {
-        "date": "2026-09-23",
-        "visits": 24,
-        "uniques": 24,
-        "pageviews": 25
-      },
-      {
-        "date": "2026-09-11",
-        "visits": 12,
-        "uniques": 12,
-        "pageviews": 23
-      },
-      {
-        "date": "2026-09-14",
-        "visits": 34,
-        "uniques": 34,
-        "pageviews": 43
-      },
-      {
-        "date": "2026-09-01",
-        "visits": 40,
-        "uniques": 40,
-        "pageviews": 56
-      },
-      {
-        "date": "2026-09-27",
-        "visits": 27,
-        "uniques": 27,
-        "pageviews": 38
-      },
-      {
-        "date": "2026-09-22",
-        "visits": 21,
-        "uniques": 21,
-        "pageviews": 32
-      },
-      {
-        "date": "2026-09-29",
-        "visits": 27,
-        "uniques": 27,
-        "pageviews": 36
-      },
-      {
-        "date": "2026-09-04",
-        "visits": 20,
-        "uniques": 20,
-        "pageviews": 26
-      },
-      {
-        "date": "2026-09-17",
-        "visits": 26,
-        "uniques": 26,
-        "pageviews": 64
       },
       {
         "date": "2026-09-19",
@@ -2197,10 +2192,10 @@
         "pageviews": 45
       },
       {
-        "date": "2026-09-12",
-        "visits": 23,
-        "uniques": 23,
-        "pageviews": 27
+        "date": "2026-09-01",
+        "visits": 40,
+        "uniques": 40,
+        "pageviews": 56
       },
       {
         "date": "2026-09-07",
@@ -2209,10 +2204,10 @@
         "pageviews": 21
       },
       {
-        "date": "2026-09-21",
-        "visits": 28,
-        "uniques": 28,
-        "pageviews": 33
+        "date": "2026-09-18",
+        "visits": 10,
+        "uniques": 10,
+        "pageviews": 16
       },
       {
         "date": "2026-09-24",
@@ -2221,16 +2216,28 @@
         "pageviews": 38
       },
       {
+        "date": "2026-09-16",
+        "visits": 31,
+        "uniques": 31,
+        "pageviews": 43
+      },
+      {
+        "date": "2026-09-23",
+        "visits": 24,
+        "uniques": 24,
+        "pageviews": 25
+      },
+      {
         "date": "2026-09-09",
         "visits": 10,
         "uniques": 10,
         "pageviews": 14
       },
       {
-        "date": "2026-09-02",
-        "visits": 14,
-        "uniques": 14,
-        "pageviews": 16
+        "date": "2026-09-11",
+        "visits": 12,
+        "uniques": 12,
+        "pageviews": 23
       }
     ],
     "monthlyHistory": [
@@ -2318,34 +2325,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 43,
+        "performance": 59,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 58,
+        "performance": 63,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-06-03",
-        "mobile": {
-          "performance": 56,
-          "accessibility": 75,
-          "bestPractices": 96,
-          "seo": 85
-        },
-        "desktop": {
-          "performance": 67,
-          "accessibility": 77,
-          "bestPractices": 96,
-          "seo": 85
-        }
-      },
       {
         "date": "2026-06-04",
         "mobile": {
@@ -3641,6 +3633,21 @@
         },
         "desktop": {
           "performance": 58,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-10-22",
+        "mobile": {
+          "performance": 59,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 63,
           "accessibility": 93,
           "bestPractices": 100,
           "seo": 92
