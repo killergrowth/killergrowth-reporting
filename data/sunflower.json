@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "September 2026",
-  "generatedAt": "2026-10-22T12:35:55.380Z",
+  "generatedAt": "2026-10-23T12:15:05.005Z",
   "overview": {
     "sessions": 1303,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 19,
     "rankingsDelta": null,
-    "gbpViews": 4715,
+    "gbpViews": 4719,
     "gbpViewsDelta": null,
     "adSpend": 0,
     "adImpressions": 19349,
@@ -386,9 +386,9 @@
           "Organic Search": 2
         }
       },
-      "gbpCalls": 273,
+      "gbpCalls": 274,
       "gbpWebsiteClicks": 224,
-      "gbpDirections": 266
+      "gbpDirections": 267
     }
   },
   "ads": {
@@ -536,10 +536,10 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 4715,
-    "calls": 273,
+    "totalViews": 4719,
+    "calls": 274,
     "callsDelta": null,
-    "directions": 266,
+    "directions": 267,
     "websiteClicks": 224,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -1743,15 +1743,15 @@
       {
         "date": "2026-10-19",
         "views": 7,
-        "calls": 0,
+        "calls": 1,
         "directions": 1,
         "websiteClicks": 0
       },
       {
         "date": "2026-10-20",
-        "views": 0,
+        "views": 4,
         "calls": 0,
-        "directions": 0,
+        "directions": 1,
         "websiteClicks": 0
       },
       {
@@ -1763,6 +1763,13 @@
       },
       {
         "date": "2026-10-22",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-10-23",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1824,8 +1831,8 @@
       },
       {
         "month": "Oct 2026",
-        "reach": 153,
-        "engagements": 68
+        "reach": 154,
+        "engagements": 69
       }
     ],
     "reachByWeek": [],
@@ -1918,7 +1925,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 153
+        "adReach": 154
       }
     ],
     "metrics": null,
@@ -2325,34 +2332,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 59,
+        "performance": 52,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 63,
+        "performance": 40,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-06-04",
-        "mobile": {
-          "performance": 59,
-          "accessibility": 75,
-          "bestPractices": 96,
-          "seo": 85
-        },
-        "desktop": {
-          "performance": 70,
-          "accessibility": 77,
-          "bestPractices": 96,
-          "seo": 85
-        }
-      },
       {
         "date": "2026-06-05",
         "mobile": {
@@ -3648,6 +3640,21 @@
         },
         "desktop": {
           "performance": 63,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-10-23",
+        "mobile": {
+          "performance": 52,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 40,
           "accessibility": 93,
           "bestPractices": 100,
           "seo": 92
