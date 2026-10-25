@@ -3,7 +3,7 @@
   "slug": "walnut-valley",
   "logoPath": null,
   "period": "September 2026",
-  "generatedAt": "2026-10-24T11:44:13.064Z",
+  "generatedAt": "2026-10-25T12:12:51.239Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -362,28 +362,13 @@
         "seo": 92
       },
       "desktop": {
-        "performance": 62,
+        "performance": 75,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-07-16",
-        "mobile": {
-          "performance": 67,
-          "accessibility": 72,
-          "bestPractices": 100,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 75,
-          "accessibility": 80,
-          "bestPractices": 100,
-          "seo": 100
-        }
-      },
       {
         "date": "2026-07-17",
         "mobile": {
@@ -1648,6 +1633,21 @@
           "bestPractices": 100,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-10-25",
+        "mobile": {
+          "performance": 67,
+          "accessibility": 82,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 75,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
       }
     ]
   },
@@ -1676,15 +1676,6 @@
       "status": "Done",
       "date": "2026-05-05",
       "owner": "Tyler Brickley",
-      "group": "Completed",
-      "source": "monday"
-    },
-    {
-      "id": "11841435183",
-      "title": "Walnut Valley - Update all header hero and ads from 4.50 to 4.99",
-      "status": "Done",
-      "date": "2026-04-27",
-      "owner": "Tyler Norris",
       "group": "Completed",
       "source": "monday"
     }
