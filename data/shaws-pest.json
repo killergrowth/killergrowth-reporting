@@ -3,7 +3,7 @@
   "slug": "shaws-pest",
   "logoPath": null,
   "period": "September 2026",
-  "generatedAt": "2026-10-26T13:46:11.620Z",
+  "generatedAt": "2026-10-27T12:54:40.544Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -108,34 +108,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 64,
-        "accessibility": 89,
-        "bestPractices": 96,
-        "seo": 92
+        "performance": 69,
+        "accessibility": 98,
+        "bestPractices": 100,
+        "seo": 100
       },
       "desktop": {
-        "performance": 89,
-        "accessibility": 89,
-        "bestPractices": 96,
-        "seo": 92
+        "performance": 96,
+        "accessibility": 98,
+        "bestPractices": 100,
+        "seo": 100
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-07-18",
-        "mobile": {
-          "performance": 62,
-          "accessibility": 86,
-          "bestPractices": 96,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 69,
-          "accessibility": 86,
-          "bestPractices": 96,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-07-19",
         "mobile": {
@@ -1419,6 +1404,21 @@
           "accessibility": 89,
           "bestPractices": 96,
           "seo": 92
+        }
+      },
+      {
+        "date": "2026-10-27",
+        "mobile": {
+          "performance": 69,
+          "accessibility": 98,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 96,
+          "accessibility": 98,
+          "bestPractices": 100,
+          "seo": 100
         }
       }
     ]
