@@ -3,7 +3,7 @@
   "slug": "316-health",
   "logoPath": null,
   "period": "September 2026",
-  "generatedAt": "2026-10-27T12:52:48.042Z",
+  "generatedAt": "2026-10-28T13:43:42.727Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -108,13 +108,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 63,
+        "performance": 60,
         "accessibility": 72,
         "bestPractices": 96,
         "seo": 100
       },
       "desktop": {
-        "performance": 93,
+        "performance": 95,
         "accessibility": 80,
         "bestPractices": 96,
         "seo": 100
@@ -1366,6 +1366,21 @@
         },
         "desktop": {
           "performance": 93,
+          "accessibility": 80,
+          "bestPractices": 96,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-10-28",
+        "mobile": {
+          "performance": 60,
+          "accessibility": 72,
+          "bestPractices": 96,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 95,
           "accessibility": 80,
           "bestPractices": 96,
           "seo": 100
