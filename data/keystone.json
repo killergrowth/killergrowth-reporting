@@ -3,7 +3,7 @@
   "slug": "keystone",
   "logoPath": null,
   "period": "September 2026",
-  "generatedAt": "2026-10-28T13:47:43.264Z",
+  "generatedAt": "2026-10-29T13:55:56.586Z",
   "overview": {
     "sessions": 445,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 16,
     "rankingsDelta": null,
-    "gbpViews": 1214,
+    "gbpViews": 1221,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -912,7 +912,7 @@
       },
       "gbpCalls": 5,
       "gbpWebsiteClicks": 37,
-      "gbpDirections": 274
+      "gbpDirections": 275
     }
   },
   "ads": {
@@ -1048,10 +1048,10 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 1214,
+    "totalViews": 1221,
     "calls": 5,
     "callsDelta": null,
-    "directions": 274,
+    "directions": 275,
     "websiteClicks": 37,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -2296,16 +2296,16 @@
       },
       {
         "date": "2026-10-25",
-        "views": 2,
+        "views": 6,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-10-26",
-        "views": 0,
+        "views": 3,
         "calls": 0,
-        "directions": 0,
+        "directions": 1,
         "websiteClicks": 0
       },
       {
@@ -2317,6 +2317,13 @@
       },
       {
         "date": "2026-10-28",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-10-29",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -2613,13 +2620,13 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 57,
+        "performance": 49,
         "accessibility": 93,
-        "bestPractices": 100,
+        "bestPractices": 96,
         "seo": 85
       },
       "desktop": {
-        "performance": 45,
+        "performance": 95,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 85
@@ -3631,6 +3638,21 @@
         },
         "desktop": {
           "performance": 45,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 85
+        }
+      },
+      {
+        "date": "2026-10-29",
+        "mobile": {
+          "performance": 49,
+          "accessibility": 93,
+          "bestPractices": 96,
+          "seo": 85
+        },
+        "desktop": {
+          "performance": 95,
           "accessibility": 93,
           "bestPractices": 100,
           "seo": 85
