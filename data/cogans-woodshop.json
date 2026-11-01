@@ -2,8 +2,8 @@
   "client": "Cogan's Woodshop",
   "slug": "cogans-woodshop",
   "logoPath": null,
-  "period": "September 2026",
-  "generatedAt": "2026-10-31T13:14:26.742Z",
+  "period": "October 2026",
+  "generatedAt": "2026-11-01T13:58:01.542Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -88,83 +88,72 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "DYSWZSVJ",
-    "uniques": 15,
-    "visits": 15,
-    "pageviews": 28,
-    "avgDuration": 51,
-    "bounceRate": 53.333333333333,
-    "uniquesDelta": -53.1,
-    "visitsDelta": -53.1,
-    "pageviewsDelta": -52.5,
+    "uniques": 10,
+    "visits": 10,
+    "pageviews": 19,
+    "avgDuration": 49,
+    "bounceRate": 60,
+    "uniquesDelta": -33.3,
+    "visitsDelta": -33.3,
+    "pageviewsDelta": -32.1,
     "dailyTimeseries": [
       {
-        "date": "2026-09-30",
+        "date": "2026-10-10",
         "visits": 1,
         "uniques": 1,
         "pageviews": 1
       },
       {
-        "date": "2026-09-13",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 2
-      },
-      {
-        "date": "2026-09-18",
+        "date": "2026-10-03",
         "visits": 1,
         "uniques": 1,
         "pageviews": 1
       },
       {
-        "date": "2026-09-25",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 4
-      },
-      {
-        "date": "2026-09-08",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 1
-      },
-      {
-        "date": "2026-09-10",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 1
-      },
-      {
-        "date": "2026-09-05",
-        "visits": 1,
-        "uniques": 1,
-        "pageviews": 1
-      },
-      {
-        "date": "2026-09-11",
+        "date": "2026-10-18",
         "visits": 3,
         "uniques": 3,
-        "pageviews": 6
-      },
-      {
-        "date": "2026-09-04",
-        "visits": 2,
-        "uniques": 2,
         "pageviews": 3
       },
       {
-        "date": "2026-09-17",
-        "visits": 2,
-        "uniques": 2,
+        "date": "2026-10-21",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 5
+      },
+      {
+        "date": "2026-10-02",
+        "visits": 1,
+        "uniques": 1,
         "pageviews": 2
       },
       {
-        "date": "2026-09-09",
+        "date": "2026-10-09",
         "visits": 1,
         "uniques": 1,
-        "pageviews": 6
+        "pageviews": 3
+      },
+      {
+        "date": "2026-10-01",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 1
+      },
+      {
+        "date": "2026-10-04",
+        "visits": 1,
+        "uniques": 1,
+        "pageviews": 3
       }
     ],
     "monthlyHistory": [
+      {
+        "month": "Oct 2026",
+        "date": "2026-10",
+        "visits": 10,
+        "uniques": 10,
+        "pageviews": 19
+      },
       {
         "month": "Jul 2026",
         "date": "2026-07",
@@ -190,40 +179,45 @@
     "topPages": [
       {
         "path": "/",
-        "pageviews": 15,
-        "uniques": 11
-      },
-      {
-        "path": "/about",
-        "pageviews": 8,
-        "uniques": 7
-      },
-      {
-        "path": "/Home",
-        "pageviews": 2,
-        "uniques": 2
-      },
-      {
-        "path": "/consult",
-        "pageviews": 2,
-        "uniques": 2
+        "pageviews": 10,
+        "uniques": 9
       },
       {
         "path": "/prefab",
+        "pageviews": 3,
+        "uniques": 3
+      },
+      {
+        "path": "/upload",
+        "pageviews": 2,
+        "uniques": 1
+      },
+      {
+        "path": "/about",
+        "pageviews": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/consult",
         "pageviews": 1,
         "uniques": 1
       }
     ],
     "referrers": [
       {
-        "source": "Organic",
-        "visits": 8,
-        "uniques": 8
+        "source": "Direct",
+        "visits": 5,
+        "uniques": 5
       },
       {
-        "source": "Direct",
-        "visits": 7,
-        "uniques": 7
+        "source": "Organic",
+        "visits": 4,
+        "uniques": 4
+      },
+      {
+        "source": "Social",
+        "visits": 1,
+        "uniques": 1
       }
     ],
     "cfPageViews": 20800,
@@ -406,13 +400,13 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 72,
+        "performance": 73,
         "accessibility": 92,
         "bestPractices": 92,
         "seo": 92
       },
       "desktop": {
-        "performance": 93,
+        "performance": 94,
         "accessibility": 80,
         "bestPractices": 92,
         "seo": 92
@@ -1689,6 +1683,21 @@
         },
         "desktop": {
           "performance": 93,
+          "accessibility": 80,
+          "bestPractices": 92,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-11-01",
+        "mobile": {
+          "performance": 73,
+          "accessibility": 92,
+          "bestPractices": 92,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 94,
           "accessibility": 80,
           "bestPractices": 92,
           "seo": 92

@@ -2,8 +2,8 @@
   "client": "Walnut Valley Meat Market",
   "slug": "walnut-valley",
   "logoPath": null,
-  "period": "September 2026",
-  "generatedAt": "2026-10-31T13:12:17.633Z",
+  "period": "October 2026",
+  "generatedAt": "2026-11-01T13:55:51.668Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -149,16 +149,132 @@
     },
     "analyticsSource": "fathom",
     "fathomSiteId": "SWIWEOSC",
-    "uniques": 0,
-    "visits": 0,
-    "pageviews": 0,
-    "avgDuration": 147,
-    "bounceRate": 71.428571428571,
+    "uniques": 1347,
+    "visits": 1347,
+    "pageviews": 1793,
+    "avgDuration": 106,
+    "bounceRate": 78.544914625093,
     "uniquesDelta": -99.4,
     "visitsDelta": -99.4,
     "pageviewsDelta": -99.3,
-    "dailyTimeseries": [],
+    "dailyTimeseries": [
+      {
+        "date": "2026-10-26",
+        "visits": 93,
+        "uniques": 93,
+        "pageviews": 131
+      },
+      {
+        "date": "2026-10-23",
+        "visits": 67,
+        "uniques": 67,
+        "pageviews": 93
+      },
+      {
+        "date": "2026-10-28",
+        "visits": 79,
+        "uniques": 79,
+        "pageviews": 111
+      },
+      {
+        "date": "2026-10-15",
+        "visits": 66,
+        "uniques": 66,
+        "pageviews": 89
+      },
+      {
+        "date": "2026-10-20",
+        "visits": 77,
+        "uniques": 77,
+        "pageviews": 101
+      },
+      {
+        "date": "2026-10-25",
+        "visits": 68,
+        "uniques": 68,
+        "pageviews": 92
+      },
+      {
+        "date": "2026-10-16",
+        "visits": 71,
+        "uniques": 71,
+        "pageviews": 108
+      },
+      {
+        "date": "2026-10-30",
+        "visits": 109,
+        "uniques": 109,
+        "pageviews": 132
+      },
+      {
+        "date": "2026-10-18",
+        "visits": 36,
+        "uniques": 36,
+        "pageviews": 55
+      },
+      {
+        "date": "2026-10-21",
+        "visits": 91,
+        "uniques": 91,
+        "pageviews": 116
+      },
+      {
+        "date": "2026-10-24",
+        "visits": 76,
+        "uniques": 76,
+        "pageviews": 106
+      },
+      {
+        "date": "2026-10-31",
+        "visits": 132,
+        "uniques": 132,
+        "pageviews": 175
+      },
+      {
+        "date": "2026-10-17",
+        "visits": 72,
+        "uniques": 72,
+        "pageviews": 89
+      },
+      {
+        "date": "2026-10-19",
+        "visits": 66,
+        "uniques": 66,
+        "pageviews": 87
+      },
+      {
+        "date": "2026-10-27",
+        "visits": 63,
+        "uniques": 63,
+        "pageviews": 80
+      },
+      {
+        "date": "2026-10-29",
+        "visits": 91,
+        "uniques": 91,
+        "pageviews": 109
+      },
+      {
+        "date": "2026-10-22",
+        "visits": 73,
+        "uniques": 73,
+        "pageviews": 97
+      },
+      {
+        "date": "2026-10-14",
+        "visits": 17,
+        "uniques": 17,
+        "pageviews": 22
+      }
+    ],
     "monthlyHistory": [
+      {
+        "month": "Oct 2026",
+        "date": "2026-10",
+        "visits": 1347,
+        "uniques": 1347,
+        "pageviews": 1793
+      },
       {
         "month": "Jul 2026",
         "date": "2026-07",
@@ -174,8 +290,60 @@
         "pageviews": 10
       }
     ],
-    "topPages": [],
-    "referrers": [],
+    "topPages": [
+      {
+        "path": "/",
+        "pageviews": 1773,
+        "uniques": 1330
+      },
+      {
+        "path": "/not_found/",
+        "pageviews": 8,
+        "uniques": 6
+      },
+      {
+        "path": "/robots.txt",
+        "pageviews": 5,
+        "uniques": 5
+      },
+      {
+        "path": "/Home",
+        "pageviews": 4,
+        "uniques": 4
+      },
+      {
+        "path": "/meat-us-new/",
+        "pageviews": 2,
+        "uniques": 2
+      }
+    ],
+    "referrers": [
+      {
+        "source": "Organic",
+        "visits": 601,
+        "uniques": 601
+      },
+      {
+        "source": "Direct",
+        "visits": 532,
+        "uniques": 532
+      },
+      {
+        "source": "Social",
+        "visits": 111,
+        "uniques": 111
+      },
+      {
+        "source": "Paid/campaign",
+        "visits": 97,
+        "uniques": 97
+      },
+      {
+        "source": "AI",
+        "visits": 6,
+        "uniques": 6
+      }
+    ],
     "cfPageViews": 58255,
     "cfUniques": 27116,
     "cfPageViewsDelta": 43.1,
@@ -362,28 +530,13 @@
         "seo": 92
       },
       "desktop": {
-        "performance": 75,
+        "performance": 73,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-07-23",
-        "mobile": {
-          "performance": 68,
-          "accessibility": 72,
-          "bestPractices": 100,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 75,
-          "accessibility": 80,
-          "bestPractices": 100,
-          "seo": 100
-        }
-      },
       {
         "date": "2026-07-24",
         "mobile": {
@@ -1644,6 +1797,21 @@
         },
         "desktop": {
           "performance": 75,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-11-01",
+        "mobile": {
+          "performance": 69,
+          "accessibility": 82,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 73,
           "accessibility": 91,
           "bestPractices": 100,
           "seo": 92
