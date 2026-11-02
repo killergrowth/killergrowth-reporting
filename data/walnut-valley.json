@@ -3,7 +3,7 @@
   "slug": "walnut-valley",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-01T13:55:51.668Z",
+  "generatedAt": "2026-11-02T16:42:13.052Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -530,28 +530,13 @@
         "seo": 92
       },
       "desktop": {
-        "performance": 73,
+        "performance": 49,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-07-24",
-        "mobile": {
-          "performance": 70,
-          "accessibility": 72,
-          "bestPractices": 100,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 72,
-          "accessibility": 80,
-          "bestPractices": 100,
-          "seo": 100
-        }
-      },
       {
         "date": "2026-07-26",
         "mobile": {
@@ -1816,6 +1801,21 @@
           "bestPractices": 100,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-11-02",
+        "mobile": {
+          "performance": 69,
+          "accessibility": 82,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 49,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 92
+        }
       }
     ]
   },
@@ -1835,15 +1835,6 @@
       "status": "Done",
       "date": "2026-05-18",
       "owner": "Corrie Ferrell",
-      "group": "Completed",
-      "source": "monday"
-    },
-    {
-      "id": "11841448706",
-      "title": "Walnut Valley - Edit videos",
-      "status": "Done",
-      "date": "2026-05-05",
-      "owner": "Tyler Brickley",
       "group": "Completed",
       "source": "monday"
     }
