@@ -3,7 +3,7 @@
   "slug": "good-to-be-clean",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-02T16:41:51.414Z",
+  "generatedAt": "2026-11-03T14:46:01.510Z",
   "overview": {
     "sessions": 926,
     "sessionsDelta": 0,
@@ -1669,6 +1669,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-03",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -1731,8 +1738,8 @@
       },
       {
         "month": "Nov 2026",
-        "reach": 8,
-        "engagements": 0
+        "reach": 43,
+        "engagements": 1
       }
     ],
     "reachByWeek": [],
@@ -1741,7 +1748,7 @@
         "platform": "Facebook",
         "reach": 152,
         "engagements": 59,
-        "followers": 2520
+        "followers": 2521
       }
     ]
   },
@@ -1833,7 +1840,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 8
+        "adReach": 43
       }
     ],
     "metrics": null,
@@ -2337,34 +2344,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 73,
+        "performance": 58,
         "accessibility": 92,
         "bestPractices": 100,
         "seo": 100
       },
       "desktop": {
-        "performance": 80,
+        "performance": 68,
         "accessibility": 92,
         "bestPractices": 100,
         "seo": 100
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-07-18",
-        "mobile": {
-          "performance": 51,
-          "accessibility": 92,
-          "bestPractices": 100,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 79,
-          "accessibility": 92,
-          "bestPractices": 100,
-          "seo": 100
-        }
-      },
       {
         "date": "2026-07-19",
         "mobile": {
@@ -3600,6 +3592,21 @@
         },
         "desktop": {
           "performance": 80,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-11-03",
+        "mobile": {
+          "performance": 58,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 68,
           "accessibility": 92,
           "bestPractices": 100,
           "seo": 100

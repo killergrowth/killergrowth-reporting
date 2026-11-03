@@ -3,7 +3,7 @@
   "slug": "dons-heating",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-02T16:40:46.427Z",
+  "generatedAt": "2026-11-03T14:45:03.137Z",
   "overview": {
     "sessions": 792,
     "sessionsDelta": 0,
@@ -522,7 +522,7 @@
         }
       },
       "gbpCalls": 509,
-      "gbpWebsiteClicks": 208,
+      "gbpWebsiteClicks": 209,
       "gbpDirections": 211
     }
   },
@@ -718,7 +718,7 @@
     "calls": 509,
     "callsDelta": null,
     "directions": 211,
-    "websiteClicks": 208,
+    "websiteClicks": 209,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1783,7 +1783,7 @@
         "views": 23,
         "calls": 3,
         "directions": 1,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-10-31",
@@ -1801,6 +1801,13 @@
       },
       {
         "date": "2026-11-02",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-03",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -2902,6 +2909,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-03",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -3998,6 +4012,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-03",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -4057,7 +4078,7 @@
       },
       {
         "month": "Nov 2026",
-        "reach": 7,
+        "reach": 9,
         "engagements": 0
       }
     ],
@@ -4159,7 +4180,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 7
+        "adReach": 9
       }
     ],
     "metrics": null,
@@ -4437,34 +4458,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 60,
+        "performance": 67,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 59,
+        "performance": 78,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-07-20",
-        "mobile": {
-          "performance": 52,
-          "accessibility": 90,
-          "bestPractices": 73,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 91,
-          "accessibility": 91,
-          "bestPractices": 73,
-          "seo": 100
-        }
-      },
       {
         "date": "2026-07-21",
         "mobile": {
@@ -5724,6 +5730,21 @@
           "bestPractices": 100,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-11-03",
+        "mobile": {
+          "performance": 67,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 78,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        }
       }
     ]
   },
@@ -5994,15 +6015,6 @@
       "title": "Schedule meeting - Don's Heating and Air new Emporia location",
       "status": "Done",
       "date": "2026-08-24",
-      "owner": "Phil Anderson",
-      "group": "Completed",
-      "source": "monday"
-    },
-    {
-      "id": "11834461575",
-      "title": "Don's Heating and Air - New Google Business Location Setup",
-      "status": "Done",
-      "date": "2026-05-07",
       "owner": "Phil Anderson",
       "group": "Completed",
       "source": "monday"

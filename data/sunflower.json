@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-02T16:40:10.388Z",
+  "generatedAt": "2026-11-03T14:44:37.477Z",
   "overview": {
     "sessions": 1570,
     "sessionsDelta": 0,
@@ -1636,6 +1636,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-03",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -1698,8 +1705,8 @@
       },
       {
         "month": "Nov 2026",
-        "reach": 10,
-        "engagements": 1
+        "reach": 27,
+        "engagements": 59
       }
     ],
     "reachByWeek": [],
@@ -1800,7 +1807,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 10
+        "adReach": 27
       }
     ],
     "metrics": null,
@@ -2237,28 +2244,13 @@
         "seo": 92
       },
       "desktop": {
-        "performance": 60,
+        "performance": 80,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-06-15",
-        "mobile": {
-          "performance": 56,
-          "accessibility": 75,
-          "bestPractices": 96,
-          "seo": 85
-        },
-        "desktop": {
-          "performance": 68,
-          "accessibility": 77,
-          "bestPractices": 96,
-          "seo": 85
-        }
-      },
       {
         "date": "2026-06-16",
         "mobile": {
@@ -3558,6 +3550,21 @@
           "bestPractices": 100,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-11-03",
+        "mobile": {
+          "performance": 60,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 80,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        }
       }
     ]
   },
@@ -3777,15 +3784,6 @@
       "status": "Done",
       "date": "2026-05-07",
       "owner": "Tyler Norris",
-      "group": "Completed",
-      "source": "monday"
-    },
-    {
-      "id": "11902091942",
-      "title": "add Sunflower's graphic to 5/6's post.  Content saved as draft.  And post.",
-      "status": "Done",
-      "date": "2026-05-06",
-      "owner": "Cayla Burlingame",
       "group": "Completed",
       "source": "monday"
     }
