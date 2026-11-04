@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-03T14:44:37.477Z",
+  "generatedAt": "2026-11-04T14:56:59.802Z",
   "overview": {
     "sessions": 1570,
     "sessionsDelta": 0,
@@ -11,12 +11,12 @@
     "leadsDelta": null,
     "rankingsTop10": 23,
     "rankingsDelta": null,
-    "gbpViews": 3988,
+    "gbpViews": 3999,
     "gbpViewsDelta": null,
-    "adSpend": 0,
-    "adImpressions": 19349,
+    "adSpend": 289.63,
+    "adImpressions": 9664,
     "adBudget": null,
-    "costPerLead": 8.66,
+    "costPerLead": 11.14,
     "costPerLeadDelta": null,
     "socialReach": 209,
     "socialReachDelta": null,
@@ -404,38 +404,74 @@
     "monthlyBreakdown": [
       {
         "month": "Jul 2026",
-        "adSpend": 0,
-        "adClicks": 0,
-        "adLeads": 0,
-        "adImpressions": null
+        "adSpend": 998.58,
+        "adClicks": 890,
+        "adLeads": 29,
+        "adImpressions": 37321
       },
       {
         "month": "Aug 2026",
-        "adSpend": 0,
-        "adClicks": 0,
-        "adLeads": 0,
-        "adImpressions": null
+        "adSpend": 2111.02,
+        "adClicks": 1015,
+        "adLeads": 38,
+        "adImpressions": 46053
       },
       {
         "month": "Sep 2026",
-        "adSpend": 0,
-        "adClicks": 0,
-        "adLeads": 0,
-        "adImpressions": null
+        "adSpend": 2353.46,
+        "adClicks": 1494,
+        "adLeads": 51,
+        "adImpressions": 60955
       },
       {
         "month": "Oct 2026",
-        "adSpend": 0,
-        "adClicks": 0,
-        "adLeads": 0,
-        "adImpressions": null
+        "adSpend": 2312.58,
+        "adClicks": 1056,
+        "adLeads": 46,
+        "adImpressions": 67050
+      },
+      {
+        "month": "Nov 2026 (MTD)",
+        "adSpend": 289.63,
+        "adClicks": 162,
+        "adLeads": 2,
+        "adImpressions": 9664
       }
     ],
     "spendByWeek": [],
-    "campaigns": [],
-    "phoneCalls": 37,
-    "allConversions": 0,
-    "costPerLead": 50.44
+    "campaigns": [
+      {
+        "name": "KG | New - Plumbing",
+        "spend": 148.06,
+        "clicks": 25,
+        "leads": 1,
+        "impressions": 2161
+      },
+      {
+        "name": "LocalServicesCampaign:SystemGenerated:0005d4e425019745",
+        "spend": 73.93,
+        "clicks": 18,
+        "leads": 1,
+        "impressions": 114
+      },
+      {
+        "name": "KG | 2025 | Butler County | PMax | RL 9/11/25",
+        "spend": 40.54,
+        "clicks": 90,
+        "leads": 0,
+        "impressions": 5675
+      },
+      {
+        "name": "KG | 2025 | Plumber Near You",
+        "spend": 27.1,
+        "clicks": 29,
+        "leads": 0,
+        "impressions": 1714
+      }
+    ],
+    "phoneCalls": 2,
+    "allConversions": 26,
+    "costPerLead": 96.54
   },
   "localFalcon": {
     "lastScanDate": "6/7/2026 9:11 AM",
@@ -545,7 +581,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 3988,
+    "totalViews": 3999,
     "calls": 257,
     "callsDelta": null,
     "directions": 247,
@@ -1618,14 +1654,14 @@
       },
       {
         "date": "2026-10-31",
-        "views": 0,
+        "views": 9,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-11-01",
-        "views": 0,
+        "views": 2,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1639,6 +1675,13 @@
       },
       {
         "date": "2026-11-03",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-04",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1705,8 +1748,8 @@
       },
       {
         "month": "Nov 2026",
-        "reach": 27,
-        "engagements": 59
+        "reach": 208,
+        "engagements": 809
       }
     ],
     "reachByWeek": [],
@@ -1715,7 +1758,7 @@
         "platform": "Facebook",
         "reach": 209,
         "engagements": 264,
-        "followers": 1196
+        "followers": 1199
       }
     ]
   },
@@ -1807,7 +1850,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 27
+        "adReach": 208
       }
     ],
     "metrics": null,
@@ -2238,34 +2281,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 60,
+        "performance": 68,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 80,
+        "performance": 52,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-06-16",
-        "mobile": {
-          "performance": 56,
-          "accessibility": 75,
-          "bestPractices": 96,
-          "seo": 85
-        },
-        "desktop": {
-          "performance": 69,
-          "accessibility": 77,
-          "bestPractices": 96,
-          "seo": 85
-        }
-      },
       {
         "date": "2026-06-17",
         "mobile": {
@@ -3565,6 +3593,21 @@
           "bestPractices": 100,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-11-04",
+        "mobile": {
+          "performance": 68,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 52,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        }
       }
     ]
   },
@@ -3775,15 +3818,6 @@
       "status": "Done",
       "date": "2026-05-13",
       "owner": "Cayla Burlingame",
-      "group": "Completed",
-      "source": "monday"
-    },
-    {
-      "id": "11942562144",
-      "title": "Add \"offers.\" subdomain to sunflowerplumbing.com",
-      "status": "Done",
-      "date": "2026-05-07",
-      "owner": "Tyler Norris",
       "group": "Completed",
       "source": "monday"
     }

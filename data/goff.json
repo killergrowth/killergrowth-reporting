@@ -3,7 +3,7 @@
   "slug": "goff",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-03T14:47:08.882Z",
+  "generatedAt": "2026-11-04T14:58:52.223Z",
   "overview": {
     "sessions": 3375,
     "sessionsDelta": 0,
@@ -992,34 +992,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 47,
+        "performance": 63,
         "accessibility": 87,
         "bestPractices": 96,
         "seo": 92
       },
       "desktop": {
-        "performance": 69,
+        "performance": 60,
         "accessibility": 87,
         "bestPractices": 96,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-07-27",
-        "mobile": {
-          "performance": 43,
-          "accessibility": 81,
-          "bestPractices": 96,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 53,
-          "accessibility": 85,
-          "bestPractices": 96,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-07-28",
         "mobile": {
@@ -2304,10 +2289,43 @@
           "bestPractices": 96,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-11-04",
+        "mobile": {
+          "performance": 63,
+          "accessibility": 87,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 60,
+          "accessibility": 87,
+          "bestPractices": 96,
+          "seo": 92
+        }
       }
     ]
   },
   "workLog": [
+    {
+      "id": "13454734003",
+      "title": "Goff, Paul",
+      "status": "Done",
+      "date": "2026-11-04",
+      "owner": "Tyler Norris",
+      "group": "Completed",
+      "source": "monday"
+    },
+    {
+      "id": "13454910302",
+      "title": "Goff, Paul",
+      "status": "Done",
+      "date": "2026-11-04",
+      "owner": "Tyler Norris",
+      "group": "Completed",
+      "source": "monday"
+    },
     {
       "id": "13349906269",
       "title": "Goff, Paul Dendiu",
