@@ -3,7 +3,7 @@
   "slug": "walnut-valley",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-04T14:58:19.764Z",
+  "generatedAt": "2026-11-05T15:02:56.940Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -524,24 +524,19 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 65,
+        "performance": 62,
         "accessibility": 82,
         "bestPractices": 100,
         "seo": 100
       },
       "desktop": {
-        "performance": 68,
+        "performance": 65,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 100
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-07-28",
-        "mobile": null,
-        "desktop": null
-      },
       {
         "date": "2026-07-29",
         "mobile": {
@@ -1816,10 +1811,43 @@
           "bestPractices": 100,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-11-05",
+        "mobile": {
+          "performance": 62,
+          "accessibility": 82,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 65,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 100
+        }
       }
     ]
   },
   "workLog": [
+    {
+      "id": "13443809859",
+      "title": "Walnut Valley Meat Market — Price Change",
+      "status": "Done",
+      "date": "2026-11-04",
+      "owner": "Corrie Ferrell",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
+    {
+      "id": "13443865017",
+      "title": "Walnut Valley Meat Market — USDA / Custom Processing tab",
+      "status": "Done",
+      "date": "2026-11-04",
+      "owner": "Corrie Ferrell",
+      "group": "Website Maintenance (Corrie)",
+      "source": "monday"
+    },
     {
       "id": "12022770084",
       "title": "Walnut Valley Meat Market",

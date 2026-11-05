@@ -3,7 +3,7 @@
   "slug": "cogans-woodshop",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-04T15:00:50.929Z",
+  "generatedAt": "2026-11-05T15:05:28.030Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -402,32 +402,17 @@
       "mobile": {
         "performance": 73,
         "accessibility": 92,
-        "bestPractices": 92,
-        "seo": 92
+        "bestPractices": 96,
+        "seo": 100
       },
       "desktop": {
-        "performance": 94,
+        "performance": 87,
         "accessibility": 80,
-        "bestPractices": 92,
-        "seo": 92
+        "bestPractices": 96,
+        "seo": 100
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-07-28",
-        "mobile": {
-          "performance": 71,
-          "accessibility": 92,
-          "bestPractices": 92,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 95,
-          "accessibility": 80,
-          "bestPractices": 92,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-07-29",
         "mobile": {
@@ -1716,6 +1701,21 @@
           "accessibility": 80,
           "bestPractices": 92,
           "seo": 92
+        }
+      },
+      {
+        "date": "2026-11-05",
+        "mobile": {
+          "performance": 73,
+          "accessibility": 92,
+          "bestPractices": 96,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 87,
+          "accessibility": 80,
+          "bestPractices": 96,
+          "seo": 100
         }
       }
     ]
