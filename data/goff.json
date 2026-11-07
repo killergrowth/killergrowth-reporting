@@ -3,7 +3,7 @@
   "slug": "goff",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-06T14:43:07.653Z",
+  "generatedAt": "2026-11-07T13:41:08.932Z",
   "overview": {
     "sessions": 3375,
     "sessionsDelta": 0,
@@ -992,34 +992,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 68,
+        "performance": 34,
         "accessibility": 87,
         "bestPractices": 96,
         "seo": 92
       },
       "desktop": {
-        "performance": 68,
+        "performance": 62,
         "accessibility": 87,
         "bestPractices": 96,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-07-30",
-        "mobile": {
-          "performance": 55,
-          "accessibility": 81,
-          "bestPractices": 96,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 80,
-          "accessibility": 85,
-          "bestPractices": 96,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-07-31",
         "mobile": {
@@ -2304,10 +2289,34 @@
           "bestPractices": 96,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-11-07",
+        "mobile": {
+          "performance": 34,
+          "accessibility": 87,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 62,
+          "accessibility": 87,
+          "bestPractices": 96,
+          "seo": 92
+        }
       }
     ]
   },
   "workLog": [
+    {
+      "id": "13481581421",
+      "title": "Goff, Paul",
+      "status": "Done",
+      "date": "2026-11-06",
+      "owner": "Tyler Norris",
+      "group": "Completed",
+      "source": "monday"
+    },
     {
       "id": "13454734003",
       "title": "Goff, Paul",

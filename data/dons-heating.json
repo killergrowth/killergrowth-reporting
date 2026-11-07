@@ -3,7 +3,7 @@
   "slug": "dons-heating",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-06T14:41:43.468Z",
+  "generatedAt": "2026-11-07T13:39:27.729Z",
   "overview": {
     "sessions": 792,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 6,
     "rankingsDelta": null,
-    "gbpViews": 4675,
+    "gbpViews": 4691,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -521,8 +521,8 @@
           "Direct": 1
         }
       },
-      "gbpCalls": 512,
-      "gbpWebsiteClicks": 209,
+      "gbpCalls": 516,
+      "gbpWebsiteClicks": 210,
       "gbpDirections": 219
     }
   },
@@ -714,11 +714,11 @@
   },
   "gbp": {
     "locationName": "El Dorado",
-    "totalViews": 4675,
-    "calls": 512,
+    "totalViews": 4691,
+    "calls": 516,
     "callsDelta": null,
     "directions": 219,
-    "websiteClicks": 209,
+    "websiteClicks": 210,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1808,10 +1808,10 @@
       },
       {
         "date": "2026-11-03",
-        "views": 2,
-        "calls": 0,
+        "views": 18,
+        "calls": 4,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-11-04",
@@ -1829,6 +1829,13 @@
       },
       {
         "date": "2026-11-06",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-07",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -2958,6 +2965,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-07",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 0,
@@ -2965,7 +2979,7 @@
   },
   "gbp3": {
     "locationName": "Hillsboro",
-    "totalViews": 1287,
+    "totalViews": 1289,
     "calls": 87,
     "directions": 230,
     "websiteClicks": 52,
@@ -4057,7 +4071,7 @@
       },
       {
         "date": "2026-11-03",
-        "views": 2,
+        "views": 4,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -4078,6 +4092,13 @@
       },
       {
         "date": "2026-11-06",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-07",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -4141,7 +4162,7 @@
       },
       {
         "month": "Nov 2026",
-        "reach": 33,
+        "reach": 54,
         "engagements": 2
       }
     ],
@@ -4243,7 +4264,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 33
+        "adReach": 54
       }
     ],
     "metrics": null,
@@ -4521,34 +4542,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 56,
+        "performance": 62,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 71,
+        "performance": 79,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-07-24",
-        "mobile": {
-          "performance": 65,
-          "accessibility": 90,
-          "bestPractices": 73,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 94,
-          "accessibility": 91,
-          "bestPractices": 73,
-          "seo": 100
-        }
-      },
       {
         "date": "2026-07-26",
         "mobile": {
@@ -5814,6 +5820,21 @@
         },
         "desktop": {
           "performance": 71,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-11-07",
+        "mobile": {
+          "performance": 62,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 79,
           "accessibility": 90,
           "bestPractices": 100,
           "seo": 92
