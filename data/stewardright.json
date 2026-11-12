@@ -3,7 +3,7 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "October 2026",
-  "generatedAt": "2026-11-11T14:47:27.984Z",
+  "generatedAt": "2026-11-12T15:40:10.615Z",
   "overview": {
     "sessions": 391,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": null,
     "rankingsDelta": null,
-    "gbpViews": 2552,
+    "gbpViews": 2557,
     "gbpViewsDelta": null,
     "adSpend": 613.42,
     "adImpressions": 25624,
@@ -20,8 +20,8 @@
     "costPerLeadDelta": null,
     "socialReach": 118,
     "socialReachDelta": 22,
-    "reviewCount": 0,
-    "avgRating": null
+    "reviewCount": 10,
+    "avgRating": 4.2
   },
   "seo": {
     "organicSessions": [
@@ -231,8 +231,8 @@
       },
       {
         "month": "Nov 2026",
-        "adSpend": 212.17,
-        "adClicks": 1288,
+        "adSpend": 232.78,
+        "adClicks": 1403,
         "adLeads": 0
       }
     ],
@@ -257,7 +257,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 2552,
+    "totalViews": 2557,
     "calls": 11,
     "callsDelta": null,
     "directions": 217,
@@ -1386,7 +1386,7 @@
       },
       {
         "date": "2026-11-08",
-        "views": 0,
+        "views": 5,
         "calls": 0,
         "directions": 1,
         "websiteClicks": 0
@@ -1411,11 +1411,18 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-12",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
-    "totalReviews": 0,
-    "newThisMonth": 0,
-    "avgRating": null
+    "totalReviews": 10,
+    "newThisMonth": 2,
+    "avgRating": 4.2
   },
   "gbp2": null,
   "gbp3": null,
@@ -1473,8 +1480,8 @@
       },
       {
         "month": "Nov 2026",
-        "reach": 31,
-        "engagements": 331
+        "reach": 38,
+        "engagements": 361
       }
     ],
     "reachByWeek": [],
@@ -1483,7 +1490,7 @@
         "platform": "Facebook",
         "reach": 118,
         "engagements": 368,
-        "followers": 609
+        "followers": 610
       }
     ]
   },
@@ -1571,11 +1578,11 @@
       },
       {
         "month": "Nov 2026",
-        "adSpend": 212.17,
-        "adClicks": 1288,
+        "adSpend": 232.78,
+        "adClicks": 1403,
         "adLeads": 0,
-        "adImpressions": 16675,
-        "adReach": 31
+        "adImpressions": 17825,
+        "adReach": 38
       }
     ],
     "metrics": null,
@@ -1861,34 +1868,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 37,
+        "performance": 58,
         "accessibility": 90,
         "bestPractices": 92,
         "seo": 100
       },
       "desktop": {
-        "performance": 86,
+        "performance": 58,
         "accessibility": 90,
         "bestPractices": 92,
         "seo": 100
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-07-21",
-        "mobile": {
-          "performance": 34,
-          "accessibility": 90,
-          "bestPractices": 77,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 94,
-          "accessibility": 90,
-          "bestPractices": 77,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-07-22",
         "mobile": {
@@ -3188,6 +3180,21 @@
           "bestPractices": 92,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-11-12",
+        "mobile": {
+          "performance": 58,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 58,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 100
+        }
       }
     ]
   },
@@ -3199,15 +3206,6 @@
       "date": "2026-09-10",
       "owner": "Tyler Brickley",
       "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "11902031121",
-      "title": "Follow up with Irah for content for steward right for the week of 5/11.",
-      "status": "Done",
-      "date": "2026-05-15",
-      "owner": "Cayla Burlingame",
-      "group": "Completed",
       "source": "monday"
     }
   ],

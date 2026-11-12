@@ -3,7 +3,7 @@
   "slug": "sunflower",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-11T14:47:51.680Z",
+  "generatedAt": "2026-11-12T15:40:52.789Z",
   "overview": {
     "sessions": 1570,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 23,
     "rankingsDelta": null,
-    "gbpViews": 4152,
+    "gbpViews": 4165,
     "gbpViewsDelta": null,
     "adSpend": 0,
     "adImpressions": 9664,
@@ -20,8 +20,8 @@
     "costPerLeadDelta": null,
     "socialReach": 209,
     "socialReachDelta": null,
-    "reviewCount": 0,
-    "avgRating": null
+    "reviewCount": 488,
+    "avgRating": 4.8
   },
   "seo": {
     "organicSessions": [
@@ -395,7 +395,7 @@
           "Direct": 1
         }
       },
-      "gbpCalls": 266,
+      "gbpCalls": 270,
       "gbpWebsiteClicks": 193,
       "gbpDirections": 262
     }
@@ -545,8 +545,8 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 4152,
-    "calls": 266,
+    "totalViews": 4165,
+    "calls": 270,
     "callsDelta": null,
     "directions": 262,
     "websiteClicks": 193,
@@ -1674,8 +1674,8 @@
       },
       {
         "date": "2026-11-08",
-        "views": 3,
-        "calls": 0,
+        "views": 16,
+        "calls": 4,
         "directions": 0,
         "websiteClicks": 0
       },
@@ -1699,11 +1699,18 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-12",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
-    "totalReviews": 0,
-    "newThisMonth": 0,
-    "avgRating": null
+    "totalReviews": 488,
+    "newThisMonth": 22,
+    "avgRating": 4.8
   },
   "gbp2": null,
   "gbp3": null,
@@ -1761,7 +1768,7 @@
       },
       {
         "month": "Nov 2026",
-        "reach": 303,
+        "reach": 312,
         "engagements": 959
       }
     ],
@@ -1863,7 +1870,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 303
+        "adReach": 312
       }
     ],
     "metrics": null,
@@ -2294,34 +2301,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 59,
+        "performance": 63,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 74,
+        "performance": 82,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-06-24",
-        "mobile": {
-          "performance": 56,
-          "accessibility": 75,
-          "bestPractices": 96,
-          "seo": 85
-        },
-        "desktop": {
-          "performance": 65,
-          "accessibility": 77,
-          "bestPractices": 96,
-          "seo": 85
-        }
-      },
       {
         "date": "2026-06-26",
         "mobile": {
@@ -3626,6 +3618,21 @@
           "bestPractices": 100,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-11-12",
+        "mobile": {
+          "performance": 63,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 82,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        }
       }
     ]
   },
@@ -3809,24 +3816,6 @@
       "status": "Done",
       "date": "2026-06-04",
       "owner": "Tyler Norris",
-      "group": "Completed",
-      "source": "monday"
-    },
-    {
-      "id": "11902045428",
-      "title": "Follow up with Rain on Sunflower Reel.  Needs to be scheduled 5/8.",
-      "status": "Done",
-      "date": "2026-05-15",
-      "owner": "Cayla Burlingame",
-      "group": "Completed",
-      "source": "monday"
-    },
-    {
-      "id": "11902056604",
-      "title": "Follow up with Irah on 2 graphics for sunflower for the week of 5/11.",
-      "status": "Done",
-      "date": "2026-05-15",
-      "owner": "Cayla Burlingame",
       "group": "Completed",
       "source": "monday"
     }
