@@ -3,7 +3,7 @@
   "slug": "dons-heating",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-12T15:41:22.747Z",
+  "generatedAt": "2026-11-13T14:59:42.685Z",
   "overview": {
     "sessions": 792,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 6,
     "rankingsDelta": null,
-    "gbpViews": 4817,
+    "gbpViews": 4845,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -714,7 +714,7 @@
   },
   "gbp": {
     "locationName": "El Dorado",
-    "totalViews": 4817,
+    "totalViews": 4845,
     "calls": 534,
     "callsDelta": null,
     "directions": 229,
@@ -1850,7 +1850,7 @@
       },
       {
         "date": "2026-11-09",
-        "views": 0,
+        "views": 28,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -1875,15 +1875,22 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-13",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 306,
-    "newThisMonth": 39,
+    "newThisMonth": 38,
     "avgRating": 4.9
   },
   "gbp2": {
     "locationName": "Emporia",
-    "totalViews": 1016,
+    "totalViews": 1019,
     "calls": 55,
     "directions": 199,
     "websiteClicks": 47,
@@ -3017,7 +3024,7 @@
       },
       {
         "date": "2026-11-09",
-        "views": 0,
+        "views": 3,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -3042,6 +3049,13 @@
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-13",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
       }
     ],
     "totalReviews": 1,
@@ -3049,7 +3063,7 @@
   },
   "gbp3": {
     "locationName": "Hillsboro",
-    "totalViews": 1327,
+    "totalViews": 1329,
     "calls": 90,
     "directions": 234,
     "websiteClicks": 59,
@@ -4183,7 +4197,7 @@
       },
       {
         "date": "2026-11-09",
-        "views": 0,
+        "views": 2,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -4204,6 +4218,13 @@
       },
       {
         "date": "2026-11-12",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-13",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -4267,7 +4288,7 @@
       },
       {
         "month": "Nov 2026",
-        "reach": 88,
+        "reach": 91,
         "engagements": 2
       }
     ],
@@ -4369,7 +4390,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 88
+        "adReach": 91
       }
     ],
     "metrics": null,
@@ -4647,34 +4668,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 60,
+        "performance": 65,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 75,
+        "performance": 80,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-07-31",
-        "mobile": {
-          "performance": 56,
-          "accessibility": 90,
-          "bestPractices": 73,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 74,
-          "accessibility": 91,
-          "bestPractices": 73,
-          "seo": 100
-        }
-      },
       {
         "date": "2026-08-01",
         "mobile": {
@@ -5944,10 +5950,34 @@
           "bestPractices": 100,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-11-13",
+        "mobile": {
+          "performance": 65,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 80,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        }
       }
     ]
   },
   "workLog": [
+    {
+      "id": "12938931257",
+      "title": "Dons Heating - Create Blog Posts and GBP Posts for the week",
+      "status": "Done",
+      "date": "2026-11-12",
+      "owner": "Tyler Brickley",
+      "group": "Completed",
+      "source": "monday"
+    },
     {
       "id": "12666187707",
       "title": "Don's Heating — Dons furniture repair is not offered",
