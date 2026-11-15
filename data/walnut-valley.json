@@ -3,7 +3,7 @@
   "slug": "walnut-valley",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-14T13:52:47.269Z",
+  "generatedAt": "2026-11-15T14:26:17.857Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -524,34 +524,19 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 66,
+        "performance": 65,
         "accessibility": 82,
         "bestPractices": 100,
         "seo": 100
       },
       "desktop": {
-        "performance": 71,
+        "performance": 60,
         "accessibility": 91,
         "bestPractices": 100,
         "seo": 100
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-08-08",
-        "mobile": {
-          "performance": 68,
-          "accessibility": 82,
-          "bestPractices": 100,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 75,
-          "accessibility": 91,
-          "bestPractices": 100,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-08-09",
         "mobile": {
@@ -1826,6 +1811,21 @@
           "bestPractices": 100,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-11-15",
+        "mobile": {
+          "performance": 65,
+          "accessibility": 82,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 60,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 100
+        }
       }
     ]
   },
@@ -1855,15 +1855,6 @@
       "date": "2026-05-26",
       "owner": null,
       "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    },
-    {
-      "id": "11834274267",
-      "title": "Test the cutting order form for Walnut Valley",
-      "status": "Done",
-      "date": "2026-05-18",
-      "owner": "Corrie Ferrell",
-      "group": "Completed",
       "source": "monday"
     }
   ]
