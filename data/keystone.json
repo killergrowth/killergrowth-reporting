@@ -3,7 +3,7 @@
   "slug": "keystone",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-15T14:30:49.561Z",
+  "generatedAt": "2026-11-16T16:40:28.693Z",
   "overview": {
     "sessions": 239,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 7,
     "rankingsDelta": null,
-    "gbpViews": 1290,
+    "gbpViews": 1343,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -926,7 +926,7 @@
         }
       },
       "gbpCalls": 5,
-      "gbpWebsiteClicks": 37,
+      "gbpWebsiteClicks": 38,
       "gbpDirections": 253
     }
   },
@@ -1063,11 +1063,11 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 1290,
+    "totalViews": 1343,
     "calls": 5,
     "callsDelta": null,
     "directions": 253,
-    "websiteClicks": 37,
+    "websiteClicks": 38,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -2206,28 +2206,28 @@
       },
       {
         "date": "2026-11-10",
-        "views": 20,
+        "views": 27,
         "calls": 0,
         "directions": 6,
         "websiteClicks": 0
       },
       {
         "date": "2026-11-11",
-        "views": 6,
+        "views": 16,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-11-12",
-        "views": 19,
+        "views": 24,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-11-13",
-        "views": 0,
+        "views": 31,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -2241,6 +2241,13 @@
       },
       {
         "date": "2026-11-15",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-16",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -2511,18 +2518,18 @@
     ],
     "monthlyHistory": [
       {
-        "month": "Oct 2026",
-        "date": "2026-10",
-        "visits": 137,
-        "uniques": 137,
-        "pageviews": 174
-      },
-      {
         "month": "Jul 2026",
         "date": "2026-07",
         "visits": 6,
         "uniques": 6,
         "pageviews": 16
+      },
+      {
+        "month": "Sep 2026",
+        "date": "2026-09",
+        "visits": 105,
+        "uniques": 105,
+        "pageviews": 130
       },
       {
         "month": "Aug 2026",
@@ -2532,11 +2539,11 @@
         "pageviews": 273
       },
       {
-        "month": "Sep 2026",
-        "date": "2026-09",
-        "visits": 105,
-        "uniques": 105,
-        "pageviews": 130
+        "month": "Oct 2026",
+        "date": "2026-10",
+        "visits": 137,
+        "uniques": 137,
+        "pageviews": 174
       }
     ],
     "topPages": [
@@ -2596,15 +2603,15 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 75,
+        "performance": 65,
         "accessibility": 93,
-        "bestPractices": 100,
+        "bestPractices": 96,
         "seo": 92
       },
       "desktop": {
-        "performance": 93,
+        "performance": 71,
         "accessibility": 93,
-        "bestPractices": 100,
+        "bestPractices": 96,
         "seo": 92
       }
     },
@@ -3886,6 +3893,21 @@
           "performance": 93,
           "accessibility": 93,
           "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-11-16",
+        "mobile": {
+          "performance": 65,
+          "accessibility": 93,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 71,
+          "accessibility": 93,
+          "bestPractices": 96,
           "seo": 92
         }
       }
