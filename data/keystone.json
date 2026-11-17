@@ -3,7 +3,7 @@
   "slug": "keystone",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-16T16:40:28.693Z",
+  "generatedAt": "2026-11-17T16:40:03.857Z",
   "overview": {
     "sessions": 239,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 7,
     "rankingsDelta": null,
-    "gbpViews": 1343,
+    "gbpViews": 1361,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -1063,7 +1063,7 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 1343,
+    "totalViews": 1361,
     "calls": 5,
     "callsDelta": null,
     "directions": 253,
@@ -2234,7 +2234,7 @@
       },
       {
         "date": "2026-11-14",
-        "views": 0,
+        "views": 18,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -2248,6 +2248,13 @@
       },
       {
         "date": "2026-11-16",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-17",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -2603,15 +2610,15 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 65,
+        "performance": 74,
         "accessibility": 93,
-        "bestPractices": 96,
+        "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 71,
+        "performance": 74,
         "accessibility": 93,
-        "bestPractices": 96,
+        "bestPractices": 100,
         "seo": 92
       }
     },
@@ -3908,6 +3915,21 @@
           "performance": 71,
           "accessibility": 93,
           "bestPractices": 96,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-11-17",
+        "mobile": {
+          "performance": 74,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 74,
+          "accessibility": 93,
+          "bestPractices": 100,
           "seo": 92
         }
       }
