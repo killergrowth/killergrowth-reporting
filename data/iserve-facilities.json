@@ -3,7 +3,7 @@
   "slug": "iserve-facilities",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-17T16:37:38.446Z",
+  "generatedAt": "2026-11-18T16:06:15.960Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -360,34 +360,19 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 71,
+        "performance": 74,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100
       },
       "desktop": {
-        "performance": 77,
-        "accessibility": 100,
-        "bestPractices": 100,
+        "performance": 85,
+        "accessibility": 95,
+        "bestPractices": 96,
         "seo": 100
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-08-11",
-        "mobile": {
-          "performance": 67,
-          "accessibility": 100,
-          "bestPractices": 100,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 86,
-          "accessibility": 100,
-          "bestPractices": 100,
-          "seo": 100
-        }
-      },
       {
         "date": "2026-08-12",
         "mobile": {
@@ -1685,6 +1670,21 @@
           "performance": 77,
           "accessibility": 100,
           "bestPractices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "date": "2026-11-18",
+        "mobile": {
+          "performance": 74,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 85,
+          "accessibility": 95,
+          "bestPractices": 96,
           "seo": 100
         }
       }
