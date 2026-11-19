@@ -3,7 +3,7 @@
   "slug": "stewardright",
   "logoPath": "../images/clients/stewardright-logo.jpg",
   "period": "October 2026",
-  "generatedAt": "2026-11-18T16:01:12.791Z",
+  "generatedAt": "2026-11-19T16:08:40.135Z",
   "overview": {
     "sessions": 391,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": null,
     "rankingsDelta": null,
-    "gbpViews": 2649,
+    "gbpViews": 2669,
     "gbpViewsDelta": null,
     "adSpend": 613.42,
     "adImpressions": 25624,
@@ -154,7 +154,7 @@
       },
       "gbpCalls": 11,
       "gbpWebsiteClicks": 112,
-      "gbpDirections": 223,
+      "gbpDirections": 224,
       "formSubmissionsMonthly": [
         {
           "month": "Jul 2026",
@@ -231,8 +231,8 @@
       },
       {
         "month": "Nov 2026",
-        "adSpend": 349.75,
-        "adClicks": 1768,
+        "adSpend": 368.19,
+        "adClicks": 1941,
         "adLeads": 0
       }
     ],
@@ -257,10 +257,10 @@
   },
   "gbp": {
     "locationName": "Primary",
-    "totalViews": 2649,
+    "totalViews": 2669,
     "calls": 11,
     "callsDelta": null,
-    "directions": 223,
+    "directions": 224,
     "websiteClicks": 112,
     "directionsDelta": null,
     "viewsOverTime": [
@@ -1435,16 +1435,16 @@
       },
       {
         "date": "2026-11-15",
-        "views": 2,
+        "views": 21,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-11-16",
-        "views": 0,
+        "views": 1,
         "calls": 0,
-        "directions": 0,
+        "directions": 1,
         "websiteClicks": 0
       },
       {
@@ -1456,6 +1456,13 @@
       },
       {
         "date": "2026-11-18",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-19",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -1523,7 +1530,7 @@
       {
         "month": "Nov 2026",
         "reach": 64,
-        "engagements": 543
+        "engagements": 556
       }
     ],
     "reachByWeek": [],
@@ -1532,7 +1539,7 @@
         "platform": "Facebook",
         "reach": 118,
         "engagements": 368,
-        "followers": 612
+        "followers": 613
       }
     ]
   },
@@ -1620,10 +1627,10 @@
       },
       {
         "month": "Nov 2026",
-        "adSpend": 349.75,
-        "adClicks": 1768,
+        "adSpend": 368.19,
+        "adClicks": 1941,
         "adLeads": 0,
-        "adImpressions": 28214,
+        "adImpressions": 29101,
         "adReach": 64
       }
     ],
@@ -1910,34 +1917,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 61,
+        "performance": 71,
         "accessibility": 90,
         "bestPractices": 92,
         "seo": 100
       },
       "desktop": {
-        "performance": 96,
+        "performance": 97,
         "accessibility": 90,
         "bestPractices": 92,
         "seo": 100
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-07-29",
-        "mobile": {
-          "performance": 55,
-          "accessibility": 90,
-          "bestPractices": 77,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 92,
-          "accessibility": 90,
-          "bestPractices": 77,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-07-30",
         "mobile": {
@@ -3242,10 +3234,34 @@
           "bestPractices": 92,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-11-19",
+        "mobile": {
+          "performance": 71,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 97,
+          "accessibility": 90,
+          "bestPractices": 92,
+          "seo": 100
+        }
       }
     ]
   },
   "workLog": [
+    {
+      "id": "13483645282",
+      "title": "Update offers.stewardright.com DNS",
+      "status": "Done",
+      "date": "2026-11-19",
+      "owner": "Tyler Brickley",
+      "group": "Completed",
+      "source": "monday"
+    },
     {
       "id": "12503591326",
       "title": "StewardRight — first comments",

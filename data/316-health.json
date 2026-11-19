@@ -3,7 +3,7 @@
   "slug": "316-health",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-18T16:04:18.779Z",
+  "generatedAt": "2026-11-19T16:11:35.004Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -108,34 +108,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 52,
+        "performance": 66,
         "accessibility": 72,
         "bestPractices": 96,
         "seo": 100
       },
       "desktop": {
-        "performance": 74,
+        "performance": 65,
         "accessibility": 80,
         "bestPractices": 96,
         "seo": 100
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-08-12",
-        "mobile": {
-          "performance": 53,
-          "accessibility": 88,
-          "bestPractices": 77,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 79,
-          "accessibility": 91,
-          "bestPractices": 77,
-          "seo": 100
-        }
-      },
       {
         "date": "2026-08-13",
         "mobile": {
@@ -1420,10 +1405,43 @@
           "bestPractices": 96,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-11-19",
+        "mobile": {
+          "performance": 66,
+          "accessibility": 72,
+          "bestPractices": 96,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 65,
+          "accessibility": 80,
+          "bestPractices": 96,
+          "seo": 100
+        }
       }
     ]
   },
   "workLog": [
+    {
+      "id": "13478140944",
+      "title": "316 Health Insurance — URGENT: Testimonial Page HUGE Issue",
+      "status": "Done",
+      "date": "2026-11-19",
+      "owner": "Tyler Brickley",
+      "group": "Website Build (Tyler B)",
+      "source": "monday"
+    },
+    {
+      "id": "13478226394",
+      "title": "316 Health Insurance — URGENT ISSUE: testimonial page",
+      "status": "Done",
+      "date": "2026-11-19",
+      "owner": "Tyler Brickley",
+      "group": "Website Build (Tyler B)",
+      "source": "monday"
+    },
     {
       "id": "13162978910",
       "title": "316 Health Insurance — Odd Copu",

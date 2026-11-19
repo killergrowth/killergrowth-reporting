@@ -3,7 +3,7 @@
   "slug": "shaws-pest",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-18T16:06:37.057Z",
+  "generatedAt": "2026-11-19T16:13:28.159Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -108,29 +108,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 94,
+        "performance": 76,
         "accessibility": 98,
         "bestPractices": 100,
         "seo": 100
       },
       "desktop": {
-        "performance": 95,
+        "performance": 97,
         "accessibility": 98,
         "bestPractices": 100,
         "seo": 100
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-08-12",
-        "mobile": null,
-        "desktop": {
-          "performance": 81,
-          "accessibility": 86,
-          "bestPractices": 96,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-08-13",
         "mobile": {
@@ -1430,8 +1420,33 @@
           "bestPractices": 100,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-11-19",
+        "mobile": {
+          "performance": 76,
+          "accessibility": 98,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 97,
+          "accessibility": 98,
+          "bestPractices": 100,
+          "seo": 100
+        }
       }
     ]
   },
-  "workLog": []
+  "workLog": [
+    {
+      "id": "13572708171",
+      "title": "Shaws Pest Control",
+      "status": "Done",
+      "date": "2026-11-18",
+      "owner": "Tyler Norris",
+      "group": "Completed",
+      "source": "monday"
+    }
+  ]
 }
