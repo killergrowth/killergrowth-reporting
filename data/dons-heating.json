@@ -3,7 +3,7 @@
   "slug": "dons-heating",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-19T16:09:32.428Z",
+  "generatedAt": "2026-11-20T15:49:56.703Z",
   "overview": {
     "sessions": 792,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 6,
     "rankingsDelta": null,
-    "gbpViews": 5016,
+    "gbpViews": 5070,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -521,9 +521,9 @@
           "Direct": 1
         }
       },
-      "gbpCalls": 567,
-      "gbpWebsiteClicks": 224,
-      "gbpDirections": 240
+      "gbpCalls": 575,
+      "gbpWebsiteClicks": 228,
+      "gbpDirections": 245
     }
   },
   "ads": {
@@ -714,11 +714,11 @@
   },
   "gbp": {
     "locationName": "El Dorado",
-    "totalViews": 5016,
-    "calls": 567,
+    "totalViews": 5070,
+    "calls": 575,
     "callsDelta": null,
-    "directions": 240,
-    "websiteClicks": 224,
+    "directions": 245,
+    "websiteClicks": 228,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1899,16 +1899,16 @@
       },
       {
         "date": "2026-11-16",
-        "views": 5,
-        "calls": 0,
+        "views": 50,
+        "calls": 8,
         "directions": 7,
-        "websiteClicks": 0
+        "websiteClicks": 4
       },
       {
         "date": "2026-11-17",
-        "views": 0,
+        "views": 9,
         "calls": 0,
-        "directions": 0,
+        "directions": 5,
         "websiteClicks": 0
       },
       {
@@ -1920,6 +1920,13 @@
       },
       {
         "date": "2026-11-19",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-20",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -3147,8 +3154,8 @@
   },
   "gbp3": {
     "locationName": "Hillsboro",
-    "totalViews": 1362,
-    "calls": 92,
+    "totalViews": 1367,
+    "calls": 93,
     "directions": 240,
     "websiteClicks": 60,
     "viewsOverTime": [
@@ -4330,14 +4337,14 @@
       },
       {
         "date": "2026-11-16",
-        "views": 0,
-        "calls": 0,
+        "views": 3,
+        "calls": 1,
         "directions": 0,
         "websiteClicks": 0
       },
       {
         "date": "2026-11-17",
-        "views": 0,
+        "views": 2,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -4351,6 +4358,13 @@
       },
       {
         "date": "2026-11-19",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-20",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -4414,7 +4428,7 @@
       },
       {
         "month": "Nov 2026",
-        "reach": 140,
+        "reach": 146,
         "engagements": 12
       }
     ],
@@ -4516,7 +4530,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 140
+        "adReach": 146
       }
     ],
     "metrics": null,
@@ -4794,34 +4808,19 @@
     "cfMonthlyHistory": [],
     "psiScores": {
       "mobile": {
-        "performance": 64,
+        "performance": 65,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
       },
       "desktop": {
-        "performance": 74,
+        "performance": 65,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-08-13",
-        "mobile": {
-          "performance": 61,
-          "accessibility": 90,
-          "bestPractices": 73,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 91,
-          "accessibility": 91,
-          "bestPractices": 73,
-          "seo": 100
-        }
-      },
       {
         "date": "2026-08-14",
         "mobile": {
@@ -6092,6 +6091,21 @@
         },
         "desktop": {
           "performance": 74,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-11-20",
+        "mobile": {
+          "performance": 65,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 65,
           "accessibility": 90,
           "bestPractices": 100,
           "seo": 92
