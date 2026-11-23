@@ -3,7 +3,7 @@
   "slug": "cogans-woodshop",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-22T15:00:53.058Z",
+  "generatedAt": "2026-11-23T18:54:06.473Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -400,34 +400,19 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 72,
+        "performance": 71,
         "accessibility": 92,
         "bestPractices": 96,
         "seo": 100
       },
       "desktop": {
-        "performance": 94,
+        "performance": 98,
         "accessibility": 80,
         "bestPractices": 96,
         "seo": 100
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-08-16",
-        "mobile": {
-          "performance": 70,
-          "accessibility": 92,
-          "bestPractices": 92,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 95,
-          "accessibility": 80,
-          "bestPractices": 92,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-08-17",
         "mobile": {
@@ -1722,18 +1707,23 @@
           "bestPractices": 96,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-11-23",
+        "mobile": {
+          "performance": 71,
+          "accessibility": 92,
+          "bestPractices": 96,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 98,
+          "accessibility": 80,
+          "bestPractices": 96,
+          "seo": 100
+        }
       }
     ]
   },
-  "workLog": [
-    {
-      "id": "12022787929",
-      "title": "Cogan's Woodshop",
-      "status": "Done",
-      "date": "2026-05-26",
-      "owner": null,
-      "group": "Website Maintenance (Corrie)",
-      "source": "monday"
-    }
-  ]
+  "workLog": []
 }

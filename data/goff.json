@@ -3,7 +3,7 @@
   "slug": "goff",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-22T14:59:04.900Z",
+  "generatedAt": "2026-11-23T18:52:33.257Z",
   "overview": {
     "sessions": 3375,
     "sessionsDelta": 0,
@@ -998,28 +998,13 @@
         "seo": 92
       },
       "desktop": {
-        "performance": 67,
+        "performance": 64,
         "accessibility": 87,
         "bestPractices": 96,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-08-16",
-        "mobile": {
-          "performance": 54,
-          "accessibility": 81,
-          "bestPractices": 96,
-          "seo": 92
-        },
-        "desktop": {
-          "performance": 71,
-          "accessibility": 85,
-          "bestPractices": 96,
-          "seo": 92
-        }
-      },
       {
         "date": "2026-08-17",
         "mobile": {
@@ -2304,10 +2289,34 @@
           "bestPractices": 96,
           "seo": 92
         }
+      },
+      {
+        "date": "2026-11-23",
+        "mobile": {
+          "performance": 65,
+          "accessibility": 87,
+          "bestPractices": 96,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 64,
+          "accessibility": 87,
+          "bestPractices": 96,
+          "seo": 92
+        }
       }
     ]
   },
   "workLog": [
+    {
+      "id": "13592229631",
+      "title": "Goff, Paul",
+      "status": "Done",
+      "date": "2026-11-23",
+      "owner": null,
+      "group": "Completed",
+      "source": "monday"
+    },
     {
       "id": "13562461920",
       "title": "Goff, Paul",
