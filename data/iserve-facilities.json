@@ -3,7 +3,7 @@
   "slug": "iserve-facilities",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-24T18:29:57.600Z",
+  "generatedAt": "2026-11-25T17:45:12.547Z",
   "overview": {
     "sessions": null,
     "sessionsDelta": null,
@@ -360,34 +360,19 @@
     ],
     "psiScores": {
       "mobile": {
-        "performance": 71,
+        "performance": 72,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100
       },
       "desktop": {
-        "performance": 88,
+        "performance": 79,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-08-18",
-        "mobile": {
-          "performance": 71,
-          "accessibility": 100,
-          "bestPractices": 100,
-          "seo": 100
-        },
-        "desktop": {
-          "performance": 75,
-          "accessibility": 100,
-          "bestPractices": 100,
-          "seo": 100
-        }
-      },
       {
         "date": "2026-08-19",
         "mobile": null,
@@ -1692,18 +1677,23 @@
           "bestPractices": 100,
           "seo": 100
         }
+      },
+      {
+        "date": "2026-11-25",
+        "mobile": {
+          "performance": 72,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        },
+        "desktop": {
+          "performance": 79,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100
+        }
       }
     ]
   },
-  "workLog": [
-    {
-      "id": "11684401783",
-      "title": "Document \"Before\" IServe old website",
-      "status": "Done",
-      "date": "2026-05-29",
-      "owner": "Corrie Ferrell",
-      "group": "Completed",
-      "source": "monday"
-    }
-  ]
+  "workLog": []
 }
