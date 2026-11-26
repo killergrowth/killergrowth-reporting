@@ -3,7 +3,7 @@
   "slug": "dons-heating",
   "logoPath": null,
   "period": "October 2026",
-  "generatedAt": "2026-11-25T17:41:51.914Z",
+  "generatedAt": "2026-11-26T17:24:39.285Z",
   "overview": {
     "sessions": 792,
     "sessionsDelta": 0,
@@ -11,7 +11,7 @@
     "leadsDelta": null,
     "rankingsTop10": 6,
     "rankingsDelta": null,
-    "gbpViews": 5189,
+    "gbpViews": 5241,
     "gbpViewsDelta": null,
     "adSpend": null,
     "adImpressions": null,
@@ -522,8 +522,8 @@
         }
       },
       "gbpCalls": 596,
-      "gbpWebsiteClicks": 234,
-      "gbpDirections": 249
+      "gbpWebsiteClicks": 235,
+      "gbpDirections": 253
     }
   },
   "ads": {
@@ -714,11 +714,11 @@
   },
   "gbp": {
     "locationName": "El Dorado",
-    "totalViews": 5189,
+    "totalViews": 5241,
     "calls": 596,
     "callsDelta": null,
-    "directions": 249,
-    "websiteClicks": 234,
+    "directions": 253,
+    "websiteClicks": 235,
     "directionsDelta": null,
     "viewsOverTime": [
       {
@@ -1941,16 +1941,16 @@
       },
       {
         "date": "2026-11-22",
-        "views": 0,
+        "views": 15,
         "calls": 0,
         "directions": 0,
-        "websiteClicks": 0
+        "websiteClicks": 1
       },
       {
         "date": "2026-11-23",
-        "views": 0,
+        "views": 37,
         "calls": 0,
-        "directions": 0,
+        "directions": 4,
         "websiteClicks": 0
       },
       {
@@ -1962,6 +1962,13 @@
       },
       {
         "date": "2026-11-25",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-26",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -3189,7 +3196,7 @@
   },
   "gbp3": {
     "locationName": "Hillsboro",
-    "totalViews": 1401,
+    "totalViews": 1410,
     "calls": 95,
     "directions": 248,
     "websiteClicks": 60,
@@ -4414,14 +4421,14 @@
       },
       {
         "date": "2026-11-22",
-        "views": 2,
+        "views": 4,
         "calls": 0,
         "directions": 2,
         "websiteClicks": 0
       },
       {
         "date": "2026-11-23",
-        "views": 0,
+        "views": 7,
         "calls": 0,
         "directions": 0,
         "websiteClicks": 0
@@ -4435,6 +4442,13 @@
       },
       {
         "date": "2026-11-25",
+        "views": 0,
+        "calls": 0,
+        "directions": 0,
+        "websiteClicks": 0
+      },
+      {
+        "date": "2026-11-26",
         "views": 0,
         "calls": 0,
         "directions": 0,
@@ -4498,8 +4512,8 @@
       },
       {
         "month": "Nov 2026",
-        "reach": 183,
-        "engagements": 14
+        "reach": 186,
+        "engagements": 18
       }
     ],
     "reachByWeek": [],
@@ -4600,7 +4614,7 @@
         "adClicks": null,
         "adLeads": null,
         "adImpressions": null,
-        "adReach": 183
+        "adReach": 186
       }
     ],
     "metrics": null,
@@ -4884,18 +4898,13 @@
         "seo": 92
       },
       "desktop": {
-        "performance": 79,
+        "performance": 73,
         "accessibility": 90,
         "bestPractices": 100,
         "seo": 92
       }
     },
     "psiHistory": [
-      {
-        "date": "2026-08-19",
-        "mobile": null,
-        "desktop": null
-      },
       {
         "date": "2026-08-20",
         "mobile": {
@@ -6181,6 +6190,21 @@
         },
         "desktop": {
           "performance": 79,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "date": "2026-11-26",
+        "mobile": {
+          "performance": 65,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 92
+        },
+        "desktop": {
+          "performance": 73,
           "accessibility": 90,
           "bestPractices": 100,
           "seo": 92
